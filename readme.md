@@ -1,7 +1,7 @@
 example useage:
 
 ```
-use rv_decoder::Decoder;
+use instruction_decoder::Decoder;
 
 pub fn main() {
     let mut test_decoder = Decoder::new(&vec![include_str!("RV32I.toml").to_string()]);
