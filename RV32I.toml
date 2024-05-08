@@ -1,0 +1,285 @@
+set = "RV32I"
+width = 32
+
+[types]
+names = [
+    "reg",
+    "imm",
+    "load",
+    "store",
+    "branch",
+    "jal",
+    "jalr",
+    "lui",
+    "auipc",
+    "interrupt",
+]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "funct7",
+        7,
+        "u8",
+    ],
+    [
+        "rd",
+        5,
+        "Register",
+    ],
+    [
+        "rs1",
+        5,
+        "Register",
+    ],
+    [
+        "rs2",
+        5,
+        "Register",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["R", "I", "S", "B", "U", "J"]
+R = [
+    { name = "funct7", top = 6, bot = 0 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+I = [
+    { name = "imm", top = 11, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+S = [
+    { name = "imm", top = 11, bot = 5 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "imm", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+B = [
+    { name = "imm", top = 12, bot = 12 },
+    { name = "imm", top = 10, bot = 5 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "imm", top = 4, bot = 1 },
+    { name = "imm", top = 11, bot = 11 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+# U Different from risc-v spec, since for ASM representation, you would use it as imm[19:0] rather than imm[31:12]
+U = [
+    { name = "imm", top = 19, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+J = [
+    { name = "imm", top = 20, bot = 20 },
+    { name = "imm", top = 10, bot = 1 },
+    { name = "imm", top = 11, bot = 11 },
+    { name = "imm", top = 19, bot = 12 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[reg]
+repr = "$name$ %rd%, %rs1%, %rs2%"
+type = "R"
+opcode = 0b0110011
+substitutions = {}
+[reg.instructions]
+add = { funct3 = 0x0, funct7 = 0x00 }
+sub = { funct3 = 0x0, funct7 = 0x20 }
+xor = { funct3 = 0x4, funct7 = 0x00 }
+or = { funct3 = 0x6, funct7 = 0x00 }
+and = { funct3 = 0x7, funct7 = 0x00 }
+sll = { funct3 = 0x1, funct7 = 0x00 }
+srl = { funct3 = 0x5, funct7 = 0x00 }
+sra = { funct3 = 0x5, funct7 = 0x20 }
+slt = { funct3 = 0x2, funct7 = 0x00 }
+sltu = { funct3 = 0x3, funct7 = 0x00 }
+
+[imm]
+repr = "$name$ %rd%, %rs1%, %imm%"
+type = "I"
+opcode = 0b0010011
+substitutions = { "sfunct7" = { name = "imm", top = 11, bot = 5 } }
+[imm.instructions]
+addi = { funct3 = 0x0 }
+xori = { funct3 = 0x4 }
+ori = { funct3 = 0x6 }
+andi = { funct3 = 0x7 }
+slli = { funct3 = 0x1, sfunct7 = 0x00 }
+srli = { funct3 = 0x5, sfunct7 = 0x00 }
+srai = { funct3 = 0x5, sfunct7 = 0x20 }
+slti = { funct3 = 0x2 }
+sltiu = { funct3 = 0x3 }
+
+[load]
+repr = "$name$ %rd%, %imm%(%rs1%)"
+type = "I"
+opcode = 0b0000011
+substitutions = {}
+[load.instructions]
+lb = { funct3 = 0x0 }
+lh = { funct3 = 0x0 }
+lw = { funct3 = 0x0 }
+lbu = { funct3 = 0x0 }
+lhu = { funct3 = 0x0 }
+
+[store]
+repr = "$name$ %rd%, %imm%(%rs1%)"
+type = "S"
+opcode = 0b0100011
+substitutions = {}
+[store.instructions]
+sb = { funct3 = 0x0 }
+sh = { funct3 = 0x0 }
+sw = { funct3 = 0x0 }
+
+[branch]
+repr = "$name$ %rs1%, %rs2%, %imm%"
+type = "B"
+opcode = 0b1100011
+substitutions = {}
+[branch.instructions]
+beq = { funct3 = 0x0 }
+bne = { funct3 = 0x1 }
+blt = { funct3 = 0x4 }
+bge = { funct3 = 0x5 }
+bltu = { funct3 = 0x6 }
+bgeu = { funct3 = 0x7 }
+
+[jal]
+repr = "$name$ %rd%, %imm%"
+type = "J"
+opcode = 0b1101111
+substitutions = {}
+[jal.instructions]
+jal = {}
+
+[jalr]
+repr = "$name$ %rd%, %imm%(%rs1%)"
+type = "I"
+opcode = 0b1100111
+substitutions = {}
+[jalr.instructions]
+jalr = { funct3 = 0x0 }
+
+[lui]
+repr = "$name$ %rd%, %imm%"
+type = "U"
+opcode = 0b0110111
+substitutions = {}
+unsigned = true
+[lui.instructions]
+lui = { }
+
+[auipc]
+repr = "$name$ %rd%, %imm%"
+type = "U"
+opcode = 0b0110111
+substitutions = {}
+unsigned = true
+[auipc.instructions]
+lui = { }
+
+[interrupt]
+repr = "$name$"
+type = "I"
+opcode = 0b1110011
+substitutions = {}
+[interrupt.instructions]
+ecall = { funct3 = 0x0, imm = 0x0 }
+ebreak = { funct3 = 0x0, imm = 0x1 }
+
+[register]
+number = 32
+names = [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+]
+abi_names = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "fp",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
