@@ -1,0 +1,88 @@
+set = "SUBLEQ"
+# subleq workaround: since there is no opcode, zero extend the instruction by 1 bit to make it work
+width = 17
+
+[types]
+names = [
+    "subleq",
+]
+parts = [
+    [
+        "opcode",
+        1,
+        "u8"
+    ],
+    [
+        "r1",
+        5,
+        "Register",
+    ],
+    [
+        "r2",
+        5,
+        "Register",
+    ],
+    [
+        "jump",
+        8,
+        "i8",
+    ],
+]
+
+[type]
+names = ["SUBLEQ"]
+SUBLEQ = [
+    { name = "opcode", top = 0, bot = 0 },
+    { name = "r1", top = 3, bot = 0 },
+    { name = "r2", top = 3, bot = 0 },
+    { name = "jump", top = 7, bot = 0 },
+]
+
+[subleq]
+repr = "%r1% %r2% %jump%"
+type = "SUBLEQ"
+opcode = 0
+substitutions = {}
+[subleq.instructions]
+subleq = { unsigned = true }
+
+[register]
+number = 16
+names = [
+    "TMP0",
+    "RVPC",
+    "SRC1",
+    "TMP1",
+    "SRC2",
+    "TMP2",
+    "TMP3",
+    "TMP4",
+    "IMMI",
+    "TMP5",
+    "CONE",
+    "WORD",
+    "INCR",
+    "NEXT",
+    "TMP6",
+    "TMP7",
+]
+abi_names = [
+    "TMP0",
+    "PC",
+    "SRC1",
+    "TMP1",
+    "RSLT",
+    "TMP2",
+    "TMP3",
+    "TMP4",
+    "IMM",
+    "TMP5",
+    "ONE",
+    "WORD",
+    "INC",
+    "NEXT",
+    "TWP",
+    "TMP7",
+]
+
+

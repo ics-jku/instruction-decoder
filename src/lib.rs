@@ -54,12 +54,7 @@ impl InstructionSet {
             .map(|x| {
                 (
                     x.as_str().unwrap().to_string().clone(),
-                    InstructionFormat::new(
-                        table,
-                        &x.as_str().unwrap().to_string(),
-                        &types,
-                        &parts,
-                    ),
+                    InstructionFormat::new(table, &x.as_str().unwrap().to_string(), &types, &parts),
                 )
             })
             .collect();
@@ -171,6 +166,30 @@ impl FromStr for PartType {
     }
 }
 
+impl PartType {
+    fn get_unsigned(&self, unsigned_imm: bool) -> bool {
+        match self {
+            PartType::BOOLEAN => true,
+            PartType::CHAR => true,
+            PartType::I8 => false,
+            PartType::I16 => false,
+            PartType::I32 => false,
+            PartType::I64 => false,
+            PartType::U8 => true,
+            PartType::U16 => true,
+            PartType::U32 => true,
+            PartType::U64 => true,
+            PartType::ISIZE => false,
+            PartType::USIZE => true,
+            PartType::F32 => true,
+            PartType::F64 => true,
+            PartType::REGISTER => true,
+            PartType::VInt => unsigned_imm,
+            PartType::NONE => true,
+        }
+    }
+}
+
 #[derive(Clone)]
 struct PartDecoder {
     name: String,
@@ -189,35 +208,85 @@ impl PartDecoder {
     fn decode(&self, value: &String, register_names: &Vec<String>) -> PartTypeValue {
         match self.part_type {
             PartType::BOOLEAN => PartTypeValue::BOOLEAN(value.chars().last().unwrap().eq(&'1')),
-            PartType::CHAR => {
-                PartTypeValue::CHAR(char::from_u32(u32::from_str_radix(&value[96..128], 2).unwrap()).unwrap())
+            PartType::CHAR => PartTypeValue::CHAR(
+                char::from_u32(u32::from_str_radix(&value[96..128], 2).unwrap()).unwrap(),
+            ),
+            PartType::I8 => {
+                if let Ok(val) = i8::from_str_radix(&value[120..128], 2) {
+                    PartTypeValue::I8(val)
+                } else {
+                    PartTypeValue::I8(
+                        i8::MIN + i8::from_str_radix(&format!("{}", &value[121..]), 2).unwrap(),
+                    )
+                }
             }
-            PartType::I8 => PartTypeValue::I8(i8::from_str_radix(&value[120..128], 2).unwrap()),
-            PartType::I16 => PartTypeValue::I16(i16::from_str_radix(&value[112..128], 2).unwrap()),
-            PartType::I32 => PartTypeValue::I32(i32::from_str_radix(&value[96..128], 2).unwrap()),
-            PartType::I64 => PartTypeValue::I64(i64::from_str_radix(&value[64..128], 2).unwrap()),
+            PartType::I16 => {
+                if let Ok(val) = i16::from_str_radix(&value[112..128], 2) {
+                    PartTypeValue::I16(val)
+                } else {
+                    PartTypeValue::I16(
+                        i16::MIN + i16::from_str_radix(&format!("{}", &value[113..]), 2).unwrap(),
+                    )
+                }
+            }
+            PartType::I32 => {
+                if let Ok(val) = i32::from_str_radix(&value[96..128], 2) {
+                    PartTypeValue::I32(val)
+                } else {
+                    PartTypeValue::I32(
+                        i32::MIN + i32::from_str_radix(&format!("{}", &value[97..]), 2).unwrap(),
+                    )
+                }
+            }
+            PartType::I64 => {
+                if let Ok(val) = i64::from_str_radix(&value[64..128], 2) {
+                    PartTypeValue::I64(val)
+                } else {
+                    PartTypeValue::I64(
+                        i64::MIN + i64::from_str_radix(&format!("{}", &value[65..]), 2).unwrap(),
+                    )
+                }
+            }
             PartType::U8 => PartTypeValue::U8(u8::from_str_radix(&value[120..128], 2).unwrap()),
             PartType::U16 => PartTypeValue::U16(u16::from_str_radix(&value[112..128], 2).unwrap()),
             PartType::U32 => PartTypeValue::U32(u32::from_str_radix(&value[112..128], 2).unwrap()),
             PartType::U64 => PartTypeValue::U64(u64::from_str_radix(&value[112..128], 2).unwrap()),
-            PartType::ISIZE => PartTypeValue::ISIZE(isize::from_str_radix(&value[(128-isize::BITS as usize)..128], 2).unwrap()),
-            PartType::USIZE => PartTypeValue::USIZE(usize::from_str_radix(&value[(128-usize::BITS as usize)..128], 2).unwrap()),
-            PartType::F32 => {
-                PartTypeValue::F32(f32::from_bits(u32::from_str_radix(&value[96..128], 2).unwrap()))
+            PartType::ISIZE => {
+                if let Ok(val) = isize::from_str_radix(&value[(128 - isize::BITS as usize)..128], 2)
+                {
+                    PartTypeValue::ISIZE(val)
+                } else {
+                    PartTypeValue::ISIZE(
+                        isize::MIN
+                            + isize::from_str_radix(
+                                &format!("{}", &value[(129 - isize::BITS as usize)..]),
+                                2,
+                            )
+                            .unwrap(),
+                    )
+                }
             }
-            PartType::F64 => {
-                PartTypeValue::F64(f64::from_bits(u64::from_str_radix(&value[64..128], 2).unwrap()))
-            }
-            PartType::REGISTER => {
-                PartTypeValue::REGISTER(
-                register_names[usize::from_str_radix(&value[(128-usize::BITS as usize)..128], 2).unwrap()].clone(),
-            )},
+            PartType::USIZE => PartTypeValue::USIZE(
+                usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2).unwrap(),
+            ),
+            PartType::F32 => PartTypeValue::F32(f32::from_bits(
+                u32::from_str_radix(&value[96..128], 2).unwrap(),
+            )),
+            PartType::F64 => PartTypeValue::F64(f64::from_bits(
+                u64::from_str_radix(&value[64..128], 2).unwrap(),
+            )),
+            PartType::REGISTER => PartTypeValue::REGISTER(
+                register_names
+                    [usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2).unwrap()]
+                .clone(),
+            ),
             PartType::VInt => {
-                println!("{} {}", value.len(), value);
                 if let Ok(val) = i128::from_str_radix(&value, 2) {
                     PartTypeValue::VInt(val)
                 } else {
-                    PartTypeValue::VInt(i128::MIN + i128::from_str_radix(&format!("{}", &value[1..]), 2).unwrap())
+                    PartTypeValue::VInt(
+                        i128::MIN + i128::from_str_radix(&format!("{}", &value[1..]), 2).unwrap(),
+                    )
                 }
             }
             PartType::NONE => PartTypeValue::NONE,
@@ -280,9 +349,21 @@ impl InstructionFormat {
         let repr = table[name]["repr"].as_str().unwrap_or("").to_string();
         let instruction_type = &types[table[name]["type"].as_str().unwrap_or("")];
         let opcode_val = format!("{:064b}", table[name]["opcode"].as_integer().unwrap());
-        let opcode = SliceValue::new(&"opcode".to_string(), &opcode_val, 0, 64, true);
+        let opcode = SliceValue::new(
+            &"opcode".to_string(),
+            &opcode_val,
+            0,
+            64,
+            true,
+            part_decoders["opcode"].part_type.clone(),
+        );
 
-        let substitutions = table[name]["substitutions"].as_table().unwrap().iter().map(|(k,v)|(k.clone(), v.as_table().unwrap().clone())).collect::<HashMap<String, Table>>();
+        let substitutions = table[name]["substitutions"]
+            .as_table()
+            .unwrap()
+            .iter()
+            .map(|(k, v)| (k.clone(), v.as_table().unwrap().clone()))
+            .collect::<HashMap<String, Table>>();
         let instructions = table[name]["instructions"]
             .as_table()
             .unwrap()
@@ -308,8 +389,13 @@ impl InstructionFormat {
         }
     }
 
-    fn parse(&mut self, instruction: &String) -> HashMap<String, SliceValue> {
-        self.instruction_type.parse(instruction, self.unsigned_imm)
+    fn parse(
+        &mut self,
+        instruction: &String,
+        part_decoders: &HashMap<String, PartDecoder>,
+    ) -> HashMap<String, SliceValue> {
+        self.instruction_type
+            .parse(instruction, self.unsigned_imm, part_decoders)
     }
 }
 
@@ -327,30 +413,22 @@ impl SliceValue {
         value: &String,
         idx: usize,
         bit_width: usize,
-        unsigned: bool,
+        unsigned_imm: bool,
+        part_type: PartType,
     ) -> Self {
         let mut tmp = value.clone();
-        tmp.push_str(
-            (0..idx)
-                .map(|_| "0")
-                .collect::<String>()
-                .as_str(),
-        );
+        let unsigned = part_type.get_unsigned(unsigned_imm);
+
+        tmp.push_str((0..idx).map(|_| "0").collect::<String>().as_str());
         if unsigned || tmp.len() < bit_width || tmp.starts_with("0") {
             tmp.insert_str(
                 0,
-                (tmp.len()..128)
-                    .map(|_| "0")
-                    .collect::<String>()
-                    .as_str(),
+                (tmp.len()..128).map(|_| "0").collect::<String>().as_str(),
             );
         } else {
             tmp.insert_str(
                 0,
-                (tmp.len()..128)
-                    .map(|_| "1")
-                    .collect::<String>()
-                    .as_str(),
+                (tmp.len()..128).map(|_| "1").collect::<String>().as_str(),
             );
         }
         SliceValue {
@@ -371,8 +449,25 @@ impl SliceValue {
                 .collect();
         }
         //println!("{} {}", self.name, self.unsigned);
-        if !self.unsigned && self.value.chars().nth(self.value.len()-self.bit_width+1).unwrap_or('0') == '1' {
-            self.value = self.value.char_indices().map(|(i, c)| if i < (self.value.len()-self.bit_width) {'1'} else { c }).collect();
+        if !self.unsigned
+            && self
+                .value
+                .chars()
+                .nth(self.value.len() - self.bit_width + 1)
+                .unwrap_or('0')
+                == '1'
+        {
+            self.value = self
+                .value
+                .char_indices()
+                .map(|(i, c)| {
+                    if i < (self.value.len() - self.bit_width) {
+                        '1'
+                    } else {
+                        c
+                    }
+                })
+                .collect();
             //println!("{}", self.value);
         }
     }
@@ -443,6 +538,7 @@ impl Instruction {
                                 0,
                                 64,
                                 unsigned_imm,
+                                part_decoders[x].part_type.clone(),
                             ),
                         ))
                     } else {
@@ -458,6 +554,7 @@ impl Instruction {
                                 idx,
                                 bit_width,
                                 unsigned_imm,
+                                part_decoders[&name].part_type.clone(),
                             ),
                         ))
                     }
@@ -545,14 +642,26 @@ impl InstructionType {
         InstructionType { slices }
     }
 
-    fn parse(&mut self, instruction: &String, unsigned_imm: bool) -> HashMap<String, SliceValue> {
+    fn parse(
+        &mut self,
+        instruction: &String,
+        unsigned_imm: bool,
+        part_decoders: &HashMap<String, PartDecoder>,
+    ) -> HashMap<String, SliceValue> {
         self.slices
             .iter()
             .map(|x| {
                 let top = x.pos;
                 let bot = x.pos + x.slice_top - x.slice_bottom;
                 let tmp = instruction[top..bot].to_string();
-                SliceValue::new(&x.name, &tmp, x.slice_bottom, bot-top, unsigned_imm)
+                SliceValue::new(
+                    &x.name,
+                    &tmp,
+                    x.slice_bottom,
+                    bot - top,
+                    unsigned_imm,
+                    part_decoders[&x.name].part_type.clone(),
+                )
             })
             .fold(HashMap::new(), |mut acc, x| {
                 if let Some(tmp) = acc.get_mut(&x.name) {
@@ -613,9 +722,14 @@ impl Decoder {
                     &instruction_set.registers.names
                 };
                 for (_inst_format_name, inst_format) in &mut instruction_set.formats {
-                    let values = inst_format.parse(&instruction);
+                    let values = inst_format.parse(&instruction, &instruction_set.parts);
                     for inst in &inst_format.instructions {
-                        if inst.matches(&values, &instruction_set.parts, register_names, &inst_format.opcode) {
+                        if inst.matches(
+                            &values,
+                            &instruction_set.parts,
+                            register_names,
+                            &inst_format.opcode,
+                        ) {
                             finds.push(inst.display(
                                 &values,
                                 &inst_format,
@@ -641,8 +755,12 @@ impl Decoder {
         instruction: i64,
         bit_width: usize,
         use_abi_names: bool,
-    ) -> Result<String, String> { 
-        self.decode(format!("{:064b}", instruction)[64-bit_width..64].to_string(), bit_width, use_abi_names)
+    ) -> Result<String, String> {
+        self.decode(
+            format!("{:064b}", instruction)[64 - bit_width..64].to_string(),
+            bit_width,
+            use_abi_names,
+        )
     }
 
     pub fn decode_from_bytes(
@@ -650,7 +768,7 @@ impl Decoder {
         instruction: Vec<u8>,
         bit_width: usize,
         use_abi_names: bool,
-    ) -> Result<String, String> { 
+    ) -> Result<String, String> {
         let mut tmp = "".to_string();
         for ib in instruction {
             tmp.push_str(format!("{:08b}", ib).as_str());
