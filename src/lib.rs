@@ -2,6 +2,9 @@ use std::{collections::HashMap, str::FromStr};
 
 use toml::{map::Map, Table, Value};
 
+#[cfg(test)]
+mod tests;
+
 pub struct Decoder {
     instruction_sets: Vec<InstructionSet>,
 }
