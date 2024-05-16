@@ -148,7 +148,7 @@ lbu = { funct3 = 0x0 }
 lhu = { funct3 = 0x0 }
 
 [store]
-repr = "$name$ %rd%, %imm%(%rs1%)"
+repr = "$name$ %rs2%, %imm%(%rs1%)"
 type = "S"
 opcode = 0b0100011
 substitutions = {}

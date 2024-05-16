@@ -196,6 +196,7 @@ impl PartType {
 #[derive(Clone)]
 struct PartDecoder {
     name: String,
+    bit_width: usize,
     part_type: PartType,
 }
 
@@ -203,6 +204,7 @@ impl PartDecoder {
     pub fn new(part_array: &Vec<Value>) -> Self {
         PartDecoder {
             name: part_array[0].as_str().unwrap_or("").to_string(),
+            bit_width: part_array[1].as_integer().unwrap_or(0) as usize,
             part_type: PartType::from_str(part_array[2].as_str().unwrap_or(""))
                 .unwrap_or(PartType::NONE),
         }
@@ -423,7 +425,7 @@ impl SliceValue {
         let unsigned = part_type.get_unsigned(unsigned_imm);
 
         tmp.push_str((0..idx).map(|_| "0").collect::<String>().as_str());
-        if unsigned || tmp.len() < bit_width || tmp.starts_with("0") {
+        if unsigned || tmp.len() < (bit_width-1) || tmp.starts_with("0") {
             tmp.insert_str(
                 0,
                 (tmp.len()..128).map(|_| "0").collect::<String>().as_str(),
@@ -451,7 +453,6 @@ impl SliceValue {
                 .map(|(x, y)| if x == '1' || y == '1' { '1' } else { '0' })
                 .collect();
         }
-        //println!("{} {}", self.name, self.unsigned);
         if !self.unsigned
             && self
                 .value
@@ -471,7 +472,6 @@ impl SliceValue {
                     }
                 })
                 .collect();
-            //println!("{}", self.value);
         }
     }
 
@@ -547,8 +547,7 @@ impl Instruction {
                     } else {
                         let name = substitutions[x]["name"].as_str().unwrap().to_string();
                         let idx = substitutions[x]["bot"].as_integer().unwrap() as usize;
-                        let bit_width =
-                            substitutions[x]["top"].as_integer().unwrap() as usize - idx;
+                        let bit_width = substitutions[x]["top"].as_integer().unwrap() as usize - idx;
                         Some((
                             x.clone(),
                             SliceValue::new(
@@ -657,11 +656,12 @@ impl InstructionType {
                 let top = x.pos;
                 let bot = x.pos + x.slice_top - x.slice_bottom;
                 let tmp = instruction[top..bot].to_string();
+                let bit_width = self.slices.iter().filter(|y|y.name == x.name).max_by(|a,b|a.slice_top.cmp(&b.slice_top)).unwrap().slice_top + 1;
                 SliceValue::new(
                     &x.name,
                     &tmp,
                     x.slice_bottom,
-                    bot - top,
+                    bit_width,
                     unsigned_imm,
                     part_decoders[&x.name].part_type.clone(),
                 )
