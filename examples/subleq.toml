@@ -1,6 +1,5 @@
 set = "SUBLEQ"
-# subleq workaround: since there is no opcode, zero extend the instruction by 1 bit to make it work
-width = 17
+width = 16
 
 [types]
 names = ["subleq"]
@@ -30,19 +29,17 @@ parts = [
 [type]
 names = ["SUBLEQ"]
 SUBLEQ = [
-    { name = "opcode", top = 0, bot = 0 },
     { name = "r1", top = 3, bot = 0 },
     { name = "r2", top = 3, bot = 0 },
     { name = "jump", top = 7, bot = 0 },
 ]
 
 [subleq]
-repr = "%r1% %r2% %jump%"
 type = "SUBLEQ"
-opcode = 0
-substitutions = {}
+[subleq.repr]
+default = "%r1% %r2% %jump%"
 [subleq.instructions]
-subleq = { unsigned = true }
+subleq = { mask = 0, match = 0 }
 
 [register]
 names = ["Register"]
