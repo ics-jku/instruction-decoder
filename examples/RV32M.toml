@@ -53,20 +53,18 @@ R = [
 ]
 
 [multiply]
-repr = "$name$ %rd%, %rs1%, %rs2%"
 type = "R"
-opcode = 0b0110011
-substitutions = {}
+[multiply.repr]
+default = "$name$ %rd%, %rs1%, %rs2%"
 [reg.instructions]
-mul = { funct3 = 0x0, funct7 = 0x01 }
-mulh = { funct3 = 0x1, funct7 = 0x01 }
-mulsu = { funct3 = 0x2, funct7 = 0x01 }
-mulu = { funct3 = 0x3, funct7 = 0x01 }
-div = { funct3 = 0x4, funct7 = 0x01 }
-divu = { funct3 = 0x5, funct7 = 0x01 }
-rem = { funct3 = 0x6, funct7 = 0x01 }
-remu = { funct3 = 0x7, funct7 = 0x01 }
-
+mul = { mask = 0xfe00707f, match = 0x2000033 }
+mulh = { mask = 0xfe00707f, match = 0x2001033 }
+mulhsu = { mask = 0xfe00707f, match = 0x2002033 }
+mulhu = { mask = 0xfe00707f, match = 0x2003033 }
+div = { mask = 0xfe00707f, match = 0x2004033 }
+divu = { mask = 0xfe00707f, match = 0x2005033 }
+rem = { mask = 0xfe00707f, match = 0x2006033 }
+remu = { mask = 0xfe00707f, match = 0x2007033 }
 
 [register]
 names = ["Register_int"]

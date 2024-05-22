@@ -1,4 +1,4 @@
-use std::{collections::HashMap, str::FromStr};
+use std::{cmp::max, collections::HashMap, str::FromStr};
 
 use toml::{map::Map, Table, Value};
 
@@ -18,6 +18,15 @@ struct InstructionSet {
     formats: HashMap<String, InstructionFormat>,
     parts: HashMap<String, PartDecoder>,
     registers: HashMap<String, Registers>,
+}
+
+fn bit_string_and(s1 : &String, s2 : &String) -> String {
+    let length = max(s1.len(), s2.len());
+    let mut s1_clone = s1.clone();
+    let mut s2_clone = s2.clone();
+    s1_clone.insert_str(0, (s1.len()..length).map(|_| "0").collect::<String>().as_str());
+    s2_clone.insert_str(0, (s2.len()..length).map(|_| "0").collect::<String>().as_str());
+    s1_clone.chars().zip(s2_clone.chars()).map(|(c1, c2)| if c1 == '1' && c2 == '1' { '1' } else { '0' }).collect()
 }
 
 impl InstructionSet {
@@ -57,7 +66,7 @@ impl InstructionSet {
             .map(|x| {
                 (
                     x.as_str().unwrap().to_string().clone(),
-                    InstructionFormat::new(table, &x.as_str().unwrap().to_string(), &types, &parts),
+                    InstructionFormat::new(table, &x.as_str().unwrap().to_string(), &types),
                 )
             })
             .collect();
@@ -321,12 +330,9 @@ impl Registers {
 
 struct InstructionFormat {
     name: String,
-    repr: String,
+    repr: HashMap<String, String>,
     instruction_type: InstructionType,
-    opcode: SliceValue,
-    substitutions: HashMap<String, Table>,
     instructions: Vec<Instruction>,
-    unsigned_imm: bool,
 }
 
 impl InstructionFormat {
@@ -334,32 +340,12 @@ impl InstructionFormat {
         table: &Table,
         name: &String,
         types: &HashMap<String, InstructionType>,
-        part_decoders: &HashMap<String, PartDecoder>,
     ) -> Self {
-        let unsigned_imm = if table.contains_key("unsigned") {
-            table["unsigned"].as_bool().unwrap_or(false)
-        } else {
-            false
-        };
+        
 
-        let repr = table[name]["repr"].as_str().unwrap_or("").to_string();
+        let repr = table[name]["repr"].as_table().unwrap().iter().map(|(k,v)| (k.clone(),v.as_str().unwrap().to_string())).collect();
         let instruction_type = &types[table[name]["type"].as_str().unwrap_or("")];
-        let opcode_val = format!("{:064b}", table[name]["opcode"].as_integer().unwrap());
-        let opcode = SliceValue::new(
-            &"opcode".to_string(),
-            &opcode_val,
-            0,
-            64,
-            true,
-            part_decoders["opcode"].part_type.clone(),
-        );
 
-        let substitutions = table[name]["substitutions"]
-            .as_table()
-            .unwrap()
-            .iter()
-            .map(|(k, v)| (k.clone(), v.as_table().unwrap().clone()))
-            .collect::<HashMap<String, Table>>();
         let instructions = table[name]["instructions"]
             .as_table()
             .unwrap()
@@ -368,9 +354,6 @@ impl InstructionFormat {
                 Instruction::new(
                     &x,
                     y.as_table().unwrap(),
-                    part_decoders,
-                    &substitutions,
-                    unsigned_imm,
                 )
             })
             .collect();
@@ -378,10 +361,7 @@ impl InstructionFormat {
             name: name.clone(),
             repr,
             instruction_type: instruction_type.clone(),
-            opcode: opcode.clone(),
-            substitutions: substitutions.clone(),
             instructions,
-            unsigned_imm,
         }
     }
 
@@ -389,9 +369,10 @@ impl InstructionFormat {
         &mut self,
         instruction: &String,
         part_decoders: &HashMap<String, PartDecoder>,
+        unsigned_imm: bool,
     ) -> HashMap<String, SliceValue> {
         self.instruction_type
-            .parse(instruction, self.unsigned_imm, part_decoders)
+            .parse(instruction, unsigned_imm, part_decoders)
     }
 }
 
@@ -466,15 +447,6 @@ impl SliceValue {
         }
     }
 
-    fn matches(
-        &self,
-        other_value: &SliceValue,
-        part_decoder: &PartDecoder,
-        registers: &HashMap<String, Registers>,
-    ) -> bool {
-        self.get_value(part_decoder, registers) == other_value.get_value(part_decoder, registers)
-    }
-
     fn get_value(
         &self,
         part_decoder: &PartDecoder,
@@ -514,7 +486,8 @@ impl SliceValue {
 #[derive(Clone)]
 struct Instruction {
     name: String,
-    to_match: HashMap<String, SliceValue>,
+    mask_string: String,
+    match_string: String,
     unsigned_imm: bool,
 }
 
@@ -522,79 +495,27 @@ impl Instruction {
     pub fn new(
         name: &String,
         table: &Map<String, Value>,
-        part_decoders: &HashMap<String, PartDecoder>,
-        substitutions: &HashMap<String, Table>,
-        unsigned_imm: bool,
     ) -> Self {
-        let to_match = table
-            .iter()
-            .filter_map(|(x, y)| {
-                if *x != "unsigned".to_string() {
-                    if part_decoders.contains_key(x) {
-                        Some((
-                            x.clone(),
-                            SliceValue::new(
-                                &x,
-                                &format!("{:064b}", y.as_integer().unwrap_or(0)),
-                                0,
-                                64,
-                                unsigned_imm,
-                                part_decoders[x].part_type.clone(),
-                            ),
-                        ))
-                    } else {
-                        let name = substitutions[x]["name"].as_str().unwrap().to_string();
-                        let idx = substitutions[x]["bot"].as_integer().unwrap() as usize;
-                        let bit_width =
-                            substitutions[x]["top"].as_integer().unwrap() as usize - idx;
-                        Some((
-                            x.clone(),
-                            SliceValue::new(
-                                &name,
-                                &y.as_str().unwrap_or("").to_string(),
-                                idx,
-                                bit_width,
-                                unsigned_imm,
-                                part_decoders[&name].part_type.clone(),
-                            ),
-                        ))
-                    }
-                } else {
-                    None
-                }
-            })
-            .collect();
+        let unsigned_imm = if table.contains_key("unsigned") {
+            table["unsigned"].as_bool().unwrap_or(false)
+        } else {
+            false
+        };
+        let mask_string = format!("{:064b}", table["mask"].as_integer().unwrap());
+        let match_string = format!("{:064b}", table["match"].as_integer().unwrap());
         Instruction {
             name: name.clone(),
-            to_match,
+            mask_string,
+            match_string,
             unsigned_imm,
         }
     }
 
     fn matches(
         &self,
-        values: &HashMap<String, SliceValue>,
-        part_decoders: &HashMap<String, PartDecoder>,
-        registers: &HashMap<String, Registers>,
-        opcode: &SliceValue,
+        instruction_string : &String,
     ) -> bool {
-        if let Some(value) = values.get("opcode") {
-            if !value.matches(opcode, &part_decoders[&value.name], registers) {
-                return false;
-            }
-        } else {
-            return false;
-        }
-        for (name, to_match) in &self.to_match {
-            if let Some(value) = values.get(name) {
-                if !value.matches(to_match, &part_decoders[&value.name], registers) {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        }
-        return true;
+        return bit_string_and(&instruction_string, &self.mask_string) == self.match_string;
     }
 
     fn display(
@@ -604,7 +525,13 @@ impl Instruction {
         part_decoders: &HashMap<String, PartDecoder>,
         registers: &HashMap<String, Registers>,
     ) -> String {
-        let mut fmt = instruction_format.repr.clone();
+        let mut fmt = if instruction_format.repr.contains_key(&self.name) {
+            instruction_format.repr.get(&self.name)
+        } else {
+            instruction_format.repr.get("default")
+        }.unwrap().clone();
+        
+        
         let formatted_name = self.name.replace("_", ".");
         fmt = fmt.replace("$name$", &formatted_name);
         while fmt.contains("%") {
@@ -722,14 +649,12 @@ impl Decoder {
         for instruction_set in &mut self.instruction_sets {
             if bit_width == instruction_set.bit_width {
                 for (_inst_format_name, inst_format) in &mut instruction_set.formats {
-                    let values = inst_format.parse(&instruction, &instruction_set.parts);
-                    for inst in &inst_format.instructions {
+                    
+                    for inst in inst_format.instructions.clone() {
                         if inst.matches(
-                            &values,
-                            &instruction_set.parts,
-                            &instruction_set.registers,
-                            &inst_format.opcode,
+                            &instruction
                         ) {
+                            let values = inst_format.parse(&instruction, &instruction_set.parts, inst.unsigned_imm);
                             finds.push(inst.display(
                                 &values,
                                 &inst_format,

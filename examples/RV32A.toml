@@ -70,16 +70,17 @@ type = "R"
 opcode = 0b0101111
 substitutions = {}
 [reg.instructions]
-lr = { funct3 = 0x2, funct5 = 0x02 }
-sc = { funct3 = 0x2, funct5 = 0x03 }
-amoswap_w = { funct3 = 0x2, funct5 = 0x01 }
-amoadd_w = { funct3 = 0x2, funct5 = 0x00 }
-amoand_w = { funct3 = 0x2, funct5 = 0x0C }
-amoor_w = { funct3 = 0x2, funct5 = 0x0A }
-amoxor_w = { funct3 = 0x2, funct5 = 0x04 }
-amomax_w = { funct3 = 0x2, funct5 = 0x14 }
-amomin_w = { funct3 = 0x2, funct5 = 0x10 }
-
+lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
+sc_w = { mask = 0xf800707f, match = 0x1800202f }
+amoswap_w = { mask = 0xf800707f, match = 0x800202f }
+amoadd_w = { mask = 0xf800707f, match = 0x202f }
+amoand_w = { mask = 0xf800707f, match = 0x6000202f }
+amoor_w = { mask = 0xf800707f, match = 0x4000202f }
+amoxor_w = { mask = 0xf800707f, match = 0x2000202f }
+amomax_w = { mask = 0xf800707f, match = 0xa000202f }
+amomin_w = { mask = 0xf800707f, match = 0x8000202f }
+amomaxu_w = { mask = 0xf800707f, match = 0xe000202f }
+amominu_w = { mask = 0xf800707f, match = 0xc000202f }
 
 [register]
 names = ["Register_int"]

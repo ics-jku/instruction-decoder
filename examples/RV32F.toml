@@ -5,10 +5,7 @@ width = 32
 names = [
     "load",
     "store",
-    "madd",
-    "msub",
-    "nmadd",
-    "nmsub",
+    "reg4",
     "arith",
     "f2i",
     "i2f",
@@ -131,30 +128,13 @@ R4 = [
     { name = "opcode", top = 6, bot = 0 },
 ]
 
-[reg]
-repr = "$name$ %rd%, %rs1%, %rs2%"
-type = "R"
-opcode = 0b0110011
-substitutions = {}
-[reg.instructions]
-add = { funct3 = 0x0, funct7 = 0x00 }
-sub = { funct3 = 0x0, funct7 = 0x20 }
-xor = { funct3 = 0x4, funct7 = 0x00 }
-or = { funct3 = 0x6, funct7 = 0x00 }
-and = { funct3 = 0x7, funct7 = 0x00 }
-sll = { funct3 = 0x1, funct7 = 0x00 }
-srl = { funct3 = 0x5, funct7 = 0x00 }
-sra = { funct3 = 0x5, funct7 = 0x20 }
-slt = { funct3 = 0x2, funct7 = 0x00 }
-sltu = { funct3 = 0x3, funct7 = 0x00 }
-
 [load]
 repr = "$name$ %rdf%, %imm%(%rs1i%)"
 type = "I"
 opcode = 0b0000111
 substitutions = {}
 [load.instructions]
-flw = { rm = 0b010 }
+flw = { mask = 0x707f, match = 0x2007 }
 
 [store]
 repr = "$name$ %rdf%, %imm%(%rs1i%)"
@@ -162,39 +142,17 @@ type = "S"
 opcode = 0b0100111
 substitutions = {}
 [store.instructions]
-fsw = { rm = 0b010 }
+fsw = { mask = 0x707f, match = 0x2027 }
 
-[madd]
-repr = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
+[reg4]
 type = "R4"
-opcode = 0b1000011
-substitutions = {}
-[madd.instructions]
-fmadd_s = { fmt = 0b00, rm = 0b111 }
-
-[msub]
-repr = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
-type = "R4"
-opcode = 0b1000111
-substitutions = {}
-[msub.instructions]
-fmsub_s = { fmt = 0b00, rm = 0b111 }
-
-[nmadd]
-repr = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
-type = "R4"
-opcode = 0b1001111
-substitutions = {}
-[nmadd.instructions]
-fnmadd_s = { fmt = 0b00, rm = 0b111 }
-
-[nmsub]
-repr = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
-type = "R4"
-opcode = 0b1001011
-substitutions = {}
-[nmsub.instructions]
-fnmsub_s = { fmt = 0b00, rm = 0b111 }
+[reg4.repr]
+default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
+[reg4.instructions]
+fmadd_s = { mask = 0x600007f, match = 0x43 }
+fmsub_s = { mask = 0x600007f, match = 0x47 }
+fnmadd_s = { mask = 0x600007f, match = 0x4f }
+fnmsub_s = { mask = 0x600007f, match = 0x4b }
 
 [arith]
 repr = "$name$ %rdf%, %rs1f%, %rs2f%"
@@ -202,16 +160,16 @@ type = "Rfff"
 opcode = 0b1010011
 substitutions = {}
 [arith.instructions]
-fadd_s = { funct5 = 0b00000, fmt = 0b00, rm = 0b111 }
-fsub_s = { funct5 = 0b00001, fmt = 0b00, rm = 0b111 }
-fmul_s = { funct5 = 0b00010, fmt = 0b00, rm = 0b111 }
-fdiv_s = { funct5 = 0b00011, fmt = 0b00, rm = 0b111 }
-fsgnj_s = { funct5 = 0b00100, fmt = 0b00, rm = 0b000 }
-fsgnjn_s = { funct5 = 0b00100, fmt = 0b00, rm = 0b001 }
-fsgnjx_s = { funct5 = 0b00100, fmt = 0b00, rm = 0b010 }
-fmin_s = { funct5 = 0b00101, fmt = 0b00, rm = 0b000 }
-fmax_s = { funct5 = 0b00101, fmt = 0b00, rm = 0b001 }
-fsqrt_s = { funct5 = 0b01011, fmt = 0b00, rm = 0b111 }
+fadd_s = { mask = 0xfe00007f, match = 0x53 }
+fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
+fmul_s = { mask = 0xfe00007f, match = 0x10000053 }
+fdiv_s = { mask = 0xfe00007f, match = 0x18000053 }
+fsgnj_s = { mask = 0xfe00707f, match = 0x20000053 }
+fsgnjn_s = { mask = 0xfe00707f, match = 0x20001053 }
+fsgnjx_s = { mask = 0xfe00707f, match = 0x20002053 }
+fmin_s = { mask = 0xfe00707f, match = 0x28000053 }
+fmax_s = { mask = 0xfe00707f, match = 0x28001053 }
+fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
 
 [i2f]
 repr = "$name$ %rdf% %rs1i%"
@@ -219,9 +177,9 @@ type = "Rfif"
 opcode = 0b1010011
 substitutions = {}
 [i2f.instructions]
-fcvt_s_w = { rs2f = 0b00000, funct5 = 0b11010, fmt = 0b00, rm = 0b111 }
-fcvt_s_wu = { rs2f = 0b00001, funct5 = 0b11010, fmt = 0b00, rm = 0b111 }
-fmv_w_x = { rs2f = 0b00000, funct5 = 0b11110, fmt = 0b00, rm = 0b000 }
+fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
+fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
+fmv_w_x = { mask = 0xfff0707f, match = 0xf0000053 }
 
 [f2i]
 repr = "$name$ %rdi% %rs1f%"
@@ -229,10 +187,10 @@ type = "Rffi"
 opcode = 0b1010011
 substitutions = {}
 [f2i.instructions]
-fcvt_w_s = { rs2f = 0b00000, funct5 = 0b11000, fmt = 0b00, rm = 0b111 }
-fcvt_wu_s = { rs2f = 0b00001, funct5 = 0b11000, fmt = 0b00, rm = 0b111 }
-fmv_x_w = { rs2f = 0b00000, funct5 = 0b11100, fmt = 0b00, rm = 0b000 }
-fclass_s = { rs2f = 0b00000, funct5 = 0b11100, fmt = 0b00, rm = 0b001 }
+fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
+fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
+fmv_x_w = { mask = 0xfff0707f, match = 0xe0000053 }
+fclass_s = { mask = 0xfff0707f, match = 0xe0001053 }
 
 [if]
 repr = "$name$ %rdi%, %rs1f%, %rs2f%"
@@ -240,9 +198,9 @@ type = "Rffi"
 opcode = 0b1010011
 substitutions = {}
 [if.instructions]
-feq_s = { funct5 = 0b10100, fmt = 0b00, rm = 0b010 }
-flt_s = { funct5 = 0b10100, fmt = 0b00, rm = 0b001 }
-fle_s = { funct5 = 0b10100, fmt = 0b00, rm = 0b000 }
+feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
+flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
+fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
 
 [register]
 names = ["Register_int", "Register_float"]
