@@ -8,11 +8,8 @@ names = [
     "load",
     "store",
     "branch",
-    "jal",
-    "jalr",
-    "lui",
-    "auipc",
-    "interrupt",
+    "jump",
+    "upper",
 ]
 parts = [
     [
@@ -33,17 +30,17 @@ parts = [
     [
         "rd",
         5,
-        "Register",
+        "Register_int",
     ],
     [
         "rs1",
         5,
-        "Register",
+        "Register_int",
     ],
     [
         "rs2",
         5,
-        "Register",
+        "Register_int",
     ],
     [
         "imm",
@@ -53,7 +50,7 @@ parts = [
 ]
 
 [type]
-names = ["R", "I", "S", "B", "U", "J"]
+names = ["R", "I", "I_shift", "S", "B", "U", "J"]
 R = [
     { name = "funct7", top = 6, bot = 0 },
     { name = "rs2", top = 4, bot = 0 },
@@ -64,6 +61,14 @@ R = [
 ]
 I = [
     { name = "imm", top = 11, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+I_shift = [
+    { name = "shtyp", top = 6, bot = 0 },
+    { name = "imm", top = 4, bot = 0 },
     { name = "rs1", top = 4, bot = 0 },
     { name = "funct3", top = 2, bot = 0 },
     { name = "rd", top = 4, bot = 0 },
@@ -103,153 +108,101 @@ J = [
 ]
 
 [reg]
-repr = "$name$ %rd%, %rs1%, %rs2%"
 type = "R"
-opcode = 0b0110011
-substitutions = {}
+[reg.repr]
+default = "$name$ %rd%, %rs1%, %rs2%"
 [reg.instructions]
-add = { funct3 = 0x0, funct7 = 0x00 }
-sub = { funct3 = 0x0, funct7 = 0x20 }
-xor = { funct3 = 0x4, funct7 = 0x00 }
-or = { funct3 = 0x6, funct7 = 0x00 }
-and = { funct3 = 0x7, funct7 = 0x00 }
-sll = { funct3 = 0x1, funct7 = 0x00 }
-srl = { funct3 = 0x5, funct7 = 0x00 }
-sra = { funct3 = 0x5, funct7 = 0x20 }
-slt = { funct3 = 0x2, funct7 = 0x00 }
-sltu = { funct3 = 0x3, funct7 = 0x00 }
+add = { mask = 0xfe00707f, match = 0x33 }
+sub = { mask = 0xfe00707f, match = 0x40000033 }
+xor = { mask = 0xfe00707f, match = 0x4033 }
+or = { mask = 0xfe00707f, match = 0x6033 }
+and = { mask = 0xfe00707f, match = 0x7033 }
+sll = { mask = 0xfe00707f, match = 0x1033 }
+srl = { mask = 0xfe00707f, match = 0x5033 }
+sra = { mask = 0xfe00707f, match = 0x40005033 }
+slt = { mask = 0xfe00707f, match = 0x2033 }
+sltu = { mask = 0xfe00707f, match = 0x3033 }
+
 
 [imm]
-repr = "$name$ %rd%, %rs1%, %imm%"
 type = "I"
-opcode = 0b0010011
-substitutions = { "sfunct7" = { name = "imm", top = 11, bot = 5 } }
+[imm.repr]
+default = "$name$ %rd%, %rs1%, %imm%"
+jalr = "$name$ %rd%, %imm%(%rs1%)"
+ecall = "$name$"
+ebreak = "$name$"
 [imm.instructions]
-addi = { funct3 = 0x0 }
-xori = { funct3 = 0x4 }
-ori = { funct3 = 0x6 }
-andi = { funct3 = 0x7 }
-slli = { funct3 = 0x1, sfunct7 = 0x00 }
-srli = { funct3 = 0x5, sfunct7 = 0x00 }
-srai = { funct3 = 0x5, sfunct7 = 0x20 }
-slti = { funct3 = 0x2 }
-sltiu = { funct3 = 0x3 }
+addi = { mask = 0x707f, match = 0x13 }
+xori = { mask = 0x707f, match = 0x4013 }
+ori = { mask = 0x707f, match = 0x6013 }
+andi = { mask = 0x707f, match = 0x7013 }
+jalr = { mask = 0x707f, match = 0x67 }
+ecall = { mask = 0xffffffff, match = 0x73 }
+ebreak = { mask = 0xffffffff, match = 0x100073 }
+
+[shift]
+type = "I_shift"
+[shift.repr]
+default = "$name$ %rd%, %rs1%, %imm%"
+[shift.instructions]
+slli = { mask = 0xfe00707f, match = 0x1013 }
+srli = { mask = 0xfe00707f, match = 0x5013 }
+srai = { mask = 0xfe00707f, match = 0x40005013 }
+slti = { mask = 0x707f, match = 0x2013 }
+sltiu = { mask = 0x707f, match = 0x3013 }
+
 
 [load]
-repr = "$name$ %rd%, %imm%(%rs1%)"
 type = "I"
-opcode = 0b0000011
-substitutions = {}
+[load.repr]
+default = "$name$ %rd%, %imm%(%rs1%)"
 [load.instructions]
-lb = { funct3 = 0x0 }
-lh = { funct3 = 0x0 }
-lw = { funct3 = 0x0 }
-lbu = { funct3 = 0x0 }
-lhu = { funct3 = 0x0 }
+lb = { mask = 0x707f, match = 0x3 }
+lh = { mask = 0x707f, match = 0x1003 }
+lw = { mask = 0x707f, match = 0x2003 }
+lbu = { mask = 0x707f, match = 0x4003 }
+lhu = { mask = 0x707f, match = 0x5003 }
 
 [store]
-repr = "$name$ %rs2%, %imm%(%rs1%)"
 type = "S"
-opcode = 0b0100011
-substitutions = {}
+[store.repr]
+default = "$name$ %rs2%, %imm%(%rs1%)"
 [store.instructions]
-sb = { funct3 = 0x0 }
-sh = { funct3 = 0x0 }
-sw = { funct3 = 0x0 }
+sb = { mask = 0x707f, match = 0x23 }
+sh = { mask = 0x707f, match = 0x1023 }
+sw = { mask = 0x707f, match = 0x2023 }
 
 [branch]
-repr = "$name$ %rs1%, %rs2%, %imm%"
 type = "B"
-opcode = 0b1100011
-substitutions = {}
+[branch.repr]
+default = "$name$ %rs1%, %rs2%, %imm%"
 [branch.instructions]
-beq = { funct3 = 0x0 }
-bne = { funct3 = 0x1 }
-blt = { funct3 = 0x4 }
-bge = { funct3 = 0x5 }
-bltu = { funct3 = 0x6 }
-bgeu = { funct3 = 0x7 }
+beq = { mask = 0x707f, match = 0x63 }
+bne = { mask = 0x707f, match = 0x1063 }
+blt = { mask = 0x707f, match = 0x4063 }
+bge = { mask = 0x707f, match = 0x5063 }
+bltu = { mask = 0x707f, match = 0x6063 }
+bgeu = { mask = 0x707f, match = 0x7063 }
 
-[jal]
-repr = "$name$ %rd%, %imm%"
+[jump]
 type = "J"
-opcode = 0b1101111
-substitutions = {}
-[jal.instructions]
-jal = {}
+[jump.repr]
+default = "$name$ %rd%, %imm%"
+[jump.instructions]
+jal = { mask = 0x7f, match = 0x6f }
 
-[jalr]
-repr = "$name$ %rd%, %imm%(%rs1%)"
-type = "I"
-opcode = 0b1100111
-substitutions = {}
-[jalr.instructions]
-jalr = { funct3 = 0x0 }
-
-[lui]
-repr = "$name$ %rd%, %imm%"
+[upper]
 type = "U"
-opcode = 0b0110111
-substitutions = {}
-unsigned = true
-[lui.instructions]
-lui = { }
-
-[auipc]
-repr = "$name$ %rd%, %imm%"
-type = "U"
-opcode = 0b0110111
-substitutions = {}
-unsigned = true
-[auipc.instructions]
-lui = { }
-
-[interrupt]
-repr = "$name$"
-type = "I"
-opcode = 0b1110011
-substitutions = {}
-[interrupt.instructions]
-ecall = { funct3 = 0x0, imm = 0x0 }
-ebreak = { funct3 = 0x0, imm = 0x1 }
+[upper.repr]
+default = "$name$ %rd%, %imm%"
+[upper.instructions]
+lui = { mask = 0x7f, match = 0x37, unsigned = true }
+auipc = { mask = 0x7f, match = 0x17, unsigned = true  }
 
 [register]
+names = ["Register_int"]
 number = 32
-names = [
-    "x0",
-    "x1",
-    "x2",
-    "x3",
-    "x4",
-    "x5",
-    "x6",
-    "x7",
-    "x8",
-    "x9",
-    "x10",
-    "x11",
-    "x12",
-    "x13",
-    "x14",
-    "x15",
-    "x16",
-    "x17",
-    "x18",
-    "x19",
-    "x20",
-    "x21",
-    "x22",
-    "x23",
-    "x24",
-    "x25",
-    "x26",
-    "x27",
-    "x28",
-    "x29",
-    "x30",
-    "x31",
-]
-abi_names = [
+Register_int = [
     "zero",
     "ra",
     "sp",

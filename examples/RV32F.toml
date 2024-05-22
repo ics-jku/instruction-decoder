@@ -1,0 +1,276 @@
+set = "RV32F"
+width = 32
+
+[types]
+names = [
+    "load",
+    "store",
+    "reg4",
+    "arith",
+    "f2i",
+    "i2f",
+    "if",
+]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "rm",
+        3,
+        "u8",
+    ],
+    [
+        "funct5",
+        5,
+        "u8",
+    ],
+    [
+        "fmt",
+        2,
+        "u8",
+    ],
+    [
+        "rdi",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1i",
+        5,
+        "Register_int",
+    ],
+    [
+        "rdf",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1f",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2f",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs3f",
+        5,
+        "Register_float",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["Rfff", "Rfif", "Rffi", "I", "S", "R4"]
+Rfff = [
+    { name = "funct5", top = 4, bot = 0 },
+    { name = "fmt", top = 1, bot = 0 },
+    { name = "rs2f", top = 4, bot = 0 },
+    { name = "rs1f", top = 4, bot = 0 },
+    { name = "rm", top = 2, bot = 0 },
+    { name = "rdf", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+Rfif = [
+    { name = "funct5", top = 4, bot = 0 },
+    { name = "fmt", top = 1, bot = 0 },
+    { name = "rs2f", top = 4, bot = 0 },
+    { name = "rs1i", top = 4, bot = 0 },
+    { name = "rm", top = 2, bot = 0 },
+    { name = "rdf", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+Rffi = [
+    { name = "funct5", top = 4, bot = 0 },
+    { name = "fmt", top = 1, bot = 0 },
+    { name = "rs2f", top = 4, bot = 0 },
+    { name = "rs1f", top = 4, bot = 0 },
+    { name = "rm", top = 2, bot = 0 },
+    { name = "rdi", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+I = [
+    { name = "imm", top = 11, bot = 0 },
+    { name = "rs1i", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rdf", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+S = [
+    { name = "imm", top = 11, bot = 5 },
+    { name = "rs2f", top = 4, bot = 0 },
+    { name = "rs1i", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "imm", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+R4 = [
+    { name = "rs3f", top = 4, bot = 0 },
+    { name = "fmt", top = 1, bot = 0 },
+    { name = "rs2f", top = 4, bot = 0 },
+    { name = "rs1f", top = 4, bot = 0 },
+    { name = "rm", top = 2, bot = 0 },
+    { name = "rdf", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[load]
+repr = "$name$ %rdf%, %imm%(%rs1i%)"
+type = "I"
+opcode = 0b0000111
+substitutions = {}
+[load.instructions]
+flw = { mask = 0x707f, match = 0x2007 }
+
+[store]
+repr = "$name$ %rdf%, %imm%(%rs1i%)"
+type = "S"
+opcode = 0b0100111
+substitutions = {}
+[store.instructions]
+fsw = { mask = 0x707f, match = 0x2027 }
+
+[reg4]
+type = "R4"
+[reg4.repr]
+default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
+[reg4.instructions]
+fmadd_s = { mask = 0x600007f, match = 0x43 }
+fmsub_s = { mask = 0x600007f, match = 0x47 }
+fnmadd_s = { mask = 0x600007f, match = 0x4f }
+fnmsub_s = { mask = 0x600007f, match = 0x4b }
+
+[arith]
+repr = "$name$ %rdf%, %rs1f%, %rs2f%"
+type = "Rfff"
+opcode = 0b1010011
+substitutions = {}
+[arith.instructions]
+fadd_s = { mask = 0xfe00007f, match = 0x53 }
+fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
+fmul_s = { mask = 0xfe00007f, match = 0x10000053 }
+fdiv_s = { mask = 0xfe00007f, match = 0x18000053 }
+fsgnj_s = { mask = 0xfe00707f, match = 0x20000053 }
+fsgnjn_s = { mask = 0xfe00707f, match = 0x20001053 }
+fsgnjx_s = { mask = 0xfe00707f, match = 0x20002053 }
+fmin_s = { mask = 0xfe00707f, match = 0x28000053 }
+fmax_s = { mask = 0xfe00707f, match = 0x28001053 }
+fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
+
+[i2f]
+repr = "$name$ %rdf% %rs1i%"
+type = "Rfif"
+opcode = 0b1010011
+substitutions = {}
+[i2f.instructions]
+fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
+fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
+fmv_w_x = { mask = 0xfff0707f, match = 0xf0000053 }
+
+[f2i]
+repr = "$name$ %rdi% %rs1f%"
+type = "Rffi"
+opcode = 0b1010011
+substitutions = {}
+[f2i.instructions]
+fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
+fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
+fmv_x_w = { mask = 0xfff0707f, match = 0xe0000053 }
+fclass_s = { mask = 0xfff0707f, match = 0xe0001053 }
+
+[if]
+repr = "$name$ %rdi%, %rs1f%, %rs2f%"
+type = "Rffi"
+opcode = 0b1010011
+substitutions = {}
+[if.instructions]
+feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
+flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
+fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
+
+[register]
+names = ["Register_int", "Register_float"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
+
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]

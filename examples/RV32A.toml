@@ -1,0 +1,121 @@
+set = "RV32A"
+width = 32
+
+[types]
+names = ["atomic"]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "funct5",
+        5,
+        "u8",
+    ],
+    [
+        "aq",
+        1,
+        "boolean",
+    ],
+    [
+        "rl",
+        1,
+        "boolean",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2",
+        5,
+        "Register_int",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["R"]
+R = [
+    { name = "funct5", top = 4, bot = 0 },
+    { name = "aq", top = 0, bot = 0 },
+    { name = "rl", top = 0, bot = 0 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[atomic]
+repr = "$name$ %rd%, %rs1%, %rs2%"
+type = "R"
+opcode = 0b0101111
+substitutions = {}
+[reg.instructions]
+lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
+sc_w = { mask = 0xf800707f, match = 0x1800202f }
+amoswap_w = { mask = 0xf800707f, match = 0x800202f }
+amoadd_w = { mask = 0xf800707f, match = 0x202f }
+amoand_w = { mask = 0xf800707f, match = 0x6000202f }
+amoor_w = { mask = 0xf800707f, match = 0x4000202f }
+amoxor_w = { mask = 0xf800707f, match = 0x2000202f }
+amomax_w = { mask = 0xf800707f, match = 0xa000202f }
+amomin_w = { mask = 0xf800707f, match = 0x8000202f }
+amomaxu_w = { mask = 0xf800707f, match = 0xe000202f }
+amominu_w = { mask = 0xf800707f, match = 0xc000202f }
+
+[register]
+names = ["Register_int"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]

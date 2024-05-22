@@ -1,0 +1,105 @@
+set = "RV32M"
+width = 32
+
+[types]
+names = ["multiply"]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "funct7",
+        7,
+        "u8",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2",
+        5,
+        "Register_int",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["R"]
+R = [
+    { name = "funct7", top = 6, bot = 0 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[multiply]
+type = "R"
+[multiply.repr]
+default = "$name$ %rd%, %rs1%, %rs2%"
+[reg.instructions]
+mul = { mask = 0xfe00707f, match = 0x2000033 }
+mulh = { mask = 0xfe00707f, match = 0x2001033 }
+mulhsu = { mask = 0xfe00707f, match = 0x2002033 }
+mulhu = { mask = 0xfe00707f, match = 0x2003033 }
+div = { mask = 0xfe00707f, match = 0x2004033 }
+divu = { mask = 0xfe00707f, match = 0x2005033 }
+rem = { mask = 0xfe00707f, match = 0x2006033 }
+remu = { mask = 0xfe00707f, match = 0x2007033 }
+
+[register]
+names = ["Register_int"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
