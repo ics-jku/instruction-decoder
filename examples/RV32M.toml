@@ -1,0 +1,107 @@
+set = "RV32M"
+width = 32
+
+[types]
+names = ["multiply"]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "funct7",
+        7,
+        "u8",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2",
+        5,
+        "Register_int",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["R"]
+R = [
+    { name = "funct7", top = 6, bot = 0 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[multiply]
+repr = "$name$ %rd%, %rs1%, %rs2%"
+type = "R"
+opcode = 0b0110011
+substitutions = {}
+[reg.instructions]
+mul = { funct3 = 0x0, funct7 = 0x01 }
+mulh = { funct3 = 0x1, funct7 = 0x01 }
+mulsu = { funct3 = 0x2, funct7 = 0x01 }
+mulu = { funct3 = 0x3, funct7 = 0x01 }
+div = { funct3 = 0x4, funct7 = 0x01 }
+divu = { funct3 = 0x5, funct7 = 0x01 }
+rem = { funct3 = 0x6, funct7 = 0x01 }
+remu = { funct3 = 0x7, funct7 = 0x01 }
+
+
+[register]
+names = ["Register_int"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]

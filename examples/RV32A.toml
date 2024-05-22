@@ -1,0 +1,120 @@
+set = "RV32A"
+width = 32
+
+[types]
+names = ["atomic"]
+parts = [
+    [
+        "opcode",
+        7,
+        "u8",
+    ],
+    [
+        "funct3",
+        3,
+        "u8",
+    ],
+    [
+        "funct5",
+        5,
+        "u8",
+    ],
+    [
+        "aq",
+        1,
+        "boolean",
+    ],
+    [
+        "rl",
+        1,
+        "boolean",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2",
+        5,
+        "Register_int",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+]
+
+[type]
+names = ["R"]
+R = [
+    { name = "funct5", top = 4, bot = 0 },
+    { name = "aq", top = 0, bot = 0 },
+    { name = "rl", top = 0, bot = 0 },
+    { name = "rs2", top = 4, bot = 0 },
+    { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+
+[atomic]
+repr = "$name$ %rd%, %rs1%, %rs2%"
+type = "R"
+opcode = 0b0101111
+substitutions = {}
+[reg.instructions]
+lr = { funct3 = 0x2, funct5 = 0x02 }
+sc = { funct3 = 0x2, funct5 = 0x03 }
+amoswap_w = { funct3 = 0x2, funct5 = 0x01 }
+amoadd_w = { funct3 = 0x2, funct5 = 0x00 }
+amoand_w = { funct3 = 0x2, funct5 = 0x0C }
+amoor_w = { funct3 = 0x2, funct5 = 0x0A }
+amoxor_w = { funct3 = 0x2, funct5 = 0x04 }
+amomax_w = { funct3 = 0x2, funct5 = 0x14 }
+amomin_w = { funct3 = 0x2, funct5 = 0x10 }
+
+
+[register]
+names = ["Register_int"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]

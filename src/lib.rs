@@ -605,7 +605,8 @@ impl Instruction {
         registers: &HashMap<String, Registers>,
     ) -> String {
         let mut fmt = instruction_format.repr.clone();
-        fmt = fmt.replace("$name$", &self.name);
+        let formatted_name = self.name.replace("_", ".");
+        fmt = fmt.replace("$name$", &formatted_name);
         while fmt.contains("%") {
             let begin = fmt.find("%").unwrap();
             fmt.remove(begin);
