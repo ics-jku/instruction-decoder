@@ -3,14 +3,12 @@ set = "SUBLEQ"
 width = 17
 
 [types]
-names = [
-    "subleq",
-]
+names = ["subleq"]
 parts = [
     [
         "opcode",
         1,
-        "u8"
+        "u8",
     ],
     [
         "r1",
@@ -47,26 +45,9 @@ substitutions = {}
 subleq = { unsigned = true }
 
 [register]
+names = ["Register"]
 number = 16
-names = [
-    "TMP0",
-    "RVPC",
-    "SRC1",
-    "TMP1",
-    "SRC2",
-    "TMP2",
-    "TMP3",
-    "TMP4",
-    "IMMI",
-    "TMP5",
-    "CONE",
-    "WORD",
-    "INCR",
-    "NEXT",
-    "TMP6",
-    "TMP7",
-]
-abi_names = [
+Register = [
     "TMP0",
     "PC",
     "SRC1",
@@ -84,5 +65,3 @@ abi_names = [
     "TWP",
     "TMP7",
 ]
-
-
