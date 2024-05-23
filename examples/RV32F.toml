@@ -2,15 +2,7 @@ set = "RV32F"
 width = 32
 
 [types]
-names = [
-    "load",
-    "store",
-    "reg4",
-    "arith",
-    "f2i",
-    "i2f",
-    "if",
-]
+names = ["load", "store", "reg4", "arith", "f2i", "i2f"]
 parts = [
     [
         "opcode",
@@ -129,18 +121,16 @@ R4 = [
 ]
 
 [load]
-repr = "$name$ %rdf%, %imm%(%rs1i%)"
 type = "I"
-opcode = 0b0000111
-substitutions = {}
+[load.repr]
+default = "$name$ %rdf%, %imm%(%rs1i%)"
 [load.instructions]
 flw = { mask = 0x707f, match = 0x2007 }
 
 [store]
-repr = "$name$ %rdf%, %imm%(%rs1i%)"
 type = "S"
-opcode = 0b0100111
-substitutions = {}
+[store.repr]
+default = "$name$ %rdf%, %imm%(%rs1i%)"
 [store.instructions]
 fsw = { mask = 0x707f, match = 0x2027 }
 
@@ -155,10 +145,9 @@ fnmadd_s = { mask = 0x600007f, match = 0x4f }
 fnmsub_s = { mask = 0x600007f, match = 0x4b }
 
 [arith]
-repr = "$name$ %rdf%, %rs1f%, %rs2f%"
 type = "Rfff"
-opcode = 0b1010011
-substitutions = {}
+[arith.repr]
+default = "$name$ %rdf%, %rs1f%, %rs2f%"
 [arith.instructions]
 fadd_s = { mask = 0xfe00007f, match = 0x53 }
 fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
@@ -172,32 +161,26 @@ fmax_s = { mask = 0xfe00707f, match = 0x28001053 }
 fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
 
 [i2f]
-repr = "$name$ %rdf% %rs1i%"
 type = "Rfif"
-opcode = 0b1010011
-substitutions = {}
+[i2f.repr]
+default = "$name$ %rdf% %rs1i%"
 [i2f.instructions]
 fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
 fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
 fmv_w_x = { mask = 0xfff0707f, match = 0xf0000053 }
 
 [f2i]
-repr = "$name$ %rdi% %rs1f%"
 type = "Rffi"
-opcode = 0b1010011
-substitutions = {}
+[f2i.repr]
+default = "$name$ %rdi% %rs1f%"
+feq_s = "$name$ %rdi%, %rs1f%, %rs2f%"
+flt_s = "$name$ %rdi%, %rs1f%, %rs2f%"
+fle_s = "$name$ %rdi%, %rs1f%, %rs2f%"
 [f2i.instructions]
 fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
 fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
 fmv_x_w = { mask = 0xfff0707f, match = 0xe0000053 }
 fclass_s = { mask = 0xfff0707f, match = 0xe0001053 }
-
-[if]
-repr = "$name$ %rdi%, %rs1f%, %rs2f%"
-type = "Rffi"
-opcode = 0b1010011
-substitutions = {}
-[if.instructions]
 feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
 flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
 fle_s = { mask = 0xfe00707f, match = 0xa0000053 }

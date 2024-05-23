@@ -65,10 +65,9 @@ R = [
 ]
 
 [atomic]
-repr = "$name$ %rd%, %rs1%, %rs2%"
 type = "R"
-opcode = 0b0101111
-substitutions = {}
+[atomic.repr]
+default = "$name$ %rd%, %rs1%, %rs2%"
 [reg.instructions]
 lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
 sc_w = { mask = 0xf800707f, match = 0x1800202f }
