@@ -85,23 +85,25 @@ impl InstructionSet {
         let mut register_map = HashMap::new();
         for value in register_names {
             let register_name = value.as_str().unwrap().to_string();
-            let reg_map = match &table["register"][&register_name] {
-                Value::Array(val) => Some(
+            let (reg_map, strict) = match &table["register"][&register_name] {
+                Value::Array(val) => Some((
                     val.iter()
                         .enumerate()
                         .map(|(k, v)| (k, v.clone()))
                         .collect::<HashMap<usize, Value>>(),
-                ),
-                Value::Table(val) => Some(
+                    true,
+                )),
+                Value::Table(val) => Some((
                     val.iter()
                         .map(|(k, v)| (usize::from_str(k).unwrap(), v.clone()))
                         .collect::<HashMap<usize, Value>>(),
-                ),
+                    false,
+                )),
                 _ => None,
             }
             .unwrap();
 
-            let registers: Registers = Registers::new(&reg_map);
+            let registers: Registers = Registers::new(&reg_map, strict);
             register_map.insert(register_name.clone(), registers);
         }
 
@@ -327,7 +329,15 @@ impl PartDecoder {
                         &usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2)
                             .unwrap(),
                     )
-                    .unwrap()
+                    .unwrap_or(&if registers[reg_set_name].strict {
+                        format!(
+                            "{:x}",
+                            usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2)
+                                .unwrap()
+                        )
+                    } else {
+                        "ERROR".to_string()
+                    })
                     .clone(),
             ),
             PartType::VInt => {
@@ -346,15 +356,16 @@ impl PartDecoder {
 
 struct Registers {
     names: HashMap<usize, String>,
+    strict: bool,
 }
 
 impl Registers {
-    pub fn new(list: &HashMap<usize, Value>) -> Self {
+    pub fn new(list: &HashMap<usize, Value>, strict: bool) -> Self {
         let names = list
             .iter()
             .map(|(k, v)| (k.clone(), v.as_str().unwrap_or("").to_string()))
             .collect();
-        Registers { names }
+        Registers { names, strict }
     }
 }
 
