@@ -20,13 +20,23 @@ struct InstructionSet {
     registers: HashMap<String, Registers>,
 }
 
-fn bit_string_and(s1 : &String, s2 : &String) -> String {
+fn bit_string_and(s1: &String, s2: &String) -> String {
     let length = max(s1.len(), s2.len());
     let mut s1_clone = s1.clone();
     let mut s2_clone = s2.clone();
-    s1_clone.insert_str(0, (s1.len()..length).map(|_| "0").collect::<String>().as_str());
-    s2_clone.insert_str(0, (s2.len()..length).map(|_| "0").collect::<String>().as_str());
-    s1_clone.chars().zip(s2_clone.chars()).map(|(c1, c2)| if c1 == '1' && c2 == '1' { '1' } else { '0' }).collect()
+    s1_clone.insert_str(
+        0,
+        (s1.len()..length).map(|_| "0").collect::<String>().as_str(),
+    );
+    s2_clone.insert_str(
+        0,
+        (s2.len()..length).map(|_| "0").collect::<String>().as_str(),
+    );
+    s1_clone
+        .chars()
+        .zip(s2_clone.chars())
+        .map(|(c1, c2)| if c1 == '1' && c2 == '1' { '1' } else { '0' })
+        .collect()
 }
 
 impl InstructionSet {
@@ -336,26 +346,20 @@ struct InstructionFormat {
 }
 
 impl InstructionFormat {
-    pub fn new(
-        table: &Table,
-        name: &String,
-        types: &HashMap<String, InstructionType>,
-    ) -> Self {
-        
-
-        let repr = table[name]["repr"].as_table().unwrap().iter().map(|(k,v)| (k.clone(),v.as_str().unwrap().to_string())).collect();
+    pub fn new(table: &Table, name: &String, types: &HashMap<String, InstructionType>) -> Self {
+        let repr = table[name]["repr"]
+            .as_table()
+            .unwrap()
+            .iter()
+            .map(|(k, v)| (k.clone(), v.as_str().unwrap().to_string()))
+            .collect();
         let instruction_type = &types[table[name]["type"].as_str().unwrap_or("")];
 
         let instructions = table[name]["instructions"]
             .as_table()
             .unwrap()
             .iter()
-            .map(|(x, y)| {
-                Instruction::new(
-                    &x,
-                    y.as_table().unwrap(),
-                )
-            })
+            .map(|(x, y)| Instruction::new(&x, y.as_table().unwrap()))
             .collect();
         InstructionFormat {
             name: name.clone(),
@@ -366,7 +370,7 @@ impl InstructionFormat {
     }
 
     fn parse(
-        &mut self,
+        &self,
         instruction: &String,
         part_decoders: &HashMap<String, PartDecoder>,
         unsigned_imm: bool,
@@ -492,10 +496,7 @@ struct Instruction {
 }
 
 impl Instruction {
-    pub fn new(
-        name: &String,
-        table: &Map<String, Value>,
-    ) -> Self {
+    pub fn new(name: &String, table: &Map<String, Value>) -> Self {
         let unsigned_imm = if table.contains_key("unsigned") {
             table["unsigned"].as_bool().unwrap_or(false)
         } else {
@@ -511,10 +512,7 @@ impl Instruction {
         }
     }
 
-    fn matches(
-        &self,
-        instruction_string : &String,
-    ) -> bool {
+    fn matches(&self, instruction_string: &String) -> bool {
         return bit_string_and(&instruction_string, &self.mask_string) == self.match_string;
     }
 
@@ -529,9 +527,10 @@ impl Instruction {
             instruction_format.repr.get(&self.name)
         } else {
             instruction_format.repr.get("default")
-        }.unwrap().clone();
-        
-        
+        }
+        .unwrap()
+        .clone();
+
         let formatted_name = self.name.replace("_", ".");
         fmt = fmt.replace("$name$", &formatted_name);
         while fmt.contains("%") {
@@ -572,7 +571,7 @@ impl InstructionType {
     }
 
     fn parse(
-        &mut self,
+        &self,
         instruction: &String,
         unsigned_imm: bool,
         part_decoders: &HashMap<String, PartDecoder>,
@@ -643,18 +642,19 @@ impl Decoder {
         }
     }
 
-    pub fn decode(&mut self, instruction: String, bit_width: usize) -> Result<String, String> {
+    pub fn decode(&self, instruction: String, bit_width: usize) -> Result<String, String> {
         let mut finds: Vec<String> = vec![];
 
-        for instruction_set in &mut self.instruction_sets {
+        for instruction_set in &self.instruction_sets {
             if bit_width == instruction_set.bit_width {
-                for (_inst_format_name, inst_format) in &mut instruction_set.formats {
-                    
-                    for inst in inst_format.instructions.clone() {
-                        if inst.matches(
-                            &instruction
-                        ) {
-                            let values = inst_format.parse(&instruction, &instruction_set.parts, inst.unsigned_imm);
+                for (_inst_format_name, inst_format) in &instruction_set.formats {
+                    for inst in &inst_format.instructions {
+                        if inst.matches(&instruction) {
+                            let values = inst_format.parse(
+                                &instruction,
+                                &instruction_set.parts,
+                                inst.unsigned_imm,
+                            );
                             finds.push(inst.display(
                                 &values,
                                 &inst_format,
@@ -675,11 +675,14 @@ impl Decoder {
         };
     }
 
-    pub fn decode_from_i64(
-        &mut self,
-        instruction: i64,
-        bit_width: usize,
-    ) -> Result<String, String> {
+    pub fn decode_from_u32(&self, instruction: u32, bit_width: usize) -> Result<String, String> {
+        self.decode(
+            format!("{:032b}", instruction)[32 - bit_width..32].to_string(),
+            bit_width,
+        )
+    }
+
+    pub fn decode_from_i64(&self, instruction: i64, bit_width: usize) -> Result<String, String> {
         self.decode(
             format!("{:064b}", instruction)[64 - bit_width..64].to_string(),
             bit_width,
@@ -687,7 +690,7 @@ impl Decoder {
     }
 
     pub fn decode_from_bytes(
-        &mut self,
+        &self,
         instruction: Vec<u8>,
         bit_width: usize,
     ) -> Result<String, String> {
