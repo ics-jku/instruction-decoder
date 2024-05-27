@@ -330,13 +330,13 @@ impl PartDecoder {
                             .unwrap(),
                     )
                     .unwrap_or(&if registers[reg_set_name].strict {
+                        "ERROR".to_string()
+                    } else {
                         format!(
                             "{:x}",
                             usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2)
                                 .unwrap()
                         )
-                    } else {
-                        "ERROR".to_string()
                     })
                     .clone(),
             ),
