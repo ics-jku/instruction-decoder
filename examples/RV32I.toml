@@ -6,6 +6,7 @@ names = [
     "reg",
     "imm",
     "csr",
+    "csri",
     "load",
     "store",
     "branch",
@@ -56,7 +57,7 @@ parts = [
 ]
 
 [type]
-names = ["R", "I", "I_shift", "S", "B", "U", "J", "CSR"]
+names = ["R", "I", "I_shift", "S", "B", "U", "J", "CSR", "CSRI"]
 R = [
     { name = "funct7", top = 6, bot = 0 },
     { name = "rs2", top = 4, bot = 0 },
@@ -83,6 +84,13 @@ I_shift = [
 CSR = [
     { name = "csr", top = 11, bot = 0 },
     { name = "rs1", top = 4, bot = 0 },
+    { name = "funct3", top = 2, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "opcode", top = 6, bot = 0 },
+]
+CSRI = [
+    { name = "csr", top = 11, bot = 0 },
+    { name = "imm", top = 4, bot = 0 },
     { name = "funct3", top = 2, bot = 0 },
     { name = "rd", top = 4, bot = 0 },
     { name = "opcode", top = 6, bot = 0 },
@@ -156,14 +164,20 @@ ebreak = { mask = 0xffffffff, match = 0x100073 }
 [csr]
 type = "CSR"
 [csr.repr]
-default = "$name$ %rd%, %csr%, %imm%"
+default = "$name$ %rd%, %csr%, %rs1%"
 [csr.instructions]
 csrrc = { mask = 0x707f, match = 0x3073}
-csrrci = { mask = 0x707f, match = 0x7073}
 csrrs = { mask = 0x707f, match = 0x2073}
-csrrsi = { mask = 0x707f, match = 0x6073}
 csrrw = { mask = 0x707f, match = 0x1073}
-csrrwi = { mask = 0x707f, match = 0x5073}
+
+[csri]
+type = "CSRI"
+[csri.repr]
+default = "$name$ %rd%, %csr%, %imm%"
+[csri.instructions]
+csrrci = { mask = 0x707f, match = 0x7073, unsigned = true }
+csrrsi = { mask = 0x707f, match = 0x6073, unsigned = true }
+csrrwi = { mask = 0x707f, match = 0x5073, unsigned = true }
 
 [shift]
 type = "I_shift"

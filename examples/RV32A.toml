@@ -20,14 +20,9 @@ parts = [
         "u8",
     ],
     [
-        "aq",
-        1,
-        "boolean",
-    ],
-    [
-        "rl",
-        1,
-        "boolean",
+        "ordering",
+        2,
+        "Register_ordering",
     ],
     [
         "rd",
@@ -55,8 +50,7 @@ parts = [
 names = ["R"]
 R = [
     { name = "funct5", top = 4, bot = 0 },
-    { name = "aq", top = 0, bot = 0 },
-    { name = "rl", top = 0, bot = 0 },
+    { name = "ordering", top = 1, bot = 0 },
     { name = "rs2", top = 4, bot = 0 },
     { name = "rs1", top = 4, bot = 0 },
     { name = "funct3", top = 2, bot = 0 },
@@ -67,8 +61,10 @@ R = [
 [atomic]
 type = "R"
 [atomic.repr]
-default = "$name$ %rd%, %rs1%, %rs2%"
-[reg.instructions]
+default = "$name$%ordering% %rd%, %rs2%, (%rs1%)"
+lr_w= "$name$%ordering% %rd%, %rs1%, %rs2%"
+sc_w= "$name$%ordering% %rd%, %rs1%, %rs2%"
+[atomic.instructions]
 lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
 sc_w = { mask = 0xf800707f, match = 0x1800202f }
 amoswap_w = { mask = 0xf800707f, match = 0x800202f }
@@ -82,7 +78,7 @@ amomaxu_w = { mask = 0xf800707f, match = 0xe000202f }
 amominu_w = { mask = 0xf800707f, match = 0xc000202f }
 
 [register]
-names = ["Register_int"]
+names = ["Register_int", "Register_ordering"]
 number = 32
 Register_int = [
     "zero",
@@ -117,4 +113,10 @@ Register_int = [
     "t4",
     "t5",
     "t6",
+]
+Register_ordering = [
+    "",
+    ".rl",
+    ".aq",
+    ".aqrl"
 ]
