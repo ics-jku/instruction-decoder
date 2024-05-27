@@ -34,11 +34,6 @@ parts = [
         5,
         "Register_int",
     ],
-    [
-        "imm",
-        32,
-        "VInt",
-    ],
 ]
 
 [type]
@@ -56,7 +51,7 @@ R = [
 type = "R"
 [multiply.repr]
 default = "$name$ %rd%, %rs1%, %rs2%"
-[reg.instructions]
+[multiply.instructions]
 mul = { mask = 0xfe00707f, match = 0x2000033 }
 mulh = { mask = 0xfe00707f, match = 0x2001033 }
 mulhsu = { mask = 0xfe00707f, match = 0x2002033 }

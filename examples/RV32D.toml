@@ -2,7 +2,7 @@ set = "RV32F"
 width = 32
 
 [types]
-names = ["load", "store", "reg4", "arith", "f2i", "i2f"]
+names = ["load", "store", "reg4", "arith", "d2i", "i2d"]
 parts = [
     [
         "opcode",
@@ -125,66 +125,68 @@ type = "I"
 [load.repr]
 default = "$name$ %rdf%, %imm%(%rs1i%)"
 [load.instructions]
-flw = { mask = 0x707f, match = 0x2007 }
+fld = { mask = 0x707f, match = 0x3007}
 
 [store]
 type = "S"
 [store.repr]
 default = "$name$ %rs2f%, %imm%(%rs1i%)"
 [store.instructions]
-fsw = { mask = 0x707f, match = 0x2027 }
+fsd = { mask = 0x707f, match = 0x3027}
 
 [reg4]
 type = "R4"
 [reg4.repr]
 default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
 [reg4.instructions]
-fmadd_s = { mask = 0x600007f, match = 0x43 }
-fmsub_s = { mask = 0x600007f, match = 0x47 }
-fnmadd_s = { mask = 0x600007f, match = 0x4f }
-fnmsub_s = { mask = 0x600007f, match = 0x4b }
+fmadd_d = { mask = 0x600007f, match = 0x2000043}
+fmsub_d = { mask = 0x600007f, match = 0x2000047}
+fnmadd_d = { mask = 0x600007f, match = 0x200004f}
+fnmsub_d = { mask = 0x600007f, match = 0x200004b}
 
 [arith]
 type = "Rfff"
 [arith.repr]
 default = "$name$ %rdf%, %rs1f%, %rs2f%"
-fsqrt_s = "$name$ %rdf%, %rs1f%"
+fcvt_s_d = "$name$ %rdf%, %rs1f%"
+fcvt_d_s = "$name$ %rdf%, %rs1f%"
+fsqrt_d = "$name$ %rdf%, %rs1f%"
 [arith.instructions]
-fadd_s = { mask = 0xfe00007f, match = 0x53 }
-fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
-fmul_s = { mask = 0xfe00007f, match = 0x10000053 }
-fdiv_s = { mask = 0xfe00007f, match = 0x18000053 }
-fsgnj_s = { mask = 0xfe00707f, match = 0x20000053 }
-fsgnjn_s = { mask = 0xfe00707f, match = 0x20001053 }
-fsgnjx_s = { mask = 0xfe00707f, match = 0x20002053 }
-fmin_s = { mask = 0xfe00707f, match = 0x28000053 }
-fmax_s = { mask = 0xfe00707f, match = 0x28001053 }
-fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
+fadd_d = { mask = 0xfe00007f, match = 0x2000053}
+fsub_d = { mask = 0xfe00007f, match = 0xa000053}
+fmul_d = { mask = 0xfe00007f, match = 0x12000053}
+fdiv_d = { mask = 0xfe00007f, match = 0x1a000053}
+fmin_d = { mask = 0xfe00707f, match = 0x2a000053}
+fmax_d = { mask = 0xfe00707f, match = 0x2a001053}
+fsqrt_d = { mask = 0xfff0007f, match = 0x5a000053}
+fsgnj_d = { mask = 0xfe00707f, match = 0x22000053}
+fsgnjn_d = { mask = 0xfe00707f, match = 0x22001053}
+fsgnjx_d = { mask = 0xfe00707f, match = 0x22002053}
+fcvt_s_d = { mask = 0xfff0007f, match = 0x40100053}
+fcvt_d_s = { mask = 0xfff0007f, match = 0x42000053}
 
-[i2f]
+[i2d]
 type = "Rfif"
-[i2f.repr]
+[i2d.repr]
 default = "$name$ %rdf%, %rs1i%"
-[i2f.instructions]
-fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
-fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
-fmv_w_x = { mask = 0xfff0707f, match = 0xf0000053 }
+[i2d.instructions]
+fcvt_d_w = { mask = 0xfff0007f, match = 0xd2000053}
+fcvt_d_wu = { mask = 0xfff0007f, match = 0xd2100053}
 
-[f2i]
+[d2i]
 type = "Rffi"
-[f2i.repr]
+[d2i.repr]
 default = "$name$ %rdi%, %rs1f%"
-feq_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-flt_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-fle_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-[f2i.instructions]
-fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
-fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
-fmv_x_w = { mask = 0xfff0707f, match = 0xe0000053 }
-fclass_s = { mask = 0xfff0707f, match = 0xe0001053 }
-feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
-flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
-fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
+feq_d = "$name$ %rdi%, %rs1f%, %rs2f%"
+fle_d = "$name$ %rdi%, %rs1f%, %rs2f%"
+flt_d = "$name$ %rdi%, %rs1f%, %rs2f%"
+[d2i.instructions]
+fcvt_w_d = { mask = 0xfff0007f, match = 0xc2000053}
+fcvt_wu_d = { mask = 0xfff0007f, match = 0xc2100053}
+fclass_d = { mask = 0xfff0707f, match = 0xe2001053}
+feq_d = { mask = 0xfe00707f, match = 0xa2002053}
+fle_d = { mask = 0xfe00707f, match = 0xa2000053}
+flt_d = { mask = 0xfe00707f, match = 0xa2001053}
 
 [register]
 names = ["Register_int", "Register_float"]
