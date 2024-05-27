@@ -130,7 +130,7 @@ fld = { mask = 0x707f, match = 0x3007}
 [store]
 type = "S"
 [store.repr]
-default = "$name$ %rdf%, %imm%(%rs1i%)"
+default = "$name$ %rs2f%, %imm%(%rs1i%)"
 [store.instructions]
 fsd = { mask = 0x707f, match = 0x3027}
 
@@ -148,6 +148,9 @@ fnmsub_d = { mask = 0x600007f, match = 0x200004b}
 type = "Rfff"
 [arith.repr]
 default = "$name$ %rdf%, %rs1f%, %rs2f%"
+fcvt_s_d = "$name$ %rdf%, %rs1f%"
+fcvt_d_s = "$name$ %rdf%, %rs1f%"
+fsqrt_d = "$name$ %rdf%, %rs1f%"
 [arith.instructions]
 fadd_d = { mask = 0xfe00007f, match = 0x2000053}
 fsub_d = { mask = 0xfe00007f, match = 0xa000053}
@@ -159,25 +162,25 @@ fsqrt_d = { mask = 0xfff0007f, match = 0x5a000053}
 fsgnj_d = { mask = 0xfe00707f, match = 0x22000053}
 fsgnjn_d = { mask = 0xfe00707f, match = 0x22001053}
 fsgnjx_d = { mask = 0xfe00707f, match = 0x22002053}
+fcvt_s_d = { mask = 0xfff0007f, match = 0x40100053}
+fcvt_d_s = { mask = 0xfff0007f, match = 0x42000053}
 
 [i2d]
 type = "Rfif"
 [i2d.repr]
-default = "$name$ %rdf% %rs1i%"
+default = "$name$ %rdf%, %rs1i%"
 [i2d.instructions]
-fcvt_d_s = { mask = 0xfff0007f, match = 0x42000053}
 fcvt_d_w = { mask = 0xfff0007f, match = 0xd2000053}
 fcvt_d_wu = { mask = 0xfff0007f, match = 0xd2100053}
 
 [d2i]
 type = "Rffi"
 [d2i.repr]
-default = "$name$ %rdi% %rs1f%"
-feq_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-flt_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-fle_s = "$name$ %rdi%, %rs1f%, %rs2f%"
+default = "$name$ %rdi%, %rs1f%"
+feq_d = "$name$ %rdi%, %rs1f%, %rs2f%"
+fle_d = "$name$ %rdi%, %rs1f%, %rs2f%"
+flt_d = "$name$ %rdi%, %rs1f%, %rs2f%"
 [d2i.instructions]
-fcvt_s_d = { mask = 0xfff0007f, match = 0x40100053}
 fcvt_w_d = { mask = 0xfff0007f, match = 0xc2000053}
 fcvt_wu_d = { mask = 0xfff0007f, match = 0xc2100053}
 fclass_d = { mask = 0xfff0707f, match = 0xe2001053}

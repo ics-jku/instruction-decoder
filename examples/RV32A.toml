@@ -62,8 +62,8 @@ R = [
 type = "R"
 [atomic.repr]
 default = "$name$%ordering% %rd%, %rs2%, (%rs1%)"
-lr_w= "$name$%ordering% %rd%, %rs1%, %rs2%"
-sc_w= "$name$%ordering% %rd%, %rs1%, %rs2%"
+lr_w= "$name$%ordering% %rd%, (%rs1%)"
+sc_w= "$name$%ordering% %rd%, %rs2%, (%rs1%)"
 [atomic.instructions]
 lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
 sc_w = { mask = 0xf800707f, match = 0x1800202f }

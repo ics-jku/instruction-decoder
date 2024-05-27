@@ -1,1 +1,1 @@
-mod rv32imafd;
+mod rv32;
