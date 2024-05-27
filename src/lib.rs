@@ -578,14 +578,12 @@ impl Instruction {
         let formatted_name = self.name.replace("_", ".");
         fmt = fmt.replace("$name$", &formatted_name);
         while fmt.contains("%") {
-            let begin = fmt.find("%").unwrap();
-            fmt.remove(begin);
-            let end = fmt.find("%").unwrap();
-            fmt.remove(end);
+            let begin = fmt.find("%").unwrap() + 1;
+            let end = fmt[begin..].find("%").unwrap() + begin;
             let var_name = &fmt[begin..end];
 
             fmt = fmt.replace(
-                var_name,
+                &fmt[begin - 1..end + 1],
                 values[var_name]
                     .get_string_value(&part_decoders[var_name], registers)
                     .as_str(),
