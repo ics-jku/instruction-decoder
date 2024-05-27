@@ -85,8 +85,23 @@ impl InstructionSet {
         let mut register_map = HashMap::new();
         for value in register_names {
             let register_name = value.as_str().unwrap().to_string();
-            let registers: Registers =
-                Registers::new(table["register"][&register_name].as_array().unwrap());
+            let reg_map = match &table["register"][&register_name] {
+                Value::Array(val) => Some(
+                    val.iter()
+                        .enumerate()
+                        .map(|(k, v)| (k, v.clone()))
+                        .collect::<HashMap<usize, Value>>(),
+                ),
+                Value::Table(val) => Some(
+                    val.iter()
+                        .map(|(k, v)| (usize::from_str(k).unwrap(), v.clone()))
+                        .collect::<HashMap<usize, Value>>(),
+                ),
+                _ => None,
+            }
+            .unwrap();
+
+            let registers: Registers = Registers::new(&reg_map);
             register_map.insert(register_name.clone(), registers);
         }
 
@@ -306,9 +321,14 @@ impl PartDecoder {
                 u64::from_str_radix(&value[64..128], 2).unwrap(),
             )),
             PartType::REGISTER(reg_set_name) => PartTypeValue::REGISTER(
-                registers[reg_set_name].names
-                    [usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2).unwrap()]
-                .clone(),
+                registers[reg_set_name]
+                    .names
+                    .get(
+                        &usize::from_str_radix(&value[(128 - usize::BITS as usize)..128], 2)
+                            .unwrap(),
+                    )
+                    .unwrap()
+                    .clone(),
             ),
             PartType::VInt => {
                 if let Ok(val) = i128::from_str_radix(&value, 2) {
@@ -325,14 +345,14 @@ impl PartDecoder {
 }
 
 struct Registers {
-    names: Vec<String>,
+    names: HashMap<usize, String>,
 }
 
 impl Registers {
-    pub fn new(list: &Vec<Value>) -> Self {
+    pub fn new(list: &HashMap<usize, Value>) -> Self {
         let names = list
             .iter()
-            .map(|x| x.as_str().unwrap_or("").to_string())
+            .map(|(k, v)| (k.clone(), v.as_str().unwrap_or("").to_string()))
             .collect();
         Registers { names }
     }
