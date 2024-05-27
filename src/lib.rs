@@ -39,6 +39,19 @@ fn bit_string_and(s1: &String, s2: &String) -> String {
         .collect()
 }
 
+fn parse_usize(s: &str) -> usize {
+    if let Some(s) = s.strip_prefix("0x") {
+        usize::from_str_radix(s, 16)
+    } else if let Some(s) = s.strip_prefix("0o") {
+        usize::from_str_radix(s, 8)
+    } else if let Some(s) = s.strip_prefix("0b") {
+        usize::from_str_radix(s, 2)
+    } else {
+        usize::from_str_radix(s, 10)
+    }
+    .unwrap()
+}
+
 impl InstructionSet {
     pub fn new(table: &Table) -> Self {
         let name = table["set"].as_str().unwrap_or("").to_string();
@@ -95,7 +108,7 @@ impl InstructionSet {
                 )),
                 Value::Table(val) => Some((
                     val.iter()
-                        .map(|(k, v)| (usize::from_str(k).unwrap(), v.clone()))
+                        .map(|(k, v)| (parse_usize(k), v.clone()))
                         .collect::<HashMap<usize, Value>>(),
                     false,
                 )),
