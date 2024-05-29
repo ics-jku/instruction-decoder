@@ -1,4 +1,4 @@
-use std::{cmp::max, collections::HashMap, str::FromStr};
+use std::{collections::HashMap, str::FromStr};
 
 use toml::{map::Map, Table, Value};
 
@@ -10,11 +10,7 @@ pub struct Decoder {
 }
 
 struct InstructionSet {
-    name: String,
     bit_width: usize,
-    //opcode_start: usize,
-    //opcode_end: usize,
-    types: HashMap<String, InstructionType>,
     formats: HashMap<String, InstructionFormat>,
     parts: HashMap<String, PartDecoder>,
     registers: HashMap<String, Registers>,
@@ -28,30 +24,14 @@ fn parse_usize(s: &str) -> usize {
     } else if let Some(s) = s.strip_prefix("0b") {
         usize::from_str_radix(s, 2)
     } else {
-        usize::from_str_radix(s, 10)
-    }
-    .unwrap()
-}
-
-fn parse_u128(s: &str) -> u128 {
-    if let Some(s) = s.strip_prefix("0x") {
-        u128::from_str_radix(s, 16)
-    } else if let Some(s) = s.strip_prefix("0o") {
-        u128::from_str_radix(s, 8)
-    } else if let Some(s) = s.strip_prefix("0b") {
-        u128::from_str_radix(s, 2)
-    } else {
-        u128::from_str_radix(s, 10)
+        s.parse::<usize>()
     }
     .unwrap()
 }
 
 impl InstructionSet {
     pub fn new(table: &Table) -> Self {
-        let name = table["set"].as_str().unwrap_or("").to_string();
         let bit_width = table["width"].as_integer().unwrap_or(0) as usize;
-        //let opcode_start = table["opcode_start"].as_integer().unwrap_or(0) as usize;
-        //let opcode_end = table["opcode_end"].as_integer().unwrap_or(0) as usize;
 
         let types: HashMap<String, InstructionType> = table["type"]["names"]
             .as_array()
@@ -114,23 +94,19 @@ impl InstructionSet {
             register_map.insert(register_name.clone(), registers);
         }
 
-        return InstructionSet {
-            name,
+        InstructionSet {
             bit_width,
-            //opcode_start,
-            //opcode_end,
-            types,
             formats,
             parts,
             registers: register_map,
-        };
+        }
     }
 }
 
 #[derive(Clone)]
 enum PartType {
-    BOOLEAN,
-    CHAR,
+    Boolean,
+    Char,
     I8,
     I16,
     I32,
@@ -139,18 +115,18 @@ enum PartType {
     U16,
     U32,
     U64,
-    ISIZE,
-    USIZE,
+    ISize,
+    USize,
     F32,
     F64,
-    REGISTER(String),
+    Register(String),
     VInt,
-    NONE,
+    None,
 }
 
 enum PartTypeValue {
-    BOOLEAN(bool),
-    CHAR(char),
+    Boolean(bool),
+    Char(char),
     I8(i8),
     I16(i16),
     I32(i32),
@@ -159,20 +135,20 @@ enum PartTypeValue {
     U16(u16),
     U32(u32),
     U64(u64),
-    ISIZE(isize),
-    USIZE(usize),
+    ISize(isize),
+    USize(usize),
     F32(f32),
     F64(f64),
-    REGISTER(String),
+    Register(String),
     VInt(i128),
-    NONE,
+    None,
 }
 
 impl PartialEq for PartTypeValue {
     fn eq(&self, other: &Self) -> bool {
         match (self, other) {
-            (Self::BOOLEAN(l0), Self::BOOLEAN(r0)) => l0 == r0,
-            (Self::CHAR(l0), Self::CHAR(r0)) => l0 == r0,
+            (Self::Boolean(l0), Self::Boolean(r0)) => l0 == r0,
+            (Self::Char(l0), Self::Char(r0)) => l0 == r0,
             (Self::I8(l0), Self::I8(r0)) => l0 == r0,
             (Self::I16(l0), Self::I16(r0)) => l0 == r0,
             (Self::I32(l0), Self::I32(r0)) => l0 == r0,
@@ -181,11 +157,11 @@ impl PartialEq for PartTypeValue {
             (Self::U16(l0), Self::U16(r0)) => l0 == r0,
             (Self::U32(l0), Self::U32(r0)) => l0 == r0,
             (Self::U64(l0), Self::U64(r0)) => l0 == r0,
-            (Self::ISIZE(l0), Self::ISIZE(r0)) => l0 == r0,
-            (Self::USIZE(l0), Self::USIZE(r0)) => l0 == r0,
+            (Self::ISize(l0), Self::ISize(r0)) => l0 == r0,
+            (Self::USize(l0), Self::USize(r0)) => l0 == r0,
             (Self::F32(l0), Self::F32(r0)) => l0 == r0,
             (Self::F64(l0), Self::F64(r0)) => l0 == r0,
-            (Self::REGISTER(l0), Self::REGISTER(r0)) => l0 == r0,
+            (Self::Register(l0), Self::Register(r0)) => l0 == r0,
             (Self::VInt(l0), Self::VInt(r0)) => l0 == r0,
             _ => false,
         }
@@ -197,8 +173,8 @@ impl FromStr for PartType {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            "boolean" => Ok(PartType::BOOLEAN),
-            "char" => Ok(PartType::CHAR),
+            "boolean" => Ok(PartType::Boolean),
+            "char" => Ok(PartType::Char),
             "i8" => Ok(PartType::I8),
             "i16" => Ok(PartType::I16),
             "i32" => Ok(PartType::I32),
@@ -207,13 +183,13 @@ impl FromStr for PartType {
             "u16" => Ok(PartType::U16),
             "u32" => Ok(PartType::U32),
             "u64" => Ok(PartType::U64),
-            "isize" => Ok(PartType::ISIZE),
-            "usize" => Ok(PartType::USIZE),
+            "isize" => Ok(PartType::ISize),
+            "usize" => Ok(PartType::USize),
             "f32" => Ok(PartType::F32),
             "f64" => Ok(PartType::F64),
             "VInt" => Ok(PartType::VInt),
-            "" => Ok(PartType::NONE),
-            _ => Ok(PartType::REGISTER(s.to_string())),
+            "" => Ok(PartType::None),
+            _ => Ok(PartType::Register(s.to_string())),
         }
     }
 }
@@ -221,8 +197,8 @@ impl FromStr for PartType {
 impl PartType {
     fn get_unsigned(&self, unsigned_imm: bool) -> bool {
         match self {
-            PartType::BOOLEAN => true,
-            PartType::CHAR => true,
+            PartType::Boolean => true,
+            PartType::Char => true,
             PartType::I8 => false,
             PartType::I16 => false,
             PartType::I32 => false,
@@ -231,38 +207,34 @@ impl PartType {
             PartType::U16 => true,
             PartType::U32 => true,
             PartType::U64 => true,
-            PartType::ISIZE => false,
-            PartType::USIZE => true,
+            PartType::ISize => false,
+            PartType::USize => true,
             PartType::F32 => true,
             PartType::F64 => true,
-            PartType::REGISTER(s) => true,
+            PartType::Register(_) => true,
             PartType::VInt => unsigned_imm,
-            PartType::NONE => true,
+            PartType::None => true,
         }
     }
 }
 
 #[derive(Clone)]
 struct PartDecoder {
-    name: String,
-    bit_width: usize,
     part_type: PartType,
 }
 
 impl PartDecoder {
-    pub fn new(part_array: &Vec<Value>) -> Self {
+    pub fn new(part_array: &[Value]) -> Self {
         PartDecoder {
-            name: part_array[0].as_str().unwrap_or("").to_string(),
-            bit_width: part_array[1].as_integer().unwrap_or(0) as usize,
             part_type: PartType::from_str(part_array[2].as_str().unwrap_or(""))
-                .unwrap_or(PartType::NONE),
+                .unwrap_or(PartType::None),
         }
     }
 
     fn decode(&self, value: u128, registers: &HashMap<String, Registers>) -> PartTypeValue {
         match &self.part_type {
-            PartType::BOOLEAN => PartTypeValue::BOOLEAN(value != 0),
-            PartType::CHAR => PartTypeValue::CHAR(char::from_u32(value as u32).unwrap()),
+            PartType::Boolean => PartTypeValue::Boolean(value != 0),
+            PartType::Char => PartTypeValue::Char(char::from_u32(value as u32).unwrap()),
             PartType::I8 => PartTypeValue::I8(value as i8),
             PartType::I16 => PartTypeValue::I16(value as i16),
             PartType::I32 => PartTypeValue::I32(value as i32),
@@ -271,11 +243,11 @@ impl PartDecoder {
             PartType::U16 => PartTypeValue::U16(value as u16),
             PartType::U32 => PartTypeValue::U32(value as u32),
             PartType::U64 => PartTypeValue::U64(value as u64),
-            PartType::ISIZE => PartTypeValue::ISIZE(value as isize),
-            PartType::USIZE => PartTypeValue::USIZE(value as usize),
+            PartType::ISize => PartTypeValue::ISize(value as isize),
+            PartType::USize => PartTypeValue::USize(value as usize),
             PartType::F32 => PartTypeValue::F32(f32::from_bits(value as u32)),
             PartType::F64 => PartTypeValue::F64(f64::from_bits(value as u64)),
-            PartType::REGISTER(reg_set_name) => PartTypeValue::REGISTER(
+            PartType::Register(reg_set_name) => PartTypeValue::Register(
                 registers[reg_set_name]
                     .names
                     .get(&(value as usize))
@@ -287,7 +259,7 @@ impl PartDecoder {
                     .clone(),
             ),
             PartType::VInt => PartTypeValue::VInt(value as i128),
-            PartType::NONE => PartTypeValue::NONE,
+            PartType::None => PartTypeValue::None,
         }
     }
 }
@@ -301,14 +273,13 @@ impl Registers {
     pub fn new(list: &HashMap<usize, Value>, strict: bool) -> Self {
         let names = list
             .iter()
-            .map(|(k, v)| (k.clone(), v.as_str().unwrap_or("").to_string()))
+            .map(|(k, v)| (*k, v.as_str().unwrap_or("").to_string()))
             .collect();
         Registers { names, strict }
     }
 }
 
 struct InstructionFormat {
-    name: String,
     repr: HashMap<String, String>,
     instruction_type: InstructionType,
     instructions: Vec<Instruction>,
@@ -328,10 +299,9 @@ impl InstructionFormat {
             .as_table()
             .unwrap()
             .iter()
-            .map(|(x, y)| Instruction::new(&x, y.as_table().unwrap()))
+            .map(|(x, y)| Instruction::new(x, y.as_table().unwrap()))
             .collect();
         InstructionFormat {
-            name: name.clone(),
             repr,
             instruction_type: instruction_type.clone(),
             instructions,
@@ -354,13 +324,11 @@ impl InstructionFormat {
 struct SliceValue {
     name: String,
     value: u128,
-    bit_width: usize,
-    unsigned: bool,
 }
 
 impl SliceValue {
     pub fn new(
-        name: &String,
+        name: &str,
         value: u128,
         idx: usize,
         bit_width: usize,
@@ -374,10 +342,8 @@ impl SliceValue {
             tmp |= u128::MAX - (1 << bit_width) + 1;
         }
         SliceValue {
-            name: name.clone(),
+            name: name.to_owned(),
             value: tmp,
-            bit_width,
-            unsigned,
         }
     }
 
@@ -400,8 +366,8 @@ impl SliceValue {
     ) -> String {
         let tmp = self.get_value(part_decoder, registers);
         match tmp {
-            PartTypeValue::BOOLEAN(a) => format!("{}", a),
-            PartTypeValue::CHAR(a) => format!("{}", a),
+            PartTypeValue::Boolean(a) => format!("{}", a),
+            PartTypeValue::Char(a) => format!("{}", a),
             PartTypeValue::I8(a) => format!("{}", a),
             PartTypeValue::I16(a) => format!("{}", a),
             PartTypeValue::I32(a) => format!("{}", a),
@@ -410,13 +376,13 @@ impl SliceValue {
             PartTypeValue::U16(a) => format!("{}", a),
             PartTypeValue::U32(a) => format!("{}", a),
             PartTypeValue::U64(a) => format!("{}", a),
-            PartTypeValue::ISIZE(a) => format!("{}", a),
-            PartTypeValue::USIZE(a) => format!("{}", a),
+            PartTypeValue::ISize(a) => format!("{}", a),
+            PartTypeValue::USize(a) => format!("{}", a),
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
-            PartTypeValue::REGISTER(a) => format!("{}", a),
+            PartTypeValue::Register(a) => a.to_string(),
             PartTypeValue::VInt(a) => format!("{}", a),
-            PartTypeValue::NONE => "".to_string(),
+            PartTypeValue::None => "".to_string(),
         }
     }
 }
@@ -430,7 +396,7 @@ struct Instruction {
 }
 
 impl Instruction {
-    pub fn new(name: &String, table: &Map<String, Value>) -> Self {
+    pub fn new(name: &str, table: &Map<String, Value>) -> Self {
         let unsigned_imm = if table.contains_key("unsigned") {
             table["unsigned"].as_bool().unwrap_or(false)
         } else {
@@ -439,7 +405,7 @@ impl Instruction {
         let mask_u128 = table["mask"].as_integer().unwrap() as u128;
         let match_u128 = table["match"].as_integer().unwrap() as u128;
         Instruction {
-            name: name.clone(),
+            name: name.to_owned(),
             mask_u128,
             match_u128,
             unsigned_imm,
@@ -447,7 +413,7 @@ impl Instruction {
     }
 
     fn matches(&self, instruction_u128: u128) -> bool {
-        return (instruction_u128 & self.mask_u128) == self.match_u128;
+        (instruction_u128 & self.mask_u128) == self.match_u128
     }
 
     fn display(
@@ -465,11 +431,11 @@ impl Instruction {
         .unwrap()
         .clone();
 
-        let formatted_name = self.name.replace("_", ".");
+        let formatted_name = self.name.replace('_', ".");
         fmt = fmt.replace("$name$", &formatted_name);
-        while fmt.contains("%") {
-            let begin = fmt.find("%").unwrap() + 1;
-            let end = fmt[begin..].find("%").unwrap() + begin;
+        while fmt.contains('%') {
+            let begin = fmt.find('%').unwrap() + 1;
+            let end = fmt[begin..].find('%').unwrap() + begin;
             let var_name = &fmt[begin..end];
 
             fmt = fmt.replace(
@@ -489,7 +455,7 @@ struct InstructionType {
 }
 
 impl InstructionType {
-    pub fn new(names: &Vec<Value>) -> Self {
+    pub fn new(names: &[Value]) -> Self {
         let mut position = 0;
         let slices = names
             .iter()
@@ -557,7 +523,7 @@ impl InstructionSlice {
         let slice_bottom = table["bot"].as_integer().unwrap_or(0) as usize;
         InstructionSlice {
             name,
-            pos: position.clone(),
+            pos: *position,
             slice_top,
             slice_bottom,
         }
@@ -565,7 +531,7 @@ impl InstructionSlice {
 }
 
 impl Decoder {
-    pub fn new(instruction_set_tomls: &Vec<String>) -> Self {
+    pub fn new(instruction_set_tomls: &[String]) -> Self {
         Decoder {
             instruction_sets: instruction_set_tomls
                 .iter()
@@ -579,7 +545,7 @@ impl Decoder {
         instruction: &str,
         bit_width: usize,
     ) -> Result<String, String> {
-        self.decode(parse_u128(instruction), bit_width)
+        self.decode(instruction.parse::<u128>().unwrap(), bit_width)
     }
 
     pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
@@ -587,7 +553,7 @@ impl Decoder {
 
         for instruction_set in &self.instruction_sets {
             if bit_width == instruction_set.bit_width {
-                for (_inst_format_name, inst_format) in &instruction_set.formats {
+                for inst_format in instruction_set.formats.values() {
                     for inst in &inst_format.instructions {
                         if inst.matches(instruction) {
                             let values = inst_format.parse(
@@ -598,7 +564,7 @@ impl Decoder {
                             );
                             finds.push(inst.display(
                                 &values,
-                                &inst_format,
+                                inst_format,
                                 &instruction_set.parts,
                                 &instruction_set.registers,
                             ));
@@ -607,13 +573,13 @@ impl Decoder {
                 }
             }
         }
-        return if finds.len() == 1 {
+        if finds.len() == 1 {
             Ok(finds[0].clone())
-        } else if finds.len() == 0 {
+        } else if finds.is_empty() {
             Err("Unknown Instruction".to_string())
         } else {
             Err(format!("{:?}", finds))
-        };
+        }
     }
 
     pub fn decode_from_u32(&self, instruction: u32, bit_width: usize) -> Result<String, String> {
