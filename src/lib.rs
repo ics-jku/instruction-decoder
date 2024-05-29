@@ -369,12 +369,9 @@ impl SliceValue {
     ) -> Self {
         let mut tmp = value << idx;
         let unsigned = part_type.get_unsigned(unsigned_imm);
-        println!("bit width {}", bit_width);
 
         if !unsigned && ((tmp >> (bit_width - 1)) != 0) {
-            println!("{}", tmp);
             tmp |= u128::MAX - (1 << bit_width) + 1;
-            println!("{}", tmp);
         }
         SliceValue {
             name: name.clone(),
