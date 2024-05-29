@@ -29,6 +29,19 @@ fn parse_usize(s: &str) -> usize {
     .unwrap()
 }
 
+fn parse_u128(s: &str) -> u128 {
+    if let Some(s) = s.strip_prefix("0x") {
+        u128::from_str_radix(s, 16)
+    } else if let Some(s) = s.strip_prefix("0o") {
+        u128::from_str_radix(s, 8)
+    } else if let Some(s) = s.strip_prefix("0b") {
+        u128::from_str_radix(s, 2)
+    } else {
+        s.parse::<u128>()
+    }
+    .unwrap()
+}
+
 impl InstructionSet {
     pub fn new(table: &Table) -> Self {
         let bit_width = table["width"].as_integer().unwrap_or(0) as usize;
@@ -545,7 +558,7 @@ impl Decoder {
         instruction: &str,
         bit_width: usize,
     ) -> Result<String, String> {
-        self.decode(instruction.parse::<u128>().unwrap(), bit_width)
+        self.decode(parse_u128(instruction), bit_width)
     }
 
     pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
