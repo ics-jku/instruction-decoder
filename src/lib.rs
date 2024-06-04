@@ -157,6 +157,81 @@ enum PartTypeValue {
     None,
 }
 
+#[derive(Clone)]
+enum NumberRadix {
+    Decimal,
+    Hexadecimal,
+    Octal,
+    Binary,
+}
+
+impl FromStr for NumberRadix {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "" => Ok(NumberRadix::Decimal),
+            "decimal" => Ok(NumberRadix::Decimal),
+            "dec" => Ok(NumberRadix::Decimal),
+            "d" => Ok(NumberRadix::Decimal),
+            "10" => Ok(NumberRadix::Decimal),
+            "hexadecimal" => Ok(NumberRadix::Hexadecimal),
+            "hex" => Ok(NumberRadix::Hexadecimal),
+            "h" => Ok(NumberRadix::Hexadecimal),
+            "x" => Ok(NumberRadix::Hexadecimal),
+            "0x" => Ok(NumberRadix::Hexadecimal),
+            "16" => Ok(NumberRadix::Hexadecimal),
+            "octal" => Ok(NumberRadix::Octal),
+            "oct" => Ok(NumberRadix::Octal),
+            "o" => Ok(NumberRadix::Octal),
+            "0o" => Ok(NumberRadix::Octal),
+            "8" => Ok(NumberRadix::Octal),
+            "binary" => Ok(NumberRadix::Binary),
+            "bin" => Ok(NumberRadix::Binary),
+            "b" => Ok(NumberRadix::Binary),
+            "0b" => Ok(NumberRadix::Binary),
+            "2" => Ok(NumberRadix::Binary),
+            _ => Err("not a valid desctriptor for base 2, 8, 10 or 16".to_string()),
+        }
+    }
+}
+
+impl NumberRadix {
+    fn format<T: std::fmt::Display + std::fmt::LowerHex + std::fmt::Octal + std::fmt::Binary>(
+        &self,
+        value: T,
+    ) -> String {
+        match self {
+            NumberRadix::Decimal => format!("{}", value),
+            NumberRadix::Hexadecimal => format!("{:#x}", value),
+            NumberRadix::Octal => format!("{:#o}", value),
+            NumberRadix::Binary => format!("{:#b}", value),
+        }
+    }
+
+    fn format_part_type_val(&self, value_type: PartTypeValue) -> String {
+        match value_type {
+            PartTypeValue::Boolean(a) => format!("{}", a),
+            PartTypeValue::Char(a) => format!("{}", a),
+            PartTypeValue::I8(a) => self.format(a),
+            PartTypeValue::I16(a) => self.format(a),
+            PartTypeValue::I32(a) => self.format(a),
+            PartTypeValue::I64(a) => self.format(a),
+            PartTypeValue::U8(a) => self.format(a),
+            PartTypeValue::U16(a) => self.format(a),
+            PartTypeValue::U32(a) => self.format(a),
+            PartTypeValue::U64(a) => self.format(a),
+            PartTypeValue::ISize(a) => self.format(a),
+            PartTypeValue::USize(a) => self.format(a),
+            PartTypeValue::F32(a) => format!("{}", a),
+            PartTypeValue::F64(a) => format!("{}", a),
+            PartTypeValue::Register(a) => a.to_string(),
+            PartTypeValue::VInt(a) => self.format(a),
+            PartTypeValue::None => "".to_string(),
+        }
+    }
+}
+
 impl PartialEq for PartTypeValue {
     fn eq(&self, other: &Self) -> bool {
         match (self, other) {
@@ -234,13 +309,20 @@ impl PartType {
 #[derive(Clone)]
 struct PartDecoder {
     part_type: PartType,
+    number_radix: NumberRadix,
 }
 
 impl PartDecoder {
     pub fn new(part_array: &[Value]) -> Self {
+        let number_radix = if part_array.len() == 4 {
+            NumberRadix::from_str(part_array[3].as_str().unwrap_or("")).unwrap()
+        } else {
+            NumberRadix::Decimal
+        };
         PartDecoder {
             part_type: PartType::from_str(part_array[2].as_str().unwrap_or(""))
                 .unwrap_or(PartType::None),
+            number_radix,
         }
     }
 
@@ -265,9 +347,9 @@ impl PartDecoder {
                     .names
                     .get(&(value as usize))
                     .unwrap_or(&if registers[reg_set_name].strict {
-                        format!("ERROR({:b})", value as usize)
+                        format!("ERROR({:#b})", value as usize)
                     } else {
-                        format!("{:x}", value as usize)
+                        format!("{:#x}", value as usize)
                     })
                     .clone(),
             ),
@@ -378,25 +460,7 @@ impl SliceValue {
         registers: &HashMap<String, Registers>,
     ) -> String {
         let tmp = self.get_value(part_decoder, registers);
-        match tmp {
-            PartTypeValue::Boolean(a) => format!("{}", a),
-            PartTypeValue::Char(a) => format!("{}", a),
-            PartTypeValue::I8(a) => format!("{}", a),
-            PartTypeValue::I16(a) => format!("{}", a),
-            PartTypeValue::I32(a) => format!("{}", a),
-            PartTypeValue::I64(a) => format!("{}", a),
-            PartTypeValue::U8(a) => format!("{}", a),
-            PartTypeValue::U16(a) => format!("{}", a),
-            PartTypeValue::U32(a) => format!("{}", a),
-            PartTypeValue::U64(a) => format!("{}", a),
-            PartTypeValue::ISize(a) => format!("{}", a),
-            PartTypeValue::USize(a) => format!("{}", a),
-            PartTypeValue::F32(a) => format!("{}", a),
-            PartTypeValue::F64(a) => format!("{}", a),
-            PartTypeValue::Register(a) => a.to_string(),
-            PartTypeValue::VInt(a) => format!("{}", a),
-            PartTypeValue::None => "".to_string(),
-        }
+        part_decoder.number_radix.format_part_type_val(tmp)
     }
 }
 
