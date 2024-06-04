@@ -197,7 +197,7 @@ impl FromStr for NumberRadix {
 }
 
 impl NumberRadix {
-    fn parse<T: std::fmt::Display + std::fmt::LowerHex + std::fmt::Octal + std::fmt::Binary>(
+    fn format<T: std::fmt::Display + std::fmt::LowerHex + std::fmt::Octal + std::fmt::Binary>(
         &self,
         value: T,
     ) -> String {
@@ -209,24 +209,24 @@ impl NumberRadix {
         }
     }
 
-    fn parse_part_type_val(&self, value_type: PartTypeValue) -> String {
+    fn format_part_type_val(&self, value_type: PartTypeValue) -> String {
         match value_type {
             PartTypeValue::Boolean(a) => format!("{}", a),
             PartTypeValue::Char(a) => format!("{}", a),
-            PartTypeValue::I8(a) => self.parse(a),
-            PartTypeValue::I16(a) => self.parse(a),
-            PartTypeValue::I32(a) => self.parse(a),
-            PartTypeValue::I64(a) => self.parse(a),
-            PartTypeValue::U8(a) => self.parse(a),
-            PartTypeValue::U16(a) => self.parse(a),
-            PartTypeValue::U32(a) => self.parse(a),
-            PartTypeValue::U64(a) => self.parse(a),
-            PartTypeValue::ISize(a) => self.parse(a),
-            PartTypeValue::USize(a) => self.parse(a),
+            PartTypeValue::I8(a) => self.format(a),
+            PartTypeValue::I16(a) => self.format(a),
+            PartTypeValue::I32(a) => self.format(a),
+            PartTypeValue::I64(a) => self.format(a),
+            PartTypeValue::U8(a) => self.format(a),
+            PartTypeValue::U16(a) => self.format(a),
+            PartTypeValue::U32(a) => self.format(a),
+            PartTypeValue::U64(a) => self.format(a),
+            PartTypeValue::ISize(a) => self.format(a),
+            PartTypeValue::USize(a) => self.format(a),
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
             PartTypeValue::Register(a) => a.to_string(),
-            PartTypeValue::VInt(a) => self.parse(a),
+            PartTypeValue::VInt(a) => self.format(a),
             PartTypeValue::None => "".to_string(),
         }
     }
@@ -347,9 +347,9 @@ impl PartDecoder {
                     .names
                     .get(&(value as usize))
                     .unwrap_or(&if registers[reg_set_name].strict {
-                        format!("ERROR({:b})", value as usize)
+                        format!("ERROR({:#b})", value as usize)
                     } else {
-                        format!("{:x}", value as usize)
+                        format!("{:#x}", value as usize)
                     })
                     .clone(),
             ),
@@ -460,7 +460,7 @@ impl SliceValue {
         registers: &HashMap<String, Registers>,
     ) -> String {
         let tmp = self.get_value(part_decoder, registers);
-        part_decoder.number_radix.parse_part_type_val(tmp)
+        part_decoder.number_radix.format_part_type_val(tmp)
     }
 }
 
