@@ -1,0 +1,124 @@
+24010000 addiu $at, $zero, 0
+24010029 addiu $at, $zero, 41
+24210000 addiu $at, $at, 0
+24210001 addiu $at, $at, 1
+24610001 addiu $at, $v1, 1
+24020000 addiu $v0, $zero, 0
+24020020 addiu $v0, $zero, 32
+24020027 addiu $v0, $zero, 39
+24020028 addiu $v0, $zero, 40
+2402ffff addiu $v0, $zero, -1
+24220000 addiu $v0, $at, 0
+24420000 addiu $v0, $v0, 0
+24420001 addiu $v0, $v0, 1
+24030000 addiu $v1, $zero, 0
+2443ffff addiu $v1, $v0, -1
+2463ffff addiu $v1, $v1, -1
+24040000 addiu $a0, $zero, 0
+24040020 addiu $a0, $zero, 32
+24040027 addiu $a0, $zero, 39
+24040028 addiu $a0, $zero, 40
+24040029 addiu $a0, $zero, 41
+24240000 addiu $a0, $at, 0
+24050000 addiu $a1, $zero, 0
+24250000 addiu $a1, $at, 0
+27c60020 addiu $a2, $fp, 32
+27c7001c addiu $a3, $fp, 28
+27bdffb8 addiu $sp, $sp, -72
+27bdffc0 addiu $sp, $sp, -64
+00220821 addu $at, $at, $v0 
+00230821 addu $at, $at, $v1 
+00410821 addu $at, $v0, $at 
+00431021 addu $v0, $v0, $v1 
+00222021 addu $a0, $at, $v0 
+00222821 addu $a1, $at, $v0 
+00230824 and $at, $at, $v1 
+30210001 andi $at, $at, 1
+30220001 andi $v0, $at, 1
+0c000000 jal 0
+03e00008 jr $ra 
+80210000 lb $at, 0($at) 
+83c1000f lb $at, 15($fp) 
+80220000 lb $v0, 0($at) 
+83c20017 lb $v0, 23($fp) 
+90210000 lbu $at, 0($at) 
+97c10000 lhu $at, 0($fp) 
+97c10010 lhu $at, 16($fp) 
+97c10018 lhu $at, 24($fp) 
+97c10020 lhu $at, 32($fp) 
+97c10028 lhu $at, 40($fp) 
+97c10030 lhu $at, 48($fp) 
+97c10038 lhu $at, 56($fp) 
+97c10048 lhu $at, 72($fp) 
+8c210000 lw $at, 0($at) 
+8fc10008 lw $at, 8($fp) 
+8fc1000c lw $at, 12($fp) 
+8fc10010 lw $at, 16($fp) 
+8fc10014 lw $at, 20($fp) 
+8fc10018 lw $at, 24($fp) 
+8c220000 lw $v0, 0($at) 
+8c420000 lw $v0, 0($v0) 
+8fc20004 lw $v0, 4($fp) 
+8fc20008 lw $v0, 8($fp) 
+8fc20018 lw $v0, 24($fp) 
+8fc2001c lw $v0, 28($fp) 
+8c230000 lw $v1, 0($at) 
+8c430000 lw $v1, 0($v0) 
+8c630000 lw $v1, 0($v1) 
+8fc30004 lw $v1, 4($fp) 
+8fc30014 lw $v1, 20($fp) 
+8c240000 lw $a0, 0($at) 
+8fc40000 lw $a0, 0($fp) 
+8fc40024 lw $a0, 36($fp) 
+8c250000 lw $a1, 0($at) 
+8fc50018 lw $a1, 24($fp) 
+8fc5001c lw $a1, 28($fp) 
+8fc50028 lw $a1, 40($fp) 
+8fbe0008 lw $fp, 8($sp) 
+8fbe0010 lw $fp, 16($sp) 
+8fbf000c lw $ra, 12($sp) 
+8fbf0014 lw $ra, 20($sp) 
+8fbf001c lw $ra, 28($sp) 
+8fbf0054 lw $ra, 84($sp) 
+00220825 or $at, $at, $v0 
+a0410000 sb $at, 0($v0) 
+a3c10017 sb $at, 23($fp) 
+a0220000 sb $v0, 0($at) 
+a3c4000f sb $a0, 15($fp) 
+a0400000 sb $zero, 0($v0) 
+28210027 slti $at, $at, 39
+2c210001 sltiu $at, $at, 1
+2c410001 sltiu $at, $v0, 1
+2c220001 sltiu $v0, $at, 1
+0002082b sltu $at, $zero, $v0 
+0022082b sltu $at, $at, $v0 
+0023082b sltu $at, $at, $v1 
+00222823 subu $a1, $at, $v0 
+afc10000 sw $at, 0($fp) 
+afc10004 sw $at, 4($fp) 
+afc10008 sw $at, 8($fp) 
+afc10010 sw $at, 16($fp) 
+afc10014 sw $at, 20($fp) 
+afc10018 sw $at, 24($fp) 
+afc10020 sw $at, 32($fp) 
+ac220000 sw $v0, 0($at) 
+afc20004 sw $v0, 4($fp) 
+afc20008 sw $v0, 8($fp) 
+afc20010 sw $v0, 16($fp) 
+ac230000 sw $v1, 0($at) 
+afc4000c sw $a0, 12($fp) 
+afc50008 sw $a1, 8($fp) 
+afbe0008 sw $fp, 8($sp) 
+afbe0010 sw $fp, 16($sp) 
+afbe0018 sw $fp, 24($sp) 
+afbe0020 sw $fp, 32($sp) 
+afbf000c sw $ra, 12($sp) 
+afbf0014 sw $ra, 20($sp) 
+afbf001c sw $ra, 28($sp) 
+afbf0054 sw $ra, 84($sp) 
+afc00014 sw $zero, 20($fp) 
+afc00018 sw $zero, 24($fp) 
+00220826 xor $at, $at, $v0 
+00230826 xor $at, $at, $v1 
+00441026 xor $v0, $v0, $a0 
+00431826 xor $v1, $v0, $v1 
