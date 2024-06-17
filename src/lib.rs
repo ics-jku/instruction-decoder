@@ -197,10 +197,7 @@ impl FromStr for NumberRadix {
 }
 
 impl NumberRadix {
-    fn format<T: std::fmt::Display + std::fmt::LowerHex + std::fmt::Octal + std::fmt::Binary>(
-        &self,
-        value: T,
-    ) -> String {
+    fn format_unsigned(&self, value: u128) -> String {
         match self {
             NumberRadix::Decimal => format!("{}", value),
             NumberRadix::Hexadecimal => format!("{:#x}", value),
@@ -209,24 +206,51 @@ impl NumberRadix {
         }
     }
 
+    fn format_signed(&self, value: i128) -> String {
+        match self {
+            NumberRadix::Decimal => format!("{}", value),
+            NumberRadix::Hexadecimal => {
+                if value < 0 {
+                    format!("-{:#x}", -value)
+                } else {
+                    format!("{:#x}", value)
+                }
+            }
+            NumberRadix::Octal => {
+                if value < 0 {
+                    format!("-{:#o}", -value)
+                } else {
+                    format!("{:#o}", value)
+                }
+            }
+            NumberRadix::Binary => {
+                if value < 0 {
+                    format!("-{:#b}", -value)
+                } else {
+                    format!("{:#b}", value)
+                }
+            }
+        }
+    }
+
     fn format_part_type_val(&self, value_type: PartTypeValue) -> String {
         match value_type {
             PartTypeValue::Boolean(a) => format!("{}", a),
             PartTypeValue::Char(a) => format!("{}", a),
-            PartTypeValue::I8(a) => self.format(a),
-            PartTypeValue::I16(a) => self.format(a),
-            PartTypeValue::I32(a) => self.format(a),
-            PartTypeValue::I64(a) => self.format(a),
-            PartTypeValue::U8(a) => self.format(a),
-            PartTypeValue::U16(a) => self.format(a),
-            PartTypeValue::U32(a) => self.format(a),
-            PartTypeValue::U64(a) => self.format(a),
-            PartTypeValue::ISize(a) => self.format(a),
-            PartTypeValue::USize(a) => self.format(a),
+            PartTypeValue::I8(a) => self.format_signed(a as i128),
+            PartTypeValue::I16(a) => self.format_signed(a as i128),
+            PartTypeValue::I32(a) => self.format_signed(a as i128),
+            PartTypeValue::I64(a) => self.format_signed(a as i128),
+            PartTypeValue::U8(a) => self.format_unsigned(a as u128),
+            PartTypeValue::U16(a) => self.format_unsigned(a as u128),
+            PartTypeValue::U32(a) => self.format_unsigned(a as u128),
+            PartTypeValue::U64(a) => self.format_unsigned(a as u128),
+            PartTypeValue::ISize(a) => self.format_signed(a as i128),
+            PartTypeValue::USize(a) => self.format_unsigned(a as u128),
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
             PartTypeValue::Register(a) => a.to_string(),
-            PartTypeValue::VInt(a) => self.format(a),
+            PartTypeValue::VInt(a) => self.format_signed(a as i128),
             PartTypeValue::None => "".to_string(),
         }
     }
@@ -515,6 +539,7 @@ impl Instruction {
             let end = fmt[begin..].find('%').unwrap() + begin;
             let var_name = &fmt[begin..end];
 
+            println!("{}", var_name);
             fmt = fmt.replace(
                 &fmt[begin - 1..end + 1],
                 values[var_name]
@@ -537,6 +562,7 @@ impl InstructionType {
         let slices = names
             .iter()
             .map(|x| {
+                println!("{:?}", x);
                 let slice = InstructionSlice::new(x.as_table().unwrap(), &position);
                 position += slice.slice_top - slice.slice_bottom;
                 slice
