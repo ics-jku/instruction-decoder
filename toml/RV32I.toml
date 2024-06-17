@@ -57,12 +57,12 @@ parts = [
     [
         "pred",
         4,
-        "Register_fence"
+        "Mapping_fence"
     ],
     [
         "succ",
         4,
-        "Register_fence"
+        "Mapping_fence"
     ],
     [
         "discard",
@@ -238,8 +238,8 @@ default = "fence %pred%, %succ%"
 [fence.instructions]
 fence = { mask = 0x707f, match = 0xf}
 
-[register]
-names = ["Register_int", "Register_fence"]
+[mappings]
+names = ["Register_int", "Mapping_fence"]
 number = 32
 Register_int = [
     "zero",
@@ -276,7 +276,7 @@ Register_int = [
     "t6",
 ]
 
-[register.Register_fence]
+[mappings.Mapping_fence]
 0b0000 = "-"
 0b0001 = "w"
 0b0010 = "r"

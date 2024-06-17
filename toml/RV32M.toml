@@ -61,7 +61,7 @@ divu = { mask = 0xfe00707f, match = 0x2005033 }
 rem = { mask = 0xfe00707f, match = 0x2006033 }
 remu = { mask = 0xfe00707f, match = 0x2007033 }
 
-[register]
+[mappings]
 names = ["Register_int"]
 number = 32
 Register_int = [

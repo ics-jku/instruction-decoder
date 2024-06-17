@@ -74,7 +74,7 @@ csrrci = { mask = 0x707f, match = 0x7073, unsigned = true }
 csrrsi = { mask = 0x707f, match = 0x6073, unsigned = true }
 csrrwi = { mask = 0x707f, match = 0x5073, unsigned = true }
 
-[register]
+[mappings]
 names = ["Register_int", "Register_csr"]
 number = 32
 Register_int = [
@@ -111,7 +111,7 @@ Register_int = [
     "t5",
     "t6",
 ]
-[register.Register_csr]
+[mappings.Register_csr]
 0x001 = "fflags"
 0x002 = "frm"
 0x003 = "fcsr"
