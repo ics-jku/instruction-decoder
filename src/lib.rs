@@ -539,7 +539,6 @@ impl Instruction {
             let end = fmt[begin..].find('%').unwrap() + begin;
             let var_name = &fmt[begin..end];
 
-            println!("{}", var_name);
             fmt = fmt.replace(
                 &fmt[begin - 1..end + 1],
                 values[var_name]
@@ -562,7 +561,6 @@ impl InstructionType {
         let slices = names
             .iter()
             .map(|x| {
-                println!("{:?}", x);
                 let slice = InstructionSlice::new(x.as_table().unwrap(), &position);
                 position += slice.slice_top - slice.slice_bottom;
                 slice

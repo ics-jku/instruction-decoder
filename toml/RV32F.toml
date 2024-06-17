@@ -17,7 +17,7 @@ parts = [
     [
         "rm",
         3,
-        "u8",
+        "Register_round",
     ],
     [
         "funct5",
@@ -64,6 +64,12 @@ parts = [
         32,
         "VInt",
     ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
 ]
 
 [type]
@@ -96,18 +102,18 @@ Rffi = [
     { name = "opcode", top = 6, bot = 0 },
 ]
 I = [
-    { name = "imm", top = 11, bot = 0 },
+    { name = "himm", top = 11, bot = 0 },
     { name = "rs1i", top = 4, bot = 0 },
     { name = "funct3", top = 2, bot = 0 },
     { name = "rdf", top = 4, bot = 0 },
     { name = "opcode", top = 6, bot = 0 },
 ]
 S = [
-    { name = "imm", top = 11, bot = 5 },
+    { name = "himm", top = 11, bot = 5 },
     { name = "rs2f", top = 4, bot = 0 },
     { name = "rs1i", top = 4, bot = 0 },
     { name = "funct3", top = 2, bot = 0 },
-    { name = "imm", top = 4, bot = 0 },
+    { name = "himm", top = 4, bot = 0 },
     { name = "opcode", top = 6, bot = 0 },
 ]
 R4 = [
@@ -123,21 +129,21 @@ R4 = [
 [load]
 type = "I"
 [load.repr]
-default = "$name$ %rdf%, %imm%(%rs1i%)"
+default = "$name$ %rdf%, %himm%(%rs1i%)"
 [load.instructions]
 flw = { mask = 0x707f, match = 0x2007 }
 
 [store]
 type = "S"
 [store.repr]
-default = "$name$ %rs2f%, %imm%(%rs1i%)"
+default = "$name$ %rs2f%, %himm%(%rs1i%)"
 [store.instructions]
 fsw = { mask = 0x707f, match = 0x2027 }
 
 [reg4]
 type = "R4"
 [reg4.repr]
-default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%"
+default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%, %rm%"
 [reg4.instructions]
 fmadd_s = { mask = 0x600007f, match = 0x43 }
 fmsub_s = { mask = 0x600007f, match = 0x47 }
@@ -147,8 +153,13 @@ fnmsub_s = { mask = 0x600007f, match = 0x4b }
 [arith]
 type = "Rfff"
 [arith.repr]
-default = "$name$ %rdf%, %rs1f%, %rs2f%"
-fsqrt_s = "$name$ %rdf%, %rs1f%"
+default = "$name$ %rdf%, %rs1f%, %rs2f%, %rm%"
+fsqrt_s = "$name$ %rdf%, %rs1f%, %rm%"
+fsgnj_s = "$name$ %rdf%, %rs1f%, %rs2f%"
+fsgnjn_s = "$name$ %rdf%, %rs1f%, %rs2f%"
+fsgnjx_s = "$name$ %rdf%, %rs1f%, %rs2f%"
+fmax_s = "$name$ %rdf%, %rs1f%, %rs2f%"
+fmin_s = "$name$ %rdf%, %rs1f%, %rs2f%"
 [arith.instructions]
 fadd_s = { mask = 0xfe00007f, match = 0x53 }
 fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
@@ -164,7 +175,8 @@ fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
 [i2f]
 type = "Rfif"
 [i2f.repr]
-default = "$name$ %rdf%, %rs1i%"
+default = "$name$ %rdf%, %rs1i%, %rm%"
+fmv_w_x = "$name$ %rdf%, %rs1i%"
 [i2f.instructions]
 fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
 fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
@@ -177,6 +189,9 @@ default = "$name$ %rdi%, %rs1f%"
 feq_s = "$name$ %rdi%, %rs1f%, %rs2f%"
 flt_s = "$name$ %rdi%, %rs1f%, %rs2f%"
 fle_s = "$name$ %rdi%, %rs1f%, %rs2f%"
+fcvt_w_s = "$name$ %rdi%, %rs1f%, %rm%"
+fcvt_wu_s = "$name$ %rdi%, %rs1f%, %rm%"
+
 [f2i.instructions]
 fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
 fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
@@ -187,7 +202,7 @@ flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
 fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
 
 [register]
-names = ["Register_int", "Register_float"]
+names = ["Register_int", "Register_float", "Register_round"]
 number = 32
 Register_int = [
     "zero",
@@ -257,4 +272,15 @@ Register_float = [
     "ft9",
     "ft10",
     "ft11",
+]
+
+Register_round = [
+    "rne",
+    "rtz",
+    "rdn",
+    "rup",
+    "rmm",
+    "unknown",
+    "unknown",
+    "dyn",
 ]
