@@ -13,7 +13,7 @@ struct InstructionSet {
     bit_width: usize,
     formats: HashMap<String, InstructionFormat>,
     parts: HashMap<String, PartDecoder>,
-    registers: HashMap<String, Registers>,
+    mappings: HashMap<String, Mapping>,
 }
 
 fn parse_usize(s: &str) -> usize {
@@ -81,11 +81,11 @@ impl InstructionSet {
             })
             .collect();
 
-        let register_names = table["register"]["names"].as_array().unwrap();
-        let mut register_map = HashMap::new();
-        for value in register_names {
-            let register_name = value.as_str().unwrap().to_string();
-            let (reg_map, strict) = match &table["register"][&register_name] {
+        let mapping_names = table["mappings"]["names"].as_array().unwrap();
+        let mut mapping_map = HashMap::new();
+        for value in mapping_names {
+            let mapping_name = value.as_str().unwrap().to_string();
+            let (map_map, strict) = match &table["mappings"][&mapping_name] {
                 Value::Array(val) => Some((
                     val.iter()
                         .enumerate()
@@ -103,15 +103,15 @@ impl InstructionSet {
             }
             .unwrap();
 
-            let registers: Registers = Registers::new(&reg_map, strict);
-            register_map.insert(register_name.clone(), registers);
+            let mappings: Mapping = Mapping::new(&map_map, strict);
+            mapping_map.insert(mapping_name.clone(), mappings);
         }
 
         InstructionSet {
             bit_width,
             formats,
             parts,
-            registers: register_map,
+            mappings: mapping_map,
         }
     }
 }
@@ -132,7 +132,7 @@ enum PartType {
     USize,
     F32,
     F64,
-    Register(String),
+    Mapping(String),
     VInt,
     None,
 }
@@ -152,7 +152,7 @@ enum PartTypeValue {
     USize(usize),
     F32(f32),
     F64(f64),
-    Register(String),
+    Mapping(String),
     VInt(i128),
     None,
 }
@@ -249,7 +249,7 @@ impl NumberRadix {
             PartTypeValue::USize(a) => self.format_unsigned(a as u128),
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
-            PartTypeValue::Register(a) => a.to_string(),
+            PartTypeValue::Mapping(a) => a.to_string(),
             PartTypeValue::VInt(a) => self.format_signed(a as i128),
             PartTypeValue::None => "".to_string(),
         }
@@ -273,7 +273,7 @@ impl PartialEq for PartTypeValue {
             (Self::USize(l0), Self::USize(r0)) => l0 == r0,
             (Self::F32(l0), Self::F32(r0)) => l0 == r0,
             (Self::F64(l0), Self::F64(r0)) => l0 == r0,
-            (Self::Register(l0), Self::Register(r0)) => l0 == r0,
+            (Self::Mapping(l0), Self::Mapping(r0)) => l0 == r0,
             (Self::VInt(l0), Self::VInt(r0)) => l0 == r0,
             _ => false,
         }
@@ -301,7 +301,7 @@ impl FromStr for PartType {
             "f64" => Ok(PartType::F64),
             "VInt" => Ok(PartType::VInt),
             "" => Ok(PartType::None),
-            _ => Ok(PartType::Register(s.to_string())),
+            _ => Ok(PartType::Mapping(s.to_string())),
         }
     }
 }
@@ -323,7 +323,7 @@ impl PartType {
             PartType::USize => true,
             PartType::F32 => true,
             PartType::F64 => true,
-            PartType::Register(_) => true,
+            PartType::Mapping(_) => true,
             PartType::VInt => unsigned_imm,
             PartType::None => true,
         }
@@ -350,7 +350,7 @@ impl PartDecoder {
         }
     }
 
-    fn decode(&self, value: u128, registers: &HashMap<String, Registers>) -> PartTypeValue {
+    fn decode(&self, value: u128, mappings: &HashMap<String, Mapping>) -> PartTypeValue {
         match &self.part_type {
             PartType::Boolean => PartTypeValue::Boolean(value != 0),
             PartType::Char => PartTypeValue::Char(char::from_u32(value as u32).unwrap()),
@@ -366,11 +366,11 @@ impl PartDecoder {
             PartType::USize => PartTypeValue::USize(value as usize),
             PartType::F32 => PartTypeValue::F32(f32::from_bits(value as u32)),
             PartType::F64 => PartTypeValue::F64(f64::from_bits(value as u64)),
-            PartType::Register(reg_set_name) => PartTypeValue::Register(
-                registers[reg_set_name]
+            PartType::Mapping(mapping_set_name) => PartTypeValue::Mapping(
+                mappings[mapping_set_name]
                     .names
                     .get(&(value as usize))
-                    .unwrap_or(&if registers[reg_set_name].strict {
+                    .unwrap_or(&if mappings[mapping_set_name].strict {
                         format!("ERROR({:#b})", value as usize)
                     } else {
                         format!("{:#x}", value as usize)
@@ -383,18 +383,18 @@ impl PartDecoder {
     }
 }
 
-struct Registers {
+struct Mapping {
     names: HashMap<usize, String>,
     strict: bool,
 }
 
-impl Registers {
+impl Mapping {
     pub fn new(list: &HashMap<usize, Value>, strict: bool) -> Self {
         let names = list
             .iter()
             .map(|(k, v)| (*k, v.as_str().unwrap_or("").to_string()))
             .collect();
-        Registers { names, strict }
+        Mapping { names, strict }
     }
 }
 
@@ -473,17 +473,17 @@ impl SliceValue {
     fn get_value(
         &self,
         part_decoder: &PartDecoder,
-        registers: &HashMap<String, Registers>,
+        mappigns: &HashMap<String, Mapping>,
     ) -> PartTypeValue {
-        part_decoder.decode(self.value, registers)
+        part_decoder.decode(self.value, mappigns)
     }
 
     fn get_string_value(
         &self,
         part_decoder: &PartDecoder,
-        registers: &HashMap<String, Registers>,
+        mappings: &HashMap<String, Mapping>,
     ) -> String {
-        let tmp = self.get_value(part_decoder, registers);
+        let tmp = self.get_value(part_decoder, mappings);
         part_decoder.number_radix.format_part_type_val(tmp)
     }
 }
@@ -522,7 +522,7 @@ impl Instruction {
         values: &HashMap<String, SliceValue>,
         instruction_format: &InstructionFormat,
         part_decoders: &HashMap<String, PartDecoder>,
-        registers: &HashMap<String, Registers>,
+        mappings: &HashMap<String, Mapping>,
     ) -> String {
         let mut fmt = if instruction_format.repr.contains_key(&self.name) {
             instruction_format.repr.get(&self.name)
@@ -542,7 +542,7 @@ impl Instruction {
             fmt = fmt.replace(
                 &fmt[begin - 1..end + 1],
                 values[var_name]
-                    .get_string_value(&part_decoders[var_name], registers)
+                    .get_string_value(&part_decoders[var_name], mappings)
                     .as_str(),
             );
         }
@@ -667,7 +667,7 @@ impl Decoder {
                                 &values,
                                 inst_format,
                                 &instruction_set.parts,
-                                &instruction_set.registers,
+                                &instruction_set.mappings,
                             ));
                         }
                     }

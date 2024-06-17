@@ -17,7 +17,7 @@ parts = [
     [
         "rm",
         3,
-        "Register_round",
+        "Mapping_round",
     ],
     [
         "funct5",
@@ -201,8 +201,8 @@ feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
 flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
 fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
 
-[register]
-names = ["Register_int", "Register_float", "Register_round"]
+[mappings]
+names = ["Register_int", "Register_float", "Mapping_round"]
 number = 32
 Register_int = [
     "zero",
@@ -274,7 +274,7 @@ Register_float = [
     "ft11",
 ]
 
-Register_round = [
+Mapping_round = [
     "rne",
     "rtz",
     "rdn",

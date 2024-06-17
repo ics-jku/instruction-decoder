@@ -117,7 +117,7 @@ default = "$name$ %addr%"
 j = { mask = 0xfc000000, match = 0x08000000 }
 jal = { mask = 0xfc000000, match = 0x0c000000 }
 
-[register]
+[mappings]
 names = ["Register_int"]
 number = 32
 Register_int = [

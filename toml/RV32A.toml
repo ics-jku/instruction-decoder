@@ -22,7 +22,7 @@ parts = [
     [
         "ordering",
         2,
-        "Register_ordering",
+        "Mapping_ordering",
     ],
     [
         "rd",
@@ -77,8 +77,8 @@ amomin_w = { mask = 0xf800707f, match = 0x8000202f }
 amomaxu_w = { mask = 0xf800707f, match = 0xe000202f }
 amominu_w = { mask = 0xf800707f, match = 0xc000202f }
 
-[register]
-names = ["Register_int", "Register_ordering"]
+[mappings]
+names = ["Register_int", "Mapping_ordering"]
 number = 32
 Register_int = [
     "zero",
@@ -114,7 +114,7 @@ Register_int = [
     "t5",
     "t6",
 ]
-Register_ordering = [
+Mapping_ordering = [
     "",
     ".rl",
     ".aq",

@@ -188,7 +188,7 @@ feq_d = { mask = 0xfe00707f, match = 0xa2002053}
 fle_d = { mask = 0xfe00707f, match = 0xa2000053}
 flt_d = { mask = 0xfe00707f, match = 0xa2001053}
 
-[register]
+[mappings]
 names = ["Register_int", "Register_float"]
 number = 32
 Register_int = [
