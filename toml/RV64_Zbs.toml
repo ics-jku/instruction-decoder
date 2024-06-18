@@ -1,4 +1,4 @@
-set = "RV64Zba" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
+set = "RV64Zbs" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
@@ -203,34 +203,34 @@ default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 [format_2-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtd%"
 
-[format_1-0.instructions.add_uw]
+[format_1-0.instructions.bclr]
 mask = 0xfe00707f
-match = 0x800003b
+match = 0x48001033
 
-[format_1-0.instructions.sh1add]
+[format_1-0.instructions.bext]
 mask = 0xfe00707f
-match = 0x20002033
+match = 0x48005033
 
-[format_1-0.instructions.sh1add_uw]
+[format_1-0.instructions.binv]
 mask = 0xfe00707f
-match = 0x2000203b
+match = 0x68001033
 
-[format_1-0.instructions.sh2add]
+[format_1-0.instructions.bset]
 mask = 0xfe00707f
-match = 0x20004033
+match = 0x28001033
 
-[format_1-0.instructions.sh2add_uw]
-mask = 0xfe00707f
-match = 0x2000403b
-
-[format_1-0.instructions.sh3add]
-mask = 0xfe00707f
-match = 0x20006033
-
-[format_1-0.instructions.sh3add_uw]
-mask = 0xfe00707f
-match = 0x2000603b
-
-[format_2-0.instructions.slli_uw]
+[format_2-0.instructions.bclri]
 mask = 0xfc00707f
-match = 0x800101b
+match = 0x48001013
+
+[format_2-0.instructions.bexti]
+mask = 0xfc00707f
+match = 0x48005013
+
+[format_2-0.instructions.binvi]
+mask = 0xfc00707f
+match = 0x68001013
+
+[format_2-0.instructions.bseti]
+mask = 0xfc00707f
+match = 0x28001013

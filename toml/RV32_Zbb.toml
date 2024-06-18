@@ -1,8 +1,8 @@
-set = "RVZbb" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
+set = "RV32Zbb" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
-names = ["format_1-0", "format_2-0"]
+names = ["format_1-0", "format_2-0", "format_3-0"]
 parts = [
     [
         "rd_Register_int",
@@ -35,6 +35,11 @@ parts = [
         "Register_float",
     ],
     [
+        "shamtw",
+        5,
+        "u8",
+    ],
+    [
         "none",
         32,
         "u32",
@@ -53,7 +58,7 @@ parts = [
 ]
 
 [type]
-names = ["type_1-0", "type_2-0"]
+names = ["type_1-0", "type_2-0", "type_3-0"]
 [[type.type_1-0]]
 name = "none"
 top = 31
@@ -109,11 +114,44 @@ name = "none"
 top = 6
 bot = 0
 
+[[type.type_3-0]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type_3-0]]
+name = "shamtw"
+top = 4
+bot = 0
+
+[[type.type_3-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_3-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_3-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_3-0]]
+name = "none"
+top = 6
+bot = 0
+
 [format_1-0]
 type = "type_1-0"
 
 [format_2-0]
 type = "type_2-0"
+
+[format_3-0]
+type = "type_3-0"
 
 [mappings]
 names = ["Register_int", "Register_float"]
@@ -193,6 +231,9 @@ default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 [format_2-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%"
 
+[format_3-0.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtw%"
+
 [format_1-0.instructions.andn]
 mask = 0xfe00707f
 match = 0x40007033
@@ -245,6 +286,10 @@ match = 0x60101013
 mask = 0xfff0707f
 match = 0x28705013
 
+[format_2-0.instructions.rev8]
+mask = 0xfff0707f
+match = 0x69805013
+
 [format_2-0.instructions.sext_b]
 mask = 0xfff0707f
 match = 0x60401013
@@ -252,3 +297,11 @@ match = 0x60401013
 [format_2-0.instructions.sext_h]
 mask = 0xfff0707f
 match = 0x60501013
+
+[format_2-0.instructions.zext_h]
+mask = 0xfff0707f
+match = 0x8004033
+
+[format_3-0.instructions.rori]
+mask = 0xfe00707f
+match = 0x60005013
