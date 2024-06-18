@@ -2,80 +2,111 @@ set = "RV32Zicsr"
 width = 32
 
 [types]
-names = [
-    "csr",
-    "csri",
-]
+names = ["format_1-0", "format_2-0"]
 parts = [
     [
-        "opcode",
-        7,
-        "u8",
+        "rd_Register_int",
+        5,
+        "Register_int",
     ],
     [
-        "funct3",
-        3,
-        "u8",
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_Register_float",
+        5,
+        "Register_float",
     ],
     [
         "csr",
         12,
-        "Register_csr"
+        "Mapping_csr",
     ],
     [
-        "rd",
-        5,
-        "Register_int",
-    ],
-    [
-        "rs1",
-        5,
-        "Register_int",
+        "none",
+        32,
+        "u32",
     ],
     [
         "imm",
         32,
         "VInt",
     ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
 ]
 
 [type]
-names = ["CSR", "CSRI"]
-CSR = [
-    { name = "csr", top = 11, bot = 0 },
-    { name = "rs1", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "rd", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
-CSRI = [
-    { name = "csr", top = 11, bot = 0 },
-    { name = "imm", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "rd", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
+names = ["type_1-0", "type_2-0"]
+[[type.type_1-0]]
+name = "csr"
+top = 11
+bot = 0
 
-[csr]
-type = "CSR"
-[csr.repr]
-default = "$name$ %rd%, %csr%, %rs1%"
-[csr.instructions]
-csrrc = { mask = 0x707f, match = 0x3073}
-csrrs = { mask = 0x707f, match = 0x2073}
-csrrw = { mask = 0x707f, match = 0x1073}
+[[type.type_1-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
 
-[csri]
-type = "CSRI"
-[csri.repr]
-default = "$name$ %rd%, %csr%, %imm%"
-[csri.instructions]
-csrrci = { mask = 0x707f, match = 0x7073, unsigned = true }
-csrrsi = { mask = 0x707f, match = 0x6073, unsigned = true }
-csrrwi = { mask = 0x707f, match = 0x5073, unsigned = true }
+[[type.type_1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_1-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_2-0]]
+name = "csr"
+top = 11
+bot = 0
+
+[[type.type_2-0]]
+name = "imm"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_2-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format_1-0]
+type = "type_1-0"
+
+[format_2-0]
+type = "type_2-0"
 
 [mappings]
-names = ["Register_int", "Register_csr"]
+names = ["Register_int", "Register_float", "Mapping_csr"]
 number = 32
 Register_int = [
     "zero",
@@ -111,70 +142,111 @@ Register_int = [
     "t5",
     "t6",
 ]
-[mappings.Register_csr]
-0x001 = "fflags"
-0x002 = "frm"
-0x003 = "fcsr"
-0x008 = "vstart"
-0x009 = "vxsat"
-0x00A = "vxrm"
-0x00F = "vcsr"
-0x011 = "ssp"
-0x015 = "seed"
-0x017 = "jvt"
-0xC00 = "cycle"
-0xC01 = "time"
-0xC02 = "instret"
-0xC03 = "hpmcounter3"
-0xC04 = "hpmcounter4"
-0xC05 = "hpmcounter5"
-0xC06 = "hpmcounter6"
-0xC07 = "hpmcounter7"
-0xC08 = "hpmcounter8"
-0xC09 = "hpmcounter9"
-0xC0A = "hpmcounter10"
-0xC0B = "hpmcounter11"
-0xC0C = "hpmcounter12"
-0xC0D = "hpmcounter13"
-0xC0E = "hpmcounter14"
-0xC0F = "hpmcounter15"
-0xC10 = "hpmcounter16"
-0xC11 = "hpmcounter17"
-0xC12 = "hpmcounter18"
-0xC13 = "hpmcounter19"
-0xC14 = "hpmcounter20"
-0xC15 = "hpmcounter21"
-0xC16 = "hpmcounter22"
-0xC17 = "hpmcounter23"
-0xC18 = "hpmcounter24"
-0xC19 = "hpmcounter25"
-0xC1A = "hpmcounter26"
-0xC1B = "hpmcounter27"
-0xC1C = "hpmcounter28"
-0xC1D = "hpmcounter29"
-0xC1E = "hpmcounter30"
-0xC1F = "hpmcounter31"
-0xC20 = "vl"
-0xC21 = "vtype"
-0xC22 = "vlenb"
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+
+[format_1-0.repr]
+default = "$name$ %rd_Register_int%, %csr%, %rs1_Register_int%"
+
+[format_2-0.repr]
+default = "$name$ %rd_Register_int%, %csr%, %imm%"
+
+[mappings.Mapping_csr]
+0x1 = "fflags"
+0x2 = "frm"
+0x3 = "fcsr"
+0x8 = "vstart"
+0x9 = "vxsat"
+0xa = "vxrm"
+0xf = "vcsr"
+0x11 = "ssp"
+0x15 = "seed"
+0x17 = "jvt"
+0xc00 = "cycle"
+0xc01 = "time"
+0xc02 = "instret"
+0xc03 = "hpmcounter3"
+0xc04 = "hpmcounter4"
+0xc05 = "hpmcounter5"
+0xc06 = "hpmcounter6"
+0xc07 = "hpmcounter7"
+0xc08 = "hpmcounter8"
+0xc09 = "hpmcounter9"
+0xc0a = "hpmcounter10"
+0xc0b = "hpmcounter11"
+0xc0c = "hpmcounter12"
+0xc0d = "hpmcounter13"
+0xc0e = "hpmcounter14"
+0xc0f = "hpmcounter15"
+0xc10 = "hpmcounter16"
+0xc11 = "hpmcounter17"
+0xc12 = "hpmcounter18"
+0xc13 = "hpmcounter19"
+0xc14 = "hpmcounter20"
+0xc15 = "hpmcounter21"
+0xc16 = "hpmcounter22"
+0xc17 = "hpmcounter23"
+0xc18 = "hpmcounter24"
+0xc19 = "hpmcounter25"
+0xc1a = "hpmcounter26"
+0xc1b = "hpmcounter27"
+0xc1c = "hpmcounter28"
+0xc1d = "hpmcounter29"
+0xc1e = "hpmcounter30"
+0xc1f = "hpmcounter31"
+0xc20 = "vl"
+0xc21 = "vtype"
+0xc22 = "vlenb"
 0x100 = "sstatus"
 0x102 = "sedeleg"
 0x103 = "sideleg"
 0x104 = "sie"
 0x105 = "stvec"
 0x106 = "scounteren"
-0x10A = "senvcfg"
-0x10C = "sstateen0"
-0x10D = "sstateen1"
-0x10E = "sstateen2"
-0x10F = "sstateen3"
+0x10a = "senvcfg"
+0x10c = "sstateen0"
+0x10d = "sstateen1"
+0x10e = "sstateen2"
+0x10f = "sstateen3"
 0x120 = "scountinhibit"
 0x140 = "sscratch"
 0x141 = "sepc"
 0x142 = "scause"
 0x143 = "stval"
 0x144 = "sip"
-0x14D = "stimecmp"
+0x14d = "stimecmp"
 0x150 = "siselect"
 0x151 = "sireg"
 0x152 = "sireg2"
@@ -182,10 +254,10 @@ Register_int = [
 0x155 = "sireg4"
 0x156 = "sireg5"
 0x157 = "sireg6"
-0x15C = "stopei"
+0x15c = "stopei"
 0x180 = "satp"
 0x181 = "srmcfg"
-0x5A8 = "scontext"
+0x5a8 = "scontext"
 0x200 = "vsstatus"
 0x204 = "vsie"
 0x205 = "vstvec"
@@ -194,7 +266,7 @@ Register_int = [
 0x242 = "vscause"
 0x243 = "vstval"
 0x244 = "vsip"
-0x24D = "vstimecmp"
+0x24d = "vstimecmp"
 0x250 = "vsiselect"
 0x251 = "vsireg"
 0x252 = "vsireg2"
@@ -202,7 +274,7 @@ Register_int = [
 0x255 = "vsireg4"
 0x256 = "vsireg5"
 0x257 = "vsireg6"
-0x25C = "vstopei"
+0x25c = "vstopei"
 0x280 = "vsatp"
 0x600 = "hstatus"
 0x602 = "hedeleg"
@@ -213,28 +285,28 @@ Register_int = [
 0x607 = "hgeie"
 0x608 = "hvien"
 0x609 = "hvictl"
-0x60A = "henvcfg"
-0x60C = "hstateen0"
-0x60D = "hstateen1"
-0x60E = "hstateen2"
-0x60F = "hstateen3"
+0x60a = "henvcfg"
+0x60c = "hstateen0"
+0x60d = "hstateen1"
+0x60e = "hstateen2"
+0x60f = "hstateen3"
 0x643 = "htval"
 0x644 = "hip"
 0x645 = "hvip"
 0x646 = "hviprio1"
 0x647 = "hviprio2"
-0x64A = "htinst"
+0x64a = "htinst"
 0x680 = "hgatp"
-0x6A8 = "hcontext"
-0xE12 = "hgeip"
-0xEB0 = "vstopi"
-0xDA0 = "scountovf"
-0xDB0 = "stopi"
-0x007 = "utvt"
-0x045 = "unxti"
-0x046 = "uintstatus"
-0x048 = "uscratchcsw"
-0x049 = "uscratchcswl"
+0x6a8 = "hcontext"
+0xe12 = "hgeip"
+0xeb0 = "vstopi"
+0xda0 = "scountovf"
+0xdb0 = "stopi"
+0x7 = "utvt"
+0x45 = "unxti"
+0x46 = "uintstatus"
+0x48 = "uscratchcsw"
+0x49 = "uscratchcswl"
 0x107 = "stvt"
 0x145 = "snxti"
 0x146 = "sintstatus"
@@ -255,10 +327,10 @@ Register_int = [
 0x308 = "mvien"
 0x309 = "mvip"
 0x30a = "menvcfg"
-0x30C = "mstateen0"
-0x30D = "mstateen1"
-0x30E = "mstateen2"
-0x30F = "mstateen3"
+0x30c = "mstateen0"
+0x30d = "mstateen1"
+0x30e = "mstateen2"
+0x30f = "mstateen3"
 0x320 = "mcountinhibit"
 0x340 = "mscratch"
 0x341 = "mepc"
@@ -368,37 +440,37 @@ Register_int = [
 0x7b1 = "dpc"
 0x7b2 = "dscratch0"
 0x7b3 = "dscratch1"
-0xB00 = "mcycle"
-0xB02 = "minstret"
-0xB03 = "mhpmcounter3"
-0xB04 = "mhpmcounter4"
-0xB05 = "mhpmcounter5"
-0xB06 = "mhpmcounter6"
-0xB07 = "mhpmcounter7"
-0xB08 = "mhpmcounter8"
-0xB09 = "mhpmcounter9"
-0xB0A = "mhpmcounter10"
-0xB0B = "mhpmcounter11"
-0xB0C = "mhpmcounter12"
-0xB0D = "mhpmcounter13"
-0xB0E = "mhpmcounter14"
-0xB0F = "mhpmcounter15"
-0xB10 = "mhpmcounter16"
-0xB11 = "mhpmcounter17"
-0xB12 = "mhpmcounter18"
-0xB13 = "mhpmcounter19"
-0xB14 = "mhpmcounter20"
-0xB15 = "mhpmcounter21"
-0xB16 = "mhpmcounter22"
-0xB17 = "mhpmcounter23"
-0xB18 = "mhpmcounter24"
-0xB19 = "mhpmcounter25"
-0xB1A = "mhpmcounter26"
-0xB1B = "mhpmcounter27"
-0xB1C = "mhpmcounter28"
-0xB1D = "mhpmcounter29"
-0xB1E = "mhpmcounter30"
-0xB1F = "mhpmcounter31"
+0xb00 = "mcycle"
+0xb02 = "minstret"
+0xb03 = "mhpmcounter3"
+0xb04 = "mhpmcounter4"
+0xb05 = "mhpmcounter5"
+0xb06 = "mhpmcounter6"
+0xb07 = "mhpmcounter7"
+0xb08 = "mhpmcounter8"
+0xb09 = "mhpmcounter9"
+0xb0a = "mhpmcounter10"
+0xb0b = "mhpmcounter11"
+0xb0c = "mhpmcounter12"
+0xb0d = "mhpmcounter13"
+0xb0e = "mhpmcounter14"
+0xb0f = "mhpmcounter15"
+0xb10 = "mhpmcounter16"
+0xb11 = "mhpmcounter17"
+0xb12 = "mhpmcounter18"
+0xb13 = "mhpmcounter19"
+0xb14 = "mhpmcounter20"
+0xb15 = "mhpmcounter21"
+0xb16 = "mhpmcounter22"
+0xb17 = "mhpmcounter23"
+0xb18 = "mhpmcounter24"
+0xb19 = "mhpmcounter25"
+0xb1a = "mhpmcounter26"
+0xb1b = "mhpmcounter27"
+0xb1c = "mhpmcounter28"
+0xb1d = "mhpmcounter29"
+0xb1e = "mhpmcounter30"
+0xb1f = "mhpmcounter31"
 0x321 = "mcyclecfg"
 0x322 = "minstretcfg"
 0x323 = "mhpmevent3"
@@ -408,12 +480,12 @@ Register_int = [
 0x327 = "mhpmevent7"
 0x328 = "mhpmevent8"
 0x329 = "mhpmevent9"
-0x32A = "mhpmevent10"
-0x32B = "mhpmevent11"
-0x32C = "mhpmevent12"
-0x32D = "mhpmevent13"
-0x32E = "mhpmevent14"
-0x32F = "mhpmevent15"
+0x32a = "mhpmevent10"
+0x32b = "mhpmevent11"
+0x32c = "mhpmevent12"
+0x32d = "mhpmevent13"
+0x32e = "mhpmevent14"
+0x32f = "mhpmevent15"
 0x330 = "mhpmevent16"
 0x331 = "mhpmevent17"
 0x332 = "mhpmevent18"
@@ -424,77 +496,77 @@ Register_int = [
 0x337 = "mhpmevent23"
 0x338 = "mhpmevent24"
 0x339 = "mhpmevent25"
-0x33A = "mhpmevent26"
-0x33B = "mhpmevent27"
-0x33C = "mhpmevent28"
-0x33D = "mhpmevent29"
-0x33E = "mhpmevent30"
-0x33F = "mhpmevent31"
-0xF11 = "mvendorid"
-0xF12 = "marchid"
-0xF13 = "mimpid"
-0xF14 = "mhartid"
-0xF15 = "mconfigptr"
-0xFB0 = "mtopi"
+0x33a = "mhpmevent26"
+0x33b = "mhpmevent27"
+0x33c = "mhpmevent28"
+0x33d = "mhpmevent29"
+0x33e = "mhpmevent30"
+0x33f = "mhpmevent31"
+0xf11 = "mvendorid"
+0xf12 = "marchid"
+0xf13 = "mimpid"
+0xf14 = "mhartid"
+0xf15 = "mconfigptr"
+0xfb0 = "mtopi"
 0x114 = "sieh"
 0x154 = "siph"
-0x15D = "stimecmph"
+0x15d = "stimecmph"
 0x214 = "vsieh"
 0x254 = "vsiph"
-0x25D = "vstimecmph"
+0x25d = "vstimecmph"
 0x615 = "htimedeltah"
 0x613 = "hidelegh"
 0x618 = "hvienh"
-0x61A = "henvcfgh"
+0x61a = "henvcfgh"
 0x655 = "hviph"
 0x656 = "hviprio1h"
 0x657 = "hviprio2h"
-0x61C = "hstateen0h"
-0x61D = "hstateen1h"
-0x61E = "hstateen2h"
-0x61F = "hstateen3h"
-0xC80 = "cycleh"
-0xC81 = "timeh"
-0xC82 = "instreth"
-0xC83 = "hpmcounter3h"
-0xC84 = "hpmcounter4h"
-0xC85 = "hpmcounter5h"
-0xC86 = "hpmcounter6h"
-0xC87 = "hpmcounter7h"
-0xC88 = "hpmcounter8h"
-0xC89 = "hpmcounter9h"
-0xC8A = "hpmcounter10h"
-0xC8B = "hpmcounter11h"
-0xC8C = "hpmcounter12h"
-0xC8D = "hpmcounter13h"
-0xC8E = "hpmcounter14h"
-0xC8F = "hpmcounter15h"
-0xC90 = "hpmcounter16h"
-0xC91 = "hpmcounter17h"
-0xC92 = "hpmcounter18h"
-0xC93 = "hpmcounter19h"
-0xC94 = "hpmcounter20h"
-0xC95 = "hpmcounter21h"
-0xC96 = "hpmcounter22h"
-0xC97 = "hpmcounter23h"
-0xC98 = "hpmcounter24h"
-0xC99 = "hpmcounter25h"
-0xC9A = "hpmcounter26h"
-0xC9B = "hpmcounter27h"
-0xC9C = "hpmcounter28h"
-0xC9D = "hpmcounter29h"
-0xC9E = "hpmcounter30h"
-0xC9F = "hpmcounter31h"
+0x61c = "hstateen0h"
+0x61d = "hstateen1h"
+0x61e = "hstateen2h"
+0x61f = "hstateen3h"
+0xc80 = "cycleh"
+0xc81 = "timeh"
+0xc82 = "instreth"
+0xc83 = "hpmcounter3h"
+0xc84 = "hpmcounter4h"
+0xc85 = "hpmcounter5h"
+0xc86 = "hpmcounter6h"
+0xc87 = "hpmcounter7h"
+0xc88 = "hpmcounter8h"
+0xc89 = "hpmcounter9h"
+0xc8a = "hpmcounter10h"
+0xc8b = "hpmcounter11h"
+0xc8c = "hpmcounter12h"
+0xc8d = "hpmcounter13h"
+0xc8e = "hpmcounter14h"
+0xc8f = "hpmcounter15h"
+0xc90 = "hpmcounter16h"
+0xc91 = "hpmcounter17h"
+0xc92 = "hpmcounter18h"
+0xc93 = "hpmcounter19h"
+0xc94 = "hpmcounter20h"
+0xc95 = "hpmcounter21h"
+0xc96 = "hpmcounter22h"
+0xc97 = "hpmcounter23h"
+0xc98 = "hpmcounter24h"
+0xc99 = "hpmcounter25h"
+0xc9a = "hpmcounter26h"
+0xc9b = "hpmcounter27h"
+0xc9c = "hpmcounter28h"
+0xc9d = "hpmcounter29h"
+0xc9e = "hpmcounter30h"
+0xc9f = "hpmcounter31h"
 0x310 = "mstatush"
 0x313 = "midelegh"
 0x314 = "mieh"
 0x318 = "mvienh"
 0x319 = "mviph"
-0x31A = "menvcfgh"
-0x31C = "mstateen0h"
-0x31D = "mstateen1h"
-0x31E = "mstateen2h"
-0x31F = "mstateen3h"
+0x31a = "menvcfgh"
+0x31c = "mstateen0h"
+0x31d = "mstateen1h"
+0x31e = "mstateen2h"
+0x31f = "mstateen3h"
 0x354 = "miph"
 0x721 = "mcyclecfgh"
 0x722 = "minstretcfgh"
@@ -505,12 +577,12 @@ Register_int = [
 0x727 = "mhpmevent7h"
 0x728 = "mhpmevent8h"
 0x729 = "mhpmevent9h"
-0x72A = "mhpmevent10h"
-0x72B = "mhpmevent11h"
-0x72C = "mhpmevent12h"
-0x72D = "mhpmevent13h"
-0x72E = "mhpmevent14h"
-0x72F = "mhpmevent15h"
+0x72a = "mhpmevent10h"
+0x72b = "mhpmevent11h"
+0x72c = "mhpmevent12h"
+0x72d = "mhpmevent13h"
+0x72e = "mhpmevent14h"
+0x72f = "mhpmevent15h"
 0x730 = "mhpmevent16h"
 0x731 = "mhpmevent17h"
 0x732 = "mhpmevent18h"
@@ -521,45 +593,72 @@ Register_int = [
 0x737 = "mhpmevent23h"
 0x738 = "mhpmevent24h"
 0x739 = "mhpmevent25h"
-0x73A = "mhpmevent26h"
-0x73B = "mhpmevent27h"
-0x73C = "mhpmevent28h"
-0x73D = "mhpmevent29h"
-0x73E = "mhpmevent30h"
-0x73F = "mhpmevent31h"
+0x73a = "mhpmevent26h"
+0x73b = "mhpmevent27h"
+0x73c = "mhpmevent28h"
+0x73d = "mhpmevent29h"
+0x73e = "mhpmevent30h"
+0x73f = "mhpmevent31h"
 0x740 = "mnscratch"
 0x741 = "mnepc"
 0x742 = "mncause"
 0x744 = "mnstatus"
 0x757 = "mseccfgh"
-0xB80 = "mcycleh"
-0xB82 = "minstreth"
-0xB83 = "mhpmcounter3h"
-0xB84 = "mhpmcounter4h"
-0xB85 = "mhpmcounter5h"
-0xB86 = "mhpmcounter6h"
-0xB87 = "mhpmcounter7h"
-0xB88 = "mhpmcounter8h"
-0xB89 = "mhpmcounter9h"
-0xB8A = "mhpmcounter10h"
-0xB8B = "mhpmcounter11h"
-0xB8C = "mhpmcounter12h"
-0xB8D = "mhpmcounter13h"
-0xB8E = "mhpmcounter14h"
-0xB8F = "mhpmcounter15h"
-0xB90 = "mhpmcounter16h"
-0xB91 = "mhpmcounter17h"
-0xB92 = "mhpmcounter18h"
-0xB93 = "mhpmcounter19h"
-0xB94 = "mhpmcounter20h"
-0xB95 = "mhpmcounter21h"
-0xB96 = "mhpmcounter22h"
-0xB97 = "mhpmcounter23h"
-0xB98 = "mhpmcounter24h"
-0xB99 = "mhpmcounter25h"
-0xB9A = "mhpmcounter26h"
-0xB9B = "mhpmcounter27h"
-0xB9C = "mhpmcounter28h"
-0xB9D = "mhpmcounter29h"
-0xB9E = "mhpmcounter30h"
-0xB9F = "mhpmcounter31h"
+0xb80 = "mcycleh"
+0xb82 = "minstreth"
+0xb83 = "mhpmcounter3h"
+0xb84 = "mhpmcounter4h"
+0xb85 = "mhpmcounter5h"
+0xb86 = "mhpmcounter6h"
+0xb87 = "mhpmcounter7h"
+0xb88 = "mhpmcounter8h"
+0xb89 = "mhpmcounter9h"
+0xb8a = "mhpmcounter10h"
+0xb8b = "mhpmcounter11h"
+0xb8c = "mhpmcounter12h"
+0xb8d = "mhpmcounter13h"
+0xb8e = "mhpmcounter14h"
+0xb8f = "mhpmcounter15h"
+0xb90 = "mhpmcounter16h"
+0xb91 = "mhpmcounter17h"
+0xb92 = "mhpmcounter18h"
+0xb93 = "mhpmcounter19h"
+0xb94 = "mhpmcounter20h"
+0xb95 = "mhpmcounter21h"
+0xb96 = "mhpmcounter22h"
+0xb97 = "mhpmcounter23h"
+0xb98 = "mhpmcounter24h"
+0xb99 = "mhpmcounter25h"
+0xb9a = "mhpmcounter26h"
+0xb9b = "mhpmcounter27h"
+0xb9c = "mhpmcounter28h"
+0xb9d = "mhpmcounter29h"
+0xb9e = "mhpmcounter30h"
+0xb9f = "mhpmcounter31h"
+
+[format_1-0.instructions.csrrc]
+mask = 0x707f
+match = 0x3073
+
+[format_1-0.instructions.csrrs]
+mask = 0x707f
+match = 0x2073
+
+[format_1-0.instructions.csrrw]
+mask = 0x707f
+match = 0x1073
+
+[format_2-0.instructions.csrrci]
+mask = 0x707f
+match = 0x7073
+unsigned = true
+
+[format_2-0.instructions.csrrsi]
+mask = 0x707f
+match = 0x6073
+unsigned = true
+
+[format_2-0.instructions.csrrwi]
+mask = 0x707f
+match = 0x5073
+unsigned = true

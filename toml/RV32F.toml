@@ -2,17 +2,49 @@ set = "RV32F"
 width = 32
 
 [types]
-names = ["load", "store", "reg4", "arith", "f2i", "i2f"]
+names = [
+    "format_1-7",
+    "format_2-1",
+    "format_2-2",
+    "format_3-1",
+    "format_3-2",
+    "format_3-3",
+    "format_4-3",
+    "format_4-7",
+    "format_5-2",
+    "format_6-15",
+    "format_7-1",
+]
 parts = [
     [
-        "opcode",
-        7,
-        "u8",
+        "rd_Register_int",
+        5,
+        "Register_int",
     ],
     [
-        "funct3",
-        3,
-        "u8",
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2_Register_float",
+        5,
+        "Register_float",
     ],
     [
         "rm",
@@ -20,44 +52,19 @@ parts = [
         "Mapping_round",
     ],
     [
-        "funct5",
-        5,
-        "u8",
-    ],
-    [
-        "fmt",
-        2,
-        "u8",
-    ],
-    [
-        "rdi",
+        "rs3_Register_int",
         5,
         "Register_int",
     ],
     [
-        "rs1i",
-        5,
-        "Register_int",
-    ],
-    [
-        "rdf",
+        "rs3_Register_float",
         5,
         "Register_float",
     ],
     [
-        "rs1f",
-        5,
-        "Register_float",
-    ],
-    [
-        "rs2f",
-        5,
-        "Register_float",
-    ],
-    [
-        "rs3f",
-        5,
-        "Register_float",
+        "none",
+        32,
+        "u32",
     ],
     [
         "imm",
@@ -73,133 +80,356 @@ parts = [
 ]
 
 [type]
-names = ["Rfff", "Rfif", "Rffi", "I", "S", "R4"]
-Rfff = [
-    { name = "funct5", top = 4, bot = 0 },
-    { name = "fmt", top = 1, bot = 0 },
-    { name = "rs2f", top = 4, bot = 0 },
-    { name = "rs1f", top = 4, bot = 0 },
-    { name = "rm", top = 2, bot = 0 },
-    { name = "rdf", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
+names = [
+    "type_1-7",
+    "type_2-1",
+    "type_2-2",
+    "type_3-1",
+    "type_3-2",
+    "type_3-3",
+    "type_4-3",
+    "type_4-7",
+    "type_5-2",
+    "type_6-15",
+    "type_7-1",
 ]
-Rfif = [
-    { name = "funct5", top = 4, bot = 0 },
-    { name = "fmt", top = 1, bot = 0 },
-    { name = "rs2f", top = 4, bot = 0 },
-    { name = "rs1i", top = 4, bot = 0 },
-    { name = "rm", top = 2, bot = 0 },
-    { name = "rdf", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
-Rffi = [
-    { name = "funct5", top = 4, bot = 0 },
-    { name = "fmt", top = 1, bot = 0 },
-    { name = "rs2f", top = 4, bot = 0 },
-    { name = "rs1f", top = 4, bot = 0 },
-    { name = "rm", top = 2, bot = 0 },
-    { name = "rdi", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
-I = [
-    { name = "himm", top = 11, bot = 0 },
-    { name = "rs1i", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "rdf", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
-S = [
-    { name = "himm", top = 11, bot = 5 },
-    { name = "rs2f", top = 4, bot = 0 },
-    { name = "rs1i", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "himm", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
-R4 = [
-    { name = "rs3f", top = 4, bot = 0 },
-    { name = "fmt", top = 1, bot = 0 },
-    { name = "rs2f", top = 4, bot = 0 },
-    { name = "rs1f", top = 4, bot = 0 },
-    { name = "rm", top = 2, bot = 0 },
-    { name = "rdf", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
+[[type.type_1-7]]
+name = "none"
+top = 31
+bot = 25
 
-[load]
-type = "I"
-[load.repr]
-default = "$name$ %rdf%, %himm%(%rs1i%)"
-[load.instructions]
-flw = { mask = 0x707f, match = 0x2007 }
+[[type.type_1-7]]
+name = "rs2_Register_float"
+top = 4
+bot = 0
 
-[store]
-type = "S"
-[store.repr]
-default = "$name$ %rs2f%, %himm%(%rs1i%)"
-[store.instructions]
-fsw = { mask = 0x707f, match = 0x2027 }
+[[type.type_1-7]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
 
-[reg4]
-type = "R4"
-[reg4.repr]
-default = "$name$ %rdf%, %rs1f%, %rs2f%, %rs3f%, %rm%"
-[reg4.instructions]
-fmadd_s = { mask = 0x600007f, match = 0x43 }
-fmsub_s = { mask = 0x600007f, match = 0x47 }
-fnmadd_s = { mask = 0x600007f, match = 0x4f }
-fnmsub_s = { mask = 0x600007f, match = 0x4b }
+[[type.type_1-7]]
+name = "rm"
+top = 2
+bot = 0
 
-[arith]
-type = "Rfff"
-[arith.repr]
-default = "$name$ %rdf%, %rs1f%, %rs2f%, %rm%"
-fsqrt_s = "$name$ %rdf%, %rs1f%, %rm%"
-fsgnj_s = "$name$ %rdf%, %rs1f%, %rs2f%"
-fsgnjn_s = "$name$ %rdf%, %rs1f%, %rs2f%"
-fsgnjx_s = "$name$ %rdf%, %rs1f%, %rs2f%"
-fmax_s = "$name$ %rdf%, %rs1f%, %rs2f%"
-fmin_s = "$name$ %rdf%, %rs1f%, %rs2f%"
-[arith.instructions]
-fadd_s = { mask = 0xfe00007f, match = 0x53 }
-fsub_s = { mask = 0xfe00007f, match = 0x8000053 }
-fmul_s = { mask = 0xfe00007f, match = 0x10000053 }
-fdiv_s = { mask = 0xfe00007f, match = 0x18000053 }
-fsgnj_s = { mask = 0xfe00707f, match = 0x20000053 }
-fsgnjn_s = { mask = 0xfe00707f, match = 0x20001053 }
-fsgnjx_s = { mask = 0xfe00707f, match = 0x20002053 }
-fmin_s = { mask = 0xfe00707f, match = 0x28000053 }
-fmax_s = { mask = 0xfe00707f, match = 0x28001053 }
-fsqrt_s = { mask = 0xfff0007f, match = 0x58000053 }
+[[type.type_1-7]]
+name = "rd_Register_float"
+top = 4
+bot = 0
 
-[i2f]
-type = "Rfif"
-[i2f.repr]
-default = "$name$ %rdf%, %rs1i%, %rm%"
-fmv_w_x = "$name$ %rdf%, %rs1i%"
-[i2f.instructions]
-fcvt_s_w = { mask = 0xfff0007f, match = 0xd0000053 }
-fcvt_s_wu = { mask = 0xfff0007f, match = 0xd0100053 }
-fmv_w_x = { mask = 0xfff0707f, match = 0xf0000053 }
+[[type.type_1-7]]
+name = "none"
+top = 6
+bot = 0
 
-[f2i]
-type = "Rffi"
-[f2i.repr]
-default = "$name$ %rdi%, %rs1f%"
-feq_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-flt_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-fle_s = "$name$ %rdi%, %rs1f%, %rs2f%"
-fcvt_w_s = "$name$ %rdi%, %rs1f%, %rm%"
-fcvt_wu_s = "$name$ %rdi%, %rs1f%, %rm%"
+[[type.type_2-1]]
+name = "none"
+top = 31
+bot = 20
 
-[f2i.instructions]
-fcvt_w_s = { mask = 0xfff0007f, match = 0xc0000053 }
-fcvt_wu_s = { mask = 0xfff0007f, match = 0xc0100053 }
-fmv_x_w = { mask = 0xfff0707f, match = 0xe0000053 }
-fclass_s = { mask = 0xfff0707f, match = 0xe0001053 }
-feq_s = { mask = 0xfe00707f, match = 0xa0002053 }
-flt_s = { mask = 0xfe00707f, match = 0xa0001053 }
-fle_s = { mask = 0xfe00707f, match = 0xa0000053 }
+[[type.type_2-1]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_2-1]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_2-1]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-1]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_2-2]]
+name = "none"
+top = 31
+bot = 20
+
+[[type.type_2-2]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-2]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_2-2]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_2-2]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_3-1]]
+name = "none"
+top = 31
+bot = 20
+
+[[type.type_3-1]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_3-1]]
+name = "rm"
+top = 2
+bot = 0
+
+[[type.type_3-1]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_3-1]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_3-2]]
+name = "none"
+top = 31
+bot = 20
+
+[[type.type_3-2]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_3-2]]
+name = "rm"
+top = 2
+bot = 0
+
+[[type.type_3-2]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_3-2]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_3-3]]
+name = "none"
+top = 31
+bot = 20
+
+[[type.type_3-3]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_3-3]]
+name = "rm"
+top = 2
+bot = 0
+
+[[type.type_3-3]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_3-3]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_4-3]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type_4-3]]
+name = "rs2_Register_float"
+top = 4
+bot = 0
+
+[[type.type_4-3]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_4-3]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_4-3]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_4-3]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_4-7]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type_4-7]]
+name = "rs2_Register_float"
+top = 4
+bot = 0
+
+[[type.type_4-7]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_4-7]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_4-7]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_4-7]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_5-2]]
+name = "himm"
+top = 11
+bot = 0
+
+[[type.type_5-2]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_5-2]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_5-2]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_5-2]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_6-15]]
+name = "rs3_Register_float"
+top = 4
+bot = 0
+
+[[type.type_6-15]]
+name = "none"
+top = 26
+bot = 25
+
+[[type.type_6-15]]
+name = "rs2_Register_float"
+top = 4
+bot = 0
+
+[[type.type_6-15]]
+name = "rs1_Register_float"
+top = 4
+bot = 0
+
+[[type.type_6-15]]
+name = "rm"
+top = 2
+bot = 0
+
+[[type.type_6-15]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type_6-15]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_7-1]]
+name = "himm"
+top = 11
+bot = 5
+
+[[type.type_7-1]]
+name = "rs2_Register_float"
+top = 4
+bot = 0
+
+[[type.type_7-1]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_7-1]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_7-1]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type_7-1]]
+name = "none"
+top = 6
+bot = 0
+
+[format_1-7]
+type = "type_1-7"
+
+[format_2-1]
+type = "type_2-1"
+
+[format_2-2]
+type = "type_2-2"
+
+[format_3-1]
+type = "type_3-1"
+
+[format_3-2]
+type = "type_3-2"
+
+[format_3-3]
+type = "type_3-3"
+
+[format_4-3]
+type = "type_4-3"
+
+[format_4-7]
+type = "type_4-7"
+
+[format_5-2]
+type = "type_5-2"
+
+[format_6-15]
+type = "type_6-15"
+
+[format_7-1]
+type = "type_7-1"
 
 [mappings]
 names = ["Register_int", "Register_float", "Mapping_round"]
@@ -238,7 +468,6 @@ Register_int = [
     "t5",
     "t6",
 ]
-
 Register_float = [
     "ft0",
     "ft1",
@@ -273,14 +502,141 @@ Register_float = [
     "ft10",
     "ft11",
 ]
+Mapping_round = ["rne", "rtz", "rdn", "rup", "rmm", "unknown", "unknown", "dyn"]
 
-Mapping_round = [
-    "rne",
-    "rtz",
-    "rdn",
-    "rup",
-    "rmm",
-    "unknown",
-    "unknown",
-    "dyn",
-]
+[format_1-7.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float%, %rm%"
+
+[format_2-1.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_float%"
+
+[format_2-2.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_int%"
+
+[format_3-1.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_float%, %rm%"
+
+[format_3-2.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_int%, %rm%"
+
+[format_3-3.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rm%"
+
+[format_4-3.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_float%, %rs2_Register_float%"
+
+[format_4-7.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float%"
+
+[format_5-2.repr]
+default = "$name$ %rd_Register_float%, %himm%(%rs1_Register_int%)"
+
+[format_6-15.repr]
+default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float%, %rs3_Register_float%, %rm%"
+
+[format_7-1.repr]
+default = "$name$ %rs2_Register_float%, %himm%(%rs1_Register_int%)"
+
+[format_1-7.instructions.fadd_s]
+mask = 0xfe00007f
+match = 0x53
+
+[format_1-7.instructions.fdiv_s]
+mask = 0xfe00007f
+match = 0x18000053
+
+[format_1-7.instructions.fmul_s]
+mask = 0xfe00007f
+match = 0x10000053
+
+[format_1-7.instructions.fsub_s]
+mask = 0xfe00007f
+match = 0x8000053
+
+[format_2-1.instructions.fclass_s]
+mask = 0xfff0707f
+match = 0xe0001053
+
+[format_2-1.instructions.fmv_x_w]
+mask = 0xfff0707f
+match = 0xe0000053
+
+[format_2-2.instructions.fmv_w_x]
+mask = 0xfff0707f
+match = 0xf0000053
+
+[format_3-1.instructions.fcvt_w_s]
+mask = 0xfff0007f
+match = 0xc0000053
+
+[format_3-1.instructions.fcvt_wu_s]
+mask = 0xfff0007f
+match = 0xc0100053
+
+[format_3-2.instructions.fcvt_s_w]
+mask = 0xfff0007f
+match = 0xd0000053
+
+[format_3-2.instructions.fcvt_s_wu]
+mask = 0xfff0007f
+match = 0xd0100053
+
+[format_3-3.instructions.fsqrt_s]
+mask = 0xfff0007f
+match = 0x58000053
+
+[format_4-3.instructions.feq_s]
+mask = 0xfe00707f
+match = 0xa0002053
+
+[format_4-3.instructions.fle_s]
+mask = 0xfe00707f
+match = 0xa0000053
+
+[format_4-3.instructions.flt_s]
+mask = 0xfe00707f
+match = 0xa0001053
+
+[format_4-7.instructions.fmax_s]
+mask = 0xfe00707f
+match = 0x28001053
+
+[format_4-7.instructions.fmin_s]
+mask = 0xfe00707f
+match = 0x28000053
+
+[format_4-7.instructions.fsgnj_s]
+mask = 0xfe00707f
+match = 0x20000053
+
+[format_4-7.instructions.fsgnjn_s]
+mask = 0xfe00707f
+match = 0x20001053
+
+[format_4-7.instructions.fsgnjx_s]
+mask = 0xfe00707f
+match = 0x20002053
+
+[format_5-2.instructions.flw]
+mask = 0x707f
+match = 0x2007
+
+[format_6-15.instructions.fmadd_s]
+mask = 0x600007f
+match = 0x43
+
+[format_6-15.instructions.fmsub_s]
+mask = 0x600007f
+match = 0x47
+
+[format_6-15.instructions.fnmadd_s]
+mask = 0x600007f
+match = 0x4f
+
+[format_6-15.instructions.fnmsub_s]
+mask = 0x600007f
+match = 0x4b
+
+[format_7-1.instructions.fsw]
+mask = 0x707f
+match = 0x2027

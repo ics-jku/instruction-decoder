@@ -2,67 +2,93 @@ set = "RV32M"
 width = 32
 
 [types]
-names = ["multiply"]
+names = ["format_1-0"]
 parts = [
     [
-        "opcode",
-        7,
-        "u8",
-    ],
-    [
-        "funct3",
-        3,
-        "u8",
-    ],
-    [
-        "funct7",
-        7,
-        "u8",
-    ],
-    [
-        "rd",
+        "rd_Register_int",
         5,
         "Register_int",
     ],
     [
-        "rs1",
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_Register_int",
         5,
         "Register_int",
     ],
     [
-        "rs2",
+        "rs1_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2_Register_int",
         5,
         "Register_int",
+    ],
+    [
+        "rs2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
     ],
 ]
 
 [type]
-names = ["R"]
-R = [
-    { name = "funct7", top = 6, bot = 0 },
-    { name = "rs2", top = 4, bot = 0 },
-    { name = "rs1", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "rd", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
+names = ["type_1-0"]
+[[type.type_1-0]]
+name = "none"
+top = 31
+bot = 25
 
-[multiply]
-type = "R"
-[multiply.repr]
-default = "$name$ %rd%, %rs1%, %rs2%"
-[multiply.instructions]
-mul = { mask = 0xfe00707f, match = 0x2000033 }
-mulh = { mask = 0xfe00707f, match = 0x2001033 }
-mulhsu = { mask = 0xfe00707f, match = 0x2002033 }
-mulhu = { mask = 0xfe00707f, match = 0x2003033 }
-div = { mask = 0xfe00707f, match = 0x2004033 }
-divu = { mask = 0xfe00707f, match = 0x2005033 }
-rem = { mask = 0xfe00707f, match = 0x2006033 }
-remu = { mask = 0xfe00707f, match = 0x2007033 }
+[[type.type_1-0]]
+name = "rs2_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_1-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format_1-0]
+type = "type_1-0"
 
 [mappings]
-names = ["Register_int"]
+names = ["Register_int", "Register_float"]
 number = 32
 Register_int = [
     "zero",
@@ -98,3 +124,72 @@ Register_int = [
     "t5",
     "t6",
 ]
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+
+[format_1-0.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
+
+[format_1-0.instructions.div]
+mask = 0xfe00707f
+match = 0x2004033
+
+[format_1-0.instructions.divu]
+mask = 0xfe00707f
+match = 0x2005033
+
+[format_1-0.instructions.mul]
+mask = 0xfe00707f
+match = 0x2000033
+
+[format_1-0.instructions.mulh]
+mask = 0xfe00707f
+match = 0x2001033
+
+[format_1-0.instructions.mulhsu]
+mask = 0xfe00707f
+match = 0x2002033
+
+[format_1-0.instructions.mulhu]
+mask = 0xfe00707f
+match = 0x2003033
+
+[format_1-0.instructions.rem]
+mask = 0xfe00707f
+match = 0x2006033
+
+[format_1-0.instructions.remu]
+mask = 0xfe00707f
+match = 0x2007033

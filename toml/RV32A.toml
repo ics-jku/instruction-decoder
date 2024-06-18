@@ -2,83 +2,141 @@ set = "RV32A"
 width = 32
 
 [types]
-names = ["atomic"]
+names = ["format_1-0", "format_2-0"]
 parts = [
     [
-        "opcode",
-        7,
-        "u8",
-    ],
-    [
-        "funct3",
-        3,
-        "u8",
-    ],
-    [
-        "funct5",
+        "rd_Register_int",
         5,
-        "u8",
+        "Register_int",
     ],
     [
-        "ordering",
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "aqrl",
         2,
         "Mapping_ordering",
     ],
     [
-        "rd",
-        5,
-        "Register_int",
-    ],
-    [
-        "rs1",
-        5,
-        "Register_int",
-    ],
-    [
-        "rs2",
-        5,
-        "Register_int",
+        "none",
+        32,
+        "u32",
     ],
     [
         "imm",
         32,
         "VInt",
     ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
 ]
 
 [type]
-names = ["R"]
-R = [
-    { name = "funct5", top = 4, bot = 0 },
-    { name = "ordering", top = 1, bot = 0 },
-    { name = "rs2", top = 4, bot = 0 },
-    { name = "rs1", top = 4, bot = 0 },
-    { name = "funct3", top = 2, bot = 0 },
-    { name = "rd", top = 4, bot = 0 },
-    { name = "opcode", top = 6, bot = 0 },
-]
+names = ["type_1-0", "type_2-0"]
+[[type.type_1-0]]
+name = "none"
+top = 31
+bot = 27
 
-[atomic]
-type = "R"
-[atomic.repr]
-default = "$name$%ordering% %rd%, %rs2%, (%rs1%)"
-lr_w= "$name$%ordering% %rd%, (%rs1%)"
-sc_w= "$name$%ordering% %rd%, %rs2%, (%rs1%)"
-[atomic.instructions]
-lr_w = { mask = 0xf9f0707f, match = 0x1000202f }
-sc_w = { mask = 0xf800707f, match = 0x1800202f }
-amoswap_w = { mask = 0xf800707f, match = 0x800202f }
-amoadd_w = { mask = 0xf800707f, match = 0x202f }
-amoand_w = { mask = 0xf800707f, match = 0x6000202f }
-amoor_w = { mask = 0xf800707f, match = 0x4000202f }
-amoxor_w = { mask = 0xf800707f, match = 0x2000202f }
-amomax_w = { mask = 0xf800707f, match = 0xa000202f }
-amomin_w = { mask = 0xf800707f, match = 0x8000202f }
-amomaxu_w = { mask = 0xf800707f, match = 0xe000202f }
-amominu_w = { mask = 0xf800707f, match = 0xc000202f }
+[[type.type_1-0]]
+name = "aqrl"
+top = 1
+bot = 0
+
+[[type.type_1-0]]
+name = "rs2_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_1-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 31
+bot = 27
+
+[[type.type_2-0]]
+name = "aqrl"
+top = 1
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 24
+bot = 20
+
+[[type.type_2-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_2-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format_1-0]
+type = "type_1-0"
+
+[format_2-0]
+type = "type_2-0"
 
 [mappings]
-names = ["Register_int", "Mapping_ordering"]
+names = ["Register_int", "Register_float", "Mapping_ordering"]
 number = 32
 Register_int = [
     "zero",
@@ -114,9 +172,88 @@ Register_int = [
     "t5",
     "t6",
 ]
-Mapping_ordering = [
-    "",
-    ".rl",
-    ".aq",
-    ".aqrl"
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
 ]
+Mapping_ordering = ["", ".rl", ".aq", ".aqrl"]
+
+[format_1-0.repr]
+default = "$name$%aqrl% %rd_Register_int%, %rs2_Register_int%, (%rs1_Register_int%)"
+
+[format_2-0.repr]
+default = "$name$%aqrl% %rd_Register_int%, (%rs1_Register_int%)"
+
+[format_1-0.instructions.amoadd_w]
+mask = 0xf800707f
+match = 0x202f
+
+[format_1-0.instructions.amoand_w]
+mask = 0xf800707f
+match = 0x6000202f
+
+[format_1-0.instructions.amomax_w]
+mask = 0xf800707f
+match = 0xa000202f
+
+[format_1-0.instructions.amomaxu_w]
+mask = 0xf800707f
+match = 0xe000202f
+
+[format_1-0.instructions.amomin_w]
+mask = 0xf800707f
+match = 0x8000202f
+
+[format_1-0.instructions.amominu_w]
+mask = 0xf800707f
+match = 0xc000202f
+
+[format_1-0.instructions.amoor_w]
+mask = 0xf800707f
+match = 0x4000202f
+
+[format_1-0.instructions.amoswap_w]
+mask = 0xf800707f
+match = 0x800202f
+
+[format_1-0.instructions.amoxor_w]
+mask = 0xf800707f
+match = 0x2000202f
+
+[format_1-0.instructions.sc_w]
+mask = 0xf800707f
+match = 0x1800202f
+
+[format_2-0.instructions.lr_w]
+mask = 0xf9f0707f
+match = 0x1000202f

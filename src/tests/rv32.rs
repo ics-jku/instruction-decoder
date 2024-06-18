@@ -31,3 +31,8 @@ fn test_rv32d() {
 fn test_rv32zicsr() {
     isa_test!("../../toml/RV32Zicsr.toml", "test_data/rv32/rv32Zicsr.test");
 }
+
+#[test]
+fn test_rv32v() {
+    isa_test!("../../toml/RV32V.toml", "test_data/rv32/rv32v.test");
+}
