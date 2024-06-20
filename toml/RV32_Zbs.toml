@@ -1,0 +1,237 @@
+set = "RV32Zbs" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
+width = 32
+
+[types]
+names = ["format_1-0", "format_2-0"]
+parts = [
+    [
+        "rd_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "shamtw",
+        5,
+        "u8",
+        "hex",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = ["type_1-0", "type_2-0"]
+[[type.type_1-0]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type_1-0]]
+name = "rs2_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_1-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type_2-0]]
+name = "shamtw"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type_2-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type_2-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format_1-0]
+type = "type_1-0"
+
+[format_2-0]
+type = "type_2-0"
+
+[mappings]
+names = ["Register_int", "Register_float"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+
+[format_1-0.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
+
+[format_2-0.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtw%"
+
+[format_1-0.instructions.bclr]
+mask = 0xfe00707f
+match = 0x48001033
+
+[format_1-0.instructions.bext]
+mask = 0xfe00707f
+match = 0x48005033
+
+[format_1-0.instructions.binv]
+mask = 0xfe00707f
+match = 0x68001033
+
+[format_1-0.instructions.bset]
+mask = 0xfe00707f
+match = 0x28001033
+
+[format_2-0.instructions.bclri]
+mask = 0xfe00707f
+match = 0x48001013
+
+[format_2-0.instructions.bexti]
+mask = 0xfe00707f
+match = 0x48005013
+
+[format_2-0.instructions.binvi]
+mask = 0xfe00707f
+match = 0x68001013
+
+[format_2-0.instructions.bseti]
+mask = 0xfe00707f
+match = 0x28001013
