@@ -641,6 +641,15 @@ impl Decoder {
         }
     }
 
+    pub fn new_from_table(instruction_sets: Vec<Table>) -> Self {
+        Decoder {
+            instruction_sets: instruction_sets
+                .iter()
+                .map(|x| InstructionSet::new(x))
+                .collect(),
+        }
+    }
+
     pub fn decode_from_string(
         &self,
         instruction: &str,
