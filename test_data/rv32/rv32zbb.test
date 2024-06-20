@@ -1,0 +1,477 @@
+4030f333 andn t1, ra, gp 
+416b7133 andn sp, s6, s6 
+4023f1b3 andn gp, t2, sp 
+40dd7eb3 andn t4, s10, a3 
+419cf633 andn a2, s9, s9 
+4082fdb3 andn s11, t0, s0 
+40d079b3 andn s3, zero, a3 
+410c7e33 andn t3, s8, a6 
+41aa7cb3 andn s9, s4, s10 
+40fa7033 andn zero, s4, a5 
+40937f33 andn t5, t1, s1 
+4019f633 andn a2, s3, ra 
+41b87833 andn a6, a6, s11 
+4137f0b3 andn ra, a5, s3 
+416e7733 andn a4, t3, s6 
+41ddf433 andn s0, s11, t4 
+40a971b3 andn gp, s2, a0 
+41ca7633 andn a2, s4, t3 
+4086ff33 andn t5, a3, s0 
+4030f1b3 andn gp, ra, gp 
+40037433 andn s0, t1, zero 
+408a7433 andn s0, s4, s0 
+40eb7bb3 andn s7, s6, a4 
+41707cb3 andn s9, zero, s7 
+40a37333 andn t1, t1, a0 
+408676b3 andn a3, a2, s0 
+40237433 andn s0, t1, sp 
+60059f93 clz t6, a1 
+600c1d13 clz s10, s8 
+60051813 clz a6, a0 
+60019413 clz s0, gp 
+60019f13 clz t5, gp 
+60089a13 clz s4, a7 
+60081b93 clz s7, a6 
+60071b13 clz s6, a4 
+60079793 clz a5, a5 
+60049593 clz a1, s1 
+60011b13 clz s6, sp 
+60049b13 clz s6, s1 
+600d1713 clz a4, s10 
+60019f13 clz t5, gp 
+600b1093 clz ra, s6 
+600b9413 clz s0, s7 
+600d9893 clz a7, s11 
+60071e93 clz t4, a4 
+600c9f93 clz t6, s9 
+60091993 clz s3, s2 
+600a9013 clz zero, s5 
+600d9713 clz a4, s11 
+60019193 clz gp, gp 
+600f9c93 clz s9, t6 
+60051e13 clz t3, a0 
+60071e13 clz t3, a4 
+600a1613 clz a2, s4 
+60081113 clz sp, a6 
+600f9b13 clz s6, t6 
+60089a93 clz s5, a7 
+602b9e13 cpop t3, s7 
+60261b93 cpop s7, a2 
+60201d13 cpop s10, zero 
+602d1913 cpop s2, s10 
+60239893 cpop a7, t2 
+60289813 cpop a6, a7 
+602d1d93 cpop s11, s10 
+60231a13 cpop s4, t1 
+60281113 cpop sp, a6 
+60209513 cpop a0, ra 
+602f1013 cpop zero, t5 
+60221f13 cpop t5, tp 
+602b1593 cpop a1, s6 
+602c9c93 cpop s9, s9 
+60269293 cpop t0, a3 
+60299193 cpop gp, s3 
+60211893 cpop a7, sp 
+602f1113 cpop sp, t5 
+60259013 cpop zero, a1 
+60209013 cpop zero, ra 
+60249713 cpop a4, s1 
+602a9e13 cpop t3, s5 
+60229a93 cpop s5, t0 
+60201e93 cpop t4, zero 
+60211e93 cpop t4, sp 
+60211213 cpop tp, sp 
+60261913 cpop s2, a2 
+602e9b93 cpop s7, t4 
+602d9c13 cpop s8, s11 
+60229e93 cpop t4, t0 
+60129d93 ctz s11, t0 
+60189a93 ctz s5, a7 
+60199493 ctz s1, s3 
+60151593 ctz a1, a0 
+601a9a93 ctz s5, s5 
+60189693 ctz a3, a7 
+601d9b13 ctz s6, s11 
+60159f93 ctz t6, a1 
+60149093 ctz ra, s1 
+601c1893 ctz a7, s8 
+60101193 ctz gp, zero 
+60139b13 ctz s6, t2 
+60109c93 ctz s9, ra 
+60151313 ctz t1, a0 
+60151613 ctz a2, a0 
+601b9893 ctz a7, s7 
+60181d93 ctz s11, a6 
+60179913 ctz s2, a5 
+601b1593 ctz a1, s6 
+60119e93 ctz t4, gp 
+601d9813 ctz a6, s11 
+601e1213 ctz tp, t3 
+60141913 ctz s2, s0 
+601c9393 ctz t2, s9 
+60101413 ctz s0, zero 
+601f1013 ctz zero, t5 
+601a1113 ctz sp, s4 
+601a1a13 ctz s4, s4 
+601b1d93 ctz s11, s6 
+60181293 ctz t0, a6 
+0bdb6733 max a4, s6, t4 
+0b0063b3 max t2, zero, a6 
+0a37e3b3 max t2, a5, gp 
+0b326bb3 max s7, tp, s3 
+0b5b6db3 max s11, s6, s5 
+0ab0e7b3 max a5, ra, a1 
+0bd067b3 max a5, zero, t4 
+0b076033 max zero, a4, a6 
+0a9c63b3 max t2, s8, s1 
+0b8beeb3 max t4, s7, s8 
+0b006e33 max t3, zero, a6 
+0abc6db3 max s11, s8, a1 
+0a93e233 max tp, t2, s1 
+0a76e9b3 max s3, a3, t2 
+0a7c67b3 max a5, s8, t2 
+0a1ee9b3 max s3, t4, ra 
+0a5defb3 max t6, s11, t0 
+0bd26533 max a0, tp, t4 
+0b1e63b3 max t2, t3, a7 
+0b11e3b3 max t2, gp, a7 
+0a45e533 max a0, a1, tp 
+0ad9e0b3 max ra, s3, a3 
+0a97e4b3 max s1, a5, s1 
+0a39e933 max s2, s3, gp 
+0b82ebb3 max s7, t0, s8 
+0b516db3 max s11, sp, s5 
+0b2669b3 max s3, a2, s2 
+0a076033 max zero, a4, zero 
+0b9868b3 max a7, a6, s9 
+0b28e0b3 max ra, a7, s2 
+0a5e7b33 maxu s6, t3, t0 
+0a09ff33 maxu t5, s3, zero 
+0bcef333 maxu t1, t4, t3 
+0bbbfc33 maxu s8, s7, s11 
+0a447b33 maxu s6, s0, tp 
+0aacf8b3 maxu a7, s9, a0 
+0a8f7cb3 maxu s9, t5, s0 
+0be2f233 maxu tp, t0, t5 
+0a9e7433 maxu s0, t3, s1 
+0abc7433 maxu s0, s8, a1 
+0a9a70b3 maxu ra, s4, s1 
+0a13f833 maxu a6, t2, ra 
+0aadf233 maxu tp, s11, a0 
+0b837d33 maxu s10, t1, s8 
+0a81f8b3 maxu a7, gp, s0 
+0b44f933 maxu s2, s1, s4 
+0bc0f0b3 maxu ra, ra, t3 
+0b60f3b3 maxu t2, ra, s6 
+0a5aff33 maxu t5, s5, t0 
+0acdf8b3 maxu a7, s11, a2 
+0af67833 maxu a6, a2, a5 
+0b0dfbb3 maxu s7, s11, a6 
+0b60f9b3 maxu s3, ra, s6 
+0b0d71b3 maxu gp, s10, a6 
+0af272b3 maxu t0, tp, a5 
+0afefe33 maxu t3, t4, a5 
+0a3af2b3 maxu t0, s5, gp 
+0b3ff433 maxu s0, t6, s3 
+0bb77333 maxu t1, a4, s11 
+0abc7bb3 maxu s7, s8, a1 
+0b254a33 min s4, a0, s2 
+0b94cb33 min s6, s1, s9 
+0b5847b3 min a5, a6, s5 
+0a3f44b3 min s1, t5, gp 
+0b70c033 min zero, ra, s7 
+0a3942b3 min t0, s2, gp 
+0bc5cdb3 min s11, a1, t3 
+0ad0c833 min a6, ra, a3 
+0add4f33 min t5, s10, a3 
+0b68c5b3 min a1, a7, s6 
+0ad5c433 min s0, a1, a3 
+0a00c8b3 min a7, ra, zero 
+0ab3ccb3 min s9, t2, a1 
+0afec2b3 min t0, t4, a5 
+0b2d4eb3 min t4, s10, s2 
+0af9cc33 min s8, s3, a5 
+0a8ec833 min a6, t4, s0 
+0bcfcfb3 min t6, t6, t3 
+0a2147b3 min a5, sp, sp 
+0a2b4a33 min s4, s6, sp 
+0ba34433 min s0, t1, s10 
+0a314fb3 min t6, sp, gp 
+0b5c4ab3 min s5, s8, s5 
+0a7b4033 min zero, s6, t2 
+0a1d40b3 min ra, s10, ra 
+0b96cb33 min s6, a3, s9 
+0b5246b3 min a3, tp, s5 
+0b49c633 min a2, s3, s4 
+0b5b4bb3 min s7, s6, s5 
+0b6a43b3 min t2, s4, s6 
+0a52dbb3 minu s7, t0, t0 
+0a5ed233 minu tp, t4, t0 
+0a6c5133 minu sp, s8, t1 
+0b5b5933 minu s2, s6, s5 
+0ac1d1b3 minu gp, gp, a2 
+0a0a50b3 minu ra, s4, zero 
+0a3ed533 minu a0, t4, gp 
+0aaddfb3 minu t6, s11, a0 
+0a9b5d33 minu s10, s6, s1 
+0aa8d233 minu tp, a7, a0 
+0ab85033 minu zero, a6, a1 
+0a955bb3 minu s7, a0, s1 
+0b6bdcb3 minu s9, s7, s6 
+0a9fd433 minu s0, t6, s1 
+0ab5de33 minu t3, a1, a1 
+0a5a5cb3 minu s9, s4, t0 
+0a84d433 minu s0, s1, s0 
+0bc25633 minu a2, tp, t3 
+0bc0dcb3 minu s9, ra, t3 
+0aa4dab3 minu s5, s1, a0 
+0a255933 minu s2, a0, sp 
+0b465ab3 minu s5, a2, s4 
+0ac25433 minu s0, tp, a2 
+0bf7d033 minu zero, a5, t6 
+0a8b5633 minu a2, s6, s0 
+0ba651b3 minu gp, a2, s10 
+0be7ddb3 minu s11, a5, t5 
+0a81d8b3 minu a7, gp, s0 
+0bcf51b3 minu gp, t5, t3 
+0a03d333 minu t1, t2, zero 
+287b5913 orc.b s2, s6 
+2878d113 orc.b sp, a7 
+287fd093 orc.b ra, t6 
+287f5093 orc.b ra, t5 
+287e5493 orc.b s1, t3 
+28725593 orc.b a1, tp 
+2878dc13 orc.b s8, a7 
+287c5c93 orc.b s9, s8 
+287c5f93 orc.b t6, s8 
+28745013 orc.b zero, s0 
+2878db13 orc.b s6, a7 
+2874d793 orc.b a5, s1 
+28775893 orc.b a7, a4 
+287c5993 orc.b s3, s8 
+287d5413 orc.b s0, s10 
+2876dd13 orc.b s10, a3 
+28755513 orc.b a0, a0 
+2870d013 orc.b zero, ra 
+28755413 orc.b s0, a0 
+287fdc93 orc.b s9, t6 
+287bd093 orc.b ra, s7 
+287cd793 orc.b a5, s9 
+287fd213 orc.b tp, t6 
+28795793 orc.b a5, s2 
+287e5f93 orc.b t6, t3 
+28735993 orc.b s3, t1 
+287b5793 orc.b a5, s6 
+28785213 orc.b tp, a6 
+287f5693 orc.b a3, t5 
+28735b13 orc.b s6, t1 
+41f36ab3 orn s5, t1, t6 
+40f1e6b3 orn a3, gp, a5 
+41f068b3 orn a7, zero, t6 
+408862b3 orn t0, a6, s0 
+406ae133 orn sp, s5, t1 
+41266333 orn t1, a2, s2 
+41aa6db3 orn s11, s4, s10 
+413f67b3 orn a5, t5, s3 
+40a06a33 orn s4, zero, a0 
+41616f33 orn t5, sp, s6 
+4081e133 orn sp, gp, s0 
+408ce3b3 orn t2, s9, s0 
+4023e1b3 orn gp, t2, sp 
+41c369b3 orn s3, t1, t3 
+41bfe233 orn tp, t6, s11 
+40e06733 orn a4, zero, a4 
+40db6b33 orn s6, s6, a3 
+40026133 orn sp, tp, zero 
+4156e333 orn t1, a3, s5 
+40f2e3b3 orn t2, t0, a5 
+410b6db3 orn s11, s6, a6 
+41d8e4b3 orn s1, a7, t4 
+4082ec33 orn s8, t0, s0 
+4034e1b3 orn gp, s1, gp 
+4031e933 orn s2, gp, gp 
+4164ec33 orn s8, s1, s6 
+41c4e833 orn a6, s1, t3 
+406cefb3 orn t6, s9, t1 
+404ae033 orn zero, s5, tp 
+405a6533 orn a0, s4, t0 
+61fa1333 rol t1, s4, t6 
+612410b3 rol ra, s0, s2 
+60149833 rol a6, s1, ra 
+607b19b3 rol s3, s6, t2 
+605f92b3 rol t0, t6, t0 
+61ae9733 rol a4, t4, s10 
+60769433 rol s0, a3, t2 
+61df9bb3 rol s7, t6, t4 
+61211bb3 rol s7, sp, s2 
+60df13b3 rol t2, t5, a3 
+617417b3 rol a5, s0, s7 
+60889ab3 rol s5, a7, s0 
+60d711b3 rol gp, a4, a3 
+60f29633 rol a2, t0, a5 
+61581633 rol a2, a6, s5 
+609f9a33 rol s4, t6, s1 
+602e90b3 rol ra, t4, sp 
+61189f33 rol t5, a7, a7 
+61dd9f33 rol t5, s11, t4 
+618c1133 rol sp, s8, s8 
+600f98b3 rol a7, t6, zero 
+605292b3 rol t0, t0, t0 
+61fe1e33 rol t3, t3, t6 
+60ee1bb3 rol s7, t3, a4 
+60741033 rol zero, s0, t2 
+600e9733 rol a4, t4, zero 
+602c1733 rol a4, s8, sp 
+61f79c33 rol s8, a5, t6 
+60369b33 rol s6, a3, gp 
+61661d33 rol s10, a2, s6 
+61a55533 ror a0, a0, s10 
+6033d8b3 ror a7, t2, gp 
+618bdab3 ror s5, s7, s8 
+606752b3 ror t0, a4, t1 
+61ac53b3 ror t2, s8, s10 
+6105dab3 ror s5, a1, a6 
+60e25db3 ror s11, tp, a4 
+61df5433 ror s0, t5, t4 
+61a75f33 ror t5, a4, s10 
+613c5c33 ror s8, s8, s3 
+618fdf33 ror t5, t6, s8 
+607d51b3 ror gp, s10, t2 
+60f7dd33 ror s10, a5, a5 
+614b5333 ror t1, s6, s4 
+60cbd233 ror tp, s7, a2 
+61d45d33 ror s10, s0, t4 
+60db5e33 ror t3, s6, a3 
+612c5cb3 ror s9, s8, s2 
+60afd1b3 ror gp, t6, a0 
+60de51b3 ror gp, t3, a3 
+61ea54b3 ror s1, s4, t5 
+61db5633 ror a2, s6, t4 
+604651b3 ror gp, a2, tp 
+61b5ddb3 ror s11, a1, s11 
+6164d2b3 ror t0, s1, s6 
+60625bb3 ror s7, tp, t1 
+60dc59b3 ror s3, s8, a3 
+61de5333 ror t1, t3, t4 
+600a57b3 ror a5, s4, zero 
+6188d633 ror a2, a7, s8 
+604fd593 rori a1, t6, 0x4 
+6022da13 rori s4, t0, 0x2 
+60d75493 rori s1, a4, 0xd 
+60ebd393 rori t2, s7, 0xe 
+605d5993 rori s3, s10, 0x5 
+61295a13 rori s4, s2, 0x12 
+60785c93 rori s9, a6, 0x7 
+608ddc13 rori s8, s11, 0x8 
+61435613 rori a2, t1, 0x14 
+61c55693 rori a3, a0, 0x1c 
+610e5193 rori gp, t3, 0x10 
+61a2dc13 rori s8, t0, 0x1a 
+606a5e93 rori t4, s4, 0x6 
+616fdf13 rori t5, t6, 0x16 
+60abd013 rori zero, s7, 0xa 
+603ad793 rori a5, s5, 0x3 
+61cede13 rori t3, t4, 0x1c 
+60d0d213 rori tp, ra, 0xd 
+6051d613 rori a2, gp, 0x5 
+61c5d713 rori a4, a1, 0x1c 
+616cd813 rori a6, s9, 0x16 
+60395593 rori a1, s2, 0x3 
+6086df13 rori t5, a3, 0x8 
+61155293 rori t0, a0, 0x11 
+608e5013 rori zero, t3, 0x8 
+60875493 rori s1, a4, 0x8 
+60925113 rori sp, tp, 0x9 
+603ad293 rori t0, s5, 0x3 
+6047d613 rori a2, a5, 0x4 
+6177d613 rori a2, a5, 0x17 
+60449213 sext.b tp, s1 
+60461f13 sext.b t5, a2 
+60449b93 sext.b s7, s1 
+60419113 sext.b sp, gp 
+60471d13 sext.b s10, a4 
+60431293 sext.b t0, t1 
+604a1a13 sext.b s4, s4 
+60449513 sext.b a0, s1 
+60471d13 sext.b s10, a4 
+604d9413 sext.b s0, s11 
+604c9893 sext.b a7, s9 
+60469a93 sext.b s5, a3 
+604f1c13 sext.b s8, t5 
+604e9413 sext.b s0, t4 
+60469b13 sext.b s6, a3 
+60481c93 sext.b s9, a6 
+60411793 sext.b a5, sp 
+604e9193 sext.b gp, t4 
+604f1f93 sext.b t6, t5 
+60431893 sext.b a7, t1 
+60401113 sext.b sp, zero 
+60499793 sext.b a5, s3 
+60479a93 sext.b s5, a5 
+60429313 sext.b t1, t0 
+60421393 sext.b t2, tp 
+604e9413 sext.b s0, t4 
+60489a13 sext.b s4, a7 
+60481593 sext.b a1, a6 
+604f1a93 sext.b s5, t5 
+60469813 sext.b a6, a3 
+605f1113 sext.h sp, t5 
+60509793 sext.h a5, ra 
+60521b93 sext.h s7, tp 
+60561193 sext.h gp, a2 
+605c9713 sext.h a4, s9 
+60589993 sext.h s3, a7 
+605c9493 sext.h s1, s9 
+605f9f13 sext.h t5, t6 
+605f1593 sext.h a1, t5 
+605c1813 sext.h a6, s8 
+605e1c93 sext.h s9, t3 
+605b1813 sext.h a6, s6 
+60529613 sext.h a2, t0 
+60509813 sext.h a6, ra 
+60519f13 sext.h t5, gp 
+60589113 sext.h sp, a7 
+60511d13 sext.h s10, sp 
+605e1313 sext.h t1, t3 
+605e9d93 sext.h s11, t4 
+605b1c13 sext.h s8, s6 
+60539313 sext.h t1, t2 
+605e1a13 sext.h s4, t3 
+60501593 sext.h a1, zero 
+605b9913 sext.h s2, s7 
+60561f13 sext.h t5, a2 
+605e1713 sext.h a4, t3 
+60579793 sext.h a5, a5 
+60521093 sext.h ra, tp 
+60579613 sext.h a2, a5 
+605a1513 sext.h a0, s4 
+41844333 xnor t1, s0, s8 
+4152cf33 xnor t5, t0, s5 
+40edcfb3 xnor t6, s11, a4 
+4136ce33 xnor t3, a3, s3 
+414d44b3 xnor s1, s10, s4 
+40994fb3 xnor t6, s2, s1 
+41ebc933 xnor s2, s7, t5 
+414d44b3 xnor s1, s10, s4 
+41e1cdb3 xnor s11, gp, t5 
+406d4833 xnor a6, s10, t1 
+4142ca33 xnor s4, t0, s4 
+413b4233 xnor tp, s6, s3 
+4096c8b3 xnor a7, a3, s1 
+41324cb3 xnor s9, tp, s3 
+4123ceb3 xnor t4, t2, s2 
+4095c633 xnor a2, a1, s1 
+4158c5b3 xnor a1, a7, s5 
+41c7c333 xnor t1, a5, t3 
+403b40b3 xnor ra, s6, gp 
+41f34733 xnor a4, t1, t6 
+40b24833 xnor a6, tp, a1 
+40994233 xnor tp, s2, s1 
+40c0cab3 xnor s5, ra, a2 
+40ebceb3 xnor t4, s7, a4 
+417d4d33 xnor s10, s10, s7 
+41d24e33 xnor t3, tp, t4 
+41ae49b3 xnor s3, t3, s10 
+4070c533 xnor a0, ra, t2 
+4153c933 xnor s2, t2, s5 
+4152ccb3 xnor s9, t0, s5 

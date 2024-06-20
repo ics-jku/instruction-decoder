@@ -38,11 +38,13 @@ parts = [
         "shamtd",
         6,
         "u8",
+        "hex",
     ],
     [
         "shamtw",
         5,
         "u8",
+        "hex",
     ],
     [
         "none",
