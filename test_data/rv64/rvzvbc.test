@@ -1,0 +1,117 @@
+30c425d7 vclmul.vv v11, v12, v8, v0.t 
+31e2a657 vclmul.vv v12, v30, v5, v0.t 
+33f22857 vclmul.vv v16, v31, v4 
+330ca257 vclmul.vv v4, v16, v25 
+30222657 vclmul.vv v12, v2, v4, v0.t 
+319ca9d7 vclmul.vv v19, v25, v25, v0.t 
+3131a5d7 vclmul.vv v11, v19, v3, v0.t 
+332ba257 vclmul.vv v4, v18, v23 
+304aa3d7 vclmul.vv v7, v4, v21, v0.t 
+3109a857 vclmul.vv v16, v16, v19, v0.t 
+316526d7 vclmul.vv v13, v22, v10, v0.t 
+3212a1d7 vclmul.vv v3, v1, v5 
+30d62f57 vclmul.vv v30, v13, v12, v0.t 
+30bd2cd7 vclmul.vv v25, v11, v26, v0.t 
+300ca1d7 vclmul.vv v3, v0, v25, v0.t 
+3263a6d7 vclmul.vv v13, v6, v7 
+305fab57 vclmul.vv v22, v5, v31, v0.t 
+3042abd7 vclmul.vv v23, v4, v5, v0.t 
+3256ad57 vclmul.vv v26, v5, v13 
+3199a757 vclmul.vv v14, v25, v19, v0.t 
+310020d7 vclmul.vv v1, v16, v0, v0.t 
+3195a357 vclmul.vv v6, v25, v11, v0.t 
+312629d7 vclmul.vv v19, v18, v12, v0.t 
+321aab57 vclmul.vv v22, v1, v21 
+3154ab57 vclmul.vv v22, v21, v9, v0.t 
+31d6a957 vclmul.vv v18, v29, v13, v0.t 
+3251a0d7 vclmul.vv v1, v5, v3 
+3204e457 vclmul.vx v8, v0, s1 
+33716557 vclmul.vx v10, v23, sp 
+33ade1d7 vclmul.vx v3, v26, s11 
+32116c57 vclmul.vx v24, v1, sp 
+32936957 vclmul.vx v18, v9, t1 
+323fe9d7 vclmul.vx v19, v3, t6 
+320bebd7 vclmul.vx v23, v0, s7 
+3266ef57 vclmul.vx v30, v6, a3 
+32aeed57 vclmul.vx v26, v10, t4 
+330e68d7 vclmul.vx v17, v16, t3 
+321b6857 vclmul.vx v16, v1, s6 
+30dde157 vclmul.vx v2, v13, s11, v0.t 
+3024ec57 vclmul.vx v24, v2, s1, v0.t 
+31a569d7 vclmul.vx v19, v26, a0, v0.t 
+32f5ee57 vclmul.vx v28, v15, a1 
+30e56057 vclmul.vx v0, v14, a0, v0.t 
+31186a57 vclmul.vx v20, v17, a6, v0.t 
+33dfebd7 vclmul.vx v23, v29, t6 
+318e6857 vclmul.vx v16, v24, t3, v0.t 
+32ccee57 vclmul.vx v28, v12, s9 
+309a6c57 vclmul.vx v24, v9, s4, v0.t 
+3074e2d7 vclmul.vx v5, v7, s1, v0.t 
+31166cd7 vclmul.vx v25, v17, a2, v0.t 
+33b0e4d7 vclmul.vx v9, v27, ra 
+30ef6957 vclmul.vx v18, v14, t5, v0.t 
+33e5ec57 vclmul.vx v24, v30, a1 
+33be65d7 vclmul.vx v11, v27, t3 
+326fead7 vclmul.vx v21, v6, t6 
+33386157 vclmul.vx v2, v19, a6 
+30ade057 vclmul.vx v0, v10, s11, v0.t 
+37e92657 vclmulh.vv v12, v30, v18 
+3703a857 vclmulh.vv v16, v16, v7 
+366d2057 vclmulh.vv v0, v6, v26 
+36162dd7 vclmulh.vv v27, v1, v12 
+344da1d7 vclmulh.vv v3, v4, v27, v0.t 
+376dabd7 vclmulh.vv v23, v22, v27 
+34dc2057 vclmulh.vv v0, v13, v24, v0.t 
+359f2257 vclmulh.vv v4, v25, v30, v0.t 
+372129d7 vclmulh.vv v19, v18, v2 
+35daa557 vclmulh.vv v10, v29, v21, v0.t 
+3525a7d7 vclmulh.vv v15, v18, v11, v0.t 
+35f02ad7 vclmulh.vv v21, v31, v0, v0.t 
+34c222d7 vclmulh.vv v5, v12, v4, v0.t 
+3600a0d7 vclmulh.vv v1, v0, v1 
+36c6a0d7 vclmulh.vv v1, v12, v13 
+35402857 vclmulh.vv v16, v20, v0, v0.t 
+34cd2a57 vclmulh.vv v20, v12, v26, v0.t 
+3439a557 vclmulh.vv v10, v3, v19, v0.t 
+35faa9d7 vclmulh.vv v19, v31, v21, v0.t 
+34452c57 vclmulh.vv v24, v4, v10, v0.t 
+37fb2e57 vclmulh.vv v28, v31, v22 
+3770a657 vclmulh.vv v12, v23, v1 
+35d4a457 vclmulh.vv v8, v29, v9, v0.t 
+35802dd7 vclmulh.vv v27, v24, v0, v0.t 
+373127d7 vclmulh.vv v15, v19, v2 
+37d32e57 vclmulh.vv v28, v29, v6 
+3632a6d7 vclmulh.vv v13, v3, v5 
+35b62c57 vclmulh.vv v24, v27, v12, v0.t 
+3659a457 vclmulh.vv v8, v5, v19 
+35422b57 vclmulh.vv v22, v20, v4, v0.t 
+351560d7 vclmulh.vx v1, v17, a0, v0.t 
+36006c57 vclmulh.vx v24, v0, zero 
+34b367d7 vclmulh.vx v15, v11, t1, v0.t 
+35286c57 vclmulh.vx v24, v18, a6, v0.t 
+3534e2d7 vclmulh.vx v5, v19, s1, v0.t 
+340cea57 vclmulh.vx v20, v0, s9, v0.t 
+361ee957 vclmulh.vx v18, v1, t4 
+37536457 vclmulh.vx v8, v21, t1 
+3747e4d7 vclmulh.vx v9, v20, a5 
+35426d57 vclmulh.vx v26, v20, tp, v0.t 
+37c266d7 vclmulh.vx v13, v28, tp 
+3537ecd7 vclmulh.vx v25, v19, a5, v0.t 
+35066fd7 vclmulh.vx v31, v16, a2, v0.t 
+37d46ed7 vclmulh.vx v29, v29, s0 
+3556efd7 vclmulh.vx v31, v21, a3, v0.t 
+36b268d7 vclmulh.vx v17, v11, tp 
+352be057 vclmulh.vx v0, v18, s7, v0.t 
+35eee457 vclmulh.vx v8, v30, t4, v0.t 
+344265d7 vclmulh.vx v11, v4, tp, v0.t 
+354167d7 vclmulh.vx v15, v20, sp, v0.t 
+36326a57 vclmulh.vx v20, v3, tp 
+37ce6b57 vclmulh.vx v22, v28, t3 
+3693e7d7 vclmulh.vx v15, v9, t2 
+345365d7 vclmulh.vx v11, v5, t1, v0.t 
+34c0e1d7 vclmulh.vx v3, v12, ra, v0.t 
+3580e357 vclmulh.vx v6, v24, ra, v0.t 
+35f462d7 vclmulh.vx v5, v31, s0, v0.t 
+3697eb57 vclmulh.vx v22, v9, a5 
+374decd7 vclmulh.vx v25, v20, s11 
+343762d7 vclmulh.vx v5, v3, a4, v0.t 

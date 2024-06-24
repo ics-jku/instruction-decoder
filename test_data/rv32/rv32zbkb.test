@@ -1,0 +1,357 @@
+40007833 andn a6, zero, zero 
+4087ff33 andn t5, a5, s0 
+4144fa33 andn s4, s1, s4 
+40d7f6b3 andn a3, a5, a3 
+416f74b3 andn s1, t5, s6 
+40957433 andn s0, a0, s1 
+411cfb33 andn s6, s9, a7 
+417172b3 andn t0, sp, s7 
+401bf1b3 andn gp, s7, ra 
+414efc33 andn s8, t4, s4 
+41367333 andn t1, a2, s3 
+41f67b33 andn s6, a2, t6 
+41a8f7b3 andn a5, a7, s10 
+4097f833 andn a6, a5, s1 
+400ff233 andn tp, t6, zero 
+40aa7d33 andn s10, s4, a0 
+41067233 andn tp, a2, a6 
+41be7333 andn t1, t3, s11 
+40f37db3 andn s11, t1, a5 
+416af733 andn a4, s5, s6 
+415e7833 andn a6, t3, s5 
+41fbfcb3 andn s9, s7, t6 
+4007fdb3 andn s11, a5, zero 
+41cc70b3 andn ra, s8, t3 
+402d70b3 andn ra, s10, sp 
+40c0f3b3 andn t2, ra, a2 
+412e71b3 andn gp, t3, s2 
+687b5113 brev8 sp, s6 
+68715413 brev8 s0, sp 
+6878d293 brev8 t0, a7 
+6877d613 brev8 a2, a5 
+6875d113 brev8 sp, a1 
+68755793 brev8 a5, a0 
+68725793 brev8 a5, tp 
+68715013 brev8 zero, sp 
+687c5593 brev8 a1, s8 
+68755913 brev8 s2, a0 
+6876d993 brev8 s3, a3 
+687ed293 brev8 t0, t4 
+687c5613 brev8 a2, s8 
+68775c13 brev8 s8, a4 
+68705513 brev8 a0, zero 
+687d5e13 brev8 t3, s10 
+6875de93 brev8 t4, a1 
+687cdf93 brev8 t6, s9 
+68745393 brev8 t2, s0 
+6879d593 brev8 a1, s3 
+687d5f13 brev8 t5, s10 
+68795513 brev8 a0, s2 
+687d5493 brev8 s1, s10 
+6876d313 brev8 t1, a3 
+68775893 brev8 a7, a4 
+687dd813 brev8 a6, s11 
+687e5293 brev8 t0, t3 
+6874d093 brev8 ra, s1 
+68795593 brev8 a1, s2 
+68755e93 brev8 t4, a0 
+40c8e2b3 orn t0, a7, a2 
+4056e1b3 orn gp, a3, t0 
+4119e733 orn a4, s3, a7 
+40c463b3 orn t2, s0, a2 
+418cea33 orn s4, s9, s8 
+40dcea33 orn s4, s9, a3 
+40ea61b3 orn gp, s4, a4 
+41306c33 orn s8, zero, s3 
+41996333 orn t1, s2, s9 
+41d8edb3 orn s11, a7, t4 
+4020eb33 orn s6, ra, sp 
+4005e9b3 orn s3, a1, zero 
+41596bb3 orn s7, s2, s5 
+41bde433 orn s0, s11, s11 
+419ae033 orn zero, s5, s9 
+4197e2b3 orn t0, a5, s9 
+41bf6933 orn s2, t5, s11 
+41ba61b3 orn gp, s4, s11 
+418961b3 orn gp, s2, s8 
+41e86433 orn s0, a6, t5 
+41e96733 orn a4, s2, t5 
+41f7e333 orn t1, a5, t6 
+41c2eb33 orn s6, t0, t3 
+414be3b3 orn t2, s7, s4 
+4012e3b3 orn t2, t0, ra 
+40e6e933 orn s2, a3, a4 
+40cde933 orn s2, s11, a2 
+41e662b3 orn t0, a2, t5 
+40676e33 orn t3, a4, t1 
+41e7e2b3 orn t0, a5, t5 
+0877ca33 pack s4, a5, t2 
+09c1c633 pack a2, gp, t3 
+0827cc33 pack s8, a5, sp 
+088742b3 pack t0, a4, s0 
+0823c633 pack a2, t2, sp 
+08d6c033 pack zero, a3, a3 
+0867cc33 pack s8, a5, t1 
+08dacab3 pack s5, s5, a3 
+09be4b33 pack s6, t3, s11 
+09e1c133 pack sp, gp, t5 
+093247b3 pack a5, tp, s3 
+08a0c1b3 pack gp, ra, a0 
+08fb4733 pack a4, s6, a5 
+09104833 pack a6, zero, a7 
+09eb49b3 pack s3, s6, t5 
+090e4133 pack sp, t3, a6 
+088547b3 pack a5, a0, s0 
+09704133 pack sp, zero, s7 
+08654133 pack sp, a0, t1 
+0977c933 pack s2, a5, s7 
+099d40b3 pack ra, s10, s9 
+09ffc0b3 pack ra, t6, t6 
+087e4b33 pack s6, t3, t2 
+089a4db3 pack s11, s4, s1 
+080a4eb3 pack t4, s4, zero 
+08be49b3 pack s3, t3, a1 
+09334e33 pack t3, t1, s3 
+098ac133 pack sp, s5, s8 
+0809cc33 pack s8, s3, zero 
+094c4fb3 pack t6, s8, s4 
+096bf733 packh a4, s7, s6 
+08cd7c33 packh s8, s10, a2 
+0987fb33 packh s6, a5, s8 
+08227bb3 packh s7, tp, sp 
+09e0f5b3 packh a1, ra, t5 
+09507b33 packh s6, zero, s5 
+09df7c33 packh s8, t5, t4 
+0891fbb3 packh s7, gp, s1 
+0842f6b3 packh a3, t0, tp 
+094c7fb3 packh t6, s8, s4 
+08b8f9b3 packh s3, a7, a1 
+09257a33 packh s4, a0, s2 
+08c87133 packh sp, a6, a2 
+0832f9b3 packh s3, t0, gp 
+085c7733 packh a4, s8, t0 
+09457533 packh a0, a0, s4 
+099b76b3 packh a3, s6, s9 
+097bf3b3 packh t2, s7, s7 
+082bf533 packh a0, s7, sp 
+08d8fdb3 packh s11, a7, a3 
+09ea7db3 packh s11, s4, t5 
+090bfdb3 packh s11, s7, a6 
+098c7cb3 packh s9, s8, s8 
+0831f833 packh a6, gp, gp 
+080c76b3 packh a3, s8, zero 
+09c4ff33 packh t5, s1, t3 
+08c47b33 packh s6, s0, a2 
+080a7cb3 packh s9, s4, zero 
+09cbf633 packh a2, s7, t3 
+08a97433 packh s0, s2, a0 
+6986df13 rev8 t5, a3 
+6988d113 rev8 sp, a7 
+69845513 rev8 a0, s0 
+698bd513 rev8 a0, s7 
+698cdf93 rev8 t6, s9 
+698ede93 rev8 t4, t4 
+698ad793 rev8 a5, s5 
+69815e13 rev8 t3, sp 
+6982df13 rev8 t5, t0 
+698edc93 rev8 s9, t4 
+6987d993 rev8 s3, a5 
+6986d113 rev8 sp, a3 
+6989dc93 rev8 s9, s3 
+698a5493 rev8 s1, s4 
+6988d413 rev8 s0, a7 
+6982df13 rev8 t5, t0 
+698ddf13 rev8 t5, s11 
+698dd393 rev8 t2, s11 
+698b5c13 rev8 s8, s6 
+69895093 rev8 ra, s2 
+69825713 rev8 a4, tp 
+698a5193 rev8 gp, s4 
+69865413 rev8 s0, a2 
+69865593 rev8 a1, a2 
+6983da13 rev8 s4, t2 
+698ad813 rev8 a6, s5 
+698f5e13 rev8 t3, t5 
+698fd513 rev8 a0, t6 
+698e5d13 rev8 s10, t3 
+6989d093 rev8 ra, s3 
+615499b3 rol s3, s1, s5 
+61e59b33 rol s6, a1, t5 
+604193b3 rol t2, gp, tp 
+61df13b3 rol t2, t5, t4 
+61e51433 rol s0, a0, t5 
+608c1fb3 rol t6, s8, s0 
+609495b3 rol a1, s1, s1 
+61ea14b3 rol s1, s4, t5 
+60ed9fb3 rol t6, s11, a4 
+60e91033 rol zero, s2, a4 
+61131433 rol s0, t1, a7 
+600d9f33 rol t5, s11, zero 
+606311b3 rol gp, t1, t1 
+618014b3 rol s1, zero, s8 
+61911533 rol a0, sp, s9 
+611b12b3 rol t0, s6, a7 
+603596b3 rol a3, a1, gp 
+60b810b3 rol ra, a6, a1 
+61b59d33 rol s10, a1, s11 
+606395b3 rol a1, t2, t1 
+617c9f33 rol t5, s9, s7 
+616b1e33 rol t3, s6, s6 
+61ab9033 rol zero, s7, s10 
+616e1cb3 rol s9, t3, s6 
+60c09f33 rol t5, ra, a2 
+607198b3 rol a7, gp, t2 
+60379bb3 rol s7, a5, gp 
+60af9c33 rol s8, t6, a0 
+61801333 rol t1, zero, s8 
+611597b3 rol a5, a1, a7 
+603c5f33 ror t5, s8, gp 
+601ad533 ror a0, s5, ra 
+61d358b3 ror a7, t1, t4 
+617a5333 ror t1, s4, s7 
+60ab5433 ror s0, s6, a0 
+60cad3b3 ror t2, s5, a2 
+617dddb3 ror s11, s11, s7 
+603b54b3 ror s1, s6, gp 
+60385233 ror tp, a6, gp 
+612c56b3 ror a3, s8, s2 
+61895a33 ror s4, s2, s8 
+611cdfb3 ror t6, s9, a7 
+60c65cb3 ror s9, a2, a2 
+60c8da33 ror s4, a7, a2 
+60ead8b3 ror a7, s5, a4 
+61c4d233 ror tp, s1, t3 
+61d7d333 ror t1, a5, t4 
+60b3d4b3 ror s1, t2, a1 
+61cbdeb3 ror t4, s7, t3 
+6052db33 ror s6, t0, t0 
+611bdf33 ror t5, s7, a7 
+6044df33 ror t5, s1, tp 
+6166dab3 ror s5, a3, s6 
+6046d9b3 ror s3, a3, tp 
+60fad433 ror s0, s5, a5 
+6040df33 ror t5, ra, tp 
+60fcd333 ror t1, s9, a5 
+61d9d033 ror zero, s3, t4 
+60035db3 ror s11, t1, zero 
+61435f33 ror t5, t1, s4 
+60895a13 rori s4, s2, 0x8 
+605ed413 rori s0, t4, 0x5 
+60cad013 rori zero, s5, 0xc 
+614ad613 rori a2, s5, 0x14 
+6007da93 rori s5, a5, 0x0 
+60bdd813 rori a6, s11, 0xb 
+6118da93 rori s5, a7, 0x11 
+60b35413 rori s0, t1, 0xb 
+604ad013 rori zero, s5, 0x4 
+602eda93 rori s5, t4, 0x2 
+616dda13 rori s4, s11, 0x16 
+615f5d13 rori s10, t5, 0x15 
+61e65d13 rori s10, a2, 0x1e 
+61405293 rori t0, zero, 0x14 
+605f5d93 rori s11, t5, 0x5 
+6155da93 rori s5, a1, 0x15 
+611f5d93 rori s11, t5, 0x11 
+61335293 rori t0, t1, 0x13 
+60abd513 rori a0, s7, 0xa 
+60a65b13 rori s6, a2, 0xa 
+60c0d313 rori t1, ra, 0xc 
+60f9d093 rori ra, s3, 0xf 
+611dde93 rori t4, s11, 0x11 
+6063df93 rori t6, t2, 0x6 
+61e2d093 rori ra, t0, 0x1e 
+6106d593 rori a1, a3, 0x10 
+60d35e13 rori t3, t1, 0xd 
+61985c13 rori s8, a6, 0x19 
+60615893 rori a7, sp, 0x6 
+6137d693 rori a3, a5, 0x13 
+08f5db93 unzip s7, a1 
+08f75e93 unzip t4, a4 
+08f2da13 unzip s4, t0 
+08fdd193 unzip gp, s11 
+08fdd013 unzip zero, s11 
+08f15313 unzip t1, sp 
+08fdda93 unzip s5, s11 
+08f75313 unzip t1, a4 
+08f55a93 unzip s5, a0 
+08f4d593 unzip a1, s1 
+08f7d213 unzip tp, a5 
+08f3dd93 unzip s11, t2 
+08fe5893 unzip a7, t3 
+08f95793 unzip a5, s2 
+08f2d413 unzip s0, t0 
+08f8d493 unzip s1, a7 
+08ff5c93 unzip s9, t5 
+08ff5113 unzip sp, t5 
+08f0de93 unzip t4, ra 
+08f6d793 unzip a5, a3 
+08f75293 unzip t0, a4 
+08fa5c13 unzip s8, s4 
+08f5d013 unzip zero, a1 
+08f35313 unzip t1, t1 
+08fad113 unzip sp, s5 
+08f2db93 unzip s7, t0 
+08f55413 unzip s0, a0 
+08ff5513 unzip a0, t5 
+08f15493 unzip s1, sp 
+08f2d993 unzip s3, t0 
+41dbc033 xnor zero, s7, t4 
+41c649b3 xnor s3, a2, t3 
+400ec833 xnor a6, t4, zero 
+4142c433 xnor s0, t0, s4 
+417ec5b3 xnor a1, t4, s7 
+406240b3 xnor ra, tp, t1 
+4030c133 xnor sp, ra, gp 
+402c4ab3 xnor s5, s8, sp 
+40b0c833 xnor a6, ra, a1 
+40ebc2b3 xnor t0, s7, a4 
+417d47b3 xnor a5, s10, s7 
+41514333 xnor t1, sp, s5 
+4156c2b3 xnor t0, a3, s5 
+416fce33 xnor t3, t6, s6 
+41cb4333 xnor t1, s6, t3 
+4012c8b3 xnor a7, t0, ra 
+40f642b3 xnor t0, a2, a5 
+408bc9b3 xnor s3, s7, s0 
+4077cd33 xnor s10, a5, t2 
+400d4133 xnor sp, s10, zero 
+41fac4b3 xnor s1, s5, t6 
+41184933 xnor s2, a6, a7 
+41624c33 xnor s8, tp, s6 
+4137cdb3 xnor s11, a5, s3 
+40e5c733 xnor a4, a1, a4 
+401dcf33 xnor t5, s11, ra 
+415bcd33 xnor s10, s7, s5 
+4187c5b3 xnor a1, a5, s8 
+408f4133 xnor sp, t5, s0 
+41adc3b3 xnor t2, s11, s10 
+08f49893 zip a7, s1 
+08f29f93 zip t6, t0 
+08f01a13 zip s4, zero 
+08f01193 zip gp, zero 
+08f49f13 zip t5, s1 
+08f69193 zip gp, a3 
+08fc1113 zip sp, s8 
+08fe9413 zip s0, t4 
+08f39c13 zip s8, t2 
+08f01193 zip gp, zero 
+08f59413 zip s0, a1 
+08f99693 zip a3, s3 
+08f69213 zip tp, a3 
+08f21d93 zip s11, tp 
+08f91a93 zip s5, s2 
+08fa9593 zip a1, s5 
+08f69493 zip s1, a3 
+08fe1393 zip t2, t3 
+08f51a93 zip s5, a0 
+08fa1113 zip sp, s4 
+08fb9513 zip a0, s7 
+08f89693 zip a3, a7 
+08f21a93 zip s5, tp 
+08f19813 zip a6, gp 
+08f19e13 zip t3, gp 
+08fe9393 zip t2, t4 
+08f49213 zip tp, s1 
+08fb1093 zip ra, s6 
+08f11d93 zip s11, sp 
+08ff1a93 zip s5, t5 

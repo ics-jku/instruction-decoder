@@ -41,3 +41,18 @@ fn test_rv32_zbb() {
 fn test_rv32_zbs() {
     isa_test!("../../toml/RV32_Zbs.toml", "test_data/rv32/rv32zbs.test");
 }
+
+#[test]
+fn test_rv32_zbkb() {
+    isa_test!("../../toml/RV32_Zbkb.toml", "test_data/rv32/rv32zbkb.test");
+}
+
+#[test]
+fn test_rv32_zkne() {
+    isa_test!("../../toml/RV32_Zkne.toml", "test_data/rv32/rv32zkne.test");
+}
+
+#[test]
+fn test_rv32_zknd() {
+    isa_test!("../../toml/RV32_Zknd.toml", "test_data/rv32/rv32zknd.test");
+}

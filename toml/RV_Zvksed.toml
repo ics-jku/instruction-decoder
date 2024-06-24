@@ -1,0 +1,153 @@
+set = "RVZvksed"
+width = 32
+
+[types]
+names = ["format-1-0", "format-2-0"]
+parts = [
+    [
+        "vs2",
+        5,
+        "Register_vec",
+    ],
+    [
+        "vd",
+        5,
+        "Register_vec",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = ["type-1-0", "type-2-0"]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type-1-0]]
+name = "vs2"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type-1-0]]
+name = "vd"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 31
+bot = 25
+
+[[type.type-2-0]]
+name = "vs2"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 19
+bot = 12
+
+[[type.type-2-0]]
+name = "vd"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[format-2-0]
+type = "type-2-0"
+
+[mappings]
+names = ["Register_vec"]
+number = 32
+Register_vec = [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "v16",
+    "v17",
+    "v18",
+    "v19",
+    "v20",
+    "v21",
+    "v22",
+    "v23",
+    "v24",
+    "v25",
+    "v26",
+    "v27",
+    "v28",
+    "v29",
+    "v30",
+    "v31",
+]
+
+[format-1-0.repr]
+default = "$name$ %vd%, %vs2%, %himm%"
+
+[format-2-0.repr]
+default = "$name$ %vd%, %vs2%"
+
+[format-1-0.instructions.vsm4k_vi]
+mask = 0xfe00707f
+match = 0x86002077
+unsigned = true
+
+[format-2-0.instructions.vsm4r_vs]
+mask = 0xfe0ff07f
+match = 0xa6082077
+
+[format-2-0.instructions.vsm4r_vv]
+mask = 0xfe0ff07f
+match = 0xa2082077
