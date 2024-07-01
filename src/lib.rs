@@ -1,4 +1,8 @@
-use std::{collections::HashMap, str::FromStr};
+use core::slice;
+use std::{
+    collections::{BTreeMap, HashMap},
+    str::FromStr,
+};
 
 use toml::{map::Map, Table, Value};
 
@@ -11,7 +15,7 @@ pub struct Decoder {
 
 struct InstructionSet {
     bit_width: usize,
-    formats: HashMap<String, InstructionFormat>,
+    formats: BTreeMap<String, InstructionFormat>,
     parts: HashMap<String, PartDecoder>,
     mappings: HashMap<String, Mapping>,
 }
@@ -451,12 +455,15 @@ impl SliceValue {
         value: u128,
         idx: usize,
         bit_width: usize,
+        slice_extend: usize,
         unsigned_imm: bool,
         part_type: PartType,
     ) -> Self {
         let mut tmp = value << idx;
         let unsigned = part_type.get_unsigned(unsigned_imm);
-
+        if slice_extend > 0 && ((tmp >> (bit_width - 1)) != 0) {
+            tmp |= (1 << slice_extend + bit_width) - (1 << bit_width);
+        }
         if !unsigned && ((tmp >> (bit_width - 1)) != 0) {
             tmp |= u128::MAX - (1 << bit_width) + 1;
         }
@@ -594,6 +601,7 @@ impl InstructionType {
                     tmp,
                     x.slice_bottom,
                     slice_bit_width,
+                    x.slice_extend,
                     unsigned_imm,
                     part_decoders[&x.name].part_type.clone(),
                 )
@@ -615,6 +623,7 @@ struct InstructionSlice {
     pos: usize,
     slice_top: usize,
     slice_bottom: usize,
+    slice_extend: usize,
 }
 
 impl InstructionSlice {
@@ -622,11 +631,17 @@ impl InstructionSlice {
         let name = table["name"].as_str().unwrap_or("").to_string();
         let slice_top = 1 + table["top"].as_integer().unwrap_or(0) as usize;
         let slice_bottom = table["bot"].as_integer().unwrap_or(0) as usize;
+        let slice_extend = table
+            .get("extend_top")
+            .unwrap_or(&Value::Integer(0))
+            .as_integer()
+            .unwrap_or(0) as usize;
         InstructionSlice {
             name,
             pos: *position,
             slice_top,
             slice_bottom,
+            slice_extend,
         }
     }
 }
@@ -649,7 +664,7 @@ impl Decoder {
         self.decode(parse_u128(instruction), bit_width)
     }
 
-    pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
+    pub fn decode_all(&self, instruction: u128, bit_width: usize) -> Vec<String> {
         let mut finds: Vec<String> = vec![];
 
         for instruction_set in &self.instruction_sets {
@@ -674,12 +689,15 @@ impl Decoder {
                 }
             }
         }
-        if finds.len() == 1 {
-            Ok(finds[0].clone())
-        } else if finds.is_empty() {
+        finds
+    }
+
+    pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
+        let finds = self.decode_all(instruction, bit_width);
+        if finds.is_empty() {
             Err("Unknown Instruction".to_string())
         } else {
-            Err(format!("{:?}", finds))
+            Ok(finds[finds.len() - 1].clone())
         }
     }
 

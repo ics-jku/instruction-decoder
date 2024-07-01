@@ -137,3 +137,13 @@ fn test_rv64_zvksh() {
 fn test_rv64_zawrs() {
     isa_test!("../../toml/RV_Zawrs.toml", "test_data/rv64/rvzawrs.test");
 }
+
+#[test]
+fn test_rv64_c() {
+    isa_test!("../../toml/RV64C.toml", "test_data/rv64/rv64c.test");
+}
+
+#[test]
+fn test_rv64_zcd() {
+    isa_test!("../../toml/RV64Zcd.toml", "test_data/rv64/rv64zcd.test");
+}

@@ -53,6 +53,6 @@ fn test_rv32_zkne() {
 }
 
 #[test]
-fn test_rv32_zknd() {
-    isa_test!("../../toml/RV32_Zknd.toml", "test_data/rv32/rv32zknd.test");
+fn test_rv32_c() {
+    isa_test!("../../toml/RV32C.toml", "test_data/rv32/rv32c.test");
 }
