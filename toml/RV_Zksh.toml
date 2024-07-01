@@ -1,0 +1,53 @@
+set = "RVZksh"
+width = 32
+
+[types]
+names = [ "format-1-0",]
+parts = [ [ "rd_Register_int", 5, "Register_int",], [ "rd_Register_float", 5, "Register_float",], [ "rs1_Register_int", 5, "Register_int",], [ "rs1_Register_float", 5, "Register_float",], [ "none", 32, "u32",], [ "imm", 32, "VInt",], [ "himm", 32, "VInt", "hex",],]
+
+[type]
+names = [ "type-1-0",]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 20
+
+[[type.type-1-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type-1-0]]
+name = "rd_Register_int"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[mappings]
+names = [ "Register_int", "Register_float",]
+number = 32
+Register_int = [ "zero", "ra", "sp", "gp", "tp", "t0", "t1", "t2", "s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5", "a6", "a7", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "t3", "t4", "t5", "t6",]
+Register_float = [ "ft0", "ft1", "ft2", "ft3", "ft4", "ft5", "ft6", "ft7", "fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5", "fa6", "fa7", "fs2", "fs3", "fs4", "fs5", "fs6", "fs7", "fs8", "fs9", "fs10", "fs11", "ft8", "ft9", "ft10", "ft11",]
+
+[format-1-0.repr]
+default = "$name$ %rd_Register_int%, %rs1_Register_int%"
+
+[format-1-0.instructions.sm3p0]
+mask = 0xfff0707f
+match = 0x10801013
+
+[format-1-0.instructions.sm3p1]
+mask = 0xfff0707f
+match = 0x10901013

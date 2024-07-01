@@ -1,0 +1,323 @@
+set = "RV32Zcb"
+width = 16
+
+[types]
+names = [
+    "format-1-0",
+    "format-2-0",
+    "format-3-0",
+    "format-4-0",
+    "format-5-0",
+    "format-6-0",
+]
+parts = [
+    [
+        "rd_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rd_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rs1_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs1_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rd_rs1_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rd_rs1_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rs2_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs2_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = ["type-1-0", "type-2-0", "type-3-0", "type-4-0", "type-5-0", "type-6-0"]
+[[type.type-1-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-1-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-1-0]]
+name = "himm"
+top = 0
+bot = 0
+
+[[type.type-1-0]]
+name = "himm"
+top = 1
+bot = 1
+
+[[type.type-1-0]]
+name = "rd_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-2-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 6
+bot = 6
+
+[[type.type-2-0]]
+name = "himm"
+top = 1
+bot = 1
+
+[[type.type-2-0]]
+name = "rd_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-3-0]]
+name = "rd_rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 6
+bot = 5
+
+[[type.type-3-0]]
+name = "rs2_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-4-0]]
+name = "rd_rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type-5-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-5-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-5-0]]
+name = "himm"
+top = 0
+bot = 0
+
+[[type.type-5-0]]
+name = "himm"
+top = 1
+bot = 1
+
+[[type.type-5-0]]
+name = "rs2_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-5-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-6-0]]
+name = "none"
+top = 15
+bot = 10
+
+[[type.type-6-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-6-0]]
+name = "none"
+top = 6
+bot = 6
+
+[[type.type-6-0]]
+name = "himm"
+top = 1
+bot = 1
+
+[[type.type-6-0]]
+name = "rs2_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-6-0]]
+name = "none"
+top = 1
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[format-2-0]
+type = "type-2-0"
+
+[format-3-0]
+type = "type-3-0"
+
+[format-4-0]
+type = "type-4-0"
+
+[format-5-0]
+type = "type-5-0"
+
+[format-6-0]
+type = "type-6-0"
+
+[mappings]
+names = ["Register_int_c", "Register_float_c"]
+number = 32
+Register_int_c = ["s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5"]
+Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
+
+[format-1-0.repr]
+default = "$name$ %rd_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-2-0.repr]
+default = "$name$ %rd_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-3-0.repr]
+default = "$name$ %rd_rs1_p_Register_int_c%, %rs2_p_Register_int_c%"
+
+[format-4-0.repr]
+default = "$name$ %rd_rs1_p_Register_int_c%"
+
+[format-5-0.repr]
+default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-6-0.repr]
+default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-1-0.instructions.c_lbu]
+mask = 0xfc03
+match = 0x8000
+unsigned = true
+
+[format-2-0.instructions.c_lh]
+mask = 0xfc43
+match = 0x8440
+unsigned = true
+
+[format-2-0.instructions.c_lhu]
+mask = 0xfc43
+match = 0x8400
+unsigned = true
+
+[format-3-0.instructions.c_mul]
+mask = 0xfc63
+match = 0x9c41
+
+[format-4-0.instructions.c_not]
+mask = 0xfc7f
+match = 0x9c75
+
+[format-4-0.instructions.c_sext_b]
+mask = 0xfc7f
+match = 0x9c65
+
+[format-4-0.instructions.c_sext_h]
+mask = 0xfc7f
+match = 0x9c6d
+
+[format-4-0.instructions.c_zext_b]
+mask = 0xfc7f
+match = 0x9c61
+
+[format-4-0.instructions.c_zext_h]
+mask = 0xfc7f
+match = 0x9c69
+
+[format-5-0.instructions.c_sb]
+mask = 0xfc03
+match = 0x8800
+unsigned = true
+
+[format-6-0.instructions.c_sh]
+mask = 0xfc43
+match = 0x8c00
+unsigned = true

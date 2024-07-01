@@ -1,0 +1,811 @@
+050ea8d3 fadd.h fa7, ft9, fa6, rdn 
+04afc753 fadd.h fa4, ft11, fa0, rmm 
+0524a0d3 fadd.h ft1, fs1, fs2, rdn 
+05609453 fadd.h fs0, ft1, fs6, rtz 
+04c183d3 fadd.h ft7, ft3, fa2, rne 
+05b22b53 fadd.h fs6, ft4, fs11, rdn 
+05c50453 fadd.h fs0, fa0, ft8, rne 
+05a68453 fadd.h fs0, fa3, fs10, rne 
+042bfa53 fadd.h fs4, fs7, ft2, dyn 
+0551ab53 fadd.h fs6, ft3, fs5, rdn 
+0429f253 fadd.h ft4, fs3, ft2, dyn 
+0569b9d3 fadd.h fs3, fs3, fs6, rup 
+04121353 fadd.h ft6, ft4, ft1, rtz 
+055297d3 fadd.h fa5, ft5, fs5, rtz 
+05e29a53 fadd.h fs4, ft5, ft10, rtz 
+0556ab53 fadd.h fs6, fa3, fs5, rdn 
+04dfb5d3 fadd.h fa1, ft11, fa3, rup 
+04d9aad3 fadd.h fs5, fs3, fa3, rdn 
+05e6b8d3 fadd.h fa7, fa3, ft10, rup 
+05e937d3 fadd.h fa5, fs2, ft10, rup 
+04aecf53 fadd.h ft10, ft9, fa0, rmm 
+e40d9cd3 fclass.h s9, fs11 
+e40c93d3 fclass.h t2, fs9 
+e4089853 fclass.h a6, fa7 
+e4009a53 fclass.h s4, ft1 
+e40f9853 fclass.h a6, ft11 
+e4009053 fclass.h zero, ft1 
+e4099353 fclass.h t1, fs3 
+e40b1ad3 fclass.h s5, fs6 
+e4061053 fclass.h zero, fa2 
+e40c1a53 fclass.h s4, fs8 
+e40592d3 fclass.h t0, fa1 
+e4061bd3 fclass.h s7, fa2 
+e40515d3 fclass.h a1, fa0 
+e4069a53 fclass.h s4, fa3 
+e4061953 fclass.h s2, fa2 
+e4029c53 fclass.h s8, ft5 
+e4009d53 fclass.h s10, ft1 
+e4099153 fclass.h sp, fs3 
+e4061053 fclass.h zero, fa2 
+e4041c53 fclass.h s8, fs0 
+e4021b53 fclass.h s6, ft4 
+e40d13d3 fclass.h t2, fs10 
+e40319d3 fclass.h s3, ft6 
+e40a9153 fclass.h sp, fs5 
+e4099ad3 fclass.h s5, fs3 
+e40a1e53 fclass.h t3, fs4 
+e4031953 fclass.h s2, ft6 
+e40990d3 fclass.h ra, fs3 
+e40e1dd3 fclass.h s11, ft8 
+e40e1ed3 fclass.h t4, ft8 
+d423b3d3 fcvt.h.l ft7, t2, rup 
+d42504d3 fcvt.h.l fs1, a0, rne 
+d42ff3d3 fcvt.h.l ft7, t6, dyn 
+d4263fd3 fcvt.h.l ft11, a2, rup 
+d42839d3 fcvt.h.l fs3, a6, rup 
+d4251fd3 fcvt.h.l ft11, a0, rtz 
+d4217253 fcvt.h.l ft4, sp, dyn 
+d42d1c53 fcvt.h.l fs8, s10, rtz 
+d42df253 fcvt.h.l ft4, s11, dyn 
+d42e87d3 fcvt.h.l fa5, t4, rne 
+d42dfe53 fcvt.h.l ft8, s11, dyn 
+d4258b53 fcvt.h.l fs6, a1, rne 
+d427bf53 fcvt.h.l ft10, a5, rup 
+d426fb53 fcvt.h.l fs6, a3, dyn 
+d4220d53 fcvt.h.l fs10, tp, rne 
+d42997d3 fcvt.h.l fa5, s3, rtz 
+d42b4653 fcvt.h.l fa2, s6, rmm 
+d42b0453 fcvt.h.l fs0, s6, rne 
+d42d1ad3 fcvt.h.l fs5, s10, rtz 
+d4247953 fcvt.h.l fs2, s0, dyn 
+d427b353 fcvt.h.l ft6, a5, rup 
+d4394fd3 fcvt.h.lu ft11, s2, rmm 
+d43cb953 fcvt.h.lu fs2, s9, rup 
+d43ef753 fcvt.h.lu fa4, t4, dyn 
+d4381353 fcvt.h.lu ft6, a6, rtz 
+d4319f53 fcvt.h.lu ft10, gp, rtz 
+d4324d53 fcvt.h.lu fs10, tp, rmm 
+d43539d3 fcvt.h.lu fs3, a0, rup 
+d431fad3 fcvt.h.lu fs5, gp, dyn 
+d43bc0d3 fcvt.h.lu ft1, s7, rmm 
+d430a053 fcvt.h.lu ft0, ra, rdn 
+d436fbd3 fcvt.h.lu fs7, a3, dyn 
+d4384853 fcvt.h.lu fa6, a6, rmm 
+d43ccb53 fcvt.h.lu fs6, s9, rmm 
+d437c353 fcvt.h.lu ft6, a5, rmm 
+d43e7353 fcvt.h.lu ft6, t3, dyn 
+d43dcd53 fcvt.h.lu fs10, s11, rmm 
+d434a453 fcvt.h.lu fs0, s1, rdn 
+d439b4d3 fcvt.h.lu fs1, s3, rup 
+d43b1953 fcvt.h.lu fs2, s6, rtz 
+d43e93d3 fcvt.h.lu ft7, t4, rtz 
+d4303353 fcvt.h.lu ft6, zero, rup 
+d432b153 fcvt.h.lu ft2, t0, rup 
+d43028d3 fcvt.h.lu fa7, zero, rdn 
+440ece53 fcvt.h.s ft8, ft9, rmm 
+44083653 fcvt.h.s fa2, fa6, rup 
+4404c553 fcvt.h.s fa0, fs1, rmm 
+440afed3 fcvt.h.s ft9, fs5, dyn 
+440749d3 fcvt.h.s fs3, fa4, rmm 
+44020b53 fcvt.h.s fs6, ft4, rne 
+440bf1d3 fcvt.h.s ft3, fs7, dyn 
+440df0d3 fcvt.h.s ft1, fs11, dyn 
+44027ed3 fcvt.h.s ft9, ft4, dyn 
+440f4853 fcvt.h.s fa6, ft10, rmm 
+4406f7d3 fcvt.h.s fa5, fa3, dyn 
+44039353 fcvt.h.s ft6, ft7, rtz 
+44000153 fcvt.h.s ft2, ft0, rne 
+440a10d3 fcvt.h.s ft1, fs4, rtz 
+44077553 fcvt.h.s fa0, fa4, dyn 
+4409afd3 fcvt.h.s ft11, fs3, rdn 
+440747d3 fcvt.h.s fa5, fa4, rmm 
+44009dd3 fcvt.h.s fs11, ft1, rtz 
+4401fad3 fcvt.h.s fs5, ft3, dyn 
+4400fa53 fcvt.h.s fs4, ft1, dyn 
+44038353 fcvt.h.s ft6, ft7, rne 
+440d78d3 fcvt.h.s fa7, fs10, dyn 
+44013c53 fcvt.h.s fs8, ft2, rup 
+440c2953 fcvt.h.s fs2, fs8, rdn 
+440a90d3 fcvt.h.s ft1, fs5, rtz 
+d409a753 fcvt.h.w fa4, s3, rdn 
+d40f79d3 fcvt.h.w fs3, t5, dyn 
+d4093ad3 fcvt.h.w fs5, s2, rup 
+d40620d3 fcvt.h.w ft1, a2, rdn 
+d402ae53 fcvt.h.w ft8, t0, rdn 
+d4068dd3 fcvt.h.w fs11, a3, rne 
+d40e0dd3 fcvt.h.w fs11, t3, rne 
+d404f9d3 fcvt.h.w fs3, s1, dyn 
+d409cad3 fcvt.h.w fs5, s3, rmm 
+d40e0d53 fcvt.h.w fs10, t3, rne 
+d4097953 fcvt.h.w fs2, s2, dyn 
+d407f153 fcvt.h.w ft2, a5, dyn 
+d40f4cd3 fcvt.h.w fs9, t5, rmm 
+d402ca53 fcvt.h.w fs4, t0, rmm 
+d40fbad3 fcvt.h.w fs5, t6, rup 
+d40a8e53 fcvt.h.w ft8, s5, rne 
+d4070dd3 fcvt.h.w fs11, a4, rne 
+d400bcd3 fcvt.h.w fs9, ra, rup 
+d40fc553 fcvt.h.w fa0, t6, rmm 
+d40da8d3 fcvt.h.w fa7, s11, rdn 
+d401cb53 fcvt.h.w fs6, gp, rmm 
+d41935d3 fcvt.h.wu fa1, s2, rup 
+d41627d3 fcvt.h.wu fa5, a2, rdn 
+d41d06d3 fcvt.h.wu fa3, s10, rne 
+d41a0753 fcvt.h.wu fa4, s4, rne 
+d41224d3 fcvt.h.wu fs1, tp, rdn 
+d41f9d53 fcvt.h.wu fs10, t6, rtz 
+d41d2d53 fcvt.h.wu fs10, s10, rdn 
+d4102653 fcvt.h.wu fa2, zero, rdn 
+d4152cd3 fcvt.h.wu fs9, a0, rdn 
+d41eadd3 fcvt.h.wu fs11, t4, rdn 
+d4139053 fcvt.h.wu ft0, t2, rtz 
+d412aed3 fcvt.h.wu ft9, t0, rdn 
+d41ecad3 fcvt.h.wu fs5, t4, rmm 
+d41d2e53 fcvt.h.wu ft8, s10, rdn 
+d41f7453 fcvt.h.wu fs0, t5, dyn 
+d41aa7d3 fcvt.h.wu fa5, s5, rdn 
+d41b79d3 fcvt.h.wu fs3, s6, dyn 
+d4130fd3 fcvt.h.wu ft11, t1, rne 
+d41bb153 fcvt.h.wu ft2, s7, rup 
+d41f4fd3 fcvt.h.wu ft11, t5, rmm 
+d4128553 fcvt.h.wu fa0, t0, rne 
+d41313d3 fcvt.h.wu ft7, t1, rtz 
+d41efb53 fcvt.h.wu fs6, t4, dyn 
+d41537d3 fcvt.h.wu fa5, a0, rup 
+d41e7fd3 fcvt.h.wu ft11, t3, dyn 
+c42a7353 fcvt.l.h t1, fs4, dyn 
+c424b253 fcvt.l.h tp, fs1, rup 
+c42489d3 fcvt.l.h s3, fs1, rne 
+c42e9053 fcvt.l.h zero, ft9, rtz 
+c429f053 fcvt.l.h zero, fs3, dyn 
+c42f3a53 fcvt.l.h s4, ft10, rup 
+c42340d3 fcvt.l.h ra, ft6, rmm 
+c42c9053 fcvt.l.h zero, fs9, rtz 
+c42c84d3 fcvt.l.h s1, fs9, rne 
+c421b253 fcvt.l.h tp, ft3, rup 
+c42f2ad3 fcvt.l.h s5, ft10, rdn 
+c42348d3 fcvt.l.h a7, ft6, rmm 
+c42acb53 fcvt.l.h s6, fs5, rmm 
+c422f953 fcvt.l.h s2, ft5, dyn 
+c42dc7d3 fcvt.l.h a5, fs11, rmm 
+c4219ed3 fcvt.l.h t4, ft3, rtz 
+c4297cd3 fcvt.l.h s9, fs2, dyn 
+c42b8553 fcvt.l.h a0, fs7, rne 
+c42082d3 fcvt.l.h t0, ft1, rne 
+c42ffdd3 fcvt.l.h s11, ft11, dyn 
+c42341d3 fcvt.l.h gp, ft6, rmm 
+c42fb6d3 fcvt.l.h a3, ft11, rup 
+c435c053 fcvt.lu.h zero, fa1, rmm 
+c43b80d3 fcvt.lu.h ra, fs7, rne 
+c4389f53 fcvt.lu.h t5, fa7, rtz 
+c43e9b53 fcvt.lu.h s6, ft9, rtz 
+c43a4753 fcvt.lu.h a4, fs4, rmm 
+c43a8d53 fcvt.lu.h s10, fs5, rne 
+c43d44d3 fcvt.lu.h s1, fs10, rmm 
+c436add3 fcvt.lu.h s11, fa3, rdn 
+c4383c53 fcvt.lu.h s8, fa6, rup 
+c43341d3 fcvt.lu.h gp, ft6, rmm 
+c436ced3 fcvt.lu.h t4, fa3, rmm 
+c4381ed3 fcvt.lu.h t4, fa6, rtz 
+c43291d3 fcvt.lu.h gp, ft5, rtz 
+c43d8553 fcvt.lu.h a0, fs11, rne 
+c4321753 fcvt.lu.h a4, ft4, rtz 
+c43042d3 fcvt.lu.h t0, ft0, rmm 
+c4357553 fcvt.lu.h a0, fa0, dyn 
+c43eb4d3 fcvt.lu.h s1, ft9, rup 
+c43703d3 fcvt.lu.h t2, fa4, rne 
+c43378d3 fcvt.lu.h a7, ft6, dyn 
+c43df253 fcvt.lu.h tp, fs11, dyn 
+c43c21d3 fcvt.lu.h gp, fs8, rdn 
+40280e53 fcvt.s.h ft8, fa6, rne 
+40294053 fcvt.s.h ft0, fs2, rmm 
+402708d3 fcvt.s.h fa7, fa4, rne 
+402813d3 fcvt.s.h ft7, fa6, rtz 
+40219a53 fcvt.s.h fs4, ft3, rtz 
+402cfad3 fcvt.s.h fs5, fs9, dyn 
+402f4853 fcvt.s.h fa6, ft10, rmm 
+40231153 fcvt.s.h ft2, ft6, rtz 
+402c07d3 fcvt.s.h fa5, fs8, rne 
+4026c053 fcvt.s.h ft0, fa3, rmm 
+40280ed3 fcvt.s.h ft9, fa6, rne 
+402bb553 fcvt.s.h fa0, fs7, rup 
+402ccb53 fcvt.s.h fs6, fs9, rmm 
+402522d3 fcvt.s.h ft5, fa0, rdn 
+402a20d3 fcvt.s.h ft1, fs4, rdn 
+402921d3 fcvt.s.h ft3, fs2, rdn 
+c40af7d3 fcvt.w.h a5, fs5, dyn 
+c407c6d3 fcvt.w.h a3, fa5, rmm 
+c40f78d3 fcvt.w.h a7, ft10, dyn 
+c407fd53 fcvt.w.h s10, fa5, dyn 
+c40c00d3 fcvt.w.h ra, fs8, rne 
+c402bfd3 fcvt.w.h t6, ft5, rup 
+c40bfb53 fcvt.w.h s6, fs7, dyn 
+c4057753 fcvt.w.h a4, fa0, dyn 
+c40d1a53 fcvt.w.h s4, fs10, rtz 
+c4092dd3 fcvt.w.h s11, fs2, rdn 
+c407fed3 fcvt.w.h t4, fa5, dyn 
+c4008d53 fcvt.w.h s10, ft1, rne 
+c40eca53 fcvt.w.h s4, ft9, rmm 
+c40e94d3 fcvt.w.h s1, ft9, rtz 
+c4037a53 fcvt.w.h s4, ft6, dyn 
+c40376d3 fcvt.w.h a3, ft6, dyn 
+c40e48d3 fcvt.w.h a7, ft8, rmm 
+c40132d3 fcvt.w.h t0, ft2, rup 
+c40a2a53 fcvt.w.h s4, fs4, rdn 
+c40f7353 fcvt.w.h t1, ft10, dyn 
+c40078d3 fcvt.w.h a7, ft0, dyn 
+c417f153 fcvt.wu.h sp, fa5, dyn 
+c41ab4d3 fcvt.wu.h s1, fs5, rup 
+c411bdd3 fcvt.wu.h s11, ft3, rup 
+c4117f53 fcvt.wu.h t5, ft2, dyn 
+c410a153 fcvt.wu.h sp, ft1, rdn 
+c41facd3 fcvt.wu.h s9, ft11, rdn 
+c410b553 fcvt.wu.h a0, ft1, rup 
+c41083d3 fcvt.wu.h t2, ft1, rne 
+c41e24d3 fcvt.wu.h s1, ft8, rdn 
+c4193b53 fcvt.wu.h s6, fs2, rup 
+c4100753 fcvt.wu.h a4, ft0, rne 
+c41e7953 fcvt.wu.h s2, ft8, dyn 
+c41089d3 fcvt.wu.h s3, ft1, rne 
+c41c9153 fcvt.wu.h sp, fs9, rtz 
+c41b8f53 fcvt.wu.h t5, fs7, rne 
+c41d9f53 fcvt.wu.h t5, fs11, rtz 
+c4147e53 fcvt.wu.h t3, fs0, dyn 
+c419aad3 fcvt.wu.h s5, fs3, rdn 
+c4177cd3 fcvt.wu.h s9, fa4, dyn 
+c41937d3 fcvt.wu.h a5, fs2, rup 
+c41c8fd3 fcvt.wu.h t6, fs9, rne 
+c41f7053 fcvt.wu.h zero, ft10, dyn 
+c41019d3 fcvt.wu.h s3, ft0, rtz 
+c4161ed3 fcvt.wu.h t4, fa2, rtz 
+c41b1fd3 fcvt.wu.h t6, fs6, rtz 
+c41a8a53 fcvt.wu.h s4, fs5, rne 
+1dcf9b53 fdiv.h fs6, ft11, ft8, rtz 
+1d0c38d3 fdiv.h fa7, fs8, fa6, rup 
+1c048253 fdiv.h ft4, fs1, ft0, rne 
+1cdbca53 fdiv.h fs4, fs7, fa3, rmm 
+1de32053 fdiv.h ft0, ft6, ft10, rdn 
+1c87cb53 fdiv.h fs6, fa5, fs0, rmm 
+1cdb9dd3 fdiv.h fs11, fs7, fa3, rtz 
+1c31f0d3 fdiv.h ft1, ft3, ft3, dyn 
+1c3f77d3 fdiv.h fa5, ft10, ft3, dyn 
+1c4e0a53 fdiv.h fs4, ft8, ft4, rne 
+1d17f153 fdiv.h ft2, fa5, fa7, dyn 
+1c8711d3 fdiv.h ft3, fa4, fs0, rtz 
+1d190d53 fdiv.h fs10, fs2, fa7, rne 
+1da00b53 fdiv.h fs6, ft0, fs10, rne 
+1cb0f353 fdiv.h ft6, ft1, fa1, dyn 
+1caa1753 fdiv.h fa4, fs4, fa0, rtz 
+1dbc4553 fdiv.h fa0, fs8, fs11, rmm 
+1c1d1553 fdiv.h fa0, fs10, ft1, rtz 
+1c3d25d3 fdiv.h fa1, fs10, ft3, rdn 
+1d30c2d3 fdiv.h ft5, ft1, fs3, rmm 
+1c7512d3 fdiv.h ft5, fa0, ft7, rtz 
+a46c2153 feq.h sp, fs8, ft6 
+a43823d3 feq.h t2, fa6, ft3 
+a56ba353 feq.h t1, fs7, fs6 
+a5172853 feq.h a6, fa4, fa7 
+a5c3a453 feq.h s0, ft7, ft8 
+a4aa28d3 feq.h a7, fs4, fa0 
+a57caf53 feq.h t5, fs9, fs7 
+a4a5aed3 feq.h t4, fa1, fa0 
+a455ac53 feq.h s8, fa1, ft5 
+a4e82b53 feq.h s6, fa6, fa4 
+a5852953 feq.h s2, fa0, fs8 
+a5b227d3 feq.h a5, ft4, fs11 
+a4faab53 feq.h s6, fs5, fa5 
+a5082453 feq.h s0, fa6, fa6 
+a4e524d3 feq.h s1, fa0, fa4 
+a57e2dd3 feq.h s11, ft8, fs7 
+a547a553 feq.h a0, fa5, fs4 
+a42a2f53 feq.h t5, fs4, ft2 
+a453a2d3 feq.h t0, ft7, ft5 
+a445a453 feq.h s0, fa1, ft4 
+a563a2d3 feq.h t0, ft7, fs6 
+a5e02ed3 feq.h t4, ft0, ft10 
+a55f26d3 feq.h a3, ft10, fs5 
+a42a27d3 feq.h a5, fs4, ft2 
+a59eab53 feq.h s6, ft9, fs9 
+a5ddadd3 feq.h s11, fs11, ft9 
+a4f127d3 feq.h a5, ft2, fa5 
+a52f2e53 feq.h t3, ft10, fs2 
+a44b2253 feq.h tp, fs6, ft4 
+a594a5d3 feq.h a1, fs1, fs9 
+a5aa84d3 fle.h s1, fs5, fs10 
+a5db0753 fle.h a4, fs6, ft9 
+a40583d3 fle.h t2, fa1, ft0 
+a5a90d53 fle.h s10, fs2, fs10 
+a4df0053 fle.h zero, ft10, fa3 
+a5548a53 fle.h s4, fs1, fs5 
+a5148753 fle.h a4, fs1, fa7 
+a50a8653 fle.h a2, fs5, fa6 
+a49702d3 fle.h t0, fa4, fs1 
+a4988d53 fle.h s10, fa7, fs1 
+a43e8353 fle.h t1, ft9, ft3 
+a44303d3 fle.h t2, ft6, ft4 
+a4578553 fle.h a0, fa5, ft5 
+a59f0cd3 fle.h s9, ft10, fs9 
+a5520853 fle.h a6, ft4, fs5 
+a4278ad3 fle.h s5, fa5, ft2 
+a4470353 fle.h t1, fa4, ft4 
+a40d0e53 fle.h t3, fs10, ft0 
+a56801d3 fle.h gp, fa6, fs6 
+a5658f53 fle.h t5, fa1, fs6 
+a59785d3 fle.h a1, fa5, fs9 
+a4378b53 fle.h s6, fa5, ft3 
+a43b0153 fle.h sp, fs6, ft3 
+a5e10353 fle.h t1, ft2, ft10 
+a50a0453 fle.h s0, fs4, fa6 
+a5310e53 fle.h t3, ft2, fs3 
+a4a58953 fle.h s2, fa1, fa0 
+a5c180d3 fle.h ra, ft3, ft8 
+a5550bd3 fle.h s7, fa0, fs5 
+a4be8a53 fle.h s4, ft9, fa1 
+5aeb1787 flh fa5, 0x5ae(s6) 
+b3c11b07 flh fs6, -0x4c4(sp) 
+943c1787 flh fa5, -0x6bd(s8) 
+94219207 flh ft4, -0x6be(gp) 
+c7b89f87 flh ft11, -0x385(a7) 
+f6c49a87 flh fs5, -0x94(s1) 
+3b651507 flh fa0, 0x3b6(a0) 
+35c71887 flh fa7, 0x35c(a4) 
+7ca59107 flh ft2, 0x7ca(a1) 
+d8501307 flh ft6, -0x27b(zero) 
+43369287 flh ft5, 0x433(a3) 
+c12a1c07 flh fs8, -0x3ee(s4) 
+fd829a07 flh fs4, -0x28(t0) 
+4ad61987 flh fs3, 0x4ad(a2) 
+5a9e9f07 flh ft10, 0x5a9(t4) 
+014a1c07 flh fs8, 0x14(s4) 
+58089d07 flh fs10, 0x580(a7) 
+bcfa9d07 flh fs10, -0x431(s5) 
+24209687 flh fa3, 0x242(ra) 
+24791407 flh fs0, 0x247(s2) 
+d4a01187 flh ft3, -0x2b6(zero) 
+d3b91c07 flh fs8, -0x2c5(s2) 
+e0001787 flh fa5, -0x200(zero) 
+088b9687 flh fa3, 0x88(s7) 
+466e9f87 flh ft11, 0x466(t4) 
+21ef9f07 flh ft10, 0x21e(t6) 
+a6f51407 flh fs0, -0x591(a0) 
+c42c9987 flh fs3, -0x3be(s9) 
+51109087 flh ft1, 0x511(ra) 
+25af9b07 flh fs6, 0x25a(t6) 
+a4631e53 flt.h t3, ft6, ft6 
+a46e1853 flt.h a6, ft8, ft6 
+a5581753 flt.h a4, fa6, fs5 
+a51e9753 flt.h a4, ft9, fa7 
+a5739553 flt.h a0, ft7, fs7 
+a4241fd3 flt.h t6, fs0, ft2 
+a4b69153 flt.h sp, fa3, fa1 
+a5fe9a53 flt.h s4, ft9, ft11 
+a43512d3 flt.h t0, fa0, ft3 
+a5791953 flt.h s2, fs2, fs7 
+a5449dd3 flt.h s11, fs1, fs4 
+a4581c53 flt.h s8, fa6, ft5 
+a5e513d3 flt.h t2, fa0, ft10 
+a5f29ed3 flt.h t4, ft5, ft11 
+a46d1e53 flt.h t3, fs10, ft6 
+a44c1cd3 flt.h s9, fs8, ft4 
+a4c49853 flt.h a6, fs1, fa2 
+a49f9d53 flt.h s10, ft11, fs1 
+a4439853 flt.h a6, ft7, ft4 
+a5701fd3 flt.h t6, ft0, fs7 
+a5fb1053 flt.h zero, fs6, ft11 
+a4dc95d3 flt.h a1, fs9, fa3 
+a5dc1d53 flt.h s10, fs8, ft9 
+a5061453 flt.h s0, fa2, fa6 
+a4f91953 flt.h s2, fs2, fa5 
+a47f93d3 flt.h t2, ft11, ft7 
+a5851653 flt.h a2, fa0, fs8 
+a4d61253 flt.h tp, fa2, fa3 
+a4cb10d3 flt.h ra, fs6, fa2 
+a5b513d3 flt.h t2, fa0, fs11 
+34478843 fmadd.h fa6, fa5, ft4, ft6, rne 
+8c9b98c3 fmadd.h fa7, fs7, fs1, fa7, rtz 
+94da73c3 fmadd.h ft7, fs4, fa3, fs2, dyn 
+65c72a43 fmadd.h fs4, fa4, ft8, fa2, rdn 
+34540ec3 fmadd.h ft9, fs0, ft5, ft6, rne 
+a4bec4c3 fmadd.h fs1, ft9, fa1, fs4, rmm 
+942c1343 fmadd.h ft6, fs8, ft2, fs2, rtz 
+25f18843 fmadd.h fa6, ft3, ft11, ft4, rne 
+fca395c3 fmadd.h fa1, ft7, fa0, ft11, rtz 
+8ce6fbc3 fmadd.h fs7, fa3, fa4, fa7, dyn 
+fd1ff6c3 fmadd.h fa3, ft11, fa7, ft11, dyn 
+7cadb443 fmadd.h fs0, fs11, fa0, fa5, rup 
+a42ac643 fmadd.h fa2, fs5, ft2, fs4, rmm 
+8dd00443 fmadd.h fs0, ft0, ft9, fa7, rne 
+e49a7c43 fmadd.h fs8, fs4, fs1, ft8, dyn 
+a52409c3 fmadd.h fs3, fs0, fs2, fs4, rne 
+253e4ac3 fmadd.h fs5, ft8, fs3, ft4, rmm 
+24e197c3 fmadd.h fa5, ft3, fa4, ft4, rtz 
+2c7f3643 fmadd.h fa2, ft10, ft7, ft5, rup 
+353b2bc3 fmadd.h fs7, fs6, fs3, ft6, rdn 
+0cc22343 fmadd.h ft6, ft4, fa2, ft1, rdn 
+4d5e3d43 fmadd.h fs10, ft8, fs5, fs1, rup 
+e50d4f43 fmadd.h ft10, fs10, fa6, ft8, rmm 
+2cb89253 fmax.h ft4, fa7, fa1 
+2c5a1bd3 fmax.h fs7, fs4, ft5 
+2c2596d3 fmax.h fa3, fa1, ft2 
+2cd41353 fmax.h ft6, fs0, fa3 
+2dbc9dd3 fmax.h fs11, fs9, fs11 
+2d019fd3 fmax.h ft11, ft3, fa6 
+2c5293d3 fmax.h ft7, ft5, ft5 
+2d6693d3 fmax.h ft7, fa3, fs6 
+2c6192d3 fmax.h ft5, ft3, ft6 
+2dca9353 fmax.h ft6, fs5, ft8 
+2c5f98d3 fmax.h fa7, ft11, ft5 
+2cfd9753 fmax.h fa4, fs11, fa5 
+2c4b1b53 fmax.h fs6, fs6, ft4 
+2c5f1f53 fmax.h ft10, ft10, ft5 
+2c071453 fmax.h fs0, fa4, ft0 
+2c731c53 fmax.h fs8, ft6, ft7 
+2da51d53 fmax.h fs10, fa0, fs10 
+2ce91fd3 fmax.h ft11, fs2, fa4 
+2c0d94d3 fmax.h fs1, fs11, ft0 
+2c7717d3 fmax.h fa5, fa4, ft7 
+2cee1ad3 fmax.h fs5, ft8, fa4 
+2cd49a53 fmax.h fs4, fs1, fa3 
+2cd99953 fmax.h fs2, fs3, fa3 
+2d9f17d3 fmax.h fa5, ft10, fs9 
+2c4d1953 fmax.h fs2, fs10, ft4 
+2d0a1053 fmax.h ft0, fs4, fa6 
+2cd29653 fmax.h fa2, ft5, fa3 
+2cc01853 fmax.h fa6, ft0, fa2 
+2c0598d3 fmax.h fa7, fa1, ft0 
+2d8e1b53 fmax.h fs6, ft8, fs8 
+2c800253 fmin.h ft4, ft0, fs0 
+2dcf0053 fmin.h ft0, ft10, ft8 
+2c4308d3 fmin.h fa7, ft6, ft4 
+2db60fd3 fmin.h ft11, fa2, fs11 
+2d240ad3 fmin.h fs5, fs0, fs2 
+2c288253 fmin.h ft4, fa7, ft2 
+2d9084d3 fmin.h fs1, ft1, fs9 
+2c978fd3 fmin.h ft11, fa5, fs1 
+2c7d0453 fmin.h fs0, fs10, ft7 
+2c750d53 fmin.h fs10, fa0, ft7 
+2ccf0453 fmin.h fs0, ft10, fa2 
+2cd181d3 fmin.h ft3, ft3, fa3 
+2d9e0653 fmin.h fa2, ft8, fs9 
+2d510ad3 fmin.h fs5, ft2, fs5 
+2d6501d3 fmin.h ft3, fa0, fs6 
+2d768b53 fmin.h fs6, fa3, fs7 
+2d5d0fd3 fmin.h ft11, fs10, fs5 
+2d7c0753 fmin.h fa4, fs8, fs7 
+2ce10553 fmin.h fa0, ft2, fa4 
+2d4103d3 fmin.h ft7, ft2, fs4 
+2c7e05d3 fmin.h fa1, ft8, ft7 
+2d6b8ad3 fmin.h fs5, fs7, fs6 
+2c5f0ed3 fmin.h ft9, ft10, ft5 
+2c1b01d3 fmin.h ft3, fs6, ft1 
+2c2200d3 fmin.h ft1, ft4, ft2 
+2d798d53 fmin.h fs10, fs3, fs7 
+2d720dd3 fmin.h fs11, ft4, fs7 
+2d848953 fmin.h fs2, fs1, fs8 
+2d5b0ed3 fmin.h ft9, fs6, fs5 
+2c1e8a53 fmin.h fs4, ft9, ft1 
+25c08547 fmsub.h fa0, ft1, ft8, ft4, rne 
+7c3bab47 fmsub.h fs6, fs7, ft3, fa5, rdn 
+7d9d07c7 fmsub.h fa5, fs10, fs9, fa5, rne 
+6c68b7c7 fmsub.h fa5, fa7, ft6, fa3, rup 
+f52bfc47 fmsub.h fs8, fs7, fs2, ft10, dyn 
+9d96b9c7 fmsub.h fs3, fa3, fs9, fs3, rup 
+7527bb47 fmsub.h fs6, fa5, fs2, fa4, rup 
+2d054ec7 fmsub.h ft9, fa0, fa6, ft5, rmm 
+e4a690c7 fmsub.h ft1, fa3, fa0, ft8, rtz 
+7d4120c7 fmsub.h ft1, ft2, fs4, fa5, rdn 
+6dff9947 fmsub.h fs2, ft11, ft11, fa3, rtz 
+ecde2447 fmsub.h fs0, ft8, fa3, ft9, rdn 
+64961547 fmsub.h fa0, fa2, fs1, fa2, rtz 
+4c04c847 fmsub.h fa6, fs1, ft0, fs1, rmm 
+05a1b5c7 fmsub.h fa1, ft3, fs10, ft0, rup 
+5c609347 fmsub.h ft6, ft1, ft6, fa1, rtz 
+74430547 fmsub.h fa0, ft6, ft4, fa4, rne 
+248636c7 fmsub.h fa3, fa2, fs0, ft4, rup 
+74d0c0c7 fmsub.h ft1, ft1, fa3, fa4, rmm 
+f5f9aec7 fmsub.h ft9, fs3, ft11, ft10, rdn 
+34ee1bc7 fmsub.h fs7, ft8, fa4, ft6, rtz 
+84caf947 fmsub.h fs2, fs5, fa2, fa6, dyn 
+ec1fcec7 fmsub.h ft9, ft11, ft1, ft9, rmm 
+1438f2d3 fmul.h ft5, fa7, ft3, dyn 
+1405f453 fmul.h fs0, fa1, ft0, dyn 
+15aa4c53 fmul.h fs8, fs4, fs10, rmm 
+145bf7d3 fmul.h fa5, fs7, ft5, dyn 
+14a01353 fmul.h ft6, ft0, fa0, rtz 
+14062d53 fmul.h fs10, fa2, ft0, rdn 
+15831953 fmul.h fs2, ft6, fs8, rtz 
+14353153 fmul.h ft2, fa0, ft3, rup 
+154cb853 fmul.h fa6, fs9, fs4, rup 
+14312653 fmul.h fa2, ft2, ft3, rdn 
+15632cd3 fmul.h fs9, ft6, fs6, rdn 
+143a2253 fmul.h ft4, fs4, ft3, rdn 
+14519d53 fmul.h fs10, ft3, ft5, rtz 
+1504f7d3 fmul.h fa5, fs1, fa6, dyn 
+15e725d3 fmul.h fa1, fa4, ft10, rdn 
+1484b9d3 fmul.h fs3, fs1, fs0, rup 
+15788e53 fmul.h ft8, fa7, fs7, rne 
+15f7b153 fmul.h ft2, fa5, ft11, rup 
+14f72ad3 fmul.h fs5, fa4, fa5, rdn 
+14161e53 fmul.h ft8, fa2, ft1, rtz 
+f40f8bd3 fmv.h.x fs7, t6 
+f40e8fd3 fmv.h.x ft11, t4 
+f4058b53 fmv.h.x fs6, a1 
+f4018a53 fmv.h.x fs4, gp 
+f40a02d3 fmv.h.x ft5, s4 
+f4000b53 fmv.h.x fs6, zero 
+f40c04d3 fmv.h.x fs1, s8 
+f40404d3 fmv.h.x fs1, s0 
+f4038ed3 fmv.h.x ft9, t2 
+f40289d3 fmv.h.x fs3, t0 
+f4088f53 fmv.h.x ft10, a7 
+f40b0353 fmv.h.x ft6, s6 
+f40007d3 fmv.h.x fa5, zero 
+f40f8dd3 fmv.h.x fs11, t6 
+f4038653 fmv.h.x fa2, t2 
+f40a01d3 fmv.h.x ft3, s4 
+f40481d3 fmv.h.x ft3, s1 
+f4020753 fmv.h.x fa4, tp 
+f4010cd3 fmv.h.x fs9, sp 
+f4010453 fmv.h.x fs0, sp 
+f40781d3 fmv.h.x ft3, a5 
+f40484d3 fmv.h.x fs1, s1 
+f4098dd3 fmv.h.x fs11, s3 
+f40306d3 fmv.h.x fa3, t1 
+f40d8753 fmv.h.x fa4, s11 
+f4040953 fmv.h.x fs2, s0 
+f40e8e53 fmv.h.x ft8, t4 
+f4060ed3 fmv.h.x ft9, a2 
+f4070e53 fmv.h.x ft8, a4 
+f4058e53 fmv.h.x ft8, a1 
+e4020753 fmv.x.h a4, ft4 
+e40e0953 fmv.x.h s2, ft8 
+e4080ed3 fmv.x.h t4, fa6 
+e40a8853 fmv.x.h a6, fs5 
+e4090cd3 fmv.x.h s9, fs2 
+e40a81d3 fmv.x.h gp, fs5 
+e4060653 fmv.x.h a2, fa2 
+e4058c53 fmv.x.h s8, fa1 
+e4058b53 fmv.x.h s6, fa1 
+e40908d3 fmv.x.h a7, fs2 
+e4088153 fmv.x.h sp, fa7 
+e40804d3 fmv.x.h s1, fa6 
+e4088453 fmv.x.h s0, fa7 
+e40a0ad3 fmv.x.h s5, fs4 
+e4018253 fmv.x.h tp, ft3 
+e4020dd3 fmv.x.h s11, ft4 
+e40f8353 fmv.x.h t1, ft11 
+e4018853 fmv.x.h a6, ft3 
+e40989d3 fmv.x.h s3, fs3 
+e4060e53 fmv.x.h t3, fa2 
+e4018c53 fmv.x.h s8, ft3 
+e4008fd3 fmv.x.h t6, ft1 
+e4078553 fmv.x.h a0, fa5 
+e40c8fd3 fmv.x.h t6, fs9 
+e40400d3 fmv.x.h ra, fs0 
+e4028253 fmv.x.h tp, ft5 
+e40802d3 fmv.x.h t0, fa6 
+e40b0553 fmv.x.h a0, fs6 
+e40b87d3 fmv.x.h a5, fs7 
+e40c0cd3 fmv.x.h s9, fs8 
+ed930c4f fnmadd.h fs8, ft6, fs9, ft9, rne 
+e55e48cf fnmadd.h fa7, ft8, fs5, ft8, rmm 
+955f2ecf fnmadd.h ft9, ft10, fs5, fs2, rdn 
+8433074f fnmadd.h fa4, ft6, ft3, fa6, rne 
+5d0d1ecf fnmadd.h ft9, fs10, fa6, fa1, rtz 
+2cd63c4f fnmadd.h fs8, fa2, fa3, ft5, rup 
+b40f294f fnmadd.h fs2, ft10, ft0, fs6, rdn 
+d521fd4f fnmadd.h fs10, ft3, fs2, fs10, dyn 
+2d9941cf fnmadd.h ft3, fs2, fs9, ft5, rmm 
+2461154f fnmadd.h fa0, ft2, ft6, ft4, rtz 
+5c762ccf fnmadd.h fs9, fa2, ft7, fa1, rdn 
+8cbc45cf fnmadd.h fa1, fs8, fa1, fa7, rmm 
+0d842f4f fnmadd.h ft10, fs0, fs8, ft1, rdn 
+fc49cd4f fnmadd.h fs10, fs3, ft4, ft11, rmm 
+ad16224f fnmadd.h ft4, fa2, fa7, fs5, rdn 
+8411cdcf fnmadd.h fs11, ft3, ft1, fa6, rmm 
+9c8ca84f fnmadd.h fa6, fs9, fs0, fs3, rdn 
+958270cf fnmadd.h ft1, ft4, fs8, fs2, dyn 
+0400434f fnmadd.h ft6, ft0, ft0, ft0, rmm 
+15fd264f fnmadd.h fa2, fs10, ft11, ft2, rdn 
+948fb84f fnmadd.h fa6, ft11, fs0, fs2, rup 
+c585724f fnmadd.h ft4, fa0, fs8, fs8, dyn 
+74fe23cf fnmadd.h ft7, ft8, fa5, fa4, rdn 
+74a74e4b fnmsub.h ft8, fa4, fa0, fa4, rmm 
+7ddd904b fnmsub.h ft0, fs11, ft9, fa5, rtz 
+c50df7cb fnmsub.h fa5, fs11, fa6, fs8, dyn 
+7579cb4b fnmsub.h fs6, fs3, fs7, fa4, rmm 
+2491c44b fnmsub.h fs0, ft3, fs1, ft4, rmm 
+45c7b04b fnmsub.h ft0, fa5, ft8, fs0, rup 
+140d73cb fnmsub.h ft7, fs10, ft0, ft2, dyn 
+359705cb fnmsub.h fa1, fa4, fs9, ft6, rne 
+bc2e0e4b fnmsub.h ft8, ft8, ft2, fs7, rne 
+744806cb fnmsub.h fa3, fa6, ft4, fa4, rne 
+24403ecb fnmsub.h ft9, ft0, ft4, ft4, rup 
+4571c24b fnmsub.h ft4, ft3, fs7, fs0, rmm 
+550db3cb fnmsub.h ft7, fs11, fa6, fa0, rup 
+1419c5cb fnmsub.h fa1, fs3, ft1, ft2, rmm 
+84aec24b fnmsub.h ft4, ft9, fa0, fa6, rmm 
+556b0c4b fnmsub.h fs8, fs6, fs6, fa0, rne 
+b49b8d4b fnmsub.h fs10, fs7, fs1, fs6, rne 
+95587dcb fnmsub.h fs11, fa6, fs5, fs2, dyn 
+1446a64b fnmsub.h fa2, fa3, ft4, ft2, rdn 
+3da43a4b fnmsub.h fs4, fs0, fs10, ft7, rup 
+34264bcb fnmsub.h fs7, fa2, ft2, ft6, rmm 
+b53ffdcb fnmsub.h fs11, ft11, fs3, fs6, dyn 
+5c97ba4b fnmsub.h fs4, fa5, fs1, fa1, rup 
+b5d414cb fnmsub.h fs1, fs0, ft9, fs6, rtz 
+dc9b014b fnmsub.h ft2, fs6, fs1, fs11, rne 
+25a00cd3 fsgnj.h fs9, ft0, fs10 
+25e20c53 fsgnj.h fs8, ft4, ft10 
+25460953 fsgnj.h fs2, fa2, fs4 
+24d488d3 fsgnj.h fa7, fs1, fa3 
+255d8353 fsgnj.h ft6, fs11, fs5 
+25398153 fsgnj.h ft2, fs3, fs3 
+25c687d3 fsgnj.h fa5, fa3, ft8 
+25ee05d3 fsgnj.h fa1, ft8, ft10 
+24bd01d3 fsgnj.h ft3, fs10, fa1 
+24e18ad3 fsgnj.h fs5, ft3, fa4 
+24af8253 fsgnj.h ft4, ft11, fa0 
+25328c53 fsgnj.h fs8, ft5, fs3 
+248b8053 fsgnj.h ft0, fs7, fs0 
+24450f53 fsgnj.h ft10, fa0, ft4 
+24348953 fsgnj.h fs2, fs1, ft3 
+25ab06d3 fsgnj.h fa3, fs6, fs10 
+256b0853 fsgnj.h fa6, fs6, fs6 
+25b18ed3 fsgnj.h ft9, ft3, fs11 
+244087d3 fsgnj.h fa5, ft1, ft4 
+25990853 fsgnj.h fa6, fs2, fs9 
+25660ed3 fsgnj.h ft9, fa2, fs6 
+24708f53 fsgnj.h ft10, ft1, ft7 
+256c8cd3 fsgnj.h fs9, fs9, fs6 
+25e904d3 fsgnj.h fs1, fs2, ft10 
+25808a53 fsgnj.h fs4, ft1, fs8 
+24ca01d3 fsgnj.h ft3, fs4, fa2 
+24a405d3 fsgnj.h fa1, fs0, fa0 
+251e0953 fsgnj.h fs2, ft8, fa7 
+24d08853 fsgnj.h fa6, ft1, fa3 
+25c68953 fsgnj.h fs2, fa3, ft8 
+250898d3 fsgnjn.h fa7, fa7, fa6 
+249b1453 fsgnjn.h fs0, fs6, fs1 
+251e1853 fsgnjn.h fa6, ft8, fa7 
+252c9f53 fsgnjn.h ft10, fs9, fs2 
+25a51ad3 fsgnjn.h fs5, fa0, fs10 
+24e795d3 fsgnjn.h fa1, fa5, fa4 
+24521ad3 fsgnjn.h fs5, ft4, ft5 
+257010d3 fsgnjn.h ft1, ft0, fs7 
+25419c53 fsgnjn.h fs8, ft3, fs4 
+24a896d3 fsgnjn.h fa3, fa7, fa0 
+25161953 fsgnjn.h fs2, fa2, fa7 
+250a9453 fsgnjn.h fs0, fs5, fa6 
+24369ad3 fsgnjn.h fs5, fa3, ft3 
+24169bd3 fsgnjn.h fs7, fa3, ft1 
+25671b53 fsgnjn.h fs6, fa4, fs6 
+25709a53 fsgnjn.h fs4, ft1, fs7 
+24ac1d53 fsgnjn.h fs10, fs8, fa0 
+254591d3 fsgnjn.h ft3, fa1, fs4 
+24c89153 fsgnjn.h ft2, fa7, fa2 
+24e79b53 fsgnjn.h fs6, fa5, fa4 
+24dd9ad3 fsgnjn.h fs5, fs11, fa3 
+24189f53 fsgnjn.h ft10, fa7, ft1 
+248416d3 fsgnjn.h fa3, fs0, fs0 
+24a213d3 fsgnjn.h ft7, ft4, fa0 
+255d1253 fsgnjn.h ft4, fs10, fs5 
+25e79cd3 fsgnjn.h fs9, fa5, ft10 
+24d51753 fsgnjn.h fa4, fa0, fa3 
+25b29e53 fsgnjn.h ft8, ft5, fs11 
+25089e53 fsgnjn.h ft8, fa7, fa6 
+248c9853 fsgnjn.h fa6, fs9, fs0 
+25f82cd3 fsgnjx.h fs9, fa6, ft11 
+2499a0d3 fsgnjx.h ft1, fs3, fs1 
+251f2b53 fsgnjx.h fs6, ft10, fa7 
+246225d3 fsgnjx.h fa1, ft4, ft6 
+2469aa53 fsgnjx.h fs4, fs3, ft6 
+24b2a953 fsgnjx.h fs2, ft5, fa1 
+24e0a553 fsgnjx.h fa0, ft1, fa4 
+251d2753 fsgnjx.h fa4, fs10, fa7 
+2542aed3 fsgnjx.h ft9, ft5, fs4 
+2446a853 fsgnjx.h fa6, fa3, ft4 
+24e82ad3 fsgnjx.h fs5, fa6, fa4 
+25d42053 fsgnjx.h ft0, fs0, ft9 
+2472a853 fsgnjx.h fa6, ft5, ft7 
+256d2153 fsgnjx.h ft2, fs10, fs6 
+257e28d3 fsgnjx.h fa7, ft8, fs7 
+254e2453 fsgnjx.h fs0, ft8, fs4 
+25152dd3 fsgnjx.h fs11, fa0, fa7 
+25b6a253 fsgnjx.h ft4, fa3, fs11 
+2594a353 fsgnjx.h ft6, fs1, fs9 
+252c2853 fsgnjx.h fa6, fs8, fs2 
+2400add3 fsgnjx.h fs11, ft1, ft0 
+252da7d3 fsgnjx.h fa5, fs11, fs2 
+24b0ac53 fsgnjx.h fs8, ft1, fa1 
+2594add3 fsgnjx.h fs11, fs1, fs9 
+247e28d3 fsgnjx.h fa7, ft8, ft7 
+2513a9d3 fsgnjx.h fs3, ft7, fa7 
+24d325d3 fsgnjx.h fa1, ft6, fa3 
+25dea553 fsgnjx.h fa0, ft9, ft9 
+2459a6d3 fsgnjx.h fa3, fs3, ft5 
+243ea9d3 fsgnjx.h fs3, ft9, ft3 
+b8979ca7 fsh fs1, -0x467(a5) 
+95289827 fsh fs2, -0x6b0(a7) 
+00749ba7 fsh ft7, 0x17(s1) 
+a65991a7 fsh ft5, -0x59d(s3) 
+c9331327 fsh fs3, -0x37a(t1) 
+59539ba7 fsh fs5, 0x597(t2) 
+381a96a7 fsh ft1, 0x38d(s5) 
+6c5f9ba7 fsh ft5, 0x6d7(t6) 
+bf131427 fsh fa7, -0x418(t1) 
+e2e115a7 fsh fa4, -0x1d5(sp) 
+857217a7 fsh fs7, -0x7b1(tp) 
+3c591aa7 fsh ft5, 0x3d5(s2) 
+ea861ba7 fsh fs0, -0x149(a2) 
+b7d41ba7 fsh ft9, -0x489(s0) 
+4c799c27 fsh ft7, 0x4d8(s3) 
+ed551e27 fsh fs5, -0x124(a0) 
+4d6c9da7 fsh fs6, 0x4db(s9) 
+08bc1527 fsh fa1, 0x8a(s8) 
+e2791027 fsh ft7, -0x1e0(s2) 
+e14e99a7 fsh fs4, -0x1ed(t4) 
+46fa92a7 fsh fa5, 0x465(s5) 
+a4171227 fsh ft1, -0x5bc(a4) 
+993e1a27 fsh fs3, -0x66c(t3) 
+f3249b27 fsh fs2, -0xca(s1) 
+70271827 fsh ft2, 0x710(a4) 
+0c369327 fsh ft3, 0xc6(a3) 
+b8d29227 fsh fa3, -0x47c(t0) 
+c63691a7 fsh ft3, -0x39d(a3) 
+deee1ba7 fsh fa4, -0x209(t3) 
+948098a7 fsh fs0, -0x6af(ra) 
+5c0caad3 fsqrt.h fs5, fs9, rdn 
+5c0ea553 fsqrt.h fa0, ft9, rdn 
+5c003053 fsqrt.h ft0, ft0, rup 
+5c0c1053 fsqrt.h ft0, fs8, rtz 
+5c0ebe53 fsqrt.h ft8, ft9, rup 
+5c001453 fsqrt.h fs0, ft0, rtz 
+5c0d13d3 fsqrt.h ft7, fs10, rtz 
+5c073a53 fsqrt.h fs4, fa4, rup 
+5c05a3d3 fsqrt.h ft7, fa1, rdn 
+5c0aae53 fsqrt.h ft8, fs5, rdn 
+5c0ffcd3 fsqrt.h fs9, ft11, dyn 
+5c0182d3 fsqrt.h ft5, ft3, rne 
+5c0f9b53 fsqrt.h fs6, ft11, rtz 
+5c02c2d3 fsqrt.h ft5, ft5, rmm 
+5c0da653 fsqrt.h fa2, fs11, rdn 
+5c0ac753 fsqrt.h fa4, fs5, rmm 
+5c03c1d3 fsqrt.h ft3, ft7, rmm 
+5c0580d3 fsqrt.h ft1, fa1, rne 
+5c02c9d3 fsqrt.h fs3, ft5, rmm 
+5c03a9d3 fsqrt.h fs3, ft7, rdn 
+5c0b15d3 fsqrt.h fa1, fs6, rtz 
+5c0d39d3 fsqrt.h fs3, fs10, rup 
+5c0f2c53 fsqrt.h fs8, ft10, rdn 
+0c14ff53 fsub.h ft10, fs1, ft1, dyn 
+0c547553 fsub.h fa0, fs0, ft5, dyn 
+0c8ffd53 fsub.h fs10, ft11, fs0, dyn 
+0c75c153 fsub.h ft2, fa1, ft7, rmm 
+0cc44f53 fsub.h ft10, fs0, fa2, rmm 
+0d732f53 fsub.h ft10, ft6, fs7, rdn 
+0dac10d3 fsub.h ft1, fs8, fs10, rtz 
+0dfef253 fsub.h ft4, ft9, ft11, dyn 
+0cd6f9d3 fsub.h fs3, fa3, fa3, dyn 
+0dc73ad3 fsub.h fs5, fa4, ft8, rup 
+0c2212d3 fsub.h ft5, ft4, ft2, rtz 
+0da31653 fsub.h fa2, ft6, fs10, rtz 
+0d15f253 fsub.h ft4, fa1, fa7, dyn 
+0de838d3 fsub.h fa7, fa6, ft10, rup 
+0c4085d3 fsub.h fa1, ft1, ft4, rne 
+0c9fced3 fsub.h ft9, ft11, fs1, rmm 
+0cee41d3 fsub.h ft3, ft8, fa4, rmm 
+0c124253 fsub.h ft4, ft4, ft1, rmm 
+0c6a8cd3 fsub.h fs9, fs5, ft6, rne 
+0cb9b2d3 fsub.h ft5, fs3, fa1, rup 

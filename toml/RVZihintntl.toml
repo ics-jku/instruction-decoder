@@ -1,0 +1,39 @@
+set = "RVZihintntl"
+width = 32
+
+[types]
+names = ["format-1-0"]
+parts = [["none", 32, "u32"], ["imm", 32, "VInt"], ["himm", 32, "VInt", "hex"]]
+
+[type]
+names = ["type-1-0"]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[mappings]
+names = []
+number = 32
+
+[format-1-0.repr]
+default = "$name$"
+
+[format-1-0.instructions.ntl_all]
+mask = 0xffffffff
+match = 0x500033
+
+[format-1-0.instructions.ntl_p1]
+mask = 0xffffffff
+match = 0x200033
+
+[format-1-0.instructions.ntl_pall]
+mask = 0xffffffff
+match = 0x300033
+
+[format-1-0.instructions.ntl_s1]
+mask = 0xffffffff
+match = 0x400033

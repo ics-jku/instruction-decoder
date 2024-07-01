@@ -1,0 +1,318 @@
+set = "RV32Zcf"
+width = 16
+
+[types]
+names = ["format-1-0", "format-2-0", "format-3-0", "format-4-0"]
+parts = [
+    [
+        "rd_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rd_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rs1_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs1_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rd_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs2_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs2_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "c_rs2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "c_rs2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = ["type-1-0", "type-2-0", "type-3-0", "type-4-0"]
+[[type.type-1-0]]
+name = "none"
+top = 15
+bot = 13
+
+[[type.type-1-0]]
+name = "himm"
+top = 5
+bot = 3
+
+[[type.type-1-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-1-0]]
+name = "himm"
+top = 2
+bot = 2
+
+[[type.type-1-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-1-0]]
+name = "rd_p_Register_float_c"
+top = 2
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 15
+bot = 13
+
+[[type.type-2-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-2-0]]
+name = "rd_Register_float"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "himm"
+top = 4
+bot = 2
+
+[[type.type-2-0]]
+name = "himm"
+top = 7
+bot = 6
+
+[[type.type-2-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 15
+bot = 13
+
+[[type.type-3-0]]
+name = "himm"
+top = 5
+bot = 3
+
+[[type.type-3-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-3-0]]
+name = "himm"
+top = 2
+bot = 2
+
+[[type.type-3-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-3-0]]
+name = "rs2_p_Register_float_c"
+top = 2
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 15
+bot = 13
+
+[[type.type-4-0]]
+name = "himm"
+top = 5
+bot = 2
+
+[[type.type-4-0]]
+name = "himm"
+top = 7
+bot = 6
+
+[[type.type-4-0]]
+name = "c_rs2_Register_float"
+top = 4
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 1
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[format-2-0]
+type = "type-2-0"
+
+[format-3-0]
+type = "type-3-0"
+
+[format-4-0]
+type = "type-4-0"
+
+[mappings]
+names = ["Register_int", "Register_int_c", "Register_float", "Register_float_c"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
+Register_int_c = ["s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5"]
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
+
+[format-1-0.repr]
+default = "$name$ %rd_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-2-0.repr]
+default = "$name$ %rd_p_Register_float_c%, %himm%(%sp%)"
+
+[format-3-0.repr]
+default = "$name$ %rs2_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-4-0.repr]
+default = "$name$ %c_rs2_Register_float%, %himm%(sp)"
+
+[format-1-0.instructions.c_flw]
+mask = 0xe003
+match = 0x6000
+unsigned = true
+
+[format-2-0.instructions.c_flwsp]
+mask = 0xe003
+match = 0x6002
+unsigned = true
+
+[format-3-0.instructions.c_fsw]
+mask = 0xe003
+match = 0xe000
+unsigned = true
+
+[format-4-0.instructions.c_fswsp]
+mask = 0xe003
+match = 0xe002
+unsigned = true

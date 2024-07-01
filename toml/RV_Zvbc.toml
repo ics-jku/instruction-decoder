@@ -1,0 +1,260 @@
+set = "RVZvbc"
+width = 32
+
+[types]
+names = ["format-1-0", "format-2-0"]
+parts = [
+    [
+        "vm",
+        1,
+        "Mapping_vm",
+    ],
+    [
+        "vs2",
+        5,
+        "Register_vec",
+    ],
+    [
+        "vs1",
+        5,
+        "Register_vec",
+    ],
+    [
+        "vd",
+        5,
+        "Register_vec",
+    ],
+    [
+        "rs1_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = ["type-1-0", "type-2-0"]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 26
+
+[[type.type-1-0]]
+name = "vm"
+top = 0
+bot = 0
+
+[[type.type-1-0]]
+name = "vs2"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "vs1"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type-1-0]]
+name = "vd"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 31
+bot = 26
+
+[[type.type-2-0]]
+name = "vm"
+top = 0
+bot = 0
+
+[[type.type-2-0]]
+name = "vs2"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "rs1_Register_int"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 14
+bot = 12
+
+[[type.type-2-0]]
+name = "vd"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 6
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[format-2-0]
+type = "type-2-0"
+
+[mappings]
+names = ["Register_int", "Register_float", "Register_vec", "Mapping_vm"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+Register_vec = [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "v16",
+    "v17",
+    "v18",
+    "v19",
+    "v20",
+    "v21",
+    "v22",
+    "v23",
+    "v24",
+    "v25",
+    "v26",
+    "v27",
+    "v28",
+    "v29",
+    "v30",
+    "v31",
+]
+Mapping_vm = [", v0.t", ""]
+
+[format-1-0.repr]
+default = "$name$ %vd%, %vs2%, %vs1%%vm%"
+
+[format-2-0.repr]
+default = "$name$ %vd%, %vs2%, %rs1_Register_int%%vm%"
+
+[format-1-0.instructions.vclmul_vv]
+mask = 0xfc00707f
+match = 0x30002057
+
+[format-1-0.instructions.vclmulh_vv]
+mask = 0xfc00707f
+match = 0x34002057
+
+[format-2-0.instructions.vclmul_vx]
+mask = 0xfc00707f
+match = 0x30006057
+
+[format-2-0.instructions.vclmulh_vx]
+mask = 0xfc00707f
+match = 0x34006057

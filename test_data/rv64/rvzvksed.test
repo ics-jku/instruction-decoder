@@ -1,0 +1,87 @@
+8628aaf7 vsm4k.vi v21, v2, 0x11 
+87a7af77 vsm4k.vi v30, v26, 0xf 
+87422df7 vsm4k.vi v27, v20, 0x4 
+8633aef7 vsm4k.vi v29, v3, 0x7 
+87beacf7 vsm4k.vi v25, v27, 0x1d 
+86d72077 vsm4k.vi v0, v13, 0xe 
+87de2df7 vsm4k.vi v27, v29, 0x1c 
+8699a6f7 vsm4k.vi v13, v9, 0x13 
+8666ad77 vsm4k.vi v26, v6, 0xd 
+8781a577 vsm4k.vi v10, v24, 0x3 
+868faff7 vsm4k.vi v31, v8, 0x1f 
+86be26f7 vsm4k.vi v13, v11, 0x1c 
+860720f7 vsm4k.vi v1, v0, 0xe 
+8796a277 vsm4k.vi v4, v25, 0xd 
+864ea677 vsm4k.vi v12, v4, 0x1d 
+8604a777 vsm4k.vi v14, v0, 0x9 
+87532ff7 vsm4k.vi v31, v21, 0x6 
+86f02477 vsm4k.vi v8, v15, 0x0 
+879822f7 vsm4k.vi v5, v25, 0x10 
+86baacf7 vsm4k.vi v25, v11, 0x15 
+86942a77 vsm4k.vi v20, v9, 0x8 
+8759a6f7 vsm4k.vi v13, v21, 0x13 
+86d3ae77 vsm4k.vi v28, v13, 0x7 
+87622277 vsm4k.vi v4, v22, 0x4 
+868ca177 vsm4k.vi v2, v8, 0x19 
+86d5a377 vsm4k.vi v6, v13, 0xb 
+86132c77 vsm4k.vi v24, v1, 0x6 
+a7d82277 vsm4r.vs v4, v29 
+a6c82977 vsm4r.vs v18, v12 
+a7e824f7 vsm4r.vs v9, v30 
+a6f82df7 vsm4r.vs v27, v15 
+a6d826f7 vsm4r.vs v13, v13 
+a6882b77 vsm4r.vs v22, v8 
+a7982ef7 vsm4r.vs v29, v25 
+a6582af7 vsm4r.vs v21, v5 
+a6882b77 vsm4r.vs v22, v8 
+a6282ef7 vsm4r.vs v29, v2 
+a61821f7 vsm4r.vs v3, v1 
+a7f82e77 vsm4r.vs v28, v31 
+a7582277 vsm4r.vs v4, v21 
+a6982d77 vsm4r.vs v26, v9 
+a72824f7 vsm4r.vs v9, v18 
+a7a826f7 vsm4r.vs v13, v26 
+a7d82277 vsm4r.vs v4, v29 
+a7882677 vsm4r.vs v12, v24 
+a6482f77 vsm4r.vs v30, v4 
+a66821f7 vsm4r.vs v3, v6 
+a6c82f77 vsm4r.vs v30, v12 
+a7682b77 vsm4r.vs v22, v22 
+a6382677 vsm4r.vs v12, v3 
+a7982ff7 vsm4r.vs v31, v25 
+a6f82af7 vsm4r.vs v21, v15 
+a7882177 vsm4r.vs v2, v24 
+a6f82577 vsm4r.vs v10, v15 
+a6c82ef7 vsm4r.vs v29, v12 
+a7b824f7 vsm4r.vs v9, v27 
+a7982a77 vsm4r.vs v20, v25 
+a3d82af7 vsm4r.vv v21, v29 
+a2882777 vsm4r.vv v14, v8 
+a2882cf7 vsm4r.vv v25, v8 
+a24821f7 vsm4r.vv v3, v4 
+a2582e77 vsm4r.vv v28, v5 
+a3982d77 vsm4r.vv v26, v25 
+a21824f7 vsm4r.vv v9, v1 
+a29824f7 vsm4r.vv v9, v9 
+a3082f77 vsm4r.vv v30, v16 
+a2182a77 vsm4r.vv v20, v1 
+a2482377 vsm4r.vv v6, v4 
+a2982e77 vsm4r.vv v28, v9 
+a3a82177 vsm4r.vv v2, v26 
+a2782ff7 vsm4r.vv v31, v7 
+a2482977 vsm4r.vv v18, v4 
+a2582a77 vsm4r.vv v20, v5 
+a2d82e77 vsm4r.vv v28, v13 
+a2e821f7 vsm4r.vv v3, v14 
+a33827f7 vsm4r.vv v15, v19 
+a3f825f7 vsm4r.vv v11, v31 
+a3b82077 vsm4r.vv v0, v27 
+a2b825f7 vsm4r.vv v11, v11 
+a2e82df7 vsm4r.vv v27, v14 
+a3982777 vsm4r.vv v14, v25 
+a24826f7 vsm4r.vv v13, v4 
+a2682177 vsm4r.vv v2, v6 
+a2482377 vsm4r.vv v6, v4 
+a2582977 vsm4r.vv v18, v5 
+a2882ff7 vsm4r.vv v31, v8 
+a2382df7 vsm4r.vv v27, v3 
