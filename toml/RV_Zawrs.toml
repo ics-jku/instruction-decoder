@@ -1,0 +1,31 @@
+set = "RVZawrs"
+width = 32
+
+[types]
+names = [ "format-1-0",]
+parts = [ [ "none", 32, "u32",], [ "imm", 32, "VInt",], [ "himm", 32, "VInt", "hex",],]
+
+[type]
+names = [ "type-1-0",]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 0
+
+[format-1-0]
+type = "type-1-0"
+
+[mappings]
+names = []
+number = 32
+
+[format-1-0.repr]
+default = "$name$"
+
+[format-1-0.instructions.wrs_nto]
+mask = 0xffffffff
+match = 0xd00073
+
+[format-1-0.instructions.wrs_sto]
+mask = 0xffffffff
+match = 0x1d00073

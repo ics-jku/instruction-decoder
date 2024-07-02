@@ -1,0 +1,147 @@
+30001f13 aes64im t5, zero 
+30009893 aes64im a7, ra 
+30011193 aes64im gp, sp 
+30011993 aes64im s3, sp 
+30021893 aes64im a7, tp 
+30021e93 aes64im t4, tp 
+30039f13 aes64im t5, t2 
+30049113 aes64im sp, s1 
+30049393 aes64im t2, s1 
+30059f13 aes64im t5, a1 
+30061693 aes64im a3, a2 
+30061a93 aes64im s5, a2 
+30061d93 aes64im s11, a2 
+30061f93 aes64im t6, a2 
+30069c13 aes64im s8, a3 
+30071793 aes64im a5, a4 
+30071813 aes64im a6, a4 
+30081b93 aes64im s7, a6 
+30089b13 aes64im s6, a7 
+30089b93 aes64im s7, a7 
+300a9313 aes64im t1, s5 
+300a9813 aes64im a6, s5 
+300c1b13 aes64im s6, s8 
+300c9293 aes64im t0, s9 
+300c9513 aes64im a0, s9 
+300d1313 aes64im t1, s10 
+300d1413 aes64im s0, s10 
+300f1513 aes64im a0, t5 
+300f9093 aes64im ra, t6 
+300f9293 aes64im t0, t6 
+31021293 aes64ks1i t0, tp, 0x0 
+31031e93 aes64ks1i t4, t1, 0x0 
+31051d13 aes64ks1i s10, a0, 0x0 
+31099993 aes64ks1i s3, s3, 0x0 
+310b9813 aes64ks1i a6, s7, 0x0 
+31101793 aes64ks1i a5, zero, 0x1 
+311c9913 aes64ks1i s2, s9, 0x1 
+311f1b93 aes64ks1i s7, t5, 0x1 
+31201c93 aes64ks1i s9, zero, 0x2 
+31349313 aes64ks1i t1, s1, 0x3 
+31441f93 aes64ks1i t6, s0, 0x4 
+31581093 aes64ks1i ra, a6, 0x5 
+315b1b93 aes64ks1i s7, s6, 0x5 
+315e9b13 aes64ks1i s6, t4, 0x5 
+31609313 aes64ks1i t1, ra, 0x6 
+31611e93 aes64ks1i t4, sp, 0x6 
+31661313 aes64ks1i t1, a2, 0x6 
+317a9913 aes64ks1i s2, s5, 0x7 
+31899a93 aes64ks1i s5, s3, 0x8 
+318f9513 aes64ks1i a0, t6, 0x8 
+31a61d93 aes64ks1i s11, a2, 0xa 
+31b09413 aes64ks1i s0, ra, 0xb 
+31b21293 aes64ks1i t0, tp, 0xb 
+31cb1993 aes64ks1i s3, s6, 0xc 
+31ce1493 aes64ks1i s1, t3, 0xc 
+31e01f13 aes64ks1i t5, zero, 0xe 
+31f09a93 aes64ks1i s5, ra, 0xf 
+31f21093 aes64ks1i ra, tp, 0xf 
+31f51813 aes64ks1i a6, a0, 0xf 
+31f81993 aes64ks1i s3, a6, 0xf 
+3a4d8cb3 aes64ds s9, s11, tp 
+3a518833 aes64ds a6, gp, t0 
+3a6a07b3 aes64ds a5, s4, t1 
+3a9706b3 aes64ds a3, a4, s1 
+3abe8933 aes64ds s2, t4, a1 
+3ad50033 aes64ds zero, a0, a3 
+3aee82b3 aes64ds t0, t4, a4 
+3aee8733 aes64ds a4, t4, a4 
+3b0c86b3 aes64ds a3, s9, a6 
+3b2801b3 aes64ds gp, a6, s2 
+3b390d33 aes64ds s10, s2, s3 
+3b4103b3 aes64ds t2, sp, s4 
+3b448eb3 aes64ds t4, s1, s4 
+3b460cb3 aes64ds s9, a2, s4 
+3b470db3 aes64ds s11, a4, s4 
+3b4f8b33 aes64ds s6, t6, s4 
+3b5f0d33 aes64ds s10, t5, s5 
+3b6383b3 aes64ds t2, t2, s6 
+3b7605b3 aes64ds a1, a2, s7 
+3b7a07b3 aes64ds a5, s4, s7 
+3b920b33 aes64ds s6, tp, s9 
+3bac09b3 aes64ds s3, s8, s10 
+3bb88f33 aes64ds t5, a7, s11 
+3bdc09b3 aes64ds s3, s8, t4 
+3bed0cb3 aes64ds s9, s10, t5 
+3bf50eb3 aes64ds t4, a0, t6 
+3bf60433 aes64ds s0, a2, t6 
+3e490eb3 aes64dsm t4, s2, tp 
+3e4c0bb3 aes64dsm s7, s8, tp 
+3e4d0733 aes64dsm a4, s10, tp 
+3e4e8c33 aes64dsm s8, t4, tp 
+3e5d8633 aes64dsm a2, s11, t0 
+3e8d8db3 aes64dsm s11, s11, s0 
+3e9f0ab3 aes64dsm s5, t5, s1 
+3eb680b3 aes64dsm ra, a3, a1 
+3ef304b3 aes64dsm s1, t1, a5 
+3ef60333 aes64dsm t1, a2, a5 
+3efd85b3 aes64dsm a1, s11, a5 
+3f200c33 aes64dsm s8, zero, s2 
+3f2a01b3 aes64dsm gp, s4, s2 
+3f3001b3 aes64dsm gp, zero, s3 
+3f308333 aes64dsm t1, ra, s3 
+3f3c0cb3 aes64dsm s9, s8, s3 
+3f560f33 aes64dsm t5, a2, s5 
+3f650833 aes64dsm a6, a0, s6 
+3f798bb3 aes64dsm s7, s3, s7 
+3f7d8033 aes64dsm zero, s11, s7 
+3f838cb3 aes64dsm s9, t2, s8 
+3fad0933 aes64dsm s2, s10, s10 
+3fb60e33 aes64dsm t3, a2, s11 
+3fbb87b3 aes64dsm a5, s7, s11 
+3fc986b3 aes64dsm a3, s3, t3 
+3fce0d33 aes64dsm s10, t3, t3 
+3fd40233 aes64dsm tp, s0, t4 
+3fde8a33 aes64dsm s4, t4, t4 
+3ff00133 aes64dsm sp, zero, t6 
+3ffd85b3 aes64dsm a1, s11, t6 
+7e058233 aes64ks2 tp, a1, zero 
+7e1b8b33 aes64ks2 s6, s7, ra 
+7e2a8733 aes64ks2 a4, s5, sp 
+7e2d0633 aes64ks2 a2, s10, sp 
+7e4d04b3 aes64ks2 s1, s10, tp 
+7e6c8233 aes64ks2 tp, s9, t1 
+7e740cb3 aes64ks2 s9, s0, t2 
+7e7e88b3 aes64ks2 a7, t4, t2 
+7ea08633 aes64ks2 a2, ra, a0 
+7eba8533 aes64ks2 a0, s5, a1 
+7ec38333 aes64ks2 t1, t2, a2 
+7edb0bb3 aes64ks2 s7, s6, a3 
+7edf07b3 aes64ks2 a5, t5, a3 
+7ef90233 aes64ks2 tp, s2, a5 
+7f128933 aes64ks2 s2, t0, a7 
+7f168233 aes64ks2 tp, a3, a7 
+7f190633 aes64ks2 a2, s2, a7 
+7f2b06b3 aes64ks2 a3, s6, s2 
+7f2b8733 aes64ks2 a4, s7, s2 
+7f400533 aes64ks2 a0, zero, s4 
+7f438033 aes64ks2 zero, t2, s4 
+7f600a33 aes64ks2 s4, zero, s6 
+7f668633 aes64ks2 a2, a3, s6 
+7f6e8033 aes64ks2 zero, t4, s6 
+7f8c0a33 aes64ks2 s4, s8, s8 
+7f8f8933 aes64ks2 s2, t6, s8 
+7fcb01b3 aes64ks2 gp, s6, t3 
+7fd989b3 aes64ks2 s3, s3, t4 
+7fe10533 aes64ks2 a0, sp, t5 
+7fe78ab3 aes64ks2 s5, a5, t5 

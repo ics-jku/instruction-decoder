@@ -5,7 +5,10 @@ macro_rules! isa_test {
         read_to_string($test).unwrap().lines().for_each(|line| {
             if let Some((instr_hex, expected)) = line.split_once(' ') {
                 let instr = i64::from_str_radix(instr_hex, 16).unwrap();
-                let iform = test_decoder.decode_from_i64(instr, 32);
+                let iform = test_decoder.decode_from_i64(
+                    instr,
+                    test_decoder.instruction_sets.get(0).unwrap().bit_width,
+                );
                 assert!(
                     iform.is_ok(),
                     "Can not decode {} into expected {}",
