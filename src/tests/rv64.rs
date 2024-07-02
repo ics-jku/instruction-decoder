@@ -137,10 +137,15 @@ fn test_rv64_c() {
 
 #[test]
 fn test_rv64_zcd() {
-    isa_test!("../../toml/RV64Zcd.toml", "test_data/rv64/rv64zcd.test");
+    isa_test!("../../toml/RV64_Zcd.toml", "test_data/rv64/rv64zcd.test");
 }
 
 #[test]
 fn test_rv64_zfa() {
-    isa_test!("../../toml/RV64Zfa.toml", "test_data/rv64/rv64zfa.test");
+    isa_test!("../../toml/RV64_Zfa.toml", "test_data/rv64/rv64zfa.test");
+}
+
+#[test]
+fn test_rvv() {
+    isa_test!("../../toml/RVV.toml", "test_data/rv64/rvv.test");
 }
