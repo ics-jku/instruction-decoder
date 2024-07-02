@@ -664,6 +664,15 @@ impl Decoder {
         self.decode(parse_u128(instruction), bit_width)
     }
 
+    pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
+        let finds = self.decode_all(instruction, bit_width);
+        if finds.is_empty() {
+            Err("Unknown Instruction".to_string())
+        } else {
+            Ok(finds[finds.len() - 1].clone())
+        }
+    }
+
     pub fn decode_all(&self, instruction: u128, bit_width: usize) -> Vec<String> {
         let mut finds: Vec<String> = vec![];
 
@@ -692,21 +701,20 @@ impl Decoder {
         finds
     }
 
-    pub fn decode(&self, instruction: u128, bit_width: usize) -> Result<String, String> {
-        let finds = self.decode_all(instruction, bit_width);
-        if finds.is_empty() {
-            Err("Unknown Instruction".to_string())
-        } else {
-            Ok(finds[finds.len() - 1].clone())
-        }
-    }
-
     pub fn decode_from_u32(&self, instruction: u32, bit_width: usize) -> Result<String, String> {
         self.decode(instruction as u128, bit_width)
     }
 
+    pub fn decode_all_from_u32(&self, instruction: u32, bit_width: usize) -> Vec<String> {
+        self.decode_all(instruction as u128, bit_width)
+    }
+
     pub fn decode_from_i64(&self, instruction: i64, bit_width: usize) -> Result<String, String> {
         self.decode(instruction as u128, bit_width)
+    }
+
+    pub fn decode_all_from_i64(&self, instruction: i64, bit_width: usize) -> Vec<String> {
+        self.decode_all(instruction as u128, bit_width)
     }
 
     pub fn decode_from_bytes(
@@ -720,5 +728,14 @@ impl Decoder {
             tmp |= ib as u128;
         }
         self.decode(tmp, bit_width)
+    }
+
+    pub fn decode_all_from_bytes(&self, instruction: Vec<u8>, bit_width: usize) -> Vec<String> {
+        let mut tmp = 0;
+        for ib in instruction {
+            tmp <<= 8;
+            tmp |= ib as u128;
+        }
+        self.decode_all(tmp, bit_width)
     }
 }

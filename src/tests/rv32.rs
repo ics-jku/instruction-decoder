@@ -56,3 +56,8 @@ fn test_rv32_zkne() {
 fn test_rv32_c() {
     isa_test!("../../toml/RV32C.toml", "test_data/rv32/rv32c.test");
 }
+
+#[test]
+fn test_rv32_zfa() {
+    isa_test!("../../toml/RV32Zfa.toml", "test_data/rv32/rv32zfa.test");
+}
