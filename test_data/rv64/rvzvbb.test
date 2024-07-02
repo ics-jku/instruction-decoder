@@ -1,477 +1,477 @@
-06750ed7 vandn.vv v29, v7, v10 
-04120dd7 vandn.vv v27, v1, v4, v0.t 
-074183d7 vandn.vv v7, v20, v3 
-06f00e57 vandn.vv v28, v15, v0 
-053288d7 vandn.vv v17, v19, v5, v0.t 
-047f0f57 vandn.vv v30, v7, v30, v0.t 
-05b00657 vandn.vv v12, v27, v0, v0.t 
-06dc82d7 vandn.vv v5, v13, v25 
-05c684d7 vandn.vv v9, v28, v13, v0.t 
-044e0157 vandn.vv v2, v4, v28, v0.t 
-04078257 vandn.vv v4, v0, v15, v0.t 
-05438fd7 vandn.vv v31, v20, v7, v0.t 
-06c606d7 vandn.vv v13, v12, v12 
-06570557 vandn.vv v10, v5, v14 
-049c8457 vandn.vv v8, v9, v25, v0.t 
-05b281d7 vandn.vv v3, v27, v5, v0.t 
-054d8257 vandn.vv v4, v20, v27, v0.t 
-05088757 vandn.vv v14, v16, v17, v0.t 
-07980a57 vandn.vv v20, v25, v16 
-050f88d7 vandn.vv v17, v16, v31, v0.t 
-070281d7 vandn.vv v3, v16, v5 
-066c82d7 vandn.vv v5, v6, v25 
-055008d7 vandn.vv v17, v21, v0, v0.t 
-046c82d7 vandn.vv v5, v6, v25, v0.t 
-061e8e57 vandn.vv v28, v1, v29 
-07908a57 vandn.vv v20, v25, v1 
-07cb8457 vandn.vv v8, v28, v23 
-05d24757 vandn.vx v14, v29, tp, v0.t 
-0485c2d7 vandn.vx v5, v8, a1, v0.t 
-04354657 vandn.vx v12, v3, a0, v0.t 
-0488c8d7 vandn.vx v17, v8, a7, v0.t 
-06b848d7 vandn.vx v17, v11, a6 
-0480c8d7 vandn.vx v17, v8, ra, v0.t 
-0726c4d7 vandn.vx v9, v18, a3 
-069749d7 vandn.vx v19, v9, a4 
-0630cc57 vandn.vx v24, v3, ra 
-04bacbd7 vandn.vx v23, v11, s5, v0.t 
-058dc8d7 vandn.vx v17, v24, s11, v0.t 
-04a44557 vandn.vx v10, v10, s0, v0.t 
-07754357 vandn.vx v6, v23, a0 
-079ecf57 vandn.vx v30, v25, t4 
-0702c057 vandn.vx v0, v16, t0 
-069ccad7 vandn.vx v21, v9, s9 
-050ccd57 vandn.vx v26, v16, s9, v0.t 
-05f5c657 vandn.vx v12, v31, a1, v0.t 
-05b9c4d7 vandn.vx v9, v27, s3, v0.t 
-0408c0d7 vandn.vx v1, v0, a7, v0.t 
-05c747d7 vandn.vx v15, v28, a4, v0.t 
-0459ced7 vandn.vx v29, v5, s3, v0.t 
-067acd57 vandn.vx v26, v7, s5 
-06f040d7 vandn.vx v1, v15, zero 
-07e44fd7 vandn.vx v31, v30, s0 
-0754cb57 vandn.vx v22, v21, s1 
-071acd57 vandn.vx v26, v17, s5 
 04034257 vandn.vx v4, v0, t1, v0.t 
-06fcc857 vandn.vx v16, v15, s9 
+04078257 vandn.vv v4, v0, v15, v0.t 
+0408c0d7 vandn.vx v1, v0, a7, v0.t 
+04120dd7 vandn.vv v27, v1, v4, v0.t 
+04354657 vandn.vx v12, v3, a0, v0.t 
+044e0157 vandn.vv v2, v4, v28, v0.t 
+0459ced7 vandn.vx v29, v5, s3, v0.t 
+046c82d7 vandn.vv v5, v6, v25, v0.t 
+047f0f57 vandn.vv v30, v7, v30, v0.t 
+0480c8d7 vandn.vx v17, v8, ra, v0.t 
+0485c2d7 vandn.vx v5, v8, a1, v0.t 
+0488c8d7 vandn.vx v17, v8, a7, v0.t 
+049c8457 vandn.vv v8, v9, v25, v0.t 
+04a44557 vandn.vx v10, v10, s0, v0.t 
+04bacbd7 vandn.vx v23, v11, s5, v0.t 
+05088757 vandn.vv v14, v16, v17, v0.t 
+050ccd57 vandn.vx v26, v16, s9, v0.t 
+050f88d7 vandn.vv v17, v16, v31, v0.t 
+053288d7 vandn.vv v17, v19, v5, v0.t 
+05438fd7 vandn.vv v31, v20, v7, v0.t 
+054d8257 vandn.vv v4, v20, v27, v0.t 
+055008d7 vandn.vv v17, v21, v0, v0.t 
+058dc8d7 vandn.vx v17, v24, s11, v0.t 
+05b00657 vandn.vv v12, v27, v0, v0.t 
+05b281d7 vandn.vv v3, v27, v5, v0.t 
+05b9c4d7 vandn.vx v9, v27, s3, v0.t 
 05c54357 vandn.vx v6, v28, a0, v0.t 
-4b9429d7 vbrev8.v v19, v25 
-4ab42457 vbrev8.v v8, v11 
-4b4427d7 vbrev8.v v15, v20 
-4a142ed7 vbrev8.v v29, v1 
-4ba42057 vbrev8.v v0, v26 
-49242fd7 vbrev8.v v31, v18, v0.t 
-4ac42a57 vbrev8.v v20, v12 
-4b2422d7 vbrev8.v v5, v18 
-49642657 vbrev8.v v12, v22, v0.t 
-49642057 vbrev8.v v0, v22, v0.t 
+05c684d7 vandn.vv v9, v28, v13, v0.t 
+05c747d7 vandn.vx v15, v28, a4, v0.t 
+05d24757 vandn.vx v14, v29, tp, v0.t 
+05f5c657 vandn.vx v12, v31, a1, v0.t 
+061e8e57 vandn.vv v28, v1, v29 
+0630cc57 vandn.vx v24, v3, ra 
+06570557 vandn.vv v10, v5, v14 
+066c82d7 vandn.vv v5, v6, v25 
+06750ed7 vandn.vv v29, v7, v10 
+067acd57 vandn.vx v26, v7, s5 
+069749d7 vandn.vx v19, v9, a4 
+069ccad7 vandn.vx v21, v9, s9 
+06b848d7 vandn.vx v17, v11, a6 
+06c606d7 vandn.vv v13, v12, v12 
+06dc82d7 vandn.vv v5, v13, v25 
+06f00e57 vandn.vv v28, v15, v0 
+06f040d7 vandn.vx v1, v15, zero 
+06fcc857 vandn.vx v16, v15, s9 
+070281d7 vandn.vv v3, v16, v5 
+0702c057 vandn.vx v0, v16, t0 
+071acd57 vandn.vx v26, v17, s5 
+0726c4d7 vandn.vx v9, v18, a3 
+074183d7 vandn.vv v7, v20, v3 
+0754cb57 vandn.vx v22, v21, s1 
+07754357 vandn.vx v6, v23, a0 
+07908a57 vandn.vv v20, v25, v1 
+07980a57 vandn.vv v20, v25, v16 
+079ecf57 vandn.vx v30, v25, t4 
+07cb8457 vandn.vv v8, v28, v23 
+07e44fd7 vandn.vx v31, v30, s0 
 48042b57 vbrev8.v v22, v0, v0.t 
-4a842f57 vbrev8.v v30, v8 
-48d425d7 vbrev8.v v11, v13, v0.t 
-4a8427d7 vbrev8.v v15, v8 
-4bc42557 vbrev8.v v10, v28 
-49342dd7 vbrev8.v v27, v19, v0.t 
-49942bd7 vbrev8.v v23, v25, v0.t 
-49142b57 vbrev8.v v22, v17, v0.t 
-4b342d57 vbrev8.v v26, v19 
-4b7420d7 vbrev8.v v1, v23 
-4a642b57 vbrev8.v v22, v6 
-49242657 vbrev8.v v12, v18, v0.t 
-48a425d7 vbrev8.v v11, v10, v0.t 
-4a7429d7 vbrev8.v v19, v7 
-494420d7 vbrev8.v v1, v20, v0.t 
-4ba428d7 vbrev8.v v17, v26 
-48c42757 vbrev8.v v14, v12, v0.t 
-4b342fd7 vbrev8.v v31, v19 
-4b5421d7 vbrev8.v v3, v21 
-4b642ed7 vbrev8.v v29, v22 
+4804ae57 vrev8.v v28, v0, v0.t 
+48072a57 vcpop.v v20, v0, v0.t 
+4816a0d7 vctz.v v1, v1, v0.t 
+48172757 vcpop.v v14, v1, v0.t 
 482520d7 vbrev.v v1, v2, v0.t 
-48e526d7 vbrev.v v13, v14, v0.t 
-48f527d7 vbrev.v v15, v15, v0.t 
-48a52857 vbrev.v v16, v10, v0.t 
-48b52857 vbrev.v v16, v11, v0.t 
-494525d7 vbrev.v v11, v20, v0.t 
-49f525d7 vbrev.v v11, v31, v0.t 
-49c528d7 vbrev.v v17, v28, v0.t 
-4ba529d7 vbrev.v v19, v26 
-496528d7 vbrev.v v17, v22, v0.t 
-49452157 vbrev.v v2, v20, v0.t 
-496520d7 vbrev.v v1, v22, v0.t 
-493522d7 vbrev.v v5, v19, v0.t 
-4b7524d7 vbrev.v v9, v23 
-4b1525d7 vbrev.v v11, v17 
-485523d7 vbrev.v v7, v5, v0.t 
-4ad52e57 vbrev.v v28, v13 
-49652cd7 vbrev.v v25, v22, v0.t 
-4a452dd7 vbrev.v v27, v4 
-4b652e57 vbrev.v v28, v22 
-4a352cd7 vbrev.v v25, v3 
-4a752657 vbrev.v v12, v7 
-4a352ad7 vbrev.v v21, v3 
-49c524d7 vbrev.v v9, v28, v0.t 
-4b6522d7 vbrev.v v5, v22 
-49952a57 vbrev.v v20, v25, v0.t 
-48d529d7 vbrev.v v19, v13, v0.t 
-4a352357 vbrev.v v6, v3 
-4a652b57 vbrev.v v22, v6 
-49452757 vbrev.v v14, v20, v0.t 
-49a62257 vclz.v v4, v26, v0.t 
-48b62557 vclz.v v10, v11, v0.t 
-4bc62d57 vclz.v v26, v28 
-48d62857 vclz.v v16, v13, v0.t 
-48d62057 vclz.v v0, v13, v0.t 
-48b62cd7 vclz.v v25, v11, v0.t 
-4ad62457 vclz.v v8, v13 
-4b2626d7 vclz.v v13, v18 
-4ad62ed7 vclz.v v29, v13 
-49662b57 vclz.v v22, v22, v0.t 
-49762ed7 vclz.v v29, v23, v0.t 
-49a62a57 vclz.v v20, v26, v0.t 
-4b862857 vclz.v v16, v24 
-4b262d57 vclz.v v26, v18 
-4b9626d7 vclz.v v13, v25 
-490623d7 vclz.v v7, v16, v0.t 
-4af62957 vclz.v v18, v15 
-49862e57 vclz.v v28, v24, v0.t 
-4bf62ad7 vclz.v v21, v31 
-49c62757 vclz.v v14, v28, v0.t 
-4a962757 vclz.v v14, v9 
-4a862657 vclz.v v12, v8 
-4bf62557 vclz.v v10, v31 
-497627d7 vclz.v v15, v23, v0.t 
-49462157 vclz.v v2, v20, v0.t 
-4a162b57 vclz.v v22, v1 
-48f622d7 vclz.v v5, v15, v0.t 
-49a62357 vclz.v v6, v26, v0.t 
-4bc622d7 vclz.v v5, v28 
-4a662857 vclz.v v16, v6 
-4a972d57 vcpop.v v26, v9 
-4b972757 vcpop.v v14, v25 
-4b472c57 vcpop.v v24, v20 
-4b0721d7 vcpop.v v3, v16 
-4a072e57 vcpop.v v28, v0 
-4b372957 vcpop.v v18, v19 
-4ac72357 vcpop.v v6, v12 
-4a572357 vcpop.v v6, v5 
-4a172fd7 vcpop.v v31, v1 
-486721d7 vcpop.v v3, v6, v0.t 
-48272fd7 vcpop.v v31, v2, v0.t 
-4ac72957 vcpop.v v18, v12 
-48c72ad7 vcpop.v v21, v12, v0.t 
-49372dd7 vcpop.v v27, v19, v0.t 
-49c72057 vcpop.v v0, v28, v0.t 
+4826a2d7 vctz.v v5, v2, v0.t 
 48272657 vcpop.v v12, v2, v0.t 
+48272fd7 vcpop.v v31, v2, v0.t 
+4834aed7 vrev8.v v29, v3, v0.t 
+4836aed7 vctz.v v29, v3, v0.t 
+4844a9d7 vrev8.v v19, v4, v0.t 
+4854a957 vrev8.v v18, v5, v0.t 
+4854ab57 vrev8.v v22, v5, v0.t 
+485523d7 vbrev.v v7, v5, v0.t 
+4864aa57 vrev8.v v20, v6, v0.t 
+486721d7 vcpop.v v3, v6, v0.t 
+4874a557 vrev8.v v10, v7, v0.t 
+4876ac57 vctz.v v24, v7, v0.t 
+4884a157 vrev8.v v2, v8, v0.t 
+48a425d7 vbrev8.v v11, v10, v0.t 
+48a52857 vbrev.v v16, v10, v0.t 
+48b4a357 vrev8.v v6, v11, v0.t 
+48b52857 vbrev.v v16, v11, v0.t 
+48b62557 vclz.v v10, v11, v0.t 
+48b62cd7 vclz.v v25, v11, v0.t 
+48c42757 vbrev8.v v14, v12, v0.t 
+48c72ad7 vcpop.v v21, v12, v0.t 
+48d425d7 vbrev8.v v11, v13, v0.t 
+48d529d7 vbrev.v v19, v13, v0.t 
+48d62057 vclz.v v0, v13, v0.t 
+48d62857 vclz.v v16, v13, v0.t 
+48d729d7 vcpop.v v19, v13, v0.t 
+48e526d7 vbrev.v v13, v14, v0.t 
+48f4a2d7 vrev8.v v5, v15, v0.t 
+48f527d7 vbrev.v v15, v15, v0.t 
+48f622d7 vclz.v v5, v15, v0.t 
+48f6a957 vctz.v v18, v15, v0.t 
+48f72a57 vcpop.v v20, v15, v0.t 
+4904ac57 vrev8.v v24, v16, v0.t 
+490623d7 vclz.v v7, v16, v0.t 
+49142b57 vbrev8.v v22, v17, v0.t 
+4916add7 vctz.v v27, v17, v0.t 
 491729d7 vcpop.v v19, v17, v0.t 
 49172fd7 vcpop.v v31, v17, v0.t 
-4a472c57 vcpop.v v24, v4 
-48d729d7 vcpop.v v19, v13, v0.t 
-49b727d7 vcpop.v v15, v27, v0.t 
-4b5724d7 vcpop.v v9, v21 
-4b972057 vcpop.v v0, v25 
-48f72a57 vcpop.v v20, v15, v0.t 
-4a472457 vcpop.v v8, v4 
-49972b57 vcpop.v v22, v25, v0.t 
-48172757 vcpop.v v14, v1, v0.t 
-4b972457 vcpop.v v8, v25 
-4ba725d7 vcpop.v v11, v26 
-48072a57 vcpop.v v20, v0, v0.t 
-4996aed7 vctz.v v29, v25, v0.t 
-4876ac57 vctz.v v24, v7, v0.t 
-4b36a0d7 vctz.v v1, v19 
-4ac6a557 vctz.v v10, v12 
-4b56add7 vctz.v v27, v21 
-49c6af57 vctz.v v30, v28, v0.t 
-4bc6af57 vctz.v v30, v28 
-4836aed7 vctz.v v29, v3, v0.t 
-4b76a457 vctz.v v8, v23 
-4a76a157 vctz.v v2, v7 
-4bb6a357 vctz.v v6, v27 
-4ba6acd7 vctz.v v25, v26 
-4b76afd7 vctz.v v31, v23 
-4a66ab57 vctz.v v22, v6 
-4b16ae57 vctz.v v28, v17 
-4b06a357 vctz.v v6, v16 
-4af6a5d7 vctz.v v11, v15 
-49c6a957 vctz.v v18, v28, v0.t 
-4bf6aed7 vctz.v v29, v31 
-4826a2d7 vctz.v v5, v2, v0.t 
-4996a557 vctz.v v10, v25, v0.t 
-4af6ab57 vctz.v v22, v15 
-4816a0d7 vctz.v v1, v1, v0.t 
-49f6a8d7 vctz.v v17, v31, v0.t 
-4b76a0d7 vctz.v v1, v23 
-4916add7 vctz.v v27, v17, v0.t 
-48f6a957 vctz.v v18, v15, v0.t 
-4966aad7 vctz.v v21, v22, v0.t 
-4b06a1d7 vctz.v v3, v16 
-4966a5d7 vctz.v v11, v22, v0.t 
-4844a9d7 vrev8.v v19, v4, v0.t 
-4b44a7d7 vrev8.v v15, v20 
-4974a457 vrev8.v v8, v23, v0.t 
-4ba4ad57 vrev8.v v26, v26 
-4ba4a357 vrev8.v v6, v26 
-48f4a2d7 vrev8.v v5, v15, v0.t 
-4bb4a557 vrev8.v v10, v27 
-4854ab57 vrev8.v v22, v5, v0.t 
-4834aed7 vrev8.v v29, v3, v0.t 
-4b44ac57 vrev8.v v24, v20 
-48b4a357 vrev8.v v6, v11, v0.t 
-49d4ae57 vrev8.v v28, v29, v0.t 
-4804ae57 vrev8.v v28, v0, v0.t 
-49d4a0d7 vrev8.v v1, v29, v0.t 
-4b14a7d7 vrev8.v v15, v17 
-49c4a6d7 vrev8.v v13, v28, v0.t 
-4ac4a5d7 vrev8.v v11, v12 
-4b24a157 vrev8.v v2, v18 
-4af4a9d7 vrev8.v v19, v15 
-4bd4aad7 vrev8.v v21, v29 
-4954a657 vrev8.v v12, v21, v0.t 
-4854a957 vrev8.v v18, v5, v0.t 
-4884a157 vrev8.v v2, v8, v0.t 
-4ad4a0d7 vrev8.v v1, v13 
+49242657 vbrev8.v v12, v18, v0.t 
+49242fd7 vbrev8.v v31, v18, v0.t 
 4924aed7 vrev8.v v29, v18, v0.t 
-4874a557 vrev8.v v10, v7, v0.t 
-4864aa57 vrev8.v v20, v6, v0.t 
-4a74a5d7 vrev8.v v11, v7 
-4904ac57 vrev8.v v24, v16, v0.t 
+49342dd7 vbrev8.v v27, v19, v0.t 
+493522d7 vbrev.v v5, v19, v0.t 
+49372dd7 vcpop.v v27, v19, v0.t 
+494420d7 vbrev8.v v1, v20, v0.t 
+49452157 vbrev.v v2, v20, v0.t 
+494525d7 vbrev.v v11, v20, v0.t 
+49452757 vbrev.v v14, v20, v0.t 
+49462157 vclz.v v2, v20, v0.t 
+4954a657 vrev8.v v12, v21, v0.t 
+49642057 vbrev8.v v0, v22, v0.t 
+49642657 vbrev8.v v12, v22, v0.t 
+496520d7 vbrev.v v1, v22, v0.t 
+496528d7 vbrev.v v17, v22, v0.t 
+49652cd7 vbrev.v v25, v22, v0.t 
+49662b57 vclz.v v22, v22, v0.t 
+4966a5d7 vctz.v v11, v22, v0.t 
+4966aad7 vctz.v v21, v22, v0.t 
+4974a457 vrev8.v v8, v23, v0.t 
+497627d7 vclz.v v15, v23, v0.t 
+49762ed7 vclz.v v29, v23, v0.t 
+49862e57 vclz.v v28, v24, v0.t 
+49942bd7 vbrev8.v v23, v25, v0.t 
 4994a8d7 vrev8.v v17, v25, v0.t 
-57690057 vrol.vv v0, v22, v18 
-547709d7 vrol.vv v19, v7, v14, v0.t 
-55f90157 vrol.vv v2, v31, v18, v0.t 
-54fc0057 vrol.vv v0, v15, v24, v0.t 
-54f707d7 vrol.vv v15, v15, v14, v0.t 
-563e8057 vrol.vv v0, v3, v29 
-577b0cd7 vrol.vv v25, v23, v22 
-56c98357 vrol.vv v6, v12, v19 
-548e02d7 vrol.vv v5, v8, v28, v0.t 
-54e08557 vrol.vv v10, v14, v1, v0.t 
-542d8657 vrol.vv v12, v2, v27, v0.t 
-56ee8457 vrol.vv v8, v14, v29 
-57a88bd7 vrol.vv v23, v26, v17 
-543189d7 vrol.vv v19, v3, v3, v0.t 
-578f0957 vrol.vv v18, v24, v30 
-549f8057 vrol.vv v0, v9, v31, v0.t 
-54d100d7 vrol.vv v1, v13, v2, v0.t 
-557003d7 vrol.vv v7, v23, v0, v0.t 
-55a501d7 vrol.vv v3, v26, v10, v0.t 
-57520fd7 vrol.vv v31, v21, v4 
-57df8457 vrol.vv v8, v29, v31 
-54af8d57 vrol.vv v26, v10, v31, v0.t 
-54ab0857 vrol.vv v16, v10, v22, v0.t 
-56e884d7 vrol.vv v9, v14, v17 
-56220fd7 vrol.vv v31, v2, v4 
-56a20dd7 vrol.vv v27, v10, v4 
-55688457 vrol.vv v8, v22, v17, v0.t 
-55620dd7 vrol.vv v27, v22, v4, v0.t 
-55320b57 vrol.vv v22, v19, v4, v0.t 
-564981d7 vrol.vv v3, v4, v19 
-54b043d7 vrol.vx v7, v11, zero, v0.t 
-57fec3d7 vrol.vx v7, v31, t4 
-5709c557 vrol.vx v10, v16, s3 
-572bc957 vrol.vx v18, v18, s7 
-55744257 vrol.vx v4, v23, s0, v0.t 
-575fcdd7 vrol.vx v27, v21, t6 
-55a2c557 vrol.vx v10, v26, t0, v0.t 
-5723ca57 vrol.vx v20, v18, t2 
-55c949d7 vrol.vx v19, v28, s2, v0.t 
-549d4f57 vrol.vx v30, v9, s10, v0.t 
-54db4057 vrol.vx v0, v13, s6, v0.t 
-56ce4057 vrol.vx v0, v12, t3 
-55ad46d7 vrol.vx v13, v26, s10, v0.t 
-56ff40d7 vrol.vx v1, v15, t5 
-54044cd7 vrol.vx v25, v0, s0, v0.t 
-5751ced7 vrol.vx v29, v21, gp 
-560ac2d7 vrol.vx v5, v0, s5 
-555648d7 vrol.vx v17, v21, a2, v0.t 
-55bc4b57 vrol.vx v22, v27, s8, v0.t 
-571b49d7 vrol.vx v19, v17, s6 
-5531c2d7 vrol.vx v5, v19, gp, v0.t 
-560acbd7 vrol.vx v23, v0, s5 
-54bec757 vrol.vx v14, v11, t4, v0.t 
-572fc7d7 vrol.vx v15, v18, t6 
-5402c557 vrol.vx v10, v0, t0, v0.t 
-55e84b57 vrol.vx v22, v30, a6, v0.t 
-57f9cb57 vrol.vx v22, v31, s3 
-57e4c757 vrol.vx v14, v30, s1 
-54844e57 vrol.vx v28, v8, s0, v0.t 
-552b4757 vrol.vx v14, v18, s6, v0.t 
-534a3857 vror.vi v16, v20, 0x14 
-53a734d7 vror.vi v9, v26, 0xe 
-56fa3b57 vror.vi v22, v15, 0x34 
-53be3e57 vror.vi v28, v27, 0x1c 
-564c3fd7 vror.vi v31, v4, 0x38 
-5386b8d7 vror.vi v17, v24, 0xd 
-56143f57 vror.vi v30, v1, 0x28 
-50323a57 vror.vi v20, v3, 0x4, v0.t 
-50733d57 vror.vi v26, v7, 0x6, v0.t 
-53533557 vror.vi v10, v21, 0x6 
-52383f57 vror.vi v30, v3, 0x10 
-54413157 vror.vi v2, v4, 0x22, v0.t 
-55593cd7 vror.vi v25, v21, 0x32, v0.t 
-529abf57 vror.vi v30, v9, 0x15 
-57cab1d7 vror.vi v3, v28, 0x35 
-57b8b057 vror.vi v0, v27, 0x31 
-5359b757 vror.vi v14, v21, 0x13 
-537a3557 vror.vi v10, v23, 0x14 
-568f31d7 vror.vi v3, v8, 0x3e 
-5235b1d7 vror.vi v3, v3, 0xb 
-556abc57 vror.vi v24, v22, 0x35, v0.t 
-53acb3d7 vror.vi v7, v26, 0x19 
-5180bb57 vror.vi v22, v24, 0x1, v0.t 
-51ebb657 vror.vi v12, v30, 0x17, v0.t 
-51b8bc57 vror.vi v24, v27, 0x11, v0.t 
-57533257 vror.vi v4, v21, 0x26 
-57e6b557 vror.vi v10, v30, 0x2d 
-55653dd7 vror.vi v27, v22, 0x2a, v0.t 
-549f3e57 vror.vi v28, v9, 0x3e, v0.t 
-51ed37d7 vror.vi v15, v30, 0x1a, v0.t 
-53698857 vror.vv v16, v22, v19 
-53ac8cd7 vror.vv v25, v26, v25 
-52618e57 vror.vv v28, v6, v3 
-51f405d7 vror.vv v11, v31, v8, v0.t 
+49952a57 vbrev.v v20, v25, v0.t 
+4996a557 vctz.v v10, v25, v0.t 
+4996aed7 vctz.v v29, v25, v0.t 
+49972b57 vcpop.v v22, v25, v0.t 
+49a62257 vclz.v v4, v26, v0.t 
+49a62357 vclz.v v6, v26, v0.t 
+49a62a57 vclz.v v20, v26, v0.t 
+49b727d7 vcpop.v v15, v27, v0.t 
+49c4a6d7 vrev8.v v13, v28, v0.t 
+49c524d7 vbrev.v v9, v28, v0.t 
+49c528d7 vbrev.v v17, v28, v0.t 
+49c62757 vclz.v v14, v28, v0.t 
+49c6a957 vctz.v v18, v28, v0.t 
+49c6af57 vctz.v v30, v28, v0.t 
+49c72057 vcpop.v v0, v28, v0.t 
+49d4a0d7 vrev8.v v1, v29, v0.t 
+49d4ae57 vrev8.v v28, v29, v0.t 
+49f525d7 vbrev.v v11, v31, v0.t 
+49f6a8d7 vctz.v v17, v31, v0.t 
+4a072e57 vcpop.v v28, v0 
+4a142ed7 vbrev8.v v29, v1 
+4a162b57 vclz.v v22, v1 
+4a172fd7 vcpop.v v31, v1 
+4a352357 vbrev.v v6, v3 
+4a352ad7 vbrev.v v21, v3 
+4a352cd7 vbrev.v v25, v3 
+4a452dd7 vbrev.v v27, v4 
+4a472457 vcpop.v v8, v4 
+4a472c57 vcpop.v v24, v4 
+4a572357 vcpop.v v6, v5 
+4a642b57 vbrev8.v v22, v6 
+4a652b57 vbrev.v v22, v6 
+4a662857 vclz.v v16, v6 
+4a66ab57 vctz.v v22, v6 
+4a7429d7 vbrev8.v v19, v7 
+4a74a5d7 vrev8.v v11, v7 
+4a752657 vbrev.v v12, v7 
+4a76a157 vctz.v v2, v7 
+4a8427d7 vbrev8.v v15, v8 
+4a842f57 vbrev8.v v30, v8 
+4a862657 vclz.v v12, v8 
+4a962757 vclz.v v14, v9 
+4a972d57 vcpop.v v26, v9 
+4ab42457 vbrev8.v v8, v11 
+4ac42a57 vbrev8.v v20, v12 
+4ac4a5d7 vrev8.v v11, v12 
+4ac6a557 vctz.v v10, v12 
+4ac72357 vcpop.v v6, v12 
+4ac72957 vcpop.v v18, v12 
+4ad4a0d7 vrev8.v v1, v13 
+4ad52e57 vbrev.v v28, v13 
+4ad62457 vclz.v v8, v13 
+4ad62ed7 vclz.v v29, v13 
+4af4a9d7 vrev8.v v19, v15 
+4af62957 vclz.v v18, v15 
+4af6a5d7 vctz.v v11, v15 
+4af6ab57 vctz.v v22, v15 
+4b06a1d7 vctz.v v3, v16 
+4b06a357 vctz.v v6, v16 
+4b0721d7 vcpop.v v3, v16 
+4b14a7d7 vrev8.v v15, v17 
+4b1525d7 vbrev.v v11, v17 
+4b16ae57 vctz.v v28, v17 
+4b2422d7 vbrev8.v v5, v18 
+4b24a157 vrev8.v v2, v18 
+4b2626d7 vclz.v v13, v18 
+4b262d57 vclz.v v26, v18 
+4b342d57 vbrev8.v v26, v19 
+4b342fd7 vbrev8.v v31, v19 
+4b36a0d7 vctz.v v1, v19 
+4b372957 vcpop.v v18, v19 
+4b4427d7 vbrev8.v v15, v20 
+4b44a7d7 vrev8.v v15, v20 
+4b44ac57 vrev8.v v24, v20 
+4b472c57 vcpop.v v24, v20 
+4b5421d7 vbrev8.v v3, v21 
+4b56add7 vctz.v v27, v21 
+4b5724d7 vcpop.v v9, v21 
+4b642ed7 vbrev8.v v29, v22 
+4b6522d7 vbrev.v v5, v22 
+4b652e57 vbrev.v v28, v22 
+4b7420d7 vbrev8.v v1, v23 
+4b7524d7 vbrev.v v9, v23 
+4b76a0d7 vctz.v v1, v23 
+4b76a457 vctz.v v8, v23 
+4b76afd7 vctz.v v31, v23 
+4b862857 vclz.v v16, v24 
+4b9429d7 vbrev8.v v19, v25 
+4b9626d7 vclz.v v13, v25 
+4b972057 vcpop.v v0, v25 
+4b972457 vcpop.v v8, v25 
+4b972757 vcpop.v v14, v25 
+4ba42057 vbrev8.v v0, v26 
+4ba428d7 vbrev8.v v17, v26 
+4ba4a357 vrev8.v v6, v26 
+4ba4ad57 vrev8.v v26, v26 
+4ba529d7 vbrev.v v19, v26 
+4ba6acd7 vctz.v v25, v26 
+4ba725d7 vcpop.v v11, v26 
+4bb4a557 vrev8.v v10, v27 
+4bb6a357 vctz.v v6, v27 
+4bc42557 vbrev8.v v10, v28 
+4bc622d7 vclz.v v5, v28 
+4bc62d57 vclz.v v26, v28 
+4bc6af57 vctz.v v30, v28 
+4bd4aad7 vrev8.v v21, v29 
+4bf62557 vclz.v v10, v31 
+4bf62ad7 vclz.v v21, v31 
+4bf6aed7 vctz.v v29, v31 
+501b0257 vror.vv v4, v1, v22, v0.t 
 50270e57 vror.vv v28, v2, v14, v0.t 
-519886d7 vror.vv v13, v25, v17, v0.t 
+50323a57 vror.vi v20, v3, 0x4, v0.t 
+503380d7 vror.vv v1, v3, v7, v0.t 
+506d0bd7 vror.vv v23, v6, v26, v0.t 
+506e0957 vror.vv v18, v6, v28, v0.t 
+50733d57 vror.vi v26, v7, 0x6, v0.t 
+50734857 vror.vx v16, v7, t1, v0.t 
+50808a57 vror.vv v20, v8, v1, v0.t 
+50928257 vror.vv v4, v9, v5, v0.t 
 50960d57 vror.vv v26, v9, v12, v0.t 
+50bdca57 vror.vx v20, v11, s11, v0.t 
+50d78357 vror.vv v6, v13, v15, v0.t 
+50e78f57 vror.vv v30, v14, v15, v0.t 
+510348d7 vror.vx v17, v16, t1, v0.t 
+510582d7 vror.vv v5, v16, v11, v0.t 
+510ccdd7 vror.vx v27, v16, s9, v0.t 
+510e4dd7 vror.vx v27, v16, t3, v0.t 
+511fc857 vror.vx v16, v17, t6, v0.t 
+512ec4d7 vror.vx v9, v18, t4, v0.t 
+514a4ed7 vror.vx v29, v20, s4, v0.t 
+515ac957 vror.vx v18, v21, s5, v0.t 
+517646d7 vror.vx v13, v23, a2, v0.t 
+5177ce57 vror.vx v28, v23, a5, v0.t 
+5180bb57 vror.vi v22, v24, 0x1, v0.t 
+519886d7 vror.vv v13, v25, v17, v0.t 
+51994857 vror.vx v16, v25, s2, v0.t 
+519b4d57 vror.vx v26, v25, s6, v0.t 
+51aec9d7 vror.vx v19, v26, t4, v0.t 
+51b8bc57 vror.vi v24, v27, 0x11, v0.t 
+51be8257 vror.vv v4, v27, v29, v0.t 
+51bf8dd7 vror.vv v27, v27, v31, v0.t 
+51df05d7 vror.vv v11, v29, v30, v0.t 
+51ebb657 vror.vi v12, v30, 0x17, v0.t 
+51ed37d7 vror.vi v15, v30, 0x1a, v0.t 
+51f04e57 vror.vx v28, v31, zero, v0.t 
+51f405d7 vror.vv v11, v31, v8, v0.t 
+52158b57 vror.vv v22, v1, v11 
+523288d7 vror.vv v17, v3, v5 
+5235b1d7 vror.vi v3, v3, 0xb 
+52383f57 vror.vi v30, v3, 0x10 
 52410857 vror.vv v16, v4, v2 
 525489d7 vror.vv v19, v5, v9 
-537280d7 vror.vv v1, v23, v5 
-50e78f57 vror.vv v30, v14, v15, v0.t 
-52158b57 vror.vv v22, v1, v11 
-510582d7 vror.vv v5, v16, v11, v0.t 
-50928257 vror.vv v4, v9, v5, v0.t 
-53d80657 vror.vv v12, v29, v16 
-51bf8dd7 vror.vv v27, v27, v31, v0.t 
-52bd0b57 vror.vv v22, v11, v26 
-501b0257 vror.vv v4, v1, v22, v0.t 
-53a48557 vror.vv v10, v26, v9 
-52b48bd7 vror.vv v23, v11, v9 
-506d0bd7 vror.vv v23, v6, v26, v0.t 
-503380d7 vror.vv v1, v3, v7, v0.t 
-529d8957 vror.vv v18, v9, v27 
-52d08dd7 vror.vv v27, v13, v1 
-523288d7 vror.vv v17, v3, v5 
-50d78357 vror.vv v6, v13, v15, v0.t 
-506e0957 vror.vv v18, v6, v28, v0.t 
-51df05d7 vror.vv v11, v29, v30, v0.t 
-50808a57 vror.vv v20, v8, v1, v0.t 
-51be8257 vror.vv v4, v27, v29, v0.t 
-517646d7 vror.vx v13, v23, a2, v0.t 
-51994857 vror.vx v16, v25, s2, v0.t 
-5177ce57 vror.vx v28, v23, a5, v0.t 
-53cfcdd7 vror.vx v27, v28, t6 
-53434bd7 vror.vx v23, v20, t1 
-515ac957 vror.vx v18, v21, s5, v0.t 
-53dbc9d7 vror.vx v19, v29, s7 
-514a4ed7 vror.vx v29, v20, s4, v0.t 
-511fc857 vror.vx v16, v17, t6, v0.t 
-52774bd7 vror.vx v23, v7, a4 
-529d4157 vror.vx v2, v9, s10 
-51f04e57 vror.vx v28, v31, zero, v0.t 
-519b4d57 vror.vx v26, v25, s6, v0.t 
-5374cbd7 vror.vx v23, v23, s1 
-512ec4d7 vror.vx v9, v18, t4, v0.t 
-52a8c157 vror.vx v2, v10, a7 
-53464957 vror.vx v18, v20, a2 
-53c44957 vror.vx v18, v28, s0 
-51aec9d7 vror.vx v19, v26, t4, v0.t 
-52f4c757 vror.vx v14, v15, s1 
-50bdca57 vror.vx v20, v11, s11, v0.t 
-52954e57 vror.vx v28, v9, a0 
-53c9c257 vror.vx v4, v28, s3 
-50734857 vror.vx v16, v7, t1, v0.t 
-510ccdd7 vror.vx v27, v16, s9, v0.t 
-52d0c5d7 vror.vx v11, v13, ra 
+52618e57 vror.vv v28, v6, v3 
 526dccd7 vror.vx v25, v6, s11 
-510e4dd7 vror.vx v27, v16, t3, v0.t 
+52774bd7 vror.vx v23, v7, a4 
+52954e57 vror.vx v28, v9, a0 
+529abf57 vror.vi v30, v9, 0x15 
+529d4157 vror.vx v2, v9, s10 
+529d8957 vror.vv v18, v9, v27 
+52a8c157 vror.vx v2, v10, a7 
+52b48bd7 vror.vv v23, v11, v9 
+52bd0b57 vror.vv v22, v11, v26 
 52bd4357 vror.vx v6, v11, s10 
-510348d7 vror.vx v17, v16, t1, v0.t 
-d488bed7 vwsll.vi v29, v8, 0x11, v0.t 
-d61638d7 vwsll.vi v17, v1, 0xc 
-d59a38d7 vwsll.vi v17, v25, 0x14, v0.t 
-d592b857 vwsll.vi v16, v25, 0x5, v0.t 
-d62c3cd7 vwsll.vi v25, v2, 0x18 
-d44a30d7 vwsll.vi v1, v4, 0x14, v0.t 
-d6dfbad7 vwsll.vi v21, v13, 0x1f 
-d68939d7 vwsll.vi v19, v8, 0x12 
-d60f3a57 vwsll.vi v20, v0, 0x1e 
-d503bc57 vwsll.vi v24, v16, 0x7, v0.t 
-d4e036d7 vwsll.vi v13, v14, 0x0, v0.t 
-d4b0b657 vwsll.vi v12, v11, 0x1, v0.t 
-d544b0d7 vwsll.vi v1, v20, 0x9, v0.t 
-d70f33d7 vwsll.vi v7, v16, 0x1e 
-d759b4d7 vwsll.vi v9, v21, 0x13 
-d61b3957 vwsll.vi v18, v1, 0x16 
-d4bbbb57 vwsll.vi v22, v11, 0x17, v0.t 
-d4e135d7 vwsll.vi v11, v14, 0x2, v0.t 
-d41ebb57 vwsll.vi v22, v1, 0x1d, v0.t 
-d4293857 vwsll.vi v16, v2, 0x12, v0.t 
-d573b7d7 vwsll.vi v15, v23, 0x7, v0.t 
-d702b6d7 vwsll.vi v13, v16, 0x5 
-d79bb557 vwsll.vi v10, v25, 0x17 
-d51fb8d7 vwsll.vi v17, v17, 0x1f, v0.t 
-d5c93f57 vwsll.vi v30, v28, 0x12, v0.t 
-d7a0b1d7 vwsll.vi v3, v26, 0x1 
-d687b857 vwsll.vi v16, v8, 0xf 
-d6233c57 vwsll.vi v24, v2, 0x6 
-d7e3b257 vwsll.vi v4, v30, 0x7 
-d5b6bd57 vwsll.vi v26, v27, 0xd, v0.t 
-d4860957 vwsll.vv v18, v8, v12, v0.t 
-d7e90557 vwsll.vv v10, v30, v18 
-d6998a57 vwsll.vv v20, v9, v19 
-d75c02d7 vwsll.vv v5, v21, v24 
-d5178157 vwsll.vv v2, v17, v15, v0.t 
-d5de02d7 vwsll.vv v5, v29, v28, v0.t 
-d48c0bd7 vwsll.vv v23, v8, v24, v0.t 
-d75804d7 vwsll.vv v9, v21, v16 
-d6910157 vwsll.vv v2, v9, v2 
-d5228857 vwsll.vv v16, v18, v5, v0.t 
-d4810ed7 vwsll.vv v29, v8, v2, v0.t 
-d45485d7 vwsll.vv v11, v5, v9, v0.t 
-d7378657 vwsll.vv v12, v19, v15 
-d64785d7 vwsll.vv v11, v4, v15 
-d60a81d7 vwsll.vv v3, v0, v21 
-d6248657 vwsll.vv v12, v2, v9 
-d4d88757 vwsll.vv v14, v13, v17, v0.t 
+52d08dd7 vror.vv v27, v13, v1 
+52d0c5d7 vror.vx v11, v13, ra 
+52f4c757 vror.vx v14, v15, s1 
+53434bd7 vror.vx v23, v20, t1 
+53464957 vror.vx v18, v20, a2 
+534a3857 vror.vi v16, v20, 0x14 
+53533557 vror.vi v10, v21, 0x6 
+5359b757 vror.vi v14, v21, 0x13 
+53698857 vror.vv v16, v22, v19 
+537280d7 vror.vv v1, v23, v5 
+5374cbd7 vror.vx v23, v23, s1 
+537a3557 vror.vi v10, v23, 0x14 
+5386b8d7 vror.vi v17, v24, 0xd 
+53a48557 vror.vv v10, v26, v9 
+53a734d7 vror.vi v9, v26, 0xe 
+53ac8cd7 vror.vv v25, v26, v25 
+53acb3d7 vror.vi v7, v26, 0x19 
+53be3e57 vror.vi v28, v27, 0x1c 
+53c44957 vror.vx v18, v28, s0 
+53c9c257 vror.vx v4, v28, s3 
+53cfcdd7 vror.vx v27, v28, t6 
+53d80657 vror.vv v12, v29, v16 
+53dbc9d7 vror.vx v19, v29, s7 
+5402c557 vrol.vx v10, v0, t0, v0.t 
+54044cd7 vrol.vx v25, v0, s0, v0.t 
+542d8657 vrol.vv v12, v2, v27, v0.t 
+543189d7 vrol.vv v19, v3, v3, v0.t 
+54413157 vror.vi v2, v4, 0x22, v0.t 
+547709d7 vrol.vv v19, v7, v14, v0.t 
+54844e57 vrol.vx v28, v8, s0, v0.t 
+548e02d7 vrol.vv v5, v8, v28, v0.t 
+549d4f57 vrol.vx v30, v9, s10, v0.t 
+549f3e57 vror.vi v28, v9, 0x3e, v0.t 
+549f8057 vrol.vv v0, v9, v31, v0.t 
+54ab0857 vrol.vv v16, v10, v22, v0.t 
+54af8d57 vrol.vv v26, v10, v31, v0.t 
+54b043d7 vrol.vx v7, v11, zero, v0.t 
+54bec757 vrol.vx v14, v11, t4, v0.t 
+54d100d7 vrol.vv v1, v13, v2, v0.t 
+54db4057 vrol.vx v0, v13, s6, v0.t 
+54e08557 vrol.vv v10, v14, v1, v0.t 
+54f707d7 vrol.vv v15, v15, v14, v0.t 
+54fc0057 vrol.vv v0, v15, v24, v0.t 
+552b4757 vrol.vx v14, v18, s6, v0.t 
+5531c2d7 vrol.vx v5, v19, gp, v0.t 
+55320b57 vrol.vv v22, v19, v4, v0.t 
+555648d7 vrol.vx v17, v21, a2, v0.t 
+55593cd7 vror.vi v25, v21, 0x32, v0.t 
+55620dd7 vrol.vv v27, v22, v4, v0.t 
+55653dd7 vror.vi v27, v22, 0x2a, v0.t 
+55688457 vrol.vv v8, v22, v17, v0.t 
+556abc57 vror.vi v24, v22, 0x35, v0.t 
+557003d7 vrol.vv v7, v23, v0, v0.t 
+55744257 vrol.vx v4, v23, s0, v0.t 
+55a2c557 vrol.vx v10, v26, t0, v0.t 
+55a501d7 vrol.vv v3, v26, v10, v0.t 
+55ad46d7 vrol.vx v13, v26, s10, v0.t 
+55bc4b57 vrol.vx v22, v27, s8, v0.t 
+55c949d7 vrol.vx v19, v28, s2, v0.t 
+55e84b57 vrol.vx v22, v30, a6, v0.t 
+55f90157 vrol.vv v2, v31, v18, v0.t 
+560ac2d7 vrol.vx v5, v0, s5 
+560acbd7 vrol.vx v23, v0, s5 
+56143f57 vror.vi v30, v1, 0x28 
+56220fd7 vrol.vv v31, v2, v4 
+563e8057 vrol.vv v0, v3, v29 
+564981d7 vrol.vv v3, v4, v19 
+564c3fd7 vror.vi v31, v4, 0x38 
+568f31d7 vror.vi v3, v8, 0x3e 
+56a20dd7 vrol.vv v27, v10, v4 
+56c98357 vrol.vv v6, v12, v19 
+56ce4057 vrol.vx v0, v12, t3 
+56e884d7 vrol.vv v9, v14, v17 
+56ee8457 vrol.vv v8, v14, v29 
+56fa3b57 vror.vi v22, v15, 0x34 
+56ff40d7 vrol.vx v1, v15, t5 
+5709c557 vrol.vx v10, v16, s3 
+571b49d7 vrol.vx v19, v17, s6 
+5723ca57 vrol.vx v20, v18, t2 
+572bc957 vrol.vx v18, v18, s7 
+572fc7d7 vrol.vx v15, v18, t6 
+5751ced7 vrol.vx v29, v21, gp 
+57520fd7 vrol.vv v31, v21, v4 
+57533257 vror.vi v4, v21, 0x26 
+575fcdd7 vrol.vx v27, v21, t6 
+57690057 vrol.vv v0, v22, v18 
+577b0cd7 vrol.vv v25, v23, v22 
+578f0957 vrol.vv v18, v24, v30 
+57a88bd7 vrol.vv v23, v26, v17 
+57b8b057 vror.vi v0, v27, 0x31 
+57cab1d7 vror.vi v3, v28, 0x35 
+57df8457 vrol.vv v8, v29, v31 
+57e4c757 vrol.vx v14, v30, s1 
+57e6b557 vror.vi v10, v30, 0x2d 
+57f9cb57 vrol.vx v22, v31, s3 
+57fec3d7 vrol.vx v7, v31, t4 
 d40205d7 vwsll.vv v11, v0, v4, v0.t 
-d5638557 vwsll.vv v10, v22, v7, v0.t 
-d6bb8bd7 vwsll.vv v23, v11, v23 
-d4b485d7 vwsll.vv v11, v11, v9, v0.t 
-d6dd86d7 vwsll.vv v13, v13, v27 
-d71e0657 vwsll.vv v12, v17, v28 
 d40381d7 vwsll.vv v3, v0, v7, v0.t 
-d4f98cd7 vwsll.vv v25, v15, v19, v0.t 
-d6e083d7 vwsll.vv v7, v14, v1 
-d5c686d7 vwsll.vv v13, v28, v13, v0.t 
-d4188ad7 vwsll.vv v21, v1, v17, v0.t 
-d7108857 vwsll.vv v16, v17, v1 
-d6700857 vwsll.vv v16, v7, v0 
-d42ec457 vwsll.vx v8, v2, t4, v0.t 
-d5204e57 vwsll.vx v28, v18, zero, v0.t 
-d69ec3d7 vwsll.vx v7, v9, t4 
-d72accd7 vwsll.vx v25, v18, s5 
 d4124557 vwsll.vx v10, v1, tp, v0.t 
-d72947d7 vwsll.vx v15, v18, s2 
-d572c257 vwsll.vx v4, v23, t0, v0.t 
-d7024cd7 vwsll.vx v25, v16, tp 
-d70240d7 vwsll.vx v1, v16, tp 
-d477c857 vwsll.vx v16, v7, a5, v0.t 
-d5734c57 vwsll.vx v24, v23, t1, v0.t 
-d62cce57 vwsll.vx v28, v2, s9 
-d51e44d7 vwsll.vx v9, v17, t3, v0.t 
-d67a4657 vwsll.vx v12, v7, s4 
-d7bac6d7 vwsll.vx v13, v27, s5 
-d6fa4d57 vwsll.vx v26, v15, s4 
-d6bbc357 vwsll.vx v6, v11, s7 
 d4184557 vwsll.vx v10, v1, a6, v0.t 
-d6cac657 vwsll.vx v12, v12, s5 
-d5be40d7 vwsll.vx v1, v27, t3, v0.t 
+d4188ad7 vwsll.vv v21, v1, v17, v0.t 
+d41ebb57 vwsll.vi v22, v1, 0x1d, v0.t 
+d41eca57 vwsll.vx v20, v1, t4, v0.t 
+d4293857 vwsll.vi v16, v2, 0x12, v0.t 
+d42ec457 vwsll.vx v8, v2, t4, v0.t 
+d44a30d7 vwsll.vi v1, v4, 0x14, v0.t 
+d45485d7 vwsll.vv v11, v5, v9, v0.t 
+d459c9d7 vwsll.vx v19, v5, s3, v0.t 
+d477c857 vwsll.vx v16, v7, a5, v0.t 
+d4810ed7 vwsll.vv v29, v8, v2, v0.t 
+d4860957 vwsll.vv v18, v8, v12, v0.t 
+d488bed7 vwsll.vi v29, v8, 0x11, v0.t 
+d48c0bd7 vwsll.vv v23, v8, v24, v0.t 
+d4b0b657 vwsll.vi v12, v11, 0x1, v0.t 
+d4b485d7 vwsll.vv v11, v11, v9, v0.t 
+d4bbbb57 vwsll.vi v22, v11, 0x17, v0.t 
+d4d88757 vwsll.vv v14, v13, v17, v0.t 
+d4e036d7 vwsll.vi v13, v14, 0x0, v0.t 
+d4e135d7 vwsll.vi v11, v14, 0x2, v0.t 
+d4eac157 vwsll.vx v2, v14, s5, v0.t 
 d4ee4d57 vwsll.vx v26, v14, t3, v0.t 
+d4f5c957 vwsll.vx v18, v15, a1, v0.t 
+d4f98cd7 vwsll.vv v25, v15, v19, v0.t 
+d503bc57 vwsll.vi v24, v16, 0x7, v0.t 
+d5044057 vwsll.vx v0, v16, s0, v0.t 
+d5178157 vwsll.vv v2, v17, v15, v0.t 
+d51e44d7 vwsll.vx v9, v17, t3, v0.t 
+d51fb8d7 vwsll.vi v17, v17, 0x1f, v0.t 
+d5204e57 vwsll.vx v28, v18, zero, v0.t 
+d5228857 vwsll.vv v16, v18, v5, v0.t 
 d52ec7d7 vwsll.vx v15, v18, t4, v0.t 
 d536cc57 vwsll.vx v24, v19, a3, v0.t 
-d7dec957 vwsll.vx v18, v29, t4 
+d544b0d7 vwsll.vi v1, v20, 0x9, v0.t 
+d5638557 vwsll.vv v10, v22, v7, v0.t 
+d572c257 vwsll.vx v4, v23, t0, v0.t 
+d5734c57 vwsll.vx v24, v23, t1, v0.t 
+d573b7d7 vwsll.vi v15, v23, 0x7, v0.t 
+d592b857 vwsll.vi v16, v25, 0x5, v0.t 
+d59a38d7 vwsll.vi v17, v25, 0x14, v0.t 
+d5b6bd57 vwsll.vi v26, v27, 0xd, v0.t 
+d5be40d7 vwsll.vx v1, v27, t3, v0.t 
+d5c686d7 vwsll.vv v13, v28, v13, v0.t 
+d5c93f57 vwsll.vi v30, v28, 0x12, v0.t 
+d5de02d7 vwsll.vv v5, v29, v28, v0.t 
+d60a81d7 vwsll.vv v3, v0, v21 
+d60f3a57 vwsll.vi v20, v0, 0x1e 
+d61638d7 vwsll.vi v17, v1, 0xc 
+d61b3957 vwsll.vi v18, v1, 0x16 
+d6233c57 vwsll.vi v24, v2, 0x6 
+d6248657 vwsll.vv v12, v2, v9 
+d62c3cd7 vwsll.vi v25, v2, 0x18 
+d62cce57 vwsll.vx v28, v2, s9 
+d64785d7 vwsll.vv v11, v4, v15 
+d6700857 vwsll.vv v16, v7, v0 
+d67a4657 vwsll.vx v12, v7, s4 
+d687b857 vwsll.vi v16, v8, 0xf 
+d68939d7 vwsll.vi v19, v8, 0x12 
+d6910157 vwsll.vv v2, v9, v2 
+d6998a57 vwsll.vv v20, v9, v19 
+d69ec3d7 vwsll.vx v7, v9, t4 
 d6a94ed7 vwsll.vx v29, v10, s2 
-d5044057 vwsll.vx v0, v16, s0, v0.t 
-d41eca57 vwsll.vx v20, v1, t4, v0.t 
-d4eac157 vwsll.vx v2, v14, s5, v0.t 
-d4f5c957 vwsll.vx v18, v15, a1, v0.t 
-d459c9d7 vwsll.vx v19, v5, s3, v0.t 
+d6bb8bd7 vwsll.vv v23, v11, v23 
+d6bbc357 vwsll.vx v6, v11, s7 
+d6cac657 vwsll.vx v12, v12, s5 
+d6dd86d7 vwsll.vv v13, v13, v27 
+d6dfbad7 vwsll.vi v21, v13, 0x1f 
+d6e083d7 vwsll.vv v7, v14, v1 
+d6fa4d57 vwsll.vx v26, v15, s4 
+d70240d7 vwsll.vx v1, v16, tp 
+d7024cd7 vwsll.vx v25, v16, tp 
+d702b6d7 vwsll.vi v13, v16, 0x5 
+d70f33d7 vwsll.vi v7, v16, 0x1e 
+d7108857 vwsll.vv v16, v17, v1 
+d71e0657 vwsll.vv v12, v17, v28 
+d72947d7 vwsll.vx v15, v18, s2 
+d72accd7 vwsll.vx v25, v18, s5 
+d7378657 vwsll.vv v12, v19, v15 
+d75804d7 vwsll.vv v9, v21, v16 
+d759b4d7 vwsll.vi v9, v21, 0x13 
+d75c02d7 vwsll.vv v5, v21, v24 
+d79bb557 vwsll.vi v10, v25, 0x17 
+d7a0b1d7 vwsll.vi v3, v26, 0x1 
+d7bac6d7 vwsll.vx v13, v27, s5 
+d7dec957 vwsll.vx v18, v29, t4 
+d7e3b257 vwsll.vi v4, v30, 0x7 
+d7e90557 vwsll.vv v10, v30, v18 

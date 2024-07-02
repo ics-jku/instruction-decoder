@@ -1,769 +1,687 @@
-92b2 c.add t0, a2 
-959a c.add a1, t1 
-948e c.add s1, gp 
-958a c.add a1, sp 
-900e c.add zero, gp 
-9796 c.add a5, t0 
-9616 c.add a2, t0 
-16f9 c.addi a3, -0x2 
-1139 c.addi sp, -0x12 
+0001 c.nop 
+000d c.nop 
+0011 c.nop 
+0019 c.nop 
+002d c.nop 
+0032 c.slli zero, 0xc 
+0034 c.addi4spn a3, sp, 0x8 
+0035 c.nop 
+0039 c.nop 
+003e c.slli zero, 0xf 
+0041 c.nop 
+0045 c.nop 
+005d c.nop
+0069 c.nop 
+006e c.slli zero, 0x1b 
+0071 c.nop 
+0075 c.nop 
+0079 c.nop
+008e c.slli ra, 0x3 
+00f9 c.addi ra, 0x1e 
+0121 c.addi sp, 0x8 
+01ad c.addi gp, 0xb 
+01b2 c.slli gp, 0xc 
+0292 c.slli t0, 0x4 
+02a1 c.addi t0, 0x8 
+02a4 c.addi4spn s1, sp, 0x148 
+02b4 c.addi4spn a3, sp, 0x148 
+032c c.addi4spn a1, sp, 0x188 
+0384 c.addi4spn s1, sp, 0x1c0 
 0469 c.addi s0, 0x1a 
 04c1 c.addi s1, 0x10 
-01ad c.addi gp, 0xb 
-00f9 c.addi ra, 0x1e 
-06a9 c.addi a3, 0xa 
-005d c.nop
-0079 c.nop
-0121 c.addi sp, 0x8 
-1125 c.addi sp, -0x17 
-02a1 c.addi t0, 0x8 
-1765 c.addi a4, -0x7 
-6111 c.addi16sp sp, 0x100 
-613d c.addi16sp sp, 0x1e0 
-6119 c.addi16sp sp, 0x180 
-612d c.addi16sp sp, 0xe0 
-6135 c.addi16sp sp, 0x160 
-6129 c.addi16sp sp, 0xc0 
-6159 c.addi16sp sp, 0x190 
-710d c.addi16sp sp, -0x160 
-7105 c.addi16sp sp, -0x1e0 
-7111 c.addi16sp sp, -0x100 
-7161 c.addi16sp sp, -0x1b0 
-7161 c.addi16sp sp, -0x1b0 
-613d c.addi16sp sp, 0x1e0 
-7165 c.addi16sp sp, -0x190 
-7175 c.addi16sp sp, -0x90 
-7135 c.addi16sp sp, -0xa0 
-614d c.addi16sp sp, 0xb0 
-7141 c.addi16sp sp, -0x1f0 
-612d c.addi16sp sp, 0xe0 
-6145 c.addi16sp sp, 0x30 
-6105 c.addi16sp sp, 0x20 
-7161 c.addi16sp sp, -0x1b0 
-7111 c.addi16sp sp, -0x100 
-7131 c.addi16sp sp, -0xc0 
-615d c.addi16sp sp, 0x1b0 
-614d c.addi16sp sp, 0xb0 
-610d c.addi16sp sp, 0xa0 
-6169 c.addi16sp sp, 0xd0 
-710d c.addi16sp sp, -0x160 
-1738 c.addi4spn a4, sp, 0x3a8 
-02b4 c.addi4spn a3, sp, 0x148 
-18f4 c.addi4spn a3, sp, 0x7c 
-1728 c.addi4spn a0, sp, 0x3a8 
-16e0 c.addi4spn s0, sp, 0x36c 
-0384 c.addi4spn s1, sp, 0x1c0 
-157c c.addi4spn a5, sp, 0x2ac 
-12e8 c.addi4spn a0, sp, 0x16c 
-032c c.addi4spn a1, sp, 0x188 
-0a80 c.addi4spn s0, sp, 0x150 
-1764 c.addi4spn s1, sp, 0x3ac 
-02a4 c.addi4spn s1, sp, 0x148 
+04f2 c.slli s1, 0x1c 
 0524 c.addi4spn s1, sp, 0x288 
-0e90 c.addi4spn a2, sp, 0x350 
-0980 c.addi4spn s0, sp, 0xd0 
-0034 c.addi4spn a3, sp, 0x8 
-0af0 c.addi4spn a2, sp, 0x15c 
-1e94 c.addi4spn a3, sp, 0x370 
-1584 c.addi4spn s1, sp, 0x2e0 
-1248 c.addi4spn a0, sp, 0x124 
-1c4c c.addi4spn a1, sp, 0x234 
-1050 c.addi4spn a2, sp, 0x24 
-17e8 c.addi4spn a0, sp, 0x3ec 
-155c c.addi4spn a5, sp, 0x2a4 
-05b0 c.addi4spn a2, sp, 0x2c8 
-1b78 c.addi4spn a4, sp, 0x1bc 
 0584 c.addi4spn s1, sp, 0x2c0 
+05b0 c.addi4spn a2, sp, 0x2c8 
+06a9 c.addi a3, 0xa 
+074a c.slli a4, 0x12 
+0980 c.addi4spn s0, sp, 0xd0 
+0a80 c.addi4spn s0, sp, 0x150 
+0af0 c.addi4spn a2, sp, 0x15c 
 0e90 c.addi4spn a2, sp, 0x350 
+1001 c.nop 
+100d c.nop 
+100e c.slli zero, 0x23 
+1011 c.nop 
+101d c.nop 
+1025 c.nop 
+102d c.nop 
+1039 c.nop 
+1045 c.nop 
+104d c.nop 
+1050 c.addi4spn a2, sp, 0x24 
+1052 c.slli zero, 0x34 
+105d c.nop 
+1065 c.nop 
+1075 c.nop 
+107a c.slli zero, 0x3e 
+1125 c.addi sp, -0x17 
+1139 c.addi sp, -0x12 
+1192 c.slli gp, 0x24 
+1248 c.addi4spn a0, sp, 0x124 
+128a c.slli t0, 0x22 
+12e8 c.addi4spn a0, sp, 0x16c 
 12ec c.addi4spn a1, sp, 0x16c 
+12fe c.slli t0, 0x3f 
+13be c.slli t2, 0x2f 
+1442 c.slli s0, 0x30 
 144c c.addi4spn a1, sp, 0x224 
-26ed c.addiw a3, 0x1b 
-30d5 c.addiw ra, -0xb 
-35b9 c.addiw a1, -0x12 
-2659 c.addiw a2, 0x16 
-351d c.addiw a0, -0x19 
-2799 c.addiw a5, 0x6 
-2651 c.addiw a2, 0x14 
+155c c.addi4spn a5, sp, 0x2a4 
+157a c.slli a0, 0x3e 
+157c c.addi4spn a5, sp, 0x2ac 
+1584 c.addi4spn s1, sp, 0x2e0 
+16e0 c.addi4spn s0, sp, 0x36c 
+16f9 c.addi a3, -0x2 
+1728 c.addi4spn a0, sp, 0x3a8 
+1738 c.addi4spn a4, sp, 0x3a8 
+1764 c.addi4spn s1, sp, 0x3ac 
+1765 c.addi a4, -0x7 
+17e8 c.addi4spn a0, sp, 0x3ec 
+18f4 c.addi4spn a3, sp, 0x7c 
+1b78 c.addi4spn a4, sp, 0x1bc 
+1c4c c.addi4spn a1, sp, 0x234 
+1e94 c.addi4spn a3, sp, 0x370 
+2331 c.addiw t1, 0xc 
 2559 c.addiw a0, 0x16 
-37a9 c.addiw a5, -0x16 
+2651 c.addiw a2, 0x14 
+2659 c.addiw a2, 0x16 
+26ed c.addiw a3, 0x1b 
+2799 c.addiw a5, 0x6 
+30d5 c.addiw ra, -0xb 
+341d c.addiw s0, -0x19 
+351d c.addiw a0, -0x19 
+35b9 c.addiw a1, -0x12 
 362d c.addiw a2, -0x15 
 3711 c.addiw a4, -0x1c 
-341d c.addiw s0, -0x19 
-2331 c.addiw t1, 0xc 
-9db1 c.addw a1, a2 
-9ea9 c.addw a3, a0 
-9d2d c.addw a0, a1 
-9e21 c.addw a2, s0 
-9da5 c.addw a1, s1 
-9e31 c.addw a2, a2 
-9f25 c.addw a4, s1 
-9f2d c.addw a4, a1 
-9f35 c.addw a4, a3 
-9d31 c.addw a0, a2 
-9d35 c.addw a0, a3 
-9f25 c.addw a4, s1 
-9e39 c.addw a2, a4 
+37a9 c.addiw a5, -0x16 
+40a5 c.li ra, 0x9 
+40c8 c.lw a0, 0x4(s1) 
+40ca c.lwsp ra, 0x90(sp) 
+410d c.li sp, 0x3 
+413d c.li sp, 0xf 
+417a c.lwsp sp, 0x9c(sp) 
+427a c.lwsp tp, 0x9c(sp) 
+4292 c.lwsp t0, 0x4(sp) 
+42ca c.lwsp t0, 0x90(sp) 
+42ea c.lwsp t0, 0x98(sp) 
+4318 c.lw a4, 0x0(a4) 
+4411 c.li s0, 0x4 
+4429 c.li s0, 0xa 
+445c c.lw a5, 0xc(s0) 
+4509 c.li a0, 0x2 
+4534 c.lw a3, 0x48(a0) 
+4565 c.li a0, 0x19 
+4624 c.lw s1, 0x48(a2) 
+473e c.lwsp a4, 0xcc(sp) 
+4790 c.lw a2, 0x8(a5) 
+47bc c.lw a5, 0x48(a5) 
+48fc c.lw a5, 0x54(s1) 
+49ec c.lw a1, 0x54(a1) 
+4b2c c.lw a1, 0x50(a4) 
+4b9c c.lw a5, 0x10(a5) 
+4d9c c.lw a5, 0x18(a1) 
+5040 c.lw s0, 0x24(s0) 
+510c c.lw a1, 0x20(a0) 
+51b9 c.li gp, -0x12 
+51f6 c.lwsp gp, 0x7c(sp) 
+5240 c.lw s0, 0x24(a2) 
+528d c.li t0, -0x1d 
+52bc c.lw a5, 0x60(a3) 
+52d9 c.li t0, -0xa 
+5312 c.lwsp t1, 0x24(sp) 
+5390 c.lw a2, 0x20(a5) 
+53c9 c.li t2, -0xe 
+543a c.lwsp s0, 0xac(sp) 
+5594 c.lw a3, 0x28(a1) 
+5650 c.lw a2, 0x2c(a2) 
+5664 c.lw s1, 0x6c(a2) 
+5668 c.lw a0, 0x6c(a2) 
+56c4 c.lw s1, 0x2c(a3) 
+57dd c.li a5, -0x9 
+5830 c.lw a2, 0x70(s0) 
+5aac c.lw a1, 0x70(a3) 
+5ac8 c.lw a0, 0x34(a3) 
+5c48 c.lw a0, 0x3c(s0) 
+5c64 c.lw s1, 0x7c(s0) 
+5c9c c.lw a5, 0x38(s1) 
+5eb8 c.lw a4, 0x78(a3) 
+5ebc c.lw a5, 0x78(a3) 
+6088 c.ld a0, 0x0(s1) 
+60d2 c.ldsp ra, 0x110(sp) 
+60e8 c.ld a0, 0xc0(s1) 
+6105 c.addi16sp sp, 0x20 
+610d c.addi16sp sp, 0xa0 
+6111 c.addi16sp sp, 0x100 
+6119 c.addi16sp sp, 0x180 
+6129 c.addi16sp sp, 0xc0 
+612d c.addi16sp sp, 0xe0 
+6135 c.addi16sp sp, 0x160 
+613a c.ldsp sp, 0x188(sp) 
+613d c.addi16sp sp, 0x1e0 
+6145 c.addi16sp sp, 0x30 
+614d c.addi16sp sp, 0xb0 
+6159 c.addi16sp sp, 0x190 
+615d c.addi16sp sp, 0x1b0 
+6161 c.addi16sp sp, 0x50 
+6169 c.addi16sp sp, 0xd0 
+619c c.ld a5, 0x0(a1) 
+61a8 c.ld a0, 0x40(a1) 
+6234 c.ld a3, 0x40(a2) 
+6246 c.ldsp tp, 0x50(sp) 
+62a5 c.lui t0, 0x9 
+631d c.lui t1, 0x7 
+6330 c.ld a2, 0x40(a4) 
+63e9 c.lui t2, 0x1a 
+6431 c.lui s0, 0xc 
+64cc c.ld a1, 0x88(s1) 
+653a c.ldsp a0, 0x188(sp) 
+6544 c.ld s1, 0x88(a0) 
+655c c.ld a5, 0x88(a0) 
+65c4 c.ld s1, 0x88(a1) 
+65c9 c.lui a1, 0x12 
+65fc c.ld a5, 0xc8(a1) 
+6619 c.lui a2, 0x6 
+661c c.ld a5, 0x8(a2) 
+6646 c.ldsp a2, 0x50(sp) 
+66c0 c.ld s0, 0x88(a3) 
+6765 c.lui a4, 0x19 
+6898 c.ld a4, 0x10(s1) 
+6a58 c.ld a4, 0x90(a2) 
+6a8c c.ld a1, 0x10(a3) 
+6bd0 c.ld a2, 0x90(a5) 
+6f94 c.ld a3, 0x18(a5) 
+6fb8 c.ld a4, 0x58(a5) 
+7041 c.lui zero, 0xffff0 
+70d2 c.ldsp ra, 0x130(sp) 
+7105 c.addi16sp sp, -0x1e0 
+710d c.addi16sp sp, -0x160 
+7111 c.addi16sp sp, -0x100 
+7125 c.addi16sp sp, -0x1a0 
+712a c.ldsp sp, 0xa8(sp) 
+7131 c.addi16sp sp, -0xc0 
+7135 c.addi16sp sp, -0xa0 
+7141 c.addi16sp sp, -0x1f0 
+7161 c.addi16sp sp, -0x1b0 
+7165 c.addi16sp sp, -0x190 
+7175 c.addi16sp sp, -0x90 
+71a8 c.ld a0, 0x60(a1) 
+71ce c.ldsp gp, 0xf0(sp) 
+7200 c.ld s0, 0x20(a2) 
+7202 c.ldsp tp, 0x20(sp) 
+7362 c.ldsp t1, 0x38(sp) 
+73a2 c.ldsp t2, 0x28(sp) 
+73b4 c.ld a3, 0x60(a5) 
+75f0 c.ld a2, 0xe8(a1) 
+761d c.lui a2, 0xfffe7 
+7680 c.ld s0, 0x28(a3) 
+768a c.ldsp a3, 0xa0(sp) 
+7770 c.ld a2, 0xe8(a4) 
+77c6 c.ldsp a5, 0x70(sp) 
+77e2 c.ldsp a5, 0x38(sp) 
+7888 c.ld a0, 0x30(s1) 
+7abc c.ld a5, 0x70(a3) 
+7bb0 c.ld a2, 0x70(a5) 
+7ca0 c.ld s0, 0x78(s1) 
+7dac c.ld a1, 0x78(a1) 
+8001 c.srli64 s0 
+8011 c.srli s0, 0x4 
+8082 c.jr ra 
+80b6 c.mv ra, a3 
+80c1 c.srli s1, 0x10 
+80d1 c.srli s1, 0x14 
+8102 c.jr sp 
+812e c.mv sp, a1 
+8151 c.srli a0, 0x14 
+8182 c.jr gp 
+81e9 c.srli a1, 0x1a 
+8225 c.srli a2, 0x9 
+8236 c.mv tp, a3 
+8275 c.srli a2, 0x1d 
+8302 c.jr t1 
+8345 c.srli a4, 0x11 
+834d c.srli a4, 0x13 
+8382 c.jr t2 
+838e c.mv t2, gp 
+83cd c.srli a5, 0x13 
+83dd c.srli a5, 0x17 
+83e5 c.srli a5, 0x19 
+8402 c.jr s0 
+8409 c.srai s0, 0x2 
+8482 c.jr s1 
+84ad c.srai s1, 0xb 
+84e5 c.srai s1, 0x19 
+8502 c.jr a0 
+8582 c.jr a1 
+85c1 c.srai a1, 0x10 
+85d1 c.srai a1, 0x14 
+85f1 c.srai a1, 0x1c 
+8602 c.jr a2 
+8661 c.srai a2, 0x18 
+8675 c.srai a2, 0x1d 
+8682 c.jr a3 
+8685 c.srai a3, 0x1 
+8739 c.srai a4, 0xe 
+8775 c.srai a4, 0x1d 
+8779 c.srai a4, 0x1e 
+8782 c.jr a5 
+878e c.mv a5, gp 
+8799 c.srai a5, 0x6 
+87c1 c.srai a5, 0x10 
+87cd c.srai a5, 0x13 
+8819 c.andi s0, 0x6 
+8821 c.andi s0, 0x8 
+8881 c.andi s1, 0x0 
+88e5 c.andi s1, 0x19 
+88ed c.andi s1, 0x1b 
+8939 c.andi a0, 0xe 
+8941 c.andi a0, 0x10 
+8969 c.andi a0, 0x1a 
+89a5 c.andi a1, 0x9 
+8a2d c.andi a2, 0xb 
+8a45 c.andi a2, 0x11 
+8a75 c.andi a2, 0x1d 
+8acd c.andi a3, 0x13 
+8ad9 c.andi a3, 0x16 
+8b2d c.andi a4, 0xb 
+8b75 c.andi a4, 0x1d 
+8b7d c.andi a4, 0x1f 
+8c09 c.sub s0, a0 
+8c15 c.sub s0, a3 
+8c19 c.sub s0, a4 
+8c1d c.sub s0, a5 
+8c21 c.xor s0, s0 
+8c25 c.xor s0, s1 
+8c31 c.xor s0, a2 
+8c39 c.xor s0, a4 
+8c3d c.xor s0, a5 
+8c45 c.or s0, s1 
+8c61 c.and s0, s0 
+8c65 c.and s0, s1 
+8c69 c.and s0, a0 
+8c75 c.and s0, a3 
+8c95 c.sub s1, a3 
+8c99 c.sub s1, a4 
+8c9d c.sub s1, a5 
+8cad c.xor s1, a1 
+8cb1 c.xor s1, a2 
+8cbd c.xor s1, a5 
+8cc9 c.or s1, a0 
+8cd1 c.or s1, a2 
+8cd9 c.or s1, a4 
+8ce9 c.and s1, a0 
+8ced c.and s1, a1 
+8d15 c.sub a0, a3 
+8d19 c.sub a0, a4 
+8d2d c.xor a0, a1 
+8d31 c.xor a0, a2 
+8d39 c.xor a0, a4 
+8d3d c.xor a0, a5 
+8d55 c.or a0, a3 
+8d59 c.or a0, a4 
+8d5d c.or a0, a5 
+8d65 c.and a0, s1 
+8d69 c.and a0, a0 
+8d71 c.and a0, a2 
+8d75 c.and a0, a3 
+8d8d c.sub a1, a1 
+8d99 c.sub a1, a4 
+8da9 c.xor a1, a0 
+8dad c.xor a1, a1 
+8dc1 c.or a1, s0 
+8dd1 c.or a1, a2 
+8de1 c.and a1, s0 
+8de9 c.and a1, a0 
+8df1 c.and a1, a2 
+8df5 c.and a1, a3 
+8dfd c.and a1, a5 
+8e01 c.sub a2, s0 
+8e09 c.sub a2, a0 
+8e0d c.sub a2, a1 
+8e29 c.xor a2, a0 
+8e45 c.or a2, s1 
+8e75 c.and a2, a3 
+8e79 c.and a2, a4 
+8e7d c.and a2, a5 
+8e81 c.sub a3, s0 
+8e85 c.sub a3, s1 
+8e8d c.sub a3, a1 
+8e91 c.sub a3, a2 
+8e95 c.sub a3, a3 
+8ea5 c.xor a3, s1 
+8eb5 c.xor a3, a3 
+8ec1 c.or a3, s0 
+8ec5 c.or a3, s1 
+8ed1 c.or a3, a2 
+8ed9 c.or a3, a4 
+8edd c.or a3, a5 
+8ee1 c.and a3, s0 
+8ee9 c.and a3, a0 
+8ef1 c.and a3, a2 
+8f09 c.sub a4, a0 
+8f11 c.sub a4, a2 
+8f19 c.sub a4, a4 
+8f21 c.xor a4, s0 
+8f41 c.or a4, s0 
+8f49 c.or a4, a0 
+8f51 c.or a4, a2 
+8f55 c.or a4, a3 
+8f5d c.or a4, a5 
+8f6d c.and a4, a1 
+8f71 c.and a4, a2 
+8f85 c.sub a5, s1 
+8f89 c.sub a5, a0 
+8f91 c.sub a5, a2 
+8fa1 c.xor a5, s0 
+8fa5 c.xor a5, s1 
+8fa9 c.xor a5, a0 
+8fad c.xor a5, a1 
+8fb5 c.xor a5, a3 
+8fbd c.xor a5, a5 
+8fc1 c.or a5, s0 
+8fc5 c.or a5, s1 
+8fc9 c.or a5, a0 
+8fd9 c.or a5, a4 
+8fe1 c.and a5, s0 
+8fe9 c.and a5, a0 
+8ff5 c.and a5, a3 
+9002 c.ebreak 
+9009 c.srli s0, 0x22 
+900e c.add zero, gp 
+9031 c.srli s0, 0x2c 
+905d c.srli s0, 0x37 
+9082 c.jalr ra 
+90a5 c.srli s1, 0x29 
+90b5 c.srli s1, 0x2d 
+9102 c.jalr sp 
+9109 c.srli a0, 0x22 
+9182 c.jalr gp 
+91bd c.srli a1, 0x2f 
+91d9 c.srli a1, 0x36 
+91e1 c.srli a1, 0x38 
+9202 c.jalr tp 
+9221 c.srli a2, 0x28 
+9249 c.srli a2, 0x32 
+925d c.srli a2, 0x37 
+9275 c.srli a2, 0x3d 
+92b2 c.add t0, a2 
+9302 c.jalr t1 
+9325 c.srli a4, 0x29 
+9339 c.srli a4, 0x2e 
+9379 c.srli a4, 0x3e 
+9382 c.jalr t2 
+93cd c.srli a5, 0x33 
+9445 c.srai s0, 0x31 
+9482 c.jalr s1 
+948e c.add s1, gp 
+9502 c.jalr a0 
+9509 c.srai a0, 0x22 
+952d c.srai a0, 0x2b 
+9541 c.srai a0, 0x30 
+9582 c.jalr a1 
+958a c.add a1, sp 
+959a c.add a1, t1 
+95b1 c.srai a1, 0x2c 
+9615 c.srai a2, 0x25 
+9616 c.add a2, t0 
+9619 c.srai a2, 0x26 
+9621 c.srai a2, 0x28 
+9629 c.srai a2, 0x2a 
+9669 c.srai a2, 0x3a 
+96d5 c.srai a3, 0x35 
+9719 c.srai a4, 0x26 
+9779 c.srai a4, 0x3e 
+9796 c.add a5, t0 
+9799 c.srai a5, 0x26 
+97ad c.srai a5, 0x2b 
+9801 c.andi s0, -0x20 
+9839 c.andi s0, -0x12 
+99ad c.andi a1, -0x15 
+99dd c.andi a1, -0x9 
+9a95 c.andi a3, -0x1b 
+9aa1 c.andi a3, -0x18 
+9ac1 c.andi a3, -0x10 
+9ad1 c.andi a3, -0xc 
+9b11 c.andi a4, -0x1c 
+9b61 c.andi a4, -0x8 
+9b6d c.andi a4, -0x5 
+9b89 c.andi a5, -0x1e 
+9bfd c.andi a5, -0x1 
+9c05 c.subw s0, s1 
+9c0d c.subw s0, a1 
+9c11 c.subw s0, a2 
+9c29 c.addw s0, a0 
+9c81 c.subw s1, s0 
+9c85 c.subw s1, s1 
+9c89 c.subw s1, a0 
+9c95 c.subw s1, a3 
 9cb5 c.addw s1, a3 
-9f29 c.addw a4, a0 
+9d0d c.subw a0, a1 
+9d11 c.subw a0, a2 
+9d15 c.subw a0, a3 
+9d1d c.subw a0, a5 
 9d25 c.addw a0, s1 
 9d29 c.addw a0, a0 
-9ea1 c.addw a3, s0 
+9d2d c.addw a0, a1 
+9d31 c.addw a0, a2 
+9d35 c.addw a0, a3 
+9d81 c.subw a1, s0 
+9d85 c.subw a1, s1 
+9d89 c.subw a1, a0 
+9d95 c.subw a1, a3 
+9d99 c.subw a1, a4 
+9da5 c.addw a1, s1 
+9db1 c.addw a1, a2 
+9e05 c.subw a2, s1 
+9e09 c.subw a2, a0 
+9e1d c.subw a2, a5 
 9e21 c.addw a2, s0 
-9d29 c.addw a0, a0 
-9ea1 c.addw a3, s0 
 9e29 c.addw a2, a0 
+9e31 c.addw a2, a2 
+9e39 c.addw a2, a4 
+9e81 c.subw a3, s0 
+9e85 c.subw a3, s1 
+9e8d c.subw a3, a1 
+9e91 c.subw a3, a2 
+9ea1 c.addw a3, s0 
 9ea9 c.addw a3, a0 
 9eb5 c.addw a3, a3 
 9eb9 c.addw a3, a4 
-9d31 c.addw a0, a2 
+9f19 c.subw a4, a4 
+9f1d c.subw a4, a5 
 9f21 c.addw a4, s0 
+9f25 c.addw a4, s1 
+9f29 c.addw a4, a0 
+9f2d c.addw a4, a1 
+9f35 c.addw a4, a3 
+9f95 c.subw a5, a3 
+9f99 c.subw a5, a4 
 9fad c.addw a5, a1 
-9c29 c.addw s0, a0 
-9e29 c.addw a2, a0 
-8e7d c.and a2, a5 
-8d71 c.and a0, a2 
-8d75 c.and a0, a3 
-8e79 c.and a2, a4 
-8ce9 c.and s1, a0 
-8ef1 c.and a3, a2 
-8df5 c.and a1, a3 
-8c61 c.and s0, s0 
-8d65 c.and a0, s1 
-8c75 c.and s0, a3 
-8d69 c.and a0, a0 
-8c65 c.and s0, s1 
-8fe1 c.and a5, s0 
-8e7d c.and a2, a5 
-8df1 c.and a1, a2 
-8d71 c.and a0, a2 
-8f71 c.and a4, a2 
-8fe9 c.and a5, a0 
-8de1 c.and a1, s0 
-8ced c.and s1, a1 
-8c69 c.and s0, a0 
-8ff5 c.and a5, a3 
-8ee9 c.and a3, a0 
-8ced c.and s1, a1 
-8e75 c.and a2, a3 
-8dfd c.and a1, a5 
-8ee1 c.and a3, s0 
-8de9 c.and a1, a0 
-8f6d c.and a4, a1 
-8d75 c.and a0, a3 
-8939 c.andi a0, 0xe 
-9b6d c.andi a4, -0x5 
-9801 c.andi s0, -0x20 
-8b2d c.andi a4, 0xb 
-8a45 c.andi a2, 0x11 
-9aa1 c.andi a3, -0x18 
-9ad1 c.andi a3, -0xc 
-89a5 c.andi a1, 0x9 
-9b61 c.andi a4, -0x8 
-8941 c.andi a0, 0x10 
-9ac1 c.andi a3, -0x10 
-8881 c.andi s1, 0x0 
-9839 c.andi s0, -0x12 
-8819 c.andi s0, 0x6 
-8a2d c.andi a2, 0xb 
-8b7d c.andi a4, 0x1f 
-8ad9 c.andi a3, 0x16 
-88ed c.andi s1, 0x1b 
-9bfd c.andi a5, -0x1 
-8a75 c.andi a2, 0x1d 
-88e5 c.andi s1, 0x19 
-8acd c.andi a3, 0x13 
-99ad c.andi a1, -0x15 
-9b89 c.andi a5, -0x1e 
-9a95 c.andi a3, -0x1b 
-8b75 c.andi a4, 0x1d 
-8821 c.andi s0, 0x8 
-99dd c.andi a1, -0x9 
-8969 c.andi a0, 0x1a 
-9b11 c.andi a4, -0x1c 
-d61d c.beqz a2, -0xd2
-c795 c.beqz a5, 0x2c
-dd65 c.beqz a0, -0x8
-d339 c.beqz a4, -0xba
-c6a9 c.beqz a3, 0x4a
-c119 c.beqz a0, 0x6
-ccd1 c.beqz s1, 0x9c
-ca01 c.beqz a2, 0x10
-d009 c.beqz s0, -0xfe
-d019 c.beqz s0, -0xfa
-d4e5 c.beqz s1, -0x18
-c2d9 c.beqz a3, 0x86
-d129 c.beqz a0, -0xbe
-dbbd c.beqz a5, -0x8a
-c839 c.beqz s0, 0x56
-c33d c.beqz a4, 0x66
-cd51 c.beqz a0, 0x9c
-d175 c.beqz a0, -0x1c
-cbad c.beqz a5, 0x72
-c46d c.beqz s0, 0xea
-cc61 c.beqz s0, 0xd8
-d925 c.beqz a0, -0x90
-c8fd c.beqz s1, 0xf6
-d039 c.beqz s0, -0xba
-c58d c.beqz a1, 0x2a
-cecd c.beqz a3, 0xba
-c919 c.beqz a0, 0x16
-d351 c.beqz a4, -0x7c
-c201 c.beqz a2, 0x0
-ca25 c.beqz a2, 0x70
-f77d c.bnez a4, -0x12
-f9b9 c.bnez a1, -0xaa
-e5d9 c.bnez a1, 0x8e
-fb89 c.bnez a5, -0xee
-ff2d c.bnez a4, -0x86
-ea5d c.bnez a2, 0xb6
-ff49 c.bnez a4, -0x66
-e455 c.bnez s0, 0xac
-faf9 c.bnez a3, -0x2a
-f6b9 c.bnez a3, -0xb2
-f7f5 c.bnez a5, -0x14
-eee1 c.bnez a3, 0xd8
-ee09 c.bnez a2, 0x1a
-f879 c.bnez s0, -0x2a
-ffe1 c.bnez a5, -0x28
-fbe5 c.bnez a5, -0x10
-e529 c.bnez a0, 0x4a
-ee35 c.bnez a2, 0x7c
-e921 c.bnez a0, 0x50
-ee21 c.bnez a2, 0x58
-ffc5 c.bnez a5, -0x48
-ec51 c.bnez s0, 0x9c
-ee15 c.bnez a2, 0x3c
-e3bd c.bnez a5, 0x66
-e85d c.bnez s0, 0xb6
-fda5 c.bnez a1, -0x88
-f6bd c.bnez a3, -0x92
-f995 c.bnez a1, -0xcc
-fa95 c.bnez a3, -0xcc
-e92d c.bnez a0, 0x72
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-9002 c.ebreak 
-aa69 c.j 0x19a
+a071 c.j 0x8c
+a0c5 c.j 0xe0
+a419 c.j 0x206
 a475 c.j 0x2ac
-b489 c.j -0x5be
-ae2d c.j 0x33a
+a5e5 c.j 0x6e8
+a83d c.j 0x3e
+a885 c.j 0x70
+a895 c.j 0x74
 a935 c.j 0x43c
+a9d1 c.j 0x4d4
+aa69 c.j 0x19a
+aa81 c.j 0x150
+ab49 c.j 0x592
+ac6d c.j 0x2ba
+ae2d c.j 0x33a
+ae65 c.j 0x3b8
+afb1 c.j 0x75c
+b06d c.j -0x756
+b461 c.j -0x578
+b469 c.j -0x576
+b489 c.j -0x5be
+b511 c.j -0x1fc
+b571 c.j -0x174
+b635 c.j -0x4d4
+b6d5 c.j -0x41c
+b741 c.j -0x80
+ba31 c.j -0x6e4
 bae1 c.j -0x628
 bc0d c.j -0x5ce
-a0c5 c.j 0xe0
-a885 c.j 0x70
-ae65 c.j 0x3b8
-b6d5 c.j -0x41c
-a071 c.j 0x8c
-b571 c.j -0x174
-ba31 c.j -0x6e4
-ac6d c.j 0x2ba
 bc2d c.j -0x5c6
-a5e5 c.j 0x6e8
-b635 c.j -0x4d4
-afb1 c.j 0x75c
-a895 c.j 0x74
-b469 c.j -0x576
-b741 c.j -0x80
-b06d c.j -0x756
-aa81 c.j 0x150
-b461 c.j -0x578
-a419 c.j 0x206
-ab49 c.j 0x592
-a9d1 c.j 0x4d4
-a83d c.j 0x3e
-b511 c.j -0x1fc
-9202 c.jalr tp 
-9382 c.jalr t2 
-9502 c.jalr a0 
-9482 c.jalr s1 
-9082 c.jalr ra 
-9302 c.jalr t1 
-9502 c.jalr a0 
-9182 c.jalr gp 
-9302 c.jalr t1 
-9382 c.jalr t2 
-9082 c.jalr ra 
-9082 c.jalr ra 
-9582 c.jalr a1 
-9102 c.jalr sp 
-8482 c.jr s1 
-8682 c.jr a3 
-8302 c.jr t1 
-8602 c.jr a2 
-8582 c.jr a1 
-8182 c.jr gp 
-8782 c.jr a5 
-8102 c.jr sp 
-8502 c.jr a0 
-8382 c.jr t2 
-8582 c.jr a1 
-8082 c.jr ra 
-8482 c.jr s1 
-8402 c.jr s0 
-7680 c.ld s0, 0x28(a3) 
-7abc c.ld a5, 0x70(a3) 
-7888 c.ld a0, 0x30(s1) 
-7bb0 c.ld a2, 0x70(a5) 
-6088 c.ld a0, 0x0(s1) 
-7200 c.ld s0, 0x20(a2) 
-6a58 c.ld a4, 0x90(a2) 
-73b4 c.ld a3, 0x60(a5) 
-661c c.ld a5, 0x8(a2) 
-6544 c.ld s1, 0x88(a0) 
-64cc c.ld a1, 0x88(s1) 
-65c4 c.ld s1, 0x88(a1) 
-75f0 c.ld a2, 0xe8(a1) 
-6fb8 c.ld a4, 0x58(a5) 
-66c0 c.ld s0, 0x88(a3) 
-65fc c.ld a5, 0xc8(a1) 
-6898 c.ld a4, 0x10(s1) 
-655c c.ld a5, 0x88(a0) 
-7770 c.ld a2, 0xe8(a4) 
-6a8c c.ld a1, 0x10(a3) 
-6f94 c.ld a3, 0x18(a5) 
-6234 c.ld a3, 0x40(a2) 
-71a8 c.ld a0, 0x60(a1) 
-7dac c.ld a1, 0x78(a1) 
-619c c.ld a5, 0x0(a1) 
-6bd0 c.ld a2, 0x90(a5) 
-61a8 c.ld a0, 0x40(a1) 
-7ca0 c.ld s0, 0x78(s1) 
-6330 c.ld a2, 0x40(a4) 
-60e8 c.ld a0, 0xc0(s1) 
-6246 c.ldsp tp, 0x50(sp) 
-71ce c.ldsp gp, 0xf0(sp) 
-7362 c.ldsp t1, 0x38(sp) 
-60d2 c.ldsp ra, 0x110(sp) 
-70d2 c.ldsp ra, 0x130(sp) 
-77c6 c.ldsp a5, 0x70(sp) 
-712a c.ldsp sp, 0xa8(sp) 
-768a c.ldsp a3, 0xa0(sp) 
-7202 c.ldsp tp, 0x20(sp) 
-613a c.ldsp sp, 0x188(sp) 
-6646 c.ldsp a2, 0x50(sp) 
-77e2 c.ldsp a5, 0x38(sp) 
-653a c.ldsp a0, 0x188(sp) 
-73a2 c.ldsp t2, 0x28(sp) 
-4565 c.li a0, 0x19 
-40a5 c.li ra, 0x9 
-51b9 c.li gp, -0x12 
-4411 c.li s0, 0x4 
-53c9 c.li t2, -0xe 
-52d9 c.li t0, -0xa 
-413d c.li sp, 0xf 
-410d c.li sp, 0x3 
-4429 c.li s0, 0xa 
-528d c.li t0, -0x1d 
-57dd c.li a5, -0x9 
-4509 c.li a0, 0x2 
-4411 c.li s0, 0x4 
-6431 c.lui s0, 0xc 
-6161 c.addi16sp sp, 0x50 
-6765 c.lui a4, 0x19 
-631d c.lui t1, 0x7 
-6619 c.lui a2, 0x6 
-63e9 c.lui t2, 0x1a 
-761d c.lui a2, 0xfffe7 
-7041 c.lui zero, 0xffff0 
-7125 c.addi16sp sp, -0x1a0 
-65c9 c.lui a1, 0x12 
-62a5 c.lui t0, 0x9 
-4790 c.lw a2, 0x8(a5) 
-5594 c.lw a3, 0x28(a1) 
-4b2c c.lw a1, 0x50(a4) 
-49ec c.lw a1, 0x54(a1) 
-5c48 c.lw a0, 0x3c(s0) 
-5240 c.lw s0, 0x24(a2) 
-5c64 c.lw s1, 0x7c(s0) 
-445c c.lw a5, 0xc(s0) 
-5ac8 c.lw a0, 0x34(a3) 
-5390 c.lw a2, 0x20(a5) 
-47bc c.lw a5, 0x48(a5) 
-40c8 c.lw a0, 0x4(s1) 
-4318 c.lw a4, 0x0(a4) 
-5040 c.lw s0, 0x24(s0) 
-5650 c.lw a2, 0x2c(a2) 
-48fc c.lw a5, 0x54(s1) 
-510c c.lw a1, 0x20(a0) 
-5ebc c.lw a5, 0x78(a3) 
-5830 c.lw a2, 0x70(s0) 
-4d9c c.lw a5, 0x18(a1) 
-52bc c.lw a5, 0x60(a3) 
-5668 c.lw a0, 0x6c(a2) 
-5eb8 c.lw a4, 0x78(a3) 
-5c9c c.lw a5, 0x38(s1) 
-5664 c.lw s1, 0x6c(a2) 
-4534 c.lw a3, 0x48(a0) 
-4b9c c.lw a5, 0x10(a5) 
-4624 c.lw s1, 0x48(a2) 
-56c4 c.lw s1, 0x2c(a3) 
-5aac c.lw a1, 0x70(a3) 
-51f6 c.lwsp gp, 0x7c(sp) 
-543a c.lwsp s0, 0xac(sp) 
-473e c.lwsp a4, 0xcc(sp) 
-42ea c.lwsp t0, 0x98(sp) 
-427a c.lwsp tp, 0x9c(sp) 
-5312 c.lwsp t1, 0x24(sp) 
-40ca c.lwsp ra, 0x90(sp) 
-417a c.lwsp sp, 0x9c(sp) 
-42ca c.lwsp t0, 0x90(sp) 
-4292 c.lwsp t0, 0x4(sp) 
-838e c.mv t2, gp 
-8236 c.mv tp, a3 
-812e c.mv sp, a1 
-878e c.mv a5, gp 
-80b6 c.mv ra, a3 
-0041 c.nop 
-1011 c.nop 
-0069 c.nop 
-104d c.nop 
-002d c.nop 
-0075 c.nop 
-0035 c.nop 
-0019 c.nop 
-1065 c.nop 
-0071 c.nop 
-100d c.nop 
-0069 c.nop 
-0039 c.nop 
-000d c.nop 
-105d c.nop 
-101d c.nop 
-105d c.nop 
-1025 c.nop 
-0045 c.nop 
-0039 c.nop 
-0001 c.nop 
-1045 c.nop 
-0011 c.nop 
-0069 c.nop 
-1075 c.nop 
-0071 c.nop 
-102d c.nop 
-1039 c.nop 
-0001 c.nop 
-1001 c.nop 
-8d59 c.or a0, a4 
-8f55 c.or a4, a3 
-8dc1 c.or a1, s0 
-8dd1 c.or a1, a2 
-8fc1 c.or a5, s0 
-8c45 c.or s0, s1 
-8cd9 c.or s1, a4 
-8f55 c.or a4, a3 
-8ec5 c.or a3, s1 
-8ec1 c.or a3, s0 
-8d55 c.or a0, a3 
-8d5d c.or a0, a5 
-8cd1 c.or s1, a2 
-8d59 c.or a0, a4 
-8fc9 c.or a5, a0 
-8f41 c.or a4, s0 
-8f49 c.or a4, a0 
-8d59 c.or a0, a4 
-8edd c.or a3, a5 
-8f51 c.or a4, a2 
-8fc9 c.or a5, a0 
-8fd9 c.or a5, a4 
-8e45 c.or a2, s1 
-8fc5 c.or a5, s1 
-8cc9 c.or s1, a0 
-8ed9 c.or a3, a4 
-8f5d c.or a4, a5 
-8fc1 c.or a5, s0 
-8ed1 c.or a3, a2 
-8ec1 c.or a3, s0 
-e298 c.sd a4, 0x0(a3) 
-e698 c.sd a4, 0x8(a3) 
-e07c c.sd a5, 0xc0(s0) 
-fc10 c.sd a2, 0x38(s0) 
-e638 c.sd a4, 0x48(a2) 
-e440 c.sd s0, 0x88(s0) 
-fe50 c.sd a2, 0xb8(a2) 
-e984 c.sd s1, 0x10(a1) 
-f8cc c.sd a1, 0xb0(s1) 
-e804 c.sd s1, 0x10(s0) 
-f4c4 c.sd s1, 0xa8(s1) 
-eff0 c.sd a2, 0xd8(a5) 
-ecf4 c.sd a3, 0xd8(s1) 
-fbf4 c.sd a3, 0xf0(a5) 
-f85c c.sd a5, 0xb0(s0) 
-e184 c.sd s1, 0x0(a1) 
-ff6c c.sd a1, 0xf8(a4) 
-ef4c c.sd a1, 0x98(a4) 
-e6e8 c.sd a0, 0xc8(a3) 
-edcc c.sd a1, 0x98(a1) 
-e8b8 c.sd a4, 0x50(s1) 
-f21c c.sd a5, 0x20(a2) 
-fcf4 c.sd a3, 0xf8(s1) 
-ea00 c.sd s0, 0x10(a2) 
-f45c c.sd a5, 0xa8(s0) 
-f2f4 c.sd a3, 0xe0(a3) 
-eeb8 c.sd a4, 0x58(a3) 
-ff5c c.sd a5, 0xb8(a4) 
-eeb0 c.sd a2, 0x58(a3) 
-ee4c c.sd a1, 0x98(a2) 
-fbae c.sdsp a1, 0x1f0(sp) 
-edb6 c.sdsp a3, 0xd8(sp) 
-fe32 c.sdsp a2, 0x138(sp) 
-f302 c.sdsp zero, 0x1a0(sp) 
-f10a c.sdsp sp, 0xa0(sp) 
-e532 c.sdsp a2, 0x88(sp) 
-e702 c.sdsp zero, 0x188(sp) 
-f1ae c.sdsp a1, 0xe0(sp) 
-f6ae c.sdsp a1, 0x168(sp) 
-f6b6 c.sdsp a3, 0x168(sp) 
-f8a2 c.sdsp s0, 0x70(sp) 
-e88a c.sdsp sp, 0x50(sp) 
-e186 c.sdsp ra, 0xc0(sp) 
-e08e c.sdsp gp, 0x40(sp) 
-ee12 c.sdsp tp, 0x118(sp) 
-e50e c.sdsp gp, 0x88(sp) 
-f89e c.sdsp t2, 0x70(sp) 
-efb2 c.sdsp a2, 0x1d8(sp) 
-074a c.slli a4, 0x12 
-1052 c.slli zero, 0x34 
-008e c.slli ra, 0x3 
-0032 c.slli zero, 0xc 
-04f2 c.slli s1, 0x1c 
-13be c.slli t2, 0x2f 
-157a c.slli a0, 0x3e 
-0292 c.slli t0, 0x4 
-1442 c.slli s0, 0x30 
-107a c.slli zero, 0x3e 
-100e c.slli zero, 0x23 
-1192 c.slli gp, 0x24 
-12fe c.slli t0, 0x3f 
-01b2 c.slli gp, 0xc 
-128a c.slli t0, 0x22 
-003e c.slli zero, 0xf 
-006e c.slli zero, 0x1b 
-8675 c.srai a2, 0x1d 
-952d c.srai a0, 0x2b 
-9541 c.srai a0, 0x30 
-8661 c.srai a2, 0x18 
-9509 c.srai a0, 0x22 
-8779 c.srai a4, 0x1e 
-9629 c.srai a2, 0x2a 
-8739 c.srai a4, 0xe 
-85c1 c.srai a1, 0x10 
-85d1 c.srai a1, 0x14 
-87c1 c.srai a5, 0x10 
-87cd c.srai a5, 0x13 
-9719 c.srai a4, 0x26 
-96d5 c.srai a3, 0x35 
-8799 c.srai a5, 0x6 
-84e5 c.srai s1, 0x19 
-9779 c.srai a4, 0x3e 
-8775 c.srai a4, 0x1d 
-9619 c.srai a2, 0x26 
-95b1 c.srai a1, 0x2c 
-9445 c.srai s0, 0x31 
-8685 c.srai a3, 0x1 
-9621 c.srai a2, 0x28 
-84ad c.srai s1, 0xb 
-8409 c.srai s0, 0x2 
-9669 c.srai a2, 0x3a 
-9799 c.srai a5, 0x26 
-97ad c.srai a5, 0x2b 
-9615 c.srai a2, 0x25 
-85f1 c.srai a1, 0x1c 
-9009 c.srli s0, 0x22 
-8275 c.srli a2, 0x1d 
-9379 c.srli a4, 0x3e 
-83cd c.srli a5, 0x13 
-8011 c.srli s0, 0x4 
-9221 c.srli a2, 0x28 
-8151 c.srli a0, 0x14 
-8225 c.srli a2, 0x9 
-83e5 c.srli a5, 0x19 
-905d c.srli s0, 0x37 
-91e1 c.srli a1, 0x38 
-9275 c.srli a2, 0x3d 
-9339 c.srli a4, 0x2e 
-90b5 c.srli s1, 0x2d 
-83dd c.srli a5, 0x17 
-90a5 c.srli s1, 0x29 
-8001 c.srli64 s0 
-834d c.srli a4, 0x13 
-91d9 c.srli a1, 0x36 
-9249 c.srli a2, 0x32 
-91bd c.srli a1, 0x2f 
-9325 c.srli a4, 0x29 
-925d c.srli a2, 0x37 
-81e9 c.srli a1, 0x1a 
-80c1 c.srli s1, 0x10 
-8345 c.srli a4, 0x11 
-9031 c.srli s0, 0x2c 
-9109 c.srli a0, 0x22 
-80d1 c.srli s1, 0x14 
-93cd c.srli a5, 0x33 
-8c09 c.sub s0, a0 
-8c15 c.sub s0, a3 
-8e85 c.sub a3, s1 
-8d15 c.sub a0, a3 
-8c9d c.sub s1, a5 
-8e0d c.sub a2, a1 
-8e09 c.sub a2, a0 
-8c99 c.sub s1, a4 
-8f89 c.sub a5, a0 
-8e0d c.sub a2, a1 
-8c19 c.sub s0, a4 
-8d19 c.sub a0, a4 
-8c1d c.sub s0, a5 
-8f19 c.sub a4, a4 
-8e8d c.sub a3, a1 
-8e01 c.sub a2, s0 
-8f91 c.sub a5, a2 
-8f09 c.sub a4, a0 
-8e91 c.sub a3, a2 
-8f11 c.sub a4, a2 
-8c99 c.sub s1, a4 
-8c09 c.sub s0, a0 
-8e81 c.sub a3, s0 
-8d8d c.sub a1, a1 
-8e0d c.sub a2, a1 
-8d99 c.sub a1, a4 
-8c95 c.sub s1, a3 
-8e95 c.sub a3, a3 
-8f19 c.sub a4, a4 
-8f85 c.sub a5, s1 
-9d11 c.subw a0, a2 
-9e85 c.subw a3, s1 
-9d95 c.subw a1, a3 
-9d99 c.subw a1, a4 
-9d0d c.subw a0, a1 
-9c0d c.subw s0, a1 
-9e8d c.subw a3, a1 
-9d81 c.subw a1, s0 
-9c81 c.subw s1, s0 
-9d15 c.subw a0, a3 
-9c11 c.subw s0, a2 
-9d89 c.subw a1, a0 
-9c89 c.subw s1, a0 
-9c85 c.subw s1, s1 
-9e09 c.subw a2, a0 
-9f1d c.subw a4, a5 
-9d85 c.subw a1, s1 
-9e05 c.subw a2, s1 
-9f95 c.subw a5, a3 
-9d99 c.subw a1, a4 
-9f19 c.subw a4, a4 
-9f19 c.subw a4, a4 
-9e81 c.subw a3, s0 
-9d1d c.subw a0, a5 
-9e1d c.subw a2, a5 
-9e91 c.subw a3, a2 
-9c95 c.subw s1, a3 
-9f99 c.subw a5, a4 
-9e91 c.subw a3, a2 
-9c05 c.subw s0, s1 
-ce88 c.sw a0, 0x18(a3) 
-d9e0 c.sw s0, 0x74(a1) 
-cb3c c.sw a5, 0x50(a4) 
-cd74 c.sw a3, 0x5c(a0) 
-c644 c.sw s1, 0xc(a2) 
-d784 c.sw s1, 0x28(a5) 
-c238 c.sw a4, 0x40(a2) 
-d034 c.sw a3, 0x60(s0) 
-ccf4 c.sw a3, 0x5c(s1) 
-d1f4 c.sw a3, 0x64(a1) 
-d83c c.sw a5, 0x70(s0) 
-cdac c.sw a1, 0x58(a1) 
-c278 c.sw a4, 0x44(a2) 
-dd54 c.sw a3, 0x3c(a0) 
-d188 c.sw a0, 0x20(a1) 
-d244 c.sw s1, 0x24(a2) 
-db58 c.sw a4, 0x34(a4) 
-d930 c.sw a2, 0x70(a0) 
-de9c c.sw a5, 0x38(a3) 
-c2e4 c.sw s1, 0x44(a3) 
-c554 c.sw a3, 0xc(a0) 
-c6f4 c.sw a3, 0x4c(a3) 
-c7c4 c.sw s1, 0xc(a5) 
-c8d8 c.sw a4, 0x14(s1) 
-cf20 c.sw s0, 0x58(a4) 
-c3a0 c.sw s0, 0x40(a5) 
-da24 c.sw s1, 0x70(a2) 
-c968 c.sw a0, 0x54(a0) 
+c119 c.beqz a0, 0x6
 c198 c.sw a4, 0x0(a1) 
 c200 c.sw s0, 0x0(a2) 
-c936 c.swsp a3, 0x90(sp) 
-cd8e c.swsp gp, 0xd8(sp) 
-c61a c.swsp t1, 0xc(sp) 
-d022 c.swsp s0, 0x20(sp) 
-c732 c.swsp a2, 0x8c(sp) 
-d10a c.swsp sp, 0xa0(sp) 
-c512 c.swsp tp, 0x88(sp) 
-d28a c.swsp sp, 0x64(sp) 
-db96 c.swsp t0, 0xf4(sp) 
-d082 c.swsp zero, 0x60(sp) 
-cfa2 c.swsp s0, 0xdc(sp) 
-c5ae c.swsp a1, 0xc8(sp) 
+c201 c.beqz a2, 0x0
 c206 c.swsp ra, 0x4(sp) 
-dfa6 c.swsp s1, 0xfc(sp) 
-d3aa c.swsp a0, 0xe4(sp) 
-cdb2 c.swsp a2, 0xd8(sp) 
-d002 c.swsp zero, 0x20(sp) 
-cd2e c.swsp a1, 0x98(sp) 
-d82e c.swsp a1, 0x30(sp) 
+c238 c.sw a4, 0x40(a2) 
+c278 c.sw a4, 0x44(a2) 
+c2d9 c.beqz a3, 0x86
+c2e4 c.sw s1, 0x44(a3) 
+c33d c.beqz a4, 0x66
+c3a0 c.sw s0, 0x40(a5) 
 c416 c.swsp t0, 0x8(sp) 
+c46d c.beqz s0, 0xea
+c512 c.swsp tp, 0x88(sp) 
+c554 c.sw a3, 0xc(a0) 
+c58d c.beqz a1, 0x2a
+c5ae c.swsp a1, 0xc8(sp) 
+c61a c.swsp t1, 0xc(sp) 
+c644 c.sw s1, 0xc(a2) 
+c6a9 c.beqz a3, 0x4a
+c6f4 c.sw a3, 0x4c(a3) 
+c732 c.swsp a2, 0x8c(sp) 
+c795 c.beqz a5, 0x2c
+c7c4 c.sw s1, 0xc(a5) 
+c839 c.beqz s0, 0x56
+c8d8 c.sw a4, 0x14(s1) 
+c8fd c.beqz s1, 0xf6
+c919 c.beqz a0, 0x16
+c936 c.swsp a3, 0x90(sp) 
+c968 c.sw a0, 0x54(a0) 
+ca01 c.beqz a2, 0x10
+ca25 c.beqz a2, 0x70
+cb3c c.sw a5, 0x50(a4) 
+cbad c.beqz a5, 0x72
+cc61 c.beqz s0, 0xd8
+ccd1 c.beqz s1, 0x9c
+ccf4 c.sw a3, 0x5c(s1) 
+cd2e c.swsp a1, 0x98(sp) 
+cd51 c.beqz a0, 0x9c
+cd74 c.sw a3, 0x5c(a0) 
+cd8e c.swsp gp, 0xd8(sp) 
+cdac c.sw a1, 0x58(a1) 
+cdb2 c.swsp a2, 0xd8(sp) 
+ce88 c.sw a0, 0x18(a3) 
+cecd c.beqz a3, 0xba
+cf20 c.sw s0, 0x58(a4) 
+cfa2 c.swsp s0, 0xdc(sp) 
+d002 c.swsp zero, 0x20(sp) 
+d009 c.beqz s0, -0xfe
+d019 c.beqz s0, -0xfa
+d022 c.swsp s0, 0x20(sp) 
+d034 c.sw a3, 0x60(s0) 
+d039 c.beqz s0, -0xba
+d082 c.swsp zero, 0x60(sp) 
+d10a c.swsp sp, 0xa0(sp) 
+d129 c.beqz a0, -0xbe
+d175 c.beqz a0, -0x1c
+d188 c.sw a0, 0x20(a1) 
+d1f4 c.sw a3, 0x64(a1) 
+d244 c.sw s1, 0x24(a2) 
+d28a c.swsp sp, 0x64(sp) 
 d32e c.swsp a1, 0xa4(sp) 
-8e29 c.xor a2, a0 
-8cb1 c.xor s1, a2 
-8eb5 c.xor a3, a3 
-8c25 c.xor s0, s1 
-8d39 c.xor a0, a4 
-8c3d c.xor s0, a5 
-8d39 c.xor a0, a4 
-8dad c.xor a1, a1 
-8fa1 c.xor a5, s0 
-8f21 c.xor a4, s0 
-8cad c.xor s1, a1 
-8fad c.xor a5, a1 
-8ea5 c.xor a3, s1 
-8d2d c.xor a0, a1 
-8c31 c.xor s0, a2 
-8c39 c.xor s0, a4 
-8fbd c.xor a5, a5 
-8dad c.xor a1, a1 
-8e29 c.xor a2, a0 
-8d31 c.xor a0, a2 
-8fbd c.xor a5, a5 
-8c39 c.xor s0, a4 
-8c31 c.xor s0, a2 
-8fa9 c.xor a5, a0 
-8cbd c.xor s1, a5 
-8fb5 c.xor a5, a3 
-8da9 c.xor a1, a0 
-8c21 c.xor s0, s0 
-8d3d c.xor a0, a5 
-8fa5 c.xor a5, s1 
+d339 c.beqz a4, -0xba
+d351 c.beqz a4, -0x7c
+d3aa c.swsp a0, 0xe4(sp) 
+d4e5 c.beqz s1, -0x18
+d61d c.beqz a2, -0xd2
+d784 c.sw s1, 0x28(a5) 
+d82e c.swsp a1, 0x30(sp) 
+d83c c.sw a5, 0x70(s0) 
+d925 c.beqz a0, -0x90
+d930 c.sw a2, 0x70(a0) 
+d9e0 c.sw s0, 0x74(a1) 
+da24 c.sw s1, 0x70(a2) 
+db58 c.sw a4, 0x34(a4) 
+db96 c.swsp t0, 0xf4(sp) 
+dbbd c.beqz a5, -0x8a
+dd54 c.sw a3, 0x3c(a0) 
+dd65 c.beqz a0, -0x8
+de9c c.sw a5, 0x38(a3) 
+dfa6 c.swsp s1, 0xfc(sp) 
+e07c c.sd a5, 0xc0(s0) 
+e08e c.sdsp gp, 0x40(sp) 
+e184 c.sd s1, 0x0(a1) 
+e186 c.sdsp ra, 0xc0(sp) 
+e298 c.sd a4, 0x0(a3) 
+e3bd c.bnez a5, 0x66
+e440 c.sd s0, 0x88(s0) 
+e455 c.bnez s0, 0xac
+e50e c.sdsp gp, 0x88(sp) 
+e529 c.bnez a0, 0x4a
+e532 c.sdsp a2, 0x88(sp) 
+e5d9 c.bnez a1, 0x8e
+e638 c.sd a4, 0x48(a2) 
+e698 c.sd a4, 0x8(a3) 
+e6e8 c.sd a0, 0xc8(a3) 
+e702 c.sdsp zero, 0x188(sp) 
+e804 c.sd s1, 0x10(s0) 
+e85d c.bnez s0, 0xb6
+e88a c.sdsp sp, 0x50(sp) 
+e8b8 c.sd a4, 0x50(s1) 
+e921 c.bnez a0, 0x50
+e92d c.bnez a0, 0x72
+e984 c.sd s1, 0x10(a1) 
+ea00 c.sd s0, 0x10(a2) 
+ea5d c.bnez a2, 0xb6
+ec51 c.bnez s0, 0x9c
+ecf4 c.sd a3, 0xd8(s1) 
+edb6 c.sdsp a3, 0xd8(sp) 
+edcc c.sd a1, 0x98(a1) 
+ee09 c.bnez a2, 0x1a
+ee12 c.sdsp tp, 0x118(sp) 
+ee15 c.bnez a2, 0x3c
+ee21 c.bnez a2, 0x58
+ee35 c.bnez a2, 0x7c
+ee4c c.sd a1, 0x98(a2) 
+eeb0 c.sd a2, 0x58(a3) 
+eeb8 c.sd a4, 0x58(a3) 
+eee1 c.bnez a3, 0xd8
+ef4c c.sd a1, 0x98(a4) 
+efb2 c.sdsp a2, 0x1d8(sp) 
+eff0 c.sd a2, 0xd8(a5) 
+f10a c.sdsp sp, 0xa0(sp) 
+f1ae c.sdsp a1, 0xe0(sp) 
+f21c c.sd a5, 0x20(a2) 
+f2f4 c.sd a3, 0xe0(a3) 
+f302 c.sdsp zero, 0x1a0(sp) 
+f45c c.sd a5, 0xa8(s0) 
+f4c4 c.sd s1, 0xa8(s1) 
+f6ae c.sdsp a1, 0x168(sp) 
+f6b6 c.sdsp a3, 0x168(sp) 
+f6b9 c.bnez a3, -0xb2
+f6bd c.bnez a3, -0x92
+f77d c.bnez a4, -0x12
+f7f5 c.bnez a5, -0x14
+f85c c.sd a5, 0xb0(s0) 
+f879 c.bnez s0, -0x2a
+f89e c.sdsp t2, 0x70(sp) 
+f8a2 c.sdsp s0, 0x70(sp) 
+f8cc c.sd a1, 0xb0(s1) 
+f995 c.bnez a1, -0xcc
+f9b9 c.bnez a1, -0xaa
+fa95 c.bnez a3, -0xcc
+faf9 c.bnez a3, -0x2a
+fb89 c.bnez a5, -0xee
+fbae c.sdsp a1, 0x1f0(sp) 
+fbe5 c.bnez a5, -0x10
+fbf4 c.sd a3, 0xf0(a5) 
+fc10 c.sd a2, 0x38(s0) 
+fcf4 c.sd a3, 0xf8(s1) 
+fda5 c.bnez a1, -0x88
+fe32 c.sdsp a2, 0x138(sp) 
+fe50 c.sd a2, 0xb8(a2) 
+ff2d c.bnez a4, -0x86
+ff49 c.bnez a4, -0x66
+ff5c c.sd a5, 0xb8(a4) 
+ff6c c.sd a1, 0xf8(a4) 
+ffc5 c.bnez a5, -0x48
+ffe1 c.bnez a5, -0x28

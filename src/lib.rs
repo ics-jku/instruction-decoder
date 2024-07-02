@@ -1,4 +1,3 @@
-use core::slice;
 use std::{
     collections::{BTreeMap, HashMap},
     str::FromStr,

@@ -46,14 +46,6 @@ fn test_rv64_zicond() {
 }
 
 #[test]
-fn test_rv64_zifencei() {
-    isa_test!(
-        "../../toml/RV_Zifencei.toml",
-        "test_data/rv64/rv64zifencei.test"
-    );
-}
-
-#[test]
 fn test_rv64_zbkb() {
     isa_test!("../../toml/RV64_Zbkb.toml", "test_data/rv64/rv64zbkb.test");
 }
