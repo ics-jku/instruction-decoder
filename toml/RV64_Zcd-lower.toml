@@ -1,8 +1,8 @@
 set = "RVZcd"
-width = 16
+width = 32
 
 [types]
-names = ["format-1-0", "format-2-0", "format-3-0", "format-4-0"]
+names = ["format-1-0", "format-2-1", "format-3-0", "format-4-1"]
 parts = [
     [
         "rd_p_Register_int_c",
@@ -73,14 +73,14 @@ parts = [
 ]
 
 [type]
-names = ["type-1-0", "type-2-0", "type-3-0", "type-4-0"]
+names = ["type-1-0", "type-2-1", "type-3-0", "type-4-1"]
 [[type.type-1-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-1-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 3
 
@@ -90,7 +90,7 @@ top = 2
 bot = 0
 
 [[type.type-1-0]]
-name = "imm"
+name = "himm"
 top = 7
 bot = 6
 
@@ -104,43 +104,43 @@ name = "none"
 top = 1
 bot = 0
 
-[[type.type-2-0]]
+[[type.type-2-1]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
-[[type.type-2-0]]
-name = "imm"
+[[type.type-2-1]]
+name = "himm"
 top = 5
 bot = 5
 
-[[type.type-2-0]]
+[[type.type-2-1]]
 name = "rd_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-0]]
-name = "imm"
+[[type.type-2-1]]
+name = "himm"
 top = 4
 bot = 3
 
-[[type.type-2-0]]
-name = "imm"
+[[type.type-2-1]]
+name = "himm"
 top = 8
 bot = 6
 
-[[type.type-2-0]]
+[[type.type-2-1]]
 name = "none"
 top = 1
 bot = 0
 
 [[type.type-3-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-3-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 3
 
@@ -150,7 +150,7 @@ top = 2
 bot = 0
 
 [[type.type-3-0]]
-name = "imm"
+name = "himm"
 top = 7
 bot = 6
 
@@ -164,27 +164,27 @@ name = "none"
 top = 1
 bot = 0
 
-[[type.type-4-0]]
+[[type.type-4-1]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
-[[type.type-4-0]]
-name = "imm"
+[[type.type-4-1]]
+name = "himm"
 top = 5
 bot = 3
 
-[[type.type-4-0]]
-name = "imm"
+[[type.type-4-1]]
+name = "himm"
 top = 8
 bot = 6
 
-[[type.type-4-0]]
+[[type.type-4-1]]
 name = "c_rs2_Register_float"
 top = 4
 bot = 0
 
-[[type.type-4-0]]
+[[type.type-4-1]]
 name = "none"
 top = 1
 bot = 0
@@ -192,17 +192,17 @@ bot = 0
 [format-1-0]
 type = "type-1-0"
 
-[format-2-0]
-type = "type-2-0"
+[format-2-1]
+type = "type-2-1"
 
 [format-3-0]
 type = "type-3-0"
 
-[format-4-0]
-type = "type-4-0"
+[format-4-1]
+type = "type-4-1"
 
 [mappings]
-names = ["Register_int", "Register_float", "Register_float_c"]
+names = ["Register_int", "Register_int_c", "Register_float", "Register_float_c"]
 number = 32
 Register_int = [
     "zero",
@@ -238,6 +238,7 @@ Register_int = [
     "t5",
     "t6",
 ]
+Register_int_c = ["s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5"]
 Register_float = [
     "ft0",
     "ft1",
@@ -277,13 +278,13 @@ Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
 [format-1-0.repr]
 default = "$name$ %rd_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
 
-[format-2-0.repr]
+[format-2-1.repr]
 default = "$name$ %rd_Register_float%, %himm%(sp)"
 
 [format-3-0.repr]
 default = "$name$ %rs2_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
 
-[format-4-0.repr]
+[format-4-1.repr]
 default = "$name$ %c_rs2_Register_float%, %himm%(sp)"
 
 [format-1-0.instructions.c_fld]
@@ -291,7 +292,7 @@ mask = 0xe003
 match = 0x2000
 unsigned = true
 
-[format-2-0.instructions.c_fldsp]
+[format-2-1.instructions.c_fldsp]
 mask = 0xe003
 match = 0x2002
 unsigned = true
@@ -301,7 +302,7 @@ mask = 0xe003
 match = 0xa000
 unsigned = true
 
-[format-4-0.instructions.c_fsdsp]
+[format-4-1.instructions.c_fsdsp]
 mask = 0xe003
 match = 0xa002
 unsigned = true

@@ -1,0 +1,1084 @@
+set = "RV32C"
+width = 32
+
+[types]
+names = [
+    "format-01-0",
+    "format-02-0",
+    "format-23-0",
+    "format-24-0",
+    "format-05-0",
+    "format-06-0",
+    "format-07-0",
+    "format-28-0",
+    "format-09-0",
+    "format-10-0",
+    "format-31-0",
+    "format-12-0",
+    "format-13-0",
+    "format-14-0",
+    "format-15-0",
+    "format-16-0",
+    "format-17-0",
+    "format-18-0",
+    "format-19-0",
+    "format-20-0",
+    "format-21-0",
+]
+parts = [
+    [
+        "rd_rs1_n0_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd_rs1_n0_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "c_rs2_n0_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "c_rs2_n0_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rd_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rd_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rd_rs1_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rd_rs1_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rs2_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs2_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "rs1_p_Register_int_c",
+        3,
+        "Register_int_c",
+    ],
+    [
+        "rs1_p_Register_float_c",
+        3,
+        "Register_float_c",
+    ],
+    [
+        "c_rs1_n0_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "c_rs1_n0_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rs1_n0_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rs1_n0_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rd_n0_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd_n0_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "rd_n2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd_n2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "c_rs2_Register_int",
+        5,
+        "Register_int",
+    ],
+    [
+        "c_rs2_Register_float",
+        5,
+        "Register_float",
+    ],
+    [
+        "none",
+        32,
+        "u32",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "himm",
+        32,
+        "VInt",
+        "hex",
+    ],
+]
+
+[type]
+names = [
+    "type-1-0",
+    "type-2-0",
+    "type-3-0",
+    "type-4-0",
+    "type-5-0",
+    "type-6-0",
+    "type-7-0",
+    "type-8-0",
+    "type-9-0",
+    "type-10-0",
+    "type-11-0",
+    "type-12-0",
+    "type-13-0",
+    "type-14-0",
+    "type-15-0",
+    "type-16-0",
+    "type-17-0",
+    "type-18-0",
+    "type-19-0",
+    "type-20-0",
+    "type-21-0",
+]
+[[type.type-1-0]]
+name = "none"
+top = 31
+bot = 12
+
+[[type.type-1-0]]
+name = "rd_rs1_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "c_rs2_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-1-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-2-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-2-0]]
+name = "rd_rs1_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-2-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-3-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-3-0]]
+name = "himm"
+top = 9
+bot = 9
+
+[[type.type-3-0]]
+name = "none"
+top = 11
+bot = 7
+
+[[type.type-3-0]]
+name = "himm"
+top = 4
+bot = 4
+
+[[type.type-3-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-3-0]]
+name = "himm"
+top = 8
+bot = 7
+
+[[type.type-3-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-3-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-4-0]]
+name = "himm"
+top = 5
+bot = 4
+
+[[type.type-4-0]]
+name = "himm"
+top = 9
+bot = 6
+
+[[type.type-4-0]]
+name = "himm"
+top = 2
+bot = 2
+
+[[type.type-4-0]]
+name = "himm"
+top = 3
+bot = 3
+
+[[type.type-4-0]]
+name = "rd_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-4-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-5-0]]
+name = "none"
+top = 31
+bot = 10
+
+[[type.type-5-0]]
+name = "rd_rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-5-0]]
+name = "none"
+top = 6
+bot = 5
+
+[[type.type-5-0]]
+name = "rs2_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-5-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-6-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-6-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-6-0]]
+name = "none"
+top = 11
+bot = 10
+
+[[type.type-6-0]]
+name = "rd_rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-6-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-6-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-7-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-7-0]]
+name = "himm"
+top = 8
+bot = 8
+
+[[type.type-7-0]]
+name = "himm"
+top = 4
+bot = 3
+
+[[type.type-7-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-7-0]]
+name = "himm"
+top = 7
+bot = 6
+
+[[type.type-7-0]]
+name = "himm"
+top = 2
+bot = 1
+
+[[type.type-7-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-7-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-8-0]]
+name = "none"
+top = 31
+bot = 0
+
+[[type.type-9-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-9-0]]
+name = "himm"
+top = 11
+bot = 11
+
+[[type.type-9-0]]
+name = "himm"
+top = 4
+bot = 4
+
+[[type.type-9-0]]
+name = "himm"
+top = 9
+bot = 8
+
+[[type.type-9-0]]
+name = "himm"
+top = 10
+bot = 10
+
+[[type.type-9-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-9-0]]
+name = "himm"
+top = 7
+bot = 7
+
+[[type.type-9-0]]
+name = "himm"
+top = 3
+bot = 1
+
+[[type.type-9-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-9-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-10-0]]
+name = "none"
+top = 31
+bot = 12
+
+[[type.type-10-0]]
+name = "c_rs1_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-10-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type-11-0]]
+name = "none"
+top = 31
+bot = 12
+
+[[type.type-11-0]]
+name = "rs1_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-11-0]]
+name = "none"
+top = 6
+bot = 0
+
+[[type.type-12-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-12-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-12-0]]
+name = "rd_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-12-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-12-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-13-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-13-0]]
+name = "himm"
+top = 5
+bot = 5
+extend_top = 14 # extends top bit by 14
+
+[[type.type-13-0]]
+name = "rd_n2_Register_int"
+top = 4
+bot = 0
+
+[[type.type-13-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-13-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-14-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-14-0]]
+name = "himm"
+top = 5
+bot = 3
+
+[[type.type-14-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-14-0]]
+name = "himm"
+top = 2
+bot = 2
+
+[[type.type-14-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-14-0]]
+name = "rd_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-14-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-15-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-15-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-15-0]]
+name = "rd_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-15-0]]
+name = "himm"
+top = 4
+bot = 2
+
+[[type.type-15-0]]
+name = "himm"
+top = 7
+bot = 6
+
+[[type.type-15-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-16-0]]
+name = "none"
+top = 31
+bot = 12
+
+[[type.type-16-0]]
+name = "rd_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-16-0]]
+name = "c_rs2_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-16-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-17-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-17-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-17-0]]
+name = "none"
+top = 11
+bot = 7
+
+[[type.type-17-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-17-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-18-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-18-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-18-0]]
+name = "rd_rs1_n0_Register_int"
+top = 4
+bot = 0
+
+[[type.type-18-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-18-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-19-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-19-0]]
+name = "himm"
+top = 5
+bot = 5
+
+[[type.type-19-0]]
+name = "none"
+top = 11
+bot = 10
+
+[[type.type-19-0]]
+name = "rd_rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-19-0]]
+name = "himm"
+top = 4
+bot = 0
+
+[[type.type-19-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-20-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-20-0]]
+name = "himm"
+top = 5
+bot = 3
+
+[[type.type-20-0]]
+name = "rs1_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-20-0]]
+name = "himm"
+top = 2
+bot = 2
+
+[[type.type-20-0]]
+name = "himm"
+top = 6
+bot = 6
+
+[[type.type-20-0]]
+name = "rs2_p_Register_int_c"
+top = 2
+bot = 0
+
+[[type.type-20-0]]
+name = "none"
+top = 1
+bot = 0
+
+[[type.type-21-0]]
+name = "none"
+top = 31
+bot = 13
+
+[[type.type-21-0]]
+name = "himm"
+top = 5
+bot = 2
+
+[[type.type-21-0]]
+name = "himm"
+top = 7
+bot = 6
+
+[[type.type-21-0]]
+name = "c_rs2_Register_int"
+top = 4
+bot = 0
+
+[[type.type-21-0]]
+name = "none"
+top = 1
+bot = 0
+
+[format-01-0]
+type = "type-1-0"
+
+[format-02-0]
+type = "type-2-0"
+
+[format-23-0]
+type = "type-3-0"
+
+[format-24-0]
+type = "type-4-0"
+
+[format-05-0]
+type = "type-5-0"
+
+[format-06-0]
+type = "type-6-0"
+
+[format-07-0]
+type = "type-7-0"
+
+[format-28-0]
+type = "type-8-0"
+
+[format-09-0]
+type = "type-9-0"
+
+[format-10-0]
+type = "type-10-0"
+
+[format-31-0]
+type = "type-11-0"
+
+[format-12-0]
+type = "type-12-0"
+
+[format-13-0]
+type = "type-13-0"
+
+[format-14-0]
+type = "type-14-0"
+
+[format-15-0]
+type = "type-15-0"
+
+[format-16-0]
+type = "type-16-0"
+
+[format-17-0]
+type = "type-17-0"
+
+[format-18-0]
+type = "type-18-0"
+
+[format-19-0]
+type = "type-19-0"
+
+[format-20-0]
+type = "type-20-0"
+
+[format-21-0]
+type = "type-21-0"
+
+[mappings]
+names = ["Register_int", "Register_int_c", "Register_float", "Register_float_c"]
+number = 32
+Register_int = [
+    "zero",
+    "ra",
+    "sp",
+    "gp",
+    "tp",
+    "t0",
+    "t1",
+    "t2",
+    "s0",
+    "s1",
+    "a0",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "a6",
+    "a7",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+]
+Register_int_c = ["s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5"]
+Register_float = [
+    "ft0",
+    "ft1",
+    "ft2",
+    "ft3",
+    "ft4",
+    "ft5",
+    "ft6",
+    "ft7",
+    "fs0",
+    "fs1",
+    "fa0",
+    "fa1",
+    "fa2",
+    "fa3",
+    "fa4",
+    "fa5",
+    "fa6",
+    "fa7",
+    "fs2",
+    "fs3",
+    "fs4",
+    "fs5",
+    "fs6",
+    "fs7",
+    "fs8",
+    "fs9",
+    "fs10",
+    "fs11",
+    "ft8",
+    "ft9",
+    "ft10",
+    "ft11",
+]
+Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
+
+[format-01-0.repr]
+default = "$name$ %rd_rs1_n0_Register_int%, %c_rs2_n0_Register_int%"
+
+[format-02-0.repr]
+default = "$name$ %rd_rs1_n0_Register_int%, %himm%"
+
+[format-23-0.repr]
+default = "$name$ sp, %himm%"
+
+[format-24-0.repr]
+default = "$name$ %rd_p_Register_int_c%, sp, %himm%"
+
+[format-05-0.repr]
+default = "$name$ %rd_rs1_p_Register_int_c%, %rs2_p_Register_int_c%"
+
+[format-06-0.repr]
+default = "$name$ %rd_rs1_p_Register_int_c%, %himm%"
+
+[format-07-0.repr]
+default = "$name$ %rs1_p_Register_int_c%, %himm%"
+
+[format-28-0.repr]
+default = "$name$"
+
+[format-09-0.repr]
+default = "$name$ %himm%"
+
+[format-10-0.repr]
+default = "$name$ %c_rs1_n0_Register_int%"
+
+[format-31-0.repr]
+default = "$name$ %rs1_n0_Register_int%"
+
+[format-12-0.repr]
+default = "$name$ %rd_n0_Register_int%, %himm%"
+
+[format-13-0.repr]
+default = "$name$ %rd_n2_Register_int%, %himm%"
+
+[format-14-0.repr]
+default = "$name$ %rd_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-15-0.repr]
+default = "$name$ %rd_n0_Register_int%, %himm%(sp)"
+
+[format-16-0.repr]
+default = "$name$ %rd_n0_Register_int%, %c_rs2_n0_Register_int%"
+
+[format-17-0.repr]
+default = "$name$"
+
+[format-18-0.repr]
+default = "$name$ %rd_rs1_n0_Register_int%, %himm%"
+c_slli64 = "$name$ %rd_rs1_n0_Register_int%"
+
+[format-19-0.repr]
+default = "$name$ %rd_rs1_p_Register_int_c%, %himm%"
+c_srli64 = "$name$ %rd_rs1_p_Register_int_c%"
+
+[format-20-0.repr]
+default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
+
+[format-21-0.repr]
+default = "$name$ %c_rs2_Register_int%, %himm%(sp)"
+
+[format-01-0.instructions.c_add]
+mask = 0xf003
+match = 0x9002
+
+[format-02-0.instructions.c_addi]
+mask = 0xe003
+match = 0x1
+
+[format-23-0.instructions.c_addi16sp]
+mask = 0xef83
+match = 0x6101
+
+[format-24-0.instructions.c_addi4spn]
+mask = 0xe003
+match = 0x0
+unsigned = true
+
+[format-05-0.instructions.c_and]
+mask = 0xfc63
+match = 0x8c61
+
+[format-05-0.instructions.c_or]
+mask = 0xfc63
+match = 0x8c41
+
+[format-05-0.instructions.c_sub]
+mask = 0xfc63
+match = 0x8c01
+
+[format-05-0.instructions.c_xor]
+mask = 0xfc63
+match = 0x8c21
+
+[format-06-0.instructions.c_andi]
+mask = 0xec03
+match = 0x8801
+
+[format-07-0.instructions.c_beqz]
+mask = 0xe003
+match = 0xc001
+
+[format-07-0.instructions.c_bnez]
+mask = 0xe003
+match = 0xe001
+
+[format-28-0.instructions.c_ebreak]
+mask = 0xffff
+match = 0x9002
+
+[format-09-0.instructions.c_j]
+mask = 0xe003
+match = 0xa001
+
+[format-09-0.instructions.c_jal]
+mask = 0xe003
+match = 0x2001
+
+[format-10-0.instructions.c_jalr]
+mask = 0xf07f
+match = 0x9002
+
+[format-31-0.instructions.c_jr]
+mask = 0xf07f
+match = 0x8002
+
+[format-12-0.instructions.c_li]
+mask = 0xe003
+match = 0x4001
+
+[format-13-0.instructions.c_lui]
+mask = 0xe003
+match = 0x6001
+unsigned = true
+
+[format-14-0.instructions.c_lw]
+mask = 0xe003
+match = 0x4000
+unsigned = true
+
+[format-15-0.instructions.c_lwsp]
+mask = 0xe003
+match = 0x4002
+unsigned = true
+
+[format-16-0.instructions.c_mv]
+mask = 0xf003
+match = 0x8002
+
+[format-17-0.instructions.c_nop]
+mask = 0xef83
+match = 0x1
+
+[format-18-0.instructions.c_slli]
+mask = 0xf003
+match = 0x2
+unsigned = true
+
+[format-18-0.instructions.c_slli64]
+mask = 0xf07f
+match = 0x2
+unsigned = true
+
+[format-19-0.instructions.c_srai]
+mask = 0xfc03
+match = 0x8401
+unsigned = true
+
+[format-19-0.instructions.c_srli]
+mask = 0xfc03
+match = 0x8001
+unsigned = true
+
+[format-19-0.instructions.c_srli64]
+mask = 0xfc7f
+match = 0x8001
+unsigned = true
+
+[format-20-0.instructions.c_sw]
+mask = 0xe003
+match = 0xc000
+unsigned = true
+
+[format-21-0.instructions.c_swsp]
+mask = 0xe003
+match = 0xc002
+unsigned = true

@@ -1,5 +1,5 @@
 set = "RVZcd"
-width = 16
+width = 32
 
 [types]
 names = ["format-1-0", "format-2-0", "format-3-0", "format-4-0"]
@@ -76,7 +76,7 @@ parts = [
 names = ["type-1-0", "type-2-0", "type-3-0", "type-4-0"]
 [[type.type-1-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-1-0]]
@@ -106,7 +106,7 @@ bot = 0
 
 [[type.type-2-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-2-0]]
@@ -136,7 +136,7 @@ bot = 0
 
 [[type.type-3-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-3-0]]
@@ -166,7 +166,7 @@ bot = 0
 
 [[type.type-4-0]]
 name = "none"
-top = 15
+top = 31
 bot = 13
 
 [[type.type-4-0]]
