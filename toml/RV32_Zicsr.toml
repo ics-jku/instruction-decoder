@@ -80,7 +80,7 @@ top = 11
 bot = 0
 
 [[type.type_2-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -181,7 +181,7 @@ Register_float = [
 default = "$name$ %rd_Register_int%, %csr%, %rs1_Register_int%"
 
 [format_2-0.repr]
-default = "$name$ %rd_Register_int%, %csr%, %imm%"
+default = "$name$ %rd_Register_int%, %csr%, %himm%"
 
 [mappings.Mapping_csr]
 0x1 = "fflags"

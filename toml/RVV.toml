@@ -268,7 +268,7 @@ top = 4
 bot = 0
 
 [[type.type_3-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -393,7 +393,7 @@ top = 4
 bot = 0
 
 [[type.type_6-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -748,7 +748,7 @@ top = 31
 bot = 20
 
 [[type.type_16-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -868,7 +868,7 @@ top = 9
 bot = 0
 
 [[type.type_20-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -1275,8 +1275,8 @@ vfwnmacc_vf = "$name$ %vd%, %rs1_Register_float%, %vs2%%vm%"
 vfwnmsac_vf = "$name$ %vd%, %rs1_Register_float%, %vs2%%vm%"
 
 [format_3-0.repr]
-default = "$name$ %vd%, %vs2%, %imm%, v0"
-vmadc_vi = "$name$ %vd%, %vs2%, %imm%"
+default = "$name$ %vd%, %vs2%, %himm%, v0"
+vmadc_vi = "$name$ %vd%, %vs2%, %himm%"
 
 [format_4-0.repr]
 default = "$name$ %vd%, %vs2%, %vs1%"
@@ -1295,7 +1295,7 @@ vmsbc_vx = "$name$ %vd%, %vs2%, %rs1_Register_int%"
 default = "$name$ %vd%, %vs2%, %rs1_Register_float%, v0"
 
 [format_6-0.repr]
-default = "$name$ %vd%, %vs2%, %imm%%vm%"
+default = "$name$ %vd%, %vs2%, %himm%%vm%"
 
 [format_7-0.repr]
 default = "$name$ %rd_Register_int%, %vs2%%vm%"
@@ -1350,7 +1350,7 @@ vlse8_v = "vls%nf%e8.v %vd%, (%rs1_Register_int%), %rs2_Register_int%%vm%"
 default = "$name$ %vd%, %vs2%"
 
 [format_16-0.repr]
-default = "$name$ %vd%, %imm%"
+default = "$name$ %vd%, %himm%"
 
 [format_17-0.repr]
 default = "$name$ %vd%, %vs1%"
@@ -1365,7 +1365,7 @@ vse64_v = "vs%nf%e64.v %vs3%, (%rs1_Register_int%)%vm%"
 vse8_v = "vs%nf%e8.v %vs3%, (%rs1_Register_int%)%vm%"
 
 [format_20-0.repr]
-default = "$name$ %rd_Register_int%, %imm%, %zimm10%"
+default = "$name$ %rd_Register_int%, %himm%, %zimm10%"
 
 [format_21-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"

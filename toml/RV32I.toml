@@ -63,6 +63,7 @@ parts = [
         "shamtw",
         5,
         "u8",
+        "hex",
     ],
     [
         "none",
@@ -125,7 +126,7 @@ top = 6
 bot = 0
 
 [[type.type_2-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 0
 
@@ -150,7 +151,7 @@ top = 6
 bot = 0
 
 [[type.type_3-0]]
-name = "imm"
+name = "himm"
 top = 19
 bot = 0
 
@@ -165,12 +166,12 @@ top = 6
 bot = 0
 
 [[type.type_4-0]]
-name = "imm"
+name = "himm"
 top = 12
 bot = 12
 
 [[type.type_4-0]]
-name = "imm"
+name = "himm"
 top = 10
 bot = 5
 
@@ -190,12 +191,12 @@ top = 14
 bot = 12
 
 [[type.type_4-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 1
 
 [[type.type_4-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 11
 
@@ -245,22 +246,22 @@ top = 6
 bot = 0
 
 [[type.type_7-0]]
-name = "imm"
+name = "himm"
 top = 20
 bot = 20
 
 [[type.type_7-0]]
-name = "imm"
+name = "himm"
 top = 10
 bot = 1
 
 [[type.type_7-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 11
 
 [[type.type_7-0]]
-name = "imm"
+name = "himm"
 top = 19
 bot = 12
 
@@ -275,7 +276,7 @@ top = 6
 bot = 0
 
 [[type.type_8-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 5
 
@@ -295,7 +296,7 @@ top = 14
 bot = 12
 
 [[type.type_8-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 0
 
@@ -455,19 +456,19 @@ Mapping_fence = [
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 
 [format_2-0.repr]
-default = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
-jalr = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
-lb = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
-lbu = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
-lh = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
-lhu = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
-lw = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
+default = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
+jalr = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
+lb = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
+lbu = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
+lh = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
+lhu = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
+lw = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
 
 [format_3-0.repr]
-default = "$name$ %rd_Register_int%, %imm%"
+default = "$name$ %rd_Register_int%, %himm%"
 
 [format_4-0.repr]
-default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %imm%"
+default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %himm%"
 
 [format_5-0.repr]
 default = "$name$"
@@ -476,10 +477,10 @@ default = "$name$"
 default = "$name$ %pred%, %succ%"
 
 [format_7-0.repr]
-default = "$name$ %rd_Register_int%, %imm%"
+default = "$name$ %rd_Register_int%, %himm%"
 
 [format_8-0.repr]
-default = "$name$ %rs2_Register_int%, %imm%(%rs1_Register_int%)"
+default = "$name$ %rs2_Register_int%, %himm%(%rs1_Register_int%)"
 
 [format_9-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtw%"

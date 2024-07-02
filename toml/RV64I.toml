@@ -174,12 +174,12 @@ top = 6
 bot = 0
 
 [[type.type-4-0]]
-name = "imm"
+name = "himm"
 top = 12
 bot = 12
 
 [[type.type-4-0]]
-name = "imm"
+name = "himm"
 top = 10
 bot = 5
 
@@ -199,12 +199,12 @@ top = 14
 bot = 12
 
 [[type.type-4-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 1
 
 [[type.type-4-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 11
 
@@ -254,22 +254,22 @@ top = 6
 bot = 0
 
 [[type.type-7-0]]
-name = "imm"
+name = "himm"
 top = 20
 bot = 20
 
 [[type.type-7-0]]
-name = "imm"
+name = "himm"
 top = 10
 bot = 1
 
 [[type.type-7-0]]
-name = "imm"
+name = "himm"
 top = 11
 bot = 11
 
 [[type.type-7-0]]
-name = "imm"
+name = "himm"
 top = 19
 bot = 12
 
@@ -510,7 +510,7 @@ xori = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
 default = "$name$ %rd_Register_int%, %himm%"
 
 [format-4-0.repr]
-default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %imm%"
+default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %himm%"
 
 [format-5-0.repr]
 default = "$name$"
@@ -520,7 +520,7 @@ pause = "fence w, $0$"
 default = "$name$ %pred%, %succ%"
 
 [format-7-0.repr]
-default = "$name$ %rd_Register_int%, %imm%"
+default = "$name$ %rd_Register_int%, %himm%"
 
 [format-8-0.repr]
 default = "$name$ %rs2_Register_int%, %himm%(%rs1_Register_int%)"
