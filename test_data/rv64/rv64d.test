@@ -1,4 +1,4 @@
-0224b787 fld fa5, 0x22(s1) 
+0224b787 fld fa5, 34(s1) 
 022bba53 fadd.d fs4, fs7, ft2, rup 
 024c89d3 fadd.d fs3, fs9, ft4, rne 
 0259ba53 fadd.d fs4, fs3, ft5, rup 
@@ -27,7 +27,7 @@
 03f20553 fadd.d fa0, ft4, ft11, rne 
 03fdae53 fadd.d ft8, fs11, ft11, rdn 
 0a02cfd3 fsub.d ft11, ft5, ft0, rmm 
-0a22ba07 fld fs4, 0xa2(t0) 
+0a22ba07 fld fs4, 162(t0) 
 0a520fd3 fsub.d ft11, ft4, ft5, rne 
 0a593f53 fsub.d ft10, fs2, ft5, rup 
 0a748ad3 fsub.d fs5, fs1, ft7, rne 
@@ -48,7 +48,7 @@
 0be7c753 fsub.d fa4, fa5, ft10, rmm 
 0bea2a53 fsub.d fs4, fs4, ft10, rdn 
 0bf87053 fsub.d ft0, fa6, ft11, dyn 
-11803227 fsd fs8, 0x104(zero) 
+11803227 fsd fs8, 260(zero) 
 12019e53 fmul.d ft8, ft3, ft0, rtz 
 120e91d3 fmul.d ft3, ft9, ft0, rtz 
 1213c6d3 fmul.d fa3, ft7, ft1, rmm 
@@ -75,7 +75,7 @@
 13b38853 fmul.d fa6, ft7, fs11, rne 
 13f7c053 fmul.d ft0, fa5, ft11, rmm 
 13fd104f fnmadd.d ft0, fs10, ft11, ft2, rtz 
-169ebda7 fsd fs1, 0x17b(t4) 
+169ebda7 fsd fs1, 379(t4) 
 1a0117d3 fdiv.d fa5, ft2, ft0, rtz 
 1a172fd3 fdiv.d ft11, fa4, ft1, rdn 
 1a1f4553 fdiv.d fa0, ft10, ft1, rmm 
@@ -97,7 +97,7 @@
 1b5d16d3 fdiv.d fa3, fs10, fs5, rtz 
 1b5f8b53 fdiv.d fs6, ft11, fs5, rne 
 1b719dd3 fdiv.d fs11, ft3, fs7, rtz 
-1b76baa7 fsd fs7, 0x1b5(a3) 
+1b76baa7 fsd fs7, 437(a3) 
 1b7a25d3 fdiv.d fa1, fs4, fs7, rdn 
 1b7f9fd3 fdiv.d ft11, ft11, fs7, rtz 
 1b813c53 fdiv.d fs8, ft2, fs8, rup 
@@ -157,7 +157,7 @@
 231780d3 fsgnj.d ft1, fa5, fa7 
 231ead53 fsgnjx.d fs10, ft9, fa7 
 23209cd3 fsgnjn.d fs9, ft1, fs2 
-232e3187 fld ft3, 0x232(t3) 
+232e3187 fld ft3, 562(t3) 
 233118d3 fsgnjn.d fa7, ft2, fs3 
 23340453 fsgnj.d fs0, fs0, fs3 
 233a13d3 fsgnjn.d ft7, fs4, fs3 
@@ -234,7 +234,7 @@
 2adc9353 fmax.d ft6, fs9, fa3 
 2ae31753 fmax.d fa4, ft6, fa4 
 2ae414d3 fmax.d fs1, fs0, fa4 
-2ae63907 fld fs2, 0x2ae(a2) 
+2ae63907 fld fs2, 686(a2) 
 2aec0ed3 fmin.d ft9, fs8, fa4 
 2aee15d3 fmax.d fa1, ft8, fa4 
 2af393d3 fmax.d ft7, ft7, fa5 
@@ -265,21 +265,21 @@
 2bc494d3 fmax.d fs1, fs1, ft8 
 2be19053 fmax.d ft0, ft3, ft10 
 2bea9853 fmax.d fa6, fs5, ft10 
-2c6634a7 fsd ft6, 0x2c9(a2) 
+2c6634a7 fsd ft6, 713(a2) 
 327bcbc3 fmadd.d fs7, fs7, ft7, ft6, rmm 
 3317abc7 fmsub.d fs7, fa5, fa7, ft6, rdn 
 336c4dc7 fmsub.d fs11, fs8, fs6, ft6, rmm 
 33c67647 fmsub.d fa2, fa2, ft8, ft6, dyn 
-34773387 fld ft7, 0x347(a4) 
-36d23aa7 fsd fa3, 0x375(tp) 
-39803727 fsd fs8, 0x38e(zero) 
+34773387 fld ft7, 839(a4) 
+36d23aa7 fsd fa3, 885(tp) 
+39803727 fsd fs8, 910(zero) 
 3a5a8dcf fnmadd.d fs11, fs5, ft5, ft7, rne 
 3aa029c7 fmsub.d fs3, ft0, fa0, ft7, rdn 
 3b0a9b4b fnmsub.d fs6, fs5, fa6, ft7, rtz 
 3b0da8cb fnmsub.d fa7, fs11, fa6, ft7, rdn 
 3b7dafc7 fmsub.d ft11, fs11, fs7, ft7, rdn 
 3be14acb fnmsub.d fs5, ft2, ft10, ft7, rmm 
-3cbb3d27 fsd fa1, 0x3da(s6) 
+3cbb3d27 fsd fa1, 986(s6) 
 4010f0d3 fcvt.s.d ft1, ft1, dyn 
 4011a253 fcvt.s.d ft4, ft3, rdn 
 401247d3 fcvt.s.d fa5, ft4, rmm 
@@ -301,7 +301,7 @@
 401dcbd3 fcvt.s.d fs7, fs11, rmm 
 401f42d3 fcvt.s.d ft5, ft10, rmm 
 401fb153 fcvt.s.d ft2, ft11, rup 
-416cb527 fsd fs6, 0x40a(s9) 
+416cb527 fsd fs6, 1034(s9) 
 42001ad3 fcvt.d.s fs5, ft0, rtz 
 42018153 fcvt.d.s ft2, ft3, rne 
 42022553 fcvt.d.s fa0, ft4, rdn 
@@ -322,22 +322,22 @@
 420e9f53 fcvt.d.s ft10, ft9, rtz 
 420f76d3 fcvt.d.s fa3, ft10, dyn 
 420f9ed3 fcvt.d.s ft9, ft11, rtz 
-42143427 fsd ft1, 0x428(s0) 
+42143427 fsd ft1, 1064(s0) 
 4242f84b fnmsub.d fa6, ft5, ft4, fs0, dyn 
 4342bcc7 fmsub.d fs9, ft5, fs4, fs0, rup 
 439b91cb fnmsub.d ft3, fs7, fs9, fs0, rtz 
-476d3827 fsd fs6, 0x470(s10) 
-4ae93827 fsd fa4, 0x4b0(s2) 
+476d3827 fsd fs6, 1136(s10) 
+4ae93827 fsd fa4, 1200(s2) 
 4b07b443 fmadd.d fs0, fa5, fa6, fs1, rup 
-4cb63b87 fld fs7, 0x4cb(a2) 
-4e933087 fld ft1, 0x4e9(t1) 
-4f4c3407 fld fs0, 0x4f4(s8) 
+4cb63b87 fld fs7, 1227(a2) 
+4e933087 fld ft1, 1257(t1) 
+4f4c3407 fld fs0, 1268(s8) 
 52ec46cb fnmsub.d fa3, fs8, fa4, fa0, rmm 
 53189dc7 fmsub.d fs11, fa7, fa7, fa0, rtz 
 53a1fbcb fnmsub.d fs7, ft3, fs10, fa0, dyn 
 53ac7547 fmsub.d fa0, fs8, fs10, fa0, dyn 
 53d346cf fnmadd.d fa3, ft6, ft9, fa0, rmm 
-592eb9a7 fsd fs2, 0x593(t4) 
+592eb9a7 fsd fs2, 1427(t4) 
 5a004ad3 fsqrt.d fs5, ft0, rmm 
 5a037c53 fsqrt.d fs8, ft6, dyn 
 5a043853 fsqrt.d fa6, fs0, rup 
@@ -363,33 +363,33 @@
 5a0fced3 fsqrt.d ft9, ft11, rmm 
 5b221847 fmsub.d fa6, ft4, fs2, fa1, rtz 
 5bf2f9c7 fmsub.d fs3, ft5, ft11, fa1, dyn 
-5f203027 fsd fs2, 0x5e0(zero) 
+5f203027 fsd fs2, 1504(zero) 
 6282b843 fmadd.d fa6, ft5, fs0, fa2, rup 
 62e5494f fnmadd.d fs2, fa0, fa4, fa2, rmm 
 6354f84f fnmadd.d fa6, fs1, fs5, fa2, dyn 
-6599b907 fld fs2, 0x659(s3) 
-6890be07 fld ft8, 0x689(ra) 
+6599b907 fld fs2, 1625(s3) 
+6890be07 fld ft8, 1673(ra) 
 6a2414cf fnmadd.d fs1, fs0, ft2, fa3, rtz 
 6b7d0fcf fnmadd.d ft11, fs10, fs7, fa3, rne 
-6f6eb987 fld fs3, 0x6f6(t4) 
+6f6eb987 fld fs3, 1782(t4) 
 732bb64f fnmadd.d fa2, fs7, fs2, fa4, rup 
-75143b07 fld fs6, 0x751(s0) 
+75143b07 fld fs6, 1873(s0) 
 7b0e31c7 fmsub.d ft3, ft8, fa6, fa5, rup 
 7bfea9cb fnmsub.d fs3, ft9, ft11, fa5, rdn 
-7fb6b207 fld ft4, 0x7fb(a3) 
+7fb6b207 fld ft4, 2043(a3) 
 83b07947 fmsub.d fs2, ft0, fs11, fa6, dyn 
 8a5b14cf fnmadd.d fs1, fs6, ft5, fa7, rtz 
 8a6074c7 fmsub.d fs1, ft0, ft6, fa7, dyn 
-8ad5bb27 fsd fa3, -0x74a(a1) 
+8ad5bb27 fsd fa3, -1866(a1) 
 92b6704b fnmsub.d ft0, fa2, fa1, fs2, dyn 
 9363aa4b fnmsub.d fs4, ft7, fs6, fs2, rdn 
-939d3607 fld fa2, -0x6c7(s10) 
-97ceb2a7 fsd ft8, -0x69b(t4) 
-9899b727 fsd fs1, -0x672(s3) 
-9a28b827 fsd ft2, -0x650(a7) 
+939d3607 fld fa2, -1735(s10) 
+97ceb2a7 fsd ft8, -1691(t4) 
+9899b727 fsd fs1, -1650(s3) 
+9a28b827 fsd ft2, -1616(a7) 
 9bacab4b fnmsub.d fs6, fs9, fs10, fs3, rdn 
-9d93b087 fld ft1, -0x627(t2) 
-9dd03c27 fsd ft9, -0x628(zero) 
+9d93b087 fld ft1, -1575(t2) 
+9dd03c27 fsd ft9, -1576(zero) 
 a2000053 fle.d zero, ft0, ft0 
 a2051553 flt.d a0, fa0, ft0 
 a20e04d3 fle.d s1, ft8, ft0 
@@ -484,20 +484,20 @@ a3f788d3 fle.d a7, fa5, ft11
 a3f81a53 flt.d s4, fa6, ft11 
 a3fb1a53 flt.d s4, fs6, ft11 
 a3fca1d3 feq.d gp, fs9, ft11 
-a609b807 fld fa6, -0x5a0(s3) 
-a9c1b5a7 fsd ft8, -0x575(gp) 
-aa203127 fsd ft2, -0x55e(zero) 
+a609b807 fld fa6, -1440(s3) 
+a9c1b5a7 fsd ft8, -1397(gp) 
+aa203127 fsd ft2, -1374(zero) 
 aa8da5c3 fmadd.d fa1, fs11, fs0, fs5, rdn 
-ad253727 fsd fs2, -0x532(a0) 
-b2663c87 fld fs9, -0x4da(a2) 
-b734bba7 fsd fs3, -0x489(s1) 
-b8af3007 fld ft0, -0x476(t5) 
-bab135a7 fsd fa1, -0x455(sp) 
-bbb1b207 fld ft4, -0x445(gp) 
+ad253727 fsd fs2, -1330(a0) 
+b2663c87 fld fs9, -1242(a2) 
+b734bba7 fsd fs3, -1161(s1) 
+b8af3007 fld ft0, -1142(t5) 
+bab135a7 fsd fa1, -1109(sp) 
+bbb1b207 fld ft4, -1093(gp) 
 bbcc994b fnmsub.d fs2, fs9, ft8, fs7, rtz 
 bbe69ac3 fmadd.d fs5, fa3, ft10, fs7, rtz 
-c12f3787 fld fa5, -0x3ee(t5) 
-c1423d07 fld fs10, -0x3ec(tp) 
+c12f3787 fld fa5, -1006(t5) 
+c1423d07 fld fs10, -1004(tp) 
 c2002d53 fcvt.w.d s10, ft0, rdn 
 c2013b53 fcvt.w.d s6, ft2, rup 
 c20246d3 fcvt.w.d a3, ft4, rmm 
@@ -590,16 +590,16 @@ c23f3cd3 fcvt.lu.d s9, ft10, rup
 c23fb653 fcvt.lu.d a2, ft11, rup 
 c28af5c7 fmsub.d fa1, fs5, fs0, fs8, dyn 
 c352c2c7 fmsub.d ft5, ft5, fs5, fs8, rmm 
-c459bf07 fld ft10, -0x3bb(s3) 
-c6d73807 fld fa6, -0x393(a4) 
+c459bf07 fld ft10, -955(s3) 
+c6d73807 fld fa6, -915(a4) 
 ca897c4f fnmadd.d fs8, fs2, fs0, fs9, dyn 
-cac13727 fsd fa2, -0x352(sp) 
+cac13727 fsd fa2, -850(sp) 
 cad81a4b fnmsub.d fs4, fa6, fa3, fs9, rtz 
-caf1b827 fsd fa5, -0x350(gp) 
+caf1b827 fsd fa5, -848(gp) 
 cb2c26cf fnmadd.d fa3, fs8, fs2, fs9, rdn 
 cb4ab4cf fnmadd.d fs1, fs5, fs4, fs9, rup 
 cbfbca47 fmsub.d fs4, fs7, ft11, fs9, rmm 
-ce43b027 fsd ft4, -0x320(t2) 
+ce43b027 fsd ft4, -800(t2) 
 d200a5d3 fcvt.d.w fa1, ra, rdn 
 d201bdd3 fcvt.d.w fs11, gp, rup 
 d201cc53 fcvt.d.w fs8, gp, rmm 
@@ -699,15 +699,15 @@ d23e43d3 fcvt.d.lu ft7, t3, rmm
 d23f9c53 fcvt.d.lu fs8, t6, rtz 
 d241f243 fmadd.d ft4, ft3, ft4, fs10, dyn 
 d31238c3 fmadd.d fa7, ft4, fa7, fs10, rup 
-d319bfa7 fsd fa7, -0x2c1(s3) 
+d319bfa7 fsd fa7, -705(s3) 
 d35a17cb fnmsub.d fa5, fs4, fs5, fs10, rtz 
 d3760a43 fmadd.d fs4, fa2, fs7, fs10, rne 
 d3b69747 fmsub.d fa4, fa3, fs11, fs10, rtz 
 da449f43 fmadd.d ft10, fs1, ft4, fs11, rtz 
 da744fcf fnmadd.d ft11, fs0, ft7, fs11, rmm 
 db19cfcf fnmadd.d ft11, fs3, fa7, fs11, rmm 
-e0283587 fld fa1, -0x1fe(a6) 
-e1cb3e87 fld ft9, -0x1e4(s6) 
+e0283587 fld fa1, -510(a6) 
+e1cb3e87 fld ft9, -484(s6) 
 e20003d3 fmv.x.d t2, ft0 
 e2001153 fclass.d sp, ft0 
 e2008753 fmv.x.d a4, ft1 
@@ -772,18 +772,18 @@ e28107cf fnmadd.d fa5, ft2, fs0, ft8, rne
 e2f59443 fmadd.d fs0, fa1, fa5, ft8, rtz 
 e3eb1e43 fmadd.d ft8, fs6, ft10, ft8, rtz 
 e3ef374f fnmadd.d fa4, ft10, ft10, ft8, rup 
-e7d7be07 fld ft8, -0x183(a5) 
-e907b227 fsd fa6, -0x17c(a5) 
-e9203087 fld ft1, -0x16e(zero) 
+e7d7be07 fld ft8, -387(a5) 
+e907b227 fsd fa6, -380(a5) 
+e9203087 fld ft1, -366(zero) 
 ea0b2ccb fnmsub.d fs9, fs6, ft0, ft9, rdn 
 ea2c3f4b fnmsub.d ft10, fs8, ft2, ft9, rup 
 ea35374b fnmsub.d fa4, fa0, ft3, ft9, rup 
 ea930fcf fnmadd.d ft11, ft6, fs1, ft9, rne 
-eae33a87 fld fs5, -0x152(t1) 
+eae33a87 fld fs5, -338(t1) 
 eb261fc7 fmsub.d ft11, fa2, fs2, ft9, rtz 
-ec2fbc27 fsd ft2, -0x128(t6) 
-edb53687 fld fa3, -0x125(a0) 
-ee17be07 fld ft8, -0x11f(a5) 
+ec2fbc27 fsd ft2, -296(t6) 
+edb53687 fld fa3, -293(a0) 
+ee17be07 fld ft8, -287(a5) 
 f2000ed3 fmv.d.x ft9, zero 
 f2008c53 fmv.d.x fs8, ra 
 f2008e53 fmv.d.x ft8, ra 
@@ -818,7 +818,7 @@ f296cbcf fnmadd.d fs7, fa3, fs1, ft10, rmm
 f3251b47 fmsub.d fs6, fa0, fs2, ft10, rtz 
 f3369443 fmadd.d fs0, fa3, fs3, ft10, rtz 
 f34d1847 fmsub.d fa6, fs10, fs4, ft10, rtz 
-f6ccb3a7 fsd fa2, -0x99(s9) 
+f6ccb3a7 fsd fa2, -153(s9) 
 fa680b47 fmsub.d fs6, fa6, ft6, ft11, rne 
 fa80464b fnmsub.d fa2, ft0, fs0, ft11, rmm 
 fac41e4b fnmsub.d ft8, fs0, fa2, ft11, rtz 

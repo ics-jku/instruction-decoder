@@ -1,4 +1,4 @@
-set = "RV32Zcf"
+set = "RV32Zcf" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 16
 
 [types]

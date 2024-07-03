@@ -1,4 +1,4 @@
-set = "RV64I"
+set = "RV64I" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
@@ -64,13 +64,11 @@ parts = [
         "shamtd",
         6,
         "u8",
-        "hex",
     ],
     [
         "shamtw",
         5,
         "u8",
-        "hex",
     ],
     [
         "none",
@@ -134,7 +132,7 @@ top = 6
 bot = 0
 
 [[type.type-2-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 0
 
@@ -174,12 +172,12 @@ top = 6
 bot = 0
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 12
 bot = 12
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 10
 bot = 5
 
@@ -199,12 +197,12 @@ top = 14
 bot = 12
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 1
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 11
 
@@ -254,22 +252,22 @@ top = 6
 bot = 0
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 20
 bot = 20
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 10
 bot = 1
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 11
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 19
 bot = 12
 
@@ -284,7 +282,7 @@ top = 6
 bot = 0
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 5
 
@@ -304,7 +302,7 @@ top = 14
 bot = 12
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -497,33 +495,32 @@ Mapping_fence = [
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 
 [format-2-0.repr]
-default = "$name$ %rd_Register_int%, %himm%(%rs1_Register_int%)"
-addi = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-addiw = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-andi = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-ori = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-slti = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-sltiu = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
-xori = "$name$ %rd_Register_int%, %rs1_Register_int%, %himm%"
+default = "$name$ %rd_Register_int%, %imm%(%rs1_Register_int%)"
+addi = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+addiw = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+andi = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+ori = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+slti = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+sltiu = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
+xori = "$name$ %rd_Register_int%, %rs1_Register_int%, %imm%"
 
 [format-3-0.repr]
 default = "$name$ %rd_Register_int%, %himm%"
 
 [format-4-0.repr]
-default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %himm%"
+default = "$name$ %rs1_Register_int%, %rs2_Register_int%, %imm%"
 
 [format-5-0.repr]
 default = "$name$"
-pause = "fence w, $0$"
 
 [format-6-0.repr]
 default = "$name$ %pred%, %succ%"
 
 [format-7-0.repr]
-default = "$name$ %rd_Register_int%, %himm%"
+default = "$name$ %rd_Register_int%, %imm%"
 
 [format-8-0.repr]
-default = "$name$ %rs2_Register_int%, %himm%(%rs1_Register_int%)"
+default = "$name$ %rs2_Register_int%, %imm%(%rs1_Register_int%)"
 
 [format-9-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtd%"
@@ -692,10 +689,6 @@ match = 0x100073
 [format-5-0.instructions.ecall]
 mask = 0xffffffff
 match = 0x73
-
-[format-5-0.instructions.pause]
-mask = 0xffffffff
-match = 0x100000f
 
 [format-6-0.instructions.fence]
 mask = 0x707f

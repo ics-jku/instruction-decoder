@@ -1,4 +1,4 @@
-set = "RV64C"
+set = "RV64C" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
@@ -214,7 +214,7 @@ top = 31
 bot = 13
 
 [[type.type-2-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -224,7 +224,7 @@ top = 4
 bot = 0
 
 [[type.type-2-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -239,7 +239,7 @@ top = 31
 bot = 13
 
 [[type.type-3-0]]
-name = "himm"
+name = "imm"
 top = 9
 bot = 9
 
@@ -249,22 +249,22 @@ top = 11
 bot = 7
 
 [[type.type-3-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 4
 
 [[type.type-3-0]]
-name = "himm"
+name = "imm"
 top = 6
 bot = 6
 
 [[type.type-3-0]]
-name = "himm"
+name = "imm"
 top = 8
 bot = 7
 
 [[type.type-3-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -279,22 +279,22 @@ top = 31
 bot = 13
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 4
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 9
 bot = 6
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 2
 bot = 2
 
 [[type.type-4-0]]
-name = "himm"
+name = "imm"
 top = 3
 bot = 3
 
@@ -314,7 +314,7 @@ top = 31
 bot = 13
 
 [[type.type-5-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -324,7 +324,7 @@ top = 4
 bot = 0
 
 [[type.type-5-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -364,7 +364,7 @@ top = 31
 bot = 13
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -379,7 +379,7 @@ top = 2
 bot = 0
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -394,12 +394,12 @@ top = 31
 bot = 13
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 8
 bot = 8
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 3
 
@@ -409,17 +409,17 @@ top = 2
 bot = 0
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 7
 bot = 6
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 2
 bot = 1
 
 [[type.type-8-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -439,42 +439,42 @@ top = 31
 bot = 13
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 11
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 4
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 9
 bot = 8
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 10
 bot = 10
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 6
 bot = 6
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 7
 bot = 7
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 3
 bot = 1
 
 [[type.type-10-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -579,7 +579,7 @@ top = 31
 bot = 13
 
 [[type.type-15-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -589,7 +589,7 @@ top = 4
 bot = 0
 
 [[type.type-15-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -715,7 +715,7 @@ top = 31
 bot = 13
 
 [[type.type-20-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -725,7 +725,7 @@ top = 11
 bot = 7
 
 [[type.type-20-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -795,7 +795,7 @@ top = 31
 bot = 13
 
 [[type.type-23-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -805,7 +805,7 @@ top = 4
 bot = 0
 
 [[type.type-23-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -820,7 +820,7 @@ top = 31
 bot = 13
 
 [[type.type-24-0]]
-name = "himm"
+name = "imm"
 top = 5
 bot = 5
 
@@ -835,7 +835,7 @@ top = 2
 bot = 0
 
 [[type.type-24-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -1060,31 +1060,31 @@ Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
 default = "$name$ %rd_rs1_n0_Register_int%, %c_rs2_n0_Register_int%"
 
 [format-02-0.repr]
-default = "$name$ %rd_rs1_n0_Register_int%, %himm%"
+default = "$name$ %rd_rs1_n0_Register_int%, %imm%"
 
 [format-33-0.repr]
-default = "$name$ sp, %himm%"
+default = "$name$ sp, %imm%"
 
 [format-34-0.repr]
-default = "$name$ %rd_p_Register_int_c%, sp, %himm%"
+default = "$name$ %rd_p_Register_int_c%, sp, %imm%"
 
 [format-05-0.repr]
-default = "$name$ %rd_rs1_n0_Register_int%, %himm%"
+default = "$name$ %rd_rs1_n0_Register_int%, %imm%"
 
 [format-06-0.repr]
 default = "$name$ %rd_rs1_p_Register_int_c%, %rs2_p_Register_int_c%"
 
 [format-07-0.repr]
-default = "$name$ %rd_rs1_p_Register_int_c%, %himm%"
+default = "$name$ %rd_rs1_p_Register_int_c%, %imm%"
 
 [format-08-0.repr]
-default = "$name$ %rs1_p_Register_int_c%, %himm%"
+default = "$name$ %rs1_p_Register_int_c%, %imm%"
 
 [format-29-0.repr]
 default = "$name$"
 
 [format-10-0.repr]
-default = "$name$ %himm%"
+default = "$name$ %imm%"
 
 [format-11-0.repr]
 default = "$name$ %c_rs1_n0_Register_int%"
@@ -1099,7 +1099,7 @@ default = "$name$ %rd_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
 default = "$name$ %rd_n0_Register_int%, %himm%(sp)"
 
 [format-15-0.repr]
-default = "$name$ %rd_n0_Register_int%, %himm%"
+default = "$name$ %rd_n0_Register_int%, %imm%"
 
 [format-16-0.repr]
 default = "$name$ %rd_n2_Register_int%, %himm%"
@@ -1123,11 +1123,11 @@ default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
 default = "$name$ %c_rs2_Register_int%, %himm%(sp)"
 
 [format-23-0.repr]
-default = "$name$ %rd_rs1_n0_Register_int%, %himm%"
+default = "$name$ %rd_rs1_n0_Register_int%, %imm%"
 c_slli64 = "$name$ %rd_rs1_n0_Register_int%"
 
 [format-24-0.repr]
-default = "$name$ %rd_rs1_p_Register_int_c%, %himm%"
+default = "$name$ %rd_rs1_p_Register_int_c%, %imm%"
 c_srai64 = "$name$ %rd_rs1_p_Register_int_c%"
 c_srli64 = "$name$ %rd_rs1_p_Register_int_c%"
 

@@ -1,12 +1,12 @@
-set = "RVZawrs"
+set = "RVZawrs" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
-names = [ "format-1-0",]
-parts = [ [ "none", 32, "u32",], [ "imm", 32, "VInt",], [ "himm", 32, "VInt", "hex",],]
+names = ["format-1-0"]
+parts = [["none", 32, "u32"], ["imm", 32, "VInt"], ["himm", 32, "VInt", "hex"]]
 
 [type]
-names = [ "type-1-0",]
+names = ["type-1-0"]
 [[type.type-1-0]]
 name = "none"
 top = 31

@@ -1,4 +1,4 @@
-set = "RV64D"
+set = "RV64D" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
 [types]
@@ -309,7 +309,7 @@ top = 6
 bot = 0
 
 [[type.type-5-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 0
 
@@ -369,7 +369,7 @@ top = 6
 bot = 0
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 11
 bot = 5
 
@@ -389,7 +389,7 @@ top = 14
 bot = 12
 
 [[type.type-7-0]]
-name = "himm"
+name = "imm"
 top = 4
 bot = 0
 
@@ -529,13 +529,13 @@ default = "$name$ %rd_Register_int%, %rs1_Register_float%, %rs2_Register_float%"
 default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float%"
 
 [format-5-0.repr]
-default = "$name$ %rd_Register_float%, %himm%(%rs1_Register_int%)"
+default = "$name$ %rd_Register_float%, %imm%(%rs1_Register_int%)"
 
 [format-6-15.repr]
 default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float%, %rs3_Register_float%, %rm%"
 
 [format-7-0.repr]
-default = "$name$ %rs2_Register_float%, %himm%(%rs1_Register_int%)"
+default = "$name$ %rs2_Register_float%, %imm%(%rs1_Register_int%)"
 
 [format-1-7.instructions.fadd_d]
 mask = 0xfe00007f
