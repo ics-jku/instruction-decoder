@@ -1,26 +1,52 @@
 set = "MIPS"
 width = 32
 
-[types]
-names = [
-    "r",
-    "i",
-    "j",
-    "branch",
-    "mem"
-]
+[formats]
+names = ["r", "i", "j", "branch", "mem"]
 parts = [
-    ["opcode", 6, "u8"],
-    ["rs", 5, "Register_int"],
-    ["rt", 5, "Register_int"],
-    ["rd", 5, "Register_int"],
-    ["shamt", 5, "u8"],
-    ["funct", 6, "u8"],
-    ["imm", 32, "VInt"],
-    ["addr", 32, "VInt"],
+    [
+        "opcode",
+        6,
+        "u8",
+    ],
+    [
+        "rs",
+        5,
+        "Register_int",
+    ],
+    [
+        "rt",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "shamt",
+        5,
+        "u8",
+    ],
+    [
+        "funct",
+        6,
+        "u8",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "addr",
+        32,
+        "VInt",
+    ],
 ]
 
-[type]
+[types]
 names = ["R", "I", "J"]
 R = [
     { name = "opcode", top = 5, bot = 0 },

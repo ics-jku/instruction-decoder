@@ -49,19 +49,19 @@ impl InstructionSet {
     pub fn new(table: &Table) -> Self {
         let bit_width = table["width"].as_integer().unwrap_or(0) as usize;
 
-        let types: HashMap<String, InstructionType> = table["type"]["names"]
+        let types: HashMap<String, InstructionType> = table["types"]["names"]
             .as_array()
             .unwrap()
             .iter()
             .map(|x| {
                 (
                     x.as_str().unwrap().to_string(),
-                    InstructionType::new(table["type"][x.as_str().unwrap()].as_array().unwrap()),
+                    InstructionType::new(table["types"][x.as_str().unwrap()].as_array().unwrap()),
                 )
             })
             .collect();
 
-        let parts: HashMap<String, PartDecoder> = table["types"]["parts"]
+        let parts: HashMap<String, PartDecoder> = table["formats"]["parts"]
             .as_array()
             .unwrap_or(&vec![])
             .iter()
@@ -72,7 +72,7 @@ impl InstructionSet {
             })
             .collect();
 
-        let formats = table["types"]["names"]
+        let formats = table["formats"]["names"]
             .as_array()
             .unwrap()
             .iter()

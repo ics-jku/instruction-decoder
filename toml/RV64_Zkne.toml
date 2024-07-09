@@ -1,7 +1,7 @@
 set = "RV64Zkne" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
-[types]
+[formats]
 names = ["format-1-0", "format-2-0"]
 parts = [
     [
@@ -58,64 +58,64 @@ parts = [
     ],
 ]
 
-[type]
+[types]
 names = ["type-1-0", "type-2-0"]
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "rs2_Register_int"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 31
 bot = 24
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "rnum"
 top = 3
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 6
 bot = 0

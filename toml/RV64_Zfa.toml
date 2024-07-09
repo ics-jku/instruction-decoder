@@ -1,7 +1,7 @@
 set = "RV64Zfa" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
-[types]
+[formats]
 names = ["format-1-1", "format-1-2", "format-2-3", "format-2-7", "format-3-3"]
 parts = [
     [
@@ -62,139 +62,139 @@ parts = [
     ],
 ]
 
-[type]
+[types]
 names = ["type-1-1", "type-1-2", "type-2-3", "type-2-7", "type-3-3"]
-[[type.type-1-1]]
+[[types.type-1-1]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type-1-1]]
+[[types.type-1-1]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type-1-1]]
+[[types.type-1-1]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-1-1]]
+[[types.type-1-1]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type-1-1]]
+[[types.type-1-1]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-1-2]]
+[[types.type-1-2]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type-1-2]]
+[[types.type-1-2]]
 name = "lval"
 top = 4
 bot = 0
 
-[[type.type-1-2]]
+[[types.type-1-2]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-1-2]]
+[[types.type-1-2]]
 name = "rd_Register_float"
 top = 4
 bot = 0
 
-[[type.type-1-2]]
+[[types.type-1-2]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "rs2_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type-2-3]]
+[[types.type-2-3]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "rs2_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "rd_Register_float"
 top = 4
 bot = 0
 
-[[type.type-2-7]]
+[[types.type-2-7]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-3-3]]
+[[types.type-3-3]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type-3-3]]
+[[types.type-3-3]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type-3-3]]
+[[types.type-3-3]]
 name = "rm"
 top = 2
 bot = 0
 
-[[type.type-3-3]]
+[[types.type-3-3]]
 name = "rd_Register_float"
 top = 4
 bot = 0
 
-[[type.type-3-3]]
+[[types.type-3-3]]
 name = "none"
 top = 6
 bot = 0

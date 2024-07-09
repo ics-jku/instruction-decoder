@@ -1,7 +1,7 @@
 set = "RV64Zcb" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 16
 
-[types]
+[formats]
 names = [
     "format-1-0",
     "format-2-0",
@@ -69,164 +69,164 @@ parts = [
     ],
 ]
 
-[type]
+[types]
 names = ["type-1-0", "type-2-0", "type-3-0", "type-4-0", "type-5-0", "type-6-0"]
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "himm"
 top = 0
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "himm"
 top = 1
 bot = 1
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "rd_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 1
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 6
 bot = 6
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "himm"
 top = 1
 bot = 1
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "rd_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 1
 bot = 0
 
-[[type.type-3-0]]
+[[types.type-3-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-3-0]]
+[[types.type-3-0]]
 name = "rd_rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-3-0]]
+[[types.type-3-0]]
 name = "none"
 top = 6
 bot = 5
 
-[[type.type-3-0]]
+[[types.type-3-0]]
 name = "rs2_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-3-0]]
+[[types.type-3-0]]
 name = "none"
 top = 1
 bot = 0
 
-[[type.type-4-0]]
+[[types.type-4-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-4-0]]
+[[types.type-4-0]]
 name = "rd_rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-4-0]]
+[[types.type-4-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "himm"
 top = 0
 bot = 0
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "himm"
 top = 1
 bot = 1
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "rs2_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-5-0]]
+[[types.type-5-0]]
 name = "none"
 top = 1
 bot = 0
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "none"
 top = 15
 bot = 10
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "rs1_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "none"
 top = 6
 bot = 6
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "himm"
 top = 1
 bot = 1
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "rs2_p_Register_int_c"
 top = 2
 bot = 0
 
-[[type.type-6-0]]
+[[types.type-6-0]]
 name = "none"
 top = 1
 bot = 0
