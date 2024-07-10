@@ -8,7 +8,7 @@ required entries:
   - `parts` type `list`, list of all parts that may appear in a type. Each part is a `list` itself, with the entries, the last marked as optional: name, bitwidth, type[, format]
     - name is a `string`
     - bitwidth is an `integer`
-    - type is a `string` and can be `"boolean", "char", "i8", "i16", "i32", "i64", "u8", "u16", "u32", "u64", "isize", "usize", "f32", "f64"` or the slightly special type `"VInt"`
+    - type is a `string` and can be `"boolean", "char", "i8", "i16", "i32", "i64", "u8", "u16", "u32", "u64", "isize", "usize", "f32", "f64"` or the slightly special type `"VInt"`, which is an unsigned or signed number of 128 bit size, depending on an argument in the instructions section later on
     All other type names are also accepted (as long as they do not contain the reserved character `.`), but are treated as custom Mappings that must be defined in the toml itself
     - the optional value of format is of type `string` and can be any of the following: `"", "decimal", "dec", "d", "10"` for decoding as a base 10 number, `"hexadecimal", "hex", "h", "x", "0x", "16"` for decoding as a base 16 number, `"Octal", "oct", "o", "0o", "8"` for decoding as a base 8 number and `"Binary", "bin", "b", "0b", "2"` for decoding as a base 2 number. Since `""` is included in base 10, leaving out the format value implies base 10
 - `types` type `map`

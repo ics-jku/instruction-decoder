@@ -12,3 +12,5 @@ pub fn main() {
     }
 }
 ```
+
+for the spec, see [tomlspec.md](tomlspec.md) or the github wiki
