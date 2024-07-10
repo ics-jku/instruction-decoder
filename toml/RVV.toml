@@ -1,7 +1,7 @@
 set = "RVV" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
-[types]
+[formats]
 names = [
     "format_1-0",
     "format_2-0",
@@ -121,7 +121,7 @@ parts = [
     ],
 ]
 
-[type]
+[types]
 names = [
     "type_1-0",
     "type_2-0",
@@ -152,877 +152,877 @@ names = [
     "type_23-0",
     "type_24-0",
 ]
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "vs1"
 top = 4
 bot = 0
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_1-0]]
+[[types.type_1-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_2-0]]
+[[types.type_2-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_2-1]]
+[[types.type_2-1]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "himm"
 top = 4
 bot = 0
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_3-0]]
+[[types.type_3-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "vs1"
 top = 4
 bot = 0
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_4-0]]
+[[types.type_4-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_5-0]]
+[[types.type_5-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_5-1]]
+[[types.type_5-1]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "himm"
 top = 4
 bot = 0
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_6-0]]
+[[types.type_6-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type_7-0]]
+[[types.type_7-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_8-0]]
+[[types.type_8-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_9-0]]
+[[types.type_9-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_9-0]]
+[[types.type_9-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_9-0]]
+[[types.type_9-0]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type_9-0]]
+[[types.type_9-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type_9-0]]
+[[types.type_9-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_9-1]]
+[[types.type_9-1]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_9-1]]
+[[types.type_9-1]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_9-1]]
+[[types.type_9-1]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type_9-1]]
+[[types.type_9-1]]
 name = "rd_Register_float"
 top = 4
 bot = 0
 
-[[type.type_9-1]]
+[[types.type_9-1]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_10-0]]
+[[types.type_10-0]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type_10-0]]
+[[types.type_10-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_10-0]]
+[[types.type_10-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_10-0]]
+[[types.type_10-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_10-0]]
+[[types.type_10-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_10-1]]
+[[types.type_10-1]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type_10-1]]
+[[types.type_10-1]]
 name = "rs1_Register_float"
 top = 4
 bot = 0
 
-[[type.type_10-1]]
+[[types.type_10-1]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_10-1]]
+[[types.type_10-1]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_10-1]]
+[[types.type_10-1]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_11-0]]
+[[types.type_11-0]]
 name = "none"
 top = 31
 bot = 26
 
-[[type.type_11-0]]
+[[types.type_11-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_11-0]]
+[[types.type_11-0]]
 name = "none"
 top = 24
 bot = 12
 
-[[type.type_11-0]]
+[[types.type_11-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_11-0]]
+[[types.type_11-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "none"
 top = 24
 bot = 20
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_12-0]]
+[[types.type_12-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_13-0]]
+[[types.type_13-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "rs2_Register_int"
 top = 4
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_14-0]]
+[[types.type_14-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_15-0]]
+[[types.type_15-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_15-0]]
+[[types.type_15-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_15-0]]
+[[types.type_15-0]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type_15-0]]
+[[types.type_15-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_15-0]]
+[[types.type_15-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_16-0]]
+[[types.type_16-0]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type_16-0]]
+[[types.type_16-0]]
 name = "himm"
 top = 4
 bot = 0
 
-[[type.type_16-0]]
+[[types.type_16-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_16-0]]
+[[types.type_16-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_16-0]]
+[[types.type_16-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_17-0]]
+[[types.type_17-0]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type_17-0]]
+[[types.type_17-0]]
 name = "vs1"
 top = 4
 bot = 0
 
-[[type.type_17-0]]
+[[types.type_17-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_17-0]]
+[[types.type_17-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type_17-0]]
+[[types.type_17-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_18-0]]
+[[types.type_18-0]]
 name = "none"
 top = 31
 bot = 20
 
-[[type.type_18-0]]
+[[types.type_18-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_18-0]]
+[[types.type_18-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_18-0]]
+[[types.type_18-0]]
 name = "vs3"
 top = 4
 bot = 0
 
-[[type.type_18-0]]
+[[types.type_18-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "none"
 top = 24
 bot = 20
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "vs3"
 top = 4
 bot = 0
 
-[[type.type_19-0]]
+[[types.type_19-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "none"
 top = 31
 bot = 30
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "zimm10"
 top = 9
 bot = 0
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "himm"
 top = 4
 bot = 0
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type_20-0]]
+[[types.type_20-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "rs2_Register_int"
 top = 4
 bot = 0
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type_21-0]]
+[[types.type_21-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "none"
 top = 31
 bot = 31
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "zimm11"
 top = 10
 bot = 0
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "rd_Register_int"
 top = 4
 bot = 0
 
-[[type.type_22-0]]
+[[types.type_22-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "vs3"
 top = 4
 bot = 0
 
-[[type.type_23-0]]
+[[types.type_23-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "nf"
 top = 2
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "none"
 top = 28
 bot = 26
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "vm"
 top = 0
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "rs2_Register_int"
 top = 4
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "rs1_Register_int"
 top = 4
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "vs3"
 top = 4
 bot = 0
 
-[[type.type_24-0]]
+[[types.type_24-0]]
 name = "none"
 top = 6
 bot = 0

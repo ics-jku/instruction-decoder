@@ -1,7 +1,7 @@
 set = "RVZvkg" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
-[types]
+[formats]
 names = ["format-1-0", "format-2-0"]
 parts = [
     [
@@ -37,59 +37,59 @@ parts = [
     ],
 ]
 
-[type]
+[types]
 names = ["type-1-0", "type-2-0"]
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "vs1"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 14
 bot = 12
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 6
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 31
 bot = 25
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "vs2"
 top = 4
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 19
 bot = 12
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "vd"
 top = 4
 bot = 0
 
-[[type.type-2-0]]
+[[types.type-2-0]]
 name = "none"
 top = 6
 bot = 0

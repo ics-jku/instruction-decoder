@@ -1,13 +1,13 @@
 set = "RVZihintntl" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
 width = 32
 
-[types]
+[formats]
 names = ["format-1-0"]
 parts = [["none", 32, "u32"], ["imm", 32, "VInt"], ["himm", 32, "VInt", "hex"]]
 
-[type]
+[types]
 names = ["type-1-0"]
-[[type.type-1-0]]
+[[types.type-1-0]]
 name = "none"
 top = 31
 bot = 0
