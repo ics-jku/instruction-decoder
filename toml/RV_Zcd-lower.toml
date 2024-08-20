@@ -80,7 +80,7 @@ top = 31
 bot = 13
 
 [[types.type-1-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 3
 
@@ -90,7 +90,7 @@ top = 2
 bot = 0
 
 [[types.type-1-0]]
-name = "imm"
+name = "himm"
 top = 7
 bot = 6
 
@@ -110,7 +110,7 @@ top = 31
 bot = 13
 
 [[types.type-2-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 5
 
@@ -120,12 +120,12 @@ top = 4
 bot = 0
 
 [[types.type-2-0]]
-name = "imm"
+name = "himm"
 top = 4
 bot = 3
 
 [[types.type-2-0]]
-name = "imm"
+name = "himm"
 top = 8
 bot = 6
 
@@ -140,7 +140,7 @@ top = 31
 bot = 13
 
 [[types.type-3-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 3
 
@@ -150,7 +150,7 @@ top = 2
 bot = 0
 
 [[types.type-3-0]]
-name = "imm"
+name = "himm"
 top = 7
 bot = 6
 
@@ -170,12 +170,12 @@ top = 31
 bot = 13
 
 [[types.type-4-0]]
-name = "imm"
+name = "himm"
 top = 5
 bot = 3
 
 [[types.type-4-0]]
-name = "imm"
+name = "himm"
 top = 8
 bot = 6
 
