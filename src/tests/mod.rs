@@ -1,3 +1,4 @@
+mod error;
 mod mips;
 mod rv32;
 mod rv64;
