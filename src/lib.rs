@@ -52,7 +52,7 @@ fn handle_err_get(
     prefix: &str,
     sample: Value,
 ) -> Value {
-    let display_key = if prefix.is_empty() {
+    let display_key = if !prefix.is_empty() {
         format!("{}.{}", prefix, key)
     } else {
         key.to_string()
@@ -83,7 +83,7 @@ fn handle_err_get_multitype(
     prefix: &str,
     samples: &Vec<Value>,
 ) -> Value {
-    let display_key = if prefix.is_empty() {
+    let display_key = if !prefix.is_empty() {
         format!("{}.{}", prefix, key)
     } else {
         key.to_string()
