@@ -45,69 +45,240 @@ fn parse_u128(s: &str) -> u128 {
     .unwrap()
 }
 
+fn handle_err_get(
+    table: &Table,
+    error_stack: &mut Vec<String>,
+    key: &str,
+    prefix: &str,
+    sample: Value,
+) -> Value {
+    let display_key = if !prefix.is_empty() {
+        format!("{}.{}", prefix, key)
+    } else {
+        key.to_string()
+    };
+    let val = table.get(key);
+    if let Some(v) = val {
+        if v.same_type(&sample) {
+            v.clone()
+        } else {
+            error_stack.push(format!(
+                "key '{}' is of type '{}' instead of type '{}'",
+                display_key,
+                v.type_str(),
+                sample.type_str()
+            ));
+            sample
+        }
+    } else {
+        error_stack.push(format!("key '{}' not found in toml", display_key));
+        sample
+    }
+}
+
+fn handle_err_get_multitype(
+    table: &Table,
+    error_stack: &mut Vec<String>,
+    key: &str,
+    prefix: &str,
+    samples: &Vec<Value>,
+) -> Value {
+    let display_key = if !prefix.is_empty() {
+        format!("{}.{}", prefix, key)
+    } else {
+        key.to_string()
+    };
+    let val = table.get(key);
+    let mut result_value = samples[0].clone();
+    if let Some(v) = val {
+        let mut found = false;
+        for sample in samples {
+            if v.same_type(sample) {
+                result_value = v.clone();
+                found = true;
+            }
+        }
+        if !found {
+            error_stack.push(format!(
+                "key '{}' is of type '{}' which is not in the list ['{}']",
+                display_key,
+                v.type_str(),
+                samples
+                    .iter()
+                    .map(|x| x.type_str().to_string())
+                    .collect::<Vec<String>>()
+                    .join(", ")
+            ));
+        }
+        result_value
+    } else {
+        error_stack.push(format!("key '{}' not found in toml", display_key));
+        result_value
+    }
+}
+
 impl InstructionSet {
-    pub fn new(table: &Table) -> Self {
-        let bit_width = table["width"].as_integer().unwrap_or(0) as usize;
+    pub fn new(table: &Table, error_stack: &mut Vec<String>) -> Self {
+        let bit_width = handle_err_get(table, error_stack, "width", "", Value::Integer(0))
+            .as_integer()
+            .unwrap() as usize;
 
-        let types: HashMap<String, InstructionType> = table["types"]["names"]
-            .as_array()
-            .unwrap()
-            .iter()
-            .map(|x| {
-                (
+        let types_table_value =
+            handle_err_get(table, error_stack, "types", "", Value::Table(Table::new()));
+        let types_table = types_table_value.as_table().unwrap();
+        let types: HashMap<String, InstructionType> = handle_err_get(
+            types_table,
+            error_stack,
+            "names",
+            "types",
+            Value::Array(vec![]),
+        )
+        .as_array()
+        .unwrap()
+        .iter()
+        .enumerate()
+        .filter_map(|(i, x)| {
+            if x.is_str() {
+                Some((
                     x.as_str().unwrap().to_string(),
-                    InstructionType::new(table["types"][x.as_str().unwrap()].as_array().unwrap()),
-                )
-            })
-            .collect();
+                    InstructionType::new(
+                        handle_err_get(
+                            types_table,
+                            error_stack,
+                            x.as_str().unwrap(),
+                            "types",
+                            Value::Array(vec![]),
+                        )
+                        .as_array()
+                        .unwrap(),
+                        error_stack,
+                        format!("types.{}", x).as_str(),
+                    ),
+                ))
+            } else {
+                error_stack.push(format!(
+                    "value of entry 'types.names[{}]' is of type '{}' instead of type 'string'",
+                    i,
+                    x.type_str()
+                ));
+                None
+            }
+        })
+        .collect();
 
-        let parts: HashMap<String, PartDecoder> = table["formats"]["parts"]
-            .as_array()
-            .unwrap_or(&vec![])
-            .iter()
-            .map(|x| {
-                let parr = x.as_array().unwrap();
-                let name = parr[0].as_str().unwrap_or("").to_string();
-                (name, PartDecoder::new(parr))
-            })
-            .collect();
+        let formats_table_value = handle_err_get(
+            table,
+            error_stack,
+            "formats",
+            "",
+            Value::Table(Table::new()),
+        );
+        let formats_table = formats_table_value.as_table().unwrap();
 
-        let formats = table["formats"]["names"]
-            .as_array()
-            .unwrap()
-            .iter()
-            .map(|x| {
-                (
-                    x.as_str().unwrap().to_string().clone(),
-                    InstructionFormat::new(table, &x.as_str().unwrap().to_string(), &types),
-                )
-            })
-            .collect();
+        let formats = handle_err_get(
+            formats_table,
+            error_stack,
+            "names",
+            "formats",
+            Value::Array(vec![]),
+        )
+        .as_array()
+        .unwrap()
+        .iter()
+        .enumerate()
+        .filter_map(|(i, x)| {
+            if x.is_str() {
+                Some((
+                    x.as_str().unwrap().to_string(),
+                    InstructionFormat::new(
+                        table,
+                        &x.as_str().unwrap().to_string(),
+                        &types,
+                        error_stack,
+                        "",
+                    ),
+                ))
+            } else {
+                error_stack.push(format!(
+                    "value of entry 'formats.names[{}]' is of type '{}' instead of type 'string'",
+                    i,
+                    x.type_str()
+                ));
+                None
+            }
+        })
+        .collect();
 
-        let mapping_names = table["mappings"]["names"].as_array().unwrap();
+        let parts: HashMap<String, PartDecoder> = handle_err_get(
+            formats_table,
+            error_stack,
+            "parts",
+            "formats",
+            Value::Array(vec![]),
+        )
+        .as_array()
+        .unwrap_or(&vec![])
+        .iter()
+        .map(|x| {
+            let parr = x.as_array().unwrap();
+            let name = parr[0].as_str().unwrap_or("").to_string();
+            (name, PartDecoder::new(parr))
+        })
+        .collect();
+
+        let mappings_table_value = handle_err_get(
+            table,
+            error_stack,
+            "mappings",
+            "",
+            Value::Table(Table::new()),
+        );
+        let mappings_table = mappings_table_value.as_table().unwrap();
+
+        let mapping_names_value = handle_err_get(
+            mappings_table,
+            error_stack,
+            "names",
+            "mappings",
+            Value::Array(vec![]),
+        );
+        let mapping_names = mapping_names_value.as_array().unwrap();
         let mut mapping_map = HashMap::new();
         for value in mapping_names {
-            let mapping_name = value.as_str().unwrap().to_string();
-            let (map_map, strict) = match &table["mappings"][&mapping_name] {
-                Value::Array(val) => Some((
-                    val.iter()
-                        .enumerate()
-                        .map(|(k, v)| (k, v.clone()))
-                        .collect::<HashMap<usize, Value>>(),
-                    true,
-                )),
-                Value::Table(val) => Some((
-                    val.iter()
-                        .map(|(k, v)| (parse_usize(k), v.clone()))
-                        .collect::<HashMap<usize, Value>>(),
-                    false,
-                )),
-                _ => None,
-            }
-            .unwrap();
+            if let Some(mapping_name) = value.as_str() {
+                let mappings_val = handle_err_get_multitype(
+                    mappings_table,
+                    error_stack,
+                    mapping_name,
+                    "mappings",
+                    &vec![Value::Array(vec![]), Value::Table(Table::new())],
+                );
+                let (map_map, strict) = match mappings_val {
+                    Value::Array(val) => Some((
+                        val.iter()
+                            .enumerate()
+                            .map(|(k, v)| (k, v.clone()))
+                            .collect::<HashMap<usize, Value>>(),
+                        true,
+                    )),
+                    Value::Table(val) => Some((
+                        val.iter()
+                            .map(|(k, v)| (parse_usize(k), v.clone()))
+                            .collect::<HashMap<usize, Value>>(),
+                        false,
+                    )),
+                    _ => None,
+                }
+                .unwrap();
 
-            let mappings: Mapping = Mapping::new(&map_map, strict);
-            mapping_map.insert(mapping_name.clone(), mappings);
+                let mappings: Mapping = Mapping::new(&map_map, strict, error_stack, mapping_name);
+                mapping_map.insert(mapping_name.to_string(), mappings);
+            } else {
+                error_stack.push(format!(
+                    "value of array entry in 'mappings.names' is of type '{}' instead of type 'string'",
+                    value.type_str()
+                ));
+            }
         }
 
         InstructionSet {
@@ -253,7 +424,7 @@ impl NumberRadix {
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
             PartTypeValue::Mapping(a) => a.to_string(),
-            PartTypeValue::VInt(a) => self.format_signed(a as i128),
+            PartTypeValue::VInt(a) => self.format_signed(a),
             PartTypeValue::None => "".to_string(),
         }
     }
@@ -392,10 +563,23 @@ struct Mapping {
 }
 
 impl Mapping {
-    pub fn new(list: &HashMap<usize, Value>, strict: bool) -> Self {
+    pub fn new(
+        list: &HashMap<usize, Value>,
+        strict: bool,
+        error_stack: &mut Vec<String>,
+        table_prefix: &str,
+    ) -> Self {
         let names = list
             .iter()
-            .map(|(k, v)| (*k, v.as_str().unwrap_or("").to_string()))
+            .map(|(k, v)| {
+                if !v.is_str() {
+                    error_stack.push(format!(
+                        "mapping value at {}[{}] is not type 'string'",
+                        table_prefix, k
+                    ));
+                }
+                (*k, v.as_str().unwrap_or("").to_string())
+            })
             .collect();
         Mapping { names, strict }
     }
@@ -408,20 +592,55 @@ struct InstructionFormat {
 }
 
 impl InstructionFormat {
-    pub fn new(table: &Table, name: &String, types: &HashMap<String, InstructionType>) -> Self {
-        let repr = table[name]["repr"]
+    pub fn new(
+        table: &Table,
+        name: &String,
+        types: &HashMap<String, InstructionType>,
+        error_stack: &mut Vec<String>,
+        table_prefix: &str,
+    ) -> Self {
+        let format_table_value = handle_err_get(
+            table,
+            error_stack,
+            name,
+            table_prefix,
+            Value::Table(Table::new()),
+        );
+        let format_table = format_table_value.as_table().unwrap();
+        let repr_value = handle_err_get(
+            format_table,
+            error_stack,
+            "repr",
+            name,
+            Value::Table(Table::new()),
+        );
+        let repr = repr_value
             .as_table()
             .unwrap()
             .iter()
-            .map(|(k, v)| (k.clone(), v.as_str().unwrap().to_string()))
+            .filter_map(|(k, v)| {
+                if v.is_str() {
+                    Some((k.clone(), v.as_str().unwrap().to_string()))
+                } else {
+                    error_stack.push(format!("value of {}.repr.{} is not type 'string'", name, k));
+                    None
+                }
+            })
             .collect();
         let instruction_type = &types[table[name]["type"].as_str().unwrap_or("")];
-
         let instructions = table[name]["instructions"]
             .as_table()
             .unwrap()
             .iter()
-            .map(|(x, y)| Instruction::new(x, y.as_table().unwrap()))
+            .enumerate()
+            .map(|(i, (x, y))| {
+                Instruction::new(
+                    x,
+                    y.as_table().unwrap(),
+                    error_stack,
+                    format!("{}.instructions[{}]", name, i).as_str(),
+                )
+            })
             .collect();
         InstructionFormat {
             repr,
@@ -461,7 +680,7 @@ impl SliceValue {
         let mut tmp = value << idx;
         let unsigned = part_type.get_unsigned(unsigned_imm);
         if slice_extend > 0 && ((tmp >> (bit_width - 1)) != 0) {
-            tmp |= (1 << slice_extend + bit_width) - (1 << bit_width);
+            tmp |= (1 << (slice_extend + bit_width)) - (1 << bit_width);
         }
         if !unsigned && ((tmp >> (bit_width - 1)) != 0) {
             tmp |= u128::MAX - (1 << bit_width) + 1;
@@ -503,14 +722,32 @@ struct Instruction {
 }
 
 impl Instruction {
-    pub fn new(name: &str, table: &Map<String, Value>) -> Self {
+    pub fn new(
+        name: &str,
+        table: &Map<String, Value>,
+        error_stack: &mut Vec<String>,
+        table_prefix: &str,
+    ) -> Self {
         let unsigned_imm = if table.contains_key("unsigned") {
-            table["unsigned"].as_bool().unwrap_or(false)
+            handle_err_get(
+                table,
+                error_stack,
+                "unsigned",
+                table_prefix,
+                Value::Boolean(false),
+            )
+            .as_bool()
+            .unwrap()
         } else {
             false
         };
-        let mask_u128 = table["mask"].as_integer().unwrap() as u128;
-        let match_u128 = table["match"].as_integer().unwrap() as u128;
+        let mask_u128 = handle_err_get(table, error_stack, "mask", table_prefix, Value::Integer(0))
+            .as_integer()
+            .unwrap() as u128;
+        let match_u128 =
+            handle_err_get(table, error_stack, "match", table_prefix, Value::Integer(0))
+                .as_integer()
+                .unwrap() as u128;
         Instruction {
             name: name.to_owned(),
             mask_u128,
@@ -562,14 +799,28 @@ struct InstructionType {
 }
 
 impl InstructionType {
-    pub fn new(names: &[Value]) -> Self {
+    pub fn new(names: &[Value], error_stack: &mut Vec<String>, table_prefix: &str) -> Self {
         let mut position = 0;
         let slices = names
             .iter()
-            .map(|x| {
-                let slice = InstructionSlice::new(x.as_table().unwrap(), &position);
-                position += slice.slice_top - slice.slice_bottom;
-                slice
+            .enumerate()
+            .filter_map(|(i, x)| {
+                if x.is_table() {
+                    let slice = InstructionSlice::new(
+                        x.as_table().unwrap(),
+                        &position,
+                        error_stack,
+                        format!("{}[{}]", table_prefix, i).as_str(),
+                    );
+                    position += slice.slice_top - slice.slice_bottom;
+                    Some(slice)
+                } else {
+                    error_stack.push(format!(
+                        "Instruction Type of {}[{}] is not a table",
+                        table_prefix, i
+                    ));
+                    None
+                }
             })
             .collect();
         InstructionType { slices }
@@ -626,15 +877,41 @@ struct InstructionSlice {
 }
 
 impl InstructionSlice {
-    pub fn new(table: &Map<String, Value>, position: &usize) -> Self {
-        let name = table["name"].as_str().unwrap_or("").to_string();
-        let slice_top = 1 + table["top"].as_integer().unwrap_or(0) as usize;
-        let slice_bottom = table["bot"].as_integer().unwrap_or(0) as usize;
-        let slice_extend = table
-            .get("extend_top")
-            .unwrap_or(&Value::Integer(0))
-            .as_integer()
-            .unwrap_or(0) as usize;
+    pub fn new(
+        table: &Map<String, Value>,
+        position: &usize,
+        error_stack: &mut Vec<String>,
+        table_prefix: &str,
+    ) -> Self {
+        let name = handle_err_get(
+            table,
+            error_stack,
+            "name",
+            "",
+            Value::String("".to_string()),
+        )
+        .as_str()
+        .unwrap()
+        .to_string();
+        let slice_top =
+            1 + handle_err_get(table, error_stack, "top", table_prefix, Value::Integer(0))
+                .as_integer()
+                .unwrap() as usize;
+        let slice_bottom =
+            handle_err_get(table, error_stack, "bot", table_prefix, Value::Integer(0))
+                .as_integer()
+                .unwrap() as usize;
+        let slice_extend_value = table.get("extend_top").unwrap_or(&Value::Integer(0));
+        let slice_extend = if slice_extend_value.is_integer() {
+            slice_extend_value.as_integer().unwrap() as usize
+        } else {
+            error_stack.push(format!(
+                "optional field {}.extend_top is not of type 'integer'",
+                table_prefix
+            ));
+            0
+        };
+
         InstructionSlice {
             name,
             pos: *position,
@@ -646,21 +923,70 @@ impl InstructionSlice {
 }
 
 impl Decoder {
-    pub fn new(instruction_set_tomls: &[String]) -> Self {
-        Decoder {
+    pub fn new(instruction_set_tomls: &[String]) -> Result<Self, Vec<Vec<String>>> {
+        let mut error_stacks = Vec::new();
+
+        let decoder = Decoder {
             instruction_sets: instruction_set_tomls
                 .iter()
-                .map(|x| InstructionSet::new(&x.parse::<Table>().unwrap()))
+                .filter_map(|x| {
+                    let mut error_stack = Vec::new();
+
+                    let instruction_set =
+                        InstructionSet::new(&x.parse::<Table>().unwrap(), &mut error_stack);
+                    error_stacks.push(error_stack);
+                    if error_stacks.last()?.is_empty() {
+                        Some(instruction_set)
+                    } else {
+                        None
+                    }
+                })
                 .collect(),
+        };
+
+        let mut failed = false;
+        for error_stack in &error_stacks {
+            if !error_stack.is_empty() {
+                failed = true;
+                break;
+            }
+        }
+        if failed {
+            Err(error_stacks)
+        } else {
+            Ok(decoder)
         }
     }
 
-    pub fn new_from_table(instruction_sets: Vec<Table>) -> Self {
-        Decoder {
+    pub fn new_from_table(instruction_sets: Vec<Table>) -> Result<Self, Vec<Vec<String>>> {
+        let mut error_stacks = Vec::new();
+        let decoder = Decoder {
             instruction_sets: instruction_sets
                 .iter()
-                .map(|x| InstructionSet::new(x))
+                .filter_map(|x| {
+                    let mut error_stack = Vec::new();
+                    let instruction_set = InstructionSet::new(x, &mut error_stack);
+                    error_stacks.push(error_stack);
+                    if error_stacks.last()?.is_empty() {
+                        Some(instruction_set)
+                    } else {
+                        None
+                    }
+                })
                 .collect(),
+        };
+
+        let mut failed = false;
+        for error_stack in &error_stacks {
+            if !error_stack.is_empty() {
+                failed = true;
+                break;
+            }
+        }
+        if failed {
+            Err(error_stacks)
+        } else {
+            Ok(decoder)
         }
     }
 

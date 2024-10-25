@@ -1,0 +1,182 @@
+set = "MIPS"
+width = 32
+
+[formats]
+names = ["r", "i", "j", "branch", "mem"]
+parts = [
+    [
+        "opcode",
+        6,
+        "u8",
+    ],
+    [
+        "rs",
+        5,
+        "Register_int",
+    ],
+    [
+        "rt",
+        5,
+        "Register_int",
+    ],
+    [
+        "rd",
+        5,
+        "Register_int",
+    ],
+    [
+        "shamt",
+        5,
+        "u8",
+    ],
+    [
+        "funct",
+        6,
+        "u8",
+    ],
+    [
+        "imm",
+        32,
+        "VInt",
+    ],
+    [
+        "addr",
+        32,
+        "VInt",
+    ],
+]
+
+[types]
+names = ["R", "I", "J", "B"]
+R = [
+    { name = "opcode", top = 5, bot = 0 },
+    { name = "rs", top = 4, bot = 0 },
+    { name = "rt", top = 4, bot = 0 },
+    { name = "rd", top = 4, bot = 0 },
+    { name = "shamt", top = 4, bot = 0 },
+    { name = "funct", top = 5, bot = 0 },
+]
+I = [
+    { name = "opcode", top = 5, bot = 0 },
+    { name = "rs", top = 4, bot = 0 },
+    { name = "rt", top = 4, bot = 0 },
+    { name = "imm", top = 15, bot = 0 },
+]
+J = [
+    { name = "opcode", top = 5, bot = 0 },
+    { name = "addr", top = 25, bot = 0 },
+]
+
+[r]
+type = "R"
+[r.repr]
+default = "$name$ %rd%, %rs%, %rt%"
+jr = "$name$ %rs%"
+jalr = "$name$ %rd%, %rs%"
+mfhi = "$name$ %rd%"
+mthi = "$name$ %rd%"
+mflo = "$name$ %rd%"
+mtlo = "$name$ %rd%"
+mfc0 = "$name$ %rd%"
+[r.instructions]
+sll = { mask = 0xfc00003f, match = 0x00 }
+srl = { mask = 0xfc00003f, match = 0x02 }
+sra = { mask = 0xfc00003f, match = 0x03 }
+jr = { mask = 0xfc00003f, match = 0x08 }
+jalr = { mask = 0xfc00003f, match = 0x09 }
+mult = { mask = 0xfc00003f, match = 0x18 }
+multu = { mask = 0xfc00003f, match = 0x19 }
+add = { mask = 0xfc00003f, match = 0x20 }
+addu = { mask = 0xfc00003f, match = 0x21 }
+sub = { mask = 0xfc00003f, match = 0x22 }
+subu = { mask = 0xfc00003f, match = 0x23 }
+and = { mask = 0xfc00003f, match = 0x24 }
+or = { mask = 0xfc00003f, match = 0x25 }
+xor = { mask = 0xfc00003f, match = 0x26 }
+nor = { mask = 0xfc00003f, match = 0x27 }
+div = { mask = 0xfc00003f, match = 0x1a }
+divu = { mask = 0xfc00003f, match = 0x1b }
+slt = { mask = 0xfc00003f, match = 0x2a }
+sltu = { mask = 0xfc00003f, match = 0x2b }
+
+[i]
+type = "I"
+[i.repr]
+default = "$name$ %rt%, %rs%, %imm%"
+[i.instructions]
+addi = { mask = 0xfc000000, match = 0x20000000 }
+addiu = { mask = 0xfc000000, match = 0x24000000 }
+andi = { mask = 0xfc000000, match = 0x30000000 }
+ori = { mask = 0xfc000000, match = 0x34000000 }
+slti = { mask = 0xfc000000, match = 0x28000000 }
+sltiu = { mask = 0xfc000000, match = 0x2c000000 }
+
+
+[branch]
+type = "I"
+[branch.repr]
+default = "$name$ %rs%, %rt%"
+[branch.instructions]
+beq = { mask = 0xfc00000000, match = 0x10000000 }
+bne = { mask = 0xfc00000000, match = 0x14000000 }
+blez = { mask = 0xfc00000000, match = 0x18000000 }
+bgtz = { mask = 0xfc00000000, match = 0x1c000000 }
+
+[mem]
+type = "I"
+[mem.repr]
+default = "$name$ %rt%, %imm%(%rs%)"
+[mem.instructions]
+lb = { mask = 0xfc000000, match = 0x80000000 }
+lw = { mask = 0xfc000000, match = 0x8c000000 }
+lbu = { mask = 0xfc000000, match = 0x90000000 }
+lhu = { mask = 0xfc000000, match = 0x94000000 }
+sb = { mask = 0xfc000000, match = 0xa0000000 }
+sh = { mask = 0xfc000000, match = 0xa4000000 }
+sw = { mask = 0xfc000000, match = 0xac000000 }
+
+[j]
+type = "J"
+[j.repr]
+default = "$name$ %addr%"
+[j.instructions]
+j = { mask = 0xfc000000, match = 0x08000000 }
+jal = { mask = 0xfc000000, match = 0x0c000000 }
+
+[mappings]
+names = ["Register_int"]
+number = 32
+Register_int = [
+    "$zero",
+    "$at",
+    "$v0",
+    "$v1",
+    "$a0",
+    "$a1",
+    "$a2",
+    "$a3",
+    "$t0",
+    "$t1",
+    "$t2",
+    "$t3",
+    "$t4",
+    "$t5",
+    "$t6",
+    "$t7",
+    "$s0",
+    "$s1",
+    "$s2",
+    "$s3",
+    "$s4",
+    "$s5",
+    "$s6",
+    "$s7",
+    "$t8",
+    "$t9",
+    "$k0",
+    "$k1",
+    "$gp",
+    "$sp",
+    "$fp",
+    "$ra",
+]
