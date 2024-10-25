@@ -52,7 +52,7 @@ fn handle_err_get(
     prefix: &str,
     sample: Value,
 ) -> Value {
-    let display_key = if prefix != "" {
+    let display_key = if prefix.is_empty() {
         format!("{}.{}", prefix, key)
     } else {
         key.to_string()
@@ -83,7 +83,7 @@ fn handle_err_get_multitype(
     prefix: &str,
     samples: &Vec<Value>,
 ) -> Value {
-    let display_key = if prefix != "" {
+    let display_key = if prefix.is_empty() {
         format!("{}.{}", prefix, key)
     } else {
         key.to_string()
@@ -93,7 +93,7 @@ fn handle_err_get_multitype(
     if let Some(v) = val {
         let mut found = false;
         for sample in samples {
-            if v.same_type(&sample) {
+            if v.same_type(sample) {
                 result_value = v.clone();
                 found = true;
             }
@@ -424,7 +424,7 @@ impl NumberRadix {
             PartTypeValue::F32(a) => format!("{}", a),
             PartTypeValue::F64(a) => format!("{}", a),
             PartTypeValue::Mapping(a) => a.to_string(),
-            PartTypeValue::VInt(a) => self.format_signed(a as i128),
+            PartTypeValue::VInt(a) => self.format_signed(a),
             PartTypeValue::None => "".to_string(),
         }
     }
@@ -680,7 +680,7 @@ impl SliceValue {
         let mut tmp = value << idx;
         let unsigned = part_type.get_unsigned(unsigned_imm);
         if slice_extend > 0 && ((tmp >> (bit_width - 1)) != 0) {
-            tmp |= (1 << slice_extend + bit_width) - (1 << bit_width);
+            tmp |= (1 << (slice_extend + bit_width)) - (1 << bit_width);
         }
         if !unsigned && ((tmp >> (bit_width - 1)) != 0) {
             tmp |= u128::MAX - (1 << bit_width) + 1;
@@ -816,8 +816,8 @@ impl InstructionType {
                     Some(slice)
                 } else {
                     error_stack.push(format!(
-                        "Instruction Type of {} is not a table",
-                        format!("{}[{}]", table_prefix, i)
+                        "Instruction Type of {}[{}] is not a table",
+                        table_prefix, i
                     ));
                     None
                 }
@@ -946,7 +946,7 @@ impl Decoder {
 
         let mut failed = false;
         for error_stack in &error_stacks {
-            if error_stack.len() > 0 {
+            if !error_stack.is_empty() {
                 failed = true;
                 break;
             }
@@ -978,7 +978,7 @@ impl Decoder {
 
         let mut failed = false;
         for error_stack in &error_stacks {
-            if error_stack.len() > 0 {
+            if !error_stack.is_empty() {
                 failed = true;
                 break;
             }
