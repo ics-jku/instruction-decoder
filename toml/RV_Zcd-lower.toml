@@ -1,4 +1,4 @@
-set = "RVZcd" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b
+set = "RVZcd" # auto-generated, based on riscv-opcodes 5181d13bef845edfb511e3132a7e661090e3204b (manually added Register_int_c)
 width = 32
 
 [formats]
@@ -202,7 +202,7 @@ type = "type-3-0"
 type = "type-4-0"
 
 [mappings]
-names = ["Register_int", "Register_float", "Register_float_c"]
+names = ["Register_int", "Register_int_c", "Register_float", "Register_float_c"]
 number = 32
 Register_int = [
     "zero",
@@ -238,6 +238,7 @@ Register_int = [
     "t5",
     "t6",
 ]
+Register_int_c = ["s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5"]
 Register_float = [
     "ft0",
     "ft1",
