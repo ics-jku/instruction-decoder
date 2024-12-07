@@ -289,7 +289,7 @@ Register_float_c = ["fs0", "fs1", "fa0", "fa1", "fa2", "fa3", "fa4", "fa5"]
 default = "$name$ %rd_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
 
 [format-2-0.repr]
-default = "$name$ %rd_p_Register_float_c%, %himm%(%sp%)"
+default = "$name$ %rd_Register_float%, %himm%(sp)"
 
 [format-3-0.repr]
 default = "$name$ %rs2_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
