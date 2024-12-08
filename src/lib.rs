@@ -1,6 +1,5 @@
 use std::{
-    collections::{BTreeMap, HashMap},
-    str::FromStr,
+    collections::{BTreeMap, HashMap}, str::FromStr
 };
 
 use toml::{map::Map, Table, Value};
@@ -175,7 +174,7 @@ impl InstructionSet {
         );
         let formats_table = formats_table_value.as_table().unwrap();
 
-        let formats = handle_err_get(
+        let formats: BTreeMap<String, InstructionFormat> = handle_err_get(
             formats_table,
             error_stack,
             "names",
@@ -278,6 +277,29 @@ impl InstructionSet {
                     "value of array entry in 'mappings.names' is of type '{}' instead of type 'string'",
                     value.type_str()
                 ));
+            }
+        }
+
+        for (fmt_name, fmt) in &formats {
+            for (repr_name, repr) in &fmt.repr {
+                let mut idx = 0;
+                while idx < repr.len() && repr[idx..].contains('%') {
+                    let begin = repr[idx..].find('%').unwrap() + 1 + idx;
+                    if !repr[begin..].contains('%') {
+                        error_stack.push(format!("no closing % found in format {}.{}: '{}'", fmt_name, repr_name, repr));
+                        break
+                    } else {
+                        let end = repr[begin..].find('%').unwrap() + begin;
+                        let var_name = &repr[begin..end];
+                        
+                        let nmatches= fmt.instruction_type.slices.iter().filter(|x| x.name == var_name).count();
+
+                        if nmatches == 0 {
+                            error_stack.push(format!("format of {}.{} is trying to reference nonexistant slice {}", fmt_name, repr_name, var_name));
+                        }
+                        idx = end+1;
+                    }
+                }
             }
         }
 
