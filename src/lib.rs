@@ -1,5 +1,6 @@
 use std::{
-    collections::{BTreeMap, HashMap}, str::FromStr
+    collections::{BTreeMap, HashMap},
+    str::FromStr,
 };
 
 use toml::{map::Map, Table, Value};
@@ -122,6 +123,92 @@ impl InstructionSet {
             .as_integer()
             .unwrap() as usize;
 
+        let mappings_table_value = handle_err_get(
+            table,
+            error_stack,
+            "mappings",
+            "",
+            Value::Table(Table::new()),
+        );
+        let mappings_table = mappings_table_value.as_table().unwrap();
+
+        let mapping_names_value = handle_err_get(
+            mappings_table,
+            error_stack,
+            "names",
+            "mappings",
+            Value::Array(vec![]),
+        );
+        let mapping_names = mapping_names_value.as_array().unwrap();
+        let mut mapping_map = HashMap::new();
+        for value in mapping_names {
+            if let Some(mapping_name) = value.as_str() {
+                let mappings_val = handle_err_get_multitype(
+                    mappings_table,
+                    error_stack,
+                    mapping_name,
+                    "mappings",
+                    &vec![Value::Array(vec![]), Value::Table(Table::new())],
+                );
+                let (map_map, strict) = match mappings_val {
+                    Value::Array(val) => Some((
+                        val.iter()
+                            .enumerate()
+                            .map(|(k, v)| (k, v.clone()))
+                            .collect::<HashMap<usize, Value>>(),
+                        true,
+                    )),
+                    Value::Table(val) => Some((
+                        val.iter()
+                            .map(|(k, v)| (parse_usize(k), v.clone()))
+                            .collect::<HashMap<usize, Value>>(),
+                        false,
+                    )),
+                    _ => None,
+                }
+                .unwrap();
+
+                let mappings: Mapping = Mapping::new(&map_map, strict, error_stack, mapping_name);
+                mapping_map.insert(mapping_name.to_string(), mappings);
+            } else {
+                error_stack.push(format!(
+                        "value of array entry in 'mappings.names' is of type '{}' instead of type 'string'",
+                        value.type_str()
+                    ));
+            }
+        }
+
+        let formats_table_value = handle_err_get(
+            table,
+            error_stack,
+            "formats",
+            "",
+            Value::Table(Table::new()),
+        );
+        let formats_table = formats_table_value.as_table().unwrap();
+
+        let parts: HashMap<String, PartDecoder> = handle_err_get(
+            formats_table,
+            error_stack,
+            "parts",
+            "formats",
+            Value::Array(vec![]),
+        )
+        .as_array()
+        .unwrap_or(&vec![])
+        .iter()
+        .filter_map(|x| {
+            let parr = x.as_array().unwrap();
+            if parr.len() < 3 || parr.len() > 4 {
+                error_stack.push(format!("expected length of part {:?} to be 3 or 4, in the form of [name: string, bitwidth: integer, type: string, (format: string = \"decimal\")]", parr));
+                None
+            } else {
+                let name = parr[0].as_str().unwrap_or("").to_string();
+                Some((name, PartDecoder::new(parr, error_stack, &mapping_map)))
+            }
+        })
+        .collect();
+
         let types_table_value =
             handle_err_get(table, error_stack, "types", "", Value::Table(Table::new()));
         let types_table = types_table_value.as_table().unwrap();
@@ -150,8 +237,11 @@ impl InstructionSet {
                         )
                         .as_array()
                         .unwrap(),
+                        &parts,
                         error_stack,
                         format!("types.{}", x).as_str(),
+                        x.as_str().unwrap(),
+                        bit_width,
                     ),
                 ))
             } else {
@@ -208,96 +298,35 @@ impl InstructionSet {
         })
         .collect();
 
-        let parts: HashMap<String, PartDecoder> = handle_err_get(
-            formats_table,
-            error_stack,
-            "parts",
-            "formats",
-            Value::Array(vec![]),
-        )
-        .as_array()
-        .unwrap_or(&vec![])
-        .iter()
-        .map(|x| {
-            let parr = x.as_array().unwrap();
-            let name = parr[0].as_str().unwrap_or("").to_string();
-            (name, PartDecoder::new(parr))
-        })
-        .collect();
-
-        let mappings_table_value = handle_err_get(
-            table,
-            error_stack,
-            "mappings",
-            "",
-            Value::Table(Table::new()),
-        );
-        let mappings_table = mappings_table_value.as_table().unwrap();
-
-        let mapping_names_value = handle_err_get(
-            mappings_table,
-            error_stack,
-            "names",
-            "mappings",
-            Value::Array(vec![]),
-        );
-        let mapping_names = mapping_names_value.as_array().unwrap();
-        let mut mapping_map = HashMap::new();
-        for value in mapping_names {
-            if let Some(mapping_name) = value.as_str() {
-                let mappings_val = handle_err_get_multitype(
-                    mappings_table,
-                    error_stack,
-                    mapping_name,
-                    "mappings",
-                    &vec![Value::Array(vec![]), Value::Table(Table::new())],
-                );
-                let (map_map, strict) = match mappings_val {
-                    Value::Array(val) => Some((
-                        val.iter()
-                            .enumerate()
-                            .map(|(k, v)| (k, v.clone()))
-                            .collect::<HashMap<usize, Value>>(),
-                        true,
-                    )),
-                    Value::Table(val) => Some((
-                        val.iter()
-                            .map(|(k, v)| (parse_usize(k), v.clone()))
-                            .collect::<HashMap<usize, Value>>(),
-                        false,
-                    )),
-                    _ => None,
-                }
-                .unwrap();
-
-                let mappings: Mapping = Mapping::new(&map_map, strict, error_stack, mapping_name);
-                mapping_map.insert(mapping_name.to_string(), mappings);
-            } else {
-                error_stack.push(format!(
-                    "value of array entry in 'mappings.names' is of type '{}' instead of type 'string'",
-                    value.type_str()
-                ));
-            }
-        }
-
         for (fmt_name, fmt) in &formats {
             for (repr_name, repr) in &fmt.repr {
                 let mut idx = 0;
                 while idx < repr.len() && repr[idx..].contains('%') {
                     let begin = repr[idx..].find('%').unwrap() + 1 + idx;
                     if !repr[begin..].contains('%') {
-                        error_stack.push(format!("no closing % found in format {}.{}: '{}'", fmt_name, repr_name, repr));
-                        break
+                        error_stack.push(format!(
+                            "no closing % found in format {}.{}: '{}'",
+                            fmt_name, repr_name, repr
+                        ));
+                        break;
                     } else {
                         let end = repr[begin..].find('%').unwrap() + begin;
                         let var_name = &repr[begin..end];
-                        
-                        let nmatches= fmt.instruction_type.slices.iter().filter(|x| x.name == var_name).count();
+
+                        let nmatches = fmt
+                            .instruction_type
+                            .slices
+                            .iter()
+                            .filter(|x| x.name == var_name)
+                            .count();
 
                         if nmatches == 0 {
-                            error_stack.push(format!("format of {}.{} is trying to reference nonexistant slice {}", fmt_name, repr_name, var_name));
+                            error_stack.push(format!(
+                                "format of {}.{} is trying to reference nonexistant slice {}",
+                                fmt_name, repr_name, var_name
+                            ));
                         }
-                        idx = end+1;
+                        idx = end + 1;
                     }
                 }
             }
@@ -524,6 +553,10 @@ impl PartType {
             PartType::None => true,
         }
     }
+
+    fn is_mapping(&self) -> bool {
+        matches!(self, PartType::Mapping(_))
+    }
 }
 
 #[derive(Clone)]
@@ -533,15 +566,27 @@ struct PartDecoder {
 }
 
 impl PartDecoder {
-    pub fn new(part_array: &[Value]) -> Self {
+    pub fn new(
+        part_array: &[Value],
+        error_stack: &mut Vec<String>,
+        mapping_map: &HashMap<String, Mapping>,
+    ) -> Self {
         let number_radix = if part_array.len() == 4 {
             NumberRadix::from_str(part_array[3].as_str().unwrap_or("")).unwrap()
         } else {
             NumberRadix::Decimal
         };
+        let part_type_name = part_array[2].as_str().unwrap_or("");
+        let part_type = PartType::from_str(part_type_name).unwrap_or(PartType::None);
+        if part_type.is_mapping() && !mapping_map.contains_key(part_type_name) {
+            error_stack.push(format!(
+                "mapping {} referenced in type of part {} does not exist",
+                part_type_name,
+                part_array[0].as_str().unwrap_or(""),
+            ));
+        }
         PartDecoder {
-            part_type: PartType::from_str(part_array[2].as_str().unwrap_or(""))
-                .unwrap_or(PartType::None),
+            part_type,
             number_radix,
         }
     }
@@ -821,7 +866,14 @@ struct InstructionType {
 }
 
 impl InstructionType {
-    pub fn new(names: &[Value], error_stack: &mut Vec<String>, table_prefix: &str) -> Self {
+    pub fn new(
+        names: &[Value],
+        parts: &HashMap<String, PartDecoder>,
+        error_stack: &mut Vec<String>,
+        table_prefix: &str,
+        type_name: &str,
+        bit_width: usize,
+    ) -> Self {
         let mut position = 0;
         let slices = names
             .iter()
@@ -830,9 +882,12 @@ impl InstructionType {
                 if x.is_table() {
                     let slice = InstructionSlice::new(
                         x.as_table().unwrap(),
+                        parts,
                         &position,
                         error_stack,
                         format!("{}[{}]", table_prefix, i).as_str(),
+                        type_name,
+                        bit_width,
                     );
                     position += slice.slice_top - slice.slice_bottom;
                     Some(slice)
@@ -901,9 +956,12 @@ struct InstructionSlice {
 impl InstructionSlice {
     pub fn new(
         table: &Map<String, Value>,
+        parts: &HashMap<String, PartDecoder>,
         position: &usize,
         error_stack: &mut Vec<String>,
         table_prefix: &str,
+        type_name: &str,
+        bit_width: usize,
     ) -> Self {
         let name = handle_err_get(
             table,
@@ -915,6 +973,9 @@ impl InstructionSlice {
         .as_str()
         .unwrap()
         .to_string();
+        if !parts.contains_key(&name) {
+            error_stack.push(format!("instruction slice with name \"{}\" referenced in types.{} not defined in formats.parts", name, type_name));
+        }
         let slice_top =
             1 + handle_err_get(table, error_stack, "top", table_prefix, Value::Integer(0))
                 .as_integer()
@@ -932,6 +993,10 @@ impl InstructionSlice {
                 table_prefix
             ));
             0
+        };
+
+        if slice_top > bit_width || slice_bottom > bit_width {
+            error_stack.push(format!("instruction slice \"{}\" of type \"{}\" at position {} downto {} is out of range for bit width {}", name, type_name, slice_top-1, slice_bottom, bit_width));
         };
 
         InstructionSlice {
