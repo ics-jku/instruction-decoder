@@ -22,10 +22,10 @@ number = 32
 [format-1-0.repr]
 default = "$name$"
 
-[format-1-0.instructions.wrs_nto]
+[format-1-0.instructions."wrs.nto"]
 mask = 0xffffffff
 match = 0xd00073
 
-[format-1-0.instructions.wrs_sto]
+[format-1-0.instructions."wrs.sto"]
 mask = 0xffffffff
 match = 0x1d00073

@@ -204,7 +204,7 @@ default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 [format_2-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %shamtd%"
 
-[format_1-0.instructions.add_uw]
+[format_1-0.instructions."add.uw"]
 mask = 0xfe00707f
 match = 0x800003b
 
@@ -212,7 +212,7 @@ match = 0x800003b
 mask = 0xfe00707f
 match = 0x20002033
 
-[format_1-0.instructions.sh1add_uw]
+[format_1-0.instructions."sh1add.uw"]
 mask = 0xfe00707f
 match = 0x2000203b
 
@@ -220,7 +220,7 @@ match = 0x2000203b
 mask = 0xfe00707f
 match = 0x20004033
 
-[format_1-0.instructions.sh2add_uw]
+[format_1-0.instructions."sh2add.uw"]
 mask = 0xfe00707f
 match = 0x2000403b
 
@@ -228,10 +228,10 @@ match = 0x2000403b
 mask = 0xfe00707f
 match = 0x20006033
 
-[format_1-0.instructions.sh3add_uw]
+[format_1-0.instructions."sh3add.uw"]
 mask = 0xfe00707f
 match = 0x2000603b
 
-[format_2-0.instructions.slli_uw]
+[format_2-0.instructions."slli.uw"]
 mask = 0xfc00707f
 match = 0x800101b

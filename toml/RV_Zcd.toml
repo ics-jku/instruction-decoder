@@ -287,22 +287,22 @@ default = "$name$ %rs2_p_Register_float_c%, %himm%(%rs1_p_Register_int_c%)"
 [format-4-0.repr]
 default = "$name$ %c_rs2_Register_float%, %himm%(sp)"
 
-[format-1-0.instructions.c_fld]
+[format-1-0.instructions."c.fld"]
 mask = 0xe003
 match = 0x2000
 unsigned = true
 
-[format-2-0.instructions.c_fldsp]
+[format-2-0.instructions."c.fldsp"]
 mask = 0xe003
 match = 0x2002
 unsigned = true
 
-[format-3-0.instructions.c_fsd]
+[format-3-0.instructions."c.fsd"]
 mask = 0xe003
 match = 0xa000
 unsigned = true
 
-[format-4-0.instructions.c_fsdsp]
+[format-4-0.instructions."c.fsdsp"]
 mask = 0xe003
 match = 0xa002
 unsigned = true

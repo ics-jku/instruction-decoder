@@ -273,51 +273,51 @@ default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
 [format-6-0.repr]
 default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
 
-[format-1-0.instructions.c_lbu]
+[format-1-0.instructions."c.lbu"]
 mask = 0xfc03
 match = 0x8000
 unsigned = true
 
-[format-2-0.instructions.c_lh]
+[format-2-0.instructions."c.lh"]
 mask = 0xfc43
 match = 0x8440
 unsigned = true
 
-[format-2-0.instructions.c_lhu]
+[format-2-0.instructions."c.lhu"]
 mask = 0xfc43
 match = 0x8400
 unsigned = true
 
-[format-3-0.instructions.c_mul]
+[format-3-0.instructions."c.mul"]
 mask = 0xfc63
 match = 0x9c41
 
-[format-4-0.instructions.c_not]
+[format-4-0.instructions."c.not"]
 mask = 0xfc7f
 match = 0x9c75
 
-[format-4-0.instructions.c_sext_b]
+[format-4-0.instructions."c.sext.b"]
 mask = 0xfc7f
 match = 0x9c65
 
-[format-4-0.instructions.c_sext_h]
+[format-4-0.instructions."c.sext.h"]
 mask = 0xfc7f
 match = 0x9c6d
 
-[format-4-0.instructions.c_zext_b]
+[format-4-0.instructions."c.zext.b"]
 mask = 0xfc7f
 match = 0x9c61
 
-[format-4-0.instructions.c_zext_h]
+[format-4-0.instructions."c.zext.h"]
 mask = 0xfc7f
 match = 0x9c69
 
-[format-5-0.instructions.c_sb]
+[format-5-0.instructions."c.sb"]
 mask = 0xfc03
 match = 0x8800
 unsigned = true
 
-[format-6-0.instructions.c_sh]
+[format-6-0.instructions."c.sh"]
 mask = 0xfc43
 match = 0x8c00
 unsigned = true

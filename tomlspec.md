@@ -35,5 +35,5 @@ required entries:
       - [`unsigned`] type `boolean`, True if all `VInt` parts in the type should be decoded as unsigned. If the entry is missing, it implies False, and thus all `VInt` will be signed
   - `repr` type `map` 
     - `default` for representing the default formatting
-      - the format string works in the way, that it replaces certain parts of the string, i.e. `%<name_of_part>%` with the corresponding decoded value of the part in the type, as well as `$name$` with the name of the instruction, with all occurrences of `_` replaced with `.` in the name
+      - the format string works in the way, that it replaces certain parts of the string, i.e. `%<name_of_part>%` with the corresponding decoded value of the part in the type, as well as `$name$` with the name of the instruction
     - `<name-of-instruction>` for overriding the formatting for single instructions

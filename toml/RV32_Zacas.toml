@@ -173,10 +173,10 @@ Mapping_ordering = ["", ".rl", ".aq", ".aqrl"]
 [format-1-0.repr]
 default = "$name$%aqrl% %rd_Register_int%, %rs2_Register_int%, (%rs1_Register_int%)"
 
-[format-1-0.instructions.amocas_d]
+[format-1-0.instructions."amocas.d"]
 mask = 0xf800707f
 match = 0x2800302f
 
-[format-1-0.instructions.amocas_w]
+[format-1-0.instructions."amocas.w"]
 mask = 0xf800707f
 match = 0x2800202f

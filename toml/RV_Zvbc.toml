@@ -243,18 +243,18 @@ default = "$name$ %vd%, %vs2%, %vs1%%vm%"
 [format-2-0.repr]
 default = "$name$ %vd%, %vs2%, %rs1_Register_int%%vm%"
 
-[format-1-0.instructions.vclmul_vv]
+[format-1-0.instructions."vclmul.vv"]
 mask = 0xfc00707f
 match = 0x30002057
 
-[format-1-0.instructions.vclmulh_vv]
+[format-1-0.instructions."vclmulh.vv"]
 mask = 0xfc00707f
 match = 0x34002057
 
-[format-2-0.instructions.vclmul_vx]
+[format-2-0.instructions."vclmul.vx"]
 mask = 0xfc00707f
 match = 0x30006057
 
-[format-2-0.instructions.vclmulh_vx]
+[format-2-0.instructions."vclmulh.vx"]
 mask = 0xfc00707f
 match = 0x34006057

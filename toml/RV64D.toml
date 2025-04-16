@@ -537,107 +537,107 @@ default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rs2_Register_float
 [format-7-0.repr]
 default = "$name$ %rs2_Register_float%, %imm%(%rs1_Register_int%)"
 
-[format-1-7.instructions.fadd_d]
+[format-1-7.instructions."fadd.d"]
 mask = 0xfe00007f
 match = 0x2000053
 
-[format-1-7.instructions.fdiv_d]
+[format-1-7.instructions."fdiv.d"]
 mask = 0xfe00007f
 match = 0x1a000053
 
-[format-1-7.instructions.fmul_d]
+[format-1-7.instructions."fmul.d"]
 mask = 0xfe00007f
 match = 0x12000053
 
-[format-1-7.instructions.fsub_d]
+[format-1-7.instructions."fsub.d"]
 mask = 0xfe00007f
 match = 0xa000053
 
-[format-2-1.instructions.fclass_d]
+[format-2-1.instructions."fclass.d"]
 mask = 0xfff0707f
 match = 0xe2001053
 
-[format-2-1.instructions.fmv_x_d]
+[format-2-1.instructions."fmv.x.d"]
 mask = 0xfff0707f
 match = 0xe2000053
 
-[format-2-2.instructions.fmv_d_x]
+[format-2-2.instructions."fmv.d.x"]
 mask = 0xfff0707f
 match = 0xf2000053
 
-[format-3-1.instructions.fcvt_l_d]
+[format-3-1.instructions."fcvt.l.d"]
 mask = 0xfff0007f
 match = 0xc2200053
 
-[format-3-1.instructions.fcvt_lu_d]
+[format-3-1.instructions."fcvt.lu.d"]
 mask = 0xfff0007f
 match = 0xc2300053
 
-[format-3-1.instructions.fcvt_w_d]
+[format-3-1.instructions."fcvt.w.d"]
 mask = 0xfff0007f
 match = 0xc2000053
 
-[format-3-1.instructions.fcvt_wu_d]
+[format-3-1.instructions."fcvt.wu.d"]
 mask = 0xfff0007f
 match = 0xc2100053
 
-[format-3-2.instructions.fcvt_d_l]
+[format-3-2.instructions."fcvt.d.l"]
 mask = 0xfff0007f
 match = 0xd2200053
 
-[format-3-2.instructions.fcvt_d_lu]
+[format-3-2.instructions."fcvt.d.lu"]
 mask = 0xfff0007f
 match = 0xd2300053
 
-[format-3-2.instructions.fcvt_d_w]
+[format-3-2.instructions."fcvt.d.w"]
 mask = 0xfff0007f
 match = 0xd2000053
 
-[format-3-2.instructions.fcvt_d_wu]
+[format-3-2.instructions."fcvt.d.wu"]
 mask = 0xfff0007f
 match = 0xd2100053
 
-[format-3-3.instructions.fcvt_d_s]
+[format-3-3.instructions."fcvt.d.s"]
 mask = 0xfff0007f
 match = 0x42000053
 
-[format-3-3.instructions.fcvt_s_d]
+[format-3-3.instructions."fcvt.s.d"]
 mask = 0xfff0007f
 match = 0x40100053
 
-[format-3-3.instructions.fsqrt_d]
+[format-3-3.instructions."fsqrt.d"]
 mask = 0xfff0007f
 match = 0x5a000053
 
-[format-4-3.instructions.feq_d]
+[format-4-3.instructions."feq.d"]
 mask = 0xfe00707f
 match = 0xa2002053
 
-[format-4-3.instructions.fle_d]
+[format-4-3.instructions."fle.d"]
 mask = 0xfe00707f
 match = 0xa2000053
 
-[format-4-3.instructions.flt_d]
+[format-4-3.instructions."flt.d"]
 mask = 0xfe00707f
 match = 0xa2001053
 
-[format-4-7.instructions.fmax_d]
+[format-4-7.instructions."fmax.d"]
 mask = 0xfe00707f
 match = 0x2a001053
 
-[format-4-7.instructions.fmin_d]
+[format-4-7.instructions."fmin.d"]
 mask = 0xfe00707f
 match = 0x2a000053
 
-[format-4-7.instructions.fsgnj_d]
+[format-4-7.instructions."fsgnj.d"]
 mask = 0xfe00707f
 match = 0x22000053
 
-[format-4-7.instructions.fsgnjn_d]
+[format-4-7.instructions."fsgnjn.d"]
 mask = 0xfe00707f
 match = 0x22001053
 
-[format-4-7.instructions.fsgnjx_d]
+[format-4-7.instructions."fsgnjx.d"]
 mask = 0xfe00707f
 match = 0x22002053
 
@@ -645,19 +645,19 @@ match = 0x22002053
 mask = 0x707f
 match = 0x3007
 
-[format-6-15.instructions.fmadd_d]
+[format-6-15.instructions."fmadd.d"]
 mask = 0x600007f
 match = 0x2000043
 
-[format-6-15.instructions.fmsub_d]
+[format-6-15.instructions."fmsub.d"]
 mask = 0x600007f
 match = 0x2000047
 
-[format-6-15.instructions.fnmadd_d]
+[format-6-15.instructions."fnmadd.d"]
 mask = 0x600007f
 match = 0x200004f
 
-[format-6-15.instructions.fnmsub_d]
+[format-6-15.instructions."fnmsub.d"]
 mask = 0x600007f
 match = 0x200004b
 

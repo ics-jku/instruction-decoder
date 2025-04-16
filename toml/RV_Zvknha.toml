@@ -113,14 +113,14 @@ Register_vec = [
 [format-1-0.repr]
 default = "$name$ %vd%, %vs2%, %vs1%"
 
-[format-1-0.instructions.vsha2ch_vv]
+[format-1-0.instructions."vsha2ch.vv"]
 mask = 0xfe00707f
 match = 0xba002077
 
-[format-1-0.instructions.vsha2cl_vv]
+[format-1-0.instructions."vsha2cl.vv"]
 mask = 0xfe00707f
 match = 0xbe002077
 
-[format-1-0.instructions.vsha2ms_vv]
+[format-1-0.instructions."vsha2ms.vv"]
 mask = 0xfe00707f
 match = 0xb6002077

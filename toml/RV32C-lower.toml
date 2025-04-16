@@ -944,11 +944,11 @@ default = "$name$"
 
 [format-18-0.repr]
 default = "$name$ %rd_rs1_n0_Register_int%, %imm%"
-c_slli64 = "$name$ %rd_rs1_n0_Register_int%"
+"c.slli64" = "$name$ %rd_rs1_n0_Register_int%"
 
 [format-19-0.repr]
 default = "$name$ %rd_rs1_p_Register_int_c%, %imm%"
-c_srli64 = "$name$ %rd_rs1_p_Register_int_c%"
+"c.srli64" = "$name$ %rd_rs1_p_Register_int_c%"
 
 [format-20-0.repr]
 default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
@@ -956,129 +956,129 @@ default = "$name$ %rs2_p_Register_int_c%, %himm%(%rs1_p_Register_int_c%)"
 [format-21-0.repr]
 default = "$name$ %c_rs2_Register_int%, %himm%(sp)"
 
-[format-01-0.instructions.c_add]
+[format-01-0.instructions."c.add"]
 mask = 0xf003
 match = 0x9002
 
-[format-02-0.instructions.c_addi]
+[format-02-0.instructions."c.addi"]
 mask = 0xe003
 match = 0x1
 
-[format-23-0.instructions.c_addi16sp]
+[format-23-0.instructions."c.addi16sp"]
 mask = 0xef83
 match = 0x6101
 
-[format-24-0.instructions.c_addi4spn]
+[format-24-0.instructions."c.addi4spn"]
 mask = 0xe003
 match = 0x0
 unsigned = true
 
-[format-05-0.instructions.c_and]
+[format-05-0.instructions."c.and"]
 mask = 0xfc63
 match = 0x8c61
 
-[format-05-0.instructions.c_or]
+[format-05-0.instructions."c.or"]
 mask = 0xfc63
 match = 0x8c41
 
-[format-05-0.instructions.c_sub]
+[format-05-0.instructions."c.sub"]
 mask = 0xfc63
 match = 0x8c01
 
-[format-05-0.instructions.c_xor]
+[format-05-0.instructions."c.xor"]
 mask = 0xfc63
 match = 0x8c21
 
-[format-06-0.instructions.c_andi]
+[format-06-0.instructions."c.andi"]
 mask = 0xec03
 match = 0x8801
 
-[format-07-0.instructions.c_beqz]
+[format-07-0.instructions."c.beqz"]
 mask = 0xe003
 match = 0xc001
 
-[format-07-0.instructions.c_bnez]
+[format-07-0.instructions."c.bnez"]
 mask = 0xe003
 match = 0xe001
 
-[format-28-0.instructions.c_ebreak]
+[format-28-0.instructions."c.ebreak"]
 mask = 0xffff
 match = 0x9002
 
-[format-09-0.instructions.c_j]
+[format-09-0.instructions."c.j"]
 mask = 0xe003
 match = 0xa001
 
-[format-09-0.instructions.c_jal]
+[format-09-0.instructions."c.jal"]
 mask = 0xe003
 match = 0x2001
 
-[format-10-0.instructions.c_jalr]
+[format-10-0.instructions."c.jalr"]
 mask = 0xf07f
 match = 0x9002
 
-[format-31-0.instructions.c_jr]
+[format-31-0.instructions."c.jr"]
 mask = 0xf07f
 match = 0x8002
 
-[format-12-0.instructions.c_li]
+[format-12-0.instructions."c.li"]
 mask = 0xe003
 match = 0x4001
 
-[format-13-0.instructions.c_lui]
+[format-13-0.instructions."c.lui"]
 mask = 0xe003
 match = 0x6001
 unsigned = true
 
-[format-14-0.instructions.c_lw]
+[format-14-0.instructions."c.lw"]
 mask = 0xe003
 match = 0x4000
 unsigned = true
 
-[format-15-0.instructions.c_lwsp]
+[format-15-0.instructions."c.lwsp"]
 mask = 0xe003
 match = 0x4002
 unsigned = true
 
-[format-16-0.instructions.c_mv]
+[format-16-0.instructions."c.mv"]
 mask = 0xf003
 match = 0x8002
 
-[format-17-0.instructions.c_nop]
+[format-17-0.instructions."c.nop"]
 mask = 0xef83
 match = 0x1
 
-[format-18-0.instructions.c_slli]
+[format-18-0.instructions."c.slli"]
 mask = 0xf003
 match = 0x2
 unsigned = true
 
-[format-18-0.instructions.c_slli64]
+[format-18-0.instructions."c.slli64"]
 mask = 0xf07f
 match = 0x2
 unsigned = true
 
-[format-19-0.instructions.c_srai]
+[format-19-0.instructions."c.srai"]
 mask = 0xfc03
 match = 0x8401
 unsigned = true
 
-[format-19-0.instructions.c_srli]
+[format-19-0.instructions."c.srli"]
 mask = 0xfc03
 match = 0x8001
 unsigned = true
 
-[format-19-0.instructions.c_srli64]
+[format-19-0.instructions."c.srli64"]
 mask = 0xfc7f
 match = 0x8001
 unsigned = true
 
-[format-20-0.instructions.c_sw]
+[format-20-0.instructions."c.sw"]
 mask = 0xe003
 match = 0xc000
 unsigned = true
 
-[format-21-0.instructions.c_swsp]
+[format-21-0.instructions."c.swsp"]
 mask = 0xe003
 match = 0xc002
 unsigned = true

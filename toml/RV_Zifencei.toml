@@ -147,6 +147,6 @@ Register_float = [
 [format-1-0.repr]
 default = "$name$"
 
-[format-1-0.instructions.fence_i]
+[format-1-0.instructions."fence.i"]
 mask = 0x707f
 match = 0x100f

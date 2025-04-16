@@ -22,18 +22,18 @@ number = 32
 [format-1-0.repr]
 default = "$name$"
 
-[format-1-0.instructions.ntl_all]
+[format-1-0.instructions."ntl.all"]
 mask = 0xffffffff
 match = 0x500033
 
-[format-1-0.instructions.ntl_p1]
+[format-1-0.instructions."ntl.p1"]
 mask = 0xffffffff
 match = 0x200033
 
-[format-1-0.instructions.ntl_pall]
+[format-1-0.instructions."ntl.pall"]
 mask = 0xffffffff
 match = 0x300033
 
-[format-1-0.instructions.ntl_s1]
+[format-1-0.instructions."ntl.s1"]
 mask = 0xffffffff
 match = 0x400033

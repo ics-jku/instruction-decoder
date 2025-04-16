@@ -214,46 +214,46 @@ default = "$name$%aqrl% %rd_Register_int%, %rs2_Register_int%, (%rs1_Register_in
 [format_2-0.repr]
 default = "$name$%aqrl% %rd_Register_int%, (%rs1_Register_int%)"
 
-[format_1-0.instructions.amoadd_w]
+[format_1-0.instructions."amoadd.w"]
 mask = 0xf800707f
 match = 0x202f
 
-[format_1-0.instructions.amoand_w]
+[format_1-0.instructions."amoand.w"]
 mask = 0xf800707f
 match = 0x6000202f
 
-[format_1-0.instructions.amomax_w]
+[format_1-0.instructions."amomax.w"]
 mask = 0xf800707f
 match = 0xa000202f
 
-[format_1-0.instructions.amomaxu_w]
+[format_1-0.instructions."amomaxu.w"]
 mask = 0xf800707f
 match = 0xe000202f
 
-[format_1-0.instructions.amomin_w]
+[format_1-0.instructions."amomin.w"]
 mask = 0xf800707f
 match = 0x8000202f
 
-[format_1-0.instructions.amominu_w]
+[format_1-0.instructions."amominu.w"]
 mask = 0xf800707f
 match = 0xc000202f
 
-[format_1-0.instructions.amoor_w]
+[format_1-0.instructions."amoor.w"]
 mask = 0xf800707f
 match = 0x4000202f
 
-[format_1-0.instructions.amoswap_w]
+[format_1-0.instructions."amoswap.w"]
 mask = 0xf800707f
 match = 0x800202f
 
-[format_1-0.instructions.amoxor_w]
+[format_1-0.instructions."amoxor.w"]
 mask = 0xf800707f
 match = 0x2000202f
 
-[format_1-0.instructions.sc_w]
+[format_1-0.instructions."sc.w"]
 mask = 0xf800707f
 match = 0x1800202f
 
-[format_2-0.instructions.lr_w]
+[format_2-0.instructions."lr.w"]
 mask = 0xf9f0707f
 match = 0x1000202f

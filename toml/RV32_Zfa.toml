@@ -379,66 +379,66 @@ default = "$name$ %rd_Register_float%, %lval%"
 [format-3-3.repr]
 default = "$name$ %rd_Register_float%, %rs1_Register_float%, %rm%"
 
-[format-1-3.instructions.fleq_h]
+[format-1-3.instructions."fleq.h"]
 mask = 0xfe00707f
 match = 0xa4004053
 
-[format-1-3.instructions.fleq_s]
+[format-1-3.instructions."fleq.s"]
 mask = 0xfe00707f
 match = 0xa0004053
 
-[format-1-3.instructions.fltq_h]
+[format-1-3.instructions."fltq.h"]
 mask = 0xfe00707f
 match = 0xa4005053
 
-[format-1-3.instructions.fltq_s]
+[format-1-3.instructions."fltq.s"]
 mask = 0xfe00707f
 match = 0xa0005053
 
-[format-1-4.instructions.fmvp_d_x]
+[format-1-4.instructions."fmvp.d.x"]
 mask = 0xfe00707f
 match = 0xb2000053
 
-[format-1-7.instructions.fmaxm_h]
+[format-1-7.instructions."fmaxm.h"]
 mask = 0xfe00707f
 match = 0x2c003053
 
-[format-1-7.instructions.fmaxm_s]
+[format-1-7.instructions."fmaxm.s"]
 mask = 0xfe00707f
 match = 0x28003053
 
-[format-1-7.instructions.fminm_h]
+[format-1-7.instructions."fminm.h"]
 mask = 0xfe00707f
 match = 0x2c002053
 
-[format-1-7.instructions.fminm_s]
+[format-1-7.instructions."fminm.s"]
 mask = 0xfe00707f
 match = 0x28002053
 
-[format-2-2.instructions.fli_h]
+[format-2-2.instructions."fli.h"]
 mask = 0xfff0707f
 match = 0xf4100053
 
-[format-2-2.instructions.fli_s]
+[format-2-2.instructions."fli.s"]
 mask = 0xfff0707f
 match = 0xf0100053
 
-[format-2-1.instructions.fmvh_x_d]
+[format-2-1.instructions."fmvh.x.d"]
 mask = 0xfff0707f
 match = 0xe2100053
 
-[format-3-3.instructions.fround_h]
+[format-3-3.instructions."fround.h"]
 mask = 0xfff0007f
 match = 0x44400053
 
-[format-3-3.instructions.fround_s]
+[format-3-3.instructions."fround.s"]
 mask = 0xfff0007f
 match = 0x40400053
 
-[format-3-3.instructions.froundnx_h]
+[format-3-3.instructions."froundnx.h"]
 mask = 0xfff0007f
 match = 0x44500053
 
-[format-3-3.instructions.froundnx_s]
+[format-3-3.instructions."froundnx.s"]
 mask = 0xfff0007f
 match = 0x40500053
