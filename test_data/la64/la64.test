@@ -1,0 +1,20 @@
+02ff8063 addi.d $sp, $sp, -32
+57ffffff bl -4
+54000400 bl 4
+54000000 bl 0
+29c06061 st.d $ra, $sp, 24
+29c04076 st.d $fp, $sp, 16
+02c08076 addi.d $fp, $sp, 32
+0015008c or $t0, $a0, $zero
+29ff82c5 st.d $a1, $fp, -32
+0040818c slli.w $t0, $t0, 0
+29bfb2cc st.w $t0, $fp, -20
+1a000004 pcalau12i $a0, 0
+02c00084 addi.d $a0, $a0, 0
+54000000 bl 0
+0015000c or $t0, $zero, $zero
+00150184 or $a0, $t0, $zero
+28c06061 ld.d $ra, $sp, 24
+28c04076 ld.d $fp, $sp, 16
+02c08063 addi.d $sp, $sp, 32
+4c000020 jirl $zero, $ra, 0
