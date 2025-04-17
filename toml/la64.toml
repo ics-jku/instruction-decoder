@@ -34,7 +34,7 @@ names = [
     "level",
     "rk_rj_op",
     "fa_fk_fj_fd",
-    "cond_fk_fj_cd",
+    "fk_fj_cd",
     "ca_fk_fj_fd",
     "si16_rj_rd",
     "si20_rd",
@@ -69,11 +69,6 @@ parts = [
         "code",
         15,
         "u16",
-    ],
-    [
-        "cond",
-        5,
-        "u8",
     ],
     [
         "csr",
@@ -250,7 +245,7 @@ names = [
     "LEVEL",
     "RK_RJ_OP",
     "FA_FK_FJ_FD",
-    "COND_FK_FJ_CD",
+    "FK_FJ_CD",
     "CA_FK_FJ_FD",
     "SI16_RJ_RD",
     "SI20_RD",
@@ -841,32 +836,27 @@ name = "fd"
 top = 4
 bot = 0
 
-[[types.COND_FK_FJ_CD]]
+[[types.FK_FJ_CD]]
 name = "none"
 top = 31
-bot = 20
+bot = 15
 
-[[types.COND_FK_FJ_CD]]
-name = "cond"
-top = 4
-bot = 0
-
-[[types.COND_FK_FJ_CD]]
+[[types.FK_FJ_CD]]
 name = "fk"
 top = 4
 bot = 0
 
-[[types.COND_FK_FJ_CD]]
+[[types.FK_FJ_CD]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.COND_FK_FJ_CD]]
+[[types.FK_FJ_CD]]
 name = "none"
 top = 4
 bot = 3
 
-[[types.COND_FK_FJ_CD]]
+[[types.FK_FJ_CD]]
 name = "cd"
 top = 2
 bot = 0
@@ -1214,8 +1204,8 @@ type = "RK_RJ_OP"
 [fa_fk_fj_fd]
 type = "FA_FK_FJ_FD"
 
-[cond_fk_fj_cd]
-type = "COND_FK_FJ_CD"
+[fk_fj_cd]
+type = "FK_FJ_CD"
 
 [ca_fk_fj_fd]
 type = "CA_FK_FJ_FD"
@@ -2578,16 +2568,96 @@ match = 147849216
 mask = 4293918720
 match = 148897792
 
-[cond_fk_fj_cd.repr]
+[fk_fj_cd.repr]
 default = "$name$ %cd%, %fj%, %fk%"
 
-[cond_fk_fj_cd.instructions."fcmp.cond.s"]
-mask = 4293918744
+[fk_fj_cd.instructions."fcmp.caf.s"]
+mask = 4294934552
 match = 202375168
 
-[cond_fk_fj_cd.instructions."fcmp.cond.d"]
-mask = 4293918744
-match = 203423744
+[fk_fj_cd.instructions."fcmp.cun.s"]
+mask = 4294934552
+match = 202637312
+
+[fk_fj_cd.instructions."fcmp.ceq.s"]
+mask = 4294934552
+match = 202506240
+
+[fk_fj_cd.instructions."fcmp.cueq.s"]
+mask = 4294934552
+match = 202768384
+
+[fk_fj_cd.instructions."fcmp.clt.s"]
+mask = 4294934552
+match = 202440704
+
+[fk_fj_cd.instructions."fcmp.cult.s"]
+mask = 4294934552
+match = 202702848
+
+[fk_fj_cd.instructions."fcmp.cle.s"]
+mask = 4294934552
+match = 202571776
+
+[fk_fj_cd.instructions."fcmp.cule.s"]
+mask = 4294934552
+match = 202833920
+
+[fk_fj_cd.instructions."fcmp.cne.s"]
+mask = 4294934552
+match = 202899456
+
+[fk_fj_cd.instructions."fcmp.cor.s"]
+mask = 4294934552
+match = 203030528
+
+[fk_fj_cd.instructions."fcmp.cune.s"]
+mask = 4294934552
+match = 203161600
+
+[fk_fj_cd.instructions."fcmp.saf.d"]
+mask = 4294934552
+match = 203456512
+
+[fk_fj_cd.instructions."fcmp.sun.d"]
+mask = 4294934552
+match = 203718656
+
+[fk_fj_cd.instructions."fcmp.seq.d"]
+mask = 4294934552
+match = 203587584
+
+[fk_fj_cd.instructions."fcmp.sueq.d"]
+mask = 4294934552
+match = 203849728
+
+[fk_fj_cd.instructions."fcmp.slt.d"]
+mask = 4294934552
+match = 203522048
+
+[fk_fj_cd.instructions."fcmp.sult.d"]
+mask = 4294934552
+match = 203784192
+
+[fk_fj_cd.instructions."fcmp.sle.d"]
+mask = 4294934552
+match = 203653120
+
+[fk_fj_cd.instructions."fcmp.sule.d"]
+mask = 4294934552
+match = 203915264
+
+[fk_fj_cd.instructions."fcmp.sne.d"]
+mask = 4294934552
+match = 203980800
+
+[fk_fj_cd.instructions."fcmp.sor.d"]
+mask = 4294934552
+match = 204111872
+
+[fk_fj_cd.instructions."fcmp.sune.d"]
+mask = 4294934552
+match = 204242944
 
 [ca_fk_fj_fd.repr]
 default = "$name$ %fd%, %fj%, %fk%, %ca%"

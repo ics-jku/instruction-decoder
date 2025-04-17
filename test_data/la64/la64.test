@@ -1,7 +1,4 @@
 02ff8063 addi.d $sp, $sp, -32
-57ffffff bl -4
-54000400 bl 4
-54000000 bl 0
 29c06061 st.d $ra, $sp, 24
 29c04076 st.d $fp, $sp, 16
 02c08076 addi.d $fp, $sp, 32
@@ -18,3 +15,5 @@
 28c04076 ld.d $fp, $sp, 16
 02c08063 addi.d $sp, $sp, 32
 4c000020 jirl $zero, $ra, 0
+57ffffff bl -4
+54000400 bl 4
