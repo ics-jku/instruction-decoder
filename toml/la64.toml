@@ -3,51 +3,53 @@ width = 32
 
 [formats]
 names = [
-    "rj_rd",
-    "rk_rj",
-    "sa2_rk_rj_rd",
-    "sa3_rk_rj_rd",
-    "rk_rj_rd",
+    "rd_rj",
+    "rj_rk",
+    "rd_rj_rk_sa2alsl",
+    "rd_rj_rk_sa2",
+    "rd_rj_rk_sa3",
+    "rd_rj_rk",
     "code",
-    "ui5_rj_rd",
-    "ui6_rj_rd",
-    "msbw_lsbw_rj_rd",
-    "msbd_lsbd_rj_rd",
-    "fk_fj_fd",
-    "fj_fd",
-    "rj_fd",
-    "fj_rd",
-    "rj_fcsr",
-    "fcsr_rd",
-    "fj_cd",
-    "cj_fd",
-    "rj_cd",
-    "cj_rd",
-    "si12_rj_rd",
-    "ui12_rj_rd",
-    "csr_rd",
-    "csr_rj_rd",
-    "si12_rj_code",
-    "level_rj_rd",
-    "seq_rj",
+    "rd_rj_ui5",
+    "rd_rj_ui6",
+    "rd_rj_msbw_lsbw",
+    "rd_rj_msbd_lsbd",
+    "fd_fj_fk",
+    "fd_fj",
+    "fd_rj",
+    "rd_fj",
+    "fcsr_rj",
+    "rd_fcsr",
+    "cd_fj",
+    "fd_cj",
+    "cd_rj",
+    "rd_cj",
+    "rd_rj_si12",
+    "rd_rj_ui12",
+    "rd_rj_csr",
+    "cacopcode_rj_si12",
+    "rd_rj_level",
+    "rj_seq",
     "zarg",
-    "level",
-    "rk_rj_op",
-    "fa_fk_fj_fd",
-    "fk_fj_cd",
-    "ca_fk_fj_fd",
-    "si16_rj_rd",
-    "si20_rd",
-    "si14_rj_rd",
-    "si12_rj_hint",
-    "si12_rj_fd",
-    "rk_rj_hint",
-    "rk_rj_fd",
+    "idlelevel",
+    "op_rj_rk",
+    "fd_fj_fk_fa",
+    "cd_fj_fk",
+    "fd_fj_fk_ca",
+    "rd_rj_si16",
+    "rd_si20",
+    "rd_rj_si14s2",
+    "preldhint_rj_si12",
+    "fd_rj_si12",
+    "preldhint_rj_rk",
+    "fd_rj_rk",
+    "rd_rk_rj",
     "hint",
-    "offs_rj_offs",
-    "offs_cj_offs",
-    "offs_rj_rd",
-    "offs_offs",
+    "rj_offss2",
+    "cj_offss2",
+    "rd_rj_offss2",
+    "offss2",
+    "rj_rd_offss2",
 ]
 parts = [
     [
@@ -69,11 +71,19 @@ parts = [
         "code",
         15,
         "u16",
+        "hex",
+    ],
+    [
+        "cacopcode",
+        5,
+        "u8",
+        "hex",
     ],
     [
         "csr",
         14,
         "u16",
+        "hex",
     ],
     [
         "fa",
@@ -82,7 +92,7 @@ parts = [
     ],
     [
         "fcsr",
-        2,
+        5,
         "fcsr",
     ],
     [
@@ -104,31 +114,49 @@ parts = [
         "hint",
         15,
         "u16",
+        "hex",
+    ],
+    [
+        "preldhint",
+        5,
+        "u8",
+        "hex",
     ],
     [
         "level",
         8,
         "u8",
+        "hex",
+    ],
+    [
+        "idlelevel",
+        15,
+        "u16",
+        "hex",
     ],
     [
         "lsbd",
         6,
         "u8",
+        "hex",
     ],
     [
         "lsbw",
         5,
         "u8",
+        "hex",
     ],
     [
         "msbd",
         6,
         "u8",
+        "hex",
     ],
     [
         "msbw",
         5,
         "u8",
+        "hex",
     ],
     [
         "offs",
@@ -136,9 +164,15 @@ parts = [
         "VInt",
     ],
     [
+        "offss2",
+        64,
+        "VInt",
+    ],
+    [
         "op",
         5,
         "u8",
+        "hex",
     ],
     [
         "rd",
@@ -159,16 +193,24 @@ parts = [
         "sa2",
         2,
         "u8",
+        "hex",
+    ],
+    [
+        "sa2alsl",
+        2,
+        "sa2_alsl_vals",
     ],
     [
         "sa3",
         3,
         "u8",
+        "hex",
     ],
     [
         "seq",
         8,
         "u8",
+        "hex",
     ],
     [
         "si12",
@@ -178,6 +220,11 @@ parts = [
     [
         "si14",
         14,
+        "i16",
+    ],
+    [
+        "si14s2",
+        16,
         "i16",
     ],
     [
@@ -194,16 +241,19 @@ parts = [
         "ui12",
         12,
         "u16",
+        "hex",
     ],
     [
         "ui5",
         5,
         "u8",
+        "hex",
     ],
     [
         "ui6",
         6,
         "u8",
+        "hex",
     ],
     [
         "none",
@@ -214,154 +264,181 @@ parts = [
 
 [types]
 names = [
-    "RJ_RD",
-    "RK_RJ",
-    "SA2_RK_RJ_RD",
-    "SA3_RK_RJ_RD",
-    "RK_RJ_RD",
+    "RD_RJ",
+    "RJ_RK",
+    "RD_RJ_RK_SA2ALSL",
+    "RD_RJ_RK_SA2",
+    "RD_RJ_RK_SA3",
+    "RD_RJ_RK",
     "CODE",
-    "UI5_RJ_RD",
-    "UI6_RJ_RD",
-    "MSBW_LSBW_RJ_RD",
-    "MSBD_LSBD_RJ_RD",
-    "FK_FJ_FD",
-    "FJ_FD",
-    "RJ_FD",
-    "FJ_RD",
-    "RJ_FCSR",
-    "FCSR_RD",
-    "FJ_CD",
-    "CJ_FD",
-    "RJ_CD",
-    "CJ_RD",
-    "SI12_RJ_RD",
-    "UI12_RJ_RD",
-    "CSR_RD",
-    "CSR_RJ_RD",
-    "SI12_RJ_CODE",
-    "LEVEL_RJ_RD",
-    "SEQ_RJ",
+    "RD_RJ_UI5",
+    "RD_RJ_UI6",
+    "RD_RJ_MSBW_LSBW",
+    "RD_RJ_MSBD_LSBD",
+    "FD_FJ_FK",
+    "FD_FJ",
+    "FD_RJ",
+    "RD_FJ",
+    "FCSR_RJ",
+    "RD_FCSR",
+    "CD_FJ",
+    "FD_CJ",
+    "CD_RJ",
+    "RD_CJ",
+    "RD_RJ_SI12",
+    "RD_RJ_UI12",
+    "RD_RJ_CSR",
+    "CACOPCODE_RJ_SI12",
+    "RD_RJ_LEVEL",
+    "RJ_SEQ",
     "ZARG",
-    "LEVEL",
-    "RK_RJ_OP",
-    "FA_FK_FJ_FD",
-    "FK_FJ_CD",
-    "CA_FK_FJ_FD",
-    "SI16_RJ_RD",
-    "SI20_RD",
-    "SI14_RJ_RD",
-    "SI12_RJ_HINT",
-    "SI12_RJ_FD",
-    "RK_RJ_HINT",
-    "RK_RJ_FD",
+    "IDLELEVEL",
+    "OP_RJ_RK",
+    "FD_FJ_FK_FA",
+    "CD_FJ_FK",
+    "FD_FJ_FK_CA",
+    "RD_RJ_SI16",
+    "RD_SI20",
+    "RD_RJ_SI14S2",
+    "PRELDHINT_RJ_SI12",
+    "FD_RJ_SI12",
+    "PRELDHINT_RJ_RK",
+    "FD_RJ_RK",
+    "RD_RK_RJ",
     "HINT",
-    "OFFS_RJ_OFFS",
-    "OFFS_CJ_OFFS",
-    "OFFS_RJ_RD",
-    "OFFS_OFFS",
+    "RJ_OFFSS2",
+    "CJ_OFFSS2",
+    "RD_RJ_OFFSS2",
+    "OFFSS2",
+    "RJ_RD_OFFSS2",
 ]
 
-[[types.RJ_RD]]
+[[types.RD_RJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.RJ_RD]]
+[[types.RD_RJ]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RJ_RD]]
+[[types.RD_RJ]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.RK_RJ]]
+[[types.RJ_RK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.RK_RJ]]
+[[types.RJ_RK]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.RK_RJ]]
+[[types.RJ_RK]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RK_RJ]]
+[[types.RJ_RK]]
 name = "none"
 top = 4
 bot = 0
 
-[[types.SA2_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA2ALSL]]
 name = "none"
 top = 31
 bot = 17
 
-[[types.SA2_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA2ALSL]]
+name = "sa2alsl"
+top = 1
+bot = 0
+
+[[types.RD_RJ_RK_SA2ALSL]]
+name = "rk"
+top = 4
+bot = 0
+
+[[types.RD_RJ_RK_SA2ALSL]]
+name = "rj"
+top = 4
+bot = 0
+
+[[types.RD_RJ_RK_SA2ALSL]]
+name = "rd"
+top = 4
+bot = 0
+
+[[types.RD_RJ_RK_SA2]]
+name = "none"
+top = 31
+bot = 17
+
+[[types.RD_RJ_RK_SA2]]
 name = "sa2"
 top = 1
 bot = 0
 
-[[types.SA2_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA2]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.SA2_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA2]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SA2_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA2]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SA3_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA3]]
 name = "none"
 top = 31
 bot = 18
 
-[[types.SA3_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA3]]
 name = "sa3"
 top = 2
 bot = 0
 
-[[types.SA3_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA3]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.SA3_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA3]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SA3_RK_RJ_RD]]
+[[types.RD_RJ_RK_SA3]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.RK_RJ_RD]]
+[[types.RD_RJ_RK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.RK_RJ_RD]]
+[[types.RD_RJ_RK]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.RK_RJ_RD]]
+[[types.RD_RJ_RK]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RK_RJ_RD]]
+[[types.RD_RJ_RK]]
 name = "rd"
 top = 4
 bot = 0
@@ -376,402 +453,382 @@ name = "code"
 top = 14
 bot = 0
 
-[[types.UI5_RJ_RD]]
+[[types.RD_RJ_UI5]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.UI5_RJ_RD]]
+[[types.RD_RJ_UI5]]
 name = "ui5"
 top = 4
 bot = 0
 
-[[types.UI5_RJ_RD]]
+[[types.RD_RJ_UI5]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.UI5_RJ_RD]]
+[[types.RD_RJ_UI5]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.UI6_RJ_RD]]
+[[types.RD_RJ_UI6]]
 name = "none"
 top = 31
 bot = 16
 
-[[types.UI6_RJ_RD]]
+[[types.RD_RJ_UI6]]
 name = "ui6"
 top = 5
 bot = 0
 
-[[types.UI6_RJ_RD]]
+[[types.RD_RJ_UI6]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.UI6_RJ_RD]]
+[[types.RD_RJ_UI6]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "none"
 top = 31
 bot = 21
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "msbw"
 top = 4
 bot = 0
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "none"
 top = 15
 bot = 15
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "lsbw"
 top = 4
 bot = 0
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.MSBW_LSBW_RJ_RD]]
+[[types.RD_RJ_MSBW_LSBW]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.MSBD_LSBD_RJ_RD]]
+[[types.RD_RJ_MSBD_LSBD]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.MSBD_LSBD_RJ_RD]]
+[[types.RD_RJ_MSBD_LSBD]]
 name = "msbd"
 top = 5
 bot = 0
 
-[[types.MSBD_LSBD_RJ_RD]]
+[[types.RD_RJ_MSBD_LSBD]]
 name = "lsbd"
 top = 5
 bot = 0
 
-[[types.MSBD_LSBD_RJ_RD]]
+[[types.RD_RJ_MSBD_LSBD]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.MSBD_LSBD_RJ_RD]]
+[[types.RD_RJ_MSBD_LSBD]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.FK_FJ_FD]]
+[[types.FD_FJ_FK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.FK_FJ_FD]]
+[[types.FD_FJ_FK]]
 name = "fk"
 top = 4
 bot = 0
 
-[[types.FK_FJ_FD]]
+[[types.FD_FJ_FK]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FK_FJ_FD]]
+[[types.FD_FJ_FK]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.FJ_FD]]
+[[types.FD_FJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.FJ_FD]]
+[[types.FD_FJ]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FJ_FD]]
+[[types.FD_FJ]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.RJ_FD]]
+[[types.FD_RJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.RJ_FD]]
+[[types.FD_RJ]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RJ_FD]]
+[[types.FD_RJ]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.FJ_RD]]
+[[types.RD_FJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.FJ_RD]]
+[[types.RD_FJ]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FJ_RD]]
+[[types.RD_FJ]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.RJ_FCSR]]
+[[types.FCSR_RJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.RJ_FCSR]]
+[[types.FCSR_RJ]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RJ_FCSR]]
+[[types.FCSR_RJ]]
 name = "fcsr"
-top = 1
+top = 4
 bot = 0
 
-[[types.FCSR_RD]]
+[[types.RD_FCSR]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.FCSR_RD]]
+[[types.RD_FCSR]]
 name = "fcsr"
-top = 1
+top = 4
 bot = 0
 
-[[types.FCSR_RD]]
+[[types.RD_FCSR]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.FJ_CD]]
+[[types.CD_FJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.FJ_CD]]
+[[types.CD_FJ]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FJ_CD]]
+[[types.CD_FJ]]
 name = "none"
 top = 4
 bot = 3
 
-[[types.FJ_CD]]
+[[types.CD_FJ]]
 name = "cd"
 top = 2
 bot = 0
 
-[[types.CJ_FD]]
+[[types.FD_CJ]]
 name = "none"
 top = 31
 bot = 8
 
-[[types.CJ_FD]]
+[[types.FD_CJ]]
 name = "cj"
 top = 2
 bot = 0
 
-[[types.CJ_FD]]
+[[types.FD_CJ]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.RJ_CD]]
+[[types.CD_RJ]]
 name = "none"
 top = 31
 bot = 10
 
-[[types.RJ_CD]]
+[[types.CD_RJ]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RJ_CD]]
+[[types.CD_RJ]]
 name = "none"
 top = 4
 bot = 3
 
-[[types.RJ_CD]]
+[[types.CD_RJ]]
 name = "cd"
 top = 2
 bot = 0
 
-[[types.CJ_RD]]
+[[types.RD_CJ]]
 name = "none"
 top = 31
 bot = 8
 
-[[types.CJ_RD]]
+[[types.RD_CJ]]
 name = "cj"
 top = 2
 bot = 0
 
-[[types.CJ_RD]]
+[[types.RD_CJ]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_RD]]
+[[types.RD_RJ_SI12]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.SI12_RJ_RD]]
+[[types.RD_RJ_SI12]]
 name = "si12"
 top = 11
 bot = 0
 
-[[types.SI12_RJ_RD]]
+[[types.RD_RJ_SI12]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_RD]]
+[[types.RD_RJ_SI12]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.UI12_RJ_RD]]
+[[types.RD_RJ_UI12]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.UI12_RJ_RD]]
+[[types.RD_RJ_UI12]]
 name = "ui12"
 top = 11
 bot = 0
 
-[[types.UI12_RJ_RD]]
+[[types.RD_RJ_UI12]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.UI12_RJ_RD]]
+[[types.RD_RJ_UI12]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.CSR_RD]]
+[[types.RD_RJ_CSR]]
 name = "none"
 top = 31
 bot = 24
 
-[[types.CSR_RD]]
+[[types.RD_RJ_CSR]]
 name = "csr"
 top = 13
 bot = 0
 
-[[types.CSR_RD]]
-name = "none"
-top = 9
-bot = 5
-
-[[types.CSR_RD]]
-name = "rd"
-top = 4
-bot = 0
-
-[[types.CSR_RJ_RD]]
-name = "none"
-top = 31
-bot = 24
-
-[[types.CSR_RJ_RD]]
-name = "csr"
-top = 13
-bot = 0
-
-[[types.CSR_RJ_RD]]
+[[types.RD_RJ_CSR]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.CSR_RJ_RD]]
+[[types.RD_RJ_CSR]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_CODE]]
+[[types.CACOPCODE_RJ_SI12]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.SI12_RJ_CODE]]
+[[types.CACOPCODE_RJ_SI12]]
 name = "si12"
 top = 11
 bot = 0
 
-[[types.SI12_RJ_CODE]]
+[[types.CACOPCODE_RJ_SI12]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_CODE]]
-name = "code"
-top = 14
+[[types.CACOPCODE_RJ_SI12]]
+name = "cacopcode"
+top = 4
 bot = 0
 
-[[types.LEVEL_RJ_RD]]
+[[types.RD_RJ_LEVEL]]
 name = "none"
 top = 31
 bot = 18
 
-[[types.LEVEL_RJ_RD]]
+[[types.RD_RJ_LEVEL]]
 name = "level"
 top = 7
 bot = 0
 
-[[types.LEVEL_RJ_RD]]
+[[types.RD_RJ_LEVEL]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.LEVEL_RJ_RD]]
+[[types.RD_RJ_LEVEL]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SEQ_RJ]]
+[[types.RJ_SEQ]]
 name = "none"
 top = 31
 bot = 18
 
-[[types.SEQ_RJ]]
+[[types.RJ_SEQ]]
 name = "seq"
 top = 7
 bot = 0
 
-[[types.SEQ_RJ]]
+[[types.RJ_SEQ]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SEQ_RJ]]
+[[types.RJ_SEQ]]
 name = "none"
 top = 4
 bot = 0
@@ -781,243 +838,263 @@ name = "none"
 top = 31
 bot = 0
 
-[[types.LEVEL]]
+[[types.IDLELEVEL]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.LEVEL]]
-name = "level"
-top = 7
+[[types.IDLELEVEL]]
+name = "idlelevel"
+top = 14
 bot = 0
 
-[[types.RK_RJ_OP]]
+[[types.OP_RJ_RK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.RK_RJ_OP]]
+[[types.OP_RJ_RK]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.RK_RJ_OP]]
+[[types.OP_RJ_RK]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RK_RJ_OP]]
+[[types.OP_RJ_RK]]
 name = "op"
 top = 4
 bot = 0
 
-[[types.FA_FK_FJ_FD]]
+[[types.FD_FJ_FK_FA]]
 name = "none"
 top = 31
 bot = 20
 
-[[types.FA_FK_FJ_FD]]
+[[types.FD_FJ_FK_FA]]
 name = "fa"
 top = 4
 bot = 0
 
-[[types.FA_FK_FJ_FD]]
+[[types.FD_FJ_FK_FA]]
 name = "fk"
 top = 4
 bot = 0
 
-[[types.FA_FK_FJ_FD]]
+[[types.FD_FJ_FK_FA]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FA_FK_FJ_FD]]
+[[types.FD_FJ_FK_FA]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.FK_FJ_CD]]
+[[types.CD_FJ_FK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.FK_FJ_CD]]
+[[types.CD_FJ_FK]]
 name = "fk"
 top = 4
 bot = 0
 
-[[types.FK_FJ_CD]]
+[[types.CD_FJ_FK]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.FK_FJ_CD]]
+[[types.CD_FJ_FK]]
 name = "none"
 top = 4
 bot = 3
 
-[[types.FK_FJ_CD]]
+[[types.CD_FJ_FK]]
 name = "cd"
 top = 2
 bot = 0
 
-[[types.CA_FK_FJ_FD]]
+[[types.FD_FJ_FK_CA]]
 name = "none"
 top = 31
 bot = 18
 
-[[types.CA_FK_FJ_FD]]
+[[types.FD_FJ_FK_CA]]
 name = "ca"
 top = 2
 bot = 0
 
-[[types.CA_FK_FJ_FD]]
+[[types.FD_FJ_FK_CA]]
 name = "fk"
 top = 4
 bot = 0
 
-[[types.CA_FK_FJ_FD]]
+[[types.FD_FJ_FK_CA]]
 name = "fj"
 top = 4
 bot = 0
 
-[[types.CA_FK_FJ_FD]]
+[[types.FD_FJ_FK_CA]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.SI16_RJ_RD]]
+[[types.RD_RJ_SI16]]
 name = "none"
 top = 31
 bot = 26
 
-[[types.SI16_RJ_RD]]
+[[types.RD_RJ_SI16]]
 name = "si16"
 top = 15
 bot = 0
 
-[[types.SI16_RJ_RD]]
+[[types.RD_RJ_SI16]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI16_RJ_RD]]
+[[types.RD_RJ_SI16]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SI20_RD]]
+[[types.RD_SI20]]
 name = "none"
 top = 31
 bot = 25
 
-[[types.SI20_RD]]
+[[types.RD_SI20]]
 name = "si20"
 top = 19
 bot = 0
 
-[[types.SI20_RD]]
+[[types.RD_SI20]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SI14_RJ_RD]]
+[[types.RD_RJ_SI14S2]]
 name = "none"
 top = 31
 bot = 24
 
-[[types.SI14_RJ_RD]]
-name = "si14"
-top = 13
-bot = 0
+[[types.RD_RJ_SI14S2]]
+name = "si14s2"
+top = 15
+bot = 2
 
-[[types.SI14_RJ_RD]]
+[[types.RD_RJ_SI14S2]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI14_RJ_RD]]
+[[types.RD_RJ_SI14S2]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_HINT]]
+[[types.PRELDHINT_RJ_SI12]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.SI12_RJ_HINT]]
+[[types.PRELDHINT_RJ_SI12]]
 name = "si12"
 top = 11
 bot = 0
 
-[[types.SI12_RJ_HINT]]
+[[types.PRELDHINT_RJ_SI12]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_HINT]]
-name = "hint"
-top = 14
+[[types.PRELDHINT_RJ_SI12]]
+name = "preldhint"
+top = 4
 bot = 0
 
-[[types.SI12_RJ_FD]]
+[[types.FD_RJ_SI12]]
 name = "none"
 top = 31
 bot = 22
 
-[[types.SI12_RJ_FD]]
+[[types.FD_RJ_SI12]]
 name = "si12"
 top = 11
 bot = 0
 
-[[types.SI12_RJ_FD]]
+[[types.FD_RJ_SI12]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.SI12_RJ_FD]]
+[[types.FD_RJ_SI12]]
 name = "fd"
 top = 4
 bot = 0
 
-[[types.RK_RJ_HINT]]
+[[types.PRELDHINT_RJ_RK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.RK_RJ_HINT]]
+[[types.PRELDHINT_RJ_RK]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.RK_RJ_HINT]]
+[[types.PRELDHINT_RJ_RK]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RK_RJ_HINT]]
-name = "hint"
-top = 14
+[[types.PRELDHINT_RJ_RK]]
+name = "preldhint"
+top = 4
 bot = 0
 
-[[types.RK_RJ_FD]]
+[[types.FD_RJ_RK]]
 name = "none"
 top = 31
 bot = 15
 
-[[types.RK_RJ_FD]]
+[[types.FD_RJ_RK]]
 name = "rk"
 top = 4
 bot = 0
 
-[[types.RK_RJ_FD]]
+[[types.FD_RJ_RK]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.RK_RJ_FD]]
+[[types.FD_RJ_RK]]
 name = "fd"
+top = 4
+bot = 0
+
+[[types.RD_RK_RJ]]
+name = "none"
+top = 31
+bot = 15
+
+[[types.RD_RK_RJ]]
+name = "rk"
+top = 4
+bot = 0
+
+[[types.RD_RK_RJ]]
+name = "rj"
+top = 4
+bot = 0
+
+[[types.RD_RK_RJ]]
+name = "rd"
 top = 4
 bot = 0
 
@@ -1031,223 +1108,249 @@ name = "hint"
 top = 14
 bot = 0
 
-[[types.OFFS_RJ_OFFS]]
+[[types.RJ_OFFSS2]]
 name = "none"
 top = 31
 bot = 26
 
-[[types.OFFS_RJ_OFFS]]
-name = "offs"
+[[types.RJ_OFFSS2]]
+name = "offss2"
 top = 17
 bot = 2
 
-[[types.OFFS_RJ_OFFS]]
+[[types.RJ_OFFSS2]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.OFFS_RJ_OFFS]]
-name = "offs"
+[[types.RJ_OFFSS2]]
+name = "offss2"
 top = 22
 bot = 18
 
-[[types.OFFS_CJ_OFFS]]
+[[types.CJ_OFFSS2]]
 name = "none"
 top = 31
 bot = 26
 
-[[types.OFFS_CJ_OFFS]]
-name = "offs"
+[[types.CJ_OFFSS2]]
+name = "offss2"
 top = 17
 bot = 2
 
-[[types.OFFS_CJ_OFFS]]
+[[types.CJ_OFFSS2]]
 name = "none"
 top = 9
 bot = 8
 
-[[types.OFFS_CJ_OFFS]]
+[[types.CJ_OFFSS2]]
 name = "cj"
 top = 2
 bot = 0
 
-[[types.OFFS_CJ_OFFS]]
-name = "offs"
+[[types.CJ_OFFSS2]]
+name = "offss2"
 top = 22
 bot = 18
 
-[[types.OFFS_RJ_RD]]
+[[types.RD_RJ_OFFSS2]]
 name = "none"
 top = 31
 bot = 26
 
-[[types.OFFS_RJ_RD]]
-name = "offs"
+[[types.RD_RJ_OFFSS2]]
+name = "offss2"
 top = 17
 bot = 2
 
-[[types.OFFS_RJ_RD]]
+[[types.RD_RJ_OFFSS2]]
 name = "rj"
 top = 4
 bot = 0
 
-[[types.OFFS_RJ_RD]]
+[[types.RD_RJ_OFFSS2]]
 name = "rd"
 top = 4
 bot = 0
 
-[[types.OFFS_OFFS]]
+[[types.OFFSS2]]
 name = "none"
 top = 31
 bot = 26
 
-[[types.OFFS_OFFS]]
-name = "offs"
+[[types.OFFSS2]]
+name = "offss2"
 top = 17
 bot = 2
 
-[[types.OFFS_OFFS]]
-name = "offs"
+[[types.OFFSS2]]
+name = "offss2"
 top = 27
 bot = 18
 
-[rj_rd]
-type = "RJ_RD"
+[[types.RJ_RD_OFFSS2]]
+name = "none"
+top = 31
+bot = 26
 
-[rk_rj]
-type = "RK_RJ"
+[[types.RJ_RD_OFFSS2]]
+name = "offss2"
+top = 17
+bot = 2
 
-[sa2_rk_rj_rd]
-type = "SA2_RK_RJ_RD"
+[[types.RJ_RD_OFFSS2]]
+name = "rj"
+top = 4
+bot = 0
 
-[sa3_rk_rj_rd]
-type = "SA3_RK_RJ_RD"
+[[types.RJ_RD_OFFSS2]]
+name = "rd"
+top = 4
+bot = 0
 
-[rk_rj_rd]
-type = "RK_RJ_RD"
+[rd_rj]
+type = "RD_RJ"
+
+[rj_rk]
+type = "RJ_RK"
+
+[rd_rj_rk_sa2alsl]
+type = "RD_RJ_RK_SA2ALSL"
+
+[rd_rj_rk_sa2]
+type = "RD_RJ_RK_SA2"
+
+[rd_rj_rk_sa3]
+type = "RD_RJ_RK_SA3"
+
+[rd_rj_rk]
+type = "RD_RJ_RK"
 
 [code]
 type = "CODE"
 
-[ui5_rj_rd]
-type = "UI5_RJ_RD"
+[rd_rj_ui5]
+type = "RD_RJ_UI5"
 
-[ui6_rj_rd]
-type = "UI6_RJ_RD"
+[rd_rj_ui6]
+type = "RD_RJ_UI6"
 
-[msbw_lsbw_rj_rd]
-type = "MSBW_LSBW_RJ_RD"
+[rd_rj_msbw_lsbw]
+type = "RD_RJ_MSBW_LSBW"
 
-[msbd_lsbd_rj_rd]
-type = "MSBD_LSBD_RJ_RD"
+[rd_rj_msbd_lsbd]
+type = "RD_RJ_MSBD_LSBD"
 
-[fk_fj_fd]
-type = "FK_FJ_FD"
+[fd_fj_fk]
+type = "FD_FJ_FK"
 
-[fj_fd]
-type = "FJ_FD"
+[fd_fj]
+type = "FD_FJ"
 
-[rj_fd]
-type = "RJ_FD"
+[fd_rj]
+type = "FD_RJ"
 
-[fj_rd]
-type = "FJ_RD"
+[rd_fj]
+type = "RD_FJ"
 
-[rj_fcsr]
-type = "RJ_FCSR"
+[fcsr_rj]
+type = "FCSR_RJ"
 
-[fcsr_rd]
-type = "FCSR_RD"
+[rd_fcsr]
+type = "RD_FCSR"
 
-[fj_cd]
-type = "FJ_CD"
+[cd_fj]
+type = "CD_FJ"
 
-[cj_fd]
-type = "CJ_FD"
+[fd_cj]
+type = "FD_CJ"
 
-[rj_cd]
-type = "RJ_CD"
+[cd_rj]
+type = "CD_RJ"
 
-[cj_rd]
-type = "CJ_RD"
+[rd_cj]
+type = "RD_CJ"
 
-[si12_rj_rd]
-type = "SI12_RJ_RD"
+[rd_rj_si12]
+type = "RD_RJ_SI12"
 
-[ui12_rj_rd]
-type = "UI12_RJ_RD"
+[rd_rj_ui12]
+type = "RD_RJ_UI12"
 
-[csr_rd]
-type = "CSR_RD"
+[rd_rj_csr]
+type = "RD_RJ_CSR"
 
-[csr_rj_rd]
-type = "CSR_RJ_RD"
+[cacopcode_rj_si12]
+type = "CACOPCODE_RJ_SI12"
 
-[si12_rj_code]
-type = "SI12_RJ_CODE"
+[rd_rj_level]
+type = "RD_RJ_LEVEL"
 
-[level_rj_rd]
-type = "LEVEL_RJ_RD"
-
-[seq_rj]
-type = "SEQ_RJ"
+[rj_seq]
+type = "RJ_SEQ"
 
 [zarg]
 type = "ZARG"
 
-[level]
-type = "LEVEL"
+[idlelevel]
+type = "IDLELEVEL"
 
-[rk_rj_op]
-type = "RK_RJ_OP"
+[op_rj_rk]
+type = "OP_RJ_RK"
 
-[fa_fk_fj_fd]
-type = "FA_FK_FJ_FD"
+[fd_fj_fk_fa]
+type = "FD_FJ_FK_FA"
 
-[fk_fj_cd]
-type = "FK_FJ_CD"
+[cd_fj_fk]
+type = "CD_FJ_FK"
 
-[ca_fk_fj_fd]
-type = "CA_FK_FJ_FD"
+[fd_fj_fk_ca]
+type = "FD_FJ_FK_CA"
 
-[si16_rj_rd]
-type = "SI16_RJ_RD"
+[rd_rj_si16]
+type = "RD_RJ_SI16"
 
-[si20_rd]
-type = "SI20_RD"
+[rd_si20]
+type = "RD_SI20"
 
-[si14_rj_rd]
-type = "SI14_RJ_RD"
+[rd_rj_si14s2]
+type = "RD_RJ_SI14S2"
 
-[si12_rj_hint]
-type = "SI12_RJ_HINT"
+[preldhint_rj_si12]
+type = "PRELDHINT_RJ_SI12"
 
-[si12_rj_fd]
-type = "SI12_RJ_FD"
+[fd_rj_si12]
+type = "FD_RJ_SI12"
 
-[rk_rj_hint]
-type = "RK_RJ_HINT"
+[preldhint_rj_rk]
+type = "PRELDHINT_RJ_RK"
 
-[rk_rj_fd]
-type = "RK_RJ_FD"
+[fd_rj_rk]
+type = "FD_RJ_RK"
+
+[rd_rk_rj]
+type = "RD_RK_RJ"
 
 [hint]
 type = "HINT"
 
-[offs_rj_offs]
-type = "OFFS_RJ_OFFS"
+[rj_offss2]
+type = "RJ_OFFSS2"
 
-[offs_cj_offs]
-type = "OFFS_CJ_OFFS"
+[cj_offss2]
+type = "CJ_OFFSS2"
 
-[offs_rj_rd]
-type = "OFFS_RJ_RD"
+[rd_rj_offss2]
+type = "RD_RJ_OFFSS2"
 
-[offs_offs]
-type = "OFFS_OFFS"
+[offss2]
+type = "OFFSS2"
+
+[rj_rd_offss2]
+type = "RJ_RD_OFFSS2"
 
 [mappings]
-names = ["gr", "fr", "cfr", "fcsr"]
+names = ["gr", "fr", "cfr", "fcsr", "sa2_alsl_vals"]
 gr = [
     "$zero",
     "$ra",
@@ -1317,612 +1420,521 @@ fr = [
     "$fs7",
 ]
 cfr = ["$fcc0", "$fcc1", "$fcc2", "$fcc3", "$fcc4", "$fcc5", "$fcc6", "$fcc7"]
-fcsr = ["$fcsr0", "$fcsr1", "$fcsr2", "$fcsr3"]
+fcsr = [
+    "$fcsr0",
+    "$fcsr1",
+    "$fcsr2",
+    "$fcsr3",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+    "???",
+]
+sa2_alsl_vals = ["0x1", "0x2", "0x3", "0x4"]
 
-[rj_rd.repr]
+[rd_rj.repr]
 default = "$name$ %rd%, %rj%"
 
-[rj_rd.instructions."clo.w"]
+[rd_rj.instructions."clo.w"]
 mask = 4294966272
 match = 4096
 
-[rj_rd.instructions."clz.w"]
+[rd_rj.instructions."clz.w"]
 mask = 4294966272
 match = 5120
 
-[rj_rd.instructions."cto.w"]
+[rd_rj.instructions."cto.w"]
 mask = 4294966272
 match = 6144
 
-[rj_rd.instructions."ctz.w"]
+[rd_rj.instructions."ctz.w"]
 mask = 4294966272
 match = 7168
 
-[rj_rd.instructions."clo.d"]
+[rd_rj.instructions."clo.d"]
 mask = 4294966272
 match = 8192
 
-[rj_rd.instructions."clz.d"]
+[rd_rj.instructions."clz.d"]
 mask = 4294966272
 match = 9216
 
-[rj_rd.instructions."cto.d"]
+[rd_rj.instructions."cto.d"]
 mask = 4294966272
 match = 10240
 
-[rj_rd.instructions."ctz.d"]
+[rd_rj.instructions."ctz.d"]
 mask = 4294966272
 match = 11264
 
-[rj_rd.instructions."revb.2h"]
+[rd_rj.instructions."revb.2h"]
 mask = 4294966272
 match = 12288
 
-[rj_rd.instructions."revb.4h"]
+[rd_rj.instructions."revb.4h"]
 mask = 4294966272
 match = 13312
 
-[rj_rd.instructions."revb.2w"]
+[rd_rj.instructions."revb.2w"]
 mask = 4294966272
 match = 14336
 
-[rj_rd.instructions."revb.d"]
+[rd_rj.instructions."revb.d"]
 mask = 4294966272
 match = 15360
 
-[rj_rd.instructions."revh.2w"]
+[rd_rj.instructions."revh.2w"]
 mask = 4294966272
 match = 16384
 
-[rj_rd.instructions."revh.d"]
+[rd_rj.instructions."revh.d"]
 mask = 4294966272
 match = 17408
 
-[rj_rd.instructions."bitrev.4b"]
+[rd_rj.instructions."bitrev.4b"]
 mask = 4294966272
 match = 18432
 
-[rj_rd.instructions."bitrev.8b"]
+[rd_rj.instructions."bitrev.8b"]
 mask = 4294966272
 match = 19456
 
-[rj_rd.instructions."bitrev.w"]
+[rd_rj.instructions."bitrev.w"]
 mask = 4294966272
 match = 20480
 
-[rj_rd.instructions."bitrev.d"]
+[rd_rj.instructions."bitrev.d"]
 mask = 4294966272
 match = 21504
 
-[rj_rd.instructions."ext.w.h"]
+[rd_rj.instructions."ext.w.h"]
 mask = 4294966272
 match = 22528
 
-[rj_rd.instructions."ext.w.b"]
+[rd_rj.instructions."ext.w.b"]
 mask = 4294966272
 match = 23552
 
-[rj_rd.instructions."rdtimel.w"]
+[rd_rj.instructions."rdtimel.w"]
 mask = 4294966272
 match = 24576
 
-[rj_rd.instructions."rdtimeh.w"]
+[rd_rj.instructions."rdtimeh.w"]
 mask = 4294966272
 match = 25600
 
-[rj_rd.instructions."rdtime.d"]
+[rd_rj.instructions."rdtime.d"]
 mask = 4294966272
 match = 26624
 
-[rj_rd.instructions.cpucfg]
+[rd_rj.instructions.cpucfg]
 mask = 4294966272
 match = 27648
 
-[rj_rd.instructions."iocsrrd.b"]
+[rd_rj.instructions."iocsrrd.b"]
 mask = 4294966272
 match = 105381888
 
-[rj_rd.instructions."iocsrrd.h"]
+[rd_rj.instructions."iocsrrd.h"]
 mask = 4294966272
 match = 105382912
 
-[rj_rd.instructions."iocsrrd.w"]
+[rd_rj.instructions."iocsrrd.w"]
 mask = 4294966272
 match = 105383936
 
-[rj_rd.instructions."iocsrrd.d"]
+[rd_rj.instructions."iocsrrd.d"]
 mask = 4294966272
 match = 105384960
 
-[rj_rd.instructions."iocsrwr.b"]
+[rd_rj.instructions."iocsrwr.b"]
 mask = 4294966272
 match = 105385984
 
-[rj_rd.instructions."iocsrwr.h"]
+[rd_rj.instructions."iocsrwr.h"]
 mask = 4294966272
 match = 105387008
 
-[rj_rd.instructions."iocsrwr.w"]
+[rd_rj.instructions."iocsrwr.w"]
 mask = 4294966272
 match = 105388032
 
-[rj_rd.instructions."iocsrwr.d"]
+[rd_rj.instructions."iocsrwr.d"]
 mask = 4294966272
 match = 105389056
 
-[rk_rj.repr]
+[rd_rj.instructions."llacq.w"]
+mask = 4294966272
+match = 945258496
+
+[rd_rj.instructions."screl.w"]
+mask = 4294966272
+match = 945259520
+
+[rd_rj.instructions."llacq.d"]
+mask = 4294966272
+match = 945260544
+
+[rd_rj.instructions."screl.d"]
+mask = 4294966272
+match = 945261568
+
+[rj_rk.repr]
 default = "$name$ %rj%, %rk%"
 
-[rk_rj.instructions."asrtle.d"]
+[rj_rk.instructions."asrtle.d"]
 mask = 4294934559
 match = 65536
 
-[rk_rj.instructions."asrtgt.d"]
+[rj_rk.instructions."asrtgt.d"]
 mask = 4294934559
 match = 98304
 
-[sa2_rk_rj_rd.repr]
-default = "$name$ %rd%, %rj%, %rk%, %sa2%"
+[rd_rj_rk_sa2alsl.repr]
+default = "$name$ %rd%, %rj%, %rk%, %sa2alsl%"
 
-[sa2_rk_rj_rd.instructions."alsl.w"]
+[rd_rj_rk_sa2alsl.instructions."alsl.w"]
 mask = 4294836224
 match = 262144
 
-[sa2_rk_rj_rd.instructions."alsl.wu"]
+[rd_rj_rk_sa2alsl.instructions."alsl.wu"]
 mask = 4294836224
 match = 393216
 
-[sa2_rk_rj_rd.instructions."bytepick.w"]
-mask = 4294836224
-match = 524288
-
-[sa2_rk_rj_rd.instructions."alsl.d"]
+[rd_rj_rk_sa2alsl.instructions."alsl.d"]
 mask = 4294836224
 match = 2883584
 
-[sa3_rk_rj_rd.repr]
+[rd_rj_rk_sa2.repr]
+default = "$name$ %rd%, %rj%, %rk%, %sa2%"
+
+[rd_rj_rk_sa2.instructions."bytepick.w"]
+mask = 4294836224
+match = 524288
+
+[rd_rj_rk_sa3.repr]
 default = "$name$ %rd%, %rj%, %rk%, %sa3%"
 
-[sa3_rk_rj_rd.instructions."bytepick.d"]
+[rd_rj_rk_sa3.instructions."bytepick.d"]
 mask = 4294705152
 match = 786432
 
-[rk_rj_rd.repr]
+[rd_rj_rk.repr]
 default = "$name$ %rd%, %rj%, %rk%"
 
-[rk_rj_rd.instructions."add.w"]
+[rd_rj_rk.instructions."add.w"]
 mask = 4294934528
 match = 1048576
 
-[rk_rj_rd.instructions."add.d"]
+[rd_rj_rk.instructions."add.d"]
 mask = 4294934528
 match = 1081344
 
-[rk_rj_rd.instructions."sub.w"]
+[rd_rj_rk.instructions."sub.w"]
 mask = 4294934528
 match = 1114112
 
-[rk_rj_rd.instructions."sub.d"]
+[rd_rj_rk.instructions."sub.d"]
 mask = 4294934528
 match = 1146880
 
-[rk_rj_rd.instructions.slt]
+[rd_rj_rk.instructions.slt]
 mask = 4294934528
 match = 1179648
 
-[rk_rj_rd.instructions.sltu]
+[rd_rj_rk.instructions.sltu]
 mask = 4294934528
 match = 1212416
 
-[rk_rj_rd.instructions.maskeqz]
+[rd_rj_rk.instructions.maskeqz]
 mask = 4294934528
 match = 1245184
 
-[rk_rj_rd.instructions.masknez]
+[rd_rj_rk.instructions.masknez]
 mask = 4294934528
 match = 1277952
 
-[rk_rj_rd.instructions.nor]
+[rd_rj_rk.instructions.nor]
 mask = 4294934528
 match = 1310720
 
-[rk_rj_rd.instructions.and]
+[rd_rj_rk.instructions.and]
 mask = 4294934528
 match = 1343488
 
-[rk_rj_rd.instructions.or]
+[rd_rj_rk.instructions.or]
 mask = 4294934528
 match = 1376256
 
-[rk_rj_rd.instructions.xor]
+[rd_rj_rk.instructions.xor]
 mask = 4294934528
 match = 1409024
 
-[rk_rj_rd.instructions.orn]
+[rd_rj_rk.instructions.orn]
 mask = 4294934528
 match = 1441792
 
-[rk_rj_rd.instructions.andn]
+[rd_rj_rk.instructions.andn]
 mask = 4294934528
 match = 1474560
 
-[rk_rj_rd.instructions."sll.w"]
+[rd_rj_rk.instructions."sll.w"]
 mask = 4294934528
 match = 1507328
 
-[rk_rj_rd.instructions."srl.w"]
+[rd_rj_rk.instructions."srl.w"]
 mask = 4294934528
 match = 1540096
 
-[rk_rj_rd.instructions."sra.w"]
+[rd_rj_rk.instructions."sra.w"]
 mask = 4294934528
 match = 1572864
 
-[rk_rj_rd.instructions."sll.d"]
+[rd_rj_rk.instructions."sll.d"]
 mask = 4294934528
 match = 1605632
 
-[rk_rj_rd.instructions."srl.d"]
+[rd_rj_rk.instructions."srl.d"]
 mask = 4294934528
 match = 1638400
 
-[rk_rj_rd.instructions."sra.d"]
+[rd_rj_rk.instructions."sra.d"]
 mask = 4294934528
 match = 1671168
 
-[rk_rj_rd.instructions."rotr.w"]
+[rd_rj_rk.instructions."rotr.w"]
 mask = 4294934528
 match = 1769472
 
-[rk_rj_rd.instructions."rotr.d"]
+[rd_rj_rk.instructions."rotr.d"]
 mask = 4294934528
 match = 1802240
 
-[rk_rj_rd.instructions."mul.w"]
+[rd_rj_rk.instructions."mul.w"]
 mask = 4294934528
 match = 1835008
 
-[rk_rj_rd.instructions."mulh.w"]
+[rd_rj_rk.instructions."mulh.w"]
 mask = 4294934528
 match = 1867776
 
-[rk_rj_rd.instructions."mulh.wu"]
+[rd_rj_rk.instructions."mulh.wu"]
 mask = 4294934528
 match = 1900544
 
-[rk_rj_rd.instructions."mul.d"]
+[rd_rj_rk.instructions."mul.d"]
 mask = 4294934528
 match = 1933312
 
-[rk_rj_rd.instructions."mulh.d"]
+[rd_rj_rk.instructions."mulh.d"]
 mask = 4294934528
 match = 1966080
 
-[rk_rj_rd.instructions."mulh.du"]
+[rd_rj_rk.instructions."mulh.du"]
 mask = 4294934528
 match = 1998848
 
-[rk_rj_rd.instructions."mulw.d.w"]
+[rd_rj_rk.instructions."mulw.d.w"]
 mask = 4294934528
 match = 2031616
 
-[rk_rj_rd.instructions."mulw.d.wu"]
+[rd_rj_rk.instructions."mulw.d.wu"]
 mask = 4294934528
 match = 2064384
 
-[rk_rj_rd.instructions."div.w"]
+[rd_rj_rk.instructions."div.w"]
 mask = 4294934528
 match = 2097152
 
-[rk_rj_rd.instructions."mod.w"]
+[rd_rj_rk.instructions."mod.w"]
 mask = 4294934528
 match = 2129920
 
-[rk_rj_rd.instructions."div.wu"]
+[rd_rj_rk.instructions."div.wu"]
 mask = 4294934528
 match = 2162688
 
-[rk_rj_rd.instructions."mod.wu"]
+[rd_rj_rk.instructions."mod.wu"]
 mask = 4294934528
 match = 2195456
 
-[rk_rj_rd.instructions."div.d"]
+[rd_rj_rk.instructions."div.d"]
 mask = 4294934528
 match = 2228224
 
-[rk_rj_rd.instructions."mod.d"]
+[rd_rj_rk.instructions."mod.d"]
 mask = 4294934528
 match = 2260992
 
-[rk_rj_rd.instructions."div.du"]
+[rd_rj_rk.instructions."div.du"]
 mask = 4294934528
 match = 2293760
 
-[rk_rj_rd.instructions."mod.du"]
+[rd_rj_rk.instructions."mod.du"]
 mask = 4294934528
 match = 2326528
 
-[rk_rj_rd.instructions."crc.w.b.w"]
+[rd_rj_rk.instructions."crc.w.b.w"]
 mask = 4294934528
 match = 2359296
 
-[rk_rj_rd.instructions."crc.w.h.w"]
+[rd_rj_rk.instructions."crc.w.h.w"]
 mask = 4294934528
 match = 2392064
 
-[rk_rj_rd.instructions."crc.w.w.w"]
+[rd_rj_rk.instructions."crc.w.w.w"]
 mask = 4294934528
 match = 2424832
 
-[rk_rj_rd.instructions."crc.w.d.w"]
+[rd_rj_rk.instructions."crc.w.d.w"]
 mask = 4294934528
 match = 2457600
 
-[rk_rj_rd.instructions."crcc.w.b.w"]
+[rd_rj_rk.instructions."crcc.w.b.w"]
 mask = 4294934528
 match = 2490368
 
-[rk_rj_rd.instructions."crcc.w.h.w"]
+[rd_rj_rk.instructions."crcc.w.h.w"]
 mask = 4294934528
 match = 2523136
 
-[rk_rj_rd.instructions."crcc.w.w.w"]
+[rd_rj_rk.instructions."crcc.w.w.w"]
 mask = 4294934528
 match = 2555904
 
-[rk_rj_rd.instructions."crcc.w.d.w"]
+[rd_rj_rk.instructions."crcc.w.d.w"]
 mask = 4294934528
 match = 2588672
 
-[rk_rj_rd.instructions."ldx.b"]
+[rd_rj_rk.instructions."ldx.b"]
 mask = 4294934528
 match = 939524096
 
-[rk_rj_rd.instructions."ldx.h"]
+[rd_rj_rk.instructions."ldx.h"]
 mask = 4294934528
 match = 939786240
 
-[rk_rj_rd.instructions."ldx.w"]
+[rd_rj_rk.instructions."ldx.w"]
 mask = 4294934528
 match = 940048384
 
-[rk_rj_rd.instructions."ldx.d"]
+[rd_rj_rk.instructions."ldx.d"]
 mask = 4294934528
 match = 940310528
 
-[rk_rj_rd.instructions."stx.b"]
+[rd_rj_rk.instructions."stx.b"]
 mask = 4294934528
 match = 940572672
 
-[rk_rj_rd.instructions."stx.h"]
+[rd_rj_rk.instructions."stx.h"]
 mask = 4294934528
 match = 940834816
 
-[rk_rj_rd.instructions."stx.w"]
+[rd_rj_rk.instructions."stx.w"]
 mask = 4294934528
 match = 941096960
 
-[rk_rj_rd.instructions."stx.d"]
+[rd_rj_rk.instructions."stx.d"]
 mask = 4294934528
 match = 941359104
 
-[rk_rj_rd.instructions."ldx.bu"]
+[rd_rj_rk.instructions."ldx.bu"]
 mask = 4294934528
 match = 941621248
 
-[rk_rj_rd.instructions."ldx.hu"]
+[rd_rj_rk.instructions."ldx.hu"]
 mask = 4294934528
 match = 941883392
 
-[rk_rj_rd.instructions."ldx.wu"]
+[rd_rj_rk.instructions."ldx.wu"]
 mask = 4294934528
 match = 942145536
 
-[rk_rj_rd.instructions."amswap.w"]
-mask = 4294934528
-match = 945815552
-
-[rk_rj_rd.instructions."amswap.d"]
-mask = 4294934528
-match = 945848320
-
-[rk_rj_rd.instructions."amadd.w"]
-mask = 4294934528
-match = 945881088
-
-[rk_rj_rd.instructions."amadd.d"]
-mask = 4294934528
-match = 945913856
-
-[rk_rj_rd.instructions."amand.w"]
-mask = 4294934528
-match = 945946624
-
-[rk_rj_rd.instructions."amand.d"]
-mask = 4294934528
-match = 945979392
-
-[rk_rj_rd.instructions."amor.w"]
-mask = 4294934528
-match = 946012160
-
-[rk_rj_rd.instructions."amor.d"]
-mask = 4294934528
-match = 946044928
-
-[rk_rj_rd.instructions."amxor.w"]
-mask = 4294934528
-match = 946077696
-
-[rk_rj_rd.instructions."amxor.d"]
-mask = 4294934528
-match = 946110464
-
-[rk_rj_rd.instructions."ammax.w"]
-mask = 4294934528
-match = 946143232
-
-[rk_rj_rd.instructions."ammax.d"]
-mask = 4294934528
-match = 946176000
-
-[rk_rj_rd.instructions."ammin.w"]
-mask = 4294934528
-match = 946208768
-
-[rk_rj_rd.instructions."ammin.d"]
-mask = 4294934528
-match = 946241536
-
-[rk_rj_rd.instructions."ammax.wu"]
-mask = 4294934528
-match = 946274304
-
-[rk_rj_rd.instructions."ammax.du"]
-mask = 4294934528
-match = 946307072
-
-[rk_rj_rd.instructions."ammin.wu"]
-mask = 4294934528
-match = 946339840
-
-[rk_rj_rd.instructions."ammin.du"]
-mask = 4294934528
-match = 946372608
-
-[rk_rj_rd.instructions."amswap_db.w"]
-mask = 4294934528
-match = 946405376
-
-[rk_rj_rd.instructions."amswap_db.d"]
-mask = 4294934528
-match = 946438144
-
-[rk_rj_rd.instructions."amadd_db.w"]
-mask = 4294934528
-match = 946470912
-
-[rk_rj_rd.instructions."amadd_db.d"]
-mask = 4294934528
-match = 946503680
-
-[rk_rj_rd.instructions."amand_db.w"]
-mask = 4294934528
-match = 946536448
-
-[rk_rj_rd.instructions."amand_db.d"]
-mask = 4294934528
-match = 946569216
-
-[rk_rj_rd.instructions."amor_db.w"]
-mask = 4294934528
-match = 946601984
-
-[rk_rj_rd.instructions."amor_db.d"]
-mask = 4294934528
-match = 946634752
-
-[rk_rj_rd.instructions."amxor_db.w"]
-mask = 4294934528
-match = 946667520
-
-[rk_rj_rd.instructions."amxor_db.d"]
-mask = 4294934528
-match = 946700288
-
-[rk_rj_rd.instructions."ammax_db.w"]
-mask = 4294934528
-match = 946733056
-
-[rk_rj_rd.instructions."ammax_db.d"]
-mask = 4294934528
-match = 946765824
-
-[rk_rj_rd.instructions."ammin_db.w"]
-mask = 4294934528
-match = 946798592
-
-[rk_rj_rd.instructions."ammin_db.d"]
-mask = 4294934528
-match = 946831360
-
-[rk_rj_rd.instructions."ammax_db.wu"]
-mask = 4294934528
-match = 946864128
-
-[rk_rj_rd.instructions."ammax_db.du"]
-mask = 4294934528
-match = 946896896
-
-[rk_rj_rd.instructions."ammin_db.wu"]
-mask = 4294934528
-match = 946929664
-
-[rk_rj_rd.instructions."ammin_db.du"]
-mask = 4294934528
-match = 946962432
-
-[rk_rj_rd.instructions."ldgt.b"]
+[rd_rj_rk.instructions."ldgt.b"]
 mask = 4294934528
 match = 947388416
 
-[rk_rj_rd.instructions."ldgt.h"]
+[rd_rj_rk.instructions."ldgt.h"]
 mask = 4294934528
 match = 947421184
 
-[rk_rj_rd.instructions."ldgt.w"]
+[rd_rj_rk.instructions."ldgt.w"]
 mask = 4294934528
 match = 947453952
 
-[rk_rj_rd.instructions."ldgt.d"]
+[rd_rj_rk.instructions."ldgt.d"]
 mask = 4294934528
 match = 947486720
 
-[rk_rj_rd.instructions."ldle.b"]
+[rd_rj_rk.instructions."ldle.b"]
 mask = 4294934528
 match = 947519488
 
-[rk_rj_rd.instructions."ldle.h"]
+[rd_rj_rk.instructions."ldle.h"]
 mask = 4294934528
 match = 947552256
 
-[rk_rj_rd.instructions."ldle.w"]
+[rd_rj_rk.instructions."ldle.w"]
 mask = 4294934528
 match = 947585024
 
-[rk_rj_rd.instructions."ldle.d"]
+[rd_rj_rk.instructions."ldle.d"]
 mask = 4294934528
 match = 947617792
 
-[rk_rj_rd.instructions."stgt.b"]
+[rd_rj_rk.instructions."stgt.b"]
 mask = 4294934528
 match = 947650560
 
-[rk_rj_rd.instructions."stgt.h"]
+[rd_rj_rk.instructions."stgt.h"]
 mask = 4294934528
 match = 947683328
 
-[rk_rj_rd.instructions."stgt.w"]
+[rd_rj_rk.instructions."stgt.w"]
 mask = 4294934528
 match = 947716096
 
-[rk_rj_rd.instructions."stgt.d"]
+[rd_rj_rk.instructions."stgt.d"]
 mask = 4294934528
 match = 947748864
 
-[rk_rj_rd.instructions."stle.b"]
+[rd_rj_rk.instructions."stle.b"]
 mask = 4294934528
 match = 947781632
 
-[rk_rj_rd.instructions."stle.h"]
+[rd_rj_rk.instructions."stle.h"]
 mask = 4294934528
 match = 947814400
 
-[rk_rj_rd.instructions."stle.w"]
+[rd_rj_rk.instructions."stle.w"]
 mask = 4294934528
 match = 947847168
 
-[rk_rj_rd.instructions."stle.d"]
+[rd_rj_rk.instructions."stle.d"]
 mask = 4294934528
 match = 947879936
 
@@ -1941,550 +1953,523 @@ match = 2785280
 mask = 4294934528
 match = 2818048
 
-[ui5_rj_rd.repr]
+[rd_rj_ui5.repr]
 default = "$name$ %rd%, %rj%, %ui5%"
 
-[ui5_rj_rd.instructions."slli.w"]
+[rd_rj_ui5.instructions."slli.w"]
 mask = 4294934528
 match = 4227072
 
-[ui5_rj_rd.instructions."srli.w"]
+[rd_rj_ui5.instructions."srli.w"]
 mask = 4294934528
 match = 4489216
 
-[ui5_rj_rd.instructions."srai.w"]
+[rd_rj_ui5.instructions."srai.w"]
 mask = 4294934528
 match = 4751360
 
-[ui5_rj_rd.instructions."rotri.w"]
+[rd_rj_ui5.instructions."rotri.w"]
 mask = 4294934528
 match = 5013504
 
-[ui6_rj_rd.repr]
+[rd_rj_ui6.repr]
 default = "$name$ %rd%, %rj%, %ui6%"
 
-[ui6_rj_rd.instructions."slli.d"]
+[rd_rj_ui6.instructions."slli.d"]
 mask = 4294901760
 match = 4259840
 
-[ui6_rj_rd.instructions."srli.d"]
+[rd_rj_ui6.instructions."srli.d"]
 mask = 4294901760
 match = 4521984
 
-[ui6_rj_rd.instructions."srai.d"]
+[rd_rj_ui6.instructions."srai.d"]
 mask = 4294901760
 match = 4784128
 
-[ui6_rj_rd.instructions."rotri.d"]
+[rd_rj_ui6.instructions."rotri.d"]
 mask = 4294901760
 match = 5046272
 
-[msbw_lsbw_rj_rd.repr]
+[rd_rj_msbw_lsbw.repr]
 default = "$name$ %rd%, %rj%, %msbw%, %lsbw%"
 
-[msbw_lsbw_rj_rd.instructions."bstrins.w"]
+[rd_rj_msbw_lsbw.instructions."bstrins.w"]
 mask = 4292902912
 match = 6291456
 
-[msbw_lsbw_rj_rd.instructions."bstrpick.w"]
+[rd_rj_msbw_lsbw.instructions."bstrpick.w"]
 mask = 4292902912
 match = 6324224
 
-[msbd_lsbd_rj_rd.repr]
+[rd_rj_msbd_lsbd.repr]
 default = "$name$ %rd%, %rj%, %msbd%, %lsbd%"
 
-[msbd_lsbd_rj_rd.instructions."bstrins.d"]
+[rd_rj_msbd_lsbd.instructions."bstrins.d"]
 mask = 4290772992
 match = 8388608
 
-[msbd_lsbd_rj_rd.instructions."bstrpick.d"]
+[rd_rj_msbd_lsbd.instructions."bstrpick.d"]
 mask = 4290772992
 match = 12582912
 
-[fk_fj_fd.repr]
+[fd_fj_fk.repr]
 default = "$name$ %fd%, %fj%, %fk%"
 
-[fk_fj_fd.instructions."fadd.s"]
+[fd_fj_fk.instructions."fadd.s"]
 mask = 4294934528
 match = 16809984
 
-[fk_fj_fd.instructions."fadd.d"]
+[fd_fj_fk.instructions."fadd.d"]
 mask = 4294934528
 match = 16842752
 
-[fk_fj_fd.instructions."fsub.s"]
+[fd_fj_fk.instructions."fsub.s"]
 mask = 4294934528
 match = 16941056
 
-[fk_fj_fd.instructions."fsub.d"]
+[fd_fj_fk.instructions."fsub.d"]
 mask = 4294934528
 match = 16973824
 
-[fk_fj_fd.instructions."fmul.s"]
+[fd_fj_fk.instructions."fmul.s"]
 mask = 4294934528
 match = 17072128
 
-[fk_fj_fd.instructions."fmul.d"]
+[fd_fj_fk.instructions."fmul.d"]
 mask = 4294934528
 match = 17104896
 
-[fk_fj_fd.instructions."fdiv.s"]
+[fd_fj_fk.instructions."fdiv.s"]
 mask = 4294934528
 match = 17203200
 
-[fk_fj_fd.instructions."fdiv.d"]
+[fd_fj_fk.instructions."fdiv.d"]
 mask = 4294934528
 match = 17235968
 
-[fk_fj_fd.instructions."fmax.s"]
+[fd_fj_fk.instructions."fmax.s"]
 mask = 4294934528
 match = 17334272
 
-[fk_fj_fd.instructions."fmax.d"]
+[fd_fj_fk.instructions."fmax.d"]
 mask = 4294934528
 match = 17367040
 
-[fk_fj_fd.instructions."fmin.s"]
+[fd_fj_fk.instructions."fmin.s"]
 mask = 4294934528
 match = 17465344
 
-[fk_fj_fd.instructions."fmin.d"]
+[fd_fj_fk.instructions."fmin.d"]
 mask = 4294934528
 match = 17498112
 
-[fk_fj_fd.instructions."fmaxa.s"]
+[fd_fj_fk.instructions."fmaxa.s"]
 mask = 4294934528
 match = 17596416
 
-[fk_fj_fd.instructions."fmaxa.d"]
+[fd_fj_fk.instructions."fmaxa.d"]
 mask = 4294934528
 match = 17629184
 
-[fk_fj_fd.instructions."fmina.s"]
+[fd_fj_fk.instructions."fmina.s"]
 mask = 4294934528
 match = 17727488
 
-[fk_fj_fd.instructions."fmina.d"]
+[fd_fj_fk.instructions."fmina.d"]
 mask = 4294934528
 match = 17760256
 
-[fk_fj_fd.instructions."fscaleb.s"]
+[fd_fj_fk.instructions."fscaleb.s"]
 mask = 4294934528
 match = 17858560
 
-[fk_fj_fd.instructions."fscaleb.d"]
+[fd_fj_fk.instructions."fscaleb.d"]
 mask = 4294934528
 match = 17891328
 
-[fk_fj_fd.instructions."fcopysign.s"]
+[fd_fj_fk.instructions."fcopysign.s"]
 mask = 4294934528
 match = 17989632
 
-[fk_fj_fd.instructions."fcopysign.d"]
+[fd_fj_fk.instructions."fcopysign.d"]
 mask = 4294934528
 match = 18022400
 
-[fj_fd.repr]
+[fd_fj.repr]
 default = "$name$ %fd%, %fj%"
 
-[fj_fd.instructions."fabs.s"]
+[fd_fj.instructions."fabs.s"]
 mask = 4294966272
 match = 18088960
 
-[fj_fd.instructions."fabs.d"]
+[fd_fj.instructions."fabs.d"]
 mask = 4294966272
 match = 18089984
 
-[fj_fd.instructions."fneg.s"]
+[fd_fj.instructions."fneg.s"]
 mask = 4294966272
 match = 18093056
 
-[fj_fd.instructions."fneg.d"]
+[fd_fj.instructions."fneg.d"]
 mask = 4294966272
 match = 18094080
 
-[fj_fd.instructions."flogb.s"]
+[fd_fj.instructions."flogb.s"]
 mask = 4294966272
 match = 18097152
 
-[fj_fd.instructions."flogb.d"]
+[fd_fj.instructions."flogb.d"]
 mask = 4294966272
 match = 18098176
 
-[fj_fd.instructions."fclass.s"]
+[fd_fj.instructions."fclass.s"]
 mask = 4294966272
 match = 18101248
 
-[fj_fd.instructions."fclass.d"]
+[fd_fj.instructions."fclass.d"]
 mask = 4294966272
 match = 18102272
 
-[fj_fd.instructions."fsqrt.s"]
+[fd_fj.instructions."fsqrt.s"]
 mask = 4294966272
 match = 18105344
 
-[fj_fd.instructions."fsqrt.d"]
+[fd_fj.instructions."fsqrt.d"]
 mask = 4294966272
 match = 18106368
 
-[fj_fd.instructions."frecip.s"]
+[fd_fj.instructions."frecip.s"]
 mask = 4294966272
 match = 18109440
 
-[fj_fd.instructions."frecip.d"]
+[fd_fj.instructions."frecip.d"]
 mask = 4294966272
 match = 18110464
 
-[fj_fd.instructions."frsqrt.s"]
+[fd_fj.instructions."frsqrt.s"]
 mask = 4294966272
 match = 18113536
 
-[fj_fd.instructions."frsqrt.d"]
+[fd_fj.instructions."frsqrt.d"]
 mask = 4294966272
 match = 18114560
 
-[fj_fd.instructions."frecipe.s"]
+[fd_fj.instructions."frecipe.s"]
 mask = 4294966272
 match = 18117632
 
-[fj_fd.instructions."frecipe.d"]
+[fd_fj.instructions."frecipe.d"]
 mask = 4294966272
 match = 18118656
 
-[fj_fd.instructions."frsqrte.s"]
+[fd_fj.instructions."frsqrte.s"]
 mask = 4294966272
 match = 18121728
 
-[fj_fd.instructions."frsqrte.d"]
+[fd_fj.instructions."frsqrte.d"]
 mask = 4294966272
 match = 18122752
 
-[fj_fd.instructions."fmov.s"]
+[fd_fj.instructions."fmov.s"]
 mask = 4294966272
 match = 18125824
 
-[fj_fd.instructions."fmov.d"]
+[fd_fj.instructions."fmov.d"]
 mask = 4294966272
 match = 18126848
 
-[fj_fd.instructions."fcvt.s.d"]
+[fd_fj.instructions."fcvt.s.d"]
 mask = 4294966272
 match = 18421760
 
-[fj_fd.instructions."fcvt.d.s"]
+[fd_fj.instructions."fcvt.d.s"]
 mask = 4294966272
 match = 18424832
 
-[fj_fd.instructions."ftintrm.w.s"]
+[fd_fj.instructions."ftintrm.w.s"]
 mask = 4294966272
 match = 18482176
 
-[fj_fd.instructions."ftintrm.w.d"]
+[fd_fj.instructions."ftintrm.w.d"]
 mask = 4294966272
 match = 18483200
 
-[fj_fd.instructions."ftintrm.l.s"]
+[fd_fj.instructions."ftintrm.l.s"]
 mask = 4294966272
 match = 18490368
 
-[fj_fd.instructions."ftintrm.l.d"]
+[fd_fj.instructions."ftintrm.l.d"]
 mask = 4294966272
 match = 18491392
 
-[fj_fd.instructions."ftintrp.w.s"]
+[fd_fj.instructions."ftintrp.w.s"]
 mask = 4294966272
 match = 18498560
 
-[fj_fd.instructions."ftintrp.w.d"]
+[fd_fj.instructions."ftintrp.w.d"]
 mask = 4294966272
 match = 18499584
 
-[fj_fd.instructions."ftintrp.l.s"]
+[fd_fj.instructions."ftintrp.l.s"]
 mask = 4294966272
 match = 18506752
 
-[fj_fd.instructions."ftintrp.l.d"]
+[fd_fj.instructions."ftintrp.l.d"]
 mask = 4294966272
 match = 18507776
 
-[fj_fd.instructions."ftintrz.w.s"]
+[fd_fj.instructions."ftintrz.w.s"]
 mask = 4294966272
 match = 18514944
 
-[fj_fd.instructions."ftintrz.w.d"]
+[fd_fj.instructions."ftintrz.w.d"]
 mask = 4294966272
 match = 18515968
 
-[fj_fd.instructions."ftintrz.l.s"]
+[fd_fj.instructions."ftintrz.l.s"]
 mask = 4294966272
 match = 18523136
 
-[fj_fd.instructions."ftintrz.l.d"]
+[fd_fj.instructions."ftintrz.l.d"]
 mask = 4294966272
 match = 18524160
 
-[fj_fd.instructions."ftintrne.w.s"]
+[fd_fj.instructions."ftintrne.w.s"]
 mask = 4294966272
 match = 18531328
 
-[fj_fd.instructions."ftintrne.w.d"]
+[fd_fj.instructions."ftintrne.w.d"]
 mask = 4294966272
 match = 18532352
 
-[fj_fd.instructions."ftintrne.l.s"]
+[fd_fj.instructions."ftintrne.l.s"]
 mask = 4294966272
 match = 18539520
 
-[fj_fd.instructions."ftintrne.l.d"]
+[fd_fj.instructions."ftintrne.l.d"]
 mask = 4294966272
 match = 18540544
 
-[fj_fd.instructions."ftint.w.s"]
+[fd_fj.instructions."ftint.w.s"]
 mask = 4294966272
 match = 18547712
 
-[fj_fd.instructions."ftint.w.d"]
+[fd_fj.instructions."ftint.w.d"]
 mask = 4294966272
 match = 18548736
 
-[fj_fd.instructions."ftint.l.s"]
+[fd_fj.instructions."ftint.l.s"]
 mask = 4294966272
 match = 18555904
 
-[fj_fd.instructions."ftint.l.d"]
+[fd_fj.instructions."ftint.l.d"]
 mask = 4294966272
 match = 18556928
 
-[fj_fd.instructions."ffint.s.w"]
+[fd_fj.instructions."ffint.s.w"]
 mask = 4294966272
 match = 18681856
 
-[fj_fd.instructions."ffint.s.l"]
+[fd_fj.instructions."ffint.s.l"]
 mask = 4294966272
 match = 18683904
 
-[fj_fd.instructions."ffint.d.w"]
+[fd_fj.instructions."ffint.d.w"]
 mask = 4294966272
 match = 18685952
 
-[fj_fd.instructions."ffint.d.l"]
+[fd_fj.instructions."ffint.d.l"]
 mask = 4294966272
 match = 18688000
 
-[fj_fd.instructions."frint.s"]
+[fd_fj.instructions."frint.s"]
 mask = 4294966272
 match = 18760704
 
-[fj_fd.instructions."frint.d"]
+[fd_fj.instructions."frint.d"]
 mask = 4294966272
 match = 18761728
 
-[rj_fd.repr]
+[fd_rj.repr]
 default = "$name$ %fd%, %rj%"
 
-[rj_fd.instructions."movgr2fr.w"]
+[fd_rj.instructions."movgr2fr.w"]
 mask = 4294966272
 match = 18129920
 
-[rj_fd.instructions."movgr2fr.d"]
+[fd_rj.instructions."movgr2fr.d"]
 mask = 4294966272
 match = 18130944
 
-[rj_fd.instructions."movgr2frh.w"]
+[fd_rj.instructions."movgr2frh.w"]
 mask = 4294966272
 match = 18131968
 
-[rj_fd.instructions."llacq.w"]
-mask = 4294966272
-match = 945258496
-
-[rj_fd.instructions."screl.w"]
-mask = 4294966272
-match = 945259520
-
-[rj_fd.instructions."llacq.d"]
-mask = 4294966272
-match = 945260544
-
-[rj_fd.instructions."screl.d"]
-mask = 4294966272
-match = 945261568
-
-[fj_rd.repr]
+[rd_fj.repr]
 default = "$name$ %rd%, %fj%"
 
-[fj_rd.instructions."movfr2gr.s"]
+[rd_fj.instructions."movfr2gr.s"]
 mask = 4294966272
 match = 18134016
 
-[fj_rd.instructions."movfr2gr.d"]
+[rd_fj.instructions."movfr2gr.d"]
 mask = 4294966272
 match = 18135040
 
-[fj_rd.instructions."movfrh2gr.s"]
+[rd_fj.instructions."movfrh2gr.s"]
 mask = 4294966272
 match = 18136064
 
-[rj_fcsr.repr]
+[fcsr_rj.repr]
 default = "$name$ %fcsr%, %rj%"
 
-[rj_fcsr.instructions.movgr2fcsr]
+[fcsr_rj.instructions.movgr2fcsr]
 mask = 4294966272
 match = 18137088
 
-[fcsr_rd.repr]
+[rd_fcsr.repr]
 default = "$name$ %rd%, %fcsr%"
 
-[fcsr_rd.instructions.movfcsr2gr]
+[rd_fcsr.instructions.movfcsr2gr]
 mask = 4294966272
 match = 18139136
 
-[fj_cd.repr]
+[cd_fj.repr]
 default = "$name$ %cd%, %fj%"
 
-[fj_cd.instructions.movfr2cf]
+[cd_fj.instructions.movfr2cf]
 mask = 4294966296
 match = 18141184
 
-[cj_fd.repr]
+[fd_cj.repr]
 default = "$name$ %fd%, %cj%"
 
-[cj_fd.instructions.movcf2fr]
+[fd_cj.instructions.movcf2fr]
 mask = 4294967040
 match = 18142208
 
-[rj_cd.repr]
+[cd_rj.repr]
 default = "$name$ %cd%, %rj%"
 
-[rj_cd.instructions.movgr2cf]
+[cd_rj.instructions.movgr2cf]
 mask = 4294966296
 match = 18143232
 
-[cj_rd.repr]
+[rd_cj.repr]
 default = "$name$ %rd%, %cj%"
 
-[cj_rd.instructions.movcf2gr]
+[rd_cj.instructions.movcf2gr]
 mask = 4294967040
 match = 18144256
 
-[si12_rj_rd.repr]
+[rd_rj_si12.repr]
 default = "$name$ %rd%, %rj%, %si12%"
 
-[si12_rj_rd.instructions.slti]
+[rd_rj_si12.instructions.slti]
 mask = 4290772992
 match = 33554432
 
-[si12_rj_rd.instructions.sltui]
+[rd_rj_si12.instructions.sltui]
 mask = 4290772992
 match = 37748736
 
-[si12_rj_rd.instructions."addi.w"]
+[rd_rj_si12.instructions."addi.w"]
 mask = 4290772992
 match = 41943040
 
-[si12_rj_rd.instructions."addi.d"]
+[rd_rj_si12.instructions."addi.d"]
 mask = 4290772992
 match = 46137344
 
-[si12_rj_rd.instructions."lu52i.d"]
+[rd_rj_si12.instructions."lu52i.d"]
 mask = 4290772992
 match = 50331648
 
-[si12_rj_rd.instructions."ld.b"]
+[rd_rj_si12.instructions."ld.b"]
 mask = 4290772992
 match = 671088640
 
-[si12_rj_rd.instructions."ld.h"]
+[rd_rj_si12.instructions."ld.h"]
 mask = 4290772992
 match = 675282944
 
-[si12_rj_rd.instructions."ld.w"]
+[rd_rj_si12.instructions."ld.w"]
 mask = 4290772992
 match = 679477248
 
-[si12_rj_rd.instructions."ld.d"]
+[rd_rj_si12.instructions."ld.d"]
 mask = 4290772992
 match = 683671552
 
-[si12_rj_rd.instructions."st.b"]
+[rd_rj_si12.instructions."st.b"]
 mask = 4290772992
 match = 687865856
 
-[si12_rj_rd.instructions."st.h"]
+[rd_rj_si12.instructions."st.h"]
 mask = 4290772992
 match = 692060160
 
-[si12_rj_rd.instructions."st.w"]
+[rd_rj_si12.instructions."st.w"]
 mask = 4290772992
 match = 696254464
 
-[si12_rj_rd.instructions."st.d"]
+[rd_rj_si12.instructions."st.d"]
 mask = 4290772992
 match = 700448768
 
-[si12_rj_rd.instructions."ld.bu"]
+[rd_rj_si12.instructions."ld.bu"]
 mask = 4290772992
 match = 704643072
 
-[si12_rj_rd.instructions."ld.hu"]
+[rd_rj_si12.instructions."ld.hu"]
 mask = 4290772992
 match = 708837376
 
-[si12_rj_rd.instructions."ld.wu"]
+[rd_rj_si12.instructions."ld.wu"]
 mask = 4290772992
 match = 713031680
 
-[ui12_rj_rd.repr]
+[rd_rj_ui12.repr]
 default = "$name$ %rd%, %rj%, %ui12%"
 
-[ui12_rj_rd.instructions.andi]
+[rd_rj_ui12.instructions.andi]
 mask = 4290772992
 match = 54525952
 
-[ui12_rj_rd.instructions.ori]
+[rd_rj_ui12.instructions.ori]
 mask = 4290772992
 match = 58720256
 
-[ui12_rj_rd.instructions.xori]
+[rd_rj_ui12.instructions.xori]
 mask = 4290772992
 match = 62914560
 
-[csr_rd.repr]
-default = "$name$ %rd%, %csr%"
-
-[csr_rd.instructions.csrrd]
-mask = 4278191072
-match = 67108864
-
-[csr_rd.instructions.csrwr]
-mask = 4278191072
-match = 67108896
-
-[csr_rj_rd.repr]
+[rd_rj_csr.repr]
 default = "$name$ %rd%, %rj%, %csr%"
 
-[csr_rj_rd.instructions.csrxchg]
+[rd_rj_csr.instructions.csrxchg]
 mask = 4278190080
 match = 67108864
 
-[si12_rj_code.repr]
-default = "$name$ %code%, %rj%, %si12%"
+[cacopcode_rj_si12.repr]
+default = "$name$ %cacopcode%, %rj%, %si12%"
 
-[si12_rj_code.instructions.cacop]
+[cacopcode_rj_si12.instructions.cacop]
 mask = 4290772992
 match = 100663296
 
-[level_rj_rd.repr]
+[rd_rj_level.repr]
 default = "$name$ %rd%, %rj%, %level%"
 
-[level_rj_rd.instructions.lddir]
+[rd_rj_level.instructions.lddir]
 mask = 4294705152
 match = 104857600
 
-[seq_rj.repr]
+[rj_seq.repr]
 default = "$name$ %rj%, %seq%"
 
-[seq_rj.instructions.ldpte]
+[rj_seq.instructions.ldpte]
 mask = 4294705183
 match = 105119744
 
@@ -2519,373 +2504,608 @@ match = 105395200
 mask = 4294967295
 match = 105396224
 
-[level.repr]
-default = "$name$ %level%"
+[idlelevel.repr]
+default = "$name$ %idlelevel%"
 
-[level.instructions.idle]
+[idlelevel.instructions.idle]
 mask = 4294934528
 match = 105414656
 
-[rk_rj_op.repr]
+[op_rj_rk.repr]
 default = "$name$ %op%, %rj%, %rk%"
 
-[rk_rj_op.instructions.invtlb]
+[op_rj_rk.instructions.invtlb]
 mask = 4294934528
 match = 105480192
 
-[fa_fk_fj_fd.repr]
+[fd_fj_fk_fa.repr]
 default = "$name$ %fd%, %fj%, %fk%, %fa%"
 
-[fa_fk_fj_fd.instructions."fmadd.s"]
+[fd_fj_fk_fa.instructions."fmadd.s"]
 mask = 4293918720
 match = 135266304
 
-[fa_fk_fj_fd.instructions."fmadd.d"]
+[fd_fj_fk_fa.instructions."fmadd.d"]
 mask = 4293918720
 match = 136314880
 
-[fa_fk_fj_fd.instructions."fmsub.s"]
+[fd_fj_fk_fa.instructions."fmsub.s"]
 mask = 4293918720
 match = 139460608
 
-[fa_fk_fj_fd.instructions."fmsub.d"]
+[fd_fj_fk_fa.instructions."fmsub.d"]
 mask = 4293918720
 match = 140509184
 
-[fa_fk_fj_fd.instructions."fnmadd.s"]
+[fd_fj_fk_fa.instructions."fnmadd.s"]
 mask = 4293918720
 match = 143654912
 
-[fa_fk_fj_fd.instructions."fnmadd.d"]
+[fd_fj_fk_fa.instructions."fnmadd.d"]
 mask = 4293918720
 match = 144703488
 
-[fa_fk_fj_fd.instructions."fnmsub.s"]
+[fd_fj_fk_fa.instructions."fnmsub.s"]
 mask = 4293918720
 match = 147849216
 
-[fa_fk_fj_fd.instructions."fnmsub.d"]
+[fd_fj_fk_fa.instructions."fnmsub.d"]
 mask = 4293918720
 match = 148897792
 
-[fk_fj_cd.repr]
+[cd_fj_fk.repr]
 default = "$name$ %cd%, %fj%, %fk%"
 
-[fk_fj_cd.instructions."fcmp.caf.s"]
+[cd_fj_fk.instructions."fcmp.caf.s"]
 mask = 4294934552
 match = 202375168
 
-[fk_fj_cd.instructions."fcmp.cun.s"]
+[cd_fj_fk.instructions."fcmp.cun.s"]
 mask = 4294934552
 match = 202637312
 
-[fk_fj_cd.instructions."fcmp.ceq.s"]
+[cd_fj_fk.instructions."fcmp.ceq.s"]
 mask = 4294934552
 match = 202506240
 
-[fk_fj_cd.instructions."fcmp.cueq.s"]
+[cd_fj_fk.instructions."fcmp.cueq.s"]
 mask = 4294934552
 match = 202768384
 
-[fk_fj_cd.instructions."fcmp.clt.s"]
+[cd_fj_fk.instructions."fcmp.clt.s"]
 mask = 4294934552
 match = 202440704
 
-[fk_fj_cd.instructions."fcmp.cult.s"]
+[cd_fj_fk.instructions."fcmp.cult.s"]
 mask = 4294934552
 match = 202702848
 
-[fk_fj_cd.instructions."fcmp.cle.s"]
+[cd_fj_fk.instructions."fcmp.cle.s"]
 mask = 4294934552
 match = 202571776
 
-[fk_fj_cd.instructions."fcmp.cule.s"]
+[cd_fj_fk.instructions."fcmp.cule.s"]
 mask = 4294934552
 match = 202833920
 
-[fk_fj_cd.instructions."fcmp.cne.s"]
+[cd_fj_fk.instructions."fcmp.cne.s"]
 mask = 4294934552
 match = 202899456
 
-[fk_fj_cd.instructions."fcmp.cor.s"]
+[cd_fj_fk.instructions."fcmp.cor.s"]
 mask = 4294934552
 match = 203030528
 
-[fk_fj_cd.instructions."fcmp.cune.s"]
+[cd_fj_fk.instructions."fcmp.cune.s"]
 mask = 4294934552
 match = 203161600
 
-[fk_fj_cd.instructions."fcmp.saf.d"]
+[cd_fj_fk.instructions."fcmp.saf.s"]
+mask = 4294934552
+match = 202407936
+
+[cd_fj_fk.instructions."fcmp.sun.s"]
+mask = 4294934552
+match = 202670080
+
+[cd_fj_fk.instructions."fcmp.seq.s"]
+mask = 4294934552
+match = 202539008
+
+[cd_fj_fk.instructions."fcmp.sueq.s"]
+mask = 4294934552
+match = 202801152
+
+[cd_fj_fk.instructions."fcmp.slt.s"]
+mask = 4294934552
+match = 202473472
+
+[cd_fj_fk.instructions."fcmp.sult.s"]
+mask = 4294934552
+match = 202735616
+
+[cd_fj_fk.instructions."fcmp.sle.s"]
+mask = 4294934552
+match = 202604544
+
+[cd_fj_fk.instructions."fcmp.sule.s"]
+mask = 4294934552
+match = 202866688
+
+[cd_fj_fk.instructions."fcmp.sne.s"]
+mask = 4294934552
+match = 202932224
+
+[cd_fj_fk.instructions."fcmp.sor.s"]
+mask = 4294934552
+match = 203063296
+
+[cd_fj_fk.instructions."fcmp.sune.s"]
+mask = 4294934552
+match = 203194368
+
+[cd_fj_fk.instructions."fcmp.caf.d"]
+mask = 4294934552
+match = 203423744
+
+[cd_fj_fk.instructions."fcmp.cun.d"]
+mask = 4294934552
+match = 203685888
+
+[cd_fj_fk.instructions."fcmp.ceq.d"]
+mask = 4294934552
+match = 203554816
+
+[cd_fj_fk.instructions."fcmp.cueq.d"]
+mask = 4294934552
+match = 203816960
+
+[cd_fj_fk.instructions."fcmp.clt.d"]
+mask = 4294934552
+match = 203489280
+
+[cd_fj_fk.instructions."fcmp.cult.d"]
+mask = 4294934552
+match = 203751424
+
+[cd_fj_fk.instructions."fcmp.cle.d"]
+mask = 4294934552
+match = 203620352
+
+[cd_fj_fk.instructions."fcmp.cule.d"]
+mask = 4294934552
+match = 203882496
+
+[cd_fj_fk.instructions."fcmp.cne.d"]
+mask = 4294934552
+match = 203948032
+
+[cd_fj_fk.instructions."fcmp.cor.d"]
+mask = 4294934552
+match = 204079104
+
+[cd_fj_fk.instructions."fcmp.cune.d"]
+mask = 4294934552
+match = 204210176
+
+[cd_fj_fk.instructions."fcmp.saf.d"]
 mask = 4294934552
 match = 203456512
 
-[fk_fj_cd.instructions."fcmp.sun.d"]
+[cd_fj_fk.instructions."fcmp.sun.d"]
 mask = 4294934552
 match = 203718656
 
-[fk_fj_cd.instructions."fcmp.seq.d"]
+[cd_fj_fk.instructions."fcmp.seq.d"]
 mask = 4294934552
 match = 203587584
 
-[fk_fj_cd.instructions."fcmp.sueq.d"]
+[cd_fj_fk.instructions."fcmp.sueq.d"]
 mask = 4294934552
 match = 203849728
 
-[fk_fj_cd.instructions."fcmp.slt.d"]
+[cd_fj_fk.instructions."fcmp.slt.d"]
 mask = 4294934552
 match = 203522048
 
-[fk_fj_cd.instructions."fcmp.sult.d"]
+[cd_fj_fk.instructions."fcmp.sult.d"]
 mask = 4294934552
 match = 203784192
 
-[fk_fj_cd.instructions."fcmp.sle.d"]
+[cd_fj_fk.instructions."fcmp.sle.d"]
 mask = 4294934552
 match = 203653120
 
-[fk_fj_cd.instructions."fcmp.sule.d"]
+[cd_fj_fk.instructions."fcmp.sule.d"]
 mask = 4294934552
 match = 203915264
 
-[fk_fj_cd.instructions."fcmp.sne.d"]
+[cd_fj_fk.instructions."fcmp.sne.d"]
 mask = 4294934552
 match = 203980800
 
-[fk_fj_cd.instructions."fcmp.sor.d"]
+[cd_fj_fk.instructions."fcmp.sor.d"]
 mask = 4294934552
 match = 204111872
 
-[fk_fj_cd.instructions."fcmp.sune.d"]
+[cd_fj_fk.instructions."fcmp.sune.d"]
 mask = 4294934552
 match = 204242944
 
-[ca_fk_fj_fd.repr]
+[fd_fj_fk_ca.repr]
 default = "$name$ %fd%, %fj%, %fk%, %ca%"
 
-[ca_fk_fj_fd.instructions.fsel]
+[fd_fj_fk_ca.instructions.fsel]
 mask = 4294705152
 match = 218103808
 
-[si16_rj_rd.repr]
+[rd_rj_si16.repr]
 default = "$name$ %rd%, %rj%, %si16%"
 
-[si16_rj_rd.instructions."addu16i.d"]
+[rd_rj_si16.instructions."addu16i.d"]
 mask = 4227858432
 match = 268435456
 
-[si20_rd.repr]
+[rd_si20.repr]
 default = "$name$ %rd%, %si20%"
 
-[si20_rd.instructions."lu12i.w"]
+[rd_si20.instructions."lu12i.w"]
 mask = 4261412864
 match = 335544320
 
-[si20_rd.instructions."lu32i.d"]
+[rd_si20.instructions."lu32i.d"]
 mask = 4261412864
 match = 369098752
 
-[si20_rd.instructions.pcaddi]
+[rd_si20.instructions.pcaddi]
 mask = 4261412864
 match = 402653184
 
-[si20_rd.instructions.pcalau12i]
+[rd_si20.instructions.pcalau12i]
 mask = 4261412864
 match = 436207616
 
-[si20_rd.instructions.pcaddu12i]
+[rd_si20.instructions.pcaddu12i]
 mask = 4261412864
 match = 469762048
 
-[si20_rd.instructions.pcaddu18i]
+[rd_si20.instructions.pcaddu18i]
 mask = 4261412864
 match = 503316480
 
-[si14_rj_rd.repr]
-default = "$name$ %rd%, %rj%, %si14%"
+[rd_rj_si14s2.repr]
+default = "$name$ %rd%, %rj%, %si14s2%"
 
-[si14_rj_rd.instructions."ll.w"]
+[rd_rj_si14s2.instructions."ll.w"]
 mask = 4278190080
 match = 536870912
 
-[si14_rj_rd.instructions."sc.w"]
+[rd_rj_si14s2.instructions."sc.w"]
 mask = 4278190080
 match = 553648128
 
-[si14_rj_rd.instructions."ll.d"]
+[rd_rj_si14s2.instructions."ll.d"]
 mask = 4278190080
 match = 570425344
 
-[si14_rj_rd.instructions."sc.d"]
+[rd_rj_si14s2.instructions."sc.d"]
 mask = 4278190080
 match = 587202560
 
-[si14_rj_rd.instructions."ldptr.w"]
+[rd_rj_si14s2.instructions."ldptr.w"]
 mask = 4278190080
 match = 603979776
 
-[si14_rj_rd.instructions."stptr.w"]
+[rd_rj_si14s2.instructions."stptr.w"]
 mask = 4278190080
 match = 620756992
 
-[si14_rj_rd.instructions."ldptr.d"]
+[rd_rj_si14s2.instructions."ldptr.d"]
 mask = 4278190080
 match = 637534208
 
-[si14_rj_rd.instructions."stptr.d"]
+[rd_rj_si14s2.instructions."stptr.d"]
 mask = 4278190080
 match = 654311424
 
-[si12_rj_hint.repr]
-default = "$name$ %hint%, %rj%, %si12%"
+[preldhint_rj_si12.repr]
+default = "$name$ %preldhint%, %rj%, %si12%"
 
-[si12_rj_hint.instructions.preld]
+[preldhint_rj_si12.instructions.preld]
 mask = 4290772992
 match = 717225984
 
-[si12_rj_fd.repr]
+[fd_rj_si12.repr]
 default = "$name$ %fd%, %rj%, %si12%"
 
-[si12_rj_fd.instructions."fld.s"]
+[fd_rj_si12.instructions."fld.s"]
 mask = 4290772992
 match = 721420288
 
-[si12_rj_fd.instructions."fst.s"]
+[fd_rj_si12.instructions."fst.s"]
 mask = 4290772992
 match = 725614592
 
-[si12_rj_fd.instructions."fld.d"]
+[fd_rj_si12.instructions."fld.d"]
 mask = 4290772992
 match = 729808896
 
-[si12_rj_fd.instructions."fst.d"]
+[fd_rj_si12.instructions."fst.d"]
 mask = 4290772992
 match = 734003200
 
-[rk_rj_hint.repr]
-default = "$name$ %hint%, %rj%, %rk%"
+[preldhint_rj_rk.repr]
+default = "$name$ %preldhint%, %rj%, %rk%"
 
-[rk_rj_hint.instructions.preldx]
+[preldhint_rj_rk.instructions.preldx]
 mask = 4294934528
 match = 942407680
 
-[rk_rj_fd.repr]
+[fd_rj_rk.repr]
 default = "$name$ %fd%, %rj%, %rk%"
 
-[rk_rj_fd.instructions."fldx.s"]
+[fd_rj_rk.instructions."fldx.s"]
 mask = 4294934528
 match = 942669824
 
-[rk_rj_fd.instructions."fldx.d"]
+[fd_rj_rk.instructions."fldx.d"]
 mask = 4294934528
 match = 942931968
 
-[rk_rj_fd.instructions."fstx.s"]
+[fd_rj_rk.instructions."fstx.s"]
 mask = 4294934528
 match = 943194112
 
-[rk_rj_fd.instructions."fstx.d"]
+[fd_rj_rk.instructions."fstx.d"]
 mask = 4294934528
 match = 943456256
 
-[rk_rj_fd.instructions."sc.q"]
-mask = 4294934528
-match = 945225728
-
-[rk_rj_fd.instructions."amcas.b"]
-mask = 4294934528
-match = 945291264
-
-[rk_rj_fd.instructions."amcas.h"]
-mask = 4294934528
-match = 945324032
-
-[rk_rj_fd.instructions."amcas.w"]
-mask = 4294934528
-match = 945356800
-
-[rk_rj_fd.instructions."amcas.d"]
-mask = 4294934528
-match = 945389568
-
-[rk_rj_fd.instructions."amcas_db.b"]
-mask = 4294934528
-match = 945422336
-
-[rk_rj_fd.instructions."amcas_db.h"]
-mask = 4294934528
-match = 945455104
-
-[rk_rj_fd.instructions."amcas_db.w"]
-mask = 4294934528
-match = 945487872
-
-[rk_rj_fd.instructions."amcas_db.d"]
-mask = 4294934528
-match = 945520640
-
-[rk_rj_fd.instructions."amswap.b"]
-mask = 4294934528
-match = 945553408
-
-[rk_rj_fd.instructions."amswap.h"]
-mask = 4294934528
-match = 945586176
-
-[rk_rj_fd.instructions."amadd.b"]
-mask = 4294934528
-match = 945618944
-
-[rk_rj_fd.instructions."amadd.h"]
-mask = 4294934528
-match = 945651712
-
-[rk_rj_fd.instructions."amswap_db.b"]
-mask = 4294934528
-match = 945684480
-
-[rk_rj_fd.instructions."amswap_db.h"]
-mask = 4294934528
-match = 945717248
-
-[rk_rj_fd.instructions."amadd_db.b"]
-mask = 4294934528
-match = 945750016
-
-[rk_rj_fd.instructions."amadd_db.h"]
-mask = 4294934528
-match = 945782784
-
-[rk_rj_fd.instructions."fldgt.s"]
+[fd_rj_rk.instructions."fldgt.s"]
 mask = 4294934528
 match = 947126272
 
-[rk_rj_fd.instructions."fldgt.d"]
+[fd_rj_rk.instructions."fldgt.d"]
 mask = 4294934528
 match = 947159040
 
-[rk_rj_fd.instructions."fldle.s"]
+[fd_rj_rk.instructions."fldle.s"]
 mask = 4294934528
 match = 947191808
 
-[rk_rj_fd.instructions."fldle.d"]
+[fd_rj_rk.instructions."fldle.d"]
 mask = 4294934528
 match = 947224576
 
-[rk_rj_fd.instructions."fstgt.s"]
+[fd_rj_rk.instructions."fstgt.s"]
 mask = 4294934528
 match = 947257344
 
-[rk_rj_fd.instructions."fstgt.d"]
+[fd_rj_rk.instructions."fstgt.d"]
 mask = 4294934528
 match = 947290112
 
-[rk_rj_fd.instructions."fstle.s"]
+[fd_rj_rk.instructions."fstle.s"]
 mask = 4294934528
 match = 947322880
 
-[rk_rj_fd.instructions."fstle.d"]
+[fd_rj_rk.instructions."fstle.d"]
 mask = 4294934528
 match = 947355648
+
+[rd_rk_rj.repr]
+default = "$name$ %rd%, %rk%, %rj%"
+
+[rd_rk_rj.instructions."sc.q"]
+mask = 4294934528
+match = 945225728
+
+[rd_rk_rj.instructions."amcas.b"]
+mask = 4294934528
+match = 945291264
+
+[rd_rk_rj.instructions."amcas.h"]
+mask = 4294934528
+match = 945324032
+
+[rd_rk_rj.instructions."amcas.w"]
+mask = 4294934528
+match = 945356800
+
+[rd_rk_rj.instructions."amcas.d"]
+mask = 4294934528
+match = 945389568
+
+[rd_rk_rj.instructions."amcas_db.b"]
+mask = 4294934528
+match = 945422336
+
+[rd_rk_rj.instructions."amcas_db.h"]
+mask = 4294934528
+match = 945455104
+
+[rd_rk_rj.instructions."amcas_db.w"]
+mask = 4294934528
+match = 945487872
+
+[rd_rk_rj.instructions."amcas_db.d"]
+mask = 4294934528
+match = 945520640
+
+[rd_rk_rj.instructions."amswap.b"]
+mask = 4294934528
+match = 945553408
+
+[rd_rk_rj.instructions."amswap.h"]
+mask = 4294934528
+match = 945586176
+
+[rd_rk_rj.instructions."amadd.b"]
+mask = 4294934528
+match = 945618944
+
+[rd_rk_rj.instructions."amadd.h"]
+mask = 4294934528
+match = 945651712
+
+[rd_rk_rj.instructions."amswap_db.b"]
+mask = 4294934528
+match = 945684480
+
+[rd_rk_rj.instructions."amswap_db.h"]
+mask = 4294934528
+match = 945717248
+
+[rd_rk_rj.instructions."amadd_db.b"]
+mask = 4294934528
+match = 945750016
+
+[rd_rk_rj.instructions."amadd_db.h"]
+mask = 4294934528
+match = 945782784
+
+[rd_rk_rj.instructions."amswap.w"]
+mask = 4294934528
+match = 945815552
+
+[rd_rk_rj.instructions."amswap.d"]
+mask = 4294934528
+match = 945848320
+
+[rd_rk_rj.instructions."amadd.w"]
+mask = 4294934528
+match = 945881088
+
+[rd_rk_rj.instructions."amadd.d"]
+mask = 4294934528
+match = 945913856
+
+[rd_rk_rj.instructions."amand.w"]
+mask = 4294934528
+match = 945946624
+
+[rd_rk_rj.instructions."amand.d"]
+mask = 4294934528
+match = 945979392
+
+[rd_rk_rj.instructions."amor.w"]
+mask = 4294934528
+match = 946012160
+
+[rd_rk_rj.instructions."amor.d"]
+mask = 4294934528
+match = 946044928
+
+[rd_rk_rj.instructions."amxor.w"]
+mask = 4294934528
+match = 946077696
+
+[rd_rk_rj.instructions."amxor.d"]
+mask = 4294934528
+match = 946110464
+
+[rd_rk_rj.instructions."ammax.w"]
+mask = 4294934528
+match = 946143232
+
+[rd_rk_rj.instructions."ammax.d"]
+mask = 4294934528
+match = 946176000
+
+[rd_rk_rj.instructions."ammin.w"]
+mask = 4294934528
+match = 946208768
+
+[rd_rk_rj.instructions."ammin.d"]
+mask = 4294934528
+match = 946241536
+
+[rd_rk_rj.instructions."ammax.wu"]
+mask = 4294934528
+match = 946274304
+
+[rd_rk_rj.instructions."ammax.du"]
+mask = 4294934528
+match = 946307072
+
+[rd_rk_rj.instructions."ammin.wu"]
+mask = 4294934528
+match = 946339840
+
+[rd_rk_rj.instructions."ammin.du"]
+mask = 4294934528
+match = 946372608
+
+[rd_rk_rj.instructions."amswap_db.w"]
+mask = 4294934528
+match = 946405376
+
+[rd_rk_rj.instructions."amswap_db.d"]
+mask = 4294934528
+match = 946438144
+
+[rd_rk_rj.instructions."amadd_db.w"]
+mask = 4294934528
+match = 946470912
+
+[rd_rk_rj.instructions."amadd_db.d"]
+mask = 4294934528
+match = 946503680
+
+[rd_rk_rj.instructions."amand_db.w"]
+mask = 4294934528
+match = 946536448
+
+[rd_rk_rj.instructions."amand_db.d"]
+mask = 4294934528
+match = 946569216
+
+[rd_rk_rj.instructions."amor_db.w"]
+mask = 4294934528
+match = 946601984
+
+[rd_rk_rj.instructions."amor_db.d"]
+mask = 4294934528
+match = 946634752
+
+[rd_rk_rj.instructions."amxor_db.w"]
+mask = 4294934528
+match = 946667520
+
+[rd_rk_rj.instructions."amxor_db.d"]
+mask = 4294934528
+match = 946700288
+
+[rd_rk_rj.instructions."ammax_db.w"]
+mask = 4294934528
+match = 946733056
+
+[rd_rk_rj.instructions."ammax_db.d"]
+mask = 4294934528
+match = 946765824
+
+[rd_rk_rj.instructions."ammin_db.w"]
+mask = 4294934528
+match = 946798592
+
+[rd_rk_rj.instructions."ammin_db.d"]
+mask = 4294934528
+match = 946831360
+
+[rd_rk_rj.instructions."ammax_db.wu"]
+mask = 4294934528
+match = 946864128
+
+[rd_rk_rj.instructions."ammax_db.du"]
+mask = 4294934528
+match = 946896896
+
+[rd_rk_rj.instructions."ammin_db.wu"]
+mask = 4294934528
+match = 946929664
+
+[rd_rk_rj.instructions."ammin_db.du"]
+mask = 4294934528
+match = 946962432
 
 [hint.repr]
 default = "$name$ %hint%"
@@ -2898,66 +3118,69 @@ match = 946995200
 mask = 4294934528
 match = 947027968
 
-[offs_rj_offs.repr]
-default = "$name$ %rj%, %offs%"
+[rj_offss2.repr]
+default = "$name$ %rj%, %offss2%"
 
-[offs_rj_offs.instructions.beqz]
+[rj_offss2.instructions.beqz]
 mask = 4227858432
 match = 1073741824
 
-[offs_rj_offs.instructions.bnez]
+[rj_offss2.instructions.bnez]
 mask = 4227858432
 match = 1140850688
 
-[offs_cj_offs.repr]
-default = "$name$ %cj%, %offs%"
+[cj_offss2.repr]
+default = "$name$ %cj%, %offss2%"
 
-[offs_cj_offs.instructions.bceqz]
+[cj_offss2.instructions.bceqz]
 mask = 4227859200
 match = 1207959552
 
-[offs_cj_offs.instructions.bcnez]
+[cj_offss2.instructions.bcnez]
 mask = 4227859200
 match = 1207959808
 
-[offs_rj_rd.repr]
-default = "$name$ %rd%, %rj%, %offs%"
+[rd_rj_offss2.repr]
+default = "$name$ %rd%, %rj%, %offss2%"
 
-[offs_rj_rd.instructions.jirl]
+[rd_rj_offss2.instructions.jirl]
 mask = 4227858432
 match = 1275068416
 
-[offs_rj_rd.instructions.beq]
-mask = 4227858432
-match = 1476395008
+[offss2.repr]
+default = "$name$ %offss2%"
 
-[offs_rj_rd.instructions.bne]
-mask = 4227858432
-match = 1543503872
-
-[offs_rj_rd.instructions.blt]
-mask = 4227858432
-match = 1610612736
-
-[offs_rj_rd.instructions.bge]
-mask = 4227858432
-match = 1677721600
-
-[offs_rj_rd.instructions.bltu]
-mask = 4227858432
-match = 1744830464
-
-[offs_rj_rd.instructions.bgeu]
-mask = 4227858432
-match = 1811939328
-
-[offs_offs.repr]
-default = "$name$ %offs%"
-
-[offs_offs.instructions.b]
+[offss2.instructions.b]
 mask = 4227858432
 match = 1342177280
 
-[offs_offs.instructions.bl]
+[offss2.instructions.bl]
 mask = 4227858432
 match = 1409286144
+
+[rj_rd_offss2.repr]
+default = "$name$ %rj%, %rd%, %offss2%"
+
+[rj_rd_offss2.instructions.beq]
+mask = 4227858432
+match = 1476395008
+
+[rj_rd_offss2.instructions.bne]
+mask = 4227858432
+match = 1543503872
+
+[rj_rd_offss2.instructions.blt]
+mask = 4227858432
+match = 1610612736
+
+[rj_rd_offss2.instructions.bge]
+mask = 4227858432
+match = 1677721600
+
+[rj_rd_offss2.instructions.bltu]
+mask = 4227858432
+match = 1744830464
+
+[rj_rd_offss2.instructions.bgeu]
+mask = 4227858432
+match = 1811939328
