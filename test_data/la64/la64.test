@@ -1,0 +1,142 @@
+06482000 tlbclr
+06482400 tlbflush
+06482800 tlbsrch
+06482c00 tlbrd
+06483000 tlbwr
+06483400 tlbfill
+06483800 ertn
+00100084 add.w $a0, $a0, $zero
+0010de95 add.d $r21, $t8, $s0
+00135985 maskeqz $a1, $t0, $fp
+00243dcd crc.w.b.w $t1, $t2, $t3
+00040084 alsl.w $a0, $a0, $zero, 0x1
+0006de95 alsl.wu $r21, $t8, $s0, 0x2
+0009d985 bytepick.w $a1, $t0, $fp, 0x3
+000f5985 bytepick.d $a1, $t0, $fp, 0x6
+0281ec84 addi.w $a0, $a0, 123
+02f8e295 addi.d $r21, $t8, -456
+033ffd85 lu52i.d $a1, $t0, -1
+280001ac ld.b $t0, $t1, 0
+284005ac ld.h $t0, $t1, 1
+299ffdac st.w $t0, $t1, 2047
+29e001ac st.d $t0, $t1, -2048
+20004084 ll.w $a0, $a0, 64
+22ffc295 ll.d $r21, $t8, -64
+21100185 sc.w $a1, $t0, 4096
+23f001ac sc.d $t0, $t1, -4096
+240041ac ldptr.w $t0, $t1, 64
+26ffc1ac ldptr.d $t0, $t1, -64
+251001ac stptr.w $t0, $t1, 4096
+27f001ac stptr.d $t0, $t1, -4096
+1001ec84 addu16i.d $a0, $a0, 123
+13f8e295 addu16i.d $r21, $t8, -456
+10000185 addu16i.d $a1, $t0, 0
+13fffdac addu16i.d $t0, $t1, -1
+11fffdac addu16i.d $t0, $t1, 32767
+120001ac addu16i.d $t0, $t1, -32768
+036aa884 andi $a0, $a0, 0xaaa
+03955695 ori $r21, $t8, 0x555
+03e66585 xori $a1, $t0, 0x999
+00408084 slli.w $a0, $a0, 0x0
+00448695 srli.w $r21, $t8, 0x1
+004cfd85 rotri.w $a1, $t0, 0x1f
+00410084 slli.d $a0, $a0, 0x0
+00450695 srli.d $r21, $t8, 0x1
+004dfd85 rotri.d $a1, $t0, 0x3f
+04003084 csrxchg $a0, $a0, 0xc
+0400c295 csrxchg $r21, $t8, 0x30
+06400484 lddir $a0, $a0, 0x1
+06400a95 lddir $r21, $t8, 0x2
+06400d85 lddir $a1, $t0, 0x3
+064011ac lddir $t0, $t1, 0x4
+00610084 bstrins.w $a0, $a0, 0x1, 0x0
+007f7a95 bstrins.w $r21, $t8, 0x1f, 0x1e
+00810084 bstrins.d $a0, $a0, 0x1, 0x0
+00bffa95 bstrins.d $r21, $t8, 0x3f, 0x3e
+4c000484 jirl $a0, $a0, 4
+4ffffe95 jirl $r21, $t8, -4
+4c7ffd85 jirl $a1, $t0, 32764
+4f8001ac jirl $t0, $t1, -32768
+4c0001ac jirl $t0, $t1, 0
+38571004 sc.q $a0, $a0, $zero
+385852f5 amcas.b $r21, $t8, $s0
+385db2c5 amadd.h $a1, $t0, $fp
+3860b5cc amswap.d $t0, $t1, $t2
+00001004 clo.w $a0, $zero
+00001a95 cto.w $r21, $t8
+00004d85 bitrev.8b $a1, $t0
+00006dac cpucfg $t0, $t1
+385781ac llacq.w $t0, $t1
+385785ac screl.w $t0, $t1
+0114dc04 movcf2gr $a0, $fcc0
+0114dcf5 movcf2gr $r21, $fcc7
+0114c804 movfcsr2gr $a0, $fcsr0
+0114c875 movfcsr2gr $r21, $fcsr3
+0114b404 movfr2gr.s $a0, $fa0
+0114baf5 movfr2gr.d $r21, $ft15
+0114bf0c movfrh2gr.s $t0, $fs0
+14000004 lu12i.w $a0, 0
+17fffff5 lu32i.d $r21, -1
+18ffffec pcaddi $t0, 524287
+1b00000d pcalau12i $t1, -524288
+0d00e100 fsel $fa0, $ft0, $fs0, $fcc1
+0d03ab81 fsel $fa1, $fs4, $ft2, $fcc7
+081ce100 fmadd.s $fa0, $ft0, $fs0, $fs1
+086e6981 fmsub.d $fa1, $ft4, $fs2, $fs4
+0100e100 fadd.s $fa0, $ft0, $fs0
+01036981 fsub.d $fa1, $ft4, $fs2
+01132f3c fcopysign.d $fs4, $fs1, $ft3
+0114d4e0 movcf2fr $fa0, $fcc7
+0114d418 movcf2fr $fs0, $fcc0
+01140500 fabs.s $fa0, $ft0
+01141b81 fneg.d $fa1, $fs4
+011ac928 ftintrne.w.d $ft0, $ft1
+38300080 fldx.s $fa0, $a0, $zero
+383c5d98 fstx.d $fs0, $t0, $s0
+2b000080 fld.s $fa0, $a0, 0
+2bbffd98 fld.d $fs0, $t0, -1
+2b5ffea8 fst.s $ft0, $r21, 2047
+2be001a9 fst.d $ft1, $t1, -2048
+0c1c8400 fcmp.sune.s $fcc0, $fa0, $fa1
+0c2a6107 fcmp.cor.d $fcc7, $ft0, $fs0
+0114d000 movfr2cf $fcc0, $fa0
+0114d307 movfr2cf $fcc7, $fs0
+0114d880 movgr2cf $fcc0, $a0
+0114dae7 movgr2cf $fcc7, $s0
+4bfffc1f bceqz $fcc0, -4
+480005e0 bcnez $fcc7, 4
+0114c080 movgr2fcsr $fcsr0, $a0
+0114c183 movgr2fcsr $fcsr3, $t0
+5bfffc80 beq $a0, $zero, -4
+600006ac blt $r21, $t0, 4
+43fffc9f beqz $a0, -4
+440006a0 bnez $r21, 4
+53ffffff b -4
+54000400 bl 4
+002a0000 break 0x0
+002a0001 break 0x1
+002a8000 dbcl 0x0
+002affff dbcl 0x7fff
+002b0000 syscall 0x0
+002b0001 syscall 0x1
+38720000 dbar 0x0
+3872001f dbar 0x1f
+38728000 ibar 0x0
+3872801f ibar 0x1f
+063ff09f cacop 0x1f, $a0, -4
+06001000 cacop 0x0, $zero, 4
+382c0080 preldx 0x0, $a0, $zero
+382c5d82 preldx 0x2, $t0, $s0
+382c3708 preldx 0x8, $s1, $t1
+2ac00080 preld 0x0, $a0, 0
+2afff188 preld 0x8, $t0, -4
+2ac011a8 preld 0x8, $t1, 4
+06488000 idle 0x0
+06488001 idle 0x1
+06498000 invtlb 0x0, $zero, $zero
+0649b086 invtlb 0x6, $a0, $t0
+00010000 asrtle.d $zero, $zero
+0001d480 asrtgt.d $a0, $r21
+06440000 ldpte $zero, 0x0
+06440480 ldpte $a0, 0x1
+064406a0 ldpte $r21, 0x1
