@@ -842,8 +842,7 @@ impl Instruction {
         .unwrap()
         .clone();
 
-        let formatted_name = self.name.to_owned();
-        fmt = fmt.replace("$name$", &formatted_name);
+        fmt = fmt.replace("$name$", &self.name);
         while fmt.contains('%') {
             let begin = fmt.find('%').unwrap() + 1;
             let end = fmt[begin..].find('%').unwrap() + begin;
