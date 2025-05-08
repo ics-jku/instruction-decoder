@@ -214,90 +214,90 @@ default = "$name$%aqrl% %rd_Register_int%, %rs2_Register_int%, (%rs1_Register_in
 [format-2-0.repr]
 default = "$name$%aqrl% %rd_Register_int%, (%rs1_Register_int%)"
 
-[format-1-0.instructions.amoadd_d]
+[format-1-0.instructions."amoadd.d"]
 mask = 0xf800707f
 match = 0x302f
 
-[format-1-0.instructions.amoadd_w]
+[format-1-0.instructions."amoadd.w"]
 mask = 0xf800707f
 match = 0x202f
 
-[format-1-0.instructions.amoand_d]
+[format-1-0.instructions."amoand.d"]
 mask = 0xf800707f
 match = 0x6000302f
 
-[format-1-0.instructions.amoand_w]
+[format-1-0.instructions."amoand.w"]
 mask = 0xf800707f
 match = 0x6000202f
 
-[format-1-0.instructions.amomax_d]
+[format-1-0.instructions."amomax.d"]
 mask = 0xf800707f
 match = 0xa000302f
 
-[format-1-0.instructions.amomax_w]
+[format-1-0.instructions."amomax.w"]
 mask = 0xf800707f
 match = 0xa000202f
 
-[format-1-0.instructions.amomaxu_d]
+[format-1-0.instructions."amomaxu.d"]
 mask = 0xf800707f
 match = 0xe000302f
 
-[format-1-0.instructions.amomaxu_w]
+[format-1-0.instructions."amomaxu.w"]
 mask = 0xf800707f
 match = 0xe000202f
 
-[format-1-0.instructions.amomin_d]
+[format-1-0.instructions."amomin.d"]
 mask = 0xf800707f
 match = 0x8000302f
 
-[format-1-0.instructions.amomin_w]
+[format-1-0.instructions."amomin.w"]
 mask = 0xf800707f
 match = 0x8000202f
 
-[format-1-0.instructions.amominu_d]
+[format-1-0.instructions."amominu.d"]
 mask = 0xf800707f
 match = 0xc000302f
 
-[format-1-0.instructions.amominu_w]
+[format-1-0.instructions."amominu.w"]
 mask = 0xf800707f
 match = 0xc000202f
 
-[format-1-0.instructions.amoor_d]
+[format-1-0.instructions."amoor.d"]
 mask = 0xf800707f
 match = 0x4000302f
 
-[format-1-0.instructions.amoor_w]
+[format-1-0.instructions."amoor.w"]
 mask = 0xf800707f
 match = 0x4000202f
 
-[format-1-0.instructions.amoswap_d]
+[format-1-0.instructions."amoswap.d"]
 mask = 0xf800707f
 match = 0x800302f
 
-[format-1-0.instructions.amoswap_w]
+[format-1-0.instructions."amoswap.w"]
 mask = 0xf800707f
 match = 0x800202f
 
-[format-1-0.instructions.amoxor_d]
+[format-1-0.instructions."amoxor.d"]
 mask = 0xf800707f
 match = 0x2000302f
 
-[format-1-0.instructions.amoxor_w]
+[format-1-0.instructions."amoxor.w"]
 mask = 0xf800707f
 match = 0x2000202f
 
-[format-1-0.instructions.sc_d]
+[format-1-0.instructions."sc.d"]
 mask = 0xf800707f
 match = 0x1800302f
 
-[format-1-0.instructions.sc_w]
+[format-1-0.instructions."sc.w"]
 mask = 0xf800707f
 match = 0x1800202f
 
-[format-2-0.instructions.lr_d]
+[format-2-0.instructions."lr.d"]
 mask = 0xf9f0707f
 match = 0x1000302f
 
-[format-2-0.instructions.lr_w]
+[format-2-0.instructions."lr.w"]
 mask = 0xf9f0707f
 match = 0x1000202f

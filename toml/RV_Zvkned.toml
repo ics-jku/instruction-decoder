@@ -139,48 +139,48 @@ default = "$name$ %vd%, %vs2%"
 [format_2-0.repr]
 default = "$name$ %vd%, %vs2%, %himm%"
 
-[format_1-0.instructions.vaesdf_vs]
+[format_1-0.instructions."vaesdf.vs"]
 mask = 0xfe0ff07f
 match = 0xa600a077
 
-[format_1-0.instructions.vaesdf_vv]
+[format_1-0.instructions."vaesdf.vv"]
 mask = 0xfe0ff07f
 match = 0xa200a077
 
-[format_1-0.instructions.vaesdm_vs]
+[format_1-0.instructions."vaesdm.vs"]
 mask = 0xfe0ff07f
 match = 0xa6002077
 
-[format_1-0.instructions.vaesdm_vv]
+[format_1-0.instructions."vaesdm.vv"]
 mask = 0xfe0ff07f
 match = 0xa2002077
 
-[format_1-0.instructions.vaesef_vs]
+[format_1-0.instructions."vaesef.vs"]
 mask = 0xfe0ff07f
 match = 0xa601a077
 
-[format_1-0.instructions.vaesef_vv]
+[format_1-0.instructions."vaesef.vv"]
 mask = 0xfe0ff07f
 match = 0xa201a077
 
-[format_1-0.instructions.vaesem_vs]
+[format_1-0.instructions."vaesem.vs"]
 mask = 0xfe0ff07f
 match = 0xa6012077
 
-[format_1-0.instructions.vaesem_vv]
+[format_1-0.instructions."vaesem.vv"]
 mask = 0xfe0ff07f
 match = 0xa2012077
 
-[format_1-0.instructions.vaesz_vs]
+[format_1-0.instructions."vaesz.vs"]
 mask = 0xfe0ff07f
 match = 0xa603a077
 
-[format_2-0.instructions.vaeskf1_vi]
+[format_2-0.instructions."vaeskf1.vi"]
 mask = 0xfe00707f
 match = 0x8a002077
 unsigned = true
 
-[format_2-0.instructions.vaeskf2_vi]
+[format_2-0.instructions."vaeskf2.vi"]
 mask = 0xfe00707f
 match = 0xaa002077
 unsigned = true

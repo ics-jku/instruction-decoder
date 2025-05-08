@@ -162,10 +162,10 @@ Register_float = [
 [format-1-0.repr]
 default = "$name$ %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 
-[format-1-0.instructions.czero_eqz]
+[format-1-0.instructions."czero.eqz"]
 mask = 0xfe00707f
 match = 0xe005033
 
-[format-1-0.instructions.czero_nez]
+[format-1-0.instructions."czero.nez"]
 mask = 0xfe00707f
 match = 0xe007033

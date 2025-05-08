@@ -239,12 +239,12 @@ default = "$name$.%imm% %rd_Register_int%, %rs1_Register_int%"
 [format-4-0.repr]
 default = "$name$.%imm% %rd_Register_int%, %rs1_Register_int%, %rs2_Register_int%"
 
-[format-2-0.instructions.mop_r]
+[format-2-0.instructions."mop.r"]
 mask = 0xb3c0707f
 match = 0x81c04073
 unsigned = true
 
-[format-4-0.instructions.mop_rr]
+[format-4-0.instructions."mop.rr"]
 mask = 0xb200707f
 match = 0x82004073
 unsigned = true

@@ -366,68 +366,68 @@ default = "$name$ %vd%, %vs2%, %himm%%vm%"
 [format-5-0.repr]
 default = "$name$ %vd%, %vs2%, %himm%%vm%"
 
-[format-1-0.instructions.vandn_vv]
+[format-1-0.instructions."vandn.vv"]
 mask = 0xfc00707f
 match = 0x4000057
 
-[format-1-0.instructions.vrol_vv]
+[format-1-0.instructions."vrol.vv"]
 mask = 0xfc00707f
 match = 0x54000057
 
-[format-1-0.instructions.vror_vv]
+[format-1-0.instructions."vror.vv"]
 mask = 0xfc00707f
 match = 0x50000057
 
-[format-1-0.instructions.vwsll_vv]
+[format-1-0.instructions."vwsll.vv"]
 mask = 0xfc00707f
 match = 0xd4000057
 
-[format-2-0.instructions.vandn_vx]
+[format-2-0.instructions."vandn.vx"]
 mask = 0xfc00707f
 match = 0x4004057
 
-[format-2-0.instructions.vrol_vx]
+[format-2-0.instructions."vrol.vx"]
 mask = 0xfc00707f
 match = 0x54004057
 
-[format-2-0.instructions.vror_vx]
+[format-2-0.instructions."vror.vx"]
 mask = 0xfc00707f
 match = 0x50004057
 
-[format-2-0.instructions.vwsll_vx]
+[format-2-0.instructions."vwsll.vx"]
 mask = 0xfc00707f
 match = 0xd4004057
 
-[format-3-0.instructions.vbrev8_v]
+[format-3-0.instructions."vbrev8.v"]
 mask = 0xfc0ff07f
 match = 0x48042057
 
-[format-3-0.instructions.vbrev_v]
+[format-3-0.instructions."vbrev.v"]
 mask = 0xfc0ff07f
 match = 0x48052057
 
-[format-3-0.instructions.vclz_v]
+[format-3-0.instructions."vclz.v"]
 mask = 0xfc0ff07f
 match = 0x48062057
 
-[format-3-0.instructions.vcpop_v]
+[format-3-0.instructions."vcpop.v"]
 mask = 0xfc0ff07f
 match = 0x48072057
 
-[format-3-0.instructions.vctz_v]
+[format-3-0.instructions."vctz.v"]
 mask = 0xfc0ff07f
 match = 0x4806a057
 
-[format-3-0.instructions.vrev8_v]
+[format-3-0.instructions."vrev8.v"]
 mask = 0xfc0ff07f
 match = 0x4804a057
 
-[format-4-0.instructions.vror_vi]
+[format-4-0.instructions."vror.vi"]
 mask = 0xf800707f
 match = 0x50003057
 unsigned = true
 
-[format-5-0.instructions.vwsll_vi]
+[format-5-0.instructions."vwsll.vi"]
 mask = 0xfc00707f
 match = 0xd4003057
 unsigned = true

@@ -149,11 +149,11 @@ default = "$name$ %vd%, %vs2%, %himm%"
 [format-2-0.repr]
 default = "$name$ %vd%, %vs2%, %vs1%"
 
-[format-1-0.instructions.vsm3c_vi]
+[format-1-0.instructions."vsm3c.vi"]
 mask = 0xfe00707f
 match = 0xae002077
 unsigned = true
 
-[format-2-0.instructions.vsm3me_vv]
+[format-2-0.instructions."vsm3me.vv"]
 mask = 0xfe00707f
 match = 0x82002077

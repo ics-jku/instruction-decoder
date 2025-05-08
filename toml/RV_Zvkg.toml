@@ -144,10 +144,10 @@ default = "$name$ %vd%, %vs2%, %vs1%"
 [format-2-0.repr]
 default = "$name$ %vd%, %vs2%"
 
-[format-1-0.instructions.vghsh_vv]
+[format-1-0.instructions."vghsh.vv"]
 mask = 0xfe00707f
 match = 0xb2002077
 
-[format-2-0.instructions.vgmul_vv]
+[format-2-0.instructions."vgmul.vv"]
 mask = 0xfe0ff07f
 match = 0xa208a077

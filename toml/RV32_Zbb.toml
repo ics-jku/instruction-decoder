@@ -283,7 +283,7 @@ match = 0x60201013
 mask = 0xfff0707f
 match = 0x60101013
 
-[format_2-0.instructions.orc_b]
+[format_2-0.instructions."orc.b"]
 mask = 0xfff0707f
 match = 0x28705013
 
@@ -291,15 +291,15 @@ match = 0x28705013
 mask = 0xfff0707f
 match = 0x69805013
 
-[format_2-0.instructions.sext_b]
+[format_2-0.instructions."sext.b"]
 mask = 0xfff0707f
 match = 0x60401013
 
-[format_2-0.instructions.sext_h]
+[format_2-0.instructions."sext.h"]
 mask = 0xfff0707f
 match = 0x60501013
 
-[format_2-0.instructions.zext_h]
+[format_2-0.instructions."zext.h"]
 mask = 0xfff0707f
 match = 0x8004033
 
