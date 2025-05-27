@@ -1,142 +1,3951 @@
+000011ea clo.w $a6, $t3
+00001317 clo.w $s0, $s1
+000011e2 clo.w $tp, $t3
+00001096 clo.w $fp, $a0
+00001243 clo.w $sp, $t6
+000013c2 clo.w $tp, $s7
+00001092 clo.w $t6, $a0
+00001225 clo.w $a1, $t5
+000010d4 clo.w $t8, $a2
+00001003 clo.w $sp, $zero
+000015af clz.w $t3, $t1
+00001738 clz.w $s1, $s2
+000014ca clz.w $a6, $a2
+0000178f clz.w $t3, $s5
+00001483 clz.w $sp, $a0
+00001400 clz.w $zero, $zero
+0000168a clz.w $a6, $t8
+000017a8 clz.w $a4, $s6
+00001794 clz.w $t8, $s5
+00001433 clz.w $t7, $ra
+00001a27 cto.w $a3, $t5
+0000193d cto.w $s6, $a5
+000018ac cto.w $t0, $a1
+0000191d cto.w $s6, $a4
+00001bba cto.w $s3, $s6
+00001847 cto.w $a3, $tp
+00001b2e cto.w $t2, $s2
+000018b2 cto.w $t6, $a1
+0000199f cto.w $s8, $t0
+00001adf cto.w $s8, $fp
+00001d9d ctz.w $s6, $t0
+00001e6c ctz.w $t0, $t7
+00001e9d ctz.w $s6, $t8
+00001d2e ctz.w $t2, $a5
+00001fd3 ctz.w $t7, $s7
+00001c6f ctz.w $t3, $sp
+00001ca8 ctz.w $a4, $a1
+00001f39 ctz.w $s2, $s2
+00001d51 ctz.w $t5, $a6
+00001c23 ctz.w $sp, $ra
+0000221f clo.d $s8, $t4
+00002060 clo.d $zero, $sp
+000023b2 clo.d $t6, $s6
+00002390 clo.d $t4, $s5
+000020dd clo.d $s6, $a2
+0000200a clo.d $a6, $zero
+00002030 clo.d $t4, $ra
+00002019 clo.d $s2, $zero
+00002008 clo.d $a4, $zero
+0000230f clo.d $t3, $s1
+000026ed clz.d $t1, $s0
+0000267e clz.d $s7, $t7
+000025fc clz.d $s5, $t3
+0000255f clz.d $s8, $a6
+000027ac clz.d $t0, $s6
+000025a1 clz.d $ra, $t1
+00002433 clz.d $t7, $ra
+0000254a clz.d $a6, $a6
+000025a2 clz.d $tp, $t1
+0000258f clz.d $t3, $t0
+00002b8a cto.d $a6, $s5
+00002b47 cto.d $a3, $s3
+00002b51 cto.d $t5, $s3
+000029db cto.d $s4, $t2
+000029c1 cto.d $ra, $t2
+00002bae cto.d $t2, $s6
+000028ef cto.d $t3, $a3
+00002978 cto.d $s1, $a7
+00002b63 cto.d $sp, $s4
+00002a23 cto.d $sp, $t5
+00002f47 ctz.d $a3, $s3
+00002d54 ctz.d $t8, $a6
+00002fbf ctz.d $s8, $s6
+00002f23 ctz.d $sp, $s2
+00002ce8 ctz.d $a4, $a3
+00002e47 ctz.d $a3, $t6
+00002c8e ctz.d $t2, $a0
+00002d5c ctz.d $s5, $a6
+00002db2 ctz.d $t6, $t1
+00002c14 ctz.d $t8, $zero
+0000300d revb.2h $t1, $zero
+00003265 revb.2h $a1, $t7
+00003063 revb.2h $sp, $sp
+0000328b revb.2h $a7, $t8
+000032a3 revb.2h $sp, $r21
+00003305 revb.2h $a1, $s1
+000033b4 revb.2h $t8, $s6
+0000311e revb.2h $s7, $a4
+0000321d revb.2h $s6, $t4
+000033af revb.2h $t3, $s6
+000036ff revb.4h $s8, $s0
+0000358c revb.4h $t0, $t0
+000035fe revb.4h $s7, $t3
+000036fb revb.4h $s4, $s0
+000037a2 revb.4h $tp, $s6
+000034d9 revb.4h $s2, $a2
+000036b7 revb.4h $s0, $r21
+00003449 revb.4h $a5, $tp
+0000350e revb.4h $t2, $a4
+000035cc revb.4h $t0, $t2
+000038ee revb.2w $t2, $a3
+000039c1 revb.2w $ra, $t2
+00003922 revb.2w $tp, $a5
+0000397f revb.2w $s8, $a7
+000038f8 revb.2w $s1, $a3
+00003a25 revb.2w $a1, $t5
+000039fe revb.2w $s7, $t3
+00003b5b revb.2w $s4, $s3
+000038f8 revb.2w $s1, $a3
+0000395b revb.2w $s4, $a6
+00003e15 revb.d $r21, $t4
+00003d28 revb.d $a4, $a5
+00003c92 revb.d $t6, $a0
+00003d53 revb.d $t7, $a6
+00003f0d revb.d $t1, $s1
+00003f67 revb.d $a3, $s4
+00003e0b revb.d $a7, $t4
+00003d12 revb.d $t6, $a4
+00003e5a revb.d $s3, $t6
+00003ef8 revb.d $s1, $s0
+000042c8 revh.2w $a4, $fp
+000041b6 revh.2w $fp, $t1
+000043f8 revh.2w $s1, $s8
+00004296 revh.2w $fp, $t8
+0000421e revh.2w $s7, $t4
+0000432b revh.2w $a7, $s2
+000043ca revh.2w $a6, $s7
+00004399 revh.2w $s2, $s5
+00004164 revh.2w $a0, $a7
+000041d1 revh.2w $t5, $t2
+00004523 revh.d $sp, $a5
+0000462c revh.d $t0, $t5
+000046f7 revh.d $s0, $s0
+000044da revh.d $s3, $a2
+000045f6 revh.d $fp, $t3
+000044ba revh.d $s3, $a1
+00004404 revh.d $a0, $zero
+00004795 revh.d $r21, $s5
+000044e4 revh.d $a0, $a3
+00004784 revh.d $a0, $s5
+00004808 bitrev.4b $a4, $zero
+00004b98 bitrev.4b $s1, $s5
+00004adf bitrev.4b $s8, $fp
+00004888 bitrev.4b $a4, $a0
+00004892 bitrev.4b $t6, $a0
+00004990 bitrev.4b $t4, $t0
+00004be2 bitrev.4b $tp, $s8
+0000487c bitrev.4b $s5, $sp
+00004a5b bitrev.4b $s4, $t6
+00004883 bitrev.4b $sp, $a0
+00004dc6 bitrev.8b $a2, $t2
+00004f35 bitrev.8b $r21, $s2
+00004dea bitrev.8b $a6, $t3
+00004c4d bitrev.8b $t1, $tp
+00004c5f bitrev.8b $s8, $tp
+00004f16 bitrev.8b $fp, $s1
+00004cc6 bitrev.8b $a2, $a2
+00004c17 bitrev.8b $s0, $zero
+00004c4a bitrev.8b $a6, $tp
+00004e9d bitrev.8b $s6, $t8
+000052e6 bitrev.w $a2, $s0
+000052dc bitrev.w $s5, $fp
+00005030 bitrev.w $t4, $ra
+00005154 bitrev.w $t8, $a6
+000050ea bitrev.w $a6, $a3
+000052a4 bitrev.w $a0, $r21
+0000534f bitrev.w $t3, $s3
+000050c8 bitrev.w $a4, $a2
+00005199 bitrev.w $s2, $t0
+00005365 bitrev.w $a1, $s4
+00005490 bitrev.d $t4, $a0
+0000541e bitrev.d $s7, $zero
+00005508 bitrev.d $a4, $a4
+000056e1 bitrev.d $ra, $s0
+00005628 bitrev.d $a4, $t5
+00005640 bitrev.d $zero, $t6
+00005446 bitrev.d $a2, $tp
+000054b7 bitrev.d $s0, $a1
+0000579c bitrev.d $s5, $s5
+00005501 bitrev.d $ra, $a4
+00005b63 ext.w.h $sp, $s4
+00005811 ext.w.h $t5, $zero
+00005ae6 ext.w.h $a2, $s0
+000059d0 ext.w.h $t4, $t2
+00005ba9 ext.w.h $a5, $s6
+00005a80 ext.w.h $zero, $t8
+00005bb3 ext.w.h $t7, $s6
+00005ac0 ext.w.h $zero, $fp
+00005834 ext.w.h $t8, $ra
+000059c2 ext.w.h $tp, $t2
+00005c83 ext.w.b $sp, $a0
+00005d68 ext.w.b $a4, $a7
+00005fda ext.w.b $s3, $s7
+00005ee9 ext.w.b $a5, $s0
+00005f68 ext.w.b $a4, $s4
+00005cee ext.w.b $t2, $a3
+00005ecc ext.w.b $t0, $fp
+00005dee ext.w.b $t2, $t3
+00005c9c ext.w.b $s5, $a0
+00005f85 ext.w.b $a1, $s5
+00006343 rdtimel.w $sp, $s3
+00006153 rdtimel.w $t7, $a6
+000063cf rdtimel.w $t3, $s7
+000063f2 rdtimel.w $t6, $s8
+00006368 rdtimel.w $a4, $s4
+000060ee rdtimel.w $t2, $a3
+00006068 rdtimel.w $a4, $sp
+00006268 rdtimel.w $a4, $t7
+00006128 rdtimel.w $a4, $a5
+00006042 rdtimel.w $tp, $tp
+000067f6 rdtimeh.w $fp, $s8
+000064e5 rdtimeh.w $a1, $a3
+000067f0 rdtimeh.w $t4, $s8
+00006543 rdtimeh.w $sp, $a6
+00006717 rdtimeh.w $s0, $s1
+0000654e rdtimeh.w $t2, $a6
+00006532 rdtimeh.w $t6, $a5
+00006450 rdtimeh.w $t4, $tp
+0000678c rdtimeh.w $t0, $s5
+00006495 rdtimeh.w $r21, $a0
+000069b3 rdtime.d $t7, $t1
+00006bc3 rdtime.d $sp, $s7
+0000688e rdtime.d $t2, $a0
+00006b0c rdtime.d $t0, $s1
+000069f8 rdtime.d $s1, $t3
+00006827 rdtime.d $a3, $ra
+000069b2 rdtime.d $t6, $t1
+00006a80 rdtime.d $zero, $t8
+00006bde rdtime.d $s7, $s7
+0000687a rdtime.d $s3, $sp
+00006ea9 cpucfg $a5, $r21
+00006d35 cpucfg $r21, $a5
+00006c71 cpucfg $t5, $sp
+00006e63 cpucfg $sp, $t7
+00006d50 cpucfg $t4, $a6
+00006ea4 cpucfg $a0, $r21
+00006f5a cpucfg $s3, $s3
+00006fc9 cpucfg $a5, $s7
+00006e9c cpucfg $s5, $t8
+00006f49 cpucfg $a5, $s3
+00015240 asrtle.d $t6, $t8
+00011a40 asrtle.d $t6, $a2
+00012860 asrtle.d $sp, $a6
+00017100 asrtle.d $a4, $s5
+000152c0 asrtle.d $fp, $t8
+00017680 asrtle.d $t8, $s6
+00011380 asrtle.d $s5, $a0
+00012ee0 asrtle.d $s0, $a7
+00015ce0 asrtle.d $a3, $s0
+00011260 asrtle.d $t7, $a0
+00018dc0 asrtgt.d $t2, $sp
+00019500 asrtgt.d $a4, $a1
+0001d520 asrtgt.d $a5, $r21
+0001aca0 asrtgt.d $a1, $a7
+0001a040 asrtgt.d $tp, $a4
+0001e780 asrtgt.d $s5, $s2
+0001ec60 asrtgt.d $sp, $s4
+0001aba0 asrtgt.d $s6, $a6
+0001d2c0 asrtgt.d $fp, $t8
+0001d940 asrtgt.d $a6, $fp
+00047260 alsl.w $zero, $t7, $s5, 0x1
+0004c3db alsl.w $s4, $s7, $t4, 0x2
+00042692 alsl.w $t6, $t8, $a5, 0x1
+000589ed alsl.w $t1, $t3, $tp, 0x4
+0005aff8 alsl.w $s1, $s8, $a7, 0x4
+0004cade alsl.w $s7, $fp, $t6, 0x2
+0005125f alsl.w $s8, $t6, $a0, 0x3
+00043074 alsl.w $t8, $sp, $t0, 0x1
+0005e882 alsl.w $tp, $a0, $s3, 0x4
+0004c381 alsl.w $ra, $s5, $t4, 0x2
+00065b5f alsl.wu $s8, $s3, $fp, 0x1
+00061505 alsl.wu $a1, $a4, $a1, 0x1
+0007641a alsl.wu $s3, $zero, $s2, 0x3
+00069ec7 alsl.wu $a3, $fp, $a3, 0x2
+00069ecf alsl.wu $t3, $fp, $a3, 0x2
+00072705 alsl.wu $a1, $s1, $a5, 0x3
+00075632 alsl.wu $t6, $t5, $r21, 0x3
+0007a53b alsl.wu $s4, $a5, $a5, 0x4
+0007a4ea alsl.wu $a6, $a3, $a5, 0x4
+000638f4 alsl.wu $t8, $a3, $t2, 0x1
+0008a1a0 bytepick.w $zero, $t1, $a4, 0x1
+0009cf73 bytepick.w $t7, $s4, $t7, 0x3
+00088702 bytepick.w $tp, $s1, $ra, 0x1
+0009c60b bytepick.w $a7, $t4, $t5, 0x3
+00096e70 bytepick.w $t4, $t7, $s4, 0x2
+0008bec2 bytepick.w $tp, $fp, $t3, 0x1
+000873fd bytepick.w $s6, $s8, $s5, 0x0
+000825dd bytepick.w $s6, $t2, $a5, 0x0
+0008bfa2 bytepick.w $tp, $s6, $t3, 0x1
+0009f4b4 bytepick.w $t8, $a1, $s6, 0x3
+000c8803 bytepick.d $sp, $zero, $tp, 0x1
+000d214a bytepick.d $a6, $a6, $a4, 0x2
+000c05a9 bytepick.d $a5, $t1, $ra, 0x0
+000f2d25 bytepick.d $a1, $a5, $a7, 0x6
+000ddf60 bytepick.d $zero, $s4, $s0, 0x3
+000ee982 bytepick.d $tp, $t0, $s3, 0x5
+000e150a bytepick.d $a6, $a4, $a1, 0x4
+000d6172 bytepick.d $t6, $a7, $s1, 0x2
+000c376b bytepick.d $a7, $s4, $t1, 0x0
+000cd5be bytepick.d $s7, $t1, $r21, 0x1
+00101939 add.w $s2, $a5, $a2
+001026c7 add.w $a3, $fp, $a5
+00102d64 add.w $a0, $a7, $a7
+00101306 add.w $a2, $s1, $a0
+001064f9 add.w $s2, $a3, $s2
+001047d9 add.w $s2, $s7, $t5
+00102474 add.w $t8, $sp, $a5
+001019a7 add.w $a3, $t1, $a2
+00101283 add.w $sp, $t8, $a0
+00107ad7 add.w $s0, $fp, $s7
+0010cc96 add.d $fp, $a0, $t7
+0010d2b7 add.d $s0, $r21, $t8
+00109f5f add.d $s8, $s3, $a3
+0010b4d3 add.d $t7, $a2, $t1
+0010e3d6 add.d $fp, $s7, $s1
+0010a9ef add.d $t3, $t3, $a6
+001096ac add.d $t0, $r21, $a1
+0010f138 add.d $s1, $a5, $s5
+0010fcad add.d $t1, $a1, $s8
+0010b40a add.d $a6, $zero, $t1
+0011607c sub.w $s5, $sp, $s1
+00112353 sub.w $t7, $s3, $a4
+00110bb0 sub.w $t4, $s6, $tp
+001109fb sub.w $s4, $t3, $tp
+00111cb1 sub.w $t5, $a1, $a3
+0011378a sub.w $a6, $s5, $t1
+00114df5 sub.w $r21, $t3, $t7
+00117620 sub.w $zero, $t5, $s6
+00116471 sub.w $t5, $sp, $s2
+00112656 sub.w $fp, $t6, $a5
+0011a7e2 sub.d $tp, $s8, $a5
+00118c91 sub.d $t5, $a0, $sp
+0011c259 sub.d $s2, $t6, $t4
+0011edd1 sub.d $t5, $t2, $s4
+0011c13b sub.d $s4, $a5, $t4
+00118995 sub.d $r21, $t0, $tp
+00118302 sub.d $tp, $s1, $zero
+0011b228 sub.d $a4, $t5, $t0
+00119d9f sub.d $s8, $t0, $a3
+0011d220 sub.d $zero, $t5, $t8
+0012075e slt $s7, $s3, $ra
+001242c9 slt $a5, $fp, $t4
+00121406 slt $a2, $zero, $a1
+001224b5 slt $r21, $a1, $a5
+001255c6 slt $a2, $t2, $r21
+00125ecc slt $t0, $fp, $s0
+00124f5e slt $s7, $s3, $t7
+00126c91 slt $t5, $a0, $s4
+00125884 slt $a0, $a0, $fp
+00123464 slt $a0, $sp, $t1
+0012ded3 sltu $t7, $fp, $s0
+0012b643 sltu $sp, $t6, $t1
+0012c8c9 sltu $a5, $a2, $t6
+00129a8d sltu $t1, $t8, $a2
+0012ae9f sltu $s8, $t8, $a7
+0012e34d sltu $t1, $s3, $s1
+0012b390 sltu $t4, $s5, $t0
+0012ba73 sltu $t7, $t7, $t2
+0012b40d sltu $t1, $zero, $t1
+0012cce0 sltu $zero, $a3, $t7
+00130987 maskeqz $a3, $t0, $tp
+001315c1 maskeqz $ra, $t2, $a1
+00135875 maskeqz $r21, $sp, $fp
+00135036 maskeqz $fp, $ra, $t8
+00136954 maskeqz $t8, $a6, $s3
+001312e1 maskeqz $ra, $s0, $a0
+00131a47 maskeqz $a3, $t6, $a2
+00134e1b maskeqz $s4, $t4, $t7
+00131ddd maskeqz $s6, $t2, $a3
+00134288 maskeqz $a4, $t8, $t4
+0013bfbf masknez $s8, $s6, $t3
+00139137 masknez $s0, $a5, $a0
+0013dc7a masknez $s3, $sp, $s0
+0013c204 masknez $a0, $t4, $t4
+0013c861 masknez $ra, $sp, $t6
+00138fbb masknez $s4, $s6, $sp
+00139510 masknez $t4, $a4, $a1
+00139810 masknez $t4, $zero, $a2
+0013dedb masknez $s4, $fp, $s0
+0013e54d masknez $t1, $a6, $s2
+0014343a nor $s3, $ra, $t1
+0014218e nor $t2, $t0, $a4
+00146f31 nor $t5, $s2, $s4
+001468e6 nor $a2, $a3, $s3
+00147d3f nor $s8, $a5, $s8
+00147b41 nor $ra, $s3, $s7
+0014521e nor $s7, $t4, $t8
+00143bfa nor $s3, $s8, $t2
+0014166b nor $a7, $t7, $a1
+00141338 nor $s1, $s2, $a0
+0014df5f and $s8, $s3, $s0
+0014dc8a and $a6, $a0, $s0
+0014ed5d and $s6, $a6, $s4
+0014fc5c and $s5, $tp, $s8
+00148ac3 and $sp, $fp, $tp
+0014c87e and $s7, $sp, $t6
+0014934a and $a6, $s3, $a0
+0014fd88 and $a4, $t0, $s8
+0014e3a4 and $a0, $s6, $s1
+0014c0ee and $t2, $a3, $t4
+00157c61 or $ra, $sp, $s8
+0015389b or $s4, $a0, $t2
+00154cc4 or $a0, $a2, $t7
+00156835 or $r21, $ra, $s3
+00150b19 or $s2, $s1, $tp
+00156f2e or $t2, $s2, $s4
+001556ec or $t0, $s0, $r21
+00150a1c or $s5, $t4, $tp
+00154aa0 or $zero, $r21, $t6
+00153147 or $a3, $a6, $t0
+0015ed9f xor $s8, $t0, $s4
+0015ff62 xor $tp, $s4, $s8
+0015dce3 xor $sp, $a3, $s0
+0015bfbe xor $s7, $s6, $t3
+0015b15b xor $s4, $a6, $t0
+0015d759 xor $s2, $s3, $r21
+0015b459 xor $s2, $tp, $t1
+0015e67f xor $s8, $t7, $s2
+0015cbde xor $s7, $s7, $t6
+0015e653 xor $t7, $t6, $s2
+001668f7 orn $s0, $a3, $s3
+001644dd orn $s6, $a2, $t5
+00165c8b orn $a7, $a0, $s0
+00163c54 orn $t8, $tp, $t3
+001668d8 orn $s1, $a2, $s3
+001657b5 orn $r21, $s6, $r21
+001613c4 orn $a0, $s7, $a0
+0016321b orn $s4, $t4, $t0
+00165041 orn $ra, $tp, $t8
+00160abf orn $s8, $r21, $tp
+0016f7ed andn $t1, $s8, $s6
+0016bd96 andn $fp, $t0, $t3
+00168a10 andn $t4, $t4, $tp
+0016bbfa andn $s3, $s8, $t2
+0016e003 andn $sp, $zero, $s1
+0016d7b4 andn $t8, $s6, $r21
+0016c387 andn $a3, $s5, $t4
+0016ed6c andn $t0, $a7, $s4
+0016b03b andn $s4, $ra, $t0
+0016d7ad andn $t1, $s6, $r21
+00172d46 sll.w $a2, $a6, $a7
+00170cbb sll.w $s4, $a1, $sp
+00173e17 sll.w $s0, $t4, $t3
+00174cc7 sll.w $a3, $a2, $t7
+00170220 sll.w $zero, $t5, $zero
+00174eb0 sll.w $t4, $r21, $t7
+00174511 sll.w $t5, $a4, $t5
+001709b6 sll.w $fp, $t1, $tp
+00170cec sll.w $t0, $a3, $sp
+001703a8 sll.w $a4, $s6, $zero
+001784f8 srl.w $s1, $a3, $ra
+0017c572 srl.w $t6, $a7, $t5
+0017ccaa srl.w $a6, $a1, $t7
+0017af1e srl.w $s7, $s1, $a7
+0017e221 srl.w $ra, $t5, $s1
+001794e8 srl.w $a4, $a3, $a1
+0017a74b srl.w $a7, $s3, $a5
+0017d47e srl.w $s7, $sp, $r21
+00178fbe srl.w $s7, $s6, $sp
+0017bc25 srl.w $a1, $ra, $t3
+00185c75 sra.w $r21, $sp, $s0
+00181852 sra.w $t6, $tp, $a2
+00187ce0 sra.w $zero, $a3, $s8
+001872e3 sra.w $sp, $s0, $s5
+001819f5 sra.w $r21, $t3, $a2
+0018441e sra.w $s7, $zero, $t5
+001864c3 sra.w $sp, $a2, $s2
+00182909 sra.w $a5, $a4, $a6
+001803c0 sra.w $zero, $s7, $zero
+00187f8c sra.w $t0, $s5, $s8
+001881ab sll.d $a7, $t1, $zero
+0018a52a sll.d $a6, $a5, $a5
+0018d90b sll.d $a7, $a4, $fp
+0018e1e9 sll.d $a5, $t3, $s1
+0018edf5 sll.d $r21, $t3, $s4
+0018e603 sll.d $sp, $t4, $s2
+0018cf9f sll.d $s8, $s5, $t7
+0018a048 sll.d $a4, $tp, $a4
+0018c5a8 sll.d $a4, $t1, $t5
+0018fc67 sll.d $a3, $sp, $s8
+00197de5 srl.d $a1, $t3, $s8
+0019649f srl.d $s8, $a0, $s2
+0019046c srl.d $t0, $sp, $ra
+001958f2 srl.d $t6, $a3, $fp
+00195acd srl.d $t1, $fp, $fp
+0019560a srl.d $a6, $t4, $r21
+00191414 srl.d $t8, $zero, $a1
+00193715 srl.d $r21, $s1, $t1
+00192cd4 srl.d $t8, $a2, $a7
+00194072 srl.d $t6, $sp, $t4
+00198275 sra.d $r21, $t7, $zero
+0019d9fc sra.d $s5, $t3, $fp
+0019a669 sra.d $a5, $t7, $a5
+0019ccdf sra.d $s8, $a2, $t7
+001986f3 sra.d $t7, $s0, $ra
+0019aea7 sra.d $a3, $r21, $a7
+0019ec51 sra.d $t5, $tp, $s4
+0019aa5b sra.d $s4, $t6, $a6
+00198bae sra.d $t2, $s6, $tp
+0019a558 sra.d $s1, $a6, $a5
+001b16f5 rotr.w $r21, $s0, $a1
+001b45f7 rotr.w $s0, $t3, $t5
+001b61c4 rotr.w $a0, $t2, $s1
+001b40c2 rotr.w $tp, $a2, $t4
+001b5f20 rotr.w $zero, $s2, $s0
+001b3187 rotr.w $a3, $t0, $t0
+001b6f2d rotr.w $t1, $s2, $s4
+001b31ee rotr.w $t2, $t3, $t0
+001b07b9 rotr.w $s2, $s6, $ra
+001b723c rotr.w $s5, $t5, $s5
+001bfb66 rotr.d $a2, $s4, $s7
+001b80da rotr.d $s3, $a2, $zero
+001bc354 rotr.d $t8, $s3, $t4
+001b8a8a rotr.d $a6, $t8, $tp
+001bbf30 rotr.d $t4, $s2, $t3
+001bb7bd rotr.d $s6, $s6, $t1
+001bb54f rotr.d $t3, $a6, $t1
+001beedc rotr.d $s5, $fp, $s4
+001bcbc7 rotr.d $a3, $s7, $t6
+001bc40a rotr.d $a6, $zero, $t5
+001c4803 mul.w $sp, $zero, $t6
+001c300c mul.w $t0, $zero, $t0
+001c5719 mul.w $s2, $s1, $r21
+001c7c55 mul.w $r21, $tp, $s8
+001c0e2c mul.w $t0, $t5, $sp
+001c0e76 mul.w $fp, $t7, $sp
+001c3b17 mul.w $s0, $s1, $t2
+001c5bc6 mul.w $a2, $s7, $fp
+001c1140 mul.w $zero, $a6, $a0
+001c3005 mul.w $a1, $zero, $t0
+001cc498 mulh.w $s1, $a0, $t5
+001ccc75 mulh.w $r21, $sp, $t7
+001cc9a9 mulh.w $a5, $t1, $t6
+001ca871 mulh.w $t5, $sp, $a6
+001cca0c mulh.w $t0, $t4, $t6
+001cc222 mulh.w $tp, $t5, $t4
+001cf94f mulh.w $t3, $a6, $s7
+001ca9a7 mulh.w $a3, $t1, $a6
+001c8e9d mulh.w $s6, $t8, $sp
+001caa6a mulh.w $a6, $t7, $a6
+001d3ba7 mulh.wu $a3, $s6, $t2
+001d5ac5 mulh.wu $a1, $fp, $fp
+001d4725 mulh.wu $a1, $s2, $t5
+001d48ec mulh.wu $t0, $a3, $t6
+001d140a mulh.wu $a6, $zero, $a1
+001d21e0 mulh.wu $zero, $t3, $a4
+001d1022 mulh.wu $tp, $ra, $a0
+001d4b0a mulh.wu $a6, $s1, $t6
+001d60a3 mulh.wu $sp, $a1, $s1
+001d65f5 mulh.wu $r21, $t3, $s2
+001d8934 mul.d $t8, $a5, $tp
+001df92f mul.d $t3, $a5, $s7
+001dfb28 mul.d $a4, $s2, $s7
+001db7c0 mul.d $zero, $s7, $t1
+001d9248 mul.d $a4, $t6, $a0
+001deeb1 mul.d $t5, $r21, $s4
+001d9180 mul.d $zero, $t0, $a0
+001dd893 mul.d $t7, $a0, $fp
+001ddf9c mul.d $s5, $s5, $s0
+001dad87 mul.d $a3, $t0, $a7
+001e6359 mulh.d $s2, $s3, $s1
+001e6bca mulh.d $a6, $s7, $s3
+001e34cc mulh.d $t0, $a2, $t1
+001e6a35 mulh.d $r21, $t5, $s3
+001e1509 mulh.d $a5, $a4, $a1
+001e3698 mulh.d $s1, $t8, $t1
+001e59d1 mulh.d $t5, $t2, $fp
+001e43e5 mulh.d $a1, $s8, $t4
+001e2d95 mulh.d $r21, $t0, $a7
+001e2fb0 mulh.d $t4, $s6, $a7
+001e996c mulh.du $t0, $a7, $a2
+001e91de mulh.du $s7, $t2, $a0
+001ed103 mulh.du $sp, $a4, $t8
+001ef66f mulh.du $t3, $t7, $s6
+001ee6d3 mulh.du $t7, $fp, $s2
+001e8043 mulh.du $sp, $tp, $zero
+001eb529 mulh.du $a5, $a5, $t1
+001ef6cf mulh.du $t3, $fp, $s6
+001efb1e mulh.du $s7, $s1, $s7
+001ee339 mulh.du $s2, $s2, $s1
+001f5af7 mulw.d.w $s0, $s0, $fp
+001f282b mulw.d.w $a7, $ra, $a6
+001f726d mulw.d.w $t1, $t7, $s5
+001f688b mulw.d.w $a7, $a0, $s3
+001f427c mulw.d.w $s5, $t7, $t4
+001f1e52 mulw.d.w $t6, $t6, $a3
+001f3fe7 mulw.d.w $a3, $s8, $t3
+001f69e6 mulw.d.w $a2, $t3, $s3
+001f2bc5 mulw.d.w $a1, $s7, $a6
+001f1fd1 mulw.d.w $t5, $s7, $a3
+001fa9af mulw.d.wu $t3, $t1, $a6
+001faba5 mulw.d.wu $a1, $s6, $a6
+001fbcd4 mulw.d.wu $t8, $a2, $t3
+001fb3e0 mulw.d.wu $zero, $s8, $t0
+001f9013 mulw.d.wu $t7, $zero, $a0
+001ff5a4 mulw.d.wu $a0, $t1, $s6
+001fb652 mulw.d.wu $t6, $t6, $t1
+001fa54c mulw.d.wu $t0, $a6, $a5
+001fbbd3 mulw.d.wu $t7, $s7, $t2
+001fa12f mulw.d.wu $t3, $a5, $a4
+002017dc div.w $s5, $s7, $a1
+00200560 div.w $zero, $a7, $ra
+00206d49 div.w $a5, $a6, $s4
+002072d3 div.w $t7, $fp, $s5
+00205f08 div.w $a4, $s1, $s0
+00206019 div.w $s2, $zero, $s1
+002053b0 div.w $t4, $s6, $t8
+00206828 div.w $a4, $ra, $s3
+002051b9 div.w $s2, $t1, $t8
+00203369 div.w $a5, $s4, $t0
+00209d8f mod.w $t3, $t0, $a3
+0020ca81 mod.w $ra, $t8, $t6
+00209ce4 mod.w $a0, $a3, $a3
+0020b085 mod.w $a1, $a0, $t0
+0020a80a mod.w $a6, $zero, $a6
+0020a5b5 mod.w $r21, $t1, $a5
+0020f879 mod.w $s2, $sp, $s7
+0020deeb mod.w $a7, $s0, $s0
+0020a865 mod.w $a1, $sp, $a6
+0020e4d8 mod.w $s1, $a2, $s2
+002104df div.wu $s8, $a2, $ra
+00210806 div.wu $a2, $zero, $tp
+00212069 div.wu $a5, $sp, $a4
+00214684 div.wu $a0, $t8, $t5
+0021494d div.wu $t1, $a6, $t6
+00211167 div.wu $a3, $a7, $a0
+00217378 div.wu $s1, $s4, $s5
+002100d2 div.wu $t6, $a2, $zero
+00217a3b div.wu $s4, $t5, $s7
+00213954 div.wu $t8, $a6, $t2
+0021b2a7 mod.wu $a3, $r21, $t0
+0021a60f mod.wu $t3, $t4, $a5
+0021d24a mod.wu $a6, $t6, $t8
+0021e209 mod.wu $a5, $t4, $s1
+00218432 mod.wu $t6, $ra, $ra
+0021c203 mod.wu $sp, $t4, $t4
+0021baa3 mod.wu $sp, $r21, $t2
+0021e5ff mod.wu $s8, $t3, $s2
+0021a67a mod.wu $s3, $t7, $a5
+0021cb97 mod.wu $s0, $s5, $t6
+002227d1 div.d $t5, $s7, $a5
+00224941 div.d $ra, $a6, $t6
+00221006 div.d $a2, $zero, $a0
+00226e11 div.d $t5, $t4, $s4
+00224c03 div.d $sp, $zero, $t7
+00224489 div.d $a5, $a0, $t5
+002266da div.d $s3, $fp, $s2
+00227006 div.d $a2, $zero, $s5
+00223d97 div.d $s0, $t0, $t3
+00222b89 div.d $a5, $s5, $a6
+0022e29f mod.d $s8, $t8, $s1
+0022b509 mod.d $a5, $a4, $t1
+0022dc83 mod.d $sp, $a0, $s0
+0022b05b mod.d $s4, $tp, $t0
+0022878a mod.d $a6, $s5, $ra
+0022fd5f mod.d $s8, $a6, $s8
+0022aa82 mod.d $tp, $t8, $a6
+0022aef8 mod.d $s1, $s0, $a7
+0022e301 mod.d $ra, $s1, $s1
+0022dfe0 mod.d $zero, $s8, $s0
+0023156c div.du $t0, $a7, $a1
+002349d7 div.du $s0, $t2, $t6
+00237755 div.du $r21, $s3, $s6
+00233959 div.du $s2, $a6, $t2
+00232e25 div.du $a1, $t5, $a7
+00235913 div.du $t7, $a4, $fp
+002305eb div.du $a7, $t3, $ra
+00231ba8 div.du $a4, $s6, $a2
+00230d22 div.du $tp, $a5, $sp
+00233ea9 div.du $a5, $r21, $t3
+0023818f mod.du $t3, $t0, $zero
+0023fcb8 mod.du $s1, $a1, $s8
+00238675 mod.du $r21, $t7, $ra
+0023ab34 mod.du $t8, $s2, $a6
+0023e92c mod.du $t0, $a5, $s3
+0023c54a mod.du $a6, $a6, $t5
+00239818 mod.du $s1, $zero, $a2
+0023b63c mod.du $s5, $t5, $t1
+0023805d mod.du $s6, $tp, $zero
+00239a76 mod.du $fp, $t7, $a2
+002420e2 crc.w.b.w $tp, $a3, $a4
+002453ce crc.w.b.w $t2, $s7, $t8
+002450ba crc.w.b.w $s3, $a1, $t8
+00243118 crc.w.b.w $s1, $a4, $t0
+00243163 crc.w.b.w $sp, $a7, $t0
+00241577 crc.w.b.w $s0, $a7, $a1
+00247715 crc.w.b.w $r21, $s1, $s6
+00241844 crc.w.b.w $a0, $tp, $a2
+00243ffe crc.w.b.w $s7, $s8, $t3
+00247fae crc.w.b.w $t2, $s6, $s8
+002490a6 crc.w.h.w $a2, $a1, $a0
+0024c1f3 crc.w.h.w $t7, $t3, $t4
+0024e672 crc.w.h.w $t6, $t7, $s2
+0024bf08 crc.w.h.w $a4, $s1, $t3
+002486be crc.w.h.w $s7, $r21, $ra
+0024e0cd crc.w.h.w $t1, $a2, $s1
+0024ef6b crc.w.h.w $a7, $s4, $s4
+0024ba50 crc.w.h.w $t4, $t6, $t2
+0024ed98 crc.w.h.w $s1, $t0, $s4
+0024995a crc.w.h.w $s3, $a6, $a2
+0025699d crc.w.w.w $s6, $t0, $s3
+00257640 crc.w.w.w $zero, $t6, $s6
+00256509 crc.w.w.w $a5, $a4, $s2
+002552f1 crc.w.w.w $t5, $s0, $t8
+002515c3 crc.w.w.w $sp, $t2, $a1
+00254aaa crc.w.w.w $a6, $r21, $t6
+00256468 crc.w.w.w $a4, $sp, $s2
+0025321a crc.w.w.w $s3, $t4, $t0
+002533f8 crc.w.w.w $s1, $s8, $t0
+0025714a crc.w.w.w $a6, $a6, $s5
+0025f805 crc.w.d.w $a1, $zero, $s7
+0025dc10 crc.w.d.w $t4, $zero, $s0
+0025c4c9 crc.w.d.w $a5, $a2, $t5
+0025aac0 crc.w.d.w $zero, $fp, $a6
+0025becf crc.w.d.w $t3, $fp, $t3
+0025fa3d crc.w.d.w $s6, $t5, $s7
+0025c3a2 crc.w.d.w $tp, $s6, $t4
+0025e774 crc.w.d.w $t8, $s4, $s2
+0025da79 crc.w.d.w $s2, $t7, $fp
+0025c4e9 crc.w.d.w $a5, $a3, $t5
+00265693 crcc.w.b.w $t7, $t8, $r21
+00267448 crcc.w.b.w $a4, $tp, $s6
+002675c1 crcc.w.b.w $ra, $t2, $s6
+00265269 crcc.w.b.w $a5, $t7, $t8
+00263466 crcc.w.b.w $a2, $sp, $t1
+00267563 crcc.w.b.w $sp, $a7, $s6
+00264cb7 crcc.w.b.w $s0, $a1, $t7
+00263379 crcc.w.b.w $s2, $s4, $t0
+00260012 crcc.w.b.w $t6, $zero, $zero
+00262b84 crcc.w.b.w $a0, $s5, $a6
+0026cf09 crcc.w.h.w $a5, $s1, $t7
+0026d9c4 crcc.w.h.w $a0, $t2, $fp
+0026946e crcc.w.h.w $t2, $sp, $a1
+0026b695 crcc.w.h.w $r21, $t8, $t1
+0026a848 crcc.w.h.w $a4, $tp, $a6
+0026e4a4 crcc.w.h.w $a0, $a1, $s2
+00268b8a crcc.w.h.w $a6, $s5, $tp
+002684a7 crcc.w.h.w $a3, $a1, $ra
+0026d22f crcc.w.h.w $t3, $t5, $t8
+0026a67e crcc.w.h.w $s7, $t7, $a5
+002756c9 crcc.w.w.w $a5, $fp, $r21
+002779fd crcc.w.w.w $s6, $t3, $s7
+0027103e crcc.w.w.w $s7, $ra, $a0
+002721ee crcc.w.w.w $t2, $t3, $a4
+0027287b crcc.w.w.w $s4, $sp, $a6
+00277b43 crcc.w.w.w $sp, $s3, $s7
+00271b50 crcc.w.w.w $t4, $s3, $a2
+002772a6 crcc.w.w.w $a2, $r21, $s5
+00270aba crcc.w.w.w $s3, $r21, $tp
+00277370 crcc.w.w.w $t4, $s4, $s5
+00279f1e crcc.w.d.w $s7, $s1, $a3
+0027dd5f crcc.w.d.w $s8, $a6, $s0
+0027deee crcc.w.d.w $t2, $s0, $s0
+00278f43 crcc.w.d.w $sp, $s3, $sp
+0027aac2 crcc.w.d.w $tp, $fp, $a6
+0027ba74 crcc.w.d.w $t8, $t7, $t2
+0027a68b crcc.w.d.w $a7, $t8, $a5
+0027d10f crcc.w.d.w $t3, $a4, $t8
+0027c339 crcc.w.d.w $s2, $s2, $t4
+0027c0b6 crcc.w.d.w $fp, $a1, $t4
+002a2559 break 0x2559
+002a3f95 break 0x3f95
+002a690e break 0x690e
+002a026b break 0x26b
+002a79ba break 0x79ba
+002a4690 break 0x4690
+002a0583 break 0x583
+002a47fc break 0x47fc
+002a2cfb break 0x2cfb
+002a752d break 0x752d
+002ab7af dbcl 0x37af
+002afa89 dbcl 0x7a89
+002a9cad dbcl 0x1cad
+002af4a5 dbcl 0x74a5
+002aa336 dbcl 0x2336
+002aaa7d dbcl 0x2a7d
+002aa2c1 dbcl 0x22c1
+002a8cfc dbcl 0xcfc
+002afae5 dbcl 0x7ae5
+002aefc9 dbcl 0x6fc9
+002b0d2a syscall 0xd2a
+002b1cdb syscall 0x1cdb
+002b43f8 syscall 0x43f8
+002b1a7a syscall 0x1a7a
+002b1071 syscall 0x1071
+002b37a5 syscall 0x37a5
+002b782e syscall 0x782e
+002b08b3 syscall 0x8b3
+002b131b syscall 0x131b
+002b29c4 syscall 0x29c4
+002cdaee alsl.d $t2, $s0, $fp, 0x2
+002d78ac alsl.d $t0, $a1, $s7, 0x3
+002d6b47 alsl.d $a3, $s3, $s3, 0x3
+002d5526 alsl.d $a2, $a5, $r21, 0x3
+002d37f7 alsl.d $s0, $s8, $t1, 0x3
+002cc58a alsl.d $a6, $t0, $t5, 0x2
+002d2ed6 alsl.d $fp, $fp, $a7, 0x3
+002d56e3 alsl.d $sp, $s0, $r21, 0x3
+002c07c6 alsl.d $a2, $s7, $ra, 0x1
+002c2ce7 alsl.d $a3, $a3, $a7, 0x1
+004087f3 slli.w $t7, $s8, 0x1
+00408041 slli.w $ra, $tp, 0x0
+00409dad slli.w $t1, $t1, 0x7
+0040cf61 slli.w $ra, $s4, 0x13
+0040d232 slli.w $t6, $t5, 0x14
+0040ed39 slli.w $s2, $a5, 0x1b
+00408009 slli.w $a5, $zero, 0x0
+0040af6d slli.w $t1, $s4, 0xb
+0040eb77 slli.w $s0, $s4, 0x1a
+0040fa3e slli.w $s7, $t5, 0x1e
+004182e6 slli.d $a2, $s0, 0x20
+0041c381 slli.d $ra, $s5, 0x30
+004152ee slli.d $t2, $s0, 0x14
+004122ab slli.d $a7, $r21, 0x8
+0041286f slli.d $t3, $sp, 0xa
+00413231 slli.d $t5, $t5, 0xc
+00417ba4 slli.d $a0, $s6, 0x1e
+0041b8cc slli.d $t0, $a2, 0x2e
+00414fc6 slli.d $a2, $s7, 0x13
+0041b4cd slli.d $t1, $a2, 0x2d
+0044a564 srli.w $a0, $a7, 0x9
+0044ffcc srli.w $t0, $s7, 0x1f
+00448304 srli.w $a0, $s1, 0x0
+00449557 srli.w $s0, $a6, 0x5
+0044d294 srli.w $t8, $t8, 0x14
+0044b959 srli.w $s2, $a6, 0xe
+0044982b srli.w $a7, $ra, 0x6
+0044ab19 srli.w $s2, $s1, 0xa
+0044e470 srli.w $t4, $sp, 0x19
+0044a457 srli.w $s0, $tp, 0x9
+0045c128 srli.d $a4, $a5, 0x30
+00453770 srli.d $t4, $s4, 0xd
+00459474 srli.d $t8, $sp, 0x25
+004581d1 srli.d $t5, $t2, 0x20
+00459a8e srli.d $t2, $t8, 0x26
+0045b524 srli.d $a0, $a5, 0x2d
+0045e48d srli.d $t1, $a0, 0x39
+0045d206 srli.d $a2, $t4, 0x34
+004573be srli.d $s7, $s6, 0x1c
+00454fe8 srli.d $a4, $s8, 0x13
+0048c87f srai.w $s8, $sp, 0x12
+0048b1cf srai.w $t3, $t2, 0xc
+0048f483 srai.w $sp, $a0, 0x1d
+0048eb27 srai.w $a3, $s2, 0x1a
+0048f7c4 srai.w $a0, $s7, 0x1d
+0048f318 srai.w $s1, $s1, 0x1c
+00488f31 srai.w $t5, $s2, 0x3
+00488ae8 srai.w $a4, $s0, 0x2
+0048afe6 srai.w $a2, $s8, 0xb
+0048aee2 srai.w $tp, $s0, 0xb
+004945f2 srai.d $t6, $t3, 0x11
+0049d370 srai.d $t4, $s4, 0x34
+00497dea srai.d $a6, $t3, 0x1f
+0049ea76 srai.d $fp, $t7, 0x3a
+00493ffa srai.d $s3, $s8, 0xf
+0049c42b srai.d $a7, $ra, 0x31
+00491377 srai.d $s0, $s4, 0x4
+0049b19f srai.d $s8, $t0, 0x2c
+00498e1d srai.d $s6, $t4, 0x23
+00493275 srai.d $r21, $t7, 0xc
+004c87ea rotri.w $a6, $s8, 0x1
+004cef44 rotri.w $a0, $s3, 0x1b
+004c9879 rotri.w $s2, $sp, 0x6
+004cb8f8 rotri.w $s1, $a3, 0xe
+004cde2b rotri.w $a7, $t5, 0x17
+004c8330 rotri.w $t4, $s2, 0x0
+004cf6f0 rotri.w $t4, $s0, 0x1d
+004cbcf2 rotri.w $t6, $a3, 0xf
+004ca848 rotri.w $a4, $tp, 0xa
+004cdfae rotri.w $t2, $s6, 0x17
+004d2f86 rotri.d $a2, $s5, 0xb
+004df286 rotri.d $a2, $t8, 0x3c
+004d823a rotri.d $s3, $t5, 0x20
+004d1313 rotri.d $t7, $s1, 0x4
+004d81e0 rotri.d $zero, $t3, 0x20
+004df89a rotri.d $s3, $a0, 0x3e
+004d4562 rotri.d $tp, $a7, 0x11
+004dfd27 rotri.d $a3, $a5, 0x3f
+004d2edb rotri.d $s4, $fp, 0xb
+004dac8d rotri.d $t1, $a0, 0x2b
+00786312 bstrins.w $t6, $s1, 0x18, 0x18
+00670bb6 bstrins.w $fp, $s6, 0x7, 0x2
+006909bf bstrins.w $s8, $t1, 0x9, 0x2
+00634608 bstrins.w $a4, $t4, 0x3, 0x11
+00772908 bstrins.w $a4, $a4, 0x17, 0xa
+007e1055 bstrins.w $r21, $tp, 0x1e, 0x4
+00754f2f bstrins.w $t3, $s2, 0x15, 0x13
+006f717a bstrins.w $s3, $a7, 0xf, 0x1c
+007f738d bstrins.w $t1, $s5, 0x1f, 0x1c
+006f730c bstrins.w $t0, $s1, 0xf, 0x1c
+0073ec41 bstrpick.w $ra, $tp, 0x13, 0x1b
+007bc243 bstrpick.w $sp, $t6, 0x1b, 0x10
+00608f4c bstrpick.w $t0, $s3, 0x0, 0x3
+0077fde7 bstrpick.w $a3, $t3, 0x17, 0x1f
+0062fd65 bstrpick.w $a1, $a7, 0x2, 0x1f
+006ae041 bstrpick.w $ra, $tp, 0xa, 0x18
+0060802a bstrpick.w $a6, $ra, 0x0, 0x0
+00608643 bstrpick.w $sp, $t6, 0x0, 0x1
+006c9b90 bstrpick.w $t4, $s5, 0xc, 0x6
+0066b6c8 bstrpick.w $a4, $fp, 0x6, 0xd
+00822eba bstrins.d $s3, $r21, 0x2, 0xb
+00ae86c3 bstrins.d $sp, $fp, 0x2e, 0x21
+00845922 bstrins.d $tp, $a5, 0x4, 0x16
+00a0d86e bstrins.d $t2, $sp, 0x20, 0x36
+0093881a bstrins.d $s3, $zero, 0x13, 0x22
+00a85e56 bstrins.d $fp, $t6, 0x28, 0x17
+0086e801 bstrins.d $ra, $zero, 0x6, 0x3a
+00aff831 bstrins.d $t5, $ra, 0x2f, 0x3e
+00a45e57 bstrins.d $s0, $t6, 0x24, 0x17
+00bac9f2 bstrins.d $t6, $t3, 0x3a, 0x32
+00f0dc1c bstrpick.d $s5, $zero, 0x30, 0x37
+00ed369e bstrpick.d $s7, $t8, 0x2d, 0xd
+00d4cf6e bstrpick.d $t2, $s4, 0x14, 0x33
+00fa79da bstrpick.d $s3, $t2, 0x3a, 0x1e
+00f6d18e bstrpick.d $t2, $t0, 0x36, 0x34
+00ebacad bstrpick.d $t1, $a1, 0x2b, 0x2b
+00d01eb8 bstrpick.d $s1, $r21, 0x10, 0x7
+00cb91df bstrpick.d $s8, $t2, 0xb, 0x24
+00cf8019 bstrpick.d $s2, $zero, 0xf, 0x20
+00d5cb18 bstrpick.d $s1, $s1, 0x15, 0x32
+0100bad0 fadd.s $ft8, $ft14, $ft6
+01009dcf fadd.s $ft7, $ft6, $fa7
+0100b98a fadd.s $ft2, $ft4, $ft6
+01009bb6 fadd.s $ft14, $fs5, $fa6
+0100de13 fadd.s $ft11, $ft8, $ft15
+0100b186 fadd.s $fa6, $ft4, $ft4
+0100f167 fadd.s $fa7, $ft3, $fs4
+0100ac40 fadd.s $fa0, $fa2, $ft3
+0100e039 fadd.s $fs1, $fa1, $fs0
+01009b8a fadd.s $ft2, $fs4, $fa6
+01010335 fadd.d $ft13, $fs1, $fa0
+01014333 fadd.d $ft11, $fs1, $ft8
+010176c0 fadd.d $fa0, $ft14, $fs5
+01012621 fadd.d $fa1, $ft9, $ft1
+01012a5b fadd.d $fs3, $ft10, $ft2
+01014cbf fadd.d $fs7, $fa5, $ft11
+01014fd7 fadd.d $ft15, $fs6, $ft11
+01014d9a fadd.d $fs2, $ft4, $ft11
+0101714b fadd.d $ft3, $ft2, $fs4
+010138e3 fadd.d $fa3, $fa7, $ft6
+0102f64e fsub.s $ft6, $ft10, $fs5
+01029ac2 fsub.s $fa2, $ft14, $fa6
+0102d89a fsub.s $fs2, $fa4, $ft14
+0102d063 fsub.s $fa3, $fa3, $ft12
+0102cc0b fsub.s $ft3, $fa0, $ft11
+0102aac0 fsub.s $fa0, $ft14, $ft2
+0102aace fsub.s $ft6, $ft14, $ft2
+0102e098 fsub.s $fs0, $fa4, $fs0
+0102b95e fsub.s $fs6, $ft2, $ft6
+0102c6db fsub.s $fs3, $ft14, $ft9
+01032fbf fsub.d $fs7, $fs5, $ft3
+01033aea fsub.d $ft2, $ft15, $ft6
+01035847 fsub.d $fa7, $fa2, $ft14
+01032cf1 fsub.d $ft9, $fa7, $ft3
+01036437 fsub.d $ft15, $fa1, $fs1
+01037c6b fsub.d $ft3, $fa3, $fs7
+01034ba6 fsub.d $fa6, $fs5, $ft10
+01030a11 fsub.d $ft9, $ft8, $fa2
+01033fc9 fsub.d $ft1, $fs6, $ft7
+010360cf fsub.d $ft7, $fa6, $fs0
+0104bdf2 fmul.s $ft10, $ft7, $ft7
+01048286 fmul.s $fa6, $ft12, $fa0
+0104f227 fmul.s $fa7, $ft9, $fs4
+0104dadc fmul.s $fs4, $ft14, $ft14
+0104e3fb fmul.s $fs3, $fs7, $fs0
+01049b02 fmul.s $fa2, $fs0, $fa6
+010497bb fmul.s $fs3, $fs5, $fa5
+0104979d fmul.s $fs5, $fs4, $fa5
+0104a89c fmul.s $fs4, $fa4, $ft2
+01049558 fmul.s $fs0, $ft2, $fa5
+01053d02 fmul.d $fa2, $ft0, $ft7
+01053cca fmul.d $ft2, $fa6, $ft7
+0105003f fmul.d $fs7, $fa1, $fa0
+01050d65 fmul.d $fa5, $ft3, $fa3
+01054fb8 fmul.d $fs0, $fs5, $ft11
+01053373 fmul.d $ft11, $fs3, $ft4
+01050592 fmul.d $ft10, $ft4, $fa1
+01050a52 fmul.d $ft10, $ft10, $fa2
+0105651e fmul.d $fs6, $ft0, $fs1
+010521f8 fmul.d $fs0, $ft7, $ft0
+0106c4a4 fdiv.s $fa4, $fa5, $ft9
+0106ba42 fdiv.s $fa2, $ft10, $ft6
+0106a2b6 fdiv.s $ft14, $ft13, $ft0
+010691ab fdiv.s $ft3, $ft5, $fa4
+0106d559 fdiv.s $fs1, $ft2, $ft13
+0106fa1f fdiv.s $fs7, $ft8, $fs6
+01068cbe fdiv.s $fs6, $fa5, $fa3
+01068f27 fdiv.s $fa7, $fs1, $fa3
+01068995 fdiv.s $ft13, $ft4, $fa2
+0106ffd1 fdiv.s $ft9, $fs6, $fs7
+01070524 fdiv.d $fa4, $ft1, $fa1
+0107555b fdiv.d $fs3, $ft2, $ft13
+01071d4c fdiv.d $ft4, $ft2, $fa7
+01074381 fdiv.d $fa1, $fs4, $ft8
+010739be fdiv.d $fs6, $ft5, $ft6
+0107129e fdiv.d $fs6, $ft12, $fa4
+01076a01 fdiv.d $fa1, $ft8, $fs2
+01072cc1 fdiv.d $fa1, $fa6, $ft3
+01073cf3 fdiv.d $ft11, $fa7, $ft7
+0107255e fdiv.d $fs6, $ft2, $ft1
+0108c036 fmax.s $ft14, $fa1, $ft8
+0108bbc6 fmax.s $fa6, $fs6, $ft6
+0108fa1b fmax.s $fs3, $ft8, $fs6
+0108bd98 fmax.s $fs0, $ft4, $ft7
+0108a5d0 fmax.s $ft8, $ft6, $ft1
+0108c50a fmax.s $ft2, $ft0, $ft9
+010881cb fmax.s $ft3, $ft6, $fa0
+0108d9a6 fmax.s $fa6, $ft5, $ft14
+0108b38d fmax.s $ft5, $fs4, $ft4
+0108b474 fmax.s $ft12, $fa3, $ft5
+010946fe fmax.d $fs6, $ft15, $ft9
+010919bf fmax.d $fs7, $ft5, $fa6
+01096978 fmax.d $fs0, $ft3, $fs2
+010925b2 fmax.d $ft10, $ft5, $ft1
+010976b7 fmax.d $ft15, $ft13, $fs5
+0109637f fmax.d $fs7, $fs3, $fs0
+0109323f fmax.d $fs7, $ft9, $ft4
+01093c03 fmax.d $fa3, $fa0, $ft7
+01093a98 fmax.d $fs0, $ft12, $ft6
+01093731 fmax.d $ft9, $fs1, $ft5
+010aacec fmin.s $ft4, $fa7, $ft3
+010a8441 fmin.s $fa1, $fa2, $fa1
+010aa6cd fmin.s $ft5, $ft14, $ft1
+010aafac fmin.s $ft4, $fs5, $ft3
+010acfa5 fmin.s $fa5, $fs5, $ft11
+010af050 fmin.s $ft8, $fa2, $fs4
+010a835f fmin.s $fs7, $fs2, $fa0
+010afff1 fmin.s $ft9, $fs7, $fs7
+010aa1c4 fmin.s $fa4, $ft6, $ft0
+010ae212 fmin.s $ft10, $ft8, $fs0
+010b4926 fmin.d $fa6, $ft1, $ft10
+010b406c fmin.d $ft4, $fa3, $ft8
+010b0f27 fmin.d $fa7, $fs1, $fa3
+010b5933 fmin.d $ft11, $ft1, $ft14
+010b7d1b fmin.d $fs3, $ft0, $fs7
+010b0874 fmin.d $ft12, $fa3, $fa2
+010b516c fmin.d $ft4, $ft3, $ft12
+010b28f5 fmin.d $ft13, $fa7, $ft2
+010b6a95 fmin.d $ft13, $ft12, $fs2
+010b4653 fmin.d $ft11, $ft10, $ft9
+010ced30 fmaxa.s $ft8, $ft1, $fs3
+010cdca6 fmaxa.s $fa6, $fa5, $ft15
+010cfb63 fmaxa.s $fa3, $fs3, $fs6
+010cb7a0 fmaxa.s $fa0, $fs5, $ft5
+010cb56d fmaxa.s $ft5, $ft3, $ft5
+010c8b9f fmaxa.s $fs7, $fs4, $fa2
+010ca99c fmaxa.s $fs4, $ft4, $ft2
+010cf3cb fmaxa.s $ft3, $fs6, $fs4
+010cec62 fmaxa.s $fa2, $fa3, $fs3
+010c95c5 fmaxa.s $fa5, $ft6, $fa5
+010d355b fmaxa.d $fs3, $ft2, $ft5
+010d0476 fmaxa.d $ft14, $fa3, $fa1
+010d5066 fmaxa.d $fa6, $fa3, $ft12
+010d254c fmaxa.d $ft4, $ft2, $ft1
+010d4ca0 fmaxa.d $fa0, $fa5, $ft11
+010d35bd fmaxa.d $fs5, $ft5, $ft5
+010d0f87 fmaxa.d $fa7, $fs4, $fa3
+010d40ec fmaxa.d $ft4, $fa7, $ft8
+010d7b58 fmaxa.d $fs0, $fs2, $fs6
+010d0a11 fmaxa.d $ft9, $ft8, $fa2
+010e9f16 fmina.s $ft14, $fs0, $fa7
+010e9525 fmina.s $fa5, $ft1, $fa5
+010eab06 fmina.s $fa6, $fs0, $ft2
+010e9404 fmina.s $fa4, $fa0, $fa5
+010ed7bd fmina.s $fs5, $fs5, $ft13
+010e9774 fmina.s $ft12, $fs3, $fa5
+010e89a4 fmina.s $fa4, $ft5, $fa2
+010eac94 fmina.s $ft12, $fa4, $ft3
+010eab25 fmina.s $fa5, $fs1, $ft2
+010e96d7 fmina.s $ft15, $ft14, $fa5
+010f2de9 fmina.d $ft1, $ft7, $ft3
+010f3efd fmina.d $fs5, $ft15, $ft7
+010f152a fmina.d $ft2, $ft1, $fa5
+010f1bd6 fmina.d $ft14, $fs6, $fa6
+010f29eb fmina.d $ft3, $ft7, $ft2
+010f5fb5 fmina.d $ft13, $fs5, $ft15
+010f409c fmina.d $fs4, $fa4, $ft8
+010f5d36 fmina.d $ft14, $ft1, $ft15
+010f2871 fmina.d $ft9, $fa3, $ft2
+010f5ba5 fmina.d $fa5, $fs5, $ft14
+0110ba50 fscaleb.s $ft8, $ft10, $ft6
+011099bf fscaleb.s $fs7, $ft5, $fa6
+0110a689 fscaleb.s $ft1, $ft12, $ft1
+0110e9ca fscaleb.s $ft2, $ft6, $fs2
+0110e072 fscaleb.s $ft10, $fa3, $fs0
+0110faef fscaleb.s $ft7, $ft15, $fs6
+01109276 fscaleb.s $ft14, $ft11, $fa4
+0110f751 fscaleb.s $ft9, $fs2, $fs5
+0110e438 fscaleb.s $fs0, $fa1, $fs1
+01109a8f fscaleb.s $ft7, $ft12, $fa6
+011108b6 fscaleb.d $ft14, $fa5, $fa2
+01115af9 fscaleb.d $fs1, $ft15, $ft14
+01111fa7 fscaleb.d $fa7, $fs5, $fa7
+0111619a fscaleb.d $fs2, $ft4, $fs0
+011172c4 fscaleb.d $fa4, $ft14, $fs4
+01114fd6 fscaleb.d $ft14, $fs6, $ft11
+011170c0 fscaleb.d $fa0, $fa6, $fs4
+011113f2 fscaleb.d $ft10, $fs7, $fa4
+01113350 fscaleb.d $ft8, $fs2, $ft4
+011162f6 fscaleb.d $ft14, $ft15, $fs0
+0112d4b9 fcopysign.s $fs1, $fa5, $ft13
+0112d6be fcopysign.s $fs6, $ft13, $ft13
+0112be38 fcopysign.s $fs0, $ft9, $ft7
+01128110 fcopysign.s $ft8, $ft0, $fa0
+01128bea fcopysign.s $ft2, $fs7, $fa2
+0112e164 fcopysign.s $fa4, $ft3, $fs0
+0112b390 fcopysign.s $ft8, $fs4, $ft4
+0112e198 fcopysign.s $fs0, $ft4, $fs0
+0112c9d3 fcopysign.s $ft11, $ft6, $ft10
+01129b76 fcopysign.s $ft14, $fs3, $fa6
+011303a9 fcopysign.d $ft1, $fs5, $fa0
+0113639f fcopysign.d $fs7, $fs4, $fs0
+01130f38 fcopysign.d $fs0, $fs1, $fa3
+01137d0a fcopysign.d $ft2, $ft0, $fs7
+011314a0 fcopysign.d $fa0, $fa5, $fa5
+011341cd fcopysign.d $ft5, $ft6, $ft8
+01133ea8 fcopysign.d $ft0, $ft13, $ft7
+011366ef fcopysign.d $ft7, $ft15, $fs1
+01132875 fcopysign.d $ft13, $fa3, $ft2
+01135c95 fcopysign.d $ft13, $fa4, $ft15
+01140657 fabs.s $ft15, $ft10
+01140602 fabs.s $fa2, $ft8
+011407f1 fabs.s $ft9, $fs7
+011406a1 fabs.s $fa1, $ft13
+0114064f fabs.s $ft7, $ft10
+0114064b fabs.s $ft3, $ft10
+011404e3 fabs.s $fa3, $fa7
+01140408 fabs.s $ft0, $fa0
+0114050c fabs.s $ft4, $ft0
+011404cb fabs.s $ft3, $fa6
+0114097f fabs.d $fs7, $ft3
+01140bd3 fabs.d $ft11, $fs6
+01140b07 fabs.d $fa7, $fs0
+01140ab1 fabs.d $ft9, $ft13
+01140894 fabs.d $ft12, $fa4
+01140890 fabs.d $ft8, $fa4
+011408d7 fabs.d $ft15, $fa6
+01140981 fabs.d $fa1, $ft4
+01140806 fabs.d $fa6, $fa0
+01140be1 fabs.d $fa1, $fs7
+0114172d fneg.s $ft5, $fs1
+011414b4 fneg.s $ft12, $fa5
+0114179d fneg.s $fs5, $fs4
+01141485 fneg.s $fa5, $fa4
+01141629 fneg.s $ft1, $ft9
+01141634 fneg.s $ft12, $ft9
+01141464 fneg.s $fa4, $fa3
+011416da fneg.s $fs2, $ft14
+01141592 fneg.s $ft10, $ft4
+0114144b fneg.s $ft3, $fa2
+01141a95 fneg.d $ft13, $ft12
+011419c2 fneg.d $fa2, $ft6
+01141a61 fneg.d $fa1, $ft11
+011419eb fneg.d $ft3, $ft7
+01141b3c fneg.d $fs4, $fs1
+01141bbd fneg.d $fs5, $fs5
+0114187c fneg.d $fs4, $fa3
+0114194b fneg.d $ft3, $ft2
+01141af0 fneg.d $ft8, $ft15
+01141926 fneg.d $fa6, $ft1
+011424f6 flogb.s $ft14, $fa7
+011424b6 flogb.s $ft14, $fa5
+01142753 flogb.s $ft11, $fs2
+0114278e flogb.s $ft6, $fs4
+0114243c flogb.s $fs4, $fa1
+01142659 flogb.s $fs1, $ft10
+011427d7 flogb.s $ft15, $fs6
+011426d1 flogb.s $ft9, $ft14
+01142778 flogb.s $fs0, $fs3
+01142461 flogb.s $fa1, $fa3
+01142944 flogb.d $fa4, $ft2
+01142b83 flogb.d $fa3, $fs4
+011428bd flogb.d $fs5, $fa5
+01142a96 flogb.d $ft14, $ft12
+01142952 flogb.d $ft10, $ft2
+01142b28 flogb.d $ft0, $fs1
+01142859 flogb.d $fs1, $fa2
+0114284b flogb.d $ft3, $fa2
+01142b46 flogb.d $fa6, $fs2
+011428f1 flogb.d $ft9, $fa7
+0114372d fclass.s $ft5, $fs1
+011435f7 fclass.s $ft15, $ft7
+011437c7 fclass.s $fa7, $fs6
+011437c6 fclass.s $fa6, $fs6
+0114340c fclass.s $ft4, $fa0
+0114365d fclass.s $fs5, $ft10
+01143790 fclass.s $ft8, $fs4
+011436b6 fclass.s $ft14, $ft13
+011434a7 fclass.s $fa7, $fa5
+011437af fclass.s $ft7, $fs5
+0114391c fclass.d $fs4, $ft0
+011439cb fclass.d $ft3, $ft6
+01143941 fclass.d $fa1, $ft2
+01143bf7 fclass.d $ft15, $fs7
+0114384b fclass.d $ft3, $fa2
+0114391c fclass.d $fs4, $ft0
+01143954 fclass.d $ft12, $ft2
+01143893 fclass.d $ft11, $fa4
+01143803 fclass.d $fa3, $fa0
+01143adb fclass.d $fs3, $ft14
+011444a0 fsqrt.s $fa0, $fa5
+011445d0 fsqrt.s $ft8, $ft6
+01144703 fsqrt.s $fa3, $fs0
+011444b7 fsqrt.s $ft15, $fa5
+01144697 fsqrt.s $ft15, $ft12
+01144782 fsqrt.s $fa2, $fs4
+011447d2 fsqrt.s $ft10, $fs6
+0114451d fsqrt.s $fs5, $ft0
+01144558 fsqrt.s $fs0, $ft2
+01144712 fsqrt.s $ft10, $fs0
+0114496c fsqrt.d $ft4, $ft3
+011448a9 fsqrt.d $ft1, $fa5
+01144b61 fsqrt.d $fa1, $fs3
+01144933 fsqrt.d $ft11, $ft1
+0114487e fsqrt.d $fs6, $fa3
+01144a70 fsqrt.d $ft8, $ft11
+01144a7d fsqrt.d $fs5, $ft11
+011448de fsqrt.d $fs6, $fa6
+01144af1 fsqrt.d $ft9, $ft15
+01144817 fsqrt.d $ft15, $fa0
+011454ca frecip.s $ft2, $fa6
+0114540a frecip.s $ft2, $fa0
+0114570d frecip.s $ft5, $fs0
+01145644 frecip.s $fa4, $ft10
+0114552e frecip.s $ft6, $ft1
+011455d9 frecip.s $fs1, $ft6
+01145614 frecip.s $ft12, $ft8
+011456e2 frecip.s $fa2, $ft15
+01145524 frecip.s $fa4, $ft1
+01145488 frecip.s $ft0, $fa4
+011458f3 frecip.d $ft11, $fa7
+011458ab frecip.d $ft3, $fa5
+01145bb1 frecip.d $ft9, $fs5
+011459b8 frecip.d $fs0, $ft5
+011459aa frecip.d $ft2, $ft5
+01145b3d frecip.d $fs5, $fs1
+01145a03 frecip.d $fa3, $ft8
+01145939 frecip.d $fs1, $ft1
+01145b00 frecip.d $fa0, $fs0
+01145815 frecip.d $ft13, $fa0
+011465c8 frsqrt.s $ft0, $ft6
+01146539 frsqrt.s $fs1, $ft1
+011464dd frsqrt.s $fs5, $fa6
+01146461 frsqrt.s $fa1, $fa3
+0114670b frsqrt.s $ft3, $fs0
+011465da frsqrt.s $fs2, $ft6
+011465c8 frsqrt.s $ft0, $ft6
+011467d8 frsqrt.s $fs0, $fs6
+0114670e frsqrt.s $ft6, $fs0
+011467bf frsqrt.s $fs7, $fs5
+011468e1 frsqrt.d $fa1, $fa7
+01146a84 frsqrt.d $fa4, $ft12
+01146a21 frsqrt.d $fa1, $ft9
+01146834 frsqrt.d $ft12, $fa1
+011468e1 frsqrt.d $fa1, $fa7
+01146890 frsqrt.d $ft8, $fa4
+01146960 frsqrt.d $fa0, $ft3
+01146b20 frsqrt.d $fa0, $fs1
+0114699c frsqrt.d $fs4, $ft4
+01146aa2 frsqrt.d $fa2, $ft13
+01147723 frecipe.s $fa3, $fs1
+0114755d frecipe.s $fs5, $ft2
+01147657 frecipe.s $ft15, $ft10
+0114767a frecipe.s $fs2, $ft11
+0114763d frecipe.s $fs5, $ft9
+011475fd frecipe.s $fs5, $ft7
+011477d6 frecipe.s $ft14, $fs6
+0114765d frecipe.s $fs5, $ft10
+01147420 frecipe.s $fa0, $fa1
+011476fd frecipe.s $fs5, $ft15
+01147b10 frecipe.d $ft8, $fs0
+01147b8e frecipe.d $ft6, $fs4
+01147aef frecipe.d $ft7, $ft15
+01147b85 frecipe.d $fa5, $fs4
+01147929 frecipe.d $ft1, $ft1
+011479c4 frecipe.d $fa4, $ft6
+01147863 frecipe.d $fa3, $fa3
+01147bc5 frecipe.d $fa5, $fs6
+01147bf9 frecipe.d $fs1, $fs7
+011478fc frecipe.d $fs4, $fa7
+0114847e frsqrte.s $fs6, $fa3
+0114848b frsqrte.s $ft3, $fa4
+011484e8 frsqrte.s $ft0, $fa7
+011486fb frsqrte.s $fs3, $ft15
+0114865a frsqrte.s $fs2, $ft10
+01148687 frsqrte.s $fa7, $ft12
+011485ee frsqrte.s $ft6, $ft7
+0114842f frsqrte.s $ft7, $fa1
+01148456 frsqrte.s $ft14, $fa2
+01148707 frsqrte.s $fa7, $fs0
+01148bb7 frsqrte.d $ft15, $fs5
+01148a4a frsqrte.d $ft2, $ft10
+0114885d frsqrte.d $fs5, $fa2
+01148841 frsqrte.d $fa1, $fa2
+011489ab frsqrte.d $ft3, $ft5
+01148893 frsqrte.d $ft11, $fa4
+01148a83 frsqrte.d $fa3, $ft12
+011489bd frsqrte.d $fs5, $ft5
+011488bd frsqrte.d $fs5, $fa5
+01148a0d frsqrte.d $ft5, $ft8
+011497c1 fmov.s $fa1, $fs6
+01149408 fmov.s $ft0, $fa0
+01149725 fmov.s $fa5, $fs1
+011497c3 fmov.s $fa3, $fs6
+0114949d fmov.s $fs5, $fa4
+011495b9 fmov.s $fs1, $ft5
+01149692 fmov.s $ft10, $ft12
+011495fa fmov.s $fs2, $ft7
+0114967f fmov.s $fs7, $ft11
+01149515 fmov.s $ft13, $ft0
+01149aff fmov.d $fs7, $ft15
+01149a6c fmov.d $ft4, $ft11
+011498c6 fmov.d $fa6, $fa6
+01149901 fmov.d $fa1, $ft0
+01149a9a fmov.d $fs2, $ft12
+01149aca fmov.d $ft2, $ft14
+01149831 fmov.d $ft9, $fa1
+01149be0 fmov.d $fa0, $fs7
+01149a72 fmov.d $ft10, $ft11
+01149b66 fmov.d $fa6, $fs3
+0114a714 movgr2fr.w $ft12, $s1
+0114a6d7 movgr2fr.w $ft15, $fp
+0114a74a movgr2fr.w $ft2, $s3
+0114a53f movgr2fr.w $fs7, $a5
+0114a790 movgr2fr.w $ft8, $s5
+0114a479 movgr2fr.w $fs1, $sp
+0114a685 movgr2fr.w $fa5, $t8
+0114a403 movgr2fr.w $fa3, $zero
+0114a5ed movgr2fr.w $ft5, $t3
+0114a602 movgr2fr.w $fa2, $t4
+0114ab01 movgr2fr.d $fa1, $s1
+0114a851 movgr2fr.d $ft9, $tp
+0114ab35 movgr2fr.d $ft13, $s2
+0114aac3 movgr2fr.d $fa3, $fp
+0114a805 movgr2fr.d $fa5, $zero
+0114a811 movgr2fr.d $ft9, $zero
+0114ab68 movgr2fr.d $ft0, $s4
+0114a81a movgr2fr.d $fs2, $zero
+0114a869 movgr2fr.d $ft1, $sp
+0114a83b movgr2fr.d $fs3, $ra
+0114ae01 movgr2frh.w $fa1, $t4
+0114ae7c movgr2frh.w $fs4, $t7
+0114aefe movgr2frh.w $fs6, $s0
+0114ae81 movgr2frh.w $fa1, $t8
+0114ac8c movgr2frh.w $ft4, $a0
+0114ad97 movgr2frh.w $ft15, $t0
+0114af03 movgr2frh.w $fa3, $s1
+0114af82 movgr2frh.w $fa2, $s5
+0114af10 movgr2frh.w $ft8, $s1
+0114ac45 movgr2frh.w $fa5, $tp
+0114b7a6 movfr2gr.s $a2, $fs5
+0114b415 movfr2gr.s $r21, $fa0
+0114b4b3 movfr2gr.s $t7, $fa5
+0114b551 movfr2gr.s $t5, $ft2
+0114b528 movfr2gr.s $a4, $ft1
+0114b69b movfr2gr.s $s4, $ft12
+0114b723 movfr2gr.s $sp, $fs1
+0114b45e movfr2gr.s $s7, $fa2
+0114b679 movfr2gr.s $s2, $ft11
+0114b585 movfr2gr.s $a1, $ft4
+0114ba37 movfr2gr.d $s0, $ft9
+0114bb87 movfr2gr.d $a3, $fs4
+0114ba4c movfr2gr.d $t0, $ft10
+0114b9e7 movfr2gr.d $a3, $ft7
+0114b93a movfr2gr.d $s3, $ft1
+0114bbbf movfr2gr.d $s8, $fs5
+0114b879 movfr2gr.d $s2, $fa3
+0114bafa movfr2gr.d $s3, $ft15
+0114bac2 movfr2gr.d $tp, $ft14
+0114bb0a movfr2gr.d $a6, $fs0
+0114bd87 movfrh2gr.s $a3, $ft4
+0114be68 movfrh2gr.s $a4, $ft11
+0114bc83 movfrh2gr.s $sp, $fa4
+0114be48 movfrh2gr.s $a4, $ft10
+0114bc72 movfrh2gr.s $t6, $fa3
+0114be49 movfrh2gr.s $a5, $ft10
+0114bfcb movfrh2gr.s $a7, $fs6
+0114bd3b movfrh2gr.s $s4, $ft1
+0114be80 movfrh2gr.s $zero, $ft12
+0114bc69 movfrh2gr.s $a5, $fa3
+0114c3c0 movgr2fcsr $fcsr0, $s7
+0114c241 movgr2fcsr $fcsr1, $t6
+0114d1c1 movfr2cf $fcc1, $ft6
+0114d165 movfr2cf $fcc5, $ft3
+0114d2e6 movfr2cf $fcc6, $ft15
+0114d343 movfr2cf $fcc3, $fs2
+0114d1e7 movfr2cf $fcc7, $ft7
+0114d040 movfr2cf $fcc0, $fa2
+0114d3c3 movfr2cf $fcc3, $fs6
+0114d1c4 movfr2cf $fcc4, $ft6
+0114d181 movfr2cf $fcc1, $ft4
+0114d2a5 movfr2cf $fcc5, $ft13
+0114d4f4 movcf2fr $ft12, $fcc7
+0114d4f8 movcf2fr $fs0, $fcc7
+0114d4d5 movcf2fr $ft13, $fcc6
+0114d46b movcf2fr $ft3, $fcc3
+0114d464 movcf2fr $fa4, $fcc3
+0114d418 movcf2fr $fs0, $fcc0
+0114d433 movcf2fr $ft11, $fcc1
+0114d46d movcf2fr $ft5, $fcc3
+0114d428 movcf2fr $ft0, $fcc1
+0114d459 movcf2fr $fs1, $fcc2
+0114dac0 movgr2cf $fcc0, $fp
+0114db41 movgr2cf $fcc1, $s3
+0114d8e7 movgr2cf $fcc7, $a3
+0114d863 movgr2cf $fcc3, $sp
+0114d9a2 movgr2cf $fcc2, $t1
+0114da44 movgr2cf $fcc4, $t6
+0114d921 movgr2cf $fcc1, $a5
+0114dae4 movgr2cf $fcc4, $s0
+0114dbe2 movgr2cf $fcc2, $s8
+0114dbc3 movgr2cf $fcc3, $s7
+0114dc3e movcf2gr $s7, $fcc1
+0114dcf9 movcf2gr $s2, $fcc7
+0114dc0a movcf2gr $a6, $fcc0
+0114dc3f movcf2gr $s8, $fcc1
+0114dc0b movcf2gr $a7, $fcc0
+0114dcce movcf2gr $t2, $fcc6
+0114dca2 movcf2gr $tp, $fcc5
+0114dc80 movcf2gr $zero, $fcc4
+0114dc4e movcf2gr $t2, $fcc2
+0114dc9b movcf2gr $s4, $fcc4
+01191a2d fcvt.s.d $ft5, $ft9
+01191b9c fcvt.s.d $fs4, $fs4
+01191acf fcvt.s.d $ft7, $ft14
+01191acc fcvt.s.d $ft4, $ft14
+01191a1f fcvt.s.d $fs7, $ft8
+01191b64 fcvt.s.d $fa4, $fs3
+01191a1b fcvt.s.d $fs3, $ft8
+01191ba0 fcvt.s.d $fa0, $fs5
+01191838 fcvt.s.d $fs0, $fa1
+01191bb9 fcvt.s.d $fs1, $fs5
+0119259c fcvt.d.s $fs4, $ft4
+0119240c fcvt.d.s $ft4, $fa0
+011925c8 fcvt.d.s $ft0, $ft6
+011927ee fcvt.d.s $ft6, $fs7
+011926a3 fcvt.d.s $fa3, $ft13
+0119255e fcvt.d.s $fs6, $ft2
+011925d5 fcvt.d.s $ft13, $ft6
+011926d8 fcvt.d.s $fs0, $ft14
+01192407 fcvt.d.s $fa7, $fa0
+0119254e fcvt.d.s $ft6, $ft2
+011a065b ftintrm.w.s $fs3, $ft10
+011a041e ftintrm.w.s $fs6, $fa0
+011a063e ftintrm.w.s $fs6, $ft9
+011a0709 ftintrm.w.s $ft1, $fs0
+011a040e ftintrm.w.s $ft6, $fa0
+011a053d ftintrm.w.s $fs5, $ft1
+011a06fb ftintrm.w.s $fs3, $ft15
+011a04d0 ftintrm.w.s $ft8, $fa6
+011a0449 ftintrm.w.s $ft1, $fa2
+011a078b ftintrm.w.s $ft3, $fs4
+011a086c ftintrm.w.d $ft4, $fa3
+011a0ae4 ftintrm.w.d $fa4, $ft15
+011a096e ftintrm.w.d $ft6, $ft3
+011a0b28 ftintrm.w.d $ft0, $fs1
+011a0aa0 ftintrm.w.d $fa0, $ft13
+011a0911 ftintrm.w.d $ft9, $ft0
+011a0a7b ftintrm.w.d $fs3, $ft11
+011a0b42 ftintrm.w.d $fa2, $fs2
+011a098e ftintrm.w.d $ft6, $ft4
+011a0934 ftintrm.w.d $ft12, $ft1
+011a2518 ftintrm.l.s $fs0, $ft0
+011a2633 ftintrm.l.s $ft11, $ft9
+011a2677 ftintrm.l.s $ft15, $ft11
+011a25de ftintrm.l.s $fs6, $ft6
+011a27c1 ftintrm.l.s $fa1, $fs6
+011a27f9 ftintrm.l.s $fs1, $fs7
+011a263e ftintrm.l.s $fs6, $ft9
+011a25ae ftintrm.l.s $ft6, $ft5
+011a2770 ftintrm.l.s $ft8, $fs3
+011a2405 ftintrm.l.s $fa5, $fa0
+011a2805 ftintrm.l.d $fa5, $fa0
+011a2ae0 ftintrm.l.d $fa0, $ft15
+011a2861 ftintrm.l.d $fa1, $fa3
+011a286b ftintrm.l.d $ft3, $fa3
+011a2837 ftintrm.l.d $ft15, $fa1
+011a2a92 ftintrm.l.d $ft10, $ft12
+011a2bed ftintrm.l.d $ft5, $fs7
+011a29f6 ftintrm.l.d $ft14, $ft7
+011a2a38 ftintrm.l.d $fs0, $ft9
+011a2b39 ftintrm.l.d $fs1, $fs1
+011a4575 ftintrp.w.s $ft13, $ft3
+011a4434 ftintrp.w.s $ft12, $fa1
+011a4630 ftintrp.w.s $ft8, $ft9
+011a4522 ftintrp.w.s $fa2, $ft1
+011a46af ftintrp.w.s $ft7, $ft13
+011a4767 ftintrp.w.s $fa7, $fs3
+011a46f2 ftintrp.w.s $ft10, $ft15
+011a4771 ftintrp.w.s $ft9, $fs3
+011a4717 ftintrp.w.s $ft15, $fs0
+011a4627 ftintrp.w.s $fa7, $ft9
+011a482e ftintrp.w.d $ft6, $fa1
+011a4aa5 ftintrp.w.d $fa5, $ft13
+011a4a9b ftintrp.w.d $fs3, $ft12
+011a4825 ftintrp.w.d $fa5, $fa1
+011a4886 ftintrp.w.d $fa6, $fa4
+011a4af8 ftintrp.w.d $fs0, $ft15
+011a4b89 ftintrp.w.d $ft1, $fs4
+011a4b8a ftintrp.w.d $ft2, $fs4
+011a4b1e ftintrp.w.d $fs6, $fs0
+011a4934 ftintrp.w.d $ft12, $ft1
+011a675c ftintrp.l.s $fs4, $fs2
+011a65bd ftintrp.l.s $fs5, $ft5
+011a6590 ftintrp.l.s $ft8, $ft4
+011a6501 ftintrp.l.s $fa1, $ft0
+011a6579 ftintrp.l.s $fs1, $ft3
+011a65bf ftintrp.l.s $fs7, $ft5
+011a64a9 ftintrp.l.s $ft1, $fa5
+011a67f9 ftintrp.l.s $fs1, $fs7
+011a648b ftintrp.l.s $ft3, $fa4
+011a6408 ftintrp.l.s $ft0, $fa0
+011a6ac5 ftintrp.l.d $fa5, $ft14
+011a69c3 ftintrp.l.d $fa3, $ft6
+011a6863 ftintrp.l.d $fa3, $fa3
+011a6993 ftintrp.l.d $ft11, $ft4
+011a6ade ftintrp.l.d $fs6, $ft14
+011a6a13 ftintrp.l.d $ft11, $ft8
+011a6afe ftintrp.l.d $fs6, $ft15
+011a6b4d ftintrp.l.d $ft5, $fs2
+011a6a27 ftintrp.l.d $fa7, $ft9
+011a6bdb ftintrp.l.d $fs3, $fs6
+011a85ec ftintrz.w.s $ft4, $ft7
+011a8540 ftintrz.w.s $fa0, $ft2
+011a84e3 ftintrz.w.s $fa3, $fa7
+011a840b ftintrz.w.s $ft3, $fa0
+011a8612 ftintrz.w.s $ft10, $ft8
+011a8436 ftintrz.w.s $ft14, $fa1
+011a8799 ftintrz.w.s $fs1, $fs4
+011a84c9 ftintrz.w.s $ft1, $fa6
+011a8670 ftintrz.w.s $ft8, $ft11
+011a8403 ftintrz.w.s $fa3, $fa0
+011a8adc ftintrz.w.d $fs4, $ft14
+011a89c4 ftintrz.w.d $fa4, $ft6
+011a8b8b ftintrz.w.d $ft3, $fs4
+011a8864 ftintrz.w.d $fa4, $fa3
+011a89eb ftintrz.w.d $ft3, $ft7
+011a8b79 ftintrz.w.d $fs1, $fs3
+011a8a7c ftintrz.w.d $fs4, $ft11
+011a89d9 ftintrz.w.d $fs1, $ft6
+011a8930 ftintrz.w.d $ft8, $ft1
+011a88e5 ftintrz.w.d $fa5, $fa7
+011aa7bb ftintrz.l.s $fs3, $fs5
+011aa759 ftintrz.l.s $fs1, $fs2
+011aa6ed ftintrz.l.s $ft5, $ft15
+011aa654 ftintrz.l.s $ft12, $ft10
+011aa6dc ftintrz.l.s $fs4, $ft14
+011aa598 ftintrz.l.s $fs0, $ft4
+011aa4bc ftintrz.l.s $fs4, $fa5
+011aa420 ftintrz.l.s $fa0, $fa1
+011aa5af ftintrz.l.s $ft7, $ft5
+011aa4c2 ftintrz.l.s $fa2, $fa6
+011aa918 ftintrz.l.d $fs0, $ft0
+011aa89b ftintrz.l.d $fs3, $fa4
+011aab66 ftintrz.l.d $fa6, $fs3
+011aa937 ftintrz.l.d $ft15, $ft1
+011aaa86 ftintrz.l.d $fa6, $ft12
+011aab49 ftintrz.l.d $ft1, $fs2
+011aa966 ftintrz.l.d $fa6, $ft3
+011aa832 ftintrz.l.d $ft10, $fa1
+011aa9a9 ftintrz.l.d $ft1, $ft5
+011aab24 ftintrz.l.d $fa4, $fs1
+011ac47b ftintrne.w.s $fs3, $fa3
+011ac6e9 ftintrne.w.s $ft1, $ft15
+011ac57f ftintrne.w.s $fs7, $ft3
+011ac697 ftintrne.w.s $ft15, $ft12
+011ac56a ftintrne.w.s $ft2, $ft3
+011ac54f ftintrne.w.s $ft7, $ft2
+011ac79d ftintrne.w.s $fs5, $fs4
+011ac4d7 ftintrne.w.s $ft15, $fa6
+011ac689 ftintrne.w.s $ft1, $ft12
+011ac47a ftintrne.w.s $fs2, $fa3
+011ac99e ftintrne.w.d $fs6, $ft4
+011acb43 ftintrne.w.d $fa3, $fs2
+011acb4c ftintrne.w.d $ft4, $fs2
+011aca44 ftintrne.w.d $fa4, $ft10
+011acb90 ftintrne.w.d $ft8, $fs4
+011acb1b ftintrne.w.d $fs3, $fs0
+011ac9e7 ftintrne.w.d $fa7, $ft7
+011ac814 ftintrne.w.d $ft12, $fa0
+011aca37 ftintrne.w.d $ft15, $ft9
+011ac946 ftintrne.w.d $fa6, $ft2
+011ae70d ftintrne.l.s $ft5, $fs0
+011ae751 ftintrne.l.s $ft9, $fs2
+011ae7ed ftintrne.l.s $ft5, $fs7
+011ae597 ftintrne.l.s $ft15, $ft4
+011ae7ac ftintrne.l.s $ft4, $fs5
+011ae7e2 ftintrne.l.s $fa2, $fs7
+011ae6e4 ftintrne.l.s $fa4, $ft15
+011ae468 ftintrne.l.s $ft0, $fa3
+011ae4ec ftintrne.l.s $ft4, $fa7
+011ae7cf ftintrne.l.s $ft7, $fs6
+011ae808 ftintrne.l.d $ft0, $fa0
+011ae8d0 ftintrne.l.d $ft8, $fa6
+011ae9fb ftintrne.l.d $fs3, $ft7
+011aeaf5 ftintrne.l.d $ft13, $ft15
+011ae930 ftintrne.l.d $ft8, $ft1
+011ae825 ftintrne.l.d $fa5, $fa1
+011ae8ca ftintrne.l.d $ft2, $fa6
+011aebe7 ftintrne.l.d $fa7, $fs7
+011aebae ftintrne.l.d $ft6, $fs5
+011ae8ce ftintrne.l.d $ft6, $fa6
+011b07b8 ftint.w.s $fs0, $fs5
+011b04fa ftint.w.s $fs2, $fa7
+011b0700 ftint.w.s $fa0, $fs0
+011b070b ftint.w.s $ft3, $fs0
+011b06d7 ftint.w.s $ft15, $ft14
+011b0692 ftint.w.s $ft10, $ft12
+011b0623 ftint.w.s $fa3, $ft9
+011b0624 ftint.w.s $fa4, $ft9
+011b053f ftint.w.s $fs7, $ft1
+011b040a ftint.w.s $ft2, $fa0
+011b0bea ftint.w.d $ft2, $fs7
+011b083d ftint.w.d $fs5, $fa1
+011b0bdc ftint.w.d $fs4, $fs6
+011b0ba9 ftint.w.d $ft1, $fs5
+011b0821 ftint.w.d $fa1, $fa1
+011b0a39 ftint.w.d $fs1, $ft9
+011b089e ftint.w.d $fs6, $fa4
+011b0a10 ftint.w.d $ft8, $ft8
+011b08ab ftint.w.d $ft3, $fa5
+011b0b9a ftint.w.d $fs2, $fs4
+011b249a ftint.l.s $fs2, $fa4
+011b2631 ftint.l.s $ft9, $ft9
+011b2671 ftint.l.s $ft9, $ft11
+011b25ce ftint.l.s $ft6, $ft6
+011b25e5 ftint.l.s $fa5, $ft7
+011b253a ftint.l.s $fs2, $ft1
+011b26a9 ftint.l.s $ft1, $ft13
+011b274a ftint.l.s $ft2, $fs2
+011b251d ftint.l.s $fs5, $ft0
+011b2796 ftint.l.s $ft14, $fs4
+011b2969 ftint.l.d $ft1, $ft3
+011b29a7 ftint.l.d $fa7, $ft5
+011b2a9c ftint.l.d $fs4, $ft12
+011b2b85 ftint.l.d $fa5, $fs4
+011b2976 ftint.l.d $ft14, $ft3
+011b2bdd ftint.l.d $fs5, $fs6
+011b2b16 ftint.l.d $ft14, $fs0
+011b28c8 ftint.l.d $ft0, $fa6
+011b294f ftint.l.d $ft7, $ft2
+011b2bae ftint.l.d $ft6, $fs5
+011d1155 ffint.s.w $ft13, $ft2
+011d1323 ffint.s.w $fa3, $fs1
+011d1325 ffint.s.w $fa5, $fs1
+011d12c1 ffint.s.w $fa1, $ft14
+011d12cd ffint.s.w $ft5, $ft14
+011d1394 ffint.s.w $ft12, $fs4
+011d1062 ffint.s.w $fa2, $fa3
+011d130c ffint.s.w $ft4, $fs0
+011d12d5 ffint.s.w $ft13, $ft14
+011d1022 ffint.s.w $fa2, $fa1
+011d1bb3 ffint.s.l $ft11, $fs5
+011d1966 ffint.s.l $fa6, $ft3
+011d182c ffint.s.l $ft4, $fa1
+011d1aca ffint.s.l $ft2, $ft14
+011d19d9 ffint.s.l $fs1, $ft6
+011d1a69 ffint.s.l $ft1, $ft11
+011d1acf ffint.s.l $ft7, $ft14
+011d1b12 ffint.s.l $ft10, $fs0
+011d1851 ffint.s.l $ft9, $fa2
+011d1b92 ffint.s.l $ft10, $fs4
+011d2225 ffint.d.w $fa5, $ft9
+011d203f ffint.d.w $fs7, $fa1
+011d236a ffint.d.w $ft2, $fs3
+011d212d ffint.d.w $ft5, $ft1
+011d23ec ffint.d.w $ft4, $fs7
+011d23cd ffint.d.w $ft5, $fs6
+011d2043 ffint.d.w $fa3, $fa2
+011d2005 ffint.d.w $fa5, $fa0
+011d2231 ffint.d.w $ft9, $ft9
+011d2393 ffint.d.w $ft11, $fs4
+011d28fd ffint.d.l $fs5, $fa7
+011d2b18 ffint.d.l $fs0, $fs0
+011d2905 ffint.d.l $fa5, $ft0
+011d2aff ffint.d.l $fs7, $ft15
+011d2b09 ffint.d.l $ft1, $fs0
+011d2b35 ffint.d.l $ft13, $fs1
+011d2aa1 ffint.d.l $fa1, $ft13
+011d2b95 ffint.d.l $ft13, $fs4
+011d29b1 ffint.d.l $ft9, $ft5
+011d28d5 ffint.d.l $ft13, $fa6
+011e46fe frint.s $fs6, $ft15
+011e44c7 frint.s $fa7, $fa6
+011e4510 frint.s $ft8, $ft0
+011e467e frint.s $fs6, $ft11
+011e4670 frint.s $ft8, $ft11
+011e4782 frint.s $fa2, $fs4
+011e4715 frint.s $ft13, $fs0
+011e473d frint.s $fs5, $fs1
+011e46ea frint.s $ft2, $ft15
+011e478f frint.s $ft7, $fs4
+011e4b39 frint.d $fs1, $fs1
+011e4826 frint.d $fa6, $fa1
+011e4a5a frint.d $fs2, $ft10
+011e4940 frint.d $fa0, $ft2
+011e4a91 frint.d $ft9, $ft12
+011e4932 frint.d $ft10, $ft1
+011e4aa6 frint.d $fa6, $ft13
+011e4b79 frint.d $fs1, $fs3
+011e4a18 frint.d $fs0, $ft8
+011e483e frint.d $fs6, $fa1
+0236ac3f slti $s8, $ra, -597
+023d9c9a slti $s3, $a0, -153
+02139e92 slti $t6, $t8, 1255
+021a7bd6 slti $fp, $s7, 1694
+023a9610 slti $t4, $t4, -347
+021bff11 slti $t5, $s1, 1791
+0228706d slti $t1, $sp, -1508
+02065ffe slti $s7, $s8, 407
+020cd3f4 slti $t8, $s8, 820
+022df511 slti $t5, $a4, -1155
+02605a4a sltui $a6, $t6, -2026
+02655dc2 sltui $tp, $t2, -1705
+026788dd sltui $s6, $a2, -1566
+026d26c9 sltui $a5, $fp, -1207
+0250e943 sltui $sp, $a6, 1082
+027528b1 sltui $t5, $a1, -694
+027173a5 sltui $a1, $s6, -932
+026f1ecf sltui $t3, $fp, -1081
+0279ff4a sltui $a6, $s3, -385
+026a3378 sltui $s1, $s4, -1396
+02ae20af addi.w $t3, $a1, -1144
+02a8b13a addi.w $s3, $a5, -1492
+02a30948 addi.w $a4, $a6, -1854
+0292002c addi.w $t0, $ra, 1152
+02acefd3 addi.w $t7, $s7, -1221
+02b04ee3 addi.w $sp, $s0, -1005
+02a2957f addi.w $s8, $a7, -1883
+028ebc6b addi.w $a7, $sp, 943
+029ee7ad addi.w $t1, $s6, 1977
+02b09b95 addi.w $r21, $s5, -986
+02c8dc69 addi.d $a5, $sp, 567
+02ca1dbe addi.d $s7, $t1, 647
+02f8810a addi.d $a6, $a4, -480
+02efece8 addi.d $a4, $a3, -1029
+02c9cea3 addi.d $sp, $r21, 627
+02c48e66 addi.d $a2, $t7, 291
+02d0fb09 addi.d $a5, $s1, 1086
+02deb37b addi.d $s4, $s4, 1964
+02c2bfe3 addi.d $sp, $s8, 175
+02df6837 addi.d $s0, $ra, 2010
+030cafe4 lu52i.d $a0, $s8, 811
+03333386 lu52i.d $a2, $s5, -820
+03042e6f lu52i.d $t3, $t7, 267
+0318eb44 lu52i.d $a0, $s3, 1594
+03355c87 lu52i.d $a3, $a0, -681
+0312e5f1 lu52i.d $t5, $t3, 1209
+032079da lu52i.d $s3, $t2, -2018
+03282e36 lu52i.d $fp, $t5, -1525
+03123187 lu52i.d $a3, $t0, 1164
+032ce1a0 lu52i.d $zero, $t1, -1224
+03632d44 andi $a0, $a6, 0x8cb
+036998a0 andi $zero, $a1, 0xa66
+0344a108 andi $a4, $a4, 0x128
+036ca90c andi $t0, $a4, 0xb2a
+037a8ca2 andi $tp, $a1, 0xea3
+034e580b andi $a7, $zero, 0x396
+03715fd9 andi $s2, $s7, 0xc57
+037e1173 andi $t7, $a7, 0xf84
+037dbbe5 andi $a1, $s8, 0xf6e
+034012f2 andi $t6, $s0, 0x4
+03a69aca ori $a6, $fp, 0x9a6
+03aacfdf ori $s8, $s7, 0xab3
+03afb5d2 ori $t6, $t2, 0xbed
+03a1ae7d ori $s6, $t7, 0x86b
+03959442 ori $tp, $tp, 0x565
+038bd805 ori $a1, $zero, 0x2f6
+03b8c5e6 ori $a2, $t3, 0xe31
+0396de7f ori $s8, $t7, 0x5b7
+0393c9af ori $t3, $t1, 0x4f2
+038251a6 ori $a2, $t1, 0x94
+03e5da3b xori $s4, $t5, 0x976
+03fc4013 xori $t7, $zero, 0xf10
+03c2f6e5 xori $a1, $s0, 0xbd
+03df9641 xori $ra, $t6, 0x7e5
+03d65857 xori $s0, $tp, 0x596
+03c41356 xori $fp, $s3, 0x104
+03e3cf6b xori $a7, $s4, 0x8f3
+03c7fc4b xori $a7, $tp, 0x1ff
+03d77cf1 xori $t5, $a3, 0x5df
+03f37a29 xori $a5, $t5, 0xcde
+04c2b4fc csrxchg $s5, $a3, 0x30ad
+041998a1 csrxchg $ra, $a1, 0x666
+0457acfc csrxchg $s5, $a3, 0x15eb
+04814c55 csrxchg $r21, $tp, 0x2053
+049fabdc csrxchg $s5, $s7, 0x27ea
+0451e784 csrxchg $a0, $s5, 0x1479
+045515be csrxchg $s7, $t1, 0x1545
+04980fef csrxchg $t3, $s8, 0x2603
+04e240c9 csrxchg $a5, $a2, 0x3890
+063701e7 cacop 0x7, $t3, -576
+0600efb2 cacop 0x12, $s6, 59
+062c04db cacop 0x1b, $a2, -1279
+061e3e48 cacop 0x8, $t6, 1935
+06316a88 cacop 0x8, $t8, -934
+06051104 cacop 0x4, $a4, 324
+062845c6 cacop 0x6, $t2, -1519
+06240dc7 cacop 0x7, $t2, -1789
+06337a1c cacop 0x1c, $t4, -802
+062f7234 cacop 0x14, $t5, -1060
+064036c4 lddir $a0, $fp, 0xd
+0643358d lddir $t1, $t0, 0xcd
+06401e59 lddir $s2, $t6, 0x7
+06400d1c lddir $s5, $a4, 0x3
+06416b97 lddir $s0, $s5, 0x5a
+0642adc6 lddir $a2, $t2, 0xab
+0640c40e lddir $t2, $zero, 0x31
+0642811a lddir $s3, $a4, 0xa0
+0642931c lddir $s5, $s1, 0xa4
+0643a3fc lddir $s5, $s8, 0xe8
+0646faa0 ldpte $r21, 0xbe
+06453c40 ldpte $tp, 0x4f
+0644af40 ldpte $s3, 0x2b
+0647b1c0 ldpte $t2, 0xec
+0645ad60 ldpte $a7, 0x6b
+064564a0 ldpte $a1, 0x59
+0644c680 ldpte $t8, 0x31
+0645b4e0 ldpte $a3, 0x6d
+0645cb60 ldpte $s4, 0x72
+0647eaa0 ldpte $r21, 0xfa
+064803c9 iocsrrd.b $a5, $s7
+06480238 iocsrrd.b $s1, $t5
+06480143 iocsrrd.b $sp, $a6
+0648039f iocsrrd.b $s8, $s5
+06480249 iocsrrd.b $a5, $t6
+0648000c iocsrrd.b $t0, $zero
+0648035d iocsrrd.b $s6, $s3
+064800c8 iocsrrd.b $a4, $a2
+0648036c iocsrrd.b $t0, $s4
+064800e1 iocsrrd.b $ra, $a3
+06480449 iocsrrd.h $a5, $tp
+06480463 iocsrrd.h $sp, $sp
+06480592 iocsrrd.h $t6, $t0
+0648076f iocsrrd.h $t3, $s4
+0648071c iocsrrd.h $s5, $s1
+064806a3 iocsrrd.h $sp, $r21
+0648059f iocsrrd.h $s8, $t0
+06480794 iocsrrd.h $t8, $s5
+0648045b iocsrrd.h $s4, $tp
+06480549 iocsrrd.h $a5, $a6
+06480b36 iocsrrd.w $fp, $s2
+064808e6 iocsrrd.w $a2, $a3
+06480a40 iocsrrd.w $zero, $t6
+06480b89 iocsrrd.w $a5, $s5
+06480bfe iocsrrd.w $s7, $s8
+06480b95 iocsrrd.w $r21, $s5
+06480bba iocsrrd.w $s3, $s6
+064809cd iocsrrd.w $t1, $t2
+064809e8 iocsrrd.w $a4, $t3
+064809bb iocsrrd.w $s4, $t1
+06480c02 iocsrrd.d $tp, $zero
+06480ee1 iocsrrd.d $ra, $s0
+06480ec5 iocsrrd.d $a1, $fp
+06480d37 iocsrrd.d $s0, $a5
+06480f5c iocsrrd.d $s5, $s3
+06480fd5 iocsrrd.d $r21, $s7
+06480cad iocsrrd.d $t1, $a1
+06480f64 iocsrrd.d $a0, $s4
+06480dba iocsrrd.d $s3, $t1
+06480f17 iocsrrd.d $s0, $s1
+06481355 iocsrwr.b $r21, $s3
+064812df iocsrwr.b $s8, $fp
+06481062 iocsrwr.b $tp, $sp
+06481293 iocsrwr.b $t7, $t8
+06481349 iocsrwr.b $a5, $s3
+06481280 iocsrwr.b $zero, $t8
+06481366 iocsrwr.b $a2, $s4
+06481174 iocsrwr.b $t8, $a7
+064813d3 iocsrwr.b $t7, $s7
+0648124b iocsrwr.b $a7, $t6
+064816f4 iocsrwr.h $t8, $s0
+06481644 iocsrwr.h $a0, $t6
+0648146c iocsrwr.h $t0, $sp
+064814bf iocsrwr.h $s8, $a1
+0648143e iocsrwr.h $s7, $ra
+06481477 iocsrwr.h $s0, $sp
+0648153a iocsrwr.h $s3, $a5
+06481604 iocsrwr.h $a0, $t4
+06481427 iocsrwr.h $a3, $ra
+064817a4 iocsrwr.h $a0, $s6
+06481a71 iocsrwr.w $t5, $t7
+06481a5f iocsrwr.w $s8, $t6
+06481996 iocsrwr.w $fp, $t0
+06481a35 iocsrwr.w $r21, $t5
+06481bdb iocsrwr.w $s4, $s7
+06481b1f iocsrwr.w $s8, $s1
+06481803 iocsrwr.w $sp, $zero
+06481b98 iocsrwr.w $s1, $s5
+06481ad2 iocsrwr.w $t6, $fp
+06481b65 iocsrwr.w $a1, $s4
+06481e44 iocsrwr.d $a0, $t6
+06481e95 iocsrwr.d $r21, $t8
+06481df6 iocsrwr.d $fp, $t3
+06481ec4 iocsrwr.d $a0, $fp
+06481ec4 iocsrwr.d $a0, $fp
+06481f5d iocsrwr.d $s6, $s3
+06481f85 iocsrwr.d $a1, $s5
+06481d88 iocsrwr.d $a4, $t0
+06481f80 iocsrwr.d $zero, $s5
+06481f54 iocsrwr.d $t8, $s3
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
+06482000 tlbclr
 06482000 tlbclr
 06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482400 tlbflush
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
+06482800 tlbsrch
 06482800 tlbsrch
 06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06482c00 tlbrd
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
+06483000 tlbwr
 06483000 tlbwr
 06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
+06483400 tlbfill
 06483800 ertn
-00100084 add.w $a0, $a0, $zero
-0010de95 add.d $r21, $t8, $s0
-00135985 maskeqz $a1, $t0, $fp
-00243dcd crc.w.b.w $t1, $t2, $t3
-00040084 alsl.w $a0, $a0, $zero, 0x1
-0006de95 alsl.wu $r21, $t8, $s0, 0x2
-0009d985 bytepick.w $a1, $t0, $fp, 0x3
-000f5985 bytepick.d $a1, $t0, $fp, 0x6
-0281ec84 addi.w $a0, $a0, 123
-02f8e295 addi.d $r21, $t8, -456
-033ffd85 lu52i.d $a1, $t0, -1
-280001ac ld.b $t0, $t1, 0
-284005ac ld.h $t0, $t1, 1
-299ffdac st.w $t0, $t1, 2047
-29e001ac st.d $t0, $t1, -2048
-20004084 ll.w $a0, $a0, 64
-22ffc295 ll.d $r21, $t8, -64
-21100185 sc.w $a1, $t0, 4096
-23f001ac sc.d $t0, $t1, -4096
-240041ac ldptr.w $t0, $t1, 64
-26ffc1ac ldptr.d $t0, $t1, -64
-251001ac stptr.w $t0, $t1, 4096
-27f001ac stptr.d $t0, $t1, -4096
-1001ec84 addu16i.d $a0, $a0, 123
-13f8e295 addu16i.d $r21, $t8, -456
-10000185 addu16i.d $a1, $t0, 0
-13fffdac addu16i.d $t0, $t1, -1
-11fffdac addu16i.d $t0, $t1, 32767
-120001ac addu16i.d $t0, $t1, -32768
-036aa884 andi $a0, $a0, 0xaaa
-03955695 ori $r21, $t8, 0x555
-03e66585 xori $a1, $t0, 0x999
-00408084 slli.w $a0, $a0, 0x0
-00448695 srli.w $r21, $t8, 0x1
-004cfd85 rotri.w $a1, $t0, 0x1f
-00410084 slli.d $a0, $a0, 0x0
-00450695 srli.d $r21, $t8, 0x1
-004dfd85 rotri.d $a1, $t0, 0x3f
-04003084 csrxchg $a0, $a0, 0xc
-0400c295 csrxchg $r21, $t8, 0x30
-06400484 lddir $a0, $a0, 0x1
-06400a95 lddir $r21, $t8, 0x2
-06400d85 lddir $a1, $t0, 0x3
-064011ac lddir $t0, $t1, 0x4
-00610084 bstrins.w $a0, $a0, 0x1, 0x0
-007f7a95 bstrins.w $r21, $t8, 0x1f, 0x1e
-00810084 bstrins.d $a0, $a0, 0x1, 0x0
-00bffa95 bstrins.d $r21, $t8, 0x3f, 0x3e
-4c000484 jirl $a0, $a0, 4
-4ffffe95 jirl $r21, $t8, -4
-4c7ffd85 jirl $a1, $t0, 32764
-4f8001ac jirl $t0, $t1, -32768
-4c0001ac jirl $t0, $t1, 0
-38571004 sc.q $a0, $a0, $zero
-385852f5 amcas.b $r21, $t8, $s0
-385db2c5 amadd.h $a1, $t0, $fp
-3860b5cc amswap.d $t0, $t1, $t2
-00001004 clo.w $a0, $zero
-00001a95 cto.w $r21, $t8
-00004d85 bitrev.8b $a1, $t0
-00006dac cpucfg $t0, $t1
-385781ac llacq.w $t0, $t1
-385785ac screl.w $t0, $t1
-0114dc04 movcf2gr $a0, $fcc0
-0114dcf5 movcf2gr $r21, $fcc7
-0114c804 movfcsr2gr $a0, $fcsr0
-0114c875 movfcsr2gr $r21, $fcsr3
-0114b404 movfr2gr.s $a0, $fa0
-0114baf5 movfr2gr.d $r21, $ft15
-0114bf0c movfrh2gr.s $t0, $fs0
-14000004 lu12i.w $a0, 0
-17fffff5 lu32i.d $r21, -1
-18ffffec pcaddi $t0, 524287
-1b00000d pcalau12i $t1, -524288
-0d00e100 fsel $fa0, $ft0, $fs0, $fcc1
-0d03ab81 fsel $fa1, $fs4, $ft2, $fcc7
-081ce100 fmadd.s $fa0, $ft0, $fs0, $fs1
-086e6981 fmsub.d $fa1, $ft4, $fs2, $fs4
-0100e100 fadd.s $fa0, $ft0, $fs0
-01036981 fsub.d $fa1, $ft4, $fs2
-01132f3c fcopysign.d $fs4, $fs1, $ft3
-0114d4e0 movcf2fr $fa0, $fcc7
-0114d418 movcf2fr $fs0, $fcc0
-01140500 fabs.s $fa0, $ft0
-01141b81 fneg.d $fa1, $fs4
-011ac928 ftintrne.w.d $ft0, $ft1
-38300080 fldx.s $fa0, $a0, $zero
-383c5d98 fstx.d $fs0, $t0, $s0
-2b000080 fld.s $fa0, $a0, 0
-2bbffd98 fld.d $fs0, $t0, -1
-2b5ffea8 fst.s $ft0, $r21, 2047
-2be001a9 fst.d $ft1, $t1, -2048
-0c1c8400 fcmp.sune.s $fcc0, $fa0, $fa1
-0c2a6107 fcmp.cor.d $fcc7, $ft0, $fs0
-0114d000 movfr2cf $fcc0, $fa0
-0114d307 movfr2cf $fcc7, $fs0
-0114d880 movgr2cf $fcc0, $a0
-0114dae7 movgr2cf $fcc7, $s0
-4bfffc1f bceqz $fcc0, -4
-480005e0 bcnez $fcc7, 4
-0114c080 movgr2fcsr $fcsr0, $a0
-0114c183 movgr2fcsr $fcsr3, $t0
-5bfffc80 beq $a0, $zero, -4
-600006ac blt $r21, $t0, 4
-43fffc9f beqz $a0, -4
-440006a0 bnez $r21, 4
-53ffffff b -4
-54000400 bl 4
-002a0000 break 0x0
-002a0001 break 0x1
-002a8000 dbcl 0x0
-002affff dbcl 0x7fff
-002b0000 syscall 0x0
-002b0001 syscall 0x1
-38720000 dbar 0x0
-3872001f dbar 0x1f
-38728000 ibar 0x0
-3872801f ibar 0x1f
-063ff09f cacop 0x1f, $a0, -4
-06001000 cacop 0x0, $zero, 4
-382c0080 preldx 0x0, $a0, $zero
-382c5d82 preldx 0x2, $t0, $s0
-382c3708 preldx 0x8, $s1, $t1
-2ac00080 preld 0x0, $a0, 0
-2afff188 preld 0x8, $t0, -4
-2ac011a8 preld 0x8, $t1, 4
-06488000 idle 0x0
-06488001 idle 0x1
-06498000 invtlb 0x0, $zero, $zero
-0649b086 invtlb 0x6, $a0, $t0
-00010000 asrtle.d $zero, $zero
-0001d480 asrtgt.d $a0, $r21
-06440000 ldpte $zero, 0x0
-06440480 ldpte $a0, 0x1
-064406a0 ldpte $r21, 0x1
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+06483800 ertn
+0648ad94 idle 0x2d94
+0648eccf idle 0x6ccf
+0648c799 idle 0x4799
+0648bd54 idle 0x3d54
+0648fd5b idle 0x7d5b
+0648a0aa idle 0x20aa
+0648a834 idle 0x2834
+0648fdbd idle 0x7dbd
+0648d1a0 idle 0x51a0
+0648995a idle 0x195a
+0649ecc0 invtlb 0x0, $a2, $s4
+0649b93e invtlb 0x1e, $a5, $t2
+0649e3b8 invtlb 0x18, $s6, $s1
+06499add invtlb 0x1d, $fp, $a2
+0649d900 invtlb 0x0, $a4, $fp
+0649850f invtlb 0xf, $a4, $ra
+06499633 invtlb 0x13, $t5, $a1
+064987af invtlb 0xf, $s6, $ra
+06498584 invtlb 0x4, $t0, $ra
+0649e240 invtlb 0x0, $t6, $s1
+081dcd1d fmadd.s $fs5, $ft0, $ft11, $fs3
+081ebcd0 fmadd.s $ft8, $fa6, $ft7, $fs5
+081402a6 fmadd.s $fa6, $ft13, $fa0, $ft0
+0815800e fmadd.s $ft6, $fa0, $fa0, $ft3
+08121f85 fmadd.s $fa5, $fs4, $fa7, $fa4
+0816e096 fmadd.s $ft14, $fa4, $fs0, $ft5
+08171d89 fmadd.s $ft1, $ft4, $fa7, $ft6
+08159ec8 fmadd.s $ft0, $ft14, $fa7, $ft3
+081dcdcc fmadd.s $ft4, $ft6, $ft11, $fs3
+0817b892 fmadd.s $ft10, $fa4, $ft6, $ft7
+0827d371 fmadd.d $ft9, $fs3, $ft12, $ft7
+08283780 fmadd.d $fa0, $fs4, $ft5, $ft8
+082e150d fmadd.d $ft5, $ft0, $fa5, $fs4
+082815df fmadd.d $fs7, $ft6, $fa5, $ft8
+0820df82 fmadd.d $fa2, $fs4, $ft15, $fa1
+082c2cd5 fmadd.d $ft13, $fa6, $ft3, $fs0
+082db702 fmadd.d $fa2, $fs0, $ft5, $fs3
+082da76e fmadd.d $ft6, $fs3, $ft1, $fs3
+082a0325 fmadd.d $fa5, $fs1, $fa0, $ft12
+082804d9 fmadd.d $fs1, $fa6, $fa1, $ft8
+085ab3f9 fmsub.s $fs1, $fs7, $ft4, $ft13
+085546ee fmsub.s $ft6, $ft15, $ft9, $ft2
+085f7fd9 fmsub.s $fs1, $fs6, $fs7, $fs6
+085b3d2e fmsub.s $ft6, $ft1, $ft7, $ft14
+085249c9 fmsub.s $ft1, $ft6, $ft10, $fa4
+0855e73c fmsub.s $fs4, $fs1, $fs1, $ft3
+08548f47 fmsub.s $fa7, $fs2, $fa3, $ft1
+085ecf71 fmsub.s $ft9, $fs3, $ft11, $fs5
+0857dfe0 fmsub.s $fa0, $fs7, $ft15, $ft7
+085e1ef9 fmsub.s $fs1, $ft15, $fa7, $fs4
+0864b423 fmsub.d $fa3, $fa1, $ft5, $ft1
+086ba0fc fmsub.d $fs4, $fa7, $ft0, $ft15
+086aaafc fmsub.d $fs4, $ft15, $ft2, $ft13
+08686a85 fmsub.d $fa5, $ft12, $fs2, $ft8
+08606290 fmsub.d $ft8, $ft12, $fs0, $fa0
+08654812 fmsub.d $ft10, $fa0, $ft10, $ft2
+08659431 fmsub.d $ft9, $fa1, $fa5, $ft3
+086e53df fmsub.d $fs7, $fs6, $ft12, $fs4
+08661b26 fmsub.d $fa6, $fs1, $fa6, $ft4
+086d6d99 fmsub.d $fs1, $ft4, $fs3, $fs2
+0890dc77 fnmadd.s $ft15, $fa3, $ft15, $fa1
+089f430f fnmadd.s $ft7, $fs0, $ft8, $fs6
+08989c7a fnmadd.s $fs2, $fa3, $fa7, $ft9
+089c62e7 fnmadd.s $fa7, $ft15, $fs0, $fs0
+089e1e8b fnmadd.s $ft3, $ft12, $fa7, $fs4
+089f9287 fnmadd.s $fa7, $ft12, $fa4, $fs7
+089c7344 fnmadd.s $fa4, $fs2, $fs4, $fs0
+0895241e fnmadd.s $fs6, $fa0, $ft1, $ft2
+08992881 fnmadd.s $fa1, $fa4, $ft2, $ft10
+08905733 fnmadd.s $ft11, $fs1, $ft13, $fa0
+08ac3e93 fnmadd.d $ft11, $ft12, $ft7, $fs0
+08a2a6e7 fnmadd.d $fa7, $ft15, $ft1, $fa5
+08a4c481 fnmadd.d $fa1, $fa4, $ft9, $ft1
+08ac769a fnmadd.d $fs2, $ft12, $fs5, $fs0
+08a26613 fnmadd.d $ft11, $ft8, $fs1, $fa4
+08aba27e fnmadd.d $fs6, $ft11, $ft0, $ft15
+08aa22fe fnmadd.d $fs6, $ft15, $ft0, $ft12
+08ac55f6 fnmadd.d $ft14, $ft7, $ft13, $fs0
+08a17ecc fnmadd.d $ft4, $ft14, $fs7, $fa2
+08a7300f fnmadd.d $ft7, $fa0, $ft4, $ft6
+08d10560 fnmsub.s $fa0, $ft3, $fa1, $fa2
+08dc3ee8 fnmsub.s $ft0, $ft15, $ft7, $fs0
+08d9d864 fnmsub.s $fa4, $fa3, $ft14, $ft11
+08d453cd fnmsub.s $ft5, $fs6, $ft12, $ft0
+08d72630 fnmsub.s $ft8, $ft9, $ft1, $ft6
+08dfff26 fnmsub.s $fa6, $fs1, $fs7, $fs7
+08d5c036 fnmsub.s $ft14, $fa1, $ft8, $ft3
+08dc68fd fnmsub.s $fs5, $fa7, $fs2, $fs0
+08d58a67 fnmsub.s $fa7, $ft11, $fa2, $ft3
+08d6096e fnmsub.s $ft6, $ft3, $fa2, $ft4
+08e279aa fnmsub.d $ft2, $ft5, $fs6, $fa4
+08e2e254 fnmsub.d $ft12, $ft10, $fs0, $fa5
+08e43e2a fnmsub.d $ft2, $ft9, $ft7, $ft0
+08ec196b fnmsub.d $ft3, $ft3, $fa6, $fs0
+08e28671 fnmsub.d $ft9, $ft11, $fa1, $fa5
+08e740e0 fnmsub.d $fa0, $fa7, $ft8, $ft6
+08e35c4f fnmsub.d $ft7, $fa2, $ft15, $fa6
+08eb617f fnmsub.d $fs7, $ft3, $fs0, $ft14
+08ee75b8 fnmsub.d $fs0, $ft5, $fs5, $fs4
+08e43dfa fnmsub.d $fs2, $ft7, $ft7, $ft0
+0c1000a4 fcmp.caf.s $fcc4, $fa5, $fa0
+0c107405 fcmp.caf.s $fcc5, $fa0, $fs5
+0c102282 fcmp.caf.s $fcc2, $ft12, $ft0
+0c1005a2 fcmp.caf.s $fcc2, $ft5, $fa1
+0c1018e7 fcmp.caf.s $fcc7, $fa7, $fa6
+0c104563 fcmp.caf.s $fcc3, $ft3, $ft9
+0c105027 fcmp.caf.s $fcc7, $fa1, $ft12
+0c105f41 fcmp.caf.s $fcc1, $fs2, $ft15
+0c101002 fcmp.caf.s $fcc2, $fa0, $fa4
+0c107c67 fcmp.caf.s $fcc7, $fa3, $fs7
+0c142840 fcmp.cun.s $fcc0, $fa2, $ft2
+0c1465e7 fcmp.cun.s $fcc7, $ft7, $fs1
+0c142700 fcmp.cun.s $fcc0, $fs0, $ft1
+0c140684 fcmp.cun.s $fcc4, $ft12, $fa1
+0c144847 fcmp.cun.s $fcc7, $fa2, $ft10
+0c142ce7 fcmp.cun.s $fcc7, $fa7, $ft3
+0c145f45 fcmp.cun.s $fcc5, $fs2, $ft15
+0c141087 fcmp.cun.s $fcc7, $fa4, $fa4
+0c1437e4 fcmp.cun.s $fcc4, $fs7, $ft5
+0c1404e5 fcmp.cun.s $fcc5, $fa7, $fa1
+0c1228a6 fcmp.ceq.s $fcc6, $fa5, $ft2
+0c1263a5 fcmp.ceq.s $fcc5, $fs5, $fs0
+0c120680 fcmp.ceq.s $fcc0, $ft12, $fa1
+0c127427 fcmp.ceq.s $fcc7, $fa1, $fs5
+0c124ea4 fcmp.ceq.s $fcc4, $ft13, $ft11
+0c127923 fcmp.ceq.s $fcc3, $ft1, $fs6
+0c123ee2 fcmp.ceq.s $fcc2, $ft15, $ft7
+0c1228c7 fcmp.ceq.s $fcc7, $fa6, $ft2
+0c120400 fcmp.ceq.s $fcc0, $fa0, $fa1
+0c127841 fcmp.ceq.s $fcc1, $fa2, $fs6
+0c161c61 fcmp.cueq.s $fcc1, $fa3, $fa7
+0c164105 fcmp.cueq.s $fcc5, $ft0, $ft8
+0c163523 fcmp.cueq.s $fcc3, $ft1, $ft5
+0c1637c2 fcmp.cueq.s $fcc2, $fs6, $ft5
+0c167b25 fcmp.cueq.s $fcc5, $fs1, $fs6
+0c162541 fcmp.cueq.s $fcc1, $ft2, $ft1
+0c164945 fcmp.cueq.s $fcc5, $ft2, $ft10
+0c167543 fcmp.cueq.s $fcc3, $ft2, $fs5
+0c167026 fcmp.cueq.s $fcc6, $fa1, $fs4
+0c162966 fcmp.cueq.s $fcc6, $ft3, $ft2
+0c1136e2 fcmp.clt.s $fcc2, $ft15, $ft5
+0c114144 fcmp.clt.s $fcc4, $ft2, $ft8
+0c111126 fcmp.clt.s $fcc6, $ft1, $fa4
+0c117dc5 fcmp.clt.s $fcc5, $ft6, $fs7
+0c110d23 fcmp.clt.s $fcc3, $ft1, $fa3
+0c112844 fcmp.clt.s $fcc4, $fa2, $ft2
+0c116f64 fcmp.clt.s $fcc4, $fs3, $fs3
+0c1115a4 fcmp.clt.s $fcc4, $ft5, $fa5
+0c115125 fcmp.clt.s $fcc5, $ft1, $ft12
+0c1122a1 fcmp.clt.s $fcc1, $ft13, $ft0
+0c1564c7 fcmp.cult.s $fcc7, $fa6, $fs1
+0c150223 fcmp.cult.s $fcc3, $ft9, $fa0
+0c150487 fcmp.cult.s $fcc7, $fa4, $fa1
+0c152164 fcmp.cult.s $fcc4, $ft3, $ft0
+0c155103 fcmp.cult.s $fcc3, $ft0, $ft12
+0c154ae3 fcmp.cult.s $fcc3, $ft15, $ft10
+0c1555a3 fcmp.cult.s $fcc3, $ft5, $ft13
+0c151520 fcmp.cult.s $fcc0, $ft1, $fa5
+0c1533c4 fcmp.cult.s $fcc4, $fs6, $ft4
+0c151763 fcmp.cult.s $fcc3, $fs3, $fa5
+0c130443 fcmp.cle.s $fcc3, $fa2, $fa1
+0c135ca5 fcmp.cle.s $fcc5, $fa5, $ft15
+0c1323e3 fcmp.cle.s $fcc3, $fs7, $ft0
+0c132a85 fcmp.cle.s $fcc5, $ft12, $ft2
+0c137780 fcmp.cle.s $fcc0, $fs4, $fs5
+0c137645 fcmp.cle.s $fcc5, $ft10, $fs5
+0c133a22 fcmp.cle.s $fcc2, $ft9, $ft6
+0c1360c1 fcmp.cle.s $fcc1, $fa6, $fs0
+0c136e85 fcmp.cle.s $fcc5, $ft12, $fs3
+0c136d00 fcmp.cle.s $fcc0, $ft0, $fs3
+0c170d80 fcmp.cule.s $fcc0, $ft4, $fa3
+0c1730e7 fcmp.cule.s $fcc7, $fa7, $ft4
+0c175442 fcmp.cule.s $fcc2, $fa2, $ft13
+0c176764 fcmp.cule.s $fcc4, $fs3, $fs1
+0c173b80 fcmp.cule.s $fcc0, $fs4, $ft6
+0c173ba7 fcmp.cule.s $fcc7, $fs5, $ft6
+0c175fe5 fcmp.cule.s $fcc5, $fs7, $ft15
+0c171e23 fcmp.cule.s $fcc3, $ft9, $fa7
+0c170a66 fcmp.cule.s $fcc6, $ft11, $fa2
+0c176006 fcmp.cule.s $fcc6, $fa0, $fs0
+0c187720 fcmp.cne.s $fcc0, $fs1, $fs5
+0c183603 fcmp.cne.s $fcc3, $ft8, $ft5
+0c181e02 fcmp.cne.s $fcc2, $ft8, $fa7
+0c187726 fcmp.cne.s $fcc6, $fs1, $fs5
+0c186da5 fcmp.cne.s $fcc5, $ft5, $fs3
+0c187144 fcmp.cne.s $fcc4, $ft2, $fs4
+0c187e61 fcmp.cne.s $fcc1, $ft11, $fs7
+0c1802e7 fcmp.cne.s $fcc7, $ft15, $fa0
+0c181465 fcmp.cne.s $fcc5, $fa3, $fa5
+0c1852c0 fcmp.cne.s $fcc0, $ft14, $ft12
+0c1a39e3 fcmp.cor.s $fcc3, $ft7, $ft6
+0c1a3da5 fcmp.cor.s $fcc5, $ft5, $ft7
+0c1a62a0 fcmp.cor.s $fcc0, $ft13, $fs0
+0c1a45a6 fcmp.cor.s $fcc6, $ft5, $ft9
+0c1a1da4 fcmp.cor.s $fcc4, $ft5, $fa7
+0c1a6da4 fcmp.cor.s $fcc4, $ft5, $fs3
+0c1a7504 fcmp.cor.s $fcc4, $ft0, $fs5
+0c1a2c23 fcmp.cor.s $fcc3, $fa1, $ft3
+0c1a5382 fcmp.cor.s $fcc2, $fs4, $ft12
+0c1a46c6 fcmp.cor.s $fcc6, $ft14, $ft9
+0c1c4b40 fcmp.cune.s $fcc0, $fs2, $ft10
+0c1c1ee1 fcmp.cune.s $fcc1, $ft15, $fa7
+0c1c2b65 fcmp.cune.s $fcc5, $fs3, $ft2
+0c1c1d05 fcmp.cune.s $fcc5, $ft0, $fa7
+0c1c6563 fcmp.cune.s $fcc3, $ft3, $fs1
+0c1c7b87 fcmp.cune.s $fcc7, $fs4, $fs6
+0c1c7066 fcmp.cune.s $fcc6, $fa3, $fs4
+0c1c72e6 fcmp.cune.s $fcc6, $ft15, $fs4
+0c1c3a45 fcmp.cune.s $fcc5, $ft10, $ft6
+0c1c3ca0 fcmp.cune.s $fcc0, $fa5, $ft7
+0c10aea2 fcmp.saf.s $fcc2, $ft13, $ft3
+0c10d2c3 fcmp.saf.s $fcc3, $ft14, $ft12
+0c10c906 fcmp.saf.s $fcc6, $ft0, $ft10
+0c10cb83 fcmp.saf.s $fcc3, $fs4, $ft10
+0c10e1e6 fcmp.saf.s $fcc6, $ft7, $fs0
+0c10e7a1 fcmp.saf.s $fcc1, $fs5, $fs1
+0c10b1a7 fcmp.saf.s $fcc7, $ft5, $ft4
+0c10d9e3 fcmp.saf.s $fcc3, $ft7, $ft14
+0c10cd85 fcmp.saf.s $fcc5, $ft4, $ft11
+0c108761 fcmp.saf.s $fcc1, $fs3, $fa1
+0c148004 fcmp.sun.s $fcc4, $fa0, $fa0
+0c148a67 fcmp.sun.s $fcc7, $ft11, $fa2
+0c149e01 fcmp.sun.s $fcc1, $ft8, $fa7
+0c14bda7 fcmp.sun.s $fcc7, $ft5, $ft7
+0c14e9c5 fcmp.sun.s $fcc5, $ft6, $fs2
+0c14a6a7 fcmp.sun.s $fcc7, $ft13, $ft1
+0c14f740 fcmp.sun.s $fcc0, $fs2, $fs5
+0c14ce23 fcmp.sun.s $fcc3, $ft9, $ft11
+0c14ef81 fcmp.sun.s $fcc1, $fs4, $fs3
+0c14da83 fcmp.sun.s $fcc3, $ft12, $ft14
+0c12ef80 fcmp.seq.s $fcc0, $fs4, $fs3
+0c12f7a4 fcmp.seq.s $fcc4, $fs5, $fs5
+0c12a362 fcmp.seq.s $fcc2, $fs3, $ft0
+0c12be42 fcmp.seq.s $fcc2, $ft10, $ft7
+0c12ec87 fcmp.seq.s $fcc7, $fa4, $fs3
+0c12f306 fcmp.seq.s $fcc6, $fs0, $fs4
+0c129b64 fcmp.seq.s $fcc4, $fs3, $fa6
+0c12ba27 fcmp.seq.s $fcc7, $ft9, $ft6
+0c12f764 fcmp.seq.s $fcc4, $fs3, $fs5
+0c12e163 fcmp.seq.s $fcc3, $ft3, $fs0
+0c16a126 fcmp.sueq.s $fcc6, $ft1, $ft0
+0c16a404 fcmp.sueq.s $fcc4, $fa0, $ft1
+0c1682a3 fcmp.sueq.s $fcc3, $ft13, $fa0
+0c16e041 fcmp.sueq.s $fcc1, $fa2, $fs0
+0c16b061 fcmp.sueq.s $fcc1, $fa3, $ft4
+0c168fc3 fcmp.sueq.s $fcc3, $fs6, $fa3
+0c16b5c0 fcmp.sueq.s $fcc0, $ft6, $ft5
+0c16fd82 fcmp.sueq.s $fcc2, $ft4, $fs7
+0c16a2a2 fcmp.sueq.s $fcc2, $ft13, $ft0
+0c169683 fcmp.sueq.s $fcc3, $ft12, $fa5
+0c11e9e0 fcmp.slt.s $fcc0, $ft7, $fs2
+0c119a87 fcmp.slt.s $fcc7, $ft12, $fa6
+0c11fc03 fcmp.slt.s $fcc3, $fa0, $fs7
+0c118725 fcmp.slt.s $fcc5, $fs1, $fa1
+0c11f6e7 fcmp.slt.s $fcc7, $ft15, $fs5
+0c118442 fcmp.slt.s $fcc2, $fa2, $fa1
+0c11d684 fcmp.slt.s $fcc4, $ft12, $ft13
+0c11c785 fcmp.slt.s $fcc5, $fs4, $ft9
+0c119460 fcmp.slt.s $fcc0, $fa3, $fa5
+0c11d845 fcmp.slt.s $fcc5, $fa2, $ft14
+0c15df81 fcmp.sult.s $fcc1, $fs4, $ft15
+0c159746 fcmp.sult.s $fcc6, $fs2, $fa5
+0c15df64 fcmp.sult.s $fcc4, $fs3, $ft15
+0c15bf25 fcmp.sult.s $fcc5, $fs1, $ft7
+0c15a464 fcmp.sult.s $fcc4, $fa3, $ft1
+0c15a921 fcmp.sult.s $fcc1, $ft1, $ft2
+0c15f243 fcmp.sult.s $fcc3, $ft10, $fs4
+0c15f0c7 fcmp.sult.s $fcc7, $fa6, $fs4
+0c15e705 fcmp.sult.s $fcc5, $fs0, $fs1
+0c15b684 fcmp.sult.s $fcc4, $ft12, $ft5
+0c13ccc0 fcmp.sle.s $fcc0, $fa6, $ft11
+0c13eaa1 fcmp.sle.s $fcc1, $ft13, $fs2
+0c13f922 fcmp.sle.s $fcc2, $ft1, $fs6
+0c138ac3 fcmp.sle.s $fcc3, $ft14, $fa2
+0c13d980 fcmp.sle.s $fcc0, $ft4, $ft14
+0c13b4e7 fcmp.sle.s $fcc7, $fa7, $ft5
+0c13e504 fcmp.sle.s $fcc4, $ft0, $fs1
+0c13d662 fcmp.sle.s $fcc2, $ft11, $ft13
+0c138026 fcmp.sle.s $fcc6, $fa1, $fa0
+0c13ac01 fcmp.sle.s $fcc1, $fa0, $ft3
+0c17d143 fcmp.sule.s $fcc3, $ft2, $ft12
+0c17d546 fcmp.sule.s $fcc6, $ft2, $ft13
+0c17e745 fcmp.sule.s $fcc5, $fs2, $fs1
+0c17b621 fcmp.sule.s $fcc1, $ft9, $ft5
+0c178860 fcmp.sule.s $fcc0, $fa3, $fa2
+0c179e62 fcmp.sule.s $fcc2, $ft11, $fa7
+0c17a345 fcmp.sule.s $fcc5, $fs2, $ft0
+0c17a9a6 fcmp.sule.s $fcc6, $ft5, $ft2
+0c17bd84 fcmp.sule.s $fcc4, $ft4, $ft7
+0c178d40 fcmp.sule.s $fcc0, $ft2, $fa3
+0c18b102 fcmp.sne.s $fcc2, $ft0, $ft4
+0c18c947 fcmp.sne.s $fcc7, $ft2, $ft10
+0c18bde1 fcmp.sne.s $fcc1, $ft7, $ft7
+0c18b804 fcmp.sne.s $fcc4, $fa0, $ft6
+0c188c42 fcmp.sne.s $fcc2, $fa2, $fa3
+0c18a603 fcmp.sne.s $fcc3, $ft8, $ft1
+0c18b164 fcmp.sne.s $fcc4, $ft3, $ft4
+0c18ccc1 fcmp.sne.s $fcc1, $fa6, $ft11
+0c18c9c7 fcmp.sne.s $fcc7, $ft6, $ft10
+0c18b862 fcmp.sne.s $fcc2, $fa3, $ft6
+0c1aff46 fcmp.sor.s $fcc6, $fs2, $fs7
+0c1afd81 fcmp.sor.s $fcc1, $ft4, $fs7
+0c1ad702 fcmp.sor.s $fcc2, $fs0, $ft13
+0c1ae7e6 fcmp.sor.s $fcc6, $fs7, $fs1
+0c1ae725 fcmp.sor.s $fcc5, $fs1, $fs1
+0c1a8e62 fcmp.sor.s $fcc2, $ft11, $fa3
+0c1ad961 fcmp.sor.s $fcc1, $ft3, $ft14
+0c1abd00 fcmp.sor.s $fcc0, $ft0, $ft7
+0c1a9564 fcmp.sor.s $fcc4, $ft3, $fa5
+0c1aea21 fcmp.sor.s $fcc1, $ft9, $fs2
+0c1cc006 fcmp.sune.s $fcc6, $fa0, $ft8
+0c1c93c7 fcmp.sune.s $fcc7, $fs6, $fa4
+0c1cd425 fcmp.sune.s $fcc5, $fa1, $ft13
+0c1cc244 fcmp.sune.s $fcc4, $ft10, $ft8
+0c1cb926 fcmp.sune.s $fcc6, $ft1, $ft6
+0c1cc427 fcmp.sune.s $fcc7, $fa1, $ft9
+0c1ce8c6 fcmp.sune.s $fcc6, $fa6, $fs2
+0c1cee44 fcmp.sune.s $fcc4, $ft10, $fs3
+0c1c9de5 fcmp.sune.s $fcc5, $ft7, $fa7
+0c1cc5e5 fcmp.sune.s $fcc5, $ft7, $ft9
+0c205404 fcmp.caf.d $fcc4, $fa0, $ft13
+0c204400 fcmp.caf.d $fcc0, $fa0, $ft9
+0c206643 fcmp.caf.d $fcc3, $ft10, $fs1
+0c2003a2 fcmp.caf.d $fcc2, $fs5, $fa0
+0c207763 fcmp.caf.d $fcc3, $fs3, $fs5
+0c201a83 fcmp.caf.d $fcc3, $ft12, $fa6
+0c203b87 fcmp.caf.d $fcc7, $fs4, $ft6
+0c200267 fcmp.caf.d $fcc7, $ft11, $fa0
+0c202923 fcmp.caf.d $fcc3, $ft1, $ft2
+0c2056a3 fcmp.caf.d $fcc3, $ft13, $ft13
+0c241122 fcmp.cun.d $fcc2, $ft1, $fa4
+0c244205 fcmp.cun.d $fcc5, $ft8, $ft8
+0c2418a0 fcmp.cun.d $fcc0, $fa5, $fa6
+0c241e80 fcmp.cun.d $fcc0, $ft12, $fa7
+0c240a01 fcmp.cun.d $fcc1, $ft8, $fa2
+0c247542 fcmp.cun.d $fcc2, $ft2, $fs5
+0c243507 fcmp.cun.d $fcc7, $ft0, $ft5
+0c2450c3 fcmp.cun.d $fcc3, $fa6, $ft12
+0c247ea6 fcmp.cun.d $fcc6, $ft13, $fs7
+0c240fc3 fcmp.cun.d $fcc3, $fs6, $fa3
+0c2241e7 fcmp.ceq.d $fcc7, $ft7, $ft8
+0c223b83 fcmp.ceq.d $fcc3, $fs4, $ft6
+0c221842 fcmp.ceq.d $fcc2, $fa2, $fa6
+0c225940 fcmp.ceq.d $fcc0, $ft2, $ft14
+0c227002 fcmp.ceq.d $fcc2, $fa0, $fs4
+0c226323 fcmp.ceq.d $fcc3, $fs1, $fs0
+0c2215e4 fcmp.ceq.d $fcc4, $ft7, $fa5
+0c225e06 fcmp.ceq.d $fcc6, $ft8, $ft15
+0c225de2 fcmp.ceq.d $fcc2, $ft7, $ft15
+0c221d86 fcmp.ceq.d $fcc6, $ft4, $fa7
+0c263325 fcmp.cueq.d $fcc5, $fs1, $ft4
+0c260062 fcmp.cueq.d $fcc2, $fa3, $fa0
+0c265044 fcmp.cueq.d $fcc4, $fa2, $ft12
+0c2655c5 fcmp.cueq.d $fcc5, $ft6, $ft13
+0c262483 fcmp.cueq.d $fcc3, $fa4, $ft1
+0c263102 fcmp.cueq.d $fcc2, $ft0, $ft4
+0c2667a3 fcmp.cueq.d $fcc3, $fs5, $fs1
+0c262926 fcmp.cueq.d $fcc6, $ft1, $ft2
+0c260305 fcmp.cueq.d $fcc5, $fs0, $fa0
+0c265f43 fcmp.cueq.d $fcc3, $fs2, $ft15
+0c213c27 fcmp.clt.d $fcc7, $fa1, $ft7
+0c2107a7 fcmp.clt.d $fcc7, $fs5, $fa1
+0c2118e7 fcmp.clt.d $fcc7, $fa7, $fa6
+0c214461 fcmp.clt.d $fcc1, $fa3, $ft9
+0c2135a0 fcmp.clt.d $fcc0, $ft5, $ft5
+0c217a23 fcmp.clt.d $fcc3, $ft9, $fs6
+0c2169e6 fcmp.clt.d $fcc6, $ft7, $fs2
+0c217624 fcmp.clt.d $fcc4, $ft9, $fs5
+0c217400 fcmp.clt.d $fcc0, $fa0, $fs5
+0c2124a4 fcmp.clt.d $fcc4, $fa5, $ft1
+0c255606 fcmp.cult.d $fcc6, $ft8, $ft13
+0c254844 fcmp.cult.d $fcc4, $fa2, $ft10
+0c257a44 fcmp.cult.d $fcc4, $ft10, $fs6
+0c254f24 fcmp.cult.d $fcc4, $fs1, $ft11
+0c257601 fcmp.cult.d $fcc1, $ft8, $fs5
+0c253ea1 fcmp.cult.d $fcc1, $ft13, $ft7
+0c252625 fcmp.cult.d $fcc5, $ft9, $ft1
+0c2508e2 fcmp.cult.d $fcc2, $fa7, $fa2
+0c253762 fcmp.cult.d $fcc2, $fs3, $ft5
+0c2545e7 fcmp.cult.d $fcc7, $ft7, $ft9
+0c236e86 fcmp.cle.d $fcc6, $ft12, $fs3
+0c2338c0 fcmp.cle.d $fcc0, $fa6, $ft6
+0c2375c5 fcmp.cle.d $fcc5, $ft6, $fs5
+0c235e06 fcmp.cle.d $fcc6, $ft8, $ft15
+0c234c84 fcmp.cle.d $fcc4, $fa4, $ft11
+0c230a43 fcmp.cle.d $fcc3, $ft10, $fa2
+0c2346a6 fcmp.cle.d $fcc6, $ft13, $ft9
+0c233062 fcmp.cle.d $fcc2, $fa3, $ft4
+0c236e20 fcmp.cle.d $fcc0, $ft9, $fs3
+0c235d45 fcmp.cle.d $fcc5, $ft2, $ft15
+0c272947 fcmp.cule.d $fcc7, $ft2, $ft2
+0c274386 fcmp.cule.d $fcc6, $fs4, $ft8
+0c272862 fcmp.cule.d $fcc2, $fa3, $ft2
+0c272101 fcmp.cule.d $fcc1, $ft0, $ft0
+0c2725c3 fcmp.cule.d $fcc3, $ft6, $ft1
+0c276b84 fcmp.cule.d $fcc4, $fs4, $fs2
+0c2754e5 fcmp.cule.d $fcc5, $fa7, $ft13
+0c274786 fcmp.cule.d $fcc6, $fs4, $ft9
+0c270787 fcmp.cule.d $fcc7, $fs4, $fa1
+0c270f01 fcmp.cule.d $fcc1, $fs0, $fa3
+0c285823 fcmp.cne.d $fcc3, $fa1, $ft14
+0c284c87 fcmp.cne.d $fcc7, $fa4, $ft11
+0c2837a4 fcmp.cne.d $fcc4, $fs5, $ft5
+0c284704 fcmp.cne.d $fcc4, $fs0, $ft9
+0c280007 fcmp.cne.d $fcc7, $fa0, $fa0
+0c282927 fcmp.cne.d $fcc7, $ft1, $ft2
+0c281407 fcmp.cne.d $fcc7, $fa0, $fa5
+0c280de1 fcmp.cne.d $fcc1, $ft7, $fa3
+0c282025 fcmp.cne.d $fcc5, $fa1, $ft0
+0c280f62 fcmp.cne.d $fcc2, $fs3, $fa3
+0c2a66e0 fcmp.cor.d $fcc0, $ft15, $fs1
+0c2a2f01 fcmp.cor.d $fcc1, $fs0, $ft3
+0c2a4e67 fcmp.cor.d $fcc7, $ft11, $ft11
+0c2a26c1 fcmp.cor.d $fcc1, $ft14, $ft1
+0c2a0546 fcmp.cor.d $fcc6, $ft2, $fa1
+0c2a0307 fcmp.cor.d $fcc7, $fs0, $fa0
+0c2a65e6 fcmp.cor.d $fcc6, $ft7, $fs1
+0c2a0de4 fcmp.cor.d $fcc4, $ft7, $fa3
+0c2a5100 fcmp.cor.d $fcc0, $ft0, $ft12
+0c2a1521 fcmp.cor.d $fcc1, $ft1, $fa5
+0c2c3b26 fcmp.cune.d $fcc6, $fs1, $ft6
+0c2c7063 fcmp.cune.d $fcc3, $fa3, $fs4
+0c2c4226 fcmp.cune.d $fcc6, $ft9, $ft8
+0c2c71a3 fcmp.cune.d $fcc3, $ft5, $fs4
+0c2c6147 fcmp.cune.d $fcc7, $ft2, $fs0
+0c2c1fc0 fcmp.cune.d $fcc0, $fs6, $fa7
+0c2c7a03 fcmp.cune.d $fcc3, $ft8, $fs6
+0c2c6864 fcmp.cune.d $fcc4, $fa3, $fs2
+0c2c31a1 fcmp.cune.d $fcc1, $ft5, $ft4
+0c2c36a6 fcmp.cune.d $fcc6, $ft13, $ft5
+0c20c003 fcmp.saf.d $fcc3, $fa0, $ft8
+0c20d8c0 fcmp.saf.d $fcc0, $fa6, $ft14
+0c20d743 fcmp.saf.d $fcc3, $fs2, $ft13
+0c209fa0 fcmp.saf.d $fcc0, $fs5, $fa7
+0c20fbc2 fcmp.saf.d $fcc2, $fs6, $fs6
+0c20bd01 fcmp.saf.d $fcc1, $ft0, $ft7
+0c209200 fcmp.saf.d $fcc0, $ft8, $fa4
+0c20eaa7 fcmp.saf.d $fcc7, $ft13, $fs2
+0c20aaa4 fcmp.saf.d $fcc4, $ft13, $ft2
+0c20f263 fcmp.saf.d $fcc3, $ft11, $fs4
+0c24eae2 fcmp.sun.d $fcc2, $ft15, $fs2
+0c248fe3 fcmp.sun.d $fcc3, $fs7, $fa3
+0c24a5c6 fcmp.sun.d $fcc6, $ft6, $ft1
+0c24da03 fcmp.sun.d $fcc3, $ft8, $ft14
+0c24c9e3 fcmp.sun.d $fcc3, $ft7, $ft10
+0c248a62 fcmp.sun.d $fcc2, $ft11, $fa2
+0c24da63 fcmp.sun.d $fcc3, $ft11, $ft14
+0c24fd82 fcmp.sun.d $fcc2, $ft4, $fs7
+0c24ffc3 fcmp.sun.d $fcc3, $fs6, $fs7
+0c24e4e0 fcmp.sun.d $fcc0, $fa7, $fs1
+0c22a3a1 fcmp.seq.d $fcc1, $fs5, $ft0
+0c2295a5 fcmp.seq.d $fcc5, $ft5, $fa5
+0c228325 fcmp.seq.d $fcc5, $fs1, $fa0
+0c22b384 fcmp.seq.d $fcc4, $fs4, $ft4
+0c22c6e0 fcmp.seq.d $fcc0, $ft15, $ft9
+0c22d703 fcmp.seq.d $fcc3, $fs0, $ft13
+0c22a880 fcmp.seq.d $fcc0, $fa4, $ft2
+0c22e3c5 fcmp.seq.d $fcc5, $fs6, $fs0
+0c2290c4 fcmp.seq.d $fcc4, $fa6, $fa4
+0c22c560 fcmp.seq.d $fcc0, $ft3, $ft9
+0c26b7c2 fcmp.sueq.d $fcc2, $fs6, $ft5
+0c26e7a7 fcmp.sueq.d $fcc7, $fs5, $fs1
+0c269742 fcmp.sueq.d $fcc2, $fs2, $fa5
+0c26c782 fcmp.sueq.d $fcc2, $fs4, $ft9
+0c26d3a5 fcmp.sueq.d $fcc5, $fs5, $ft12
+0c2688e1 fcmp.sueq.d $fcc1, $fa7, $fa2
+0c26a1e3 fcmp.sueq.d $fcc3, $ft7, $ft0
+0c26e420 fcmp.sueq.d $fcc0, $fa1, $fs1
+0c26fb62 fcmp.sueq.d $fcc2, $fs3, $fs6
+0c26eee4 fcmp.sueq.d $fcc4, $ft15, $fs3
+0c21be07 fcmp.slt.d $fcc7, $ft8, $ft7
+0c21d1e6 fcmp.slt.d $fcc6, $ft7, $ft12
+0c21c081 fcmp.slt.d $fcc1, $fa4, $ft8
+0c21b883 fcmp.slt.d $fcc3, $fa4, $ft6
+0c21c742 fcmp.slt.d $fcc2, $fs2, $ft9
+0c21d924 fcmp.slt.d $fcc4, $ft1, $ft14
+0c21a4e2 fcmp.slt.d $fcc2, $fa7, $ft1
+0c21b2c4 fcmp.slt.d $fcc4, $ft14, $ft4
+0c21e9c5 fcmp.slt.d $fcc5, $ft6, $fs2
+0c21a500 fcmp.slt.d $fcc0, $ft0, $ft1
+0c25c1c2 fcmp.sult.d $fcc2, $ft6, $ft8
+0c25bbc3 fcmp.sult.d $fcc3, $fs6, $ft6
+0c25e6c7 fcmp.sult.d $fcc7, $ft14, $fs1
+0c25d346 fcmp.sult.d $fcc6, $fs2, $ft12
+0c25bae7 fcmp.sult.d $fcc7, $ft15, $ft6
+0c25f001 fcmp.sult.d $fcc1, $fa0, $fs4
+0c25f021 fcmp.sult.d $fcc1, $fa1, $fs4
+0c25aa47 fcmp.sult.d $fcc7, $ft10, $ft2
+0c25f2c7 fcmp.sult.d $fcc7, $ft14, $fs4
+0c258502 fcmp.sult.d $fcc2, $ft0, $fa1
+0c23b5a4 fcmp.sle.d $fcc4, $ft5, $ft5
+0c23b0a4 fcmp.sle.d $fcc4, $fa5, $ft4
+0c23ac24 fcmp.sle.d $fcc4, $fa1, $ft3
+0c23d385 fcmp.sle.d $fcc5, $fs4, $ft12
+0c23f782 fcmp.sle.d $fcc2, $fs4, $fs5
+0c23d921 fcmp.sle.d $fcc1, $ft1, $ft14
+0c23d703 fcmp.sle.d $fcc3, $fs0, $ft13
+0c23f0e7 fcmp.sle.d $fcc7, $fa7, $fs4
+0c23bca3 fcmp.sle.d $fcc3, $fa5, $ft7
+0c238d01 fcmp.sle.d $fcc1, $ft0, $fa3
+0c27dac2 fcmp.sule.d $fcc2, $ft14, $ft14
+0c27e1a5 fcmp.sule.d $fcc5, $ft5, $fs0
+0c27aca3 fcmp.sule.d $fcc3, $fa5, $ft3
+0c27f964 fcmp.sule.d $fcc4, $ft3, $fs6
+0c27e145 fcmp.sule.d $fcc5, $ft2, $fs0
+0c278d85 fcmp.sule.d $fcc5, $ft4, $fa3
+0c27b7a7 fcmp.sule.d $fcc7, $fs5, $ft5
+0c27cd86 fcmp.sule.d $fcc6, $ft4, $ft11
+0c27dc61 fcmp.sule.d $fcc1, $fa3, $ft15
+0c279e01 fcmp.sule.d $fcc1, $ft8, $fa7
+0c2894c2 fcmp.sne.d $fcc2, $fa6, $fa5
+0c28b341 fcmp.sne.d $fcc1, $fs2, $ft4
+0c2892a6 fcmp.sne.d $fcc6, $ft13, $fa4
+0c288d23 fcmp.sne.d $fcc3, $ft1, $fa3
+0c289385 fcmp.sne.d $fcc5, $fs4, $fa4
+0c28fd26 fcmp.sne.d $fcc6, $ft1, $fs7
+0c2880c1 fcmp.sne.d $fcc1, $fa6, $fa0
+0c28cce4 fcmp.sne.d $fcc4, $fa7, $ft11
+0c288ca2 fcmp.sne.d $fcc2, $fa5, $fa3
+0c28a9c7 fcmp.sne.d $fcc7, $ft6, $ft2
+0c2aaec3 fcmp.sor.d $fcc3, $ft14, $ft3
+0c2af506 fcmp.sor.d $fcc6, $ft0, $fs5
+0c2a9b25 fcmp.sor.d $fcc5, $fs1, $fa6
+0c2a82a0 fcmp.sor.d $fcc0, $ft13, $fa0
+0c2a8982 fcmp.sor.d $fcc2, $ft4, $fa2
+0c2a9266 fcmp.sor.d $fcc6, $ft11, $fa4
+0c2a9c84 fcmp.sor.d $fcc4, $fa4, $fa7
+0c2acc83 fcmp.sor.d $fcc3, $fa4, $ft11
+0c2ae7c2 fcmp.sor.d $fcc2, $fs6, $fs1
+0c2ad383 fcmp.sor.d $fcc3, $fs4, $ft12
+0c2cc527 fcmp.sune.d $fcc7, $ft1, $ft9
+0c2cbbe7 fcmp.sune.d $fcc7, $fs7, $ft6
+0c2cea84 fcmp.sune.d $fcc4, $ft12, $fs2
+0c2cccc7 fcmp.sune.d $fcc7, $fa6, $ft11
+0c2cf283 fcmp.sune.d $fcc3, $ft12, $fs4
+0c2cfea2 fcmp.sune.d $fcc2, $ft13, $fs7
+0c2cb546 fcmp.sune.d $fcc6, $ft2, $ft5
+0c2cebc1 fcmp.sune.d $fcc1, $fs6, $fs2
+0c2ca201 fcmp.sune.d $fcc1, $ft8, $ft0
+0c2ca300 fcmp.sune.d $fcc0, $fs0, $ft0
+0d00789e fsel $fs6, $fa4, $fs6, $fcc0
+0d0260fa fsel $fs2, $fa7, $fs0, $fcc4
+0d02994b fsel $ft3, $ft2, $fa6, $fcc5
+0d0099f4 fsel $ft12, $ft7, $fa6, $fcc1
+0d02716f fsel $ft7, $ft3, $fs4, $fcc4
+0d01914c fsel $ft4, $ft2, $fa4, $fcc3
+0d011718 fsel $fs0, $fs0, $fa5, $fcc2
+0d02d668 fsel $ft0, $ft11, $ft13, $fcc5
+0d00bd9c fsel $fs4, $ft4, $ft7, $fcc1
+0d01c8c9 fsel $ft1, $fa6, $ft10, $fcc3
+130e5a51 addu16i.d $t5, $t6, -15466
+1386e481 addu16i.d $ra, $a0, -7751
+11c89b84 addu16i.d $a0, $s5, 29222
+122b9191 addu16i.d $t5, $t0, -29980
+1359fbcd addu16i.d $t1, $s7, -10626
+12823d70 addu16i.d $t4, $a7, -24433
+11711aa9 addu16i.d $a5, $r21, 23622
+116ff5a6 addu16i.d $a2, $t1, 23549
+1107e639 addu16i.d $s2, $t5, 16889
+136235b8 addu16i.d $s1, $t1, -10099
+15facde0 lu12i.w $zero, -10641
+156c9f65 lu12i.w $a1, -301829
+15be2a33 lu12i.w $t7, -134831
+14fbc63d lu12i.w $s6, 515633
+15f6c363 lu12i.w $sp, -18917
+14493dc3 lu12i.w $sp, 149998
+150f7610 lu12i.w $t4, -492624
+1458b9e8 lu12i.w $a4, 181711
+15d972ad lu12i.w $t1, -78955
+141e89cb lu12i.w $a7, 62542
+1778fea6 lu32i.d $a2, -276491
+17497039 lu32i.d $s2, -373887
+17a9a7e8 lu32i.d $a4, -176833
+16f0d2cf lu32i.d $t3, 493206
+17cc6ae4 lu32i.d $a0, -105641
+179b8026 lu32i.d $a2, -205823
+17c7ef09 lu32i.d $a5, -114824
+16330278 lu32i.d $s1, 104467
+17fbdf87 lu32i.d $a3, -8452
+16230254 lu32i.d $t8, 71698
+18722883 pcaddi $sp, 233796
+189c1117 pcaddi $s0, 319624
+19f3c450 pcaddi $t4, -25054
+18593d46 pcaddi $a2, 182762
+1827217a pcaddi $s3, 80139
+1956f9e0 pcaddi $zero, -346161
+19677117 pcaddi $s0, -312440
+1897893b pcaddi $s4, 310345
+196be1a0 pcaddi $zero, -303347
+19d90025 pcaddi $a1, -79871
+1b4bde30 pcalau12i $t4, -368911
+1a09d144 pcalau12i $a0, 20106
+1b0c6e10 pcalau12i $t4, -498832
+1a458d0e pcalau12i $t2, 142440
+1b6ab7f1 pcalau12i $t5, -305729
+1a2b5696 pcalau12i $fp, 88756
+1b937e53 pcalau12i $t7, -222222
+1a5c2008 pcalau12i $a4, 188672
+1b491cef pcalau12i $t3, -374553
+1b5ec213 pcalau12i $t7, -330224
+1d7ba99b pcaddu12i $s4, -271028
+1ca2ab88 pcaddu12i $a4, 333148
+1dd6f4d7 pcaddu12i $s0, -84058
+1cb3d3b2 pcaddu12i $t6, 368285
+1dfffc43 pcaddu12i $sp, -30
+1c43641e pcaddu12i $s7, 138016
+1d200216 pcaddu12i $fp, -458736
+1d300dc8 pcaddu12i $a4, -425874
+1c3fd722 pcaddu12i $tp, 130745
+1c0d58b5 pcaddu12i $r21, 27333
+1e4efa0f pcaddu18i $t3, 161744
+1f26bd9e pcaddu18i $s7, -444948
+1fcd8f62 pcaddu18i $tp, -103301
+1e4ea7bb pcaddu18i $s4, 161085
+1f92dcf7 pcaddu18i $s0, -223513
+1fdc408f pcaddu18i $t3, -73212
+1ed67c76 pcaddu18i $fp, 439267
+1e92eedc pcaddu18i $s5, 300918
+1e635433 pcaddu18i $t7, 203425
+1e582066 pcaddu18i $a2, 180483
+208a0abc ll.w $s5, $r21, -30200
+20729c6b ll.w $a7, $sp, 29340
+20bd3127 ll.w $a3, $a5, -17104
+20fd85ee ll.w $t2, $t3, -636
+204390b8 ll.w $s1, $a1, 17296
+204452bf ll.w $s8, $r21, 17488
+20a9e7ea ll.w $a6, $s8, -22044
+20828edc ll.w $s5, $fp, -32116
+20ec93fa ll.w $s3, $s8, -4976
+20fccedd ll.w $s6, $fp, -820
+21a7f177 sc.w $s0, $a7, -22544
+215c31fb sc.w $s4, $t3, 23600
+21c5075b sc.w $s4, $s3, -15100
+21736f1f sc.w $s8, $s1, 29548
+2125e256 sc.w $fp, $t6, 9696
+21fa7fdd sc.w $s6, $s7, -1412
+219ef44a sc.w $a6, $tp, -24844
+2176435e sc.w $s7, $s3, 30272
+21590a85 sc.w $a1, $t8, 22792
+21909506 sc.w $a2, $a4, -28524
+226486d4 ll.d $t8, $fp, 25732
+2200b6b6 ll.d $fp, $r21, 180
+22c965d7 ll.d $s0, $t2, -13980
+2273c617 ll.d $s0, $t4, 29636
+229b3bd3 ll.d $t7, $s7, -25800
+223e027a ll.d $s3, $t7, 15872
+229052af ll.d $t3, $r21, -28592
+2205c117 ll.d $s0, $a4, 1472
+2230ff45 ll.d $a1, $s3, 12540
+22b60cac ll.d $t0, $a1, -18932
+232f49cd sc.d $t1, $t2, 12104
+230c10e0 sc.d $zero, $a3, 3088
+23d77204 sc.d $a0, $t4, -10384
+23516552 sc.d $t6, $a6, 20836
+23fe7cab sc.d $a7, $a1, -388
+23d350ab sc.d $a7, $a1, -11440
+235436f4 sc.d $t8, $s0, 21556
+23a692e9 sc.d $a5, $s0, -22896
+23b1ba1c sc.d $s5, $t4, -20040
+23207991 sc.d $t5, $t0, 8312
+2465205d ldptr.w $s6, $tp, 25888
+2406fbda ldptr.w $s3, $s7, 1784
+2437bfc0 ldptr.w $zero, $s7, 14268
+24df73b0 ldptr.w $t4, $s6, -8336
+24072ca4 ldptr.w $a0, $a1, 1836
+242f156c ldptr.w $t0, $a7, 12052
+24c8398b ldptr.w $a7, $t0, -14280
+2410735b ldptr.w $s4, $s3, 4208
+24621e6e ldptr.w $t2, $t7, 25116
+241104b9 ldptr.w $s2, $a1, 4356
+25c963fe stptr.w $s7, $s8, -13984
+25956464 stptr.w $a0, $sp, -27292
+25653b65 stptr.w $a1, $s4, 25912
+25e4fead stptr.w $t1, $r21, -6916
+2530d566 stptr.w $a2, $a7, 12500
+2578a164 stptr.w $a0, $a7, 30880
+254f9de0 stptr.w $zero, $t3, 20380
+25fc52fd stptr.w $s6, $s0, -944
+256a46ba stptr.w $s3, $r21, 27204
+250550fa stptr.w $s3, $a3, 1360
+26d75a4e ldptr.d $t2, $t6, -10408
+26ad989d ldptr.d $s6, $a0, -21096
+26c8aff9 ldptr.d $s2, $s8, -14164
+2613fe9d ldptr.d $s6, $t8, 5116
+26df73b0 ldptr.d $t4, $s6, -8336
+26afbf19 ldptr.d $s2, $s1, -20548
+26de21c5 ldptr.d $a1, $t2, -8672
+267b164e ldptr.d $t2, $t6, 31508
+2638a32e ldptr.d $t2, $s2, 14496
+26fae4e7 ldptr.d $a3, $a3, -1308
+2750ff60 stptr.d $zero, $s4, 20732
+27d97594 stptr.d $t8, $t0, -9868
+27cc0954 stptr.d $t8, $a6, -13304
+27159b32 stptr.d $t6, $s2, 5528
+27c01fc2 stptr.d $tp, $s7, -16356
+27629ba3 stptr.d $sp, $s6, 25240
+270173a6 stptr.d $a2, $s6, 368
+27b22e5a stptr.d $s3, $t6, -19924
+2782d9c2 stptr.d $tp, $t2, -32040
+27fb2704 stptr.d $a0, $s1, -1244
+2821c5b7 ld.b $s0, $t1, -1935
+28266a34 ld.b $t8, $t5, -1638
+282a6d0f ld.b $t3, $a4, -1381
+28323d49 ld.b $a5, $a6, -881
+2800cf13 ld.b $t7, $s1, 51
+28251541 ld.b $ra, $a6, -1723
+280e2896 ld.b $fp, $a0, 906
+28045b45 ld.b $a1, $s3, 278
+282ad955 ld.b $r21, $a6, -1354
+283433ec ld.b $t0, $s8, -756
+285a1b46 ld.h $a2, $s3, 1670
+28440d4f ld.h $t3, $a6, 259
+2861b4d2 ld.h $t6, $a2, -1939
+284eaaec ld.h $t0, $s0, 938
+2855f462 ld.h $tp, $sp, 1405
+2860b83d ld.h $s6, $ra, -2002
+286d33c1 ld.h $ra, $s7, -1204
+28712195 ld.h $r21, $t0, -952
+28643b73 ld.h $t7, $s4, -1778
+28736899 ld.h $s2, $a0, -806
+28ab0340 ld.w $zero, $s3, -1344
+2886174a ld.w $a6, $s3, 389
+2897d891 ld.w $t5, $a0, 1526
+28a99036 ld.w $fp, $ra, -1436
+28859ebe ld.w $s7, $r21, 359
+28a7b668 ld.w $a4, $t7, -1555
+28a36f0e ld.w $t2, $s1, -1829
+2893806b ld.w $a7, $sp, 1248
+28a5492c ld.w $t0, $a5, -1710
+289a2498 ld.w $s1, $a0, 1673
+28e25a90 ld.d $t4, $t8, -1898
+28f311f1 ld.d $t5, $t3, -828
+28e377e3 ld.d $sp, $s8, -1827
+28cd6693 ld.d $t7, $t8, 857
+28f7331e ld.d $s7, $s1, -564
+28ff87b9 ld.d $s2, $s6, -31
+28e0cfa2 ld.d $tp, $s6, -1997
+28f6d107 ld.d $a3, $a4, -588
+28d27d97 ld.d $s0, $t0, 1183
+28f1c694 ld.d $t8, $t8, -911
+293acd95 st.b $r21, $t0, -333
+2935f25c st.b $s5, $t6, -644
+290fd899 st.b $s2, $a0, 1014
+292d1dfc st.b $s5, $t3, -1209
+290a583e st.b $s7, $ra, 662
+292ecb80 st.b $zero, $s5, -1102
+293e9425 st.b $a1, $ra, -91
+293d54e1 st.b $ra, $a3, -171
+29172790 st.b $t4, $s5, 1481
+2939c7cd st.b $t1, $s7, -399
+296f93e4 st.h $a0, $s8, -1052
+296821cf st.h $t3, $t2, -1528
+294db72e st.h $t2, $s2, 877
+294bc015 st.h $r21, $zero, 752
+2942ed58 st.h $s1, $a6, 187
+29562a47 st.h $a3, $t6, 1418
+29685301 st.h $ra, $s1, -1516
+297a27ab st.h $a7, $s6, -375
+295073b1 st.h $t5, $s6, 1052
+296d55ae st.h $t2, $t1, -1195
+2980911e st.w $s7, $a4, 36
+29b91c15 st.w $r21, $zero, -441
+2983ddca st.w $a6, $t2, 247
+299ea79c st.w $s5, $s5, 1961
+2987d3a4 st.w $a0, $s6, 500
+29a1217e st.w $s7, $a7, -1976
+29b50ef2 st.w $t6, $s0, -701
+29bd2383 st.w $sp, $s5, -184
+2980752b st.w $a7, $a5, 29
+29a9469d st.w $s6, $t8, -1455
+29ff65a8 st.d $a4, $t1, -39
+29cc7fb3 st.d $t7, $s6, 799
+29f020fb st.d $s4, $a3, -1016
+29c723ff st.d $s8, $s8, 456
+29ccbc07 st.d $a3, $zero, 815
+29ec8616 st.d $fp, $t4, -1247
+29fa344d st.d $t1, $tp, -371
+29cff9da st.d $s3, $t2, 1022
+29cc6e84 st.d $a0, $t8, 795
+29e6a403 st.d $sp, $zero, -1623
+2a0c1342 ld.bu $tp, $s3, 772
+2a256432 ld.bu $t6, $ra, -1703
+2a38f164 ld.bu $a0, $a7, -452
+2a3b0b06 ld.bu $a2, $s1, -318
+2a2b6c3f ld.bu $s8, $ra, -1317
+2a18be50 ld.bu $t4, $t6, 1583
+2a1d8fdb ld.bu $s4, $s7, 1891
+2a1cf45e ld.bu $s7, $tp, 1853
+2a2abfaa ld.bu $a6, $s6, -1361
+2a0c30fa ld.bu $s3, $a3, 780
+2a6ea816 ld.hu $fp, $zero, -1110
+2a7bc3d0 ld.hu $t4, $s7, -272
+2a765047 ld.hu $a3, $tp, -620
+2a7805b4 ld.hu $t8, $t1, -511
+2a68e8dc ld.hu $s5, $a2, -1478
+2a72c8ea ld.hu $a6, $a3, -846
+2a427f0f ld.hu $t3, $s1, 159
+2a70c6e1 ld.hu $ra, $s0, -975
+2a5b51c3 ld.hu $sp, $t2, 1748
+2a5b3510 ld.hu $t4, $a4, 1741
+2a81bfbb ld.wu $s4, $s6, 111
+2a8259d3 ld.wu $t7, $t2, 150
+2a900490 ld.wu $t4, $a0, 1025
+2aa05842 ld.wu $tp, $tp, -2026
+2a9ffdf7 ld.wu $s0, $t3, 2047
+2aaf5d5b ld.wu $s4, $a6, -1065
+2a8c81c9 ld.wu $a5, $t2, 800
+2a87bdaf ld.wu $t3, $t1, 495
+2ab0230e ld.wu $t2, $s1, -1016
+2a9038d1 ld.wu $t5, $a2, 1038
+2adea1e8 preld 0x8, $t3, 1960
+2ac04c8d preld 0xd, $a0, 19
+2ae89a60 preld 0x0, $t7, -1498
+2ac1f32b preld 0xb, $s2, 124
+2af35b95 preld 0x15, $s5, -810
+2add21a8 preld 0x8, $t1, 1864
+2acab162 preld 0x2, $a7, 684
+2ac4084f preld 0xf, $tp, 258
+2af5f54f preld 0xf, $a6, -643
+2acf530f preld 0xf, $s1, 980
+2b20adb3 fld.s $ft11, $t1, -2005
+2b27444b fld.s $ft3, $tp, -1583
+2b33d139 fld.s $fs1, $a5, -780
+2b3a927e fld.s $fs6, $t7, -348
+2b1e2a61 fld.s $fa1, $t7, 1930
+2b2d4924 fld.s $fa4, $a5, -1198
+2b0f2caa fld.s $ft2, $a1, 971
+2b0b0a2a fld.s $ft2, $t5, 706
+2b369509 fld.s $ft1, $a4, -603
+2b0c768a fld.s $ft2, $t8, 797
+2b515a9f fst.s $fs7, $t8, 1110
+2b7b304c fst.s $ft4, $tp, -308
+2b75cb17 fst.s $ft15, $s1, -654
+2b697693 fst.s $ft11, $t8, -1443
+2b71c980 fst.s $fa0, $t0, -910
+2b741af3 fst.s $ft11, $s0, -762
+2b556a7b fst.s $fs3, $t7, 1370
+2b644b5e fst.s $fs6, $s3, -1774
+2b7202df fst.s $fs7, $fp, -896
+2b54cae3 fst.s $fa3, $s0, 1330
+2ba89e9a fld.d $fs2, $t8, -1497
+2ba36478 fld.d $fs0, $sp, -1831
+2bafaa97 fld.d $ft15, $t8, -1046
+2baceaa0 fld.d $fa0, $r21, -1222
+2bb6c5a5 fld.d $fa5, $t1, -591
+2b9c7754 fld.d $ft12, $s3, 1821
+2b843829 fld.d $ft1, $ra, 270
+2ba2942c fld.d $ft4, $ra, -1883
+2b8541d3 fld.d $ft11, $t2, 336
+2b88ae45 fld.d $fa5, $t6, 555
+2be4cb6b fst.d $ft3, $s4, -1742
+2bc9335c fst.d $fs4, $s3, 588
+2bdafd7d fst.d $fs5, $a7, 1727
+2bdaffdf fst.d $fs7, $s7, 1727
+2bf338c6 fst.d $fa6, $a2, -818
+2be5c0c7 fst.d $fa7, $a2, -1680
+2be1791a fst.d $fs2, $a4, -1954
+2bc4aa28 fst.d $ft0, $t5, 298
+2bddb38b fst.d $ft3, $s5, 1900
+2bde1cf7 fst.d $ft15, $a3, 1927
+38001711 ldx.b $t5, $s1, $a1
+38002b16 ldx.b $fp, $s1, $a6
+380039e8 ldx.b $a4, $t3, $t2
+38005f73 ldx.b $t7, $s4, $s0
+38001e27 ldx.b $a3, $t5, $a3
+380033d1 ldx.b $t5, $s7, $t0
+38004629 ldx.b $a5, $t5, $t5
+380036c0 ldx.b $zero, $fp, $t1
+38000aa2 ldx.b $tp, $r21, $tp
+380035ea ldx.b $a6, $t3, $t1
+38040ae0 ldx.h $zero, $s0, $tp
+38047415 ldx.h $r21, $zero, $s6
+38045be4 ldx.h $a0, $s8, $fp
+380442f8 ldx.h $s1, $s0, $t4
+380476ef ldx.h $t3, $s0, $s6
+38042f92 ldx.h $t6, $s5, $a7
+38044a06 ldx.h $a2, $t4, $t6
+3804446f ldx.h $t3, $sp, $t5
+38045434 ldx.h $t8, $ra, $r21
+38046369 ldx.h $a5, $s4, $s1
+38081f5c ldx.w $s5, $s3, $a3
+380860e8 ldx.w $a4, $a3, $s1
+38082447 ldx.w $a3, $tp, $a5
+38082d05 ldx.w $a1, $a4, $a7
+38086541 ldx.w $ra, $a6, $s2
+38086304 ldx.w $a0, $s1, $s1
+3808385e ldx.w $s7, $tp, $t2
+38083eec ldx.w $t0, $s0, $t3
+38080298 ldx.w $s1, $t8, $zero
+380867e7 ldx.w $a3, $s8, $s2
+380c2d83 ldx.d $sp, $t0, $a7
+380c251b ldx.d $s4, $a4, $a5
+380c79dd ldx.d $s6, $t2, $s7
+380c0e1f ldx.d $s8, $t4, $sp
+380c25bb ldx.d $s4, $t1, $a5
+380c4e7e ldx.d $s7, $t7, $t7
+380c30d8 ldx.d $s1, $a2, $t0
+380c45c7 ldx.d $a3, $t2, $t5
+380c07c2 ldx.d $tp, $s7, $ra
+380c416a ldx.d $a6, $a7, $t4
+38100f58 stx.b $s1, $s3, $sp
+38101b3c stx.b $s5, $s2, $a2
+38101051 stx.b $t5, $tp, $a0
+381030b0 stx.b $t4, $a1, $t0
+381004d2 stx.b $t6, $a2, $ra
+3810417b stx.b $s4, $a7, $t4
+38107d76 stx.b $fp, $a7, $s8
+38103d17 stx.b $s0, $a4, $t3
+381029c5 stx.b $a1, $t2, $a6
+38104628 stx.b $a4, $t5, $t5
+38144142 stx.h $tp, $a6, $t4
+38144fbd stx.h $s6, $s6, $t7
+3814797a stx.h $s3, $a7, $s7
+38142048 stx.h $a4, $tp, $a4
+38145a8e stx.h $t2, $t8, $fp
+38145bdd stx.h $s6, $s7, $fp
+38147bed stx.h $t1, $s8, $s7
+3814335a stx.h $s3, $s3, $t0
+38140b8a stx.h $a6, $s5, $tp
+38145113 stx.h $t7, $a4, $t8
+3818792c stx.w $t0, $a5, $s7
+38180dc7 stx.w $a3, $t2, $sp
+38180e03 stx.w $sp, $t4, $sp
+38182b52 stx.w $t6, $s3, $a6
+38184a91 stx.w $t5, $t8, $t6
+38184a73 stx.w $t7, $t7, $t6
+3818161a stx.w $s3, $t4, $a1
+381811df stx.w $s8, $t2, $a0
+38180544 stx.w $a0, $a6, $ra
+38182f7c stx.w $s5, $s4, $a7
+381c1115 stx.d $r21, $a4, $a0
+381c717f stx.d $s8, $a7, $s5
+381c3197 stx.d $s0, $t0, $t0
+381c488c stx.d $t0, $a0, $t6
+381c083b stx.d $s4, $ra, $tp
+381c4cfb stx.d $s4, $a3, $t7
+381c07f9 stx.d $s2, $s8, $ra
+381c7421 stx.d $ra, $ra, $s6
+381c1a19 stx.d $s2, $t4, $a2
+381c40eb stx.d $a7, $a3, $t4
+38202d7f ldx.bu $s8, $a7, $a7
+38207865 ldx.bu $a1, $sp, $s7
+38205b51 ldx.bu $t5, $s3, $fp
+38204555 ldx.bu $r21, $a6, $t5
+38207b29 ldx.bu $a5, $s2, $s7
+382075a4 ldx.bu $a0, $t1, $s6
+382046e5 ldx.bu $a1, $s0, $t5
+38200a35 ldx.bu $r21, $t5, $tp
+38204eb9 ldx.bu $s2, $r21, $t7
+38207649 ldx.bu $a5, $t6, $s6
+38240c16 ldx.hu $fp, $zero, $sp
+382438bb ldx.hu $s4, $a1, $t2
+38241f5a ldx.hu $s3, $s3, $a3
+38244caf ldx.hu $t3, $a1, $t7
+38246d99 ldx.hu $s2, $t0, $s4
+382406d4 ldx.hu $t8, $fp, $ra
+38247f1c ldx.hu $s5, $s1, $s8
+38242b84 ldx.hu $a0, $s5, $a6
+382431f9 ldx.hu $s2, $t3, $t0
+382452fc ldx.hu $s5, $s0, $t8
+382846e0 ldx.wu $zero, $s0, $t5
+38282142 ldx.wu $tp, $a6, $a4
+38280169 ldx.wu $a5, $a7, $zero
+38285421 ldx.wu $ra, $ra, $r21
+38282b88 ldx.wu $a4, $s5, $a6
+38287de2 ldx.wu $tp, $t3, $s8
+38280939 ldx.wu $s2, $a5, $tp
+38285a1c ldx.wu $s5, $t4, $fp
+38283736 ldx.wu $fp, $s2, $t1
+38281986 ldx.wu $a2, $t0, $a2
+382c0d80 preldx 0x0, $t0, $sp
+382c4443 preldx 0x3, $tp, $t5
+382c2594 preldx 0x14, $t0, $a5
+382c4d2a preldx 0xa, $a5, $t7
+382c4402 preldx 0x2, $zero, $t5
+382c6a3a preldx 0x1a, $t5, $s3
+382c3fb1 preldx 0x11, $s6, $t3
+382c5973 preldx 0x13, $a7, $fp
+382c4a8b preldx 0xb, $t8, $t6
+382c4b31 preldx 0x11, $s2, $t6
+38304577 fldx.s $ft15, $a7, $t5
+38306d64 fldx.s $fa4, $a7, $s4
+383075ff fldx.s $fs7, $t3, $s6
+38302ff5 fldx.s $ft13, $s8, $a7
+3830149c fldx.s $fs4, $a0, $a1
+38305519 fldx.s $fs1, $a4, $r21
+38304dbc fldx.s $fs4, $t1, $t7
+38301d4a fldx.s $ft2, $a6, $a3
+383072fd fldx.s $fs5, $s0, $s5
+38307b61 fldx.s $fa1, $s4, $s7
+38344c79 fldx.d $fs1, $sp, $t7
+38344fa7 fldx.d $fa7, $s6, $t7
+38343e79 fldx.d $fs1, $t7, $t3
+383427bf fldx.d $fs7, $s6, $a5
+3834763c fldx.d $fs4, $t5, $s6
+38343538 fldx.d $fs0, $a5, $t1
+383473b5 fldx.d $ft13, $s6, $s5
+38346e29 fldx.d $ft1, $t5, $s4
+383415c3 fldx.d $fa3, $t2, $a1
+38340b8a fldx.d $ft2, $s5, $tp
+38385423 fstx.s $fa3, $ra, $r21
+383835d0 fstx.s $ft8, $t2, $t1
+383801dd fstx.s $fs5, $t2, $zero
+383823d8 fstx.s $fs0, $s7, $a4
+38384835 fstx.s $ft13, $ra, $t6
+3838797f fstx.s $fs7, $a7, $s7
+383854d5 fstx.s $ft13, $a2, $r21
+3838337a fstx.s $fs2, $s4, $t0
+38380216 fstx.s $ft14, $t4, $zero
+38381f32 fstx.s $ft10, $s2, $a3
+383c4f5c fstx.d $fs4, $s3, $t7
+383c5979 fstx.d $fs1, $a7, $fp
+383c1314 fstx.d $ft12, $s1, $a0
+383c2d89 fstx.d $ft1, $t0, $a7
+383c1661 fstx.d $fa1, $t7, $a1
+383c7d14 fstx.d $ft12, $a4, $s8
+383c745a fstx.d $fs2, $tp, $s6
+383c33bc fstx.d $fs4, $s6, $t0
+383c025f fstx.d $fs7, $t6, $zero
+383c3d35 fstx.d $ft13, $a5, $t3
+38572b3c sc.q $s5, $a6, $s2
+38572d41 sc.q $ra, $a7, $a6
+38571241 sc.q $ra, $a0, $t6
+3857489d sc.q $s6, $t6, $a0
+38572903 sc.q $sp, $a6, $a4
+38575ff6 sc.q $fp, $s0, $s8
+385706ad sc.q $t1, $ra, $r21
+385741bc sc.q $s5, $t4, $t1
+38571eed sc.q $t1, $a3, $s0
+38573cf8 sc.q $s1, $t3, $a3
+385783fc llacq.w $s5, $s8
+385780e0 llacq.w $zero, $a3
+385780cc llacq.w $t0, $a2
+385783ec llacq.w $t0, $s8
+3857823a llacq.w $s3, $t5
+38578046 llacq.w $a2, $tp
+385781ee llacq.w $t2, $t3
+3857820f llacq.w $t3, $t4
+38578225 llacq.w $a1, $t5
+385781a4 llacq.w $a0, $t1
+38578426 screl.w $a2, $ra
+385786b9 screl.w $s2, $r21
+38578500 screl.w $zero, $a4
+385787a5 screl.w $a1, $s6
+385787be screl.w $s7, $s6
+38578417 screl.w $s0, $zero
+38578509 screl.w $a5, $a4
+38578760 screl.w $zero, $s4
+38578586 screl.w $a2, $t0
+3857862f screl.w $t3, $t5
+385789ea llacq.d $a6, $t3
+38578bd6 llacq.d $fp, $s7
+38578902 llacq.d $tp, $a4
+38578890 llacq.d $t4, $a0
+38578bfa llacq.d $s3, $s8
+38578ad4 llacq.d $t8, $fp
+38578bca llacq.d $a6, $s7
+38578a57 llacq.d $s0, $t6
+38578806 llacq.d $a2, $zero
+38578b2c llacq.d $t0, $s2
+38578ce7 screl.d $a3, $a3
+38578d9c screl.d $s5, $t0
+38578e90 screl.d $t4, $t8
+38578ec0 screl.d $zero, $fp
+38578d07 screl.d $a3, $a4
+38578c46 screl.d $a2, $tp
+38578d7c screl.d $s5, $a7
+38578ff4 screl.d $t8, $s8
+38578ec9 screl.d $a5, $fp
+38578d79 screl.d $s2, $a7
+38587841 amcas.b $ra, $s7, $tp
+3858733c amcas.b $s5, $s5, $s2
+3858237d amcas.b $s6, $a4, $s4
+385818f2 amcas.b $t6, $a2, $a3
+385836a9 amcas.b $a5, $t1, $r21
+38580593 amcas.b $t7, $ra, $t0
+38580f41 amcas.b $ra, $sp, $s3
+38584fc3 amcas.b $sp, $t7, $s7
+38583b29 amcas.b $a5, $t2, $s2
+3858594f amcas.b $t3, $fp, $a6
+3858f287 amcas.h $a3, $s5, $t8
+38589fc8 amcas.h $a4, $a3, $s7
+3858ad67 amcas.h $a3, $a7, $a7
+3858ca0f amcas.h $t3, $t6, $t4
+385889be amcas.h $s7, $tp, $t1
+3858f9c1 amcas.h $ra, $s7, $t2
+3858b198 amcas.h $s1, $t0, $t0
+3858f5cd amcas.h $t1, $s6, $t2
+3858b57f amcas.h $s8, $t1, $a7
+3858eac6 amcas.h $a2, $s3, $fp
+3859017d amcas.w $s6, $zero, $a7
+38597e9d amcas.w $s6, $s8, $t8
+385922c5 amcas.w $a1, $a4, $fp
+38592e19 amcas.w $s2, $a7, $t4
+38595bc3 amcas.w $sp, $fp, $s7
+385966d8 amcas.w $s1, $s2, $fp
+38595a3b amcas.w $s4, $fp, $t5
+385951ab amcas.w $a7, $t8, $t1
+385919e1 amcas.w $ra, $a2, $t3
+3859611b amcas.w $s4, $s1, $a4
+3859c293 amcas.d $t7, $t4, $t8
+3859c88f amcas.d $t3, $t6, $a0
+3859f8f9 amcas.d $s2, $s7, $a3
+3859b0db amcas.d $s4, $t0, $a2
+3859f9c7 amcas.d $a3, $s7, $t2
+3859a661 amcas.d $ra, $a5, $t7
+3859ef43 amcas.d $sp, $s4, $s3
+3859ded1 amcas.d $t5, $s0, $fp
+3859d354 amcas.d $t8, $t8, $s3
+3859db9a amcas.d $s3, $fp, $s5
+385a5d36 amcas_db.b $fp, $s0, $a5
+385a380e amcas_db.b $t2, $t2, $zero
+385a45a5 amcas_db.b $a1, $t5, $t1
+385a2710 amcas_db.b $t4, $a5, $s1
+385a7911 amcas_db.b $t5, $s7, $a4
+385a5835 amcas_db.b $r21, $fp, $ra
+385a48e4 amcas_db.b $a0, $t6, $a3
+385a7cad amcas_db.b $t1, $s8, $a1
+385a2520 amcas_db.b $zero, $a5, $a5
+385a0860 amcas_db.b $zero, $tp, $sp
+385add23 amcas_db.h $sp, $s0, $a5
+385a8045 amcas_db.h $a1, $zero, $tp
+385a8898 amcas_db.h $s1, $tp, $a0
+385ae6c2 amcas_db.h $tp, $s2, $fp
+385acc97 amcas_db.h $s0, $t7, $a0
+385a9953 amcas_db.h $t7, $a2, $a6
+385ae1af amcas_db.h $t3, $s1, $t1
+385a8d60 amcas_db.h $zero, $sp, $a7
+385a93d9 amcas_db.h $s2, $a0, $s7
+385addf5 amcas_db.h $r21, $s0, $t3
+385b5f72 amcas_db.w $t6, $s0, $s4
+385b3c59 amcas_db.w $s2, $t3, $tp
+385b7600 amcas_db.w $zero, $s6, $t4
+385b2519 amcas_db.w $s2, $a5, $a4
+385b5e4e amcas_db.w $t2, $s0, $t6
+385b2468 amcas_db.w $a4, $a5, $sp
+385b4517 amcas_db.w $s0, $t5, $a4
+385b6cfe amcas_db.w $s7, $s4, $a3
+385b6aa8 amcas_db.w $a4, $s3, $r21
+385b4b2a amcas_db.w $a6, $t6, $s2
+385b927f amcas_db.d $s8, $a0, $t7
+385bcc0d amcas_db.d $t1, $t7, $zero
+385be67e amcas_db.d $s7, $s2, $t7
+385ba6e8 amcas_db.d $a4, $a5, $s0
+385bfc77 amcas_db.d $s0, $s8, $sp
+385b8777 amcas_db.d $s0, $ra, $s4
+385b9516 amcas_db.d $fp, $a1, $a4
+385bbc05 amcas_db.d $a1, $t3, $zero
+385b9d8d amcas_db.d $t1, $a3, $t0
+385b83bc amcas_db.d $s5, $zero, $s6
+385c5548 amswap.b $a4, $r21, $a6
+385c486d amswap.b $t1, $t6, $sp
+385c4fe0 amswap.b $zero, $t7, $s8
+385c662f amswap.b $t3, $s2, $t5
+385c23b8 amswap.b $s1, $a4, $s6
+385c0d25 amswap.b $a1, $sp, $a5
+385c6ea1 amswap.b $ra, $s4, $r21
+385c508c amswap.b $t0, $t8, $a0
+385c54cb amswap.b $a7, $r21, $a2
+385c7759 amswap.b $s2, $s6, $s3
+385ccabb amswap.h $s4, $t6, $r21
+385caada amswap.h $s3, $a6, $fp
+385cab9c amswap.h $s5, $a6, $s5
+385c990c amswap.h $t0, $a2, $a4
+385c90de amswap.h $s7, $a0, $a2
+385cf4c3 amswap.h $sp, $s6, $a2
+385cbc51 amswap.h $t5, $t3, $tp
+385cb78d amswap.h $t1, $t1, $s5
+385c91b0 amswap.h $t4, $a0, $t1
+385cae65 amswap.h $a1, $a7, $t7
+385d631d amadd.b $s6, $s1, $s1
+385d6a06 amadd.b $a2, $s3, $t4
+385d5154 amadd.b $t8, $t8, $a6
+385d37f4 amadd.b $t8, $t1, $s8
+385d3e35 amadd.b $r21, $t3, $t5
+385d76c0 amadd.b $zero, $s6, $fp
+385d43d0 amadd.b $t4, $t4, $s7
+385d4547 amadd.b $a3, $t5, $a6
+385d1440 amadd.b $zero, $a1, $tp
+385d7729 amadd.b $a5, $s6, $s2
+385de575 amadd.h $r21, $s2, $a7
+385dee86 amadd.h $a2, $s4, $t8
+385da1c4 amadd.h $a0, $a4, $t2
+385daefd amadd.h $s6, $a7, $s0
+385db7c1 amadd.h $ra, $t1, $s7
+385def0d amadd.h $t1, $s4, $s1
+385d94fa amadd.h $s3, $a1, $a3
+385db000 amadd.h $zero, $t0, $zero
+385dd464 amadd.h $a0, $r21, $sp
+385dc112 amadd.h $t6, $t4, $a4
+385e1162 amswap_db.b $tp, $a0, $a7
+385e6d4d amswap_db.b $t1, $s4, $a6
+385e5181 amswap_db.b $ra, $t8, $t0
+385e1249 amswap_db.b $a5, $a0, $t6
+385e6bbc amswap_db.b $s5, $s3, $s6
+385e74da amswap_db.b $s3, $s6, $a2
+385e31d8 amswap_db.b $s1, $t0, $t2
+385e182d amswap_db.b $t1, $a2, $ra
+385e4c54 amswap_db.b $t8, $t7, $tp
+385e5d53 amswap_db.b $t7, $s0, $a6
+385e9d7b amswap_db.h $s4, $a3, $a7
+385eb6c4 amswap_db.h $a0, $t1, $fp
+385edcf1 amswap_db.h $t5, $s0, $a3
+385ebbe9 amswap_db.h $a5, $t2, $s8
+385ecd15 amswap_db.h $r21, $t7, $a4
+385e9743 amswap_db.h $sp, $a1, $s3
+385ec651 amswap_db.h $t5, $t5, $t6
+385e93bd amswap_db.h $s6, $a0, $s6
+385ef0dd amswap_db.h $s6, $s5, $a2
+385edd80 amswap_db.h $zero, $s0, $t0
+385f6dd1 amadd_db.b $t5, $s4, $t2
+385f30f1 amadd_db.b $t5, $t0, $a3
+385f5210 amadd_db.b $t4, $t8, $t4
+385f2e94 amadd_db.b $t8, $a7, $t8
+385f5596 amadd_db.b $fp, $r21, $t0
+385f3d88 amadd_db.b $a4, $t3, $t0
+385f2fbb amadd_db.b $s4, $a7, $s6
+385f0e71 amadd_db.b $t5, $sp, $t7
+385f1847 amadd_db.b $a3, $a2, $tp
+385f1961 amadd_db.b $ra, $a2, $a7
+385fe8a0 amadd_db.h $zero, $s3, $a1
+385f8e80 amadd_db.h $zero, $sp, $t8
+385fbf1d amadd_db.h $s6, $t3, $s1
+385fcef4 amadd_db.h $t8, $t7, $s0
+385ffda7 amadd_db.h $a3, $s8, $t1
+385fd53a amadd_db.h $s3, $r21, $a5
+385fc44c amadd_db.h $t0, $t5, $tp
+385fa76d amadd_db.h $t1, $a5, $s4
+385f9227 amadd_db.h $a3, $a0, $t5
+385fcac9 amadd_db.h $a5, $t6, $fp
+3860115c amswap.w $s5, $a0, $a6
+38605722 amswap.w $tp, $r21, $s2
+3860783e amswap.w $s7, $s7, $ra
+386043f3 amswap.w $t7, $t4, $s8
+386035aa amswap.w $a6, $t1, $t1
+38606584 amswap.w $a0, $s2, $t0
+38602a07 amswap.w $a3, $a6, $t4
+3860581c amswap.w $s5, $fp, $zero
+38602ab7 amswap.w $s0, $a6, $r21
+38600d33 amswap.w $t7, $sp, $a5
+38608f44 amswap.d $a0, $sp, $s3
+3860c806 amswap.d $a2, $t6, $zero
+3860f184 amswap.d $a0, $s5, $t0
+3860af75 amswap.d $r21, $a7, $s4
+3860d2b8 amswap.d $s1, $t8, $r21
+38609b4e amswap.d $t2, $a2, $s3
+3860eb2d amswap.d $t1, $s3, $s2
+3860a12a amswap.d $a6, $a4, $a5
+3860d7c8 amswap.d $a4, $r21, $s7
+3860bada amswap.d $s3, $t2, $fp
+3861231a amadd.w $s3, $a4, $s1
+38616310 amadd.w $t4, $s1, $s1
+3861032a amadd.w $a6, $zero, $s2
+386111e5 amadd.w $a1, $a0, $t3
+38612f01 amadd.w $ra, $a7, $s1
+386100bc amadd.w $s5, $zero, $a1
+386174e5 amadd.w $a1, $s6, $a3
+38611200 amadd.w $zero, $a0, $t4
+3861209c amadd.w $s5, $a4, $a0
+38616bc1 amadd.w $ra, $s3, $s7
+3861f1bf amadd.d $s8, $s5, $t1
+3861eb61 amadd.d $ra, $s3, $s4
+3861a171 amadd.d $t5, $a4, $a7
+3861fc4a amadd.d $a6, $s8, $tp
+3861d583 amadd.d $sp, $r21, $t0
+3861d3a0 amadd.d $zero, $t8, $s6
+3861b8b9 amadd.d $s2, $t2, $a1
+38618244 amadd.d $a0, $zero, $t6
+38618baf amadd.d $t3, $tp, $s6
+3861be65 amadd.d $a1, $t3, $t7
+3862045f amand.w $s8, $ra, $tp
+386240b6 amand.w $fp, $t4, $a1
+38624e45 amand.w $a1, $t7, $t6
+38622a9b amand.w $s4, $a6, $t8
+38623a08 amand.w $a4, $t2, $t4
+38623b6b amand.w $a7, $t2, $s4
+3862467e amand.w $s7, $t5, $t7
+38625236 amand.w $fp, $t8, $t5
+38624c9e amand.w $s7, $t7, $a0
+3862447c amand.w $s5, $t5, $sp
+3862dfc0 amand.d $zero, $s0, $s7
+3862cf7d amand.d $s6, $t7, $s4
+3862f73f amand.d $s8, $s6, $s2
+3862e2a8 amand.d $a4, $s1, $r21
+386299e3 amand.d $sp, $a2, $t3
+3862cfa8 amand.d $a4, $t7, $s6
+3862e46a amand.d $a6, $s2, $sp
+3862fc1f amand.d $s8, $s8, $zero
+38628e10 amand.d $t4, $sp, $t4
+3862f830 amand.d $t4, $s7, $ra
+38633190 amor.w $t4, $t0, $t0
+386311c3 amor.w $sp, $a0, $t2
+38631cdf amor.w $s8, $a3, $a2
+386339ab amor.w $a7, $t2, $t1
+38637b84 amor.w $a0, $s7, $s5
+38635196 amor.w $fp, $t8, $t0
+38633142 amor.w $tp, $t0, $a6
+386362e2 amor.w $tp, $s1, $s0
+38636459 amor.w $s2, $s2, $tp
+3863507e amor.w $s7, $t8, $sp
+3863b334 amor.d $t8, $t0, $s2
+3863d7bc amor.d $s5, $r21, $s6
+3863e8b3 amor.d $t7, $s3, $a1
+386399db amor.d $s4, $a2, $t2
+3863f01a amor.d $s3, $s5, $zero
+38638067 amor.d $a3, $zero, $sp
+3863810a amor.d $a6, $zero, $a4
+3863eda3 amor.d $sp, $s4, $t1
+386381f1 amor.d $t5, $zero, $t3
+38638618 amor.d $s1, $ra, $t4
+38645405 amxor.w $a1, $r21, $zero
+38640ba3 amxor.w $sp, $tp, $s6
+38641a79 amxor.w $s2, $a2, $t7
+38641fa9 amxor.w $a5, $a3, $s6
+386419b3 amxor.w $t7, $a2, $t1
+386409a1 amxor.w $ra, $tp, $t1
+3864644e amxor.w $t2, $s2, $tp
+38646e63 amxor.w $sp, $s4, $t7
+386460f1 amxor.w $t5, $s1, $a3
+38647e82 amxor.w $tp, $s8, $t8
+3864a0e5 amxor.d $a1, $a4, $a3
+3864bed0 amxor.d $t4, $t3, $fp
+3864ef6b amxor.d $a7, $s4, $s4
+3864ac5b amxor.d $s4, $a7, $tp
+3864f6ff amxor.d $s8, $s6, $s0
+3864cd67 amxor.d $a3, $t7, $a7
+3864d838 amxor.d $s1, $fp, $ra
+3864fcc2 amxor.d $tp, $s8, $a2
+386495cd amxor.d $t1, $a1, $t2
+3864ae9b amxor.d $s4, $a7, $t8
+38657e1c ammax.w $s5, $s8, $t4
+38650bb5 ammax.w $r21, $tp, $s6
+386562b3 ammax.w $t7, $s1, $r21
+38656f4d ammax.w $t1, $s4, $s3
+38656eeb ammax.w $a7, $s4, $s0
+38655de6 ammax.w $a2, $s0, $t3
+38657830 ammax.w $t4, $s7, $ra
+3865581e ammax.w $s7, $fp, $zero
+38653231 ammax.w $t5, $t0, $t5
+38654b58 ammax.w $s1, $t6, $s3
+3865cf51 ammax.d $t5, $t7, $s3
+3865bc1a ammax.d $s3, $t3, $zero
+3865def6 ammax.d $fp, $s0, $s0
+3865a19a ammax.d $s3, $a4, $t0
+3865d5d1 ammax.d $t5, $r21, $t2
+3865d3ea ammax.d $a6, $t8, $s8
+38659291 ammax.d $t5, $a0, $t8
+3865fe0c ammax.d $t0, $s8, $t4
+3865bd10 ammax.d $t4, $t3, $a4
+3865fc4b ammax.d $a7, $s8, $tp
+38664d27 ammin.w $a3, $t7, $a5
+38662ae2 ammin.w $tp, $a6, $s0
+38663740 ammin.w $zero, $t1, $s3
+38662f43 ammin.w $sp, $a7, $s3
+3866493e ammin.w $s7, $t6, $a5
+386663b8 ammin.w $s1, $s1, $s6
+38661496 ammin.w $fp, $a1, $a0
+386615ab ammin.w $a7, $a1, $t1
+386653bd ammin.w $s6, $t8, $s6
+38666bed ammin.w $t1, $s3, $s8
+3866bec4 ammin.d $a0, $t3, $fp
+38668695 ammin.d $r21, $ra, $t8
+3866b6ef ammin.d $t3, $t1, $s0
+3866e587 ammin.d $a3, $s2, $t0
+3866f8b8 ammin.d $s1, $s7, $a1
+386699bb ammin.d $s4, $a2, $t1
+3866a86c ammin.d $t0, $a6, $sp
+3866a90a ammin.d $a6, $a6, $a4
+3866b7b4 ammin.d $t8, $t1, $s6
+3866c6d4 ammin.d $t8, $t5, $fp
+38673f83 ammax.wu $sp, $t3, $s5
+38677c38 ammax.wu $s1, $s8, $ra
+38674a25 ammax.wu $a1, $t6, $t5
+386775b5 ammax.wu $r21, $s6, $t1
+38675beb ammax.wu $a7, $fp, $s8
+38677af4 ammax.wu $t8, $s7, $s0
+38673bcc ammax.wu $t0, $t2, $s7
+386776a8 ammax.wu $a4, $s6, $r21
+386768dc ammax.wu $s5, $s3, $a2
+386736d0 ammax.wu $t4, $t1, $fp
+3867d3fd ammax.du $s6, $t8, $s8
+386782e3 ammax.du $sp, $zero, $s0
+3867e0f1 ammax.du $t5, $s1, $a3
+3867a5bb ammax.du $s4, $a5, $t1
+3867859f ammax.du $s8, $ra, $t0
+3867ebdf ammax.du $s8, $s3, $s7
+3867be4a ammax.du $a6, $t3, $t6
+3867efc2 ammax.du $tp, $s4, $s7
+3867b6b7 ammax.du $s0, $t1, $r21
+3867de10 ammax.du $t4, $s0, $t4
+3868462f ammin.wu $t3, $t5, $t5
+38682df4 ammin.wu $t8, $a7, $t3
+3868065d ammin.wu $s6, $ra, $t6
+386853b6 ammin.wu $fp, $t8, $s6
+38681250 ammin.wu $t4, $a0, $t6
+38680f58 ammin.wu $s1, $sp, $s3
+386832ab ammin.wu $a7, $t0, $r21
+38686834 ammin.wu $t8, $s3, $ra
+38686ae0 ammin.wu $zero, $s3, $s0
+386819c4 ammin.wu $a0, $a2, $t2
+3868c452 ammin.du $t6, $t5, $tp
+38688106 ammin.du $a2, $zero, $a4
+38688d55 ammin.du $r21, $sp, $a6
+3868d135 ammin.du $r21, $t8, $a5
+3868b340 ammin.du $zero, $t0, $s3
+3868e68d ammin.du $t1, $s2, $t8
+3868a30b ammin.du $a7, $a4, $s1
+3868a188 ammin.du $a4, $a4, $t0
+38688257 ammin.du $s0, $zero, $t6
+3868ef83 ammin.du $sp, $s4, $s5
+38690395 amswap_db.w $r21, $zero, $s5
+386972be amswap_db.w $s7, $s5, $r21
+38697177 amswap_db.w $s0, $s5, $a7
+3869523c amswap_db.w $s5, $t8, $t5
+38695736 amswap_db.w $fp, $r21, $s2
+38696b32 amswap_db.w $t6, $s3, $s2
+38695d74 amswap_db.w $t8, $s0, $a7
+386949f3 amswap_db.w $t7, $t6, $t3
+38691a09 amswap_db.w $a5, $a2, $t4
+3869791b amswap_db.w $s4, $s7, $a4
+3869b8fe amswap_db.d $s7, $t2, $a3
+3869ce90 amswap_db.d $t4, $t7, $t8
+3869856c amswap_db.d $t0, $ra, $a7
+3869e199 amswap_db.d $s2, $s1, $t0
+3869edb6 amswap_db.d $fp, $s4, $t1
+386994d1 amswap_db.d $t5, $a1, $a2
+3869ce08 amswap_db.d $a4, $t7, $t4
+3869faae amswap_db.d $t2, $s7, $r21
+3869ef03 amswap_db.d $sp, $s4, $s1
+38698723 amswap_db.d $sp, $ra, $s2
+386a3089 amadd_db.w $a5, $t0, $a0
+386a530d amadd_db.w $t1, $t8, $s1
+386a5f6f amadd_db.w $t3, $s0, $s4
+386a51d5 amadd_db.w $r21, $t8, $t2
+386a79d6 amadd_db.w $fp, $s7, $t2
+386a633a amadd_db.w $s3, $s1, $s2
+386a134f amadd_db.w $t3, $a0, $s3
+386a3156 amadd_db.w $fp, $t0, $a6
+386a0b33 amadd_db.w $t7, $tp, $s2
+386a1f47 amadd_db.w $a3, $a3, $s3
+386af62c amadd_db.d $t0, $s6, $t5
+386af8ac amadd_db.d $t0, $s7, $a1
+386ae82b amadd_db.d $a7, $s3, $ra
+386a8d91 amadd_db.d $t5, $sp, $t0
+386aa7ee amadd_db.d $t2, $a5, $s8
+386a82dc amadd_db.d $s5, $zero, $fp
+386ad9f8 amadd_db.d $s1, $fp, $t3
+386ad48d amadd_db.d $t1, $r21, $a0
+386ac602 amadd_db.d $tp, $t5, $t4
+386a97a0 amadd_db.d $zero, $a1, $s6
+386b3083 amand_db.w $sp, $t0, $a0
+386b2d8a amand_db.w $a6, $a7, $t0
+386b7151 amand_db.w $t5, $s5, $a6
+386b0a52 amand_db.w $t6, $tp, $t6
+386b1516 amand_db.w $fp, $a1, $a4
+386b403e amand_db.w $s7, $t4, $ra
+386b47cc amand_db.w $t0, $t5, $s7
+386b2ddf amand_db.w $s8, $a7, $t2
+386b0a86 amand_db.w $a2, $tp, $t8
+386b0ed5 amand_db.w $r21, $sp, $fp
+386b9d0d amand_db.d $t1, $a3, $a4
+386be05e amand_db.d $s7, $s1, $tp
+386ba049 amand_db.d $a5, $a4, $tp
+386bd521 amand_db.d $ra, $r21, $a5
+386b8526 amand_db.d $a2, $ra, $a5
+386bd674 amand_db.d $t8, $r21, $t7
+386bcdfb amand_db.d $s4, $t7, $t3
+386bde5a amand_db.d $s3, $s0, $t6
+386bc2be amand_db.d $s7, $t4, $r21
+386bed92 amand_db.d $t6, $s4, $t0
+386c6c65 amor_db.w $a1, $s4, $sp
+386c4a45 amor_db.w $a1, $t6, $t6
+386c04b1 amor_db.w $t5, $ra, $a1
+386c02c6 amor_db.w $a2, $zero, $fp
+386c1874 amor_db.w $t8, $a2, $sp
+386c4702 amor_db.w $tp, $t5, $s1
+386c4cf2 amor_db.w $t6, $t7, $a3
+386c4aaa amor_db.w $a6, $t6, $r21
+386c6acc amor_db.w $t0, $s3, $fp
+386c37b2 amor_db.w $t6, $t1, $s6
+386ca753 amor_db.d $t7, $a5, $s3
+386c9c0f amor_db.d $t3, $a3, $zero
+386ce668 amor_db.d $a4, $s2, $t7
+386cc594 amor_db.d $t8, $t5, $t0
+386cabad amor_db.d $t1, $a6, $s6
+386cd777 amor_db.d $s0, $r21, $s4
+386cc81c amor_db.d $s5, $t6, $zero
+386cb307 amor_db.d $a3, $t0, $s1
+386ce343 amor_db.d $sp, $s1, $s3
+386cb9b7 amor_db.d $s0, $t2, $t1
+386d24a4 amxor_db.w $a0, $a5, $a1
+386d1260 amxor_db.w $zero, $a0, $t7
+386d6616 amxor_db.w $fp, $s2, $t4
+386d0098 amxor_db.w $s1, $zero, $a0
+386d4650 amxor_db.w $t4, $t5, $t6
+386d6278 amxor_db.w $s1, $s1, $t7
+386d3114 amxor_db.w $t8, $t0, $a4
+386d52ca amxor_db.w $a6, $t8, $fp
+386d05dc amxor_db.w $s5, $ra, $t2
+386d22db amxor_db.w $s4, $a4, $fp
+386db34f amxor_db.d $t3, $t0, $s3
+386d809e amxor_db.d $s7, $zero, $a0
+386dd200 amxor_db.d $zero, $t8, $t4
+386dc0f8 amxor_db.d $s1, $t4, $a3
+386d8c99 amxor_db.d $s2, $sp, $a0
+386d8291 amxor_db.d $t5, $zero, $t8
+386d87db amxor_db.d $s4, $ra, $s7
+386d9868 amxor_db.d $a4, $a2, $sp
+386d90b0 amxor_db.d $t4, $a0, $a1
+386db3b0 amxor_db.d $t4, $t0, $s6
+386e15e5 ammax_db.w $a1, $a1, $t3
+386e7ec2 ammax_db.w $tp, $s8, $fp
+386e3584 ammax_db.w $a0, $t1, $t0
+386e7b6f ammax_db.w $t3, $s7, $s4
+386e68ad ammax_db.w $t1, $s3, $a1
+386e214f ammax_db.w $t3, $a4, $a6
+386e0644 ammax_db.w $a0, $ra, $t6
+386e7863 ammax_db.w $sp, $s7, $sp
+386e7153 ammax_db.w $t7, $s5, $a6
+386e7851 ammax_db.w $t5, $s7, $tp
+386ed990 ammax_db.d $t4, $fp, $t0
+386edadc ammax_db.d $s5, $fp, $fp
+386ecac3 ammax_db.d $sp, $t6, $fp
+386eb676 ammax_db.d $fp, $t1, $t7
+386e82c5 ammax_db.d $a1, $zero, $fp
+386eaed9 ammax_db.d $s2, $a7, $fp
+386ea6a6 ammax_db.d $a2, $a5, $r21
+386e9fcc ammax_db.d $t0, $a3, $s7
+386e9d67 ammax_db.d $a3, $a3, $a7
+386e9d69 ammax_db.d $a5, $a3, $a7
+386f4560 ammin_db.w $zero, $t5, $a7
+386f52b6 ammin_db.w $fp, $t8, $r21
+386f44e5 ammin_db.w $a1, $t5, $a3
+386f0523 ammin_db.w $sp, $ra, $a5
+386f09df ammin_db.w $s8, $tp, $t2
+386f4c29 ammin_db.w $a5, $t7, $ra
+386f404e ammin_db.w $t2, $t4, $tp
+386f386c ammin_db.w $t0, $t2, $sp
+386f3d31 ammin_db.w $t5, $t3, $a5
+386f2b28 ammin_db.w $a4, $a6, $s2
+386fbb72 ammin_db.d $t6, $t2, $s4
+386fd32a ammin_db.d $a6, $t8, $s2
+386fdd96 ammin_db.d $fp, $s0, $t0
+386fbefa ammin_db.d $s3, $t3, $s0
+386ff26e ammin_db.d $t2, $s5, $t7
+386fb98f ammin_db.d $t3, $t2, $t0
+386fcecb ammin_db.d $a7, $t7, $fp
+386fc7e5 ammin_db.d $a1, $t5, $s8
+386fcedb ammin_db.d $s4, $t7, $fp
+386fe0d7 ammin_db.d $s0, $s1, $a2
+3870411f ammax_db.wu $s8, $t4, $a4
+38704beb ammax_db.wu $a7, $t6, $s8
+387047d2 ammax_db.wu $t6, $t5, $s7
+387033e0 ammax_db.wu $zero, $t0, $s8
+38704a58 ammax_db.wu $s1, $t6, $t6
+38706923 ammax_db.wu $sp, $s3, $a5
+38707041 ammax_db.wu $ra, $s5, $tp
+38701ef6 ammax_db.wu $fp, $a3, $s0
+387078e4 ammax_db.wu $a0, $s7, $a3
+38700ff0 ammax_db.wu $t4, $sp, $s8
+3870c4b3 ammax_db.du $t7, $t5, $a1
+3870c12d ammax_db.du $t1, $t4, $a5
+38709ae3 ammax_db.du $sp, $a2, $s0
+3870cc5b ammax_db.du $s4, $t7, $tp
+3870c7d4 ammax_db.du $t8, $t5, $s7
+3870f4ec ammax_db.du $t0, $s6, $a3
+387096a0 ammax_db.du $zero, $a1, $r21
+38708352 ammax_db.du $t6, $zero, $s3
+3870edf3 ammax_db.du $t7, $s4, $t3
+38708107 ammax_db.du $a3, $zero, $a4
+38717d94 ammin_db.wu $t8, $s8, $t0
+3871079d ammin_db.wu $s6, $ra, $s5
+38711414 ammin_db.wu $t8, $a1, $zero
+387174f0 ammin_db.wu $t4, $s6, $a3
+38717bb2 ammin_db.wu $t6, $s7, $s6
+387124cf ammin_db.wu $t3, $a5, $a2
+38714daa ammin_db.wu $a6, $t7, $t1
+387110cc ammin_db.wu $t0, $a0, $a2
+38714b5e ammin_db.wu $s7, $t6, $s3
+387162e2 ammin_db.wu $tp, $s1, $s0
+3871bf3e ammin_db.du $s7, $t3, $s2
+3871eef5 ammin_db.du $r21, $s4, $s0
+3871d01f ammin_db.du $s8, $t8, $zero
+3871e0d5 ammin_db.du $r21, $s1, $a2
+3871cca2 ammin_db.du $tp, $t7, $a1
+3871d474 ammin_db.du $t8, $r21, $sp
+3871f95d ammin_db.du $s6, $s7, $a6
+3871c3ca ammin_db.du $a6, $t4, $s7
+3871d824 ammin_db.du $a0, $fp, $ra
+3871fa93 ammin_db.du $t7, $s7, $t8
+38720b63 dbar 0xb63
+38723ec2 dbar 0x3ec2
+38727369 dbar 0x7369
+387245e2 dbar 0x45e2
+38720834 dbar 0x834
+387232a6 dbar 0x32a6
+38722a8c dbar 0x2a8c
+387203b8 dbar 0x3b8
+38725ef1 dbar 0x5ef1
+38727810 dbar 0x7810
+3872815e ibar 0x15e
+3872c2ea ibar 0x42ea
+3872d1f5 ibar 0x51f5
+3872be3a ibar 0x3e3a
+3872e0a3 ibar 0x60a3
+3872ff3e ibar 0x7f3e
+3872ad81 ibar 0x2d81
+3872f0b0 ibar 0x70b0
+38728962 ibar 0x962
+3872ea22 ibar 0x6a22
+3874597c fldgt.s $fs4, $a7, $fp
+387442d4 fldgt.s $ft12, $fp, $t4
+38746348 fldgt.s $ft0, $s3, $s1
+387419de fldgt.s $fs6, $t2, $a2
+38742d34 fldgt.s $ft12, $a5, $a7
+38740415 fldgt.s $ft13, $zero, $ra
+3874168d fldgt.s $ft5, $t8, $a1
+38743bc7 fldgt.s $fa7, $s7, $t2
+387461a8 fldgt.s $ft0, $t1, $s1
+38740251 fldgt.s $ft9, $t6, $zero
+3874f72c fldgt.d $ft4, $s2, $s6
+387499b6 fldgt.d $ft14, $t1, $a2
+3874d2de fldgt.d $fs6, $fp, $t8
+3874b4b5 fldgt.d $ft13, $a1, $t1
+3874aa9f fldgt.d $fs7, $t8, $a6
+38748143 fldgt.d $fa3, $a6, $zero
+3874af07 fldgt.d $fa7, $s1, $a7
+3874946e fldgt.d $ft6, $sp, $a1
+3874c060 fldgt.d $fa0, $sp, $t4
+3874c69e fldgt.d $fs6, $t8, $t5
+387527ce fldle.s $ft6, $s7, $a5
+387527f5 fldle.s $ft13, $s8, $a5
+38752591 fldle.s $ft9, $t0, $a5
+3875004e fldle.s $ft6, $tp, $zero
+38750c9a fldle.s $fs2, $a0, $sp
+3875558d fldle.s $ft5, $t0, $r21
+387505d2 fldle.s $ft10, $t2, $ra
+387517f7 fldle.s $ft15, $s8, $a1
+3875126c fldle.s $ft4, $t7, $a0
+38755930 fldle.s $ft8, $a5, $fp
+3875e70d fldle.d $ft5, $s1, $s2
+3875e534 fldle.d $ft12, $a5, $s2
+3875ce82 fldle.d $fa2, $t8, $t7
+3875e24c fldle.d $ft4, $t6, $s1
+3875e246 fldle.d $fa6, $t6, $s1
+38759899 fldle.d $fs1, $a0, $a2
+3875eb69 fldle.d $ft1, $s4, $s3
+3875aa95 fldle.d $ft13, $t8, $a6
+3875ce24 fldle.d $fa4, $t5, $t7
+3875c63f fldle.d $fs7, $t5, $t5
+38766aa5 fstgt.s $fa5, $r21, $s3
+38762326 fstgt.s $fa6, $s2, $a4
+387675a5 fstgt.s $fa5, $t1, $s6
+387615ce fstgt.s $ft6, $t2, $a1
+3876398a fstgt.s $ft2, $t0, $t2
+3876172b fstgt.s $ft3, $s2, $a1
+38760d00 fstgt.s $fa0, $a4, $sp
+38765f7d fstgt.s $fs5, $s4, $s0
+387627e7 fstgt.s $fa7, $s8, $a5
+387643f2 fstgt.s $ft10, $s8, $t4
+3876c3f1 fstgt.d $ft9, $s8, $t4
+3876d9ea fstgt.d $ft2, $t3, $fp
+3876fc07 fstgt.d $fa7, $zero, $s8
+38769e80 fstgt.d $fa0, $t8, $a3
+3876d8bb fstgt.d $fs3, $a1, $fp
+3876f355 fstgt.d $ft13, $s3, $s5
+38769410 fstgt.d $ft8, $zero, $a1
+3876a374 fstgt.d $ft12, $s4, $a4
+38769ff9 fstgt.d $fs1, $s8, $a3
+38769737 fstgt.d $ft15, $s2, $a1
+387738c5 fstle.s $fa5, $a2, $t2
+38772e74 fstle.s $ft12, $t7, $a7
+387755aa fstle.s $ft2, $t1, $r21
+38776779 fstle.s $fs1, $s4, $s2
+387700d1 fstle.s $ft9, $a2, $zero
+387709ec fstle.s $ft4, $t3, $tp
+38774fb5 fstle.s $ft13, $s6, $t7
+38774e99 fstle.s $fs1, $t8, $t7
+387715c5 fstle.s $fa5, $t2, $a1
+38777556 fstle.s $ft14, $a6, $s6
+3877a04a fstle.d $ft2, $tp, $a4
+38778845 fstle.d $fa5, $tp, $tp
+3877a490 fstle.d $ft8, $a0, $a5
+3877a929 fstle.d $ft1, $a5, $a6
+3877de6c fstle.d $ft4, $t7, $s0
+3877c2e8 fstle.d $ft0, $s0, $t4
+3877f8d3 fstle.d $ft11, $a2, $s7
+3877b530 fstle.d $ft8, $a5, $t1
+38779ee4 fstle.d $fa4, $s0, $a3
+38778324 fstle.d $fa4, $s2, $zero
+387853da ldgt.b $s3, $s7, $t8
+38787c52 ldgt.b $t6, $tp, $s8
+3878497f ldgt.b $s8, $a7, $t6
+38782f29 ldgt.b $a5, $s2, $a7
+38787c6f ldgt.b $t3, $sp, $s8
+38784a0a ldgt.b $a6, $t4, $t6
+387850dd ldgt.b $s6, $a2, $t8
+38781305 ldgt.b $a1, $s1, $a0
+387872a2 ldgt.b $tp, $r21, $s5
+38782a97 ldgt.b $s0, $t8, $a6
+3878a1c2 ldgt.h $tp, $t2, $a4
+3878b9a3 ldgt.h $sp, $t1, $t2
+3878b7ad ldgt.h $t1, $s6, $t1
+3878b17c ldgt.h $s5, $a7, $t0
+3878c3c8 ldgt.h $a4, $s7, $t4
+3878b9ac ldgt.h $t0, $t1, $t2
+38788a88 ldgt.h $a4, $t8, $tp
+387880bf ldgt.h $s8, $a1, $zero
+3878cdfe ldgt.h $s7, $t3, $t7
+3878e2a3 ldgt.h $sp, $r21, $s1
+3879428b ldgt.w $a7, $t8, $t4
+38797578 ldgt.w $s1, $a7, $s6
+38797bf3 ldgt.w $t7, $s8, $s7
+387905b5 ldgt.w $r21, $t1, $ra
+38797b9f ldgt.w $s8, $s5, $s7
+38797f15 ldgt.w $r21, $s1, $s8
+38796a7b ldgt.w $s4, $t7, $s3
+38795c7b ldgt.w $s4, $sp, $s0
+387914f2 ldgt.w $t6, $a3, $a1
+38795f2e ldgt.w $t2, $s2, $s0
+3879fdf9 ldgt.d $s2, $t3, $s8
+3879ecee ldgt.d $t2, $a3, $s4
+3879e69c ldgt.d $s5, $t8, $s2
+3879aa5f ldgt.d $s8, $t6, $a6
+3879e452 ldgt.d $t6, $tp, $s2
+3879ea73 ldgt.d $t7, $t7, $s3
+3879ea7d ldgt.d $s6, $t7, $s3
+3879b99a ldgt.d $s3, $t0, $t2
+3879dcdf ldgt.d $s8, $a2, $s0
+3879d9b7 ldgt.d $s0, $t1, $fp
+387a5967 ldle.b $a3, $a7, $fp
+387a13ac ldle.b $t0, $s6, $a0
+387a02e1 ldle.b $ra, $s0, $zero
+387a6102 ldle.b $tp, $a4, $s1
+387a4cd4 ldle.b $t8, $a2, $t7
+387a6ae4 ldle.b $a0, $s0, $s3
+387a077d ldle.b $s6, $s4, $ra
+387a05ad ldle.b $t1, $t1, $ra
+387a3bdb ldle.b $s4, $s7, $t2
+387a63c2 ldle.b $tp, $s7, $s1
+387a869e ldle.h $s7, $t8, $ra
+387abe96 ldle.h $fp, $t8, $t3
+387aa7d9 ldle.h $s2, $s7, $a5
+387a8f56 ldle.h $fp, $s3, $sp
+387ab995 ldle.h $r21, $t0, $t2
+387aa29b ldle.h $s4, $t8, $a4
+387adc18 ldle.h $s1, $zero, $s0
+387ab531 ldle.h $t5, $a5, $t1
+387ae0cc ldle.h $t0, $a2, $s1
+387af776 ldle.h $fp, $s4, $s6
+387b230e ldle.w $t2, $s1, $a4
+387b3a7e ldle.w $s7, $t7, $t2
+387b02f5 ldle.w $r21, $s0, $zero
+387b1b5f ldle.w $s8, $s3, $a2
+387b647c ldle.w $s5, $sp, $s2
+387b3a31 ldle.w $t5, $t5, $t2
+387b7b0d ldle.w $t1, $s1, $s7
+387b7d70 ldle.w $t4, $a7, $s8
+387b7347 ldle.w $a3, $s3, $s5
+387b4ed4 ldle.w $t8, $fp, $t7
+387bfcba ldle.d $s3, $a1, $s8
+387b84d7 ldle.d $s0, $a2, $ra
+387b92ee ldle.d $t2, $s0, $a0
+387bf873 ldle.d $t7, $sp, $s7
+387bfa04 ldle.d $a0, $t4, $s7
+387bcca0 ldle.d $zero, $a1, $t7
+387b8cb8 ldle.d $s1, $a1, $sp
+387ba773 ldle.d $t7, $s4, $a5
+387bcf80 ldle.d $zero, $s5, $t7
+387bf011 ldle.d $t5, $zero, $s5
+387c7b1e stgt.b $s7, $s1, $s7
+387c04a5 stgt.b $a1, $a1, $ra
+387c3975 stgt.b $r21, $a7, $t2
+387c3375 stgt.b $r21, $s4, $t0
+387c384e stgt.b $t2, $tp, $t2
+387c7d25 stgt.b $a1, $a5, $s8
+387c1faa stgt.b $a6, $s6, $a3
+387c5e33 stgt.b $t7, $t5, $s0
+387c2955 stgt.b $r21, $a6, $a6
+387c4091 stgt.b $t5, $a0, $t4
+387cb2df stgt.h $s8, $fp, $t0
+387caffa stgt.h $s3, $s8, $a7
+387cf4ef stgt.h $t3, $a3, $s6
+387c8717 stgt.h $s0, $s1, $ra
+387cf615 stgt.h $r21, $t4, $s6
+387cfc63 stgt.h $sp, $sp, $s8
+387ce9a3 stgt.h $sp, $t1, $s3
+387c8c69 stgt.h $a5, $sp, $sp
+387c8626 stgt.h $a2, $t5, $ra
+387c99d3 stgt.h $t7, $t2, $a2
+387d2dbb stgt.w $s4, $t1, $a7
+387d156e stgt.w $t2, $a7, $a1
+387d2e41 stgt.w $ra, $t6, $a7
+387d7114 stgt.w $t8, $a4, $s5
+387d7cda stgt.w $s3, $a2, $s8
+387d00bf stgt.w $s8, $a1, $zero
+387d76d2 stgt.w $t6, $fp, $s6
+387d41db stgt.w $s4, $t2, $t4
+387d7afa stgt.w $s3, $s0, $s7
+387d7a48 stgt.w $a4, $t6, $s7
+387dff3d stgt.d $s6, $s2, $s8
+387df97f stgt.d $s8, $a7, $s7
+387df834 stgt.d $t8, $ra, $s7
+387dd4f1 stgt.d $t5, $a3, $r21
+387dbaa3 stgt.d $sp, $r21, $t2
+387d8a0b stgt.d $a7, $t4, $tp
+387dfa4e stgt.d $t2, $t6, $s7
+387dac98 stgt.d $s1, $a0, $a7
+387dd9b0 stgt.d $t4, $t1, $fp
+387de7f3 stgt.d $t7, $s8, $s2
+387e10d4 stle.b $t8, $a2, $a0
+387e47b8 stle.b $s1, $s6, $t5
+387e3aa4 stle.b $a0, $r21, $t2
+387e16f3 stle.b $t7, $s0, $a1
+387e3840 stle.b $zero, $tp, $t2
+387e6bda stle.b $s3, $s7, $s3
+387e5738 stle.b $s1, $s2, $r21
+387e47fa stle.b $s3, $s8, $t5
+387e0848 stle.b $a4, $tp, $tp
+387e6571 stle.b $t5, $a7, $s2
+387eb5a2 stle.h $tp, $t1, $t1
+387e9307 stle.h $a3, $s1, $a0
+387ec974 stle.h $t8, $a7, $t6
+387e928d stle.h $t1, $t8, $a0
+387ed72f stle.h $t3, $s2, $r21
+387ec6c7 stle.h $a3, $fp, $t5
+387e8e51 stle.h $t5, $t6, $sp
+387eab4b stle.h $a7, $s3, $a6
+387eb350 stle.h $t4, $s3, $t0
+387eb780 stle.h $zero, $s5, $t1
+387f05e2 stle.w $tp, $t3, $ra
+387f4745 stle.w $a1, $s3, $t5
+387f255f stle.w $s8, $a6, $a5
+387f3c9a stle.w $s3, $a0, $t3
+387f73e4 stle.w $a0, $s8, $s5
+387f6eeb stle.w $a7, $s0, $s4
+387f408c stle.w $t0, $a0, $t4
+387f6163 stle.w $sp, $a7, $s1
+387f6fe5 stle.w $a1, $s8, $s4
+387f4f2a stle.w $a6, $s2, $t7
+387fc6a3 stle.d $sp, $r21, $t5
+387fff02 stle.d $tp, $s1, $s8
+387fafca stle.d $a6, $s7, $a7
+387fca23 stle.d $sp, $t5, $t6
+387f9f40 stle.d $zero, $s3, $a3
+387fdff8 stle.d $s1, $s8, $s0
+387fa20b stle.d $a7, $t4, $a4
+387fba32 stle.d $t6, $t5, $t2
+387fc08f stle.d $t3, $a0, $t4
+387faf23 stle.d $sp, $s2, $a7
+43dedfbd beqz $s6, -532772
+4386f2f3 beqz $s0, -3176720
+4397bf18 beqz $s1, -1861700
+408b2d5a beqz $a6, -1537236
+403e268c beqz $t8, 3161636
+4253be75 beqz $t7, -2731076
+4356db56 beqz $s3, -2402600
+40245247 beqz $t6, 1844304
+435f0667 beqz $t7, 2055940
+435d86b4 beqz $r21, -2925180
+46384023 bnez $ra, 931904
+46da30aa bnez $a1, 2808368
+47f22d6e bnez $a7, 3928620
+47e399ca bnez $t2, 2876312
+44e5c961 bnez $a7, 320968
+477c1ef7 bnez $s0, -2130916
+459020b2 bnez $a1, -3567584
+46fa502f bnez $ra, 4127312
+468dbc3a bnez $ra, -1405508
+4564c5dc bnez $t2, -957244
+4ac514f8 bceqz $fcc7, -1915628
+49c1f866 bceqz $fcc3, 1688056
+4b960862 bceqz $fcc3, 759304
+48330023 bceqz $fcc1, 799488
+483b10b1 bceqz $fcc5, -3917040
+49af6031 bceqz $fcc1, -3821728
+4809cc56 bceqz $fcc2, -2618932
+496e785e bceqz $fcc2, -430472
+48114c31 bceqz $fcc1, -3927732
+4a10ccd9 bceqz $fcc6, -1699636
+490e5d26 bcnez $fcc1, 1642076
+4bddf579 bcnez $fcc3, -1581580
+4aab8192 bcnez $fcc4, -3495040
+4b51a948 bcnez $fcc2, 2314664
+4813bd20 bcnez $fcc1, 5052
+4a6dd1b5 bcnez $fcc5, -2724400
+484a3925 bcnez $fcc1, 1329720
+4ad7812c bcnez $fcc1, 3331968
+4833d1e3 bcnez $fcc7, 799696
+492e5db8 bcnez $fcc5, -2019748
+4ce5e8cd jirl $t1, $a2, 58856
+4de1a92e jirl $t2, $a5, 123304
+4e27f16d jirl $t1, $a7, -120848
+4ef206cc jirl $t0, $fp, -69116
+4e1d18ee jirl $t2, $a3, -123624
+4cb8f2a5 jirl $a1, $r21, 47344
+4dcaa75a jirl $s3, $s3, 117412
+4e9c2960 jirl $zero, $a7, -91096
+4d5d2e7f jirl $s8, $t7, 89388
+4c454e84 jirl $a0, $t8, 17740
+5064f98c b 103834872
+500ab815 b 5507768
+5028f7f8 b -2086668
+538223e2 b -7634400
+5392f8c5 b 51876600
+5138b2db b -76728144
+52b25ebc b -84757924
+50006180 b 100663392
+53444811 b 4670536
+5369eb09 b -64525848
+54d172c3 bl -83046032
+5456e844 bl 17848040
+578cc2d1 bl -79196992
+5607fda9 bl 111544316
+57d3abd4 bl -11283544
+5491144d bl 20222228
+57256bf6 bl -2415256
+57de9a7f bl -100671848
+5786781a bl 7046776
+55f96015 bl 5634400
+5a6649e1 beq $t3, $ra, -104888
+5b1dbcef beq $a3, $t3, -57924
+5af4b056 beq $tp, $fp, -68432
+58bcb939 beq $a5, $s2, 48312
+5aa617a8 beq $s6, $a4, -88556
+5a26623c beq $t5, $s5, -121248
+58494713 beq $s1, $t7, 18756
+59c5ba59 beq $t6, $s2, 116152
+588d99fb beq $t3, $s4, 36248
+5a1392ee beq $s0, $t2, -126064
+5c3fee5c bne $t6, $s5, 16364
+5d5393d5 bne $s7, $r21, 86928
+5fff5214 bne $t4, $t8, -176
+5f7b50ff bne $a3, $s8, -33968
+5d7f04fc bne $a3, $s5, 98052
+5cf1d29b bne $t8, $s4, 61904
+5d2b7983 bne $t0, $sp, 76664
+5fe5dd0c bne $a4, $t0, -6692
+5e4248b7 bne $a1, $s0, -114104
+5e06594c bne $a6, $t0, -129448
+6174a3dc blt $s7, $s5, 95392
+60df7f58 blt $s3, $s1, 57212
+624eeabb blt $r21, $s4, -110872
+60093170 blt $a7, $t4, 2352
+620bb8c2 blt $a2, $tp, -128072
+626fe5b4 blt $t1, $t8, -102428
+639788b2 blt $a1, $t6, -26744
+60d46282 blt $t8, $tp, 54368
+608ae204 blt $t4, $a0, 35552
+62ed13b5 blt $s6, $r21, -70384
+651390fa bge $a3, $s3, 70544
+67cc9b2a bge $s2, $a6, -13160
+666cfe96 bge $t8, $fp, -103172
+653f81c3 bge $t2, $sp, 81792
+6729fb89 bge $s5, $a5, -54792
+67debab3 bge $r21, $t7, -8520
+67457306 bge $s1, $a2, -47760
+660791df bge $t2, $s8, -129136
+651186cd bge $fp, $t1, 70020
+653765b3 bge $t1, $t7, 79716
+6a7f95dd bltu $t2, $s6, -98412
+698ba066 bltu $sp, $a2, 101280
+6bf9af2e bltu $s2, $t2, -1620
+6b32fdfc bltu $t3, $s5, -52484
+68943d80 bltu $t0, $zero, 37948
+68a53377 bltu $s4, $s0, 42288
+699c7ef3 bltu $s0, $t7, 105596
+693b3a97 bltu $t8, $s0, 80696
+6b70c87b bltu $sp, $s4, -36664
+684102e0 bltu $s0, $zero, 16640
+6e7a6a81 bgeu $t8, $ra, -99736
+6edc7f8e bgeu $s5, $t2, -74628
+6f9bc5ed bgeu $t3, $t1, -25660
+6f66225d bgeu $t6, $s6, -39392
+6eaf0b39 bgeu $s2, $s2, -86264
+6fe8c28c bgeu $t8, $t0, -5952
+6d8ad4b0 bgeu $a1, $t4, 101076
+6e32d367 bgeu $s4, $a3, -118064
+6cea03bd bgeu $s6, $s6, 59904
+6fafed06 bgeu $a4, $a2, -20500
