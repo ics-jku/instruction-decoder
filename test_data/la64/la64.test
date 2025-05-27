@@ -1900,2052 +1900,1989 @@
 06481f80 iocsrwr.d $zero, $s5
 06481f54 iocsrwr.d $t8, $s3
 06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482000 tlbclr
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
-06482400 tlbflush
 06482400 tlbflush
 06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482800 tlbsrch
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
-06482c00 tlbrd
 06482c00 tlbrd
 06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483000 tlbwr
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
-06483400 tlbfill
 06483400 tlbfill
 06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-06483800 ertn
-0648ad94 idle 0x2d94
-0648eccf idle 0x6ccf
-0648c799 idle 0x4799
-0648bd54 idle 0x3d54
-0648fd5b idle 0x7d5b
-0648a0aa idle 0x20aa
-0648a834 idle 0x2834
-0648fdbd idle 0x7dbd
-0648d1a0 idle 0x51a0
-0648995a idle 0x195a
-0649ecc0 invtlb 0x0, $a2, $s4
-0649b93e invtlb 0x1e, $a5, $t2
-0649e3b8 invtlb 0x18, $s6, $s1
-06499add invtlb 0x1d, $fp, $a2
-0649d900 invtlb 0x0, $a4, $fp
-0649850f invtlb 0xf, $a4, $ra
-06499633 invtlb 0x13, $t5, $a1
-064987af invtlb 0xf, $s6, $ra
-06498584 invtlb 0x4, $t0, $ra
-0649e240 invtlb 0x0, $t6, $s1
-081dcd1d fmadd.s $fs5, $ft0, $ft11, $fs3
-081ebcd0 fmadd.s $ft8, $fa6, $ft7, $fs5
-081402a6 fmadd.s $fa6, $ft13, $fa0, $ft0
-0815800e fmadd.s $ft6, $fa0, $fa0, $ft3
-08121f85 fmadd.s $fa5, $fs4, $fa7, $fa4
-0816e096 fmadd.s $ft14, $fa4, $fs0, $ft5
-08171d89 fmadd.s $ft1, $ft4, $fa7, $ft6
-08159ec8 fmadd.s $ft0, $ft14, $fa7, $ft3
-081dcdcc fmadd.s $ft4, $ft6, $ft11, $fs3
-0817b892 fmadd.s $ft10, $fa4, $ft6, $ft7
-0827d371 fmadd.d $ft9, $fs3, $ft12, $ft7
-08283780 fmadd.d $fa0, $fs4, $ft5, $ft8
-082e150d fmadd.d $ft5, $ft0, $fa5, $fs4
-082815df fmadd.d $fs7, $ft6, $fa5, $ft8
-0820df82 fmadd.d $fa2, $fs4, $ft15, $fa1
-082c2cd5 fmadd.d $ft13, $fa6, $ft3, $fs0
-082db702 fmadd.d $fa2, $fs0, $ft5, $fs3
-082da76e fmadd.d $ft6, $fs3, $ft1, $fs3
-082a0325 fmadd.d $fa5, $fs1, $fa0, $ft12
-082804d9 fmadd.d $fs1, $fa6, $fa1, $ft8
-085ab3f9 fmsub.s $fs1, $fs7, $ft4, $ft13
-085546ee fmsub.s $ft6, $ft15, $ft9, $ft2
-085f7fd9 fmsub.s $fs1, $fs6, $fs7, $fs6
-085b3d2e fmsub.s $ft6, $ft1, $ft7, $ft14
-085249c9 fmsub.s $ft1, $ft6, $ft10, $fa4
-0855e73c fmsub.s $fs4, $fs1, $fs1, $ft3
-08548f47 fmsub.s $fa7, $fs2, $fa3, $ft1
-085ecf71 fmsub.s $ft9, $fs3, $ft11, $fs5
-0857dfe0 fmsub.s $fa0, $fs7, $ft15, $ft7
-085e1ef9 fmsub.s $fs1, $ft15, $fa7, $fs4
-0864b423 fmsub.d $fa3, $fa1, $ft5, $ft1
-086ba0fc fmsub.d $fs4, $fa7, $ft0, $ft15
-086aaafc fmsub.d $fs4, $ft15, $ft2, $ft13
-08686a85 fmsub.d $fa5, $ft12, $fs2, $ft8
-08606290 fmsub.d $ft8, $ft12, $fs0, $fa0
-08654812 fmsub.d $ft10, $fa0, $ft10, $ft2
-08659431 fmsub.d $ft9, $fa1, $fa5, $ft3
-086e53df fmsub.d $fs7, $fs6, $ft12, $fs4
-08661b26 fmsub.d $fa6, $fs1, $fa6, $ft4
-086d6d99 fmsub.d $fs1, $ft4, $fs3, $fs2
-0890dc77 fnmadd.s $ft15, $fa3, $ft15, $fa1
-089f430f fnmadd.s $ft7, $fs0, $ft8, $fs6
-08989c7a fnmadd.s $fs2, $fa3, $fa7, $ft9
-089c62e7 fnmadd.s $fa7, $ft15, $fs0, $fs0
-089e1e8b fnmadd.s $ft3, $ft12, $fa7, $fs4
-089f9287 fnmadd.s $fa7, $ft12, $fa4, $fs7
-089c7344 fnmadd.s $fa4, $fs2, $fs4, $fs0
-0895241e fnmadd.s $fs6, $fa0, $ft1, $ft2
-08992881 fnmadd.s $fa1, $fa4, $ft2, $ft10
-08905733 fnmadd.s $ft11, $fs1, $ft13, $fa0
-08ac3e93 fnmadd.d $ft11, $ft12, $ft7, $fs0
-08a2a6e7 fnmadd.d $fa7, $ft15, $ft1, $fa5
-08a4c481 fnmadd.d $fa1, $fa4, $ft9, $ft1
-08ac769a fnmadd.d $fs2, $ft12, $fs5, $fs0
-08a26613 fnmadd.d $ft11, $ft8, $fs1, $fa4
-08aba27e fnmadd.d $fs6, $ft11, $ft0, $ft15
-08aa22fe fnmadd.d $fs6, $ft15, $ft0, $ft12
-08ac55f6 fnmadd.d $ft14, $ft7, $ft13, $fs0
-08a17ecc fnmadd.d $ft4, $ft14, $fs7, $fa2
-08a7300f fnmadd.d $ft7, $fa0, $ft4, $ft6
-08d10560 fnmsub.s $fa0, $ft3, $fa1, $fa2
-08dc3ee8 fnmsub.s $ft0, $ft15, $ft7, $fs0
-08d9d864 fnmsub.s $fa4, $fa3, $ft14, $ft11
-08d453cd fnmsub.s $ft5, $fs6, $ft12, $ft0
-08d72630 fnmsub.s $ft8, $ft9, $ft1, $ft6
-08dfff26 fnmsub.s $fa6, $fs1, $fs7, $fs7
-08d5c036 fnmsub.s $ft14, $fa1, $ft8, $ft3
-08dc68fd fnmsub.s $fs5, $fa7, $fs2, $fs0
-08d58a67 fnmsub.s $fa7, $ft11, $fa2, $ft3
-08d6096e fnmsub.s $ft6, $ft3, $fa2, $ft4
-08e279aa fnmsub.d $ft2, $ft5, $fs6, $fa4
-08e2e254 fnmsub.d $ft12, $ft10, $fs0, $fa5
-08e43e2a fnmsub.d $ft2, $ft9, $ft7, $ft0
-08ec196b fnmsub.d $ft3, $ft3, $fa6, $fs0
-08e28671 fnmsub.d $ft9, $ft11, $fa1, $fa5
-08e740e0 fnmsub.d $fa0, $fa7, $ft8, $ft6
-08e35c4f fnmsub.d $ft7, $fa2, $ft15, $fa6
-08eb617f fnmsub.d $fs7, $ft3, $fs0, $ft14
-08ee75b8 fnmsub.d $fs0, $ft5, $fs5, $fs4
-08e43dfa fnmsub.d $fs2, $ft7, $ft7, $ft0
-0c1000a4 fcmp.caf.s $fcc4, $fa5, $fa0
-0c107405 fcmp.caf.s $fcc5, $fa0, $fs5
-0c102282 fcmp.caf.s $fcc2, $ft12, $ft0
-0c1005a2 fcmp.caf.s $fcc2, $ft5, $fa1
-0c1018e7 fcmp.caf.s $fcc7, $fa7, $fa6
-0c104563 fcmp.caf.s $fcc3, $ft3, $ft9
-0c105027 fcmp.caf.s $fcc7, $fa1, $ft12
-0c105f41 fcmp.caf.s $fcc1, $fs2, $ft15
-0c101002 fcmp.caf.s $fcc2, $fa0, $fa4
-0c107c67 fcmp.caf.s $fcc7, $fa3, $fs7
-0c142840 fcmp.cun.s $fcc0, $fa2, $ft2
-0c1465e7 fcmp.cun.s $fcc7, $ft7, $fs1
-0c142700 fcmp.cun.s $fcc0, $fs0, $ft1
-0c140684 fcmp.cun.s $fcc4, $ft12, $fa1
-0c144847 fcmp.cun.s $fcc7, $fa2, $ft10
-0c142ce7 fcmp.cun.s $fcc7, $fa7, $ft3
-0c145f45 fcmp.cun.s $fcc5, $fs2, $ft15
-0c141087 fcmp.cun.s $fcc7, $fa4, $fa4
-0c1437e4 fcmp.cun.s $fcc4, $fs7, $ft5
-0c1404e5 fcmp.cun.s $fcc5, $fa7, $fa1
-0c1228a6 fcmp.ceq.s $fcc6, $fa5, $ft2
-0c1263a5 fcmp.ceq.s $fcc5, $fs5, $fs0
-0c120680 fcmp.ceq.s $fcc0, $ft12, $fa1
-0c127427 fcmp.ceq.s $fcc7, $fa1, $fs5
-0c124ea4 fcmp.ceq.s $fcc4, $ft13, $ft11
-0c127923 fcmp.ceq.s $fcc3, $ft1, $fs6
-0c123ee2 fcmp.ceq.s $fcc2, $ft15, $ft7
-0c1228c7 fcmp.ceq.s $fcc7, $fa6, $ft2
-0c120400 fcmp.ceq.s $fcc0, $fa0, $fa1
-0c127841 fcmp.ceq.s $fcc1, $fa2, $fs6
-0c161c61 fcmp.cueq.s $fcc1, $fa3, $fa7
-0c164105 fcmp.cueq.s $fcc5, $ft0, $ft8
-0c163523 fcmp.cueq.s $fcc3, $ft1, $ft5
-0c1637c2 fcmp.cueq.s $fcc2, $fs6, $ft5
-0c167b25 fcmp.cueq.s $fcc5, $fs1, $fs6
-0c162541 fcmp.cueq.s $fcc1, $ft2, $ft1
-0c164945 fcmp.cueq.s $fcc5, $ft2, $ft10
-0c167543 fcmp.cueq.s $fcc3, $ft2, $fs5
-0c167026 fcmp.cueq.s $fcc6, $fa1, $fs4
-0c162966 fcmp.cueq.s $fcc6, $ft3, $ft2
-0c1136e2 fcmp.clt.s $fcc2, $ft15, $ft5
-0c114144 fcmp.clt.s $fcc4, $ft2, $ft8
-0c111126 fcmp.clt.s $fcc6, $ft1, $fa4
-0c117dc5 fcmp.clt.s $fcc5, $ft6, $fs7
-0c110d23 fcmp.clt.s $fcc3, $ft1, $fa3
-0c112844 fcmp.clt.s $fcc4, $fa2, $ft2
-0c116f64 fcmp.clt.s $fcc4, $fs3, $fs3
-0c1115a4 fcmp.clt.s $fcc4, $ft5, $fa5
-0c115125 fcmp.clt.s $fcc5, $ft1, $ft12
-0c1122a1 fcmp.clt.s $fcc1, $ft13, $ft0
-0c1564c7 fcmp.cult.s $fcc7, $fa6, $fs1
-0c150223 fcmp.cult.s $fcc3, $ft9, $fa0
-0c150487 fcmp.cult.s $fcc7, $fa4, $fa1
-0c152164 fcmp.cult.s $fcc4, $ft3, $ft0
-0c155103 fcmp.cult.s $fcc3, $ft0, $ft12
-0c154ae3 fcmp.cult.s $fcc3, $ft15, $ft10
-0c1555a3 fcmp.cult.s $fcc3, $ft5, $ft13
-0c151520 fcmp.cult.s $fcc0, $ft1, $fa5
-0c1533c4 fcmp.cult.s $fcc4, $fs6, $ft4
-0c151763 fcmp.cult.s $fcc3, $fs3, $fa5
-0c130443 fcmp.cle.s $fcc3, $fa2, $fa1
-0c135ca5 fcmp.cle.s $fcc5, $fa5, $ft15
-0c1323e3 fcmp.cle.s $fcc3, $fs7, $ft0
-0c132a85 fcmp.cle.s $fcc5, $ft12, $ft2
-0c137780 fcmp.cle.s $fcc0, $fs4, $fs5
-0c137645 fcmp.cle.s $fcc5, $ft10, $fs5
-0c133a22 fcmp.cle.s $fcc2, $ft9, $ft6
-0c1360c1 fcmp.cle.s $fcc1, $fa6, $fs0
-0c136e85 fcmp.cle.s $fcc5, $ft12, $fs3
-0c136d00 fcmp.cle.s $fcc0, $ft0, $fs3
-0c170d80 fcmp.cule.s $fcc0, $ft4, $fa3
-0c1730e7 fcmp.cule.s $fcc7, $fa7, $ft4
-0c175442 fcmp.cule.s $fcc2, $fa2, $ft13
-0c176764 fcmp.cule.s $fcc4, $fs3, $fs1
-0c173b80 fcmp.cule.s $fcc0, $fs4, $ft6
-0c173ba7 fcmp.cule.s $fcc7, $fs5, $ft6
-0c175fe5 fcmp.cule.s $fcc5, $fs7, $ft15
-0c171e23 fcmp.cule.s $fcc3, $ft9, $fa7
-0c170a66 fcmp.cule.s $fcc6, $ft11, $fa2
-0c176006 fcmp.cule.s $fcc6, $fa0, $fs0
-0c187720 fcmp.cne.s $fcc0, $fs1, $fs5
-0c183603 fcmp.cne.s $fcc3, $ft8, $ft5
-0c181e02 fcmp.cne.s $fcc2, $ft8, $fa7
-0c187726 fcmp.cne.s $fcc6, $fs1, $fs5
-0c186da5 fcmp.cne.s $fcc5, $ft5, $fs3
-0c187144 fcmp.cne.s $fcc4, $ft2, $fs4
-0c187e61 fcmp.cne.s $fcc1, $ft11, $fs7
-0c1802e7 fcmp.cne.s $fcc7, $ft15, $fa0
-0c181465 fcmp.cne.s $fcc5, $fa3, $fa5
-0c1852c0 fcmp.cne.s $fcc0, $ft14, $ft12
-0c1a39e3 fcmp.cor.s $fcc3, $ft7, $ft6
-0c1a3da5 fcmp.cor.s $fcc5, $ft5, $ft7
-0c1a62a0 fcmp.cor.s $fcc0, $ft13, $fs0
-0c1a45a6 fcmp.cor.s $fcc6, $ft5, $ft9
-0c1a1da4 fcmp.cor.s $fcc4, $ft5, $fa7
-0c1a6da4 fcmp.cor.s $fcc4, $ft5, $fs3
-0c1a7504 fcmp.cor.s $fcc4, $ft0, $fs5
-0c1a2c23 fcmp.cor.s $fcc3, $fa1, $ft3
-0c1a5382 fcmp.cor.s $fcc2, $fs4, $ft12
-0c1a46c6 fcmp.cor.s $fcc6, $ft14, $ft9
-0c1c4b40 fcmp.cune.s $fcc0, $fs2, $ft10
-0c1c1ee1 fcmp.cune.s $fcc1, $ft15, $fa7
-0c1c2b65 fcmp.cune.s $fcc5, $fs3, $ft2
-0c1c1d05 fcmp.cune.s $fcc5, $ft0, $fa7
-0c1c6563 fcmp.cune.s $fcc3, $ft3, $fs1
-0c1c7b87 fcmp.cune.s $fcc7, $fs4, $fs6
-0c1c7066 fcmp.cune.s $fcc6, $fa3, $fs4
-0c1c72e6 fcmp.cune.s $fcc6, $ft15, $fs4
-0c1c3a45 fcmp.cune.s $fcc5, $ft10, $ft6
-0c1c3ca0 fcmp.cune.s $fcc0, $fa5, $ft7
-0c10aea2 fcmp.saf.s $fcc2, $ft13, $ft3
-0c10d2c3 fcmp.saf.s $fcc3, $ft14, $ft12
-0c10c906 fcmp.saf.s $fcc6, $ft0, $ft10
-0c10cb83 fcmp.saf.s $fcc3, $fs4, $ft10
-0c10e1e6 fcmp.saf.s $fcc6, $ft7, $fs0
-0c10e7a1 fcmp.saf.s $fcc1, $fs5, $fs1
-0c10b1a7 fcmp.saf.s $fcc7, $ft5, $ft4
-0c10d9e3 fcmp.saf.s $fcc3, $ft7, $ft14
-0c10cd85 fcmp.saf.s $fcc5, $ft4, $ft11
-0c108761 fcmp.saf.s $fcc1, $fs3, $fa1
-0c148004 fcmp.sun.s $fcc4, $fa0, $fa0
-0c148a67 fcmp.sun.s $fcc7, $ft11, $fa2
-0c149e01 fcmp.sun.s $fcc1, $ft8, $fa7
-0c14bda7 fcmp.sun.s $fcc7, $ft5, $ft7
-0c14e9c5 fcmp.sun.s $fcc5, $ft6, $fs2
-0c14a6a7 fcmp.sun.s $fcc7, $ft13, $ft1
-0c14f740 fcmp.sun.s $fcc0, $fs2, $fs5
-0c14ce23 fcmp.sun.s $fcc3, $ft9, $ft11
-0c14ef81 fcmp.sun.s $fcc1, $fs4, $fs3
-0c14da83 fcmp.sun.s $fcc3, $ft12, $ft14
-0c12ef80 fcmp.seq.s $fcc0, $fs4, $fs3
-0c12f7a4 fcmp.seq.s $fcc4, $fs5, $fs5
-0c12a362 fcmp.seq.s $fcc2, $fs3, $ft0
-0c12be42 fcmp.seq.s $fcc2, $ft10, $ft7
-0c12ec87 fcmp.seq.s $fcc7, $fa4, $fs3
-0c12f306 fcmp.seq.s $fcc6, $fs0, $fs4
-0c129b64 fcmp.seq.s $fcc4, $fs3, $fa6
-0c12ba27 fcmp.seq.s $fcc7, $ft9, $ft6
-0c12f764 fcmp.seq.s $fcc4, $fs3, $fs5
-0c12e163 fcmp.seq.s $fcc3, $ft3, $fs0
-0c16a126 fcmp.sueq.s $fcc6, $ft1, $ft0
-0c16a404 fcmp.sueq.s $fcc4, $fa0, $ft1
-0c1682a3 fcmp.sueq.s $fcc3, $ft13, $fa0
-0c16e041 fcmp.sueq.s $fcc1, $fa2, $fs0
-0c16b061 fcmp.sueq.s $fcc1, $fa3, $ft4
-0c168fc3 fcmp.sueq.s $fcc3, $fs6, $fa3
-0c16b5c0 fcmp.sueq.s $fcc0, $ft6, $ft5
-0c16fd82 fcmp.sueq.s $fcc2, $ft4, $fs7
-0c16a2a2 fcmp.sueq.s $fcc2, $ft13, $ft0
-0c169683 fcmp.sueq.s $fcc3, $ft12, $fa5
-0c11e9e0 fcmp.slt.s $fcc0, $ft7, $fs2
-0c119a87 fcmp.slt.s $fcc7, $ft12, $fa6
-0c11fc03 fcmp.slt.s $fcc3, $fa0, $fs7
-0c118725 fcmp.slt.s $fcc5, $fs1, $fa1
-0c11f6e7 fcmp.slt.s $fcc7, $ft15, $fs5
-0c118442 fcmp.slt.s $fcc2, $fa2, $fa1
-0c11d684 fcmp.slt.s $fcc4, $ft12, $ft13
-0c11c785 fcmp.slt.s $fcc5, $fs4, $ft9
-0c119460 fcmp.slt.s $fcc0, $fa3, $fa5
-0c11d845 fcmp.slt.s $fcc5, $fa2, $ft14
-0c15df81 fcmp.sult.s $fcc1, $fs4, $ft15
-0c159746 fcmp.sult.s $fcc6, $fs2, $fa5
-0c15df64 fcmp.sult.s $fcc4, $fs3, $ft15
-0c15bf25 fcmp.sult.s $fcc5, $fs1, $ft7
-0c15a464 fcmp.sult.s $fcc4, $fa3, $ft1
-0c15a921 fcmp.sult.s $fcc1, $ft1, $ft2
-0c15f243 fcmp.sult.s $fcc3, $ft10, $fs4
-0c15f0c7 fcmp.sult.s $fcc7, $fa6, $fs4
-0c15e705 fcmp.sult.s $fcc5, $fs0, $fs1
-0c15b684 fcmp.sult.s $fcc4, $ft12, $ft5
-0c13ccc0 fcmp.sle.s $fcc0, $fa6, $ft11
-0c13eaa1 fcmp.sle.s $fcc1, $ft13, $fs2
-0c13f922 fcmp.sle.s $fcc2, $ft1, $fs6
-0c138ac3 fcmp.sle.s $fcc3, $ft14, $fa2
-0c13d980 fcmp.sle.s $fcc0, $ft4, $ft14
-0c13b4e7 fcmp.sle.s $fcc7, $fa7, $ft5
-0c13e504 fcmp.sle.s $fcc4, $ft0, $fs1
-0c13d662 fcmp.sle.s $fcc2, $ft11, $ft13
-0c138026 fcmp.sle.s $fcc6, $fa1, $fa0
-0c13ac01 fcmp.sle.s $fcc1, $fa0, $ft3
-0c17d143 fcmp.sule.s $fcc3, $ft2, $ft12
-0c17d546 fcmp.sule.s $fcc6, $ft2, $ft13
-0c17e745 fcmp.sule.s $fcc5, $fs2, $fs1
-0c17b621 fcmp.sule.s $fcc1, $ft9, $ft5
-0c178860 fcmp.sule.s $fcc0, $fa3, $fa2
-0c179e62 fcmp.sule.s $fcc2, $ft11, $fa7
-0c17a345 fcmp.sule.s $fcc5, $fs2, $ft0
-0c17a9a6 fcmp.sule.s $fcc6, $ft5, $ft2
-0c17bd84 fcmp.sule.s $fcc4, $ft4, $ft7
-0c178d40 fcmp.sule.s $fcc0, $ft2, $fa3
-0c18b102 fcmp.sne.s $fcc2, $ft0, $ft4
-0c18c947 fcmp.sne.s $fcc7, $ft2, $ft10
-0c18bde1 fcmp.sne.s $fcc1, $ft7, $ft7
-0c18b804 fcmp.sne.s $fcc4, $fa0, $ft6
-0c188c42 fcmp.sne.s $fcc2, $fa2, $fa3
-0c18a603 fcmp.sne.s $fcc3, $ft8, $ft1
-0c18b164 fcmp.sne.s $fcc4, $ft3, $ft4
-0c18ccc1 fcmp.sne.s $fcc1, $fa6, $ft11
-0c18c9c7 fcmp.sne.s $fcc7, $ft6, $ft10
-0c18b862 fcmp.sne.s $fcc2, $fa3, $ft6
-0c1aff46 fcmp.sor.s $fcc6, $fs2, $fs7
-0c1afd81 fcmp.sor.s $fcc1, $ft4, $fs7
-0c1ad702 fcmp.sor.s $fcc2, $fs0, $ft13
-0c1ae7e6 fcmp.sor.s $fcc6, $fs7, $fs1
-0c1ae725 fcmp.sor.s $fcc5, $fs1, $fs1
-0c1a8e62 fcmp.sor.s $fcc2, $ft11, $fa3
-0c1ad961 fcmp.sor.s $fcc1, $ft3, $ft14
-0c1abd00 fcmp.sor.s $fcc0, $ft0, $ft7
-0c1a9564 fcmp.sor.s $fcc4, $ft3, $fa5
-0c1aea21 fcmp.sor.s $fcc1, $ft9, $fs2
-0c1cc006 fcmp.sune.s $fcc6, $fa0, $ft8
-0c1c93c7 fcmp.sune.s $fcc7, $fs6, $fa4
-0c1cd425 fcmp.sune.s $fcc5, $fa1, $ft13
-0c1cc244 fcmp.sune.s $fcc4, $ft10, $ft8
-0c1cb926 fcmp.sune.s $fcc6, $ft1, $ft6
-0c1cc427 fcmp.sune.s $fcc7, $fa1, $ft9
-0c1ce8c6 fcmp.sune.s $fcc6, $fa6, $fs2
-0c1cee44 fcmp.sune.s $fcc4, $ft10, $fs3
-0c1c9de5 fcmp.sune.s $fcc5, $ft7, $fa7
-0c1cc5e5 fcmp.sune.s $fcc5, $ft7, $ft9
-0c205404 fcmp.caf.d $fcc4, $fa0, $ft13
-0c204400 fcmp.caf.d $fcc0, $fa0, $ft9
-0c206643 fcmp.caf.d $fcc3, $ft10, $fs1
-0c2003a2 fcmp.caf.d $fcc2, $fs5, $fa0
-0c207763 fcmp.caf.d $fcc3, $fs3, $fs5
-0c201a83 fcmp.caf.d $fcc3, $ft12, $fa6
-0c203b87 fcmp.caf.d $fcc7, $fs4, $ft6
-0c200267 fcmp.caf.d $fcc7, $ft11, $fa0
-0c202923 fcmp.caf.d $fcc3, $ft1, $ft2
-0c2056a3 fcmp.caf.d $fcc3, $ft13, $ft13
-0c241122 fcmp.cun.d $fcc2, $ft1, $fa4
-0c244205 fcmp.cun.d $fcc5, $ft8, $ft8
-0c2418a0 fcmp.cun.d $fcc0, $fa5, $fa6
-0c241e80 fcmp.cun.d $fcc0, $ft12, $fa7
-0c240a01 fcmp.cun.d $fcc1, $ft8, $fa2
-0c247542 fcmp.cun.d $fcc2, $ft2, $fs5
-0c243507 fcmp.cun.d $fcc7, $ft0, $ft5
-0c2450c3 fcmp.cun.d $fcc3, $fa6, $ft12
-0c247ea6 fcmp.cun.d $fcc6, $ft13, $fs7
-0c240fc3 fcmp.cun.d $fcc3, $fs6, $fa3
-0c2241e7 fcmp.ceq.d $fcc7, $ft7, $ft8
-0c223b83 fcmp.ceq.d $fcc3, $fs4, $ft6
-0c221842 fcmp.ceq.d $fcc2, $fa2, $fa6
-0c225940 fcmp.ceq.d $fcc0, $ft2, $ft14
-0c227002 fcmp.ceq.d $fcc2, $fa0, $fs4
-0c226323 fcmp.ceq.d $fcc3, $fs1, $fs0
-0c2215e4 fcmp.ceq.d $fcc4, $ft7, $fa5
-0c225e06 fcmp.ceq.d $fcc6, $ft8, $ft15
-0c225de2 fcmp.ceq.d $fcc2, $ft7, $ft15
-0c221d86 fcmp.ceq.d $fcc6, $ft4, $fa7
-0c263325 fcmp.cueq.d $fcc5, $fs1, $ft4
-0c260062 fcmp.cueq.d $fcc2, $fa3, $fa0
-0c265044 fcmp.cueq.d $fcc4, $fa2, $ft12
-0c2655c5 fcmp.cueq.d $fcc5, $ft6, $ft13
-0c262483 fcmp.cueq.d $fcc3, $fa4, $ft1
+0648c155 idle 0x4155
+06488037 idle 0x37
+0648e26d idle 0x626d
+0648afa8 idle 0x2fa8
+0648ddff idle 0x5dff
+0648882c idle 0x82c
+0648bce1 idle 0x3ce1
+0648ccd7 idle 0x4cd7
+0648e2e4 idle 0x62e4
+0648d888 idle 0x5888
+0649fc35 invtlb 0x15, $ra, $s8
+0649efda invtlb 0x1a, $s7, $s4
+0649d796 invtlb 0x16, $s5, $r21
+0649b060 invtlb 0x0, $sp, $t0
+0649d24a invtlb 0xa, $t6, $t8
+0649f2af invtlb 0xf, $r21, $s5
+0649fa8f invtlb 0xf, $t8, $s7
+0649c852 invtlb 0x12, $tp, $t6
+0649d402 invtlb 0x2, $zero, $r21
+0649bb2a invtlb 0xa, $s2, $t2
+08115f64 fmadd.s $fa4, $fs3, $ft15, $fa2
+08105ddc fmadd.s $fs4, $ft6, $ft15, $fa0
+0819908c fmadd.s $ft4, $fa4, $fa4, $ft11
+081bac18 fmadd.s $fs0, $fa0, $ft3, $ft15
+081f8b54 fmadd.s $ft12, $fs2, $fa2, $fs7
+081e5b12 fmadd.s $ft10, $fs0, $ft14, $fs4
+081223d8 fmadd.s $fs0, $fs6, $ft0, $fa4
+0812ffb1 fmadd.s $ft9, $fs5, $fs7, $fa5
+0813b956 fmadd.s $ft14, $ft2, $ft6, $fa7
+0816c0b1 fmadd.s $ft9, $fa5, $ft8, $ft5
+082ce995 fmadd.d $ft13, $ft4, $fs2, $fs1
+082dc4b3 fmadd.d $ft11, $fa5, $ft9, $fs3
+0821f97c fmadd.d $fs4, $ft3, $fs6, $fa3
+08279d30 fmadd.d $ft8, $ft1, $fa7, $ft7
+0823fbe4 fmadd.d $fa4, $fs7, $fs6, $fa7
+08252df8 fmadd.d $fs0, $ft7, $ft3, $ft2
+08292ce2 fmadd.d $fa2, $fa7, $ft3, $ft10
+08256e3c fmadd.d $fs4, $ft9, $fs3, $ft2
+082b17ae fmadd.d $ft6, $fs5, $fa5, $ft14
+082561ce fmadd.d $ft6, $ft6, $fs0, $ft2
+085e547e fmsub.s $fs6, $fa3, $ft13, $fs4
+0854af03 fmsub.s $fa3, $fs0, $ft3, $ft1
+0856bce4 fmsub.s $fa4, $fa7, $ft7, $ft5
+0859afe0 fmsub.s $fa0, $fs7, $ft3, $ft11
+0858c056 fmsub.s $ft14, $fa2, $ft8, $ft9
+0854ebb1 fmsub.s $ft9, $fs5, $fs2, $ft1
+085dde33 fmsub.s $ft11, $ft9, $ft15, $fs3
+0857767e fmsub.s $fs6, $ft11, $fs5, $ft6
+08577983 fmsub.s $fa3, $ft4, $fs6, $ft6
+08573c8c fmsub.s $ft4, $fa4, $ft7, $ft6
+0864fd94 fmsub.d $ft12, $ft4, $fs7, $ft1
+08609960 fmsub.d $fa0, $ft3, $fa6, $fa1
+0864fa72 fmsub.d $ft10, $ft11, $fs6, $ft1
+086e2e29 fmsub.d $ft1, $ft9, $ft3, $fs4
+086b9a52 fmsub.d $ft10, $ft10, $fa6, $ft15
+0864f966 fmsub.d $fa6, $ft3, $fs6, $ft1
+0869b8fb fmsub.d $fs3, $fa7, $ft6, $ft11
+0860ebbc fmsub.d $fs4, $fs5, $fs2, $fa1
+086cd2c5 fmsub.d $fa5, $ft14, $ft12, $fs1
+0867e76f fmsub.d $ft7, $fs3, $fs1, $ft7
+0890204c fnmadd.s $ft4, $fa2, $ft0, $fa0
+0896753b fnmadd.s $fs3, $ft1, $fs5, $ft4
+089338cd fnmadd.s $ft5, $fa6, $ft6, $fa6
+08992d94 fnmadd.s $ft12, $ft4, $ft3, $ft10
+089b6ccf fnmadd.s $ft7, $fa6, $fs3, $ft14
+0893c799 fnmadd.s $fs1, $fs4, $ft9, $fa7
+08973d54 fnmadd.s $ft12, $ft2, $ft7, $ft6
+089e7d5b fnmadd.s $fs3, $ft2, $fs7, $fs4
+089ea0aa fnmadd.s $ft2, $fa5, $ft0, $fs5
+0894a834 fnmadd.s $ft12, $fa1, $ft2, $ft1
+08a1fdbd fnmadd.d $fs5, $ft5, $fs7, $fa3
+08aed1a0 fnmadd.d $fa0, $ft5, $ft12, $fs5
+08ad995a fnmadd.d $fs2, $ft2, $fa6, $fs3
+08a7ecc0 fnmadd.d $fa0, $fa6, $fs3, $ft7
+08ae393e fnmadd.d $fs6, $ft1, $ft6, $fs4
+08a6e3b8 fnmadd.d $fs0, $fs5, $fs0, $ft5
+08af9add fnmadd.d $fs5, $ft14, $fa6, $fs7
+08ae5900 fnmadd.d $fa0, $ft0, $ft14, $fs4
+08ae050f fnmadd.d $ft7, $ft0, $fa1, $fs4
+08a21633 fnmadd.d $ft11, $ft9, $fa5, $fa4
+08d287af fnmsub.s $ft7, $fs5, $fa1, $fa5
+08d28584 fnmsub.s $fa4, $ft4, $fa1, $fa5
+08d06240 fnmsub.s $fa0, $ft10, $fs0, $fa0
+08ddcd1d fnmsub.s $fs5, $ft0, $ft11, $fs3
+08debcd0 fnmsub.s $ft8, $fa6, $ft7, $fs5
+08d402a6 fnmsub.s $fa6, $ft13, $fa0, $ft0
+08d5800e fnmsub.s $ft6, $fa0, $fa0, $ft3
+08d21f85 fnmsub.s $fa5, $fs4, $fa7, $fa4
+08d6e096 fnmsub.s $ft14, $fa4, $fs0, $ft5
+08d71d89 fnmsub.s $ft1, $ft4, $fa7, $ft6
+08e59ec8 fnmsub.d $ft0, $ft14, $fa7, $ft3
+08edcdcc fnmsub.d $ft4, $ft6, $ft11, $fs3
+08e7b892 fnmsub.d $ft10, $fa4, $ft6, $ft7
+08e7d371 fnmsub.d $ft9, $fs3, $ft12, $ft7
+08e83780 fnmsub.d $fa0, $fs4, $ft5, $ft8
+08ee150d fnmsub.d $ft5, $ft0, $fa5, $fs4
+08e815df fnmsub.d $fs7, $ft6, $fa5, $ft8
+08e0df82 fnmsub.d $fa2, $fs4, $ft15, $fa1
+08ec2cd5 fnmsub.d $ft13, $fa6, $ft3, $fs0
+08edb702 fnmsub.d $fa2, $fs0, $ft5, $fs3
+0c102766 fcmp.caf.s $fcc6, $fs3, $ft1
+0c100325 fcmp.caf.s $fcc5, $fs1, $fa0
+0c1004c1 fcmp.caf.s $fcc1, $fa6, $fa1
+0c1033e1 fcmp.caf.s $fcc1, $fs7, $ft4
+0c1046e6 fcmp.caf.s $fcc6, $ft15, $ft9
+0c107fc1 fcmp.caf.s $fcc1, $fs6, $fs7
+0c103d26 fcmp.caf.s $fcc6, $ft1, $ft7
+0c1049c1 fcmp.caf.s $fcc1, $ft6, $ft10
+0c106724 fcmp.caf.s $fcc4, $fs1, $fs1
+0c100f47 fcmp.caf.s $fcc7, $fs2, $fa3
+0c144f61 fcmp.cun.s $fcc1, $fs3, $ft11
+0c145fe0 fcmp.cun.s $fcc0, $fs7, $ft15
+0c141ee1 fcmp.cun.s $fcc1, $ft15, $fa7
+0c143423 fcmp.cun.s $fcc3, $fa1, $ft5
+0c1420e4 fcmp.cun.s $fcc4, $fa7, $ft0
+0c142ae4 fcmp.cun.s $fcc4, $ft15, $ft2
+0c146a85 fcmp.cun.s $fcc5, $ft12, $fs2
+0c146280 fcmp.cun.s $fcc0, $ft12, $fs0
+0c144802 fcmp.cun.s $fcc2, $fa0, $ft10
+0c141421 fcmp.cun.s $fcc1, $fa1, $fa5
+0c1253c7 fcmp.ceq.s $fcc7, $fs6, $ft12
+0c121b26 fcmp.ceq.s $fcc6, $fs1, $fa6
+0c126d81 fcmp.ceq.s $fcc1, $ft4, $fs3
+0c125c67 fcmp.ceq.s $fcc7, $fa3, $ft15
+0c124307 fcmp.ceq.s $fcc7, $fs0, $ft8
+0c121c62 fcmp.ceq.s $fcc2, $fa3, $fa7
+0c1262e7 fcmp.ceq.s $fcc7, $ft15, $fs0
+0c121e83 fcmp.ceq.s $fcc3, $ft12, $fa7
+0c121287 fcmp.ceq.s $fcc7, $ft12, $fa4
+0c127344 fcmp.ceq.s $fcc4, $fs2, $fs4
+0c162406 fcmp.cueq.s $fcc6, $fa0, $ft1
+0c162881 fcmp.cueq.s $fcc1, $fa4, $ft2
+0c165723 fcmp.cueq.s $fcc3, $fs1, $ft13
+0c163e83 fcmp.cueq.s $fcc3, $ft12, $ft7
+0c1626e7 fcmp.cueq.s $fcc7, $ft15, $ft1
+0c164481 fcmp.cueq.s $fcc1, $fa4, $ft9
+0c167682 fcmp.cueq.s $fcc2, $ft12, $fs5
+0c166603 fcmp.cueq.s $fcc3, $ft8, $fs1
+0c162266 fcmp.cueq.s $fcc6, $ft11, $ft0
+0c1622e6 fcmp.cueq.s $fcc6, $ft15, $ft0
+0c1155e6 fcmp.clt.s $fcc6, $ft7, $ft13
+0c117ec4 fcmp.clt.s $fcc4, $ft14, $fs7
+0c113007 fcmp.clt.s $fcc7, $fa0, $ft4
+0c110560 fcmp.clt.s $fcc0, $ft3, $fa1
+0c113ee0 fcmp.clt.s $fcc0, $ft15, $ft7
+0c115864 fcmp.clt.s $fcc4, $fa3, $ft14
+0c1153c5 fcmp.clt.s $fcc5, $fs6, $ft12
+0c112620 fcmp.clt.s $fcc0, $ft9, $ft1
+0c117f26 fcmp.clt.s $fcc6, $fs1, $fs7
+0c114026 fcmp.clt.s $fcc6, $fa1, $ft8
+0c1568e5 fcmp.cult.s $fcc5, $fa7, $fs2
+0c150a67 fcmp.cult.s $fcc7, $ft11, $fa2
+0c150966 fcmp.cult.s $fcc6, $ft3, $fa2
+0c1579a2 fcmp.cult.s $fcc2, $ft5, $fs6
+0c156244 fcmp.cult.s $fcc4, $ft10, $fs0
+0c153e22 fcmp.cult.s $fcc2, $ft9, $ft7
+0c151963 fcmp.cult.s $fcc3, $ft3, $fa6
+0c150661 fcmp.cult.s $fcc1, $ft11, $fa1
+0c1540e0 fcmp.cult.s $fcc0, $fa7, $ft8
+0c155c47 fcmp.cult.s $fcc7, $fa2, $ft15
+0c136167 fcmp.cle.s $fcc7, $ft3, $fs0
+0c1375a0 fcmp.cle.s $fcc0, $ft5, $fs5
+0c133de2 fcmp.cle.s $fcc2, $ft7, $ft7
+0c1300a4 fcmp.cle.s $fcc4, $fa5, $fa0
+0c137405 fcmp.cle.s $fcc5, $fa0, $fs5
+0c132282 fcmp.cle.s $fcc2, $ft12, $ft0
+0c1305a2 fcmp.cle.s $fcc2, $ft5, $fa1
+0c1318e7 fcmp.cle.s $fcc7, $fa7, $fa6
+0c134563 fcmp.cle.s $fcc3, $ft3, $ft9
+0c135027 fcmp.cle.s $fcc7, $fa1, $ft12
+0c175f41 fcmp.cule.s $fcc1, $fs2, $ft15
+0c171002 fcmp.cule.s $fcc2, $fa0, $fa4
+0c177c67 fcmp.cule.s $fcc7, $fa3, $fs7
+0c172840 fcmp.cule.s $fcc0, $fa2, $ft2
+0c1765e7 fcmp.cule.s $fcc7, $ft7, $fs1
+0c172700 fcmp.cule.s $fcc0, $fs0, $ft1
+0c170684 fcmp.cule.s $fcc4, $ft12, $fa1
+0c174847 fcmp.cule.s $fcc7, $fa2, $ft10
+0c172ce7 fcmp.cule.s $fcc7, $fa7, $ft3
+0c175f45 fcmp.cule.s $fcc5, $fs2, $ft15
+0c181087 fcmp.cne.s $fcc7, $fa4, $fa4
+0c1837e4 fcmp.cne.s $fcc4, $fs7, $ft5
+0c1804e5 fcmp.cne.s $fcc5, $fa7, $fa1
+0c1828a6 fcmp.cne.s $fcc6, $fa5, $ft2
+0c1863a5 fcmp.cne.s $fcc5, $fs5, $fs0
+0c180680 fcmp.cne.s $fcc0, $ft12, $fa1
+0c187427 fcmp.cne.s $fcc7, $fa1, $fs5
+0c184ea4 fcmp.cne.s $fcc4, $ft13, $ft11
+0c187923 fcmp.cne.s $fcc3, $ft1, $fs6
+0c183ee2 fcmp.cne.s $fcc2, $ft15, $ft7
+0c1a28c7 fcmp.cor.s $fcc7, $fa6, $ft2
+0c1a0400 fcmp.cor.s $fcc0, $fa0, $fa1
+0c1a7841 fcmp.cor.s $fcc1, $fa2, $fs6
+0c1a1c61 fcmp.cor.s $fcc1, $fa3, $fa7
+0c1a4105 fcmp.cor.s $fcc5, $ft0, $ft8
+0c1a3523 fcmp.cor.s $fcc3, $ft1, $ft5
+0c1a37c2 fcmp.cor.s $fcc2, $fs6, $ft5
+0c1a7b25 fcmp.cor.s $fcc5, $fs1, $fs6
+0c1a2541 fcmp.cor.s $fcc1, $ft2, $ft1
+0c1a4945 fcmp.cor.s $fcc5, $ft2, $ft10
+0c1c7543 fcmp.cune.s $fcc3, $ft2, $fs5
+0c1c7026 fcmp.cune.s $fcc6, $fa1, $fs4
+0c1c2966 fcmp.cune.s $fcc6, $ft3, $ft2
+0c1c36e2 fcmp.cune.s $fcc2, $ft15, $ft5
+0c1c4144 fcmp.cune.s $fcc4, $ft2, $ft8
+0c1c1126 fcmp.cune.s $fcc6, $ft1, $fa4
+0c1c7dc5 fcmp.cune.s $fcc5, $ft6, $fs7
+0c1c0d23 fcmp.cune.s $fcc3, $ft1, $fa3
+0c1c2844 fcmp.cune.s $fcc4, $fa2, $ft2
+0c1c6f64 fcmp.cune.s $fcc4, $fs3, $fs3
+0c1095a4 fcmp.saf.s $fcc4, $ft5, $fa5
+0c10d125 fcmp.saf.s $fcc5, $ft1, $ft12
+0c10a2a1 fcmp.saf.s $fcc1, $ft13, $ft0
+0c10e4c7 fcmp.saf.s $fcc7, $fa6, $fs1
+0c108223 fcmp.saf.s $fcc3, $ft9, $fa0
+0c108487 fcmp.saf.s $fcc7, $fa4, $fa1
+0c10a164 fcmp.saf.s $fcc4, $ft3, $ft0
+0c10d103 fcmp.saf.s $fcc3, $ft0, $ft12
+0c10cae3 fcmp.saf.s $fcc3, $ft15, $ft10
+0c10d5a3 fcmp.saf.s $fcc3, $ft5, $ft13
+0c149520 fcmp.sun.s $fcc0, $ft1, $fa5
+0c14b3c4 fcmp.sun.s $fcc4, $fs6, $ft4
+0c149763 fcmp.sun.s $fcc3, $fs3, $fa5
+0c148443 fcmp.sun.s $fcc3, $fa2, $fa1
+0c14dca5 fcmp.sun.s $fcc5, $fa5, $ft15
+0c14a3e3 fcmp.sun.s $fcc3, $fs7, $ft0
+0c14aa85 fcmp.sun.s $fcc5, $ft12, $ft2
+0c14f780 fcmp.sun.s $fcc0, $fs4, $fs5
+0c14f645 fcmp.sun.s $fcc5, $ft10, $fs5
+0c14ba22 fcmp.sun.s $fcc2, $ft9, $ft6
+0c12e0c1 fcmp.seq.s $fcc1, $fa6, $fs0
+0c12ee85 fcmp.seq.s $fcc5, $ft12, $fs3
+0c12ed00 fcmp.seq.s $fcc0, $ft0, $fs3
+0c128d80 fcmp.seq.s $fcc0, $ft4, $fa3
+0c12b0e7 fcmp.seq.s $fcc7, $fa7, $ft4
+0c12d442 fcmp.seq.s $fcc2, $fa2, $ft13
+0c12e764 fcmp.seq.s $fcc4, $fs3, $fs1
+0c12bb80 fcmp.seq.s $fcc0, $fs4, $ft6
+0c12bba7 fcmp.seq.s $fcc7, $fs5, $ft6
+0c12dfe5 fcmp.seq.s $fcc5, $fs7, $ft15
+0c169e23 fcmp.sueq.s $fcc3, $ft9, $fa7
+0c168a66 fcmp.sueq.s $fcc6, $ft11, $fa2
+0c16e006 fcmp.sueq.s $fcc6, $fa0, $fs0
+0c16f720 fcmp.sueq.s $fcc0, $fs1, $fs5
+0c16b603 fcmp.sueq.s $fcc3, $ft8, $ft5
+0c169e02 fcmp.sueq.s $fcc2, $ft8, $fa7
+0c16f726 fcmp.sueq.s $fcc6, $fs1, $fs5
+0c16eda5 fcmp.sueq.s $fcc5, $ft5, $fs3
+0c16f144 fcmp.sueq.s $fcc4, $ft2, $fs4
+0c16fe61 fcmp.sueq.s $fcc1, $ft11, $fs7
+0c1182e7 fcmp.slt.s $fcc7, $ft15, $fa0
+0c119465 fcmp.slt.s $fcc5, $fa3, $fa5
+0c11d2c0 fcmp.slt.s $fcc0, $ft14, $ft12
+0c11b9e3 fcmp.slt.s $fcc3, $ft7, $ft6
+0c11bda5 fcmp.slt.s $fcc5, $ft5, $ft7
+0c11e2a0 fcmp.slt.s $fcc0, $ft13, $fs0
+0c11c5a6 fcmp.slt.s $fcc6, $ft5, $ft9
+0c119da4 fcmp.slt.s $fcc4, $ft5, $fa7
+0c11eda4 fcmp.slt.s $fcc4, $ft5, $fs3
+0c11f504 fcmp.slt.s $fcc4, $ft0, $fs5
+0c15ac23 fcmp.sult.s $fcc3, $fa1, $ft3
+0c15d382 fcmp.sult.s $fcc2, $fs4, $ft12
+0c15c6c6 fcmp.sult.s $fcc6, $ft14, $ft9
+0c15cb40 fcmp.sult.s $fcc0, $fs2, $ft10
+0c159ee1 fcmp.sult.s $fcc1, $ft15, $fa7
+0c15ab65 fcmp.sult.s $fcc5, $fs3, $ft2
+0c159d05 fcmp.sult.s $fcc5, $ft0, $fa7
+0c15e563 fcmp.sult.s $fcc3, $ft3, $fs1
+0c15fb87 fcmp.sult.s $fcc7, $fs4, $fs6
+0c15f066 fcmp.sult.s $fcc6, $fa3, $fs4
+0c13f2e6 fcmp.sle.s $fcc6, $ft15, $fs4
+0c13ba45 fcmp.sle.s $fcc5, $ft10, $ft6
+0c13bca0 fcmp.sle.s $fcc0, $fa5, $ft7
+0c13aea2 fcmp.sle.s $fcc2, $ft13, $ft3
+0c13d2c3 fcmp.sle.s $fcc3, $ft14, $ft12
+0c13c906 fcmp.sle.s $fcc6, $ft0, $ft10
+0c13cb83 fcmp.sle.s $fcc3, $fs4, $ft10
+0c13e1e6 fcmp.sle.s $fcc6, $ft7, $fs0
+0c13e7a1 fcmp.sle.s $fcc1, $fs5, $fs1
+0c13b1a7 fcmp.sle.s $fcc7, $ft5, $ft4
+0c17d9e3 fcmp.sule.s $fcc3, $ft7, $ft14
+0c17cd85 fcmp.sule.s $fcc5, $ft4, $ft11
+0c178761 fcmp.sule.s $fcc1, $fs3, $fa1
+0c178004 fcmp.sule.s $fcc4, $fa0, $fa0
+0c178a67 fcmp.sule.s $fcc7, $ft11, $fa2
+0c179e01 fcmp.sule.s $fcc1, $ft8, $fa7
+0c17bda7 fcmp.sule.s $fcc7, $ft5, $ft7
+0c17e9c5 fcmp.sule.s $fcc5, $ft6, $fs2
+0c17a6a7 fcmp.sule.s $fcc7, $ft13, $ft1
+0c17f740 fcmp.sule.s $fcc0, $fs2, $fs5
+0c18ce23 fcmp.sne.s $fcc3, $ft9, $ft11
+0c18ef81 fcmp.sne.s $fcc1, $fs4, $fs3
+0c18da83 fcmp.sne.s $fcc3, $ft12, $ft14
+0c18ef80 fcmp.sne.s $fcc0, $fs4, $fs3
+0c18f7a4 fcmp.sne.s $fcc4, $fs5, $fs5
+0c18a362 fcmp.sne.s $fcc2, $fs3, $ft0
+0c18be42 fcmp.sne.s $fcc2, $ft10, $ft7
+0c18ec87 fcmp.sne.s $fcc7, $fa4, $fs3
+0c18f306 fcmp.sne.s $fcc6, $fs0, $fs4
+0c189b64 fcmp.sne.s $fcc4, $fs3, $fa6
+0c1aba27 fcmp.sor.s $fcc7, $ft9, $ft6
+0c1af764 fcmp.sor.s $fcc4, $fs3, $fs5
+0c1ae163 fcmp.sor.s $fcc3, $ft3, $fs0
+0c1aa126 fcmp.sor.s $fcc6, $ft1, $ft0
+0c1aa404 fcmp.sor.s $fcc4, $fa0, $ft1
+0c1a82a3 fcmp.sor.s $fcc3, $ft13, $fa0
+0c1ae041 fcmp.sor.s $fcc1, $fa2, $fs0
+0c1ab061 fcmp.sor.s $fcc1, $fa3, $ft4
+0c1a8fc3 fcmp.sor.s $fcc3, $fs6, $fa3
+0c1ab5c0 fcmp.sor.s $fcc0, $ft6, $ft5
+0c1cfd82 fcmp.sune.s $fcc2, $ft4, $fs7
+0c1ca2a2 fcmp.sune.s $fcc2, $ft13, $ft0
+0c1c9683 fcmp.sune.s $fcc3, $ft12, $fa5
+0c1ce9e0 fcmp.sune.s $fcc0, $ft7, $fs2
+0c1c9a87 fcmp.sune.s $fcc7, $ft12, $fa6
+0c1cfc03 fcmp.sune.s $fcc3, $fa0, $fs7
+0c1c8725 fcmp.sune.s $fcc5, $fs1, $fa1
+0c1cf6e7 fcmp.sune.s $fcc7, $ft15, $fs5
+0c1c8442 fcmp.sune.s $fcc2, $fa2, $fa1
+0c1cd684 fcmp.sune.s $fcc4, $ft12, $ft13
+0c204785 fcmp.caf.d $fcc5, $fs4, $ft9
+0c201460 fcmp.caf.d $fcc0, $fa3, $fa5
+0c205845 fcmp.caf.d $fcc5, $fa2, $ft14
+0c205f81 fcmp.caf.d $fcc1, $fs4, $ft15
+0c201746 fcmp.caf.d $fcc6, $fs2, $fa5
+0c205f64 fcmp.caf.d $fcc4, $fs3, $ft15
+0c203f25 fcmp.caf.d $fcc5, $fs1, $ft7
+0c202464 fcmp.caf.d $fcc4, $fa3, $ft1
+0c202921 fcmp.caf.d $fcc1, $ft1, $ft2
+0c207243 fcmp.caf.d $fcc3, $ft10, $fs4
+0c2470c7 fcmp.cun.d $fcc7, $fa6, $fs4
+0c246705 fcmp.cun.d $fcc5, $fs0, $fs1
+0c243684 fcmp.cun.d $fcc4, $ft12, $ft5
+0c244cc0 fcmp.cun.d $fcc0, $fa6, $ft11
+0c246aa1 fcmp.cun.d $fcc1, $ft13, $fs2
+0c247922 fcmp.cun.d $fcc2, $ft1, $fs6
+0c240ac3 fcmp.cun.d $fcc3, $ft14, $fa2
+0c245980 fcmp.cun.d $fcc0, $ft4, $ft14
+0c2434e7 fcmp.cun.d $fcc7, $fa7, $ft5
+0c246504 fcmp.cun.d $fcc4, $ft0, $fs1
+0c225662 fcmp.ceq.d $fcc2, $ft11, $ft13
+0c220026 fcmp.ceq.d $fcc6, $fa1, $fa0
+0c222c01 fcmp.ceq.d $fcc1, $fa0, $ft3
+0c225143 fcmp.ceq.d $fcc3, $ft2, $ft12
+0c225546 fcmp.ceq.d $fcc6, $ft2, $ft13
+0c226745 fcmp.ceq.d $fcc5, $fs2, $fs1
+0c223621 fcmp.ceq.d $fcc1, $ft9, $ft5
+0c220860 fcmp.ceq.d $fcc0, $fa3, $fa2
+0c221e62 fcmp.ceq.d $fcc2, $ft11, $fa7
+0c222345 fcmp.ceq.d $fcc5, $fs2, $ft0
+0c2629a6 fcmp.cueq.d $fcc6, $ft5, $ft2
+0c263d84 fcmp.cueq.d $fcc4, $ft4, $ft7
+0c260d40 fcmp.cueq.d $fcc0, $ft2, $fa3
 0c263102 fcmp.cueq.d $fcc2, $ft0, $ft4
-0c2667a3 fcmp.cueq.d $fcc3, $fs5, $fs1
-0c262926 fcmp.cueq.d $fcc6, $ft1, $ft2
-0c260305 fcmp.cueq.d $fcc5, $fs0, $fa0
-0c265f43 fcmp.cueq.d $fcc3, $fs2, $ft15
-0c213c27 fcmp.clt.d $fcc7, $fa1, $ft7
-0c2107a7 fcmp.clt.d $fcc7, $fs5, $fa1
-0c2118e7 fcmp.clt.d $fcc7, $fa7, $fa6
-0c214461 fcmp.clt.d $fcc1, $fa3, $ft9
-0c2135a0 fcmp.clt.d $fcc0, $ft5, $ft5
-0c217a23 fcmp.clt.d $fcc3, $ft9, $fs6
-0c2169e6 fcmp.clt.d $fcc6, $ft7, $fs2
-0c217624 fcmp.clt.d $fcc4, $ft9, $fs5
-0c217400 fcmp.clt.d $fcc0, $fa0, $fs5
-0c2124a4 fcmp.clt.d $fcc4, $fa5, $ft1
-0c255606 fcmp.cult.d $fcc6, $ft8, $ft13
-0c254844 fcmp.cult.d $fcc4, $fa2, $ft10
-0c257a44 fcmp.cult.d $fcc4, $ft10, $fs6
-0c254f24 fcmp.cult.d $fcc4, $fs1, $ft11
-0c257601 fcmp.cult.d $fcc1, $ft8, $fs5
-0c253ea1 fcmp.cult.d $fcc1, $ft13, $ft7
-0c252625 fcmp.cult.d $fcc5, $ft9, $ft1
-0c2508e2 fcmp.cult.d $fcc2, $fa7, $fa2
-0c253762 fcmp.cult.d $fcc2, $fs3, $ft5
-0c2545e7 fcmp.cult.d $fcc7, $ft7, $ft9
-0c236e86 fcmp.cle.d $fcc6, $ft12, $fs3
-0c2338c0 fcmp.cle.d $fcc0, $fa6, $ft6
-0c2375c5 fcmp.cle.d $fcc5, $ft6, $fs5
-0c235e06 fcmp.cle.d $fcc6, $ft8, $ft15
-0c234c84 fcmp.cle.d $fcc4, $fa4, $ft11
-0c230a43 fcmp.cle.d $fcc3, $ft10, $fa2
-0c2346a6 fcmp.cle.d $fcc6, $ft13, $ft9
-0c233062 fcmp.cle.d $fcc2, $fa3, $ft4
-0c236e20 fcmp.cle.d $fcc0, $ft9, $fs3
-0c235d45 fcmp.cle.d $fcc5, $ft2, $ft15
-0c272947 fcmp.cule.d $fcc7, $ft2, $ft2
-0c274386 fcmp.cule.d $fcc6, $fs4, $ft8
-0c272862 fcmp.cule.d $fcc2, $fa3, $ft2
-0c272101 fcmp.cule.d $fcc1, $ft0, $ft0
-0c2725c3 fcmp.cule.d $fcc3, $ft6, $ft1
-0c276b84 fcmp.cule.d $fcc4, $fs4, $fs2
-0c2754e5 fcmp.cule.d $fcc5, $fa7, $ft13
-0c274786 fcmp.cule.d $fcc6, $fs4, $ft9
-0c270787 fcmp.cule.d $fcc7, $fs4, $fa1
-0c270f01 fcmp.cule.d $fcc1, $fs0, $fa3
-0c285823 fcmp.cne.d $fcc3, $fa1, $ft14
-0c284c87 fcmp.cne.d $fcc7, $fa4, $ft11
-0c2837a4 fcmp.cne.d $fcc4, $fs5, $ft5
-0c284704 fcmp.cne.d $fcc4, $fs0, $ft9
-0c280007 fcmp.cne.d $fcc7, $fa0, $fa0
-0c282927 fcmp.cne.d $fcc7, $ft1, $ft2
-0c281407 fcmp.cne.d $fcc7, $fa0, $fa5
-0c280de1 fcmp.cne.d $fcc1, $ft7, $fa3
-0c282025 fcmp.cne.d $fcc5, $fa1, $ft0
-0c280f62 fcmp.cne.d $fcc2, $fs3, $fa3
-0c2a66e0 fcmp.cor.d $fcc0, $ft15, $fs1
-0c2a2f01 fcmp.cor.d $fcc1, $fs0, $ft3
-0c2a4e67 fcmp.cor.d $fcc7, $ft11, $ft11
-0c2a26c1 fcmp.cor.d $fcc1, $ft14, $ft1
-0c2a0546 fcmp.cor.d $fcc6, $ft2, $fa1
-0c2a0307 fcmp.cor.d $fcc7, $fs0, $fa0
-0c2a65e6 fcmp.cor.d $fcc6, $ft7, $fs1
-0c2a0de4 fcmp.cor.d $fcc4, $ft7, $fa3
-0c2a5100 fcmp.cor.d $fcc0, $ft0, $ft12
-0c2a1521 fcmp.cor.d $fcc1, $ft1, $fa5
-0c2c3b26 fcmp.cune.d $fcc6, $fs1, $ft6
-0c2c7063 fcmp.cune.d $fcc3, $fa3, $fs4
-0c2c4226 fcmp.cune.d $fcc6, $ft9, $ft8
-0c2c71a3 fcmp.cune.d $fcc3, $ft5, $fs4
-0c2c6147 fcmp.cune.d $fcc7, $ft2, $fs0
-0c2c1fc0 fcmp.cune.d $fcc0, $fs6, $fa7
-0c2c7a03 fcmp.cune.d $fcc3, $ft8, $fs6
-0c2c6864 fcmp.cune.d $fcc4, $fa3, $fs2
-0c2c31a1 fcmp.cune.d $fcc1, $ft5, $ft4
-0c2c36a6 fcmp.cune.d $fcc6, $ft13, $ft5
-0c20c003 fcmp.saf.d $fcc3, $fa0, $ft8
-0c20d8c0 fcmp.saf.d $fcc0, $fa6, $ft14
-0c20d743 fcmp.saf.d $fcc3, $fs2, $ft13
-0c209fa0 fcmp.saf.d $fcc0, $fs5, $fa7
-0c20fbc2 fcmp.saf.d $fcc2, $fs6, $fs6
-0c20bd01 fcmp.saf.d $fcc1, $ft0, $ft7
-0c209200 fcmp.saf.d $fcc0, $ft8, $fa4
-0c20eaa7 fcmp.saf.d $fcc7, $ft13, $fs2
-0c20aaa4 fcmp.saf.d $fcc4, $ft13, $ft2
-0c20f263 fcmp.saf.d $fcc3, $ft11, $fs4
-0c24eae2 fcmp.sun.d $fcc2, $ft15, $fs2
-0c248fe3 fcmp.sun.d $fcc3, $fs7, $fa3
-0c24a5c6 fcmp.sun.d $fcc6, $ft6, $ft1
-0c24da03 fcmp.sun.d $fcc3, $ft8, $ft14
-0c24c9e3 fcmp.sun.d $fcc3, $ft7, $ft10
-0c248a62 fcmp.sun.d $fcc2, $ft11, $fa2
-0c24da63 fcmp.sun.d $fcc3, $ft11, $ft14
-0c24fd82 fcmp.sun.d $fcc2, $ft4, $fs7
-0c24ffc3 fcmp.sun.d $fcc3, $fs6, $fs7
-0c24e4e0 fcmp.sun.d $fcc0, $fa7, $fs1
-0c22a3a1 fcmp.seq.d $fcc1, $fs5, $ft0
-0c2295a5 fcmp.seq.d $fcc5, $ft5, $fa5
-0c228325 fcmp.seq.d $fcc5, $fs1, $fa0
-0c22b384 fcmp.seq.d $fcc4, $fs4, $ft4
-0c22c6e0 fcmp.seq.d $fcc0, $ft15, $ft9
-0c22d703 fcmp.seq.d $fcc3, $fs0, $ft13
-0c22a880 fcmp.seq.d $fcc0, $fa4, $ft2
-0c22e3c5 fcmp.seq.d $fcc5, $fs6, $fs0
-0c2290c4 fcmp.seq.d $fcc4, $fa6, $fa4
-0c22c560 fcmp.seq.d $fcc0, $ft3, $ft9
-0c26b7c2 fcmp.sueq.d $fcc2, $fs6, $ft5
-0c26e7a7 fcmp.sueq.d $fcc7, $fs5, $fs1
-0c269742 fcmp.sueq.d $fcc2, $fs2, $fa5
-0c26c782 fcmp.sueq.d $fcc2, $fs4, $ft9
-0c26d3a5 fcmp.sueq.d $fcc5, $fs5, $ft12
-0c2688e1 fcmp.sueq.d $fcc1, $fa7, $fa2
-0c26a1e3 fcmp.sueq.d $fcc3, $ft7, $ft0
-0c26e420 fcmp.sueq.d $fcc0, $fa1, $fs1
-0c26fb62 fcmp.sueq.d $fcc2, $fs3, $fs6
-0c26eee4 fcmp.sueq.d $fcc4, $ft15, $fs3
-0c21be07 fcmp.slt.d $fcc7, $ft8, $ft7
-0c21d1e6 fcmp.slt.d $fcc6, $ft7, $ft12
-0c21c081 fcmp.slt.d $fcc1, $fa4, $ft8
-0c21b883 fcmp.slt.d $fcc3, $fa4, $ft6
-0c21c742 fcmp.slt.d $fcc2, $fs2, $ft9
-0c21d924 fcmp.slt.d $fcc4, $ft1, $ft14
-0c21a4e2 fcmp.slt.d $fcc2, $fa7, $ft1
-0c21b2c4 fcmp.slt.d $fcc4, $ft14, $ft4
-0c21e9c5 fcmp.slt.d $fcc5, $ft6, $fs2
-0c21a500 fcmp.slt.d $fcc0, $ft0, $ft1
-0c25c1c2 fcmp.sult.d $fcc2, $ft6, $ft8
-0c25bbc3 fcmp.sult.d $fcc3, $fs6, $ft6
-0c25e6c7 fcmp.sult.d $fcc7, $ft14, $fs1
-0c25d346 fcmp.sult.d $fcc6, $fs2, $ft12
-0c25bae7 fcmp.sult.d $fcc7, $ft15, $ft6
-0c25f001 fcmp.sult.d $fcc1, $fa0, $fs4
-0c25f021 fcmp.sult.d $fcc1, $fa1, $fs4
-0c25aa47 fcmp.sult.d $fcc7, $ft10, $ft2
-0c25f2c7 fcmp.sult.d $fcc7, $ft14, $fs4
-0c258502 fcmp.sult.d $fcc2, $ft0, $fa1
-0c23b5a4 fcmp.sle.d $fcc4, $ft5, $ft5
-0c23b0a4 fcmp.sle.d $fcc4, $fa5, $ft4
-0c23ac24 fcmp.sle.d $fcc4, $fa1, $ft3
-0c23d385 fcmp.sle.d $fcc5, $fs4, $ft12
-0c23f782 fcmp.sle.d $fcc2, $fs4, $fs5
-0c23d921 fcmp.sle.d $fcc1, $ft1, $ft14
-0c23d703 fcmp.sle.d $fcc3, $fs0, $ft13
-0c23f0e7 fcmp.sle.d $fcc7, $fa7, $fs4
-0c23bca3 fcmp.sle.d $fcc3, $fa5, $ft7
-0c238d01 fcmp.sle.d $fcc1, $ft0, $fa3
-0c27dac2 fcmp.sule.d $fcc2, $ft14, $ft14
-0c27e1a5 fcmp.sule.d $fcc5, $ft5, $fs0
-0c27aca3 fcmp.sule.d $fcc3, $fa5, $ft3
-0c27f964 fcmp.sule.d $fcc4, $ft3, $fs6
-0c27e145 fcmp.sule.d $fcc5, $ft2, $fs0
-0c278d85 fcmp.sule.d $fcc5, $ft4, $fa3
-0c27b7a7 fcmp.sule.d $fcc7, $fs5, $ft5
-0c27cd86 fcmp.sule.d $fcc6, $ft4, $ft11
-0c27dc61 fcmp.sule.d $fcc1, $fa3, $ft15
-0c279e01 fcmp.sule.d $fcc1, $ft8, $fa7
-0c2894c2 fcmp.sne.d $fcc2, $fa6, $fa5
-0c28b341 fcmp.sne.d $fcc1, $fs2, $ft4
-0c2892a6 fcmp.sne.d $fcc6, $ft13, $fa4
-0c288d23 fcmp.sne.d $fcc3, $ft1, $fa3
-0c289385 fcmp.sne.d $fcc5, $fs4, $fa4
-0c28fd26 fcmp.sne.d $fcc6, $ft1, $fs7
-0c2880c1 fcmp.sne.d $fcc1, $fa6, $fa0
-0c28cce4 fcmp.sne.d $fcc4, $fa7, $ft11
-0c288ca2 fcmp.sne.d $fcc2, $fa5, $fa3
-0c28a9c7 fcmp.sne.d $fcc7, $ft6, $ft2
-0c2aaec3 fcmp.sor.d $fcc3, $ft14, $ft3
-0c2af506 fcmp.sor.d $fcc6, $ft0, $fs5
-0c2a9b25 fcmp.sor.d $fcc5, $fs1, $fa6
-0c2a82a0 fcmp.sor.d $fcc0, $ft13, $fa0
-0c2a8982 fcmp.sor.d $fcc2, $ft4, $fa2
-0c2a9266 fcmp.sor.d $fcc6, $ft11, $fa4
-0c2a9c84 fcmp.sor.d $fcc4, $fa4, $fa7
-0c2acc83 fcmp.sor.d $fcc3, $fa4, $ft11
-0c2ae7c2 fcmp.sor.d $fcc2, $fs6, $fs1
-0c2ad383 fcmp.sor.d $fcc3, $fs4, $ft12
-0c2cc527 fcmp.sune.d $fcc7, $ft1, $ft9
-0c2cbbe7 fcmp.sune.d $fcc7, $fs7, $ft6
-0c2cea84 fcmp.sune.d $fcc4, $ft12, $fs2
-0c2cccc7 fcmp.sune.d $fcc7, $fa6, $ft11
-0c2cf283 fcmp.sune.d $fcc3, $ft12, $fs4
-0c2cfea2 fcmp.sune.d $fcc2, $ft13, $fs7
-0c2cb546 fcmp.sune.d $fcc6, $ft2, $ft5
-0c2cebc1 fcmp.sune.d $fcc1, $fs6, $fs2
-0c2ca201 fcmp.sune.d $fcc1, $ft8, $ft0
-0c2ca300 fcmp.sune.d $fcc0, $fs0, $ft0
-0d00789e fsel $fs6, $fa4, $fs6, $fcc0
-0d0260fa fsel $fs2, $fa7, $fs0, $fcc4
-0d02994b fsel $ft3, $ft2, $fa6, $fcc5
-0d0099f4 fsel $ft12, $ft7, $fa6, $fcc1
-0d02716f fsel $ft7, $ft3, $fs4, $fcc4
-0d01914c fsel $ft4, $ft2, $fa4, $fcc3
-0d011718 fsel $fs0, $fs0, $fa5, $fcc2
-0d02d668 fsel $ft0, $ft11, $ft13, $fcc5
-0d00bd9c fsel $fs4, $ft4, $ft7, $fcc1
-0d01c8c9 fsel $ft1, $fa6, $ft10, $fcc3
-130e5a51 addu16i.d $t5, $t6, -15466
-1386e481 addu16i.d $ra, $a0, -7751
-11c89b84 addu16i.d $a0, $s5, 29222
-122b9191 addu16i.d $t5, $t0, -29980
-1359fbcd addu16i.d $t1, $s7, -10626
-12823d70 addu16i.d $t4, $a7, -24433
-11711aa9 addu16i.d $a5, $r21, 23622
-116ff5a6 addu16i.d $a2, $t1, 23549
-1107e639 addu16i.d $s2, $t5, 16889
-136235b8 addu16i.d $s1, $t1, -10099
-15facde0 lu12i.w $zero, -10641
-156c9f65 lu12i.w $a1, -301829
-15be2a33 lu12i.w $t7, -134831
-14fbc63d lu12i.w $s6, 515633
-15f6c363 lu12i.w $sp, -18917
-14493dc3 lu12i.w $sp, 149998
-150f7610 lu12i.w $t4, -492624
-1458b9e8 lu12i.w $a4, 181711
-15d972ad lu12i.w $t1, -78955
-141e89cb lu12i.w $a7, 62542
-1778fea6 lu32i.d $a2, -276491
-17497039 lu32i.d $s2, -373887
-17a9a7e8 lu32i.d $a4, -176833
-16f0d2cf lu32i.d $t3, 493206
-17cc6ae4 lu32i.d $a0, -105641
-179b8026 lu32i.d $a2, -205823
-17c7ef09 lu32i.d $a5, -114824
-16330278 lu32i.d $s1, 104467
-17fbdf87 lu32i.d $a3, -8452
-16230254 lu32i.d $t8, 71698
-18722883 pcaddi $sp, 233796
-189c1117 pcaddi $s0, 319624
-19f3c450 pcaddi $t4, -25054
-18593d46 pcaddi $a2, 182762
-1827217a pcaddi $s3, 80139
-1956f9e0 pcaddi $zero, -346161
-19677117 pcaddi $s0, -312440
-1897893b pcaddi $s4, 310345
-196be1a0 pcaddi $zero, -303347
-19d90025 pcaddi $a1, -79871
-1b4bde30 pcalau12i $t4, -368911
-1a09d144 pcalau12i $a0, 20106
-1b0c6e10 pcalau12i $t4, -498832
-1a458d0e pcalau12i $t2, 142440
-1b6ab7f1 pcalau12i $t5, -305729
-1a2b5696 pcalau12i $fp, 88756
-1b937e53 pcalau12i $t7, -222222
-1a5c2008 pcalau12i $a4, 188672
-1b491cef pcalau12i $t3, -374553
-1b5ec213 pcalau12i $t7, -330224
-1d7ba99b pcaddu12i $s4, -271028
-1ca2ab88 pcaddu12i $a4, 333148
-1dd6f4d7 pcaddu12i $s0, -84058
-1cb3d3b2 pcaddu12i $t6, 368285
-1dfffc43 pcaddu12i $sp, -30
-1c43641e pcaddu12i $s7, 138016
-1d200216 pcaddu12i $fp, -458736
-1d300dc8 pcaddu12i $a4, -425874
-1c3fd722 pcaddu12i $tp, 130745
-1c0d58b5 pcaddu12i $r21, 27333
-1e4efa0f pcaddu18i $t3, 161744
-1f26bd9e pcaddu18i $s7, -444948
-1fcd8f62 pcaddu18i $tp, -103301
-1e4ea7bb pcaddu18i $s4, 161085
-1f92dcf7 pcaddu18i $s0, -223513
-1fdc408f pcaddu18i $t3, -73212
-1ed67c76 pcaddu18i $fp, 439267
-1e92eedc pcaddu18i $s5, 300918
-1e635433 pcaddu18i $t7, 203425
-1e582066 pcaddu18i $a2, 180483
-208a0abc ll.w $s5, $r21, -30200
-20729c6b ll.w $a7, $sp, 29340
-20bd3127 ll.w $a3, $a5, -17104
-20fd85ee ll.w $t2, $t3, -636
-204390b8 ll.w $s1, $a1, 17296
-204452bf ll.w $s8, $r21, 17488
-20a9e7ea ll.w $a6, $s8, -22044
-20828edc ll.w $s5, $fp, -32116
-20ec93fa ll.w $s3, $s8, -4976
-20fccedd ll.w $s6, $fp, -820
-21a7f177 sc.w $s0, $a7, -22544
-215c31fb sc.w $s4, $t3, 23600
-21c5075b sc.w $s4, $s3, -15100
-21736f1f sc.w $s8, $s1, 29548
-2125e256 sc.w $fp, $t6, 9696
-21fa7fdd sc.w $s6, $s7, -1412
-219ef44a sc.w $a6, $tp, -24844
-2176435e sc.w $s7, $s3, 30272
-21590a85 sc.w $a1, $t8, 22792
-21909506 sc.w $a2, $a4, -28524
-226486d4 ll.d $t8, $fp, 25732
-2200b6b6 ll.d $fp, $r21, 180
-22c965d7 ll.d $s0, $t2, -13980
-2273c617 ll.d $s0, $t4, 29636
-229b3bd3 ll.d $t7, $s7, -25800
-223e027a ll.d $s3, $t7, 15872
-229052af ll.d $t3, $r21, -28592
-2205c117 ll.d $s0, $a4, 1472
-2230ff45 ll.d $a1, $s3, 12540
-22b60cac ll.d $t0, $a1, -18932
-232f49cd sc.d $t1, $t2, 12104
-230c10e0 sc.d $zero, $a3, 3088
-23d77204 sc.d $a0, $t4, -10384
-23516552 sc.d $t6, $a6, 20836
-23fe7cab sc.d $a7, $a1, -388
-23d350ab sc.d $a7, $a1, -11440
-235436f4 sc.d $t8, $s0, 21556
-23a692e9 sc.d $a5, $s0, -22896
-23b1ba1c sc.d $s5, $t4, -20040
-23207991 sc.d $t5, $t0, 8312
-2465205d ldptr.w $s6, $tp, 25888
-2406fbda ldptr.w $s3, $s7, 1784
-2437bfc0 ldptr.w $zero, $s7, 14268
-24df73b0 ldptr.w $t4, $s6, -8336
-24072ca4 ldptr.w $a0, $a1, 1836
-242f156c ldptr.w $t0, $a7, 12052
-24c8398b ldptr.w $a7, $t0, -14280
-2410735b ldptr.w $s4, $s3, 4208
-24621e6e ldptr.w $t2, $t7, 25116
-241104b9 ldptr.w $s2, $a1, 4356
-25c963fe stptr.w $s7, $s8, -13984
-25956464 stptr.w $a0, $sp, -27292
-25653b65 stptr.w $a1, $s4, 25912
-25e4fead stptr.w $t1, $r21, -6916
-2530d566 stptr.w $a2, $a7, 12500
-2578a164 stptr.w $a0, $a7, 30880
-254f9de0 stptr.w $zero, $t3, 20380
-25fc52fd stptr.w $s6, $s0, -944
-256a46ba stptr.w $s3, $r21, 27204
-250550fa stptr.w $s3, $a3, 1360
-26d75a4e ldptr.d $t2, $t6, -10408
-26ad989d ldptr.d $s6, $a0, -21096
-26c8aff9 ldptr.d $s2, $s8, -14164
-2613fe9d ldptr.d $s6, $t8, 5116
-26df73b0 ldptr.d $t4, $s6, -8336
-26afbf19 ldptr.d $s2, $s1, -20548
-26de21c5 ldptr.d $a1, $t2, -8672
-267b164e ldptr.d $t2, $t6, 31508
-2638a32e ldptr.d $t2, $s2, 14496
-26fae4e7 ldptr.d $a3, $a3, -1308
-2750ff60 stptr.d $zero, $s4, 20732
-27d97594 stptr.d $t8, $t0, -9868
-27cc0954 stptr.d $t8, $a6, -13304
-27159b32 stptr.d $t6, $s2, 5528
-27c01fc2 stptr.d $tp, $s7, -16356
-27629ba3 stptr.d $sp, $s6, 25240
-270173a6 stptr.d $a2, $s6, 368
-27b22e5a stptr.d $s3, $t6, -19924
-2782d9c2 stptr.d $tp, $t2, -32040
-27fb2704 stptr.d $a0, $s1, -1244
-2821c5b7 ld.b $s0, $t1, -1935
-28266a34 ld.b $t8, $t5, -1638
-282a6d0f ld.b $t3, $a4, -1381
-28323d49 ld.b $a5, $a6, -881
-2800cf13 ld.b $t7, $s1, 51
-28251541 ld.b $ra, $a6, -1723
-280e2896 ld.b $fp, $a0, 906
-28045b45 ld.b $a1, $s3, 278
-282ad955 ld.b $r21, $a6, -1354
-283433ec ld.b $t0, $s8, -756
-285a1b46 ld.h $a2, $s3, 1670
-28440d4f ld.h $t3, $a6, 259
-2861b4d2 ld.h $t6, $a2, -1939
-284eaaec ld.h $t0, $s0, 938
-2855f462 ld.h $tp, $sp, 1405
-2860b83d ld.h $s6, $ra, -2002
-286d33c1 ld.h $ra, $s7, -1204
-28712195 ld.h $r21, $t0, -952
-28643b73 ld.h $t7, $s4, -1778
-28736899 ld.h $s2, $a0, -806
-28ab0340 ld.w $zero, $s3, -1344
-2886174a ld.w $a6, $s3, 389
-2897d891 ld.w $t5, $a0, 1526
-28a99036 ld.w $fp, $ra, -1436
-28859ebe ld.w $s7, $r21, 359
-28a7b668 ld.w $a4, $t7, -1555
-28a36f0e ld.w $t2, $s1, -1829
-2893806b ld.w $a7, $sp, 1248
-28a5492c ld.w $t0, $a5, -1710
-289a2498 ld.w $s1, $a0, 1673
-28e25a90 ld.d $t4, $t8, -1898
-28f311f1 ld.d $t5, $t3, -828
-28e377e3 ld.d $sp, $s8, -1827
-28cd6693 ld.d $t7, $t8, 857
-28f7331e ld.d $s7, $s1, -564
-28ff87b9 ld.d $s2, $s6, -31
-28e0cfa2 ld.d $tp, $s6, -1997
-28f6d107 ld.d $a3, $a4, -588
-28d27d97 ld.d $s0, $t0, 1183
-28f1c694 ld.d $t8, $t8, -911
-293acd95 st.b $r21, $t0, -333
-2935f25c st.b $s5, $t6, -644
-290fd899 st.b $s2, $a0, 1014
-292d1dfc st.b $s5, $t3, -1209
-290a583e st.b $s7, $ra, 662
-292ecb80 st.b $zero, $s5, -1102
-293e9425 st.b $a1, $ra, -91
-293d54e1 st.b $ra, $a3, -171
-29172790 st.b $t4, $s5, 1481
-2939c7cd st.b $t1, $s7, -399
-296f93e4 st.h $a0, $s8, -1052
-296821cf st.h $t3, $t2, -1528
-294db72e st.h $t2, $s2, 877
-294bc015 st.h $r21, $zero, 752
-2942ed58 st.h $s1, $a6, 187
-29562a47 st.h $a3, $t6, 1418
-29685301 st.h $ra, $s1, -1516
-297a27ab st.h $a7, $s6, -375
-295073b1 st.h $t5, $s6, 1052
-296d55ae st.h $t2, $t1, -1195
-2980911e st.w $s7, $a4, 36
-29b91c15 st.w $r21, $zero, -441
-2983ddca st.w $a6, $t2, 247
-299ea79c st.w $s5, $s5, 1961
-2987d3a4 st.w $a0, $s6, 500
-29a1217e st.w $s7, $a7, -1976
-29b50ef2 st.w $t6, $s0, -701
-29bd2383 st.w $sp, $s5, -184
-2980752b st.w $a7, $a5, 29
-29a9469d st.w $s6, $t8, -1455
-29ff65a8 st.d $a4, $t1, -39
-29cc7fb3 st.d $t7, $s6, 799
-29f020fb st.d $s4, $a3, -1016
-29c723ff st.d $s8, $s8, 456
-29ccbc07 st.d $a3, $zero, 815
-29ec8616 st.d $fp, $t4, -1247
-29fa344d st.d $t1, $tp, -371
-29cff9da st.d $s3, $t2, 1022
-29cc6e84 st.d $a0, $t8, 795
-29e6a403 st.d $sp, $zero, -1623
-2a0c1342 ld.bu $tp, $s3, 772
-2a256432 ld.bu $t6, $ra, -1703
-2a38f164 ld.bu $a0, $a7, -452
-2a3b0b06 ld.bu $a2, $s1, -318
-2a2b6c3f ld.bu $s8, $ra, -1317
-2a18be50 ld.bu $t4, $t6, 1583
-2a1d8fdb ld.bu $s4, $s7, 1891
-2a1cf45e ld.bu $s7, $tp, 1853
-2a2abfaa ld.bu $a6, $s6, -1361
-2a0c30fa ld.bu $s3, $a3, 780
-2a6ea816 ld.hu $fp, $zero, -1110
-2a7bc3d0 ld.hu $t4, $s7, -272
-2a765047 ld.hu $a3, $tp, -620
-2a7805b4 ld.hu $t8, $t1, -511
-2a68e8dc ld.hu $s5, $a2, -1478
-2a72c8ea ld.hu $a6, $a3, -846
-2a427f0f ld.hu $t3, $s1, 159
-2a70c6e1 ld.hu $ra, $s0, -975
-2a5b51c3 ld.hu $sp, $t2, 1748
-2a5b3510 ld.hu $t4, $a4, 1741
-2a81bfbb ld.wu $s4, $s6, 111
-2a8259d3 ld.wu $t7, $t2, 150
-2a900490 ld.wu $t4, $a0, 1025
-2aa05842 ld.wu $tp, $tp, -2026
-2a9ffdf7 ld.wu $s0, $t3, 2047
-2aaf5d5b ld.wu $s4, $a6, -1065
-2a8c81c9 ld.wu $a5, $t2, 800
-2a87bdaf ld.wu $t3, $t1, 495
-2ab0230e ld.wu $t2, $s1, -1016
-2a9038d1 ld.wu $t5, $a2, 1038
-2adea1e8 preld 0x8, $t3, 1960
-2ac04c8d preld 0xd, $a0, 19
-2ae89a60 preld 0x0, $t7, -1498
-2ac1f32b preld 0xb, $s2, 124
-2af35b95 preld 0x15, $s5, -810
-2add21a8 preld 0x8, $t1, 1864
-2acab162 preld 0x2, $a7, 684
-2ac4084f preld 0xf, $tp, 258
-2af5f54f preld 0xf, $a6, -643
-2acf530f preld 0xf, $s1, 980
-2b20adb3 fld.s $ft11, $t1, -2005
-2b27444b fld.s $ft3, $tp, -1583
-2b33d139 fld.s $fs1, $a5, -780
-2b3a927e fld.s $fs6, $t7, -348
-2b1e2a61 fld.s $fa1, $t7, 1930
-2b2d4924 fld.s $fa4, $a5, -1198
-2b0f2caa fld.s $ft2, $a1, 971
-2b0b0a2a fld.s $ft2, $t5, 706
-2b369509 fld.s $ft1, $a4, -603
-2b0c768a fld.s $ft2, $t8, 797
-2b515a9f fst.s $fs7, $t8, 1110
-2b7b304c fst.s $ft4, $tp, -308
-2b75cb17 fst.s $ft15, $s1, -654
-2b697693 fst.s $ft11, $t8, -1443
-2b71c980 fst.s $fa0, $t0, -910
-2b741af3 fst.s $ft11, $s0, -762
-2b556a7b fst.s $fs3, $t7, 1370
-2b644b5e fst.s $fs6, $s3, -1774
-2b7202df fst.s $fs7, $fp, -896
-2b54cae3 fst.s $fa3, $s0, 1330
-2ba89e9a fld.d $fs2, $t8, -1497
-2ba36478 fld.d $fs0, $sp, -1831
-2bafaa97 fld.d $ft15, $t8, -1046
-2baceaa0 fld.d $fa0, $r21, -1222
-2bb6c5a5 fld.d $fa5, $t1, -591
-2b9c7754 fld.d $ft12, $s3, 1821
-2b843829 fld.d $ft1, $ra, 270
-2ba2942c fld.d $ft4, $ra, -1883
-2b8541d3 fld.d $ft11, $t2, 336
-2b88ae45 fld.d $fa5, $t6, 555
-2be4cb6b fst.d $ft3, $s4, -1742
-2bc9335c fst.d $fs4, $s3, 588
-2bdafd7d fst.d $fs5, $a7, 1727
-2bdaffdf fst.d $fs7, $s7, 1727
-2bf338c6 fst.d $fa6, $a2, -818
-2be5c0c7 fst.d $fa7, $a2, -1680
-2be1791a fst.d $fs2, $a4, -1954
-2bc4aa28 fst.d $ft0, $t5, 298
-2bddb38b fst.d $ft3, $s5, 1900
-2bde1cf7 fst.d $ft15, $a3, 1927
-38001711 ldx.b $t5, $s1, $a1
-38002b16 ldx.b $fp, $s1, $a6
-380039e8 ldx.b $a4, $t3, $t2
-38005f73 ldx.b $t7, $s4, $s0
-38001e27 ldx.b $a3, $t5, $a3
-380033d1 ldx.b $t5, $s7, $t0
-38004629 ldx.b $a5, $t5, $t5
-380036c0 ldx.b $zero, $fp, $t1
-38000aa2 ldx.b $tp, $r21, $tp
-380035ea ldx.b $a6, $t3, $t1
-38040ae0 ldx.h $zero, $s0, $tp
-38047415 ldx.h $r21, $zero, $s6
-38045be4 ldx.h $a0, $s8, $fp
-380442f8 ldx.h $s1, $s0, $t4
-380476ef ldx.h $t3, $s0, $s6
-38042f92 ldx.h $t6, $s5, $a7
-38044a06 ldx.h $a2, $t4, $t6
-3804446f ldx.h $t3, $sp, $t5
-38045434 ldx.h $t8, $ra, $r21
-38046369 ldx.h $a5, $s4, $s1
-38081f5c ldx.w $s5, $s3, $a3
-380860e8 ldx.w $a4, $a3, $s1
-38082447 ldx.w $a3, $tp, $a5
-38082d05 ldx.w $a1, $a4, $a7
-38086541 ldx.w $ra, $a6, $s2
-38086304 ldx.w $a0, $s1, $s1
-3808385e ldx.w $s7, $tp, $t2
-38083eec ldx.w $t0, $s0, $t3
-38080298 ldx.w $s1, $t8, $zero
-380867e7 ldx.w $a3, $s8, $s2
-380c2d83 ldx.d $sp, $t0, $a7
-380c251b ldx.d $s4, $a4, $a5
-380c79dd ldx.d $s6, $t2, $s7
-380c0e1f ldx.d $s8, $t4, $sp
-380c25bb ldx.d $s4, $t1, $a5
-380c4e7e ldx.d $s7, $t7, $t7
-380c30d8 ldx.d $s1, $a2, $t0
-380c45c7 ldx.d $a3, $t2, $t5
-380c07c2 ldx.d $tp, $s7, $ra
-380c416a ldx.d $a6, $a7, $t4
-38100f58 stx.b $s1, $s3, $sp
-38101b3c stx.b $s5, $s2, $a2
-38101051 stx.b $t5, $tp, $a0
-381030b0 stx.b $t4, $a1, $t0
-381004d2 stx.b $t6, $a2, $ra
-3810417b stx.b $s4, $a7, $t4
-38107d76 stx.b $fp, $a7, $s8
-38103d17 stx.b $s0, $a4, $t3
-381029c5 stx.b $a1, $t2, $a6
-38104628 stx.b $a4, $t5, $t5
-38144142 stx.h $tp, $a6, $t4
-38144fbd stx.h $s6, $s6, $t7
-3814797a stx.h $s3, $a7, $s7
-38142048 stx.h $a4, $tp, $a4
-38145a8e stx.h $t2, $t8, $fp
-38145bdd stx.h $s6, $s7, $fp
-38147bed stx.h $t1, $s8, $s7
-3814335a stx.h $s3, $s3, $t0
-38140b8a stx.h $a6, $s5, $tp
-38145113 stx.h $t7, $a4, $t8
-3818792c stx.w $t0, $a5, $s7
-38180dc7 stx.w $a3, $t2, $sp
-38180e03 stx.w $sp, $t4, $sp
-38182b52 stx.w $t6, $s3, $a6
-38184a91 stx.w $t5, $t8, $t6
-38184a73 stx.w $t7, $t7, $t6
-3818161a stx.w $s3, $t4, $a1
-381811df stx.w $s8, $t2, $a0
-38180544 stx.w $a0, $a6, $ra
-38182f7c stx.w $s5, $s4, $a7
-381c1115 stx.d $r21, $a4, $a0
-381c717f stx.d $s8, $a7, $s5
-381c3197 stx.d $s0, $t0, $t0
-381c488c stx.d $t0, $a0, $t6
-381c083b stx.d $s4, $ra, $tp
-381c4cfb stx.d $s4, $a3, $t7
-381c07f9 stx.d $s2, $s8, $ra
-381c7421 stx.d $ra, $ra, $s6
-381c1a19 stx.d $s2, $t4, $a2
-381c40eb stx.d $a7, $a3, $t4
-38202d7f ldx.bu $s8, $a7, $a7
-38207865 ldx.bu $a1, $sp, $s7
-38205b51 ldx.bu $t5, $s3, $fp
-38204555 ldx.bu $r21, $a6, $t5
-38207b29 ldx.bu $a5, $s2, $s7
-382075a4 ldx.bu $a0, $t1, $s6
-382046e5 ldx.bu $a1, $s0, $t5
-38200a35 ldx.bu $r21, $t5, $tp
-38204eb9 ldx.bu $s2, $r21, $t7
-38207649 ldx.bu $a5, $t6, $s6
-38240c16 ldx.hu $fp, $zero, $sp
-382438bb ldx.hu $s4, $a1, $t2
-38241f5a ldx.hu $s3, $s3, $a3
-38244caf ldx.hu $t3, $a1, $t7
-38246d99 ldx.hu $s2, $t0, $s4
-382406d4 ldx.hu $t8, $fp, $ra
-38247f1c ldx.hu $s5, $s1, $s8
-38242b84 ldx.hu $a0, $s5, $a6
-382431f9 ldx.hu $s2, $t3, $t0
-382452fc ldx.hu $s5, $s0, $t8
-382846e0 ldx.wu $zero, $s0, $t5
-38282142 ldx.wu $tp, $a6, $a4
-38280169 ldx.wu $a5, $a7, $zero
-38285421 ldx.wu $ra, $ra, $r21
-38282b88 ldx.wu $a4, $s5, $a6
-38287de2 ldx.wu $tp, $t3, $s8
-38280939 ldx.wu $s2, $a5, $tp
-38285a1c ldx.wu $s5, $t4, $fp
-38283736 ldx.wu $fp, $s2, $t1
-38281986 ldx.wu $a2, $t0, $a2
-382c0d80 preldx 0x0, $t0, $sp
-382c4443 preldx 0x3, $tp, $t5
-382c2594 preldx 0x14, $t0, $a5
-382c4d2a preldx 0xa, $a5, $t7
-382c4402 preldx 0x2, $zero, $t5
-382c6a3a preldx 0x1a, $t5, $s3
-382c3fb1 preldx 0x11, $s6, $t3
-382c5973 preldx 0x13, $a7, $fp
-382c4a8b preldx 0xb, $t8, $t6
-382c4b31 preldx 0x11, $s2, $t6
-38304577 fldx.s $ft15, $a7, $t5
-38306d64 fldx.s $fa4, $a7, $s4
-383075ff fldx.s $fs7, $t3, $s6
-38302ff5 fldx.s $ft13, $s8, $a7
-3830149c fldx.s $fs4, $a0, $a1
-38305519 fldx.s $fs1, $a4, $r21
-38304dbc fldx.s $fs4, $t1, $t7
-38301d4a fldx.s $ft2, $a6, $a3
-383072fd fldx.s $fs5, $s0, $s5
-38307b61 fldx.s $fa1, $s4, $s7
-38344c79 fldx.d $fs1, $sp, $t7
-38344fa7 fldx.d $fa7, $s6, $t7
-38343e79 fldx.d $fs1, $t7, $t3
-383427bf fldx.d $fs7, $s6, $a5
-3834763c fldx.d $fs4, $t5, $s6
-38343538 fldx.d $fs0, $a5, $t1
-383473b5 fldx.d $ft13, $s6, $s5
-38346e29 fldx.d $ft1, $t5, $s4
-383415c3 fldx.d $fa3, $t2, $a1
-38340b8a fldx.d $ft2, $s5, $tp
-38385423 fstx.s $fa3, $ra, $r21
-383835d0 fstx.s $ft8, $t2, $t1
-383801dd fstx.s $fs5, $t2, $zero
-383823d8 fstx.s $fs0, $s7, $a4
-38384835 fstx.s $ft13, $ra, $t6
-3838797f fstx.s $fs7, $a7, $s7
-383854d5 fstx.s $ft13, $a2, $r21
-3838337a fstx.s $fs2, $s4, $t0
-38380216 fstx.s $ft14, $t4, $zero
-38381f32 fstx.s $ft10, $s2, $a3
-383c4f5c fstx.d $fs4, $s3, $t7
-383c5979 fstx.d $fs1, $a7, $fp
-383c1314 fstx.d $ft12, $s1, $a0
-383c2d89 fstx.d $ft1, $t0, $a7
-383c1661 fstx.d $fa1, $t7, $a1
-383c7d14 fstx.d $ft12, $a4, $s8
-383c745a fstx.d $fs2, $tp, $s6
-383c33bc fstx.d $fs4, $s6, $t0
-383c025f fstx.d $fs7, $t6, $zero
-383c3d35 fstx.d $ft13, $a5, $t3
-38572b3c sc.q $s5, $a6, $s2
-38572d41 sc.q $ra, $a7, $a6
-38571241 sc.q $ra, $a0, $t6
-3857489d sc.q $s6, $t6, $a0
-38572903 sc.q $sp, $a6, $a4
-38575ff6 sc.q $fp, $s0, $s8
-385706ad sc.q $t1, $ra, $r21
-385741bc sc.q $s5, $t4, $t1
-38571eed sc.q $t1, $a3, $s0
-38573cf8 sc.q $s1, $t3, $a3
-385783fc llacq.w $s5, $s8
-385780e0 llacq.w $zero, $a3
-385780cc llacq.w $t0, $a2
-385783ec llacq.w $t0, $s8
+0c264947 fcmp.cueq.d $fcc7, $ft2, $ft10
+0c263de1 fcmp.cueq.d $fcc1, $ft7, $ft7
+0c263804 fcmp.cueq.d $fcc4, $fa0, $ft6
+0c260c42 fcmp.cueq.d $fcc2, $fa2, $fa3
+0c262603 fcmp.cueq.d $fcc3, $ft8, $ft1
+0c263164 fcmp.cueq.d $fcc4, $ft3, $ft4
+0c214cc1 fcmp.clt.d $fcc1, $fa6, $ft11
+0c2149c7 fcmp.clt.d $fcc7, $ft6, $ft10
+0c213862 fcmp.clt.d $fcc2, $fa3, $ft6
+0c217f46 fcmp.clt.d $fcc6, $fs2, $fs7
+0c217d81 fcmp.clt.d $fcc1, $ft4, $fs7
+0c215702 fcmp.clt.d $fcc2, $fs0, $ft13
+0c2167e6 fcmp.clt.d $fcc6, $fs7, $fs1
+0c216725 fcmp.clt.d $fcc5, $fs1, $fs1
+0c210e62 fcmp.clt.d $fcc2, $ft11, $fa3
+0c215961 fcmp.clt.d $fcc1, $ft3, $ft14
+0c253d00 fcmp.cult.d $fcc0, $ft0, $ft7
+0c251564 fcmp.cult.d $fcc4, $ft3, $fa5
+0c256a21 fcmp.cult.d $fcc1, $ft9, $fs2
+0c254006 fcmp.cult.d $fcc6, $fa0, $ft8
+0c2513c7 fcmp.cult.d $fcc7, $fs6, $fa4
+0c255425 fcmp.cult.d $fcc5, $fa1, $ft13
+0c254244 fcmp.cult.d $fcc4, $ft10, $ft8
+0c253926 fcmp.cult.d $fcc6, $ft1, $ft6
+0c254427 fcmp.cult.d $fcc7, $fa1, $ft9
+0c2568c6 fcmp.cult.d $fcc6, $fa6, $fs2
+0c236e44 fcmp.cle.d $fcc4, $ft10, $fs3
+0c231de5 fcmp.cle.d $fcc5, $ft7, $fa7
+0c2345e5 fcmp.cle.d $fcc5, $ft7, $ft9
+0c235404 fcmp.cle.d $fcc4, $fa0, $ft13
+0c234400 fcmp.cle.d $fcc0, $fa0, $ft9
+0c236643 fcmp.cle.d $fcc3, $ft10, $fs1
+0c2303a2 fcmp.cle.d $fcc2, $fs5, $fa0
+0c237763 fcmp.cle.d $fcc3, $fs3, $fs5
+0c231a83 fcmp.cle.d $fcc3, $ft12, $fa6
+0c233b87 fcmp.cle.d $fcc7, $fs4, $ft6
+0c270267 fcmp.cule.d $fcc7, $ft11, $fa0
+0c272923 fcmp.cule.d $fcc3, $ft1, $ft2
+0c2756a3 fcmp.cule.d $fcc3, $ft13, $ft13
+0c271122 fcmp.cule.d $fcc2, $ft1, $fa4
+0c274205 fcmp.cule.d $fcc5, $ft8, $ft8
+0c2718a0 fcmp.cule.d $fcc0, $fa5, $fa6
+0c271e80 fcmp.cule.d $fcc0, $ft12, $fa7
+0c270a01 fcmp.cule.d $fcc1, $ft8, $fa2
+0c277542 fcmp.cule.d $fcc2, $ft2, $fs5
+0c273507 fcmp.cule.d $fcc7, $ft0, $ft5
+0c2850c3 fcmp.cne.d $fcc3, $fa6, $ft12
+0c287ea6 fcmp.cne.d $fcc6, $ft13, $fs7
+0c280fc3 fcmp.cne.d $fcc3, $fs6, $fa3
+0c2841e7 fcmp.cne.d $fcc7, $ft7, $ft8
+0c283b83 fcmp.cne.d $fcc3, $fs4, $ft6
+0c281842 fcmp.cne.d $fcc2, $fa2, $fa6
+0c285940 fcmp.cne.d $fcc0, $ft2, $ft14
+0c287002 fcmp.cne.d $fcc2, $fa0, $fs4
+0c286323 fcmp.cne.d $fcc3, $fs1, $fs0
+0c2815e4 fcmp.cne.d $fcc4, $ft7, $fa5
+0c2a5e06 fcmp.cor.d $fcc6, $ft8, $ft15
+0c2a5de2 fcmp.cor.d $fcc2, $ft7, $ft15
+0c2a1d86 fcmp.cor.d $fcc6, $ft4, $fa7
+0c2a3325 fcmp.cor.d $fcc5, $fs1, $ft4
+0c2a0062 fcmp.cor.d $fcc2, $fa3, $fa0
+0c2a5044 fcmp.cor.d $fcc4, $fa2, $ft12
+0c2a55c5 fcmp.cor.d $fcc5, $ft6, $ft13
+0c2a2483 fcmp.cor.d $fcc3, $fa4, $ft1
+0c2a3102 fcmp.cor.d $fcc2, $ft0, $ft4
+0c2a67a3 fcmp.cor.d $fcc3, $fs5, $fs1
+0c2c2926 fcmp.cune.d $fcc6, $ft1, $ft2
+0c2c0305 fcmp.cune.d $fcc5, $fs0, $fa0
+0c2c5f43 fcmp.cune.d $fcc3, $fs2, $ft15
+0c2c3c27 fcmp.cune.d $fcc7, $fa1, $ft7
+0c2c07a7 fcmp.cune.d $fcc7, $fs5, $fa1
+0c2c18e7 fcmp.cune.d $fcc7, $fa7, $fa6
+0c2c4461 fcmp.cune.d $fcc1, $fa3, $ft9
+0c2c35a0 fcmp.cune.d $fcc0, $ft5, $ft5
+0c2c7a23 fcmp.cune.d $fcc3, $ft9, $fs6
+0c2c69e6 fcmp.cune.d $fcc6, $ft7, $fs2
+0c20f624 fcmp.saf.d $fcc4, $ft9, $fs5
+0c20f400 fcmp.saf.d $fcc0, $fa0, $fs5
+0c20a4a4 fcmp.saf.d $fcc4, $fa5, $ft1
+0c20d606 fcmp.saf.d $fcc6, $ft8, $ft13
+0c20c844 fcmp.saf.d $fcc4, $fa2, $ft10
+0c20fa44 fcmp.saf.d $fcc4, $ft10, $fs6
+0c20cf24 fcmp.saf.d $fcc4, $fs1, $ft11
+0c20f601 fcmp.saf.d $fcc1, $ft8, $fs5
+0c20bea1 fcmp.saf.d $fcc1, $ft13, $ft7
+0c20a625 fcmp.saf.d $fcc5, $ft9, $ft1
+0c2488e2 fcmp.sun.d $fcc2, $fa7, $fa2
+0c24b762 fcmp.sun.d $fcc2, $fs3, $ft5
+0c24c5e7 fcmp.sun.d $fcc7, $ft7, $ft9
+0c24ee86 fcmp.sun.d $fcc6, $ft12, $fs3
+0c24b8c0 fcmp.sun.d $fcc0, $fa6, $ft6
+0c24f5c5 fcmp.sun.d $fcc5, $ft6, $fs5
+0c24de06 fcmp.sun.d $fcc6, $ft8, $ft15
+0c24cc84 fcmp.sun.d $fcc4, $fa4, $ft11
+0c248a43 fcmp.sun.d $fcc3, $ft10, $fa2
+0c24c6a6 fcmp.sun.d $fcc6, $ft13, $ft9
+0c22b062 fcmp.seq.d $fcc2, $fa3, $ft4
+0c22ee20 fcmp.seq.d $fcc0, $ft9, $fs3
+0c22dd45 fcmp.seq.d $fcc5, $ft2, $ft15
+0c22a947 fcmp.seq.d $fcc7, $ft2, $ft2
+0c22c386 fcmp.seq.d $fcc6, $fs4, $ft8
+0c22a862 fcmp.seq.d $fcc2, $fa3, $ft2
+0c22a101 fcmp.seq.d $fcc1, $ft0, $ft0
+0c22a5c3 fcmp.seq.d $fcc3, $ft6, $ft1
+0c22eb84 fcmp.seq.d $fcc4, $fs4, $fs2
+0c22d4e5 fcmp.seq.d $fcc5, $fa7, $ft13
+0c26c786 fcmp.sueq.d $fcc6, $fs4, $ft9
+0c268787 fcmp.sueq.d $fcc7, $fs4, $fa1
+0c268f01 fcmp.sueq.d $fcc1, $fs0, $fa3
+0c26d823 fcmp.sueq.d $fcc3, $fa1, $ft14
+0c26cc87 fcmp.sueq.d $fcc7, $fa4, $ft11
+0c26b7a4 fcmp.sueq.d $fcc4, $fs5, $ft5
+0c26c704 fcmp.sueq.d $fcc4, $fs0, $ft9
+0c268007 fcmp.sueq.d $fcc7, $fa0, $fa0
+0c26a927 fcmp.sueq.d $fcc7, $ft1, $ft2
+0c269407 fcmp.sueq.d $fcc7, $fa0, $fa5
+0c218de1 fcmp.slt.d $fcc1, $ft7, $fa3
+0c21a025 fcmp.slt.d $fcc5, $fa1, $ft0
+0c218f62 fcmp.slt.d $fcc2, $fs3, $fa3
+0c21e6e0 fcmp.slt.d $fcc0, $ft15, $fs1
+0c21af01 fcmp.slt.d $fcc1, $fs0, $ft3
+0c21ce67 fcmp.slt.d $fcc7, $ft11, $ft11
+0c21a6c1 fcmp.slt.d $fcc1, $ft14, $ft1
+0c218546 fcmp.slt.d $fcc6, $ft2, $fa1
+0c218307 fcmp.slt.d $fcc7, $fs0, $fa0
+0c21e5e6 fcmp.slt.d $fcc6, $ft7, $fs1
+0c258de4 fcmp.sult.d $fcc4, $ft7, $fa3
+0c25d100 fcmp.sult.d $fcc0, $ft0, $ft12
+0c259521 fcmp.sult.d $fcc1, $ft1, $fa5
+0c25bb26 fcmp.sult.d $fcc6, $fs1, $ft6
+0c25f063 fcmp.sult.d $fcc3, $fa3, $fs4
+0c25c226 fcmp.sult.d $fcc6, $ft9, $ft8
+0c25f1a3 fcmp.sult.d $fcc3, $ft5, $fs4
+0c25e147 fcmp.sult.d $fcc7, $ft2, $fs0
+0c259fc0 fcmp.sult.d $fcc0, $fs6, $fa7
+0c25fa03 fcmp.sult.d $fcc3, $ft8, $fs6
+0c23e864 fcmp.sle.d $fcc4, $fa3, $fs2
+0c23b1a1 fcmp.sle.d $fcc1, $ft5, $ft4
+0c23b6a6 fcmp.sle.d $fcc6, $ft13, $ft5
+0c23c003 fcmp.sle.d $fcc3, $fa0, $ft8
+0c23d8c0 fcmp.sle.d $fcc0, $fa6, $ft14
+0c23d743 fcmp.sle.d $fcc3, $fs2, $ft13
+0c239fa0 fcmp.sle.d $fcc0, $fs5, $fa7
+0c23fbc2 fcmp.sle.d $fcc2, $fs6, $fs6
+0c23bd01 fcmp.sle.d $fcc1, $ft0, $ft7
+0c239200 fcmp.sle.d $fcc0, $ft8, $fa4
+0c27eaa7 fcmp.sule.d $fcc7, $ft13, $fs2
+0c27aaa4 fcmp.sule.d $fcc4, $ft13, $ft2
+0c27f263 fcmp.sule.d $fcc3, $ft11, $fs4
+0c27eae2 fcmp.sule.d $fcc2, $ft15, $fs2
+0c278fe3 fcmp.sule.d $fcc3, $fs7, $fa3
+0c27a5c6 fcmp.sule.d $fcc6, $ft6, $ft1
+0c27da03 fcmp.sule.d $fcc3, $ft8, $ft14
+0c27c9e3 fcmp.sule.d $fcc3, $ft7, $ft10
+0c278a62 fcmp.sule.d $fcc2, $ft11, $fa2
+0c27da63 fcmp.sule.d $fcc3, $ft11, $ft14
+0c28fd82 fcmp.sne.d $fcc2, $ft4, $fs7
+0c28ffc3 fcmp.sne.d $fcc3, $fs6, $fs7
+0c28e4e0 fcmp.sne.d $fcc0, $fa7, $fs1
+0c28a3a1 fcmp.sne.d $fcc1, $fs5, $ft0
+0c2895a5 fcmp.sne.d $fcc5, $ft5, $fa5
+0c288325 fcmp.sne.d $fcc5, $fs1, $fa0
+0c28b384 fcmp.sne.d $fcc4, $fs4, $ft4
+0c28c6e0 fcmp.sne.d $fcc0, $ft15, $ft9
+0c28d703 fcmp.sne.d $fcc3, $fs0, $ft13
+0c28a880 fcmp.sne.d $fcc0, $fa4, $ft2
+0c2ae3c5 fcmp.sor.d $fcc5, $fs6, $fs0
+0c2a90c4 fcmp.sor.d $fcc4, $fa6, $fa4
+0c2ac560 fcmp.sor.d $fcc0, $ft3, $ft9
+0c2ab7c2 fcmp.sor.d $fcc2, $fs6, $ft5
+0c2ae7a7 fcmp.sor.d $fcc7, $fs5, $fs1
+0c2a9742 fcmp.sor.d $fcc2, $fs2, $fa5
+0c2ac782 fcmp.sor.d $fcc2, $fs4, $ft9
+0c2ad3a5 fcmp.sor.d $fcc5, $fs5, $ft12
+0c2a88e1 fcmp.sor.d $fcc1, $fa7, $fa2
+0c2aa1e3 fcmp.sor.d $fcc3, $ft7, $ft0
+0c2ce420 fcmp.sune.d $fcc0, $fa1, $fs1
+0c2cfb62 fcmp.sune.d $fcc2, $fs3, $fs6
+0c2ceee4 fcmp.sune.d $fcc4, $ft15, $fs3
+0c2cbe07 fcmp.sune.d $fcc7, $ft8, $ft7
+0c2cd1e6 fcmp.sune.d $fcc6, $ft7, $ft12
+0c2cc081 fcmp.sune.d $fcc1, $fa4, $ft8
+0c2cb883 fcmp.sune.d $fcc3, $fa4, $ft6
+0c2cc742 fcmp.sune.d $fcc2, $fs2, $ft9
+0c2cd924 fcmp.sune.d $fcc4, $ft1, $ft14
+0c2ca4e2 fcmp.sune.d $fcc2, $fa7, $ft1
+0d0232dc fsel $fs4, $ft14, $ft4, $fcc4
+0d0269cd fsel $ft5, $ft6, $fs2, $fcc4
+0d01a518 fsel $fs0, $ft0, $ft1, $fcc3
+0d0341da fsel $fs2, $ft6, $ft8, $fcc6
+0d01bbc3 fsel $fa3, $fs6, $ft6, $fcc3
+0d0066cf fsel $ft7, $ft14, $fs1, $fcc0
+0d01d34e fsel $ft6, $fs2, $ft12, $fcc3
+0d00bae7 fsel $fa7, $ft15, $ft6, $fcc1
+0d00f011 fsel $ft9, $fa0, $fs4, $fcc1
+0d037021 fsel $fa1, $fa1, $fs4, $fcc6
+12972a47 addu16i.d $a3, $t6, -23094
+10e972df addu16i.d $s8, $fp, 14940
+11ef851a addu16i.d $s3, $a4, 31713
+111ab5ac addu16i.d $t0, $t1, 18093
+1060b0ac addu16i.d $t0, $a1, 6188
+13de2c2c addu16i.d $t0, $ra, -2165
+1197d39d addu16i.d $s6, $s5, 26100
+10edf78a addu16i.d $a6, $s5, 15229
+1293d939 addu16i.d $s2, $a5, -23306
+1295d703 addu16i.d $sp, $s1, -23179
+15e870e7 lu12i.w $a3, -48249
+149fbcb3 lu12i.w $t7, 327141
+14c60d11 lu12i.w $t5, 405608
+14675aca lu12i.w $a6, 211670
+1580e1ad lu12i.w $t1, -260339
+15ceacb3 lu12i.w $t7, -101019
+15f9f96c lu12i.w $t0, -12341
+1409614d lu12i.w $t1, 19210
+14128d95 lu12i.w $r21, 37996
+15a2b7b7 lu12i.w $s0, -191043
+167f4d86 lu32i.d $a2, 260716
+160bdc79 lu32i.d $s2, 24291
+161b9e11 lu32i.d $t5, 56560
+17ea14da lu32i.d $s3, -44890
+178bb351 lu32i.d $t5, -238182
+173492a6 lu32i.d $a2, -416619
+168e0d23 lu32i.d $sp, 290921
+175b1395 lu32i.d $r21, -337764
+16e8fd36 lu32i.d $fp, 477161
+179c80c9 lu32i.d $a5, -203770
+18a44cf4 pcaddi $t8, 336487
+19c50cb2 pcaddi $t6, -120731
+184aa9df pcaddi $s8, 152910
+1889aecb pcaddi $a7, 281974
+181bf506 pcaddi $a2, 57256
+19569b2d pcaddi $t1, -346919
+18f882a0 pcaddi $zero, 508949
+194e8992 pcaddi $t6, -363444
+1871126e pcaddi $t2, 231571
+18ea9c8c pcaddi $t0, 480484
+1a354c9b pcalau12i $s4, 109156
+1bb2e7da pcalau12i $s3, -157890
+1b77d39b pcalau12i $s4, -278884
+1b08452f pcalau12i $t3, -507351
+1a263bef pcalau12i $t3, 78303
+1a61ea84 pcalau12i $a0, 200532
+1b43ccd7 pcalau12i $s0, -385434
+1a87f28b pcalau12i $a7, 278420
+1bcafeaa pcalau12i $a6, -108555
+1bd8b54e pcalau12i $t2, -80470
+1dbaebd9 pcaddu12i $s2, -141474
+1db1a219 pcaddu12i $s2, -160496
+1cc42300 pcaddu12i $zero, 401688
+1d50789e pcaddu12i $s7, -359484
+1d5e60fa pcaddu12i $s3, -331001
+1d62994b pcaddu12i $a7, -322358
+1dd499f4 pcaddu12i $t8, -88881
+1cee716f pcaddu12i $t3, 488331
+1d4d914c pcaddu12i $t0, -365430
+1c6d1718 pcaddu12i $s1, 223416
+1e8ad668 pcaddu18i $a4, 284339
+1e24bd9c pcaddu18i $s5, 75244
+1f99c8c9 pcaddu18i $a5, -209338
+1f0e5a51 pcaddu18i $t5, -494894
+1f86e481 pcaddu18i $ra, -248028
+1fc89b84 pcaddu18i $a0, -113444
+1e2b9191 pcaddu18i $t5, 89228
+1f59fbcd pcaddu18i $t1, -340002
+1e823d70 pcaddu18i $t4, 266731
+1f711aa9 pcaddu18i $a5, -292651
+206ff5a6 ll.w $a2, $t1, 28660
+2007e639 ll.w $s2, $t5, 2020
+206235b8 ll.w $s1, $t1, 25140
+20facde0 ll.w $zero, $t3, -1332
+206c9f65 ll.w $a1, $s4, 27804
+20be2a33 ll.w $t7, $t5, -16856
+20fbc63d ll.w $s6, $t5, -1084
+20f6c363 ll.w $sp, $s4, -2368
+20493dc3 ll.w $sp, $t2, 18748
+200f7610 ll.w $t4, $t4, 3956
+2158b9e8 sc.w $a4, $t3, 22712
+21d972ad sc.w $t1, $r21, -9872
+211e89cb sc.w $a7, $t2, 7816
+2178fea6 sc.w $a2, $r21, 30972
+21497039 sc.w $s2, $ra, 18800
+21a9a7e8 sc.w $a4, $s8, -22108
+21f0d2cf sc.w $t3, $fp, -3888
+21cc6ae4 sc.w $a0, $s0, -13208
+219b8026 sc.w $a2, $ra, -25728
+21c7ef09 sc.w $a5, $s1, -14356
+22330278 ll.d $s1, $t7, 13056
+22fbdf87 ll.d $a3, $s5, -1060
+22230254 ll.d $t8, $t6, 8960
+22722883 ll.d $sp, $a0, 29224
+229c1117 ll.d $s0, $a4, -25584
+22f3c450 ll.d $t4, $tp, -3132
+22593d46 ll.d $a2, $a6, 22844
+2227217a ll.d $s3, $a7, 10016
+2256f9e0 ll.d $zero, $t3, 22264
+22677117 ll.d $s0, $a4, 26480
+2397893b sc.d $s4, $a5, -26744
+236be1a0 sc.d $zero, $t1, 27616
+23d90025 sc.d $a1, $ra, -9984
+234bde30 sc.d $t4, $t5, 19420
+2309d144 sc.d $a0, $a6, 2512
+230c6e10 sc.d $t4, $t4, 3180
+23458d0e sc.d $t2, $a4, 17804
+236ab7f1 sc.d $t5, $s8, 27316
+232b5696 sc.d $fp, $t8, 11092
+23937e53 sc.d $t7, $t6, -27780
+245c2008 ldptr.w $a4, $zero, 23584
+24491cef ldptr.w $t3, $a3, 18716
+245ec213 ldptr.w $t7, $t4, 24256
+247ba99b ldptr.w $s4, $t0, 31656
+24a2ab88 ldptr.w $a4, $s5, -23896
+24d6f4d7 ldptr.w $s0, $a2, -10508
+24b3d3b2 ldptr.w $t6, $s6, -19504
+24fffc43 ldptr.w $sp, $tp, -4
+2443641e ldptr.w $s7, $zero, 17252
+24200216 ldptr.w $fp, $t4, 8192
+25300dc8 stptr.w $a4, $t2, 12300
+253fd722 stptr.w $tp, $s2, 16340
+250d58b5 stptr.w $r21, $a1, 3416
+254efa0f stptr.w $t3, $t4, 20216
+2526bd9e stptr.w $s7, $t0, 9916
+25cd8f62 stptr.w $tp, $s4, -12916
+254ea7bb stptr.w $s4, $s6, 20132
+2592dcf7 stptr.w $s0, $a3, -27940
+25dc408f stptr.w $t3, $a0, -9152
+25d67c76 stptr.w $fp, $sp, -10628
+2692eedc ldptr.d $s5, $fp, -27924
+26635433 ldptr.d $t7, $ra, 25428
+26582066 ldptr.d $a2, $sp, 22560
+268a0abc ldptr.d $s5, $r21, -30200
+26729c6b ldptr.d $a7, $sp, 29340
+26bd3127 ldptr.d $a3, $a5, -17104
+26fd85ee ldptr.d $t2, $t3, -636
+264390b8 ldptr.d $s1, $a1, 17296
+264452bf ldptr.d $s8, $r21, 17488
+26a9e7ea ldptr.d $a6, $s8, -22044
+27828edc stptr.d $s5, $fp, -32116
+27ec93fa stptr.d $s3, $s8, -4976
+27fccedd stptr.d $s6, $fp, -820
+27a7f177 stptr.d $s0, $a7, -22544
+275c31fb stptr.d $s4, $t3, 23600
+27c5075b stptr.d $s4, $s3, -15100
+27736f1f stptr.d $s8, $s1, 29548
+2725e256 stptr.d $fp, $t6, 9696
+27fa7fdd stptr.d $s6, $s7, -1412
+279ef44a stptr.d $a6, $tp, -24844
+2836435e ld.b $s7, $s3, -624
+28190a85 ld.b $a1, $t8, 1602
+28109506 ld.b $a2, $a4, 1061
+282486d4 ld.b $t8, $fp, -1759
+2800b6b6 ld.b $fp, $r21, 45
+280965d7 ld.b $s0, $t2, 601
+2833c617 ld.b $s0, $t4, -783
+281b3bd3 ld.b $t7, $s7, 1742
+283e027a ld.b $s3, $t7, -128
+281052af ld.b $t3, $r21, 1044
+2845c117 ld.h $s0, $a4, 368
+2870ff45 ld.h $a1, $s3, -961
+28760cac ld.h $t0, $a1, -637
+286f49cd ld.h $t1, $t2, -1070
+284c10e0 ld.h $zero, $a3, 772
+28577204 ld.h $a0, $t4, 1500
+28516552 ld.h $t6, $a6, 1113
+287e7cab ld.h $a7, $a1, -97
+285350ab ld.h $a7, $a1, 1236
+285436f4 ld.h $t8, $s0, 1293
+28a692e9 ld.w $a5, $s0, -1628
+28b1ba1c ld.w $s5, $t4, -914
+28a07991 ld.w $t5, $t0, -2018
+28a5205d ld.w $s6, $tp, -1720
+2886fbda ld.w $s3, $s7, 446
+28b7bfc0 ld.w $zero, $s7, -529
+289f73b0 ld.w $t4, $s6, 2012
+28872ca4 ld.w $a0, $a1, 459
+28af156c ld.w $t0, $a7, -1083
+2888398b ld.w $a7, $t0, 526
+28d0735b ld.d $s4, $s3, 1052
+28e21e6e ld.d $t2, $t7, -1913
+28d104b9 ld.d $s2, $a1, 1089
+28c963fe ld.d $s7, $s8, 600
+28d56464 ld.d $a0, $sp, 1369
+28e53b65 ld.d $a1, $s4, -1714
+28e4fead ld.d $t1, $r21, -1729
+28f0d566 ld.d $a2, $a7, -971
+28f8a164 ld.d $a0, $a7, -472
+28cf9de0 ld.d $zero, $t3, 999
+293c52fd st.b $s6, $s0, -236
+292a46ba st.b $s3, $r21, -1391
+290550fa st.b $s3, $a3, 340
+29175a4e st.b $t2, $t6, 1494
+292d989d st.b $s6, $a0, -1178
+2908aff9 st.b $s2, $s8, 555
+2913fe9d st.b $s6, $t8, 1279
+291f73b0 st.b $t4, $s6, 2012
+292fbf19 st.b $s2, $s1, -1041
+291e21c5 st.b $a1, $t2, 1928
+297b164e st.h $t2, $t6, -315
+2978a32e st.h $t2, $s2, -472
+297ae4e7 st.h $a3, $a3, -327
+2950ff60 st.h $zero, $s4, 1087
+29597594 st.h $t8, $t0, 1629
+294c0954 st.h $t8, $a6, 770
+29559b32 st.h $t6, $s2, 1382
+29401fc2 st.h $tp, $s7, 7
+29629ba3 st.h $sp, $s6, -1882
+294173a6 st.h $a2, $s6, 92
+29b22e5a st.w $s3, $t6, -885
+2982d9c2 st.w $tp, $t2, 182
+29bb2704 st.w $a0, $s1, -311
+29a1c5b7 st.w $s0, $t1, -1935
+29a66a34 st.w $t8, $t5, -1638
+29aa6d0f st.w $t3, $a4, -1381
+29b23d49 st.w $a5, $a6, -881
+2980cf13 st.w $t7, $s1, 51
+29a51541 st.w $ra, $a6, -1723
+298e2896 st.w $fp, $a0, 906
+29c45b45 st.d $a1, $s3, 278
+29ead955 st.d $r21, $a6, -1354
+29f433ec st.d $t0, $s8, -756
+29da1b46 st.d $a2, $s3, 1670
+29c40d4f st.d $t3, $a6, 259
+29e1b4d2 st.d $t6, $a2, -1939
+29ceaaec st.d $t0, $s0, 938
+29d5f462 st.d $tp, $sp, 1405
+29e0b83d st.d $s6, $ra, -2002
+29ed33c1 st.d $ra, $s7, -1204
+2a312195 ld.bu $r21, $t0, -952
+2a243b73 ld.bu $t7, $s4, -1778
+2a336899 ld.bu $s2, $a0, -806
+2a2b0340 ld.bu $zero, $s3, -1344
+2a06174a ld.bu $a6, $s3, 389
+2a17d891 ld.bu $t5, $a0, 1526
+2a299036 ld.bu $fp, $ra, -1436
+2a059ebe ld.bu $s7, $r21, 359
+2a27b668 ld.bu $a4, $t7, -1555
+2a236f0e ld.bu $t2, $s1, -1829
+2a53806b ld.hu $a7, $sp, 1248
+2a65492c ld.hu $t0, $a5, -1710
+2a5a2498 ld.hu $s1, $a0, 1673
+2a625a90 ld.hu $t4, $t8, -1898
+2a7311f1 ld.hu $t5, $t3, -828
+2a6377e3 ld.hu $sp, $s8, -1827
+2a4d6693 ld.hu $t7, $t8, 857
+2a77331e ld.hu $s7, $s1, -564
+2a7f87b9 ld.hu $s2, $s6, -31
+2a60cfa2 ld.hu $tp, $s6, -1997
+2ab6d107 ld.wu $a3, $a4, -588
+2a927d97 ld.wu $s0, $t0, 1183
+2ab1c694 ld.wu $t8, $t8, -911
+2abacd95 ld.wu $r21, $t0, -333
+2ab5f25c ld.wu $s5, $t6, -644
+2a8fd899 ld.wu $s2, $a0, 1014
+2aad1dfc ld.wu $s5, $t3, -1209
+2a8a583e ld.wu $s7, $ra, 662
+2aaecb80 ld.wu $zero, $s5, -1102
+2abe9425 ld.wu $a1, $ra, -91
+2afd54e1 preld 0x1, $a3, -171
+2ad72790 preld 0x10, $s5, 1481
+2af9c7cd preld 0xd, $s7, -399
+2aef93e4 preld 0x4, $s8, -1052
+2ae821cf preld 0xf, $t2, -1528
+2acdb72e preld 0xe, $s2, 877
+2acbc015 preld 0x15, $zero, 752
+2ac2ed58 preld 0x18, $a6, 187
+2ad62a47 preld 0x7, $t6, 1418
+2ae85301 preld 0x1, $s1, -1516
+2b3a27ab fld.s $ft3, $s6, -375
+2b1073b1 fld.s $ft9, $s6, 1052
+2b2d55ae fld.s $ft6, $t1, -1195
+2b00911e fld.s $fs6, $a4, 36
+2b391c15 fld.s $ft13, $zero, -441
+2b03ddca fld.s $ft2, $t2, 247
+2b1ea79c fld.s $fs4, $s5, 1961
+2b07d3a4 fld.s $fa4, $s6, 500
+2b21217e fld.s $fs6, $a7, -1976
+2b350ef2 fld.s $ft10, $s0, -701
+2b7d2383 fst.s $fa3, $s5, -184
+2b40752b fst.s $ft3, $a5, 29
+2b69469d fst.s $fs5, $t8, -1455
+2b7f65a8 fst.s $ft0, $t1, -39
+2b4c7fb3 fst.s $ft11, $s6, 799
+2b7020fb fst.s $fs3, $a3, -1016
+2b4723ff fst.s $fs7, $s8, 456
+2b4cbc07 fst.s $fa7, $zero, 815
+2b6c8616 fst.s $ft14, $t4, -1247
+2b7a344d fst.s $ft5, $tp, -371
+2b8ff9da fld.d $fs2, $t2, 1022
+2b8c6e84 fld.d $fa4, $t8, 795
+2ba6a403 fld.d $fa3, $zero, -1623
+2b8c1342 fld.d $fa2, $s3, 772
+2ba56432 fld.d $ft10, $ra, -1703
+2bb8f164 fld.d $fa4, $a7, -452
+2bbb0b06 fld.d $fa6, $s1, -318
+2bab6c3f fld.d $fs7, $ra, -1317
+2b98be50 fld.d $ft8, $t6, 1583
+2b9d8fdb fld.d $fs3, $s7, 1891
+2bdcf45e fst.d $fs6, $tp, 1853
+2beabfaa fst.d $ft2, $s6, -1361
+2bcc30fa fst.d $fs2, $a3, 780
+2beea816 fst.d $ft14, $zero, -1110
+2bfbc3d0 fst.d $ft8, $s7, -272
+2bf65047 fst.d $fa7, $tp, -620
+2bf805b4 fst.d $ft12, $t1, -511
+2be8e8dc fst.d $fs4, $a2, -1478
+2bf2c8ea fst.d $ft2, $a3, -846
+2bc27f0f fst.d $ft7, $s1, 159
+380046e1 ldx.b $ra, $s0, $t5
+380051c3 ldx.b $sp, $t2, $t8
+38003510 ldx.b $t4, $a4, $t1
+38003fbb ldx.b $s4, $s6, $t3
+380059d3 ldx.b $t7, $t2, $fp
+38000490 ldx.b $t4, $a0, $ra
+38005842 ldx.b $tp, $tp, $fp
+38007df7 ldx.b $s0, $t3, $s8
+38005d5b ldx.b $s4, $a6, $s0
+380001c9 ldx.b $a5, $t2, $zero
+38043daf ldx.h $t3, $t1, $t3
+3804230e ldx.h $t2, $s1, $a4
+380438d1 ldx.h $t5, $a2, $t2
+380421e8 ldx.h $a4, $t3, $a4
+38044c8d ldx.h $t1, $a0, $t7
+38041a60 ldx.h $zero, $t7, $a2
+3804732b ldx.h $a7, $s2, $s5
+38045b95 ldx.h $r21, $s5, $fp
+380421a8 ldx.h $a4, $t1, $a4
+38043162 ldx.h $tp, $a7, $t0
+3808084f ldx.w $t3, $tp, $tp
+3808754f ldx.w $t3, $a6, $s6
+3808530f ldx.w $t3, $s1, $t8
+38082db3 ldx.w $t7, $t1, $a7
+3808444b ldx.w $a7, $tp, $t5
+38085139 ldx.w $s2, $a5, $t8
+3808127e ldx.w $s7, $t7, $a0
+38082a61 ldx.w $ra, $t7, $a6
+38084924 ldx.w $a0, $a5, $t6
+38082caa ldx.w $a6, $a1, $a7
+380c0a2a ldx.d $a6, $t5, $tp
+380c1509 ldx.d $a5, $a4, $a1
+380c768a ldx.d $a6, $t8, $s6
+380c5a9f ldx.d $s8, $t8, $fp
+380c304c ldx.d $t0, $tp, $t0
+380c4b17 ldx.d $s0, $s1, $t6
+380c7693 ldx.d $t7, $t8, $s6
+380c4980 ldx.d $zero, $t0, $t6
+380c1af3 ldx.d $t7, $s0, $a2
+380c6a7b ldx.d $s4, $t7, $s3
+38104b5e stx.b $s7, $s3, $t6
+381002df stx.b $s8, $fp, $zero
+38104ae3 stx.b $sp, $s0, $t6
+38101e9a stx.b $s3, $t8, $a3
+38106478 stx.b $s1, $sp, $s2
+38102a97 stx.b $s0, $t8, $a6
+38106aa0 stx.b $zero, $r21, $s3
+381045a5 stx.b $a1, $t1, $t5
+38107754 stx.b $t8, $s3, $s6
+38103829 stx.b $a5, $ra, $t2
+3814142c stx.h $t0, $ra, $a1
+381441d3 stx.h $t7, $t2, $t4
+38142e45 stx.h $a1, $t6, $a7
+38144b6b stx.h $a7, $s4, $t6
+3814335c stx.h $s5, $s3, $t0
+38147d7d stx.h $s6, $a7, $s8
+38147fdf stx.h $s8, $s7, $s8
+381438c6 stx.h $a2, $a2, $t2
+381440c7 stx.h $a3, $a2, $t4
+3814791a stx.h $s3, $a4, $s7
+38182a28 stx.w $a4, $t5, $a6
+3818338b stx.w $a7, $s5, $t0
+38181cf7 stx.w $s0, $a3, $a3
+38181711 stx.w $t5, $s1, $a1
+38182b16 stx.w $fp, $s1, $a6
+381839e8 stx.w $a4, $t3, $t2
+38185f73 stx.w $t7, $s4, $s0
+38181e27 stx.w $a3, $t5, $a3
+381833d1 stx.w $t5, $s7, $t0
+38184629 stx.w $a5, $t5, $t5
+381c36c0 stx.d $zero, $fp, $t1
+381c0aa2 stx.d $tp, $r21, $tp
+381c35ea stx.d $a6, $t3, $t1
+381c0ae0 stx.d $zero, $s0, $tp
+381c7415 stx.d $r21, $zero, $s6
+381c5be4 stx.d $a0, $s8, $fp
+381c42f8 stx.d $s1, $s0, $t4
+381c76ef stx.d $t3, $s0, $s6
+381c2f92 stx.d $t6, $s5, $a7
+381c4a06 stx.d $a2, $t4, $t6
+3820446f ldx.bu $t3, $sp, $t5
+38205434 ldx.bu $t8, $ra, $r21
+38206369 ldx.bu $a5, $s4, $s1
+38201f5c ldx.bu $s5, $s3, $a3
+382060e8 ldx.bu $a4, $a3, $s1
+38202447 ldx.bu $a3, $tp, $a5
+38202d05 ldx.bu $a1, $a4, $a7
+38206541 ldx.bu $ra, $a6, $s2
+38206304 ldx.bu $a0, $s1, $s1
+3820385e ldx.bu $s7, $tp, $t2
+38243eec ldx.hu $t0, $s0, $t3
+38240298 ldx.hu $s1, $t8, $zero
+382467e7 ldx.hu $a3, $s8, $s2
+38242d83 ldx.hu $sp, $t0, $a7
+3824251b ldx.hu $s4, $a4, $a5
+382479dd ldx.hu $s6, $t2, $s7
+38240e1f ldx.hu $s8, $t4, $sp
+382425bb ldx.hu $s4, $t1, $a5
+38244e7e ldx.hu $s7, $t7, $t7
+382430d8 ldx.hu $s1, $a2, $t0
+382845c7 ldx.wu $a3, $t2, $t5
+382807c2 ldx.wu $tp, $s7, $ra
+3828416a ldx.wu $a6, $a7, $t4
+38280f58 ldx.wu $s1, $s3, $sp
+38281b3c ldx.wu $s5, $s2, $a2
+38281051 ldx.wu $t5, $tp, $a0
+382830b0 ldx.wu $t4, $a1, $t0
+382804d2 ldx.wu $t6, $a2, $ra
+3828417b ldx.wu $s4, $a7, $t4
+38287d76 ldx.wu $fp, $a7, $s8
+382c3d17 preldx 0x17, $a4, $t3
+382c29c5 preldx 0x5, $t2, $a6
+382c4628 preldx 0x8, $t5, $t5
+382c4142 preldx 0x2, $a6, $t4
+382c4fbd preldx 0x1d, $s6, $t7
+382c797a preldx 0x1a, $a7, $s7
+382c2048 preldx 0x8, $tp, $a4
+382c5a8e preldx 0xe, $t8, $fp
+382c5bdd preldx 0x1d, $s7, $fp
+382c7bed preldx 0xd, $s8, $s7
+3830335a fldx.s $fs2, $s3, $t0
+38300b8a fldx.s $ft2, $s5, $tp
+38305113 fldx.s $ft11, $a4, $t8
+3830792c fldx.s $ft4, $a5, $s7
+38300dc7 fldx.s $fa7, $t2, $sp
+38300e03 fldx.s $fa3, $t4, $sp
+38302b52 fldx.s $ft10, $s3, $a6
+38304a91 fldx.s $ft9, $t8, $t6
+38304a73 fldx.s $ft11, $t7, $t6
+3830161a fldx.s $fs2, $t4, $a1
+383411df fldx.d $fs7, $t2, $a0
+38340544 fldx.d $fa4, $a6, $ra
+38342f7c fldx.d $fs4, $s4, $a7
+38341115 fldx.d $ft13, $a4, $a0
+3834717f fldx.d $fs7, $a7, $s5
+38343197 fldx.d $ft15, $t0, $t0
+3834488c fldx.d $ft4, $a0, $t6
+3834083b fldx.d $fs3, $ra, $tp
+38344cfb fldx.d $fs3, $a3, $t7
+383407f9 fldx.d $fs1, $s8, $ra
+38387421 fstx.s $fa1, $ra, $s6
+38381a19 fstx.s $fs1, $t4, $a2
+383840eb fstx.s $ft3, $a3, $t4
+38382d7f fstx.s $fs7, $a7, $a7
+38387865 fstx.s $fa5, $sp, $s7
+38385b51 fstx.s $ft9, $s3, $fp
+38384555 fstx.s $ft13, $a6, $t5
+38387b29 fstx.s $ft1, $s2, $s7
+383875a4 fstx.s $fa4, $t1, $s6
+383846e5 fstx.s $fa5, $s0, $t5
+383c0a35 fstx.d $ft13, $t5, $tp
+383c4eb9 fstx.d $fs1, $r21, $t7
+383c7649 fstx.d $ft1, $t6, $s6
+383c0c16 fstx.d $ft14, $zero, $sp
+383c38bb fstx.d $fs3, $a1, $t2
+383c1f5a fstx.d $fs2, $s3, $a3
+383c4caf fstx.d $ft7, $a1, $t7
+383c6d99 fstx.d $fs1, $t0, $s4
+383c06d4 fstx.d $ft12, $fp, $ra
+383c7f1c fstx.d $fs4, $s1, $s8
+38572b84 sc.q $a0, $a6, $s5
+385731f9 sc.q $s2, $t0, $t3
+385752fc sc.q $s5, $t8, $s0
+385746e0 sc.q $zero, $t5, $s0
+38572142 sc.q $tp, $a4, $a6
+38570169 sc.q $a5, $zero, $a7
+38575421 sc.q $ra, $r21, $ra
+38572b88 sc.q $a4, $a6, $s5
+38577de2 sc.q $tp, $s8, $t3
+38570939 sc.q $s2, $tp, $a5
+3857821c llacq.w $s5, $t4
+38578336 llacq.w $fp, $s2
+38578186 llacq.w $a2, $t0
+38578180 llacq.w $zero, $t0
+38578043 llacq.w $sp, $tp
+38578194 llacq.w $t8, $t0
+3857812a llacq.w $a6, $a5
+38578002 llacq.w $tp, $zero
 3857823a llacq.w $s3, $t5
-38578046 llacq.w $a2, $tp
-385781ee llacq.w $t2, $t3
-3857820f llacq.w $t3, $t4
-38578225 llacq.w $a1, $t5
-385781a4 llacq.w $a0, $t1
-38578426 screl.w $a2, $ra
-385786b9 screl.w $s2, $r21
-38578500 screl.w $zero, $a4
-385787a5 screl.w $a1, $s6
-385787be screl.w $s7, $s6
-38578417 screl.w $s0, $zero
-38578509 screl.w $a5, $a4
-38578760 screl.w $zero, $s4
-38578586 screl.w $a2, $t0
-3857862f screl.w $t3, $t5
-385789ea llacq.d $a6, $t3
-38578bd6 llacq.d $fp, $s7
-38578902 llacq.d $tp, $a4
-38578890 llacq.d $t4, $a0
-38578bfa llacq.d $s3, $s8
-38578ad4 llacq.d $t8, $fp
-38578bca llacq.d $a6, $s7
-38578a57 llacq.d $s0, $t6
-38578806 llacq.d $a2, $zero
-38578b2c llacq.d $t0, $s2
-38578ce7 screl.d $a3, $a3
-38578d9c screl.d $s5, $t0
-38578e90 screl.d $t4, $t8
-38578ec0 screl.d $zero, $fp
-38578d07 screl.d $a3, $a4
-38578c46 screl.d $a2, $tp
-38578d7c screl.d $s5, $a7
-38578ff4 screl.d $t8, $s8
-38578ec9 screl.d $a5, $fp
-38578d79 screl.d $s2, $a7
-38587841 amcas.b $ra, $s7, $tp
-3858733c amcas.b $s5, $s5, $s2
-3858237d amcas.b $s6, $a4, $s4
-385818f2 amcas.b $t6, $a2, $a3
-385836a9 amcas.b $a5, $t1, $r21
-38580593 amcas.b $t7, $ra, $t0
-38580f41 amcas.b $ra, $sp, $s3
-38584fc3 amcas.b $sp, $t7, $s7
-38583b29 amcas.b $a5, $t2, $s2
-3858594f amcas.b $t3, $fp, $a6
-3858f287 amcas.h $a3, $s5, $t8
-38589fc8 amcas.h $a4, $a3, $s7
-3858ad67 amcas.h $a3, $a7, $a7
-3858ca0f amcas.h $t3, $t6, $t4
-385889be amcas.h $s7, $tp, $t1
-3858f9c1 amcas.h $ra, $s7, $t2
-3858b198 amcas.h $s1, $t0, $t0
-3858f5cd amcas.h $t1, $s6, $t2
-3858b57f amcas.h $s8, $t1, $a7
-3858eac6 amcas.h $a2, $s3, $fp
-3859017d amcas.w $s6, $zero, $a7
-38597e9d amcas.w $s6, $s8, $t8
-385922c5 amcas.w $a1, $a4, $fp
-38592e19 amcas.w $s2, $a7, $t4
-38595bc3 amcas.w $sp, $fp, $s7
-385966d8 amcas.w $s1, $s2, $fp
-38595a3b amcas.w $s4, $fp, $t5
-385951ab amcas.w $a7, $t8, $t1
-385919e1 amcas.w $ra, $a2, $t3
-3859611b amcas.w $s4, $s1, $a4
-3859c293 amcas.d $t7, $t4, $t8
-3859c88f amcas.d $t3, $t6, $a0
-3859f8f9 amcas.d $s2, $s7, $a3
-3859b0db amcas.d $s4, $t0, $a2
-3859f9c7 amcas.d $a3, $s7, $t2
-3859a661 amcas.d $ra, $a5, $t7
-3859ef43 amcas.d $sp, $s4, $s3
-3859ded1 amcas.d $t5, $s0, $fp
-3859d354 amcas.d $t8, $t8, $s3
-3859db9a amcas.d $s3, $fp, $s5
-385a5d36 amcas_db.b $fp, $s0, $a5
-385a380e amcas_db.b $t2, $t2, $zero
-385a45a5 amcas_db.b $a1, $t5, $t1
-385a2710 amcas_db.b $t4, $a5, $s1
-385a7911 amcas_db.b $t5, $s7, $a4
-385a5835 amcas_db.b $r21, $fp, $ra
-385a48e4 amcas_db.b $a0, $t6, $a3
-385a7cad amcas_db.b $t1, $s8, $a1
-385a2520 amcas_db.b $zero, $a5, $a5
-385a0860 amcas_db.b $zero, $tp, $sp
-385add23 amcas_db.h $sp, $s0, $a5
-385a8045 amcas_db.h $a1, $zero, $tp
-385a8898 amcas_db.h $s1, $tp, $a0
-385ae6c2 amcas_db.h $tp, $s2, $fp
-385acc97 amcas_db.h $s0, $t7, $a0
-385a9953 amcas_db.h $t7, $a2, $a6
-385ae1af amcas_db.h $t3, $s1, $t1
-385a8d60 amcas_db.h $zero, $sp, $a7
-385a93d9 amcas_db.h $s2, $a0, $s7
-385addf5 amcas_db.h $r21, $s0, $t3
-385b5f72 amcas_db.w $t6, $s0, $s4
-385b3c59 amcas_db.w $s2, $t3, $tp
-385b7600 amcas_db.w $zero, $s6, $t4
-385b2519 amcas_db.w $s2, $a5, $a4
-385b5e4e amcas_db.w $t2, $s0, $t6
-385b2468 amcas_db.w $a4, $a5, $sp
-385b4517 amcas_db.w $s0, $t5, $a4
-385b6cfe amcas_db.w $s7, $s4, $a3
-385b6aa8 amcas_db.w $a4, $s3, $r21
-385b4b2a amcas_db.w $a6, $t6, $s2
-385b927f amcas_db.d $s8, $a0, $t7
-385bcc0d amcas_db.d $t1, $t7, $zero
-385be67e amcas_db.d $s7, $s2, $t7
-385ba6e8 amcas_db.d $a4, $a5, $s0
-385bfc77 amcas_db.d $s0, $s8, $sp
-385b8777 amcas_db.d $s0, $ra, $s4
-385b9516 amcas_db.d $fp, $a1, $a4
-385bbc05 amcas_db.d $a1, $t3, $zero
-385b9d8d amcas_db.d $t1, $a3, $t0
-385b83bc amcas_db.d $s5, $zero, $s6
-385c5548 amswap.b $a4, $r21, $a6
-385c486d amswap.b $t1, $t6, $sp
-385c4fe0 amswap.b $zero, $t7, $s8
-385c662f amswap.b $t3, $s2, $t5
-385c23b8 amswap.b $s1, $a4, $s6
-385c0d25 amswap.b $a1, $sp, $a5
-385c6ea1 amswap.b $ra, $s4, $r21
-385c508c amswap.b $t0, $t8, $a0
-385c54cb amswap.b $a7, $r21, $a2
-385c7759 amswap.b $s2, $s6, $s3
-385ccabb amswap.h $s4, $t6, $r21
-385caada amswap.h $s3, $a6, $fp
-385cab9c amswap.h $s5, $a6, $s5
-385c990c amswap.h $t0, $a2, $a4
-385c90de amswap.h $s7, $a0, $a2
-385cf4c3 amswap.h $sp, $s6, $a2
-385cbc51 amswap.h $t5, $t3, $tp
-385cb78d amswap.h $t1, $t1, $s5
-385c91b0 amswap.h $t4, $a0, $t1
-385cae65 amswap.h $a1, $a7, $t7
-385d631d amadd.b $s6, $s1, $s1
-385d6a06 amadd.b $a2, $s3, $t4
-385d5154 amadd.b $t8, $t8, $a6
-385d37f4 amadd.b $t8, $t1, $s8
-385d3e35 amadd.b $r21, $t3, $t5
-385d76c0 amadd.b $zero, $s6, $fp
-385d43d0 amadd.b $t4, $t4, $s7
-385d4547 amadd.b $a3, $t5, $a6
-385d1440 amadd.b $zero, $a1, $tp
-385d7729 amadd.b $a5, $s6, $s2
-385de575 amadd.h $r21, $s2, $a7
-385dee86 amadd.h $a2, $s4, $t8
-385da1c4 amadd.h $a0, $a4, $t2
-385daefd amadd.h $s6, $a7, $s0
-385db7c1 amadd.h $ra, $t1, $s7
-385def0d amadd.h $t1, $s4, $s1
-385d94fa amadd.h $s3, $a1, $a3
-385db000 amadd.h $zero, $t0, $zero
-385dd464 amadd.h $a0, $r21, $sp
-385dc112 amadd.h $t6, $t4, $a4
-385e1162 amswap_db.b $tp, $a0, $a7
-385e6d4d amswap_db.b $t1, $s4, $a6
-385e5181 amswap_db.b $ra, $t8, $t0
-385e1249 amswap_db.b $a5, $a0, $t6
-385e6bbc amswap_db.b $s5, $s3, $s6
-385e74da amswap_db.b $s3, $s6, $a2
-385e31d8 amswap_db.b $s1, $t0, $t2
-385e182d amswap_db.b $t1, $a2, $ra
-385e4c54 amswap_db.b $t8, $t7, $tp
-385e5d53 amswap_db.b $t7, $s0, $a6
-385e9d7b amswap_db.h $s4, $a3, $a7
-385eb6c4 amswap_db.h $a0, $t1, $fp
-385edcf1 amswap_db.h $t5, $s0, $a3
-385ebbe9 amswap_db.h $a5, $t2, $s8
-385ecd15 amswap_db.h $r21, $t7, $a4
-385e9743 amswap_db.h $sp, $a1, $s3
-385ec651 amswap_db.h $t5, $t5, $t6
-385e93bd amswap_db.h $s6, $a0, $s6
-385ef0dd amswap_db.h $s6, $s5, $a2
-385edd80 amswap_db.h $zero, $s0, $t0
-385f6dd1 amadd_db.b $t5, $s4, $t2
-385f30f1 amadd_db.b $t5, $t0, $a3
-385f5210 amadd_db.b $t4, $t8, $t4
-385f2e94 amadd_db.b $t8, $a7, $t8
-385f5596 amadd_db.b $fp, $r21, $t0
-385f3d88 amadd_db.b $a4, $t3, $t0
-385f2fbb amadd_db.b $s4, $a7, $s6
-385f0e71 amadd_db.b $t5, $sp, $t7
-385f1847 amadd_db.b $a3, $a2, $tp
-385f1961 amadd_db.b $ra, $a2, $a7
-385fe8a0 amadd_db.h $zero, $s3, $a1
-385f8e80 amadd_db.h $zero, $sp, $t8
-385fbf1d amadd_db.h $s6, $t3, $s1
-385fcef4 amadd_db.h $t8, $t7, $s0
-385ffda7 amadd_db.h $a3, $s8, $t1
-385fd53a amadd_db.h $s3, $r21, $a5
-385fc44c amadd_db.h $t0, $t5, $tp
-385fa76d amadd_db.h $t1, $a5, $s4
-385f9227 amadd_db.h $a3, $a0, $t5
-385fcac9 amadd_db.h $a5, $t6, $fp
-3860115c amswap.w $s5, $a0, $a6
-38605722 amswap.w $tp, $r21, $s2
-3860783e amswap.w $s7, $s7, $ra
-386043f3 amswap.w $t7, $t4, $s8
-386035aa amswap.w $a6, $t1, $t1
-38606584 amswap.w $a0, $s2, $t0
-38602a07 amswap.w $a3, $a6, $t4
-3860581c amswap.w $s5, $fp, $zero
-38602ab7 amswap.w $s0, $a6, $r21
-38600d33 amswap.w $t7, $sp, $a5
-38608f44 amswap.d $a0, $sp, $s3
-3860c806 amswap.d $a2, $t6, $zero
-3860f184 amswap.d $a0, $s5, $t0
-3860af75 amswap.d $r21, $a7, $s4
-3860d2b8 amswap.d $s1, $t8, $r21
-38609b4e amswap.d $t2, $a2, $s3
-3860eb2d amswap.d $t1, $s3, $s2
-3860a12a amswap.d $a6, $a4, $a5
-3860d7c8 amswap.d $a4, $r21, $s7
-3860bada amswap.d $s3, $t2, $fp
-3861231a amadd.w $s3, $a4, $s1
-38616310 amadd.w $t4, $s1, $s1
-3861032a amadd.w $a6, $zero, $s2
-386111e5 amadd.w $a1, $a0, $t3
-38612f01 amadd.w $ra, $a7, $s1
-386100bc amadd.w $s5, $zero, $a1
-386174e5 amadd.w $a1, $s6, $a3
-38611200 amadd.w $zero, $a0, $t4
-3861209c amadd.w $s5, $a4, $a0
-38616bc1 amadd.w $ra, $s3, $s7
-3861f1bf amadd.d $s8, $s5, $t1
-3861eb61 amadd.d $ra, $s3, $s4
-3861a171 amadd.d $t5, $a4, $a7
-3861fc4a amadd.d $a6, $s8, $tp
-3861d583 amadd.d $sp, $r21, $t0
-3861d3a0 amadd.d $zero, $t8, $s6
-3861b8b9 amadd.d $s2, $t2, $a1
-38618244 amadd.d $a0, $zero, $t6
-38618baf amadd.d $t3, $tp, $s6
-3861be65 amadd.d $a1, $t3, $t7
-3862045f amand.w $s8, $ra, $tp
-386240b6 amand.w $fp, $t4, $a1
-38624e45 amand.w $a1, $t7, $t6
-38622a9b amand.w $s4, $a6, $t8
-38623a08 amand.w $a4, $t2, $t4
-38623b6b amand.w $a7, $t2, $s4
-3862467e amand.w $s7, $t5, $t7
-38625236 amand.w $fp, $t8, $t5
-38624c9e amand.w $s7, $t7, $a0
-3862447c amand.w $s5, $t5, $sp
-3862dfc0 amand.d $zero, $s0, $s7
-3862cf7d amand.d $s6, $t7, $s4
-3862f73f amand.d $s8, $s6, $s2
-3862e2a8 amand.d $a4, $s1, $r21
-386299e3 amand.d $sp, $a2, $t3
-3862cfa8 amand.d $a4, $t7, $s6
-3862e46a amand.d $a6, $s2, $sp
-3862fc1f amand.d $s8, $s8, $zero
-38628e10 amand.d $t4, $sp, $t4
-3862f830 amand.d $t4, $s7, $ra
-38633190 amor.w $t4, $t0, $t0
-386311c3 amor.w $sp, $a0, $t2
-38631cdf amor.w $s8, $a3, $a2
-386339ab amor.w $a7, $t2, $t1
-38637b84 amor.w $a0, $s7, $s5
-38635196 amor.w $fp, $t8, $t0
-38633142 amor.w $tp, $t0, $a6
-386362e2 amor.w $tp, $s1, $s0
-38636459 amor.w $s2, $s2, $tp
-3863507e amor.w $s7, $t8, $sp
-3863b334 amor.d $t8, $t0, $s2
-3863d7bc amor.d $s5, $r21, $s6
-3863e8b3 amor.d $t7, $s3, $a1
-386399db amor.d $s4, $a2, $t2
-3863f01a amor.d $s3, $s5, $zero
-38638067 amor.d $a3, $zero, $sp
-3863810a amor.d $a6, $zero, $a4
-3863eda3 amor.d $sp, $s4, $t1
-386381f1 amor.d $t5, $zero, $t3
-38638618 amor.d $s1, $ra, $t4
-38645405 amxor.w $a1, $r21, $zero
-38640ba3 amxor.w $sp, $tp, $s6
-38641a79 amxor.w $s2, $a2, $t7
-38641fa9 amxor.w $a5, $a3, $s6
-386419b3 amxor.w $t7, $a2, $t1
-386409a1 amxor.w $ra, $tp, $t1
-3864644e amxor.w $t2, $s2, $tp
-38646e63 amxor.w $sp, $s4, $t7
-386460f1 amxor.w $t5, $s1, $a3
-38647e82 amxor.w $tp, $s8, $t8
-3864a0e5 amxor.d $a1, $a4, $a3
-3864bed0 amxor.d $t4, $t3, $fp
-3864ef6b amxor.d $a7, $s4, $s4
-3864ac5b amxor.d $s4, $a7, $tp
-3864f6ff amxor.d $s8, $s6, $s0
-3864cd67 amxor.d $a3, $t7, $a7
-3864d838 amxor.d $s1, $fp, $ra
-3864fcc2 amxor.d $tp, $s8, $a2
-386495cd amxor.d $t1, $a1, $t2
-3864ae9b amxor.d $s4, $a7, $t8
-38657e1c ammax.w $s5, $s8, $t4
-38650bb5 ammax.w $r21, $tp, $s6
-386562b3 ammax.w $t7, $s1, $r21
-38656f4d ammax.w $t1, $s4, $s3
-38656eeb ammax.w $a7, $s4, $s0
-38655de6 ammax.w $a2, $s0, $t3
-38657830 ammax.w $t4, $s7, $ra
-3865581e ammax.w $s7, $fp, $zero
-38653231 ammax.w $t5, $t0, $t5
-38654b58 ammax.w $s1, $t6, $s3
-3865cf51 ammax.d $t5, $t7, $s3
-3865bc1a ammax.d $s3, $t3, $zero
-3865def6 ammax.d $fp, $s0, $s0
-3865a19a ammax.d $s3, $a4, $t0
-3865d5d1 ammax.d $t5, $r21, $t2
-3865d3ea ammax.d $a6, $t8, $s8
-38659291 ammax.d $t5, $a0, $t8
-3865fe0c ammax.d $t0, $s8, $t4
-3865bd10 ammax.d $t4, $t3, $a4
-3865fc4b ammax.d $a7, $s8, $tp
-38664d27 ammin.w $a3, $t7, $a5
-38662ae2 ammin.w $tp, $a6, $s0
-38663740 ammin.w $zero, $t1, $s3
-38662f43 ammin.w $sp, $a7, $s3
-3866493e ammin.w $s7, $t6, $a5
-386663b8 ammin.w $s1, $s1, $s6
-38661496 ammin.w $fp, $a1, $a0
-386615ab ammin.w $a7, $a1, $t1
-386653bd ammin.w $s6, $t8, $s6
-38666bed ammin.w $t1, $s3, $s8
-3866bec4 ammin.d $a0, $t3, $fp
-38668695 ammin.d $r21, $ra, $t8
-3866b6ef ammin.d $t3, $t1, $s0
-3866e587 ammin.d $a3, $s2, $t0
-3866f8b8 ammin.d $s1, $s7, $a1
-386699bb ammin.d $s4, $a2, $t1
-3866a86c ammin.d $t0, $a6, $sp
-3866a90a ammin.d $a6, $a6, $a4
-3866b7b4 ammin.d $t8, $t1, $s6
-3866c6d4 ammin.d $t8, $t5, $fp
-38673f83 ammax.wu $sp, $t3, $s5
-38677c38 ammax.wu $s1, $s8, $ra
-38674a25 ammax.wu $a1, $t6, $t5
-386775b5 ammax.wu $r21, $s6, $t1
-38675beb ammax.wu $a7, $fp, $s8
-38677af4 ammax.wu $t8, $s7, $s0
-38673bcc ammax.wu $t0, $t2, $s7
-386776a8 ammax.wu $a4, $s6, $r21
-386768dc ammax.wu $s5, $s3, $a2
-386736d0 ammax.wu $t4, $t1, $fp
-3867d3fd ammax.du $s6, $t8, $s8
-386782e3 ammax.du $sp, $zero, $s0
+385783b1 llacq.w $t5, $s6
+38578573 screl.w $t7, $a7
+3857868b screl.w $a7, $t8
+38578731 screl.w $t5, $s2
+38578577 screl.w $s0, $a7
+38578564 screl.w $a0, $a7
+385785ff screl.w $s8, $t3
+385787f5 screl.w $r21, $s8
+3857849c screl.w $s5, $a0
+38578519 screl.w $s2, $a4
+385785bc screl.w $s5, $t1
+3857894a llacq.d $a6, $a6
+38578afd llacq.d $s6, $s0
+38578b61 llacq.d $ra, $s4
+38578879 llacq.d $s2, $sp
+38578ba7 llacq.d $a3, $s6
+38578a79 llacq.d $s2, $t7
+38578bbf llacq.d $s8, $s6
+38578a3c llacq.d $s5, $t5
+38578938 llacq.d $s1, $a5
+38578bb5 llacq.d $r21, $s6
+38578e29 screl.d $a5, $t5
+38578dc3 screl.d $sp, $t2
+38578f8a screl.d $a6, $s5
+38578c23 screl.d $sp, $ra
+38578dd0 screl.d $t4, $t2
+38578ddd screl.d $s6, $t2
+38578fd8 screl.d $s1, $s7
+38578c35 screl.d $r21, $ra
+38578d7f screl.d $s8, $a7
+38578cd5 screl.d $r21, $a2
+3858337a amcas.b $s3, $t0, $s4
+38580216 amcas.b $fp, $zero, $t4
+38581f32 amcas.b $t6, $a3, $s2
+38584f5c amcas.b $s5, $t7, $s3
+38585979 amcas.b $s2, $fp, $a7
+38581314 amcas.b $t8, $a0, $s1
+38582d89 amcas.b $a5, $a7, $t0
+38581661 amcas.b $ra, $a1, $t7
+38587d14 amcas.b $t8, $s8, $a4
+3858745a amcas.b $s3, $s6, $tp
+3858b3bc amcas.h $s5, $t0, $s6
+3858825f amcas.h $s8, $zero, $t6
+3858bd35 amcas.h $r21, $t3, $a5
+3858ab3c amcas.h $s5, $a6, $s2
+3858ad41 amcas.h $ra, $a7, $a6
+38589241 amcas.h $ra, $a0, $t6
+3858c89d amcas.h $s6, $t6, $a0
+3858a903 amcas.h $sp, $a6, $a4
+3858dff6 amcas.h $fp, $s0, $s8
+385886ad amcas.h $t1, $ra, $r21
+385941bc amcas.w $s5, $t4, $t1
+38591eed amcas.w $t1, $a3, $s0
+38593cf8 amcas.w $s1, $t3, $a3
+38590ffc amcas.w $s5, $sp, $s8
+385910e0 amcas.w $zero, $a0, $a3
+38591ccc amcas.w $t0, $a3, $a2
+38590fec amcas.w $t0, $sp, $s8
+3859223a amcas.w $s3, $a4, $t5
+38595046 amcas.w $a2, $t8, $tp
+385939ee amcas.w $t2, $t2, $t3
+3859b60f amcas.d $t3, $t1, $t4
+3859ca25 amcas.d $a1, $t6, $t5
+385991a4 amcas.d $a0, $a0, $t1
+3859c826 amcas.d $a2, $t6, $ra
+3859a2b9 amcas.d $s2, $a4, $r21
+3859dd00 amcas.d $zero, $s0, $a4
+3859f7a5 amcas.d $a1, $s6, $s6
+38599fbe amcas.d $s7, $a3, $s6
+3859fc17 amcas.d $s0, $s8, $zero
+3859e109 amcas.d $a5, $s1, $a4
+385a3f60 amcas_db.b $zero, $t3, $s4
+385a3986 amcas_db.b $a2, $t2, $t0
+385a762f amcas_db.b $t3, $s6, $t5
+385a11ea amcas_db.b $a6, $a0, $t3
+385a43d6 amcas_db.b $fp, $t4, $s7
+385a0902 amcas_db.b $tp, $tp, $a4
+385a0090 amcas_db.b $t4, $zero, $a0
+385a77fa amcas_db.b $s3, $s6, $s8
+385a06d4 amcas_db.b $t8, $ra, $fp
+385a0bca amcas_db.b $a6, $tp, $s7
+385aaa57 amcas_db.h $s0, $a6, $t6
+385a9406 amcas_db.h $a2, $a1, $zero
+385a972c amcas_db.h $t0, $a1, $s2
+385aace7 amcas_db.h $a3, $a7, $a3
+385aa99c amcas_db.h $s5, $a6, $t0
+385a9290 amcas_db.h $t4, $a0, $t8
+385a8ac0 amcas_db.h $zero, $tp, $fp
+385aa507 amcas_db.h $a3, $a5, $a4
+385ac846 amcas_db.h $a2, $t6, $tp
+385aa97c amcas_db.h $s5, $a6, $a7
+385b4ff4 amcas_db.w $t8, $t7, $s8
+385b3ec9 amcas_db.w $a5, $t3, $fp
+385b2579 amcas_db.w $s2, $a5, $a7
+385b7841 amcas_db.w $ra, $s7, $tp
+385b733c amcas_db.w $s5, $s5, $s2
+385b237d amcas_db.w $s6, $a4, $s4
+385b18f2 amcas_db.w $t6, $a2, $a3
+385b36a9 amcas_db.w $a5, $t1, $r21
+385b0593 amcas_db.w $t7, $ra, $t0
+385b0f41 amcas_db.w $ra, $sp, $s3
+385bcfc3 amcas_db.d $sp, $t7, $s7
+385bbb29 amcas_db.d $a5, $t2, $s2
+385bd94f amcas_db.d $t3, $fp, $a6
+385bf287 amcas_db.d $a3, $s5, $t8
+385b9fc8 amcas_db.d $a4, $a3, $s7
+385bad67 amcas_db.d $a3, $a7, $a7
+385bca0f amcas_db.d $t3, $t6, $t4
+385b89be amcas_db.d $s7, $tp, $t1
+385bf9c1 amcas_db.d $ra, $s7, $t2
+385bb198 amcas_db.d $s1, $t0, $t0
+385c75cd amswap.b $t1, $s6, $t2
+385c357f amswap.b $s8, $t1, $a7
+385c6ac6 amswap.b $a2, $s3, $fp
+385c017d amswap.b $s6, $zero, $a7
+385c7e9d amswap.b $s6, $s8, $t8
+385c22c5 amswap.b $a1, $a4, $fp
+385c2e19 amswap.b $s2, $a7, $t4
+385c5bc3 amswap.b $sp, $fp, $s7
+385c66d8 amswap.b $s1, $s2, $fp
+385c5a3b amswap.b $s4, $fp, $t5
+385cd1ab amswap.h $a7, $t8, $t1
+385c99e1 amswap.h $ra, $a2, $t3
+385ce11b amswap.h $s4, $s1, $a4
+385cc293 amswap.h $t7, $t4, $t8
+385cc88f amswap.h $t3, $t6, $a0
+385cf8f9 amswap.h $s2, $s7, $a3
+385cb0db amswap.h $s4, $t0, $a2
+385cf9c7 amswap.h $a3, $s7, $t2
+385ca661 amswap.h $ra, $a5, $t7
+385cef43 amswap.h $sp, $s4, $s3
+385d5ed1 amadd.b $t5, $s0, $fp
+385d5354 amadd.b $t8, $t8, $s3
+385d5b9a amadd.b $s3, $fp, $s5
+385d5d36 amadd.b $fp, $s0, $a5
+385d380e amadd.b $t2, $t2, $zero
+385d45a5 amadd.b $a1, $t5, $t1
+385d2710 amadd.b $t4, $a5, $s1
+385d7911 amadd.b $t5, $s7, $a4
+385d5835 amadd.b $r21, $fp, $ra
+385d48e4 amadd.b $a0, $t6, $a3
+385dfcad amadd.h $t1, $s8, $a1
+385da520 amadd.h $zero, $a5, $a5
+385d8860 amadd.h $zero, $tp, $sp
+385ddd23 amadd.h $sp, $s0, $a5
+385d8045 amadd.h $a1, $zero, $tp
+385d8898 amadd.h $s1, $tp, $a0
+385de6c2 amadd.h $tp, $s2, $fp
+385dcc97 amadd.h $s0, $t7, $a0
+385d9953 amadd.h $t7, $a2, $a6
+385de1af amadd.h $t3, $s1, $t1
+385e0d60 amswap_db.b $zero, $sp, $a7
+385e13d9 amswap_db.b $s2, $a0, $s7
+385e5df5 amswap_db.b $r21, $s0, $t3
+385e5f72 amswap_db.b $t6, $s0, $s4
+385e3c59 amswap_db.b $s2, $t3, $tp
+385e7600 amswap_db.b $zero, $s6, $t4
+385e2519 amswap_db.b $s2, $a5, $a4
+385e5e4e amswap_db.b $t2, $s0, $t6
+385e2468 amswap_db.b $a4, $a5, $sp
+385e4517 amswap_db.b $s0, $t5, $a4
+385eecfe amswap_db.h $s7, $s4, $a3
+385eeaa8 amswap_db.h $a4, $s3, $r21
+385ecb2a amswap_db.h $a6, $t6, $s2
+385e927f amswap_db.h $s8, $a0, $t7
+385ecc0d amswap_db.h $t1, $t7, $zero
+385ee67e amswap_db.h $s7, $s2, $t7
+385ea6e8 amswap_db.h $a4, $a5, $s0
+385efc77 amswap_db.h $s0, $s8, $sp
+385e8777 amswap_db.h $s0, $ra, $s4
+385e9516 amswap_db.h $fp, $a1, $a4
+385f3c05 amadd_db.b $a1, $t3, $zero
+385f1d8d amadd_db.b $t1, $a3, $t0
+385f03bc amadd_db.b $s5, $zero, $s6
+385f5548 amadd_db.b $a4, $r21, $a6
+385f486d amadd_db.b $t1, $t6, $sp
+385f4fe0 amadd_db.b $zero, $t7, $s8
+385f662f amadd_db.b $t3, $s2, $t5
+385f23b8 amadd_db.b $s1, $a4, $s6
+385f0d25 amadd_db.b $a1, $sp, $a5
+385f6ea1 amadd_db.b $ra, $s4, $r21
+385fd08c amadd_db.h $t0, $t8, $a0
+385fd4cb amadd_db.h $a7, $r21, $a2
+385ff759 amadd_db.h $s2, $s6, $s3
+385fcabb amadd_db.h $s4, $t6, $r21
+385faada amadd_db.h $s3, $a6, $fp
+385fab9c amadd_db.h $s5, $a6, $s5
+385f990c amadd_db.h $t0, $a2, $a4
+385f90de amadd_db.h $s7, $a0, $a2
+385ff4c3 amadd_db.h $sp, $s6, $a2
+385fbc51 amadd_db.h $t5, $t3, $tp
+3860378d amswap.w $t1, $t1, $s5
+386011b0 amswap.w $t4, $a0, $t1
+38602e65 amswap.w $a1, $a7, $t7
+3860631d amswap.w $s6, $s1, $s1
+38606a06 amswap.w $a2, $s3, $t4
+38605154 amswap.w $t8, $t8, $a6
+386037f4 amswap.w $t8, $t1, $s8
+38603e35 amswap.w $r21, $t3, $t5
+386076c0 amswap.w $zero, $s6, $fp
+386043d0 amswap.w $t4, $t4, $s7
+3860c547 amswap.d $a3, $t5, $a6
+38609440 amswap.d $zero, $a1, $tp
+3860f729 amswap.d $a5, $s6, $s2
+3860e575 amswap.d $r21, $s2, $a7
+3860ee86 amswap.d $a2, $s4, $t8
+3860a1c4 amswap.d $a0, $a4, $t2
+3860aefd amswap.d $s6, $a7, $s0
+3860b7c1 amswap.d $ra, $t1, $s7
+3860ef0d amswap.d $t1, $s4, $s1
+386094fa amswap.d $s3, $a1, $a3
+38613000 amadd.w $zero, $t0, $zero
+38615464 amadd.w $a0, $r21, $sp
+38614112 amadd.w $t6, $t4, $a4
+38611162 amadd.w $tp, $a0, $a7
+38616d4d amadd.w $t1, $s4, $a6
+38615181 amadd.w $ra, $t8, $t0
+38611249 amadd.w $a5, $a0, $t6
+38616bbc amadd.w $s5, $s3, $s6
+386174da amadd.w $s3, $s6, $a2
+386131d8 amadd.w $s1, $t0, $t2
+3861982d amadd.d $t1, $a2, $ra
+3861cc54 amadd.d $t8, $t7, $tp
+3861dd53 amadd.d $t7, $s0, $a6
+38619d7b amadd.d $s4, $a3, $a7
+3861b6c4 amadd.d $a0, $t1, $fp
+3861dcf1 amadd.d $t5, $s0, $a3
+3861bbe9 amadd.d $a5, $t2, $s8
+3861cd15 amadd.d $r21, $t7, $a4
+38619743 amadd.d $sp, $a1, $s3
+3861c651 amadd.d $t5, $t5, $t6
+386213bd amand.w $s6, $a0, $s6
+386270dd amand.w $s6, $s5, $a2
+38625d80 amand.w $zero, $s0, $t0
+38626dd1 amand.w $t5, $s4, $t2
+386230f1 amand.w $t5, $t0, $a3
+38625210 amand.w $t4, $t8, $t4
+38622e94 amand.w $t8, $a7, $t8
+38625596 amand.w $fp, $r21, $t0
+38623d88 amand.w $a4, $t3, $t0
+38622fbb amand.w $s4, $a7, $s6
+38628e71 amand.d $t5, $sp, $t7
+38629847 amand.d $a3, $a2, $tp
+38629961 amand.d $ra, $a2, $a7
+3862e8a0 amand.d $zero, $s3, $a1
+38628e80 amand.d $zero, $sp, $t8
+3862bf1d amand.d $s6, $t3, $s1
+3862cef4 amand.d $t8, $t7, $s0
+3862fda7 amand.d $a3, $s8, $t1
+3862d53a amand.d $s3, $r21, $a5
+3862c44c amand.d $t0, $t5, $tp
+3863276d amor.w $t1, $a5, $s4
+38631227 amor.w $a3, $a0, $t5
+38634ac9 amor.w $a5, $t6, $fp
+3863115c amor.w $s5, $a0, $a6
+38635722 amor.w $tp, $r21, $s2
+3863783e amor.w $s7, $s7, $ra
+386343f3 amor.w $t7, $t4, $s8
+386335aa amor.w $a6, $t1, $t1
+38636584 amor.w $a0, $s2, $t0
+38632a07 amor.w $a3, $a6, $t4
+3863d81c amor.d $s5, $fp, $zero
+3863aab7 amor.d $s0, $a6, $r21
+38638d33 amor.d $t7, $sp, $a5
+38638f44 amor.d $a0, $sp, $s3
+3863c806 amor.d $a2, $t6, $zero
+3863f184 amor.d $a0, $s5, $t0
+3863af75 amor.d $r21, $a7, $s4
+3863d2b8 amor.d $s1, $t8, $r21
+38639b4e amor.d $t2, $a2, $s3
+3863eb2d amor.d $t1, $s3, $s2
+3864212a amxor.w $a6, $a4, $a5
+386457c8 amxor.w $a4, $r21, $s7
+38643ada amxor.w $s3, $t2, $fp
+3864231a amxor.w $s3, $a4, $s1
+38646310 amxor.w $t4, $s1, $s1
+3864032a amxor.w $a6, $zero, $s2
+386411e5 amxor.w $a1, $a0, $t3
+38642f01 amxor.w $ra, $a7, $s1
+386400bc amxor.w $s5, $zero, $a1
+386474e5 amxor.w $a1, $s6, $a3
+38649200 amxor.d $zero, $a0, $t4
+3864a09c amxor.d $s5, $a4, $a0
+3864ebc1 amxor.d $ra, $s3, $s7
+3864f1bf amxor.d $s8, $s5, $t1
+3864eb61 amxor.d $ra, $s3, $s4
+3864a171 amxor.d $t5, $a4, $a7
+3864fc4a amxor.d $a6, $s8, $tp
+3864d583 amxor.d $sp, $r21, $t0
+3864d3a0 amxor.d $zero, $t8, $s6
+3864b8b9 amxor.d $s2, $t2, $a1
+38650244 ammax.w $a0, $zero, $t6
+38650baf ammax.w $t3, $tp, $s6
+38653e65 ammax.w $a1, $t3, $t7
+3865045f ammax.w $s8, $ra, $tp
+386540b6 ammax.w $fp, $t4, $a1
+38654e45 ammax.w $a1, $t7, $t6
+38652a9b ammax.w $s4, $a6, $t8
+38653a08 ammax.w $a4, $t2, $t4
+38653b6b ammax.w $a7, $t2, $s4
+3865467e ammax.w $s7, $t5, $t7
+3865d236 ammax.d $fp, $t8, $t5
+3865cc9e ammax.d $s7, $t7, $a0
+3865c47c ammax.d $s5, $t5, $sp
+3865dfc0 ammax.d $zero, $s0, $s7
+3865cf7d ammax.d $s6, $t7, $s4
+3865f73f ammax.d $s8, $s6, $s2
+3865e2a8 ammax.d $a4, $s1, $r21
+386599e3 ammax.d $sp, $a2, $t3
+3865cfa8 ammax.d $a4, $t7, $s6
+3865e46a ammax.d $a6, $s2, $sp
+38667c1f ammin.w $s8, $s8, $zero
+38660e10 ammin.w $t4, $sp, $t4
+38667830 ammin.w $t4, $s7, $ra
+38663190 ammin.w $t4, $t0, $t0
+386611c3 ammin.w $sp, $a0, $t2
+38661cdf ammin.w $s8, $a3, $a2
+386639ab ammin.w $a7, $t2, $t1
+38667b84 ammin.w $a0, $s7, $s5
+38665196 ammin.w $fp, $t8, $t0
+38663142 ammin.w $tp, $t0, $a6
+3866e2e2 ammin.d $tp, $s1, $s0
+3866e459 ammin.d $s2, $s2, $tp
+3866d07e ammin.d $s7, $t8, $sp
+3866b334 ammin.d $t8, $t0, $s2
+3866d7bc ammin.d $s5, $r21, $s6
+3866e8b3 ammin.d $t7, $s3, $a1
+386699db ammin.d $s4, $a2, $t2
+3866f01a ammin.d $s3, $s5, $zero
+38668067 ammin.d $a3, $zero, $sp
+3866810a ammin.d $a6, $zero, $a4
+38676da3 ammax.wu $sp, $s4, $t1
+386701f1 ammax.wu $t5, $zero, $t3
+38670618 ammax.wu $s1, $ra, $t4
+38675405 ammax.wu $a1, $r21, $zero
+38670ba3 ammax.wu $sp, $tp, $s6
+38671a79 ammax.wu $s2, $a2, $t7
+38671fa9 ammax.wu $a5, $a3, $s6
+386719b3 ammax.wu $t7, $a2, $t1
+386709a1 ammax.wu $ra, $tp, $t1
+3867644e ammax.wu $t2, $s2, $tp
+3867ee63 ammax.du $sp, $s4, $t7
 3867e0f1 ammax.du $t5, $s1, $a3
-3867a5bb ammax.du $s4, $a5, $t1
-3867859f ammax.du $s8, $ra, $t0
-3867ebdf ammax.du $s8, $s3, $s7
-3867be4a ammax.du $a6, $t3, $t6
-3867efc2 ammax.du $tp, $s4, $s7
-3867b6b7 ammax.du $s0, $t1, $r21
-3867de10 ammax.du $t4, $s0, $t4
-3868462f ammin.wu $t3, $t5, $t5
-38682df4 ammin.wu $t8, $a7, $t3
-3868065d ammin.wu $s6, $ra, $t6
-386853b6 ammin.wu $fp, $t8, $s6
-38681250 ammin.wu $t4, $a0, $t6
-38680f58 ammin.wu $s1, $sp, $s3
-386832ab ammin.wu $a7, $t0, $r21
-38686834 ammin.wu $t8, $s3, $ra
-38686ae0 ammin.wu $zero, $s3, $s0
-386819c4 ammin.wu $a0, $a2, $t2
-3868c452 ammin.du $t6, $t5, $tp
-38688106 ammin.du $a2, $zero, $a4
-38688d55 ammin.du $r21, $sp, $a6
-3868d135 ammin.du $r21, $t8, $a5
-3868b340 ammin.du $zero, $t0, $s3
-3868e68d ammin.du $t1, $s2, $t8
-3868a30b ammin.du $a7, $a4, $s1
-3868a188 ammin.du $a4, $a4, $t0
-38688257 ammin.du $s0, $zero, $t6
-3868ef83 ammin.du $sp, $s4, $s5
-38690395 amswap_db.w $r21, $zero, $s5
-386972be amswap_db.w $s7, $s5, $r21
-38697177 amswap_db.w $s0, $s5, $a7
-3869523c amswap_db.w $s5, $t8, $t5
-38695736 amswap_db.w $fp, $r21, $s2
-38696b32 amswap_db.w $t6, $s3, $s2
-38695d74 amswap_db.w $t8, $s0, $a7
-386949f3 amswap_db.w $t7, $t6, $t3
-38691a09 amswap_db.w $a5, $a2, $t4
-3869791b amswap_db.w $s4, $s7, $a4
-3869b8fe amswap_db.d $s7, $t2, $a3
-3869ce90 amswap_db.d $t4, $t7, $t8
-3869856c amswap_db.d $t0, $ra, $a7
-3869e199 amswap_db.d $s2, $s1, $t0
-3869edb6 amswap_db.d $fp, $s4, $t1
-386994d1 amswap_db.d $t5, $a1, $a2
-3869ce08 amswap_db.d $a4, $t7, $t4
-3869faae amswap_db.d $t2, $s7, $r21
-3869ef03 amswap_db.d $sp, $s4, $s1
-38698723 amswap_db.d $sp, $ra, $s2
-386a3089 amadd_db.w $a5, $t0, $a0
-386a530d amadd_db.w $t1, $t8, $s1
-386a5f6f amadd_db.w $t3, $s0, $s4
-386a51d5 amadd_db.w $r21, $t8, $t2
-386a79d6 amadd_db.w $fp, $s7, $t2
-386a633a amadd_db.w $s3, $s1, $s2
-386a134f amadd_db.w $t3, $a0, $s3
-386a3156 amadd_db.w $fp, $t0, $a6
-386a0b33 amadd_db.w $t7, $tp, $s2
-386a1f47 amadd_db.w $a3, $a3, $s3
-386af62c amadd_db.d $t0, $s6, $t5
-386af8ac amadd_db.d $t0, $s7, $a1
-386ae82b amadd_db.d $a7, $s3, $ra
-386a8d91 amadd_db.d $t5, $sp, $t0
-386aa7ee amadd_db.d $t2, $a5, $s8
-386a82dc amadd_db.d $s5, $zero, $fp
-386ad9f8 amadd_db.d $s1, $fp, $t3
-386ad48d amadd_db.d $t1, $r21, $a0
-386ac602 amadd_db.d $tp, $t5, $t4
-386a97a0 amadd_db.d $zero, $a1, $s6
-386b3083 amand_db.w $sp, $t0, $a0
-386b2d8a amand_db.w $a6, $a7, $t0
-386b7151 amand_db.w $t5, $s5, $a6
-386b0a52 amand_db.w $t6, $tp, $t6
-386b1516 amand_db.w $fp, $a1, $a4
-386b403e amand_db.w $s7, $t4, $ra
-386b47cc amand_db.w $t0, $t5, $s7
-386b2ddf amand_db.w $s8, $a7, $t2
-386b0a86 amand_db.w $a2, $tp, $t8
-386b0ed5 amand_db.w $r21, $sp, $fp
-386b9d0d amand_db.d $t1, $a3, $a4
-386be05e amand_db.d $s7, $s1, $tp
-386ba049 amand_db.d $a5, $a4, $tp
-386bd521 amand_db.d $ra, $r21, $a5
-386b8526 amand_db.d $a2, $ra, $a5
-386bd674 amand_db.d $t8, $r21, $t7
-386bcdfb amand_db.d $s4, $t7, $t3
-386bde5a amand_db.d $s3, $s0, $t6
-386bc2be amand_db.d $s7, $t4, $r21
-386bed92 amand_db.d $t6, $s4, $t0
-386c6c65 amor_db.w $a1, $s4, $sp
-386c4a45 amor_db.w $a1, $t6, $t6
-386c04b1 amor_db.w $t5, $ra, $a1
-386c02c6 amor_db.w $a2, $zero, $fp
-386c1874 amor_db.w $t8, $a2, $sp
-386c4702 amor_db.w $tp, $t5, $s1
-386c4cf2 amor_db.w $t6, $t7, $a3
-386c4aaa amor_db.w $a6, $t6, $r21
-386c6acc amor_db.w $t0, $s3, $fp
-386c37b2 amor_db.w $t6, $t1, $s6
-386ca753 amor_db.d $t7, $a5, $s3
-386c9c0f amor_db.d $t3, $a3, $zero
-386ce668 amor_db.d $a4, $s2, $t7
-386cc594 amor_db.d $t8, $t5, $t0
-386cabad amor_db.d $t1, $a6, $s6
-386cd777 amor_db.d $s0, $r21, $s4
-386cc81c amor_db.d $s5, $t6, $zero
-386cb307 amor_db.d $a3, $t0, $s1
-386ce343 amor_db.d $sp, $s1, $s3
-386cb9b7 amor_db.d $s0, $t2, $t1
-386d24a4 amxor_db.w $a0, $a5, $a1
-386d1260 amxor_db.w $zero, $a0, $t7
-386d6616 amxor_db.w $fp, $s2, $t4
-386d0098 amxor_db.w $s1, $zero, $a0
-386d4650 amxor_db.w $t4, $t5, $t6
-386d6278 amxor_db.w $s1, $s1, $t7
-386d3114 amxor_db.w $t8, $t0, $a4
-386d52ca amxor_db.w $a6, $t8, $fp
-386d05dc amxor_db.w $s5, $ra, $t2
-386d22db amxor_db.w $s4, $a4, $fp
-386db34f amxor_db.d $t3, $t0, $s3
-386d809e amxor_db.d $s7, $zero, $a0
-386dd200 amxor_db.d $zero, $t8, $t4
-386dc0f8 amxor_db.d $s1, $t4, $a3
-386d8c99 amxor_db.d $s2, $sp, $a0
-386d8291 amxor_db.d $t5, $zero, $t8
-386d87db amxor_db.d $s4, $ra, $s7
-386d9868 amxor_db.d $a4, $a2, $sp
-386d90b0 amxor_db.d $t4, $a0, $a1
-386db3b0 amxor_db.d $t4, $t0, $s6
-386e15e5 ammax_db.w $a1, $a1, $t3
-386e7ec2 ammax_db.w $tp, $s8, $fp
-386e3584 ammax_db.w $a0, $t1, $t0
-386e7b6f ammax_db.w $t3, $s7, $s4
-386e68ad ammax_db.w $t1, $s3, $a1
-386e214f ammax_db.w $t3, $a4, $a6
-386e0644 ammax_db.w $a0, $ra, $t6
-386e7863 ammax_db.w $sp, $s7, $sp
-386e7153 ammax_db.w $t7, $s5, $a6
-386e7851 ammax_db.w $t5, $s7, $tp
-386ed990 ammax_db.d $t4, $fp, $t0
-386edadc ammax_db.d $s5, $fp, $fp
-386ecac3 ammax_db.d $sp, $t6, $fp
-386eb676 ammax_db.d $fp, $t1, $t7
-386e82c5 ammax_db.d $a1, $zero, $fp
-386eaed9 ammax_db.d $s2, $a7, $fp
-386ea6a6 ammax_db.d $a2, $a5, $r21
-386e9fcc ammax_db.d $t0, $a3, $s7
-386e9d67 ammax_db.d $a3, $a3, $a7
-386e9d69 ammax_db.d $a5, $a3, $a7
-386f4560 ammin_db.w $zero, $t5, $a7
-386f52b6 ammin_db.w $fp, $t8, $r21
-386f44e5 ammin_db.w $a1, $t5, $a3
-386f0523 ammin_db.w $sp, $ra, $a5
-386f09df ammin_db.w $s8, $tp, $t2
-386f4c29 ammin_db.w $a5, $t7, $ra
-386f404e ammin_db.w $t2, $t4, $tp
-386f386c ammin_db.w $t0, $t2, $sp
-386f3d31 ammin_db.w $t5, $t3, $a5
-386f2b28 ammin_db.w $a4, $a6, $s2
-386fbb72 ammin_db.d $t6, $t2, $s4
-386fd32a ammin_db.d $a6, $t8, $s2
-386fdd96 ammin_db.d $fp, $s0, $t0
-386fbefa ammin_db.d $s3, $t3, $s0
-386ff26e ammin_db.d $t2, $s5, $t7
-386fb98f ammin_db.d $t3, $t2, $t0
-386fcecb ammin_db.d $a7, $t7, $fp
-386fc7e5 ammin_db.d $a1, $t5, $s8
-386fcedb ammin_db.d $s4, $t7, $fp
-386fe0d7 ammin_db.d $s0, $s1, $a2
-3870411f ammax_db.wu $s8, $t4, $a4
-38704beb ammax_db.wu $a7, $t6, $s8
-387047d2 ammax_db.wu $t6, $t5, $s7
-387033e0 ammax_db.wu $zero, $t0, $s8
-38704a58 ammax_db.wu $s1, $t6, $t6
-38706923 ammax_db.wu $sp, $s3, $a5
-38707041 ammax_db.wu $ra, $s5, $tp
-38701ef6 ammax_db.wu $fp, $a3, $s0
-387078e4 ammax_db.wu $a0, $s7, $a3
-38700ff0 ammax_db.wu $t4, $sp, $s8
-3870c4b3 ammax_db.du $t7, $t5, $a1
-3870c12d ammax_db.du $t1, $t4, $a5
-38709ae3 ammax_db.du $sp, $a2, $s0
-3870cc5b ammax_db.du $s4, $t7, $tp
-3870c7d4 ammax_db.du $t8, $t5, $s7
-3870f4ec ammax_db.du $t0, $s6, $a3
-387096a0 ammax_db.du $zero, $a1, $r21
-38708352 ammax_db.du $t6, $zero, $s3
-3870edf3 ammax_db.du $t7, $s4, $t3
-38708107 ammax_db.du $a3, $zero, $a4
-38717d94 ammin_db.wu $t8, $s8, $t0
-3871079d ammin_db.wu $s6, $ra, $s5
-38711414 ammin_db.wu $t8, $a1, $zero
-387174f0 ammin_db.wu $t4, $s6, $a3
-38717bb2 ammin_db.wu $t6, $s7, $s6
-387124cf ammin_db.wu $t3, $a5, $a2
-38714daa ammin_db.wu $a6, $t7, $t1
-387110cc ammin_db.wu $t0, $a0, $a2
-38714b5e ammin_db.wu $s7, $t6, $s3
-387162e2 ammin_db.wu $tp, $s1, $s0
-3871bf3e ammin_db.du $s7, $t3, $s2
-3871eef5 ammin_db.du $r21, $s4, $s0
-3871d01f ammin_db.du $s8, $t8, $zero
-3871e0d5 ammin_db.du $r21, $s1, $a2
-3871cca2 ammin_db.du $tp, $t7, $a1
-3871d474 ammin_db.du $t8, $r21, $sp
-3871f95d ammin_db.du $s6, $s7, $a6
-3871c3ca ammin_db.du $a6, $t4, $s7
-3871d824 ammin_db.du $a0, $fp, $ra
-3871fa93 ammin_db.du $t7, $s7, $t8
-38720b63 dbar 0xb63
-38723ec2 dbar 0x3ec2
-38727369 dbar 0x7369
-387245e2 dbar 0x45e2
-38720834 dbar 0x834
-387232a6 dbar 0x32a6
-38722a8c dbar 0x2a8c
-387203b8 dbar 0x3b8
-38725ef1 dbar 0x5ef1
-38727810 dbar 0x7810
-3872815e ibar 0x15e
-3872c2ea ibar 0x42ea
-3872d1f5 ibar 0x51f5
-3872be3a ibar 0x3e3a
-3872e0a3 ibar 0x60a3
-3872ff3e ibar 0x7f3e
-3872ad81 ibar 0x2d81
-3872f0b0 ibar 0x70b0
-38728962 ibar 0x962
-3872ea22 ibar 0x6a22
-3874597c fldgt.s $fs4, $a7, $fp
-387442d4 fldgt.s $ft12, $fp, $t4
-38746348 fldgt.s $ft0, $s3, $s1
-387419de fldgt.s $fs6, $t2, $a2
-38742d34 fldgt.s $ft12, $a5, $a7
-38740415 fldgt.s $ft13, $zero, $ra
-3874168d fldgt.s $ft5, $t8, $a1
-38743bc7 fldgt.s $fa7, $s7, $t2
-387461a8 fldgt.s $ft0, $t1, $s1
-38740251 fldgt.s $ft9, $t6, $zero
-3874f72c fldgt.d $ft4, $s2, $s6
-387499b6 fldgt.d $ft14, $t1, $a2
-3874d2de fldgt.d $fs6, $fp, $t8
-3874b4b5 fldgt.d $ft13, $a1, $t1
-3874aa9f fldgt.d $fs7, $t8, $a6
-38748143 fldgt.d $fa3, $a6, $zero
-3874af07 fldgt.d $fa7, $s1, $a7
-3874946e fldgt.d $ft6, $sp, $a1
-3874c060 fldgt.d $fa0, $sp, $t4
-3874c69e fldgt.d $fs6, $t8, $t5
-387527ce fldle.s $ft6, $s7, $a5
-387527f5 fldle.s $ft13, $s8, $a5
-38752591 fldle.s $ft9, $t0, $a5
-3875004e fldle.s $ft6, $tp, $zero
-38750c9a fldle.s $fs2, $a0, $sp
-3875558d fldle.s $ft5, $t0, $r21
-387505d2 fldle.s $ft10, $t2, $ra
-387517f7 fldle.s $ft15, $s8, $a1
-3875126c fldle.s $ft4, $t7, $a0
-38755930 fldle.s $ft8, $a5, $fp
-3875e70d fldle.d $ft5, $s1, $s2
-3875e534 fldle.d $ft12, $a5, $s2
-3875ce82 fldle.d $fa2, $t8, $t7
-3875e24c fldle.d $ft4, $t6, $s1
-3875e246 fldle.d $fa6, $t6, $s1
-38759899 fldle.d $fs1, $a0, $a2
-3875eb69 fldle.d $ft1, $s4, $s3
-3875aa95 fldle.d $ft13, $t8, $a6
-3875ce24 fldle.d $fa4, $t5, $t7
-3875c63f fldle.d $fs7, $t5, $t5
-38766aa5 fstgt.s $fa5, $r21, $s3
-38762326 fstgt.s $fa6, $s2, $a4
-387675a5 fstgt.s $fa5, $t1, $s6
-387615ce fstgt.s $ft6, $t2, $a1
-3876398a fstgt.s $ft2, $t0, $t2
-3876172b fstgt.s $ft3, $s2, $a1
-38760d00 fstgt.s $fa0, $a4, $sp
-38765f7d fstgt.s $fs5, $s4, $s0
-387627e7 fstgt.s $fa7, $s8, $a5
-387643f2 fstgt.s $ft10, $s8, $t4
-3876c3f1 fstgt.d $ft9, $s8, $t4
-3876d9ea fstgt.d $ft2, $t3, $fp
-3876fc07 fstgt.d $fa7, $zero, $s8
-38769e80 fstgt.d $fa0, $t8, $a3
-3876d8bb fstgt.d $fs3, $a1, $fp
-3876f355 fstgt.d $ft13, $s3, $s5
-38769410 fstgt.d $ft8, $zero, $a1
-3876a374 fstgt.d $ft12, $s4, $a4
-38769ff9 fstgt.d $fs1, $s8, $a3
-38769737 fstgt.d $ft15, $s2, $a1
-387738c5 fstle.s $fa5, $a2, $t2
-38772e74 fstle.s $ft12, $t7, $a7
-387755aa fstle.s $ft2, $t1, $r21
-38776779 fstle.s $fs1, $s4, $s2
-387700d1 fstle.s $ft9, $a2, $zero
-387709ec fstle.s $ft4, $t3, $tp
-38774fb5 fstle.s $ft13, $s6, $t7
-38774e99 fstle.s $fs1, $t8, $t7
-387715c5 fstle.s $fa5, $t2, $a1
-38777556 fstle.s $ft14, $a6, $s6
-3877a04a fstle.d $ft2, $tp, $a4
-38778845 fstle.d $fa5, $tp, $tp
-3877a490 fstle.d $ft8, $a0, $a5
-3877a929 fstle.d $ft1, $a5, $a6
-3877de6c fstle.d $ft4, $t7, $s0
-3877c2e8 fstle.d $ft0, $s0, $t4
-3877f8d3 fstle.d $ft11, $a2, $s7
-3877b530 fstle.d $ft8, $a5, $t1
-38779ee4 fstle.d $fa4, $s0, $a3
-38778324 fstle.d $fa4, $s2, $zero
-387853da ldgt.b $s3, $s7, $t8
-38787c52 ldgt.b $t6, $tp, $s8
-3878497f ldgt.b $s8, $a7, $t6
-38782f29 ldgt.b $a5, $s2, $a7
-38787c6f ldgt.b $t3, $sp, $s8
-38784a0a ldgt.b $a6, $t4, $t6
-387850dd ldgt.b $s6, $a2, $t8
-38781305 ldgt.b $a1, $s1, $a0
-387872a2 ldgt.b $tp, $r21, $s5
-38782a97 ldgt.b $s0, $t8, $a6
-3878a1c2 ldgt.h $tp, $t2, $a4
-3878b9a3 ldgt.h $sp, $t1, $t2
-3878b7ad ldgt.h $t1, $s6, $t1
-3878b17c ldgt.h $s5, $a7, $t0
-3878c3c8 ldgt.h $a4, $s7, $t4
-3878b9ac ldgt.h $t0, $t1, $t2
-38788a88 ldgt.h $a4, $t8, $tp
-387880bf ldgt.h $s8, $a1, $zero
-3878cdfe ldgt.h $s7, $t3, $t7
-3878e2a3 ldgt.h $sp, $r21, $s1
-3879428b ldgt.w $a7, $t8, $t4
-38797578 ldgt.w $s1, $a7, $s6
-38797bf3 ldgt.w $t7, $s8, $s7
-387905b5 ldgt.w $r21, $t1, $ra
-38797b9f ldgt.w $s8, $s5, $s7
-38797f15 ldgt.w $r21, $s1, $s8
-38796a7b ldgt.w $s4, $t7, $s3
-38795c7b ldgt.w $s4, $sp, $s0
-387914f2 ldgt.w $t6, $a3, $a1
-38795f2e ldgt.w $t2, $s2, $s0
-3879fdf9 ldgt.d $s2, $t3, $s8
-3879ecee ldgt.d $t2, $a3, $s4
-3879e69c ldgt.d $s5, $t8, $s2
-3879aa5f ldgt.d $s8, $t6, $a6
-3879e452 ldgt.d $t6, $tp, $s2
-3879ea73 ldgt.d $t7, $t7, $s3
-3879ea7d ldgt.d $s6, $t7, $s3
-3879b99a ldgt.d $s3, $t0, $t2
-3879dcdf ldgt.d $s8, $a2, $s0
-3879d9b7 ldgt.d $s0, $t1, $fp
-387a5967 ldle.b $a3, $a7, $fp
-387a13ac ldle.b $t0, $s6, $a0
-387a02e1 ldle.b $ra, $s0, $zero
-387a6102 ldle.b $tp, $a4, $s1
-387a4cd4 ldle.b $t8, $a2, $t7
-387a6ae4 ldle.b $a0, $s0, $s3
-387a077d ldle.b $s6, $s4, $ra
-387a05ad ldle.b $t1, $t1, $ra
-387a3bdb ldle.b $s4, $s7, $t2
-387a63c2 ldle.b $tp, $s7, $s1
-387a869e ldle.h $s7, $t8, $ra
-387abe96 ldle.h $fp, $t8, $t3
-387aa7d9 ldle.h $s2, $s7, $a5
-387a8f56 ldle.h $fp, $s3, $sp
-387ab995 ldle.h $r21, $t0, $t2
-387aa29b ldle.h $s4, $t8, $a4
-387adc18 ldle.h $s1, $zero, $s0
-387ab531 ldle.h $t5, $a5, $t1
-387ae0cc ldle.h $t0, $a2, $s1
-387af776 ldle.h $fp, $s4, $s6
-387b230e ldle.w $t2, $s1, $a4
-387b3a7e ldle.w $s7, $t7, $t2
-387b02f5 ldle.w $r21, $s0, $zero
-387b1b5f ldle.w $s8, $s3, $a2
-387b647c ldle.w $s5, $sp, $s2
-387b3a31 ldle.w $t5, $t5, $t2
-387b7b0d ldle.w $t1, $s1, $s7
-387b7d70 ldle.w $t4, $a7, $s8
-387b7347 ldle.w $a3, $s3, $s5
-387b4ed4 ldle.w $t8, $fp, $t7
-387bfcba ldle.d $s3, $a1, $s8
-387b84d7 ldle.d $s0, $a2, $ra
-387b92ee ldle.d $t2, $s0, $a0
-387bf873 ldle.d $t7, $sp, $s7
-387bfa04 ldle.d $a0, $t4, $s7
-387bcca0 ldle.d $zero, $a1, $t7
-387b8cb8 ldle.d $s1, $a1, $sp
-387ba773 ldle.d $t7, $s4, $a5
-387bcf80 ldle.d $zero, $s5, $t7
-387bf011 ldle.d $t5, $zero, $s5
-387c7b1e stgt.b $s7, $s1, $s7
-387c04a5 stgt.b $a1, $a1, $ra
-387c3975 stgt.b $r21, $a7, $t2
-387c3375 stgt.b $r21, $s4, $t0
-387c384e stgt.b $t2, $tp, $t2
-387c7d25 stgt.b $a1, $a5, $s8
-387c1faa stgt.b $a6, $s6, $a3
-387c5e33 stgt.b $t7, $t5, $s0
-387c2955 stgt.b $r21, $a6, $a6
-387c4091 stgt.b $t5, $a0, $t4
-387cb2df stgt.h $s8, $fp, $t0
-387caffa stgt.h $s3, $s8, $a7
-387cf4ef stgt.h $t3, $a3, $s6
-387c8717 stgt.h $s0, $s1, $ra
-387cf615 stgt.h $r21, $t4, $s6
-387cfc63 stgt.h $sp, $sp, $s8
-387ce9a3 stgt.h $sp, $t1, $s3
-387c8c69 stgt.h $a5, $sp, $sp
-387c8626 stgt.h $a2, $t5, $ra
-387c99d3 stgt.h $t7, $t2, $a2
-387d2dbb stgt.w $s4, $t1, $a7
-387d156e stgt.w $t2, $a7, $a1
-387d2e41 stgt.w $ra, $t6, $a7
-387d7114 stgt.w $t8, $a4, $s5
-387d7cda stgt.w $s3, $a2, $s8
-387d00bf stgt.w $s8, $a1, $zero
-387d76d2 stgt.w $t6, $fp, $s6
-387d41db stgt.w $s4, $t2, $t4
-387d7afa stgt.w $s3, $s0, $s7
-387d7a48 stgt.w $a4, $t6, $s7
-387dff3d stgt.d $s6, $s2, $s8
-387df97f stgt.d $s8, $a7, $s7
-387df834 stgt.d $t8, $ra, $s7
-387dd4f1 stgt.d $t5, $a3, $r21
-387dbaa3 stgt.d $sp, $r21, $t2
-387d8a0b stgt.d $a7, $t4, $tp
-387dfa4e stgt.d $t2, $t6, $s7
-387dac98 stgt.d $s1, $a0, $a7
-387dd9b0 stgt.d $t4, $t1, $fp
-387de7f3 stgt.d $t7, $s8, $s2
-387e10d4 stle.b $t8, $a2, $a0
-387e47b8 stle.b $s1, $s6, $t5
-387e3aa4 stle.b $a0, $r21, $t2
-387e16f3 stle.b $t7, $s0, $a1
-387e3840 stle.b $zero, $tp, $t2
-387e6bda stle.b $s3, $s7, $s3
-387e5738 stle.b $s1, $s2, $r21
-387e47fa stle.b $s3, $s8, $t5
-387e0848 stle.b $a4, $tp, $tp
-387e6571 stle.b $t5, $a7, $s2
-387eb5a2 stle.h $tp, $t1, $t1
-387e9307 stle.h $a3, $s1, $a0
-387ec974 stle.h $t8, $a7, $t6
-387e928d stle.h $t1, $t8, $a0
-387ed72f stle.h $t3, $s2, $r21
-387ec6c7 stle.h $a3, $fp, $t5
-387e8e51 stle.h $t5, $t6, $sp
-387eab4b stle.h $a7, $s3, $a6
-387eb350 stle.h $t4, $s3, $t0
-387eb780 stle.h $zero, $s5, $t1
-387f05e2 stle.w $tp, $t3, $ra
-387f4745 stle.w $a1, $s3, $t5
-387f255f stle.w $s8, $a6, $a5
-387f3c9a stle.w $s3, $a0, $t3
-387f73e4 stle.w $a0, $s8, $s5
-387f6eeb stle.w $a7, $s0, $s4
-387f408c stle.w $t0, $a0, $t4
-387f6163 stle.w $sp, $a7, $s1
-387f6fe5 stle.w $a1, $s8, $s4
-387f4f2a stle.w $a6, $s2, $t7
-387fc6a3 stle.d $sp, $r21, $t5
-387fff02 stle.d $tp, $s1, $s8
-387fafca stle.d $a6, $s7, $a7
-387fca23 stle.d $sp, $t5, $t6
-387f9f40 stle.d $zero, $s3, $a3
-387fdff8 stle.d $s1, $s8, $s0
-387fa20b stle.d $a7, $t4, $a4
-387fba32 stle.d $t6, $t5, $t2
-387fc08f stle.d $t3, $a0, $t4
-387faf23 stle.d $sp, $s2, $a7
-43dedfbd beqz $s6, -532772
-4386f2f3 beqz $s0, -3176720
-4397bf18 beqz $s1, -1861700
-408b2d5a beqz $a6, -1537236
-403e268c beqz $t8, 3161636
-4253be75 beqz $t7, -2731076
-4356db56 beqz $s3, -2402600
-40245247 beqz $t6, 1844304
-435f0667 beqz $t7, 2055940
-435d86b4 beqz $r21, -2925180
-46384023 bnez $ra, 931904
-46da30aa bnez $a1, 2808368
-47f22d6e bnez $a7, 3928620
-47e399ca bnez $t2, 2876312
-44e5c961 bnez $a7, 320968
-477c1ef7 bnez $s0, -2130916
-459020b2 bnez $a1, -3567584
-46fa502f bnez $ra, 4127312
-468dbc3a bnez $ra, -1405508
-4564c5dc bnez $t2, -957244
-4ac514f8 bceqz $fcc7, -1915628
-49c1f866 bceqz $fcc3, 1688056
-4b960862 bceqz $fcc3, 759304
-48330023 bceqz $fcc1, 799488
-483b10b1 bceqz $fcc5, -3917040
-49af6031 bceqz $fcc1, -3821728
-4809cc56 bceqz $fcc2, -2618932
-496e785e bceqz $fcc2, -430472
-48114c31 bceqz $fcc1, -3927732
-4a10ccd9 bceqz $fcc6, -1699636
-490e5d26 bcnez $fcc1, 1642076
-4bddf579 bcnez $fcc3, -1581580
-4aab8192 bcnez $fcc4, -3495040
-4b51a948 bcnez $fcc2, 2314664
-4813bd20 bcnez $fcc1, 5052
-4a6dd1b5 bcnez $fcc5, -2724400
-484a3925 bcnez $fcc1, 1329720
-4ad7812c bcnez $fcc1, 3331968
-4833d1e3 bcnez $fcc7, 799696
-492e5db8 bcnez $fcc5, -2019748
-4ce5e8cd jirl $t1, $a2, 58856
-4de1a92e jirl $t2, $a5, 123304
-4e27f16d jirl $t1, $a7, -120848
-4ef206cc jirl $t0, $fp, -69116
-4e1d18ee jirl $t2, $a3, -123624
-4cb8f2a5 jirl $a1, $r21, 47344
-4dcaa75a jirl $s3, $s3, 117412
-4e9c2960 jirl $zero, $a7, -91096
-4d5d2e7f jirl $s8, $t7, 89388
-4c454e84 jirl $a0, $t8, 17740
-5064f98c b 103834872
-500ab815 b 5507768
-5028f7f8 b -2086668
-538223e2 b -7634400
-5392f8c5 b 51876600
-5138b2db b -76728144
-52b25ebc b -84757924
-50006180 b 100663392
-53444811 b 4670536
-5369eb09 b -64525848
-54d172c3 bl -83046032
-5456e844 bl 17848040
-578cc2d1 bl -79196992
-5607fda9 bl 111544316
-57d3abd4 bl -11283544
-5491144d bl 20222228
-57256bf6 bl -2415256
-57de9a7f bl -100671848
-5786781a bl 7046776
-55f96015 bl 5634400
-5a6649e1 beq $t3, $ra, -104888
-5b1dbcef beq $a3, $t3, -57924
-5af4b056 beq $tp, $fp, -68432
-58bcb939 beq $a5, $s2, 48312
-5aa617a8 beq $s6, $a4, -88556
-5a26623c beq $t5, $s5, -121248
-58494713 beq $s1, $t7, 18756
-59c5ba59 beq $t6, $s2, 116152
-588d99fb beq $t3, $s4, 36248
-5a1392ee beq $s0, $t2, -126064
-5c3fee5c bne $t6, $s5, 16364
-5d5393d5 bne $s7, $r21, 86928
-5fff5214 bne $t4, $t8, -176
-5f7b50ff bne $a3, $s8, -33968
-5d7f04fc bne $a3, $s5, 98052
-5cf1d29b bne $t8, $s4, 61904
-5d2b7983 bne $t0, $sp, 76664
-5fe5dd0c bne $a4, $t0, -6692
-5e4248b7 bne $a1, $s0, -114104
-5e06594c bne $a6, $t0, -129448
-6174a3dc blt $s7, $s5, 95392
-60df7f58 blt $s3, $s1, 57212
-624eeabb blt $r21, $s4, -110872
-60093170 blt $a7, $t4, 2352
-620bb8c2 blt $a2, $tp, -128072
-626fe5b4 blt $t1, $t8, -102428
-639788b2 blt $a1, $t6, -26744
-60d46282 blt $t8, $tp, 54368
-608ae204 blt $t4, $a0, 35552
-62ed13b5 blt $s6, $r21, -70384
-651390fa bge $a3, $s3, 70544
-67cc9b2a bge $s2, $a6, -13160
-666cfe96 bge $t8, $fp, -103172
-653f81c3 bge $t2, $sp, 81792
-6729fb89 bge $s5, $a5, -54792
-67debab3 bge $r21, $t7, -8520
-67457306 bge $s1, $a2, -47760
-660791df bge $t2, $s8, -129136
-651186cd bge $fp, $t1, 70020
-653765b3 bge $t1, $t7, 79716
-6a7f95dd bltu $t2, $s6, -98412
-698ba066 bltu $sp, $a2, 101280
-6bf9af2e bltu $s2, $t2, -1620
-6b32fdfc bltu $t3, $s5, -52484
-68943d80 bltu $t0, $zero, 37948
-68a53377 bltu $s4, $s0, 42288
-699c7ef3 bltu $s0, $t7, 105596
-693b3a97 bltu $t8, $s0, 80696
-6b70c87b bltu $sp, $s4, -36664
-684102e0 bltu $s0, $zero, 16640
-6e7a6a81 bgeu $t8, $ra, -99736
-6edc7f8e bgeu $s5, $t2, -74628
-6f9bc5ed bgeu $t3, $t1, -25660
-6f66225d bgeu $t6, $s6, -39392
-6eaf0b39 bgeu $s2, $s2, -86264
-6fe8c28c bgeu $t8, $t0, -5952
-6d8ad4b0 bgeu $a1, $t4, 101076
-6e32d367 bgeu $s4, $a3, -118064
-6cea03bd bgeu $s6, $s6, 59904
-6fafed06 bgeu $a4, $a2, -20500
+3867fe82 ammax.du $tp, $s8, $t8
+3867a0e5 ammax.du $a1, $a4, $a3
+3867bed0 ammax.du $t4, $t3, $fp
+3867ef6b ammax.du $a7, $s4, $s4
+3867ac5b ammax.du $s4, $a7, $tp
+3867f6ff ammax.du $s8, $s6, $s0
+3867cd67 ammax.du $a3, $t7, $a7
+3867d838 ammax.du $s1, $fp, $ra
+38687cc2 ammin.wu $tp, $s8, $a2
+386815cd ammin.wu $t1, $a1, $t2
+38682e9b ammin.wu $s4, $a7, $t8
+38687e1c ammin.wu $s5, $s8, $t4
+38680bb5 ammin.wu $r21, $tp, $s6
+386862b3 ammin.wu $t7, $s1, $r21
+38686f4d ammin.wu $t1, $s4, $s3
+38686eeb ammin.wu $a7, $s4, $s0
+38685de6 ammin.wu $a2, $s0, $t3
+38687830 ammin.wu $t4, $s7, $ra
+3868d81e ammin.du $s7, $fp, $zero
+3868b231 ammin.du $t5, $t0, $t5
+3868cb58 ammin.du $s1, $t6, $s3
+3868cf51 ammin.du $t5, $t7, $s3
+3868bc1a ammin.du $s3, $t3, $zero
+3868def6 ammin.du $fp, $s0, $s0
+3868a19a ammin.du $s3, $a4, $t0
+3868d5d1 ammin.du $t5, $r21, $t2
+3868d3ea ammin.du $a6, $t8, $s8
+38689291 ammin.du $t5, $a0, $t8
+38697e0c amswap_db.w $t0, $s8, $t4
+38693d10 amswap_db.w $t4, $t3, $a4
+38697c4b amswap_db.w $a7, $s8, $tp
+38694d27 amswap_db.w $a3, $t7, $a5
+38692ae2 amswap_db.w $tp, $a6, $s0
+38693740 amswap_db.w $zero, $t1, $s3
+38692f43 amswap_db.w $sp, $a7, $s3
+3869493e amswap_db.w $s7, $t6, $a5
+386963b8 amswap_db.w $s1, $s1, $s6
+38691496 amswap_db.w $fp, $a1, $a0
+386995ab amswap_db.d $a7, $a1, $t1
+3869d3bd amswap_db.d $s6, $t8, $s6
+3869ebed amswap_db.d $t1, $s3, $s8
+3869bec4 amswap_db.d $a0, $t3, $fp
+38698695 amswap_db.d $r21, $ra, $t8
+3869b6ef amswap_db.d $t3, $t1, $s0
+3869e587 amswap_db.d $a3, $s2, $t0
+3869f8b8 amswap_db.d $s1, $s7, $a1
+386999bb amswap_db.d $s4, $a2, $t1
+3869a86c amswap_db.d $t0, $a6, $sp
+386a290a amadd_db.w $a6, $a6, $a4
+386a37b4 amadd_db.w $t8, $t1, $s6
+386a46d4 amadd_db.w $t8, $t5, $fp
+386a3f83 amadd_db.w $sp, $t3, $s5
+386a7c38 amadd_db.w $s1, $s8, $ra
+386a4a25 amadd_db.w $a1, $t6, $t5
+386a75b5 amadd_db.w $r21, $s6, $t1
+386a5beb amadd_db.w $a7, $fp, $s8
+386a7af4 amadd_db.w $t8, $s7, $s0
+386a3bcc amadd_db.w $t0, $t2, $s7
+386af6a8 amadd_db.d $a4, $s6, $r21
+386ae8dc amadd_db.d $s5, $s3, $a2
+386ab6d0 amadd_db.d $t4, $t1, $fp
+386ad3fd amadd_db.d $s6, $t8, $s8
+386a82e3 amadd_db.d $sp, $zero, $s0
+386ae0f1 amadd_db.d $t5, $s1, $a3
+386aa5bb amadd_db.d $s4, $a5, $t1
+386a859f amadd_db.d $s8, $ra, $t0
+386aebdf amadd_db.d $s8, $s3, $s7
+386abe4a amadd_db.d $a6, $t3, $t6
+386b6fc2 amand_db.w $tp, $s4, $s7
+386b36b7 amand_db.w $s0, $t1, $r21
+386b5e10 amand_db.w $t4, $s0, $t4
+386b462f amand_db.w $t3, $t5, $t5
+386b2df4 amand_db.w $t8, $a7, $t3
+386b065d amand_db.w $s6, $ra, $t6
+386b53b6 amand_db.w $fp, $t8, $s6
+386b1250 amand_db.w $t4, $a0, $t6
+386b0f58 amand_db.w $s1, $sp, $s3
+386b32ab amand_db.w $a7, $t0, $r21
+386be834 amand_db.d $t8, $s3, $ra
+386beae0 amand_db.d $zero, $s3, $s0
+386b99c4 amand_db.d $a0, $a2, $t2
+386bc452 amand_db.d $t6, $t5, $tp
+386b8106 amand_db.d $a2, $zero, $a4
+386b8d55 amand_db.d $r21, $sp, $a6
+386bd135 amand_db.d $r21, $t8, $a5
+386bb340 amand_db.d $zero, $t0, $s3
+386be68d amand_db.d $t1, $s2, $t8
+386ba30b amand_db.d $a7, $a4, $s1
+386c2188 amor_db.w $a4, $a4, $t0
+386c0257 amor_db.w $s0, $zero, $t6
+386c6f83 amor_db.w $sp, $s4, $s5
+386c0395 amor_db.w $r21, $zero, $s5
+386c72be amor_db.w $s7, $s5, $r21
+386c7177 amor_db.w $s0, $s5, $a7
+386c523c amor_db.w $s5, $t8, $t5
+386c5736 amor_db.w $fp, $r21, $s2
+386c6b32 amor_db.w $t6, $s3, $s2
+386c5d74 amor_db.w $t8, $s0, $a7
+386cc9f3 amor_db.d $t7, $t6, $t3
+386c9a09 amor_db.d $a5, $a2, $t4
+386cf91b amor_db.d $s4, $s7, $a4
+386cb8fe amor_db.d $s7, $t2, $a3
+386cce90 amor_db.d $t4, $t7, $t8
+386c856c amor_db.d $t0, $ra, $a7
+386ce199 amor_db.d $s2, $s1, $t0
+386cedb6 amor_db.d $fp, $s4, $t1
+386c94d1 amor_db.d $t5, $a1, $a2
+386cce08 amor_db.d $a4, $t7, $t4
+386d7aae amxor_db.w $t2, $s7, $r21
+386d6f03 amxor_db.w $sp, $s4, $s1
+386d0723 amxor_db.w $sp, $ra, $s2
+386d3089 amxor_db.w $a5, $t0, $a0
+386d530d amxor_db.w $t1, $t8, $s1
+386d5f6f amxor_db.w $t3, $s0, $s4
+386d51d5 amxor_db.w $r21, $t8, $t2
+386d79d6 amxor_db.w $fp, $s7, $t2
+386d633a amxor_db.w $s3, $s1, $s2
+386d134f amxor_db.w $t3, $a0, $s3
+386db156 amxor_db.d $fp, $t0, $a6
+386d8b33 amxor_db.d $t7, $tp, $s2
+386d9f47 amxor_db.d $a3, $a3, $s3
+386df62c amxor_db.d $t0, $s6, $t5
+386df8ac amxor_db.d $t0, $s7, $a1
+386de82b amxor_db.d $a7, $s3, $ra
+386d8d91 amxor_db.d $t5, $sp, $t0
+386da7ee amxor_db.d $t2, $a5, $s8
+386d82dc amxor_db.d $s5, $zero, $fp
+386dd9f8 amxor_db.d $s1, $fp, $t3
+386e548d ammax_db.w $t1, $r21, $a0
+386e4602 ammax_db.w $tp, $t5, $t4
+386e17a0 ammax_db.w $zero, $a1, $s6
+386e3083 ammax_db.w $sp, $t0, $a0
+386e2d8a ammax_db.w $a6, $a7, $t0
+386e7151 ammax_db.w $t5, $s5, $a6
+386e0a52 ammax_db.w $t6, $tp, $t6
+386e1516 ammax_db.w $fp, $a1, $a4
+386e403e ammax_db.w $s7, $t4, $ra
+386e47cc ammax_db.w $t0, $t5, $s7
+386eaddf ammax_db.d $s8, $a7, $t2
+386e8a86 ammax_db.d $a2, $tp, $t8
+386e8ed5 ammax_db.d $r21, $sp, $fp
+386e9d0d ammax_db.d $t1, $a3, $a4
+386ee05e ammax_db.d $s7, $s1, $tp
+386ea049 ammax_db.d $a5, $a4, $tp
+386ed521 ammax_db.d $ra, $r21, $a5
+386e8526 ammax_db.d $a2, $ra, $a5
+386ed674 ammax_db.d $t8, $r21, $t7
+386ecdfb ammax_db.d $s4, $t7, $t3
+386f5e5a ammin_db.w $s3, $s0, $t6
+386f42be ammin_db.w $s7, $t4, $r21
+386f6d92 ammin_db.w $t6, $s4, $t0
+386f6c65 ammin_db.w $a1, $s4, $sp
+386f4a45 ammin_db.w $a1, $t6, $t6
+386f04b1 ammin_db.w $t5, $ra, $a1
+386f02c6 ammin_db.w $a2, $zero, $fp
+386f1874 ammin_db.w $t8, $a2, $sp
+386f4702 ammin_db.w $tp, $t5, $s1
+386f4cf2 ammin_db.w $t6, $t7, $a3
+386fcaaa ammin_db.d $a6, $t6, $r21
+386feacc ammin_db.d $t0, $s3, $fp
+386fb7b2 ammin_db.d $t6, $t1, $s6
+386fa753 ammin_db.d $t7, $a5, $s3
+386f9c0f ammin_db.d $t3, $a3, $zero
+386fe668 ammin_db.d $a4, $s2, $t7
+386fc594 ammin_db.d $t8, $t5, $t0
+386fabad ammin_db.d $t1, $a6, $s6
+386fd777 ammin_db.d $s0, $r21, $s4
+386fc81c ammin_db.d $s5, $t6, $zero
+38703307 ammax_db.wu $a3, $t0, $s1
+38706343 ammax_db.wu $sp, $s1, $s3
+387039b7 ammax_db.wu $s0, $t2, $t1
+387024a4 ammax_db.wu $a0, $a5, $a1
+38701260 ammax_db.wu $zero, $a0, $t7
+38706616 ammax_db.wu $fp, $s2, $t4
+38700098 ammax_db.wu $s1, $zero, $a0
+38704650 ammax_db.wu $t4, $t5, $t6
+38706278 ammax_db.wu $s1, $s1, $t7
+38703114 ammax_db.wu $t8, $t0, $a4
+3870d2ca ammax_db.du $a6, $t8, $fp
+387085dc ammax_db.du $s5, $ra, $t2
+3870a2db ammax_db.du $s4, $a4, $fp
+3870b34f ammax_db.du $t3, $t0, $s3
+3870809e ammax_db.du $s7, $zero, $a0
+3870d200 ammax_db.du $zero, $t8, $t4
+3870c0f8 ammax_db.du $s1, $t4, $a3
+38708c99 ammax_db.du $s2, $sp, $a0
+38708291 ammax_db.du $t5, $zero, $t8
+387087db ammax_db.du $s4, $ra, $s7
+38711868 ammin_db.wu $a4, $a2, $sp
+387110b0 ammin_db.wu $t4, $a0, $a1
+387133b0 ammin_db.wu $t4, $t0, $s6
+387115e5 ammin_db.wu $a1, $a1, $t3
+38717ec2 ammin_db.wu $tp, $s8, $fp
+38713584 ammin_db.wu $a0, $t1, $t0
+38717b6f ammin_db.wu $t3, $s7, $s4
+387168ad ammin_db.wu $t1, $s3, $a1
+3871214f ammin_db.wu $t3, $a4, $a6
+38710644 ammin_db.wu $a0, $ra, $t6
+3871f863 ammin_db.du $sp, $s7, $sp
+3871f153 ammin_db.du $t7, $s5, $a6
+3871f851 ammin_db.du $t5, $s7, $tp
+3871d990 ammin_db.du $t4, $fp, $t0
+3871dadc ammin_db.du $s5, $fp, $fp
+3871cac3 ammin_db.du $sp, $t6, $fp
+3871b676 ammin_db.du $fp, $t1, $t7
+387182c5 ammin_db.du $a1, $zero, $fp
+3871aed9 ammin_db.du $s2, $a7, $fp
+3871a6a6 ammin_db.du $a2, $a5, $r21
+38721fcc dbar 0x1fcc
+38721d67 dbar 0x1d67
+38721d69 dbar 0x1d69
+38724560 dbar 0x4560
+387252b6 dbar 0x52b6
+387244e5 dbar 0x44e5
+38720523 dbar 0x523
+387209df dbar 0x9df
+38724c29 dbar 0x4c29
+3872404e dbar 0x404e
+3872b86c ibar 0x386c
+3872bd31 ibar 0x3d31
+3872ab28 ibar 0x2b28
+3872bb72 ibar 0x3b72
+3872d32a ibar 0x532a
+3872dd96 ibar 0x5d96
+3872befa ibar 0x3efa
+3872f26e ibar 0x726e
+3872b98f ibar 0x398f
+3872cecb ibar 0x4ecb
+387447e5 fldgt.s $fa5, $s8, $t5
+38744edb fldgt.s $fs3, $fp, $t7
+387460d7 fldgt.s $ft15, $a2, $s1
+3874411f fldgt.s $fs7, $a4, $t4
+38744beb fldgt.s $ft3, $s8, $t6
+387447d2 fldgt.s $ft10, $s7, $t5
+387433e0 fldgt.s $fa0, $s8, $t0
+38744a58 fldgt.s $fs0, $t6, $t6
+38746923 fldgt.s $fa3, $a5, $s3
+38747041 fldgt.s $fa1, $tp, $s5
+38749ef6 fldgt.d $ft14, $s0, $a3
+3874f8e4 fldgt.d $fa4, $a3, $s7
+38748ff0 fldgt.d $ft8, $s8, $sp
+3874c4b3 fldgt.d $ft11, $a1, $t5
+3874c12d fldgt.d $ft5, $a5, $t4
+38749ae3 fldgt.d $fa3, $s0, $a2
+3874cc5b fldgt.d $fs3, $tp, $t7
+3874c7d4 fldgt.d $ft12, $s7, $t5
+3874f4ec fldgt.d $ft4, $a3, $s6
+387496a0 fldgt.d $fa0, $r21, $a1
+38750352 fldle.s $ft10, $s3, $zero
+38756df3 fldle.s $ft11, $t3, $s4
+38750107 fldle.s $fa7, $a4, $zero
+38757d94 fldle.s $ft12, $t0, $s8
+3875079d fldle.s $fs5, $s5, $ra
+38751414 fldle.s $ft12, $zero, $a1
+387574f0 fldle.s $ft8, $a3, $s6
+38757bb2 fldle.s $ft10, $s6, $s7
+387524cf fldle.s $ft7, $a2, $a5
+38754daa fldle.s $ft2, $t1, $t7
+387590cc fldle.d $ft4, $a2, $a0
+3875cb5e fldle.d $fs6, $s3, $t6
+3875e2e2 fldle.d $fa2, $s0, $s1
+3875bf3e fldle.d $fs6, $s2, $t3
+3875eef5 fldle.d $ft13, $s0, $s4
+3875d01f fldle.d $fs7, $zero, $t8
+3875e0d5 fldle.d $ft13, $a2, $s1
+3875cca2 fldle.d $fa2, $a1, $t7
+3875d474 fldle.d $ft12, $sp, $r21
+3875f95d fldle.d $fs5, $a6, $s7
+387643ca fstgt.s $ft2, $s7, $t4
+38765824 fstgt.s $fa4, $ra, $fp
+38767a93 fstgt.s $ft11, $t8, $s7
+38760b63 fstgt.s $fa3, $s4, $tp
+38763ec2 fstgt.s $fa2, $fp, $t3
+38767369 fstgt.s $ft1, $s4, $s5
+387645e2 fstgt.s $fa2, $t3, $t5
+38760834 fstgt.s $ft12, $ra, $tp
+387632a6 fstgt.s $fa6, $r21, $t0
+38762a8c fstgt.s $ft4, $t8, $a6
+387683b8 fstgt.d $fs0, $s6, $zero
+3876def1 fstgt.d $ft9, $s0, $s0
+3876f810 fstgt.d $ft8, $zero, $s7
+3876815e fstgt.d $fs6, $a6, $zero
+3876c2ea fstgt.d $ft2, $s0, $t4
+3876d1f5 fstgt.d $ft13, $t3, $t8
+3876be3a fstgt.d $fs2, $t5, $t3
+3876e0a3 fstgt.d $fa3, $a1, $s1
+3876ff3e fstgt.d $fs6, $s2, $s8
+3876ad81 fstgt.d $fa1, $t0, $a7
+387770b0 fstle.s $ft8, $a1, $s5
+38770962 fstle.s $fa2, $a7, $tp
+38776a22 fstle.s $fa2, $t5, $s3
+3877597c fstle.s $fs4, $a7, $fp
+387742d4 fstle.s $ft12, $fp, $t4
+38776348 fstle.s $ft0, $s3, $s1
+387719de fstle.s $fs6, $t2, $a2
+38772d34 fstle.s $ft12, $a5, $a7
+38770415 fstle.s $ft13, $zero, $ra
+3877168d fstle.s $ft5, $t8, $a1
+3877bbc7 fstle.d $fa7, $s7, $t2
+3877e1a8 fstle.d $ft0, $t1, $s1
+38778251 fstle.d $ft9, $t6, $zero
+3877f72c fstle.d $ft4, $s2, $s6
+387799b6 fstle.d $ft14, $t1, $a2
+3877d2de fstle.d $fs6, $fp, $t8
+3877b4b5 fstle.d $ft13, $a1, $t1
+3877aa9f fstle.d $fs7, $t8, $a6
+38778143 fstle.d $fa3, $a6, $zero
+3877af07 fstle.d $fa7, $s1, $a7
+3878146e ldgt.b $t2, $sp, $a1
+38784060 ldgt.b $zero, $sp, $t4
+3878469e ldgt.b $s7, $t8, $t5
+387827ce ldgt.b $t2, $s7, $a5
+387827f5 ldgt.b $r21, $s8, $a5
+38782591 ldgt.b $t5, $t0, $a5
+3878004e ldgt.b $t2, $tp, $zero
+38780c9a ldgt.b $s3, $a0, $sp
+3878558d ldgt.b $t1, $t0, $r21
+387805d2 ldgt.b $t6, $t2, $ra
+387897f7 ldgt.h $s0, $s8, $a1
+3878926c ldgt.h $t0, $t7, $a0
+3878d930 ldgt.h $t4, $a5, $fp
+3878e70d ldgt.h $t1, $s1, $s2
+3878e534 ldgt.h $t8, $a5, $s2
+3878ce82 ldgt.h $tp, $t8, $t7
+3878e24c ldgt.h $t0, $t6, $s1
+3878e246 ldgt.h $a2, $t6, $s1
+38789899 ldgt.h $s2, $a0, $a2
+3878eb69 ldgt.h $a5, $s4, $s3
+38792a95 ldgt.w $r21, $t8, $a6
+38794e24 ldgt.w $a0, $t5, $t7
+3879463f ldgt.w $s8, $t5, $t5
+38796aa5 ldgt.w $a1, $r21, $s3
+38792326 ldgt.w $a2, $s2, $a4
+387975a5 ldgt.w $a1, $t1, $s6
+387915ce ldgt.w $t2, $t2, $a1
+3879398a ldgt.w $a6, $t0, $t2
+3879172b ldgt.w $a7, $s2, $a1
+38790d00 ldgt.w $zero, $a4, $sp
+3879df7d ldgt.d $s6, $s4, $s0
+3879a7e7 ldgt.d $a3, $s8, $a5
+3879c3f2 ldgt.d $t6, $s8, $t4
+3879c3f1 ldgt.d $t5, $s8, $t4
+3879d9ea ldgt.d $a6, $t3, $fp
+3879fc07 ldgt.d $a3, $zero, $s8
+38799e80 ldgt.d $zero, $t8, $a3
+3879d8bb ldgt.d $s4, $a1, $fp
+3879f355 ldgt.d $r21, $s3, $s5
+38799410 ldgt.d $t4, $zero, $a1
+387a2374 ldle.b $t8, $s4, $a4
+387a1ff9 ldle.b $s2, $s8, $a3
+387a1737 ldle.b $s0, $s2, $a1
+387a38c5 ldle.b $a1, $a2, $t2
+387a2e74 ldle.b $t8, $t7, $a7
+387a55aa ldle.b $a6, $t1, $r21
+387a6779 ldle.b $s2, $s4, $s2
+387a00d1 ldle.b $t5, $a2, $zero
+387a09ec ldle.b $t0, $t3, $tp
+387a4fb5 ldle.b $r21, $s6, $t7
+387ace99 ldle.h $s2, $t8, $t7
+387a95c5 ldle.h $a1, $t2, $a1
+387af556 ldle.h $fp, $a6, $s6
+387aa04a ldle.h $a6, $tp, $a4
+387a8845 ldle.h $a1, $tp, $tp
+387aa490 ldle.h $t4, $a0, $a5
+387aa929 ldle.h $a5, $a5, $a6
+387ade6c ldle.h $t0, $t7, $s0
+387ac2e8 ldle.h $a4, $s0, $t4
+387af8d3 ldle.h $t7, $a2, $s7
+387b3530 ldle.w $t4, $a5, $t1
+387b1ee4 ldle.w $a0, $s0, $a3
+387b0324 ldle.w $a0, $s2, $zero
+387b53da ldle.w $s3, $s7, $t8
+387b7c52 ldle.w $t6, $tp, $s8
+387b497f ldle.w $s8, $a7, $t6
+387b2f29 ldle.w $a5, $s2, $a7
+387b7c6f ldle.w $t3, $sp, $s8
+387b4a0a ldle.w $a6, $t4, $t6
+387b50dd ldle.w $s6, $a2, $t8
+387b9305 ldle.d $a1, $s1, $a0
+387bf2a2 ldle.d $tp, $r21, $s5
+387baa97 ldle.d $s0, $t8, $a6
+387ba1c2 ldle.d $tp, $t2, $a4
+387bb9a3 ldle.d $sp, $t1, $t2
+387bb7ad ldle.d $t1, $s6, $t1
+387bb17c ldle.d $s5, $a7, $t0
+387bc3c8 ldle.d $a4, $s7, $t4
+387bb9ac ldle.d $t0, $t1, $t2
+387b8a88 ldle.d $a4, $t8, $tp
+387c00bf stgt.b $s8, $a1, $zero
+387c4dfe stgt.b $s7, $t3, $t7
+387c62a3 stgt.b $sp, $r21, $s1
+387c428b stgt.b $a7, $t8, $t4
+387c7578 stgt.b $s1, $a7, $s6
+387c7bf3 stgt.b $t7, $s8, $s7
+387c05b5 stgt.b $r21, $t1, $ra
+387c7b9f stgt.b $s8, $s5, $s7
+387c7f15 stgt.b $r21, $s1, $s8
+387c6a7b stgt.b $s4, $t7, $s3
+387cdc7b stgt.h $s4, $sp, $s0
+387c94f2 stgt.h $t6, $a3, $a1
+387cdf2e stgt.h $t2, $s2, $s0
+387cfdf9 stgt.h $s2, $t3, $s8
+387cecee stgt.h $t2, $a3, $s4
+387ce69c stgt.h $s5, $t8, $s2
+387caa5f stgt.h $s8, $t6, $a6
+387ce452 stgt.h $t6, $tp, $s2
+387cea73 stgt.h $t7, $t7, $s3
+387cea7d stgt.h $s6, $t7, $s3
+387d399a stgt.w $s3, $t0, $t2
+387d5cdf stgt.w $s8, $a2, $s0
+387d59b7 stgt.w $s0, $t1, $fp
+387d5967 stgt.w $a3, $a7, $fp
+387d13ac stgt.w $t0, $s6, $a0
+387d02e1 stgt.w $ra, $s0, $zero
+387d6102 stgt.w $tp, $a4, $s1
+387d4cd4 stgt.w $t8, $a2, $t7
+387d6ae4 stgt.w $a0, $s0, $s3
+387d077d stgt.w $s6, $s4, $ra
+387d85ad stgt.d $t1, $t1, $ra
+387dbbdb stgt.d $s4, $s7, $t2
+387de3c2 stgt.d $tp, $s7, $s1
+387d869e stgt.d $s7, $t8, $ra
+387dbe96 stgt.d $fp, $t8, $t3
+387da7d9 stgt.d $s2, $s7, $a5
+387d8f56 stgt.d $fp, $s3, $sp
+387db995 stgt.d $r21, $t0, $t2
+387da29b stgt.d $s4, $t8, $a4
+387ddc18 stgt.d $s1, $zero, $s0
+387e3531 stle.b $t5, $a5, $t1
+387e60cc stle.b $t0, $a2, $s1
+387e7776 stle.b $fp, $s4, $s6
+387e230e stle.b $t2, $s1, $a4
+387e3a7e stle.b $s7, $t7, $t2
+387e02f5 stle.b $r21, $s0, $zero
+387e1b5f stle.b $s8, $s3, $a2
+387e647c stle.b $s5, $sp, $s2
+387e3a31 stle.b $t5, $t5, $t2
+387e7b0d stle.b $t1, $s1, $s7
+387efd70 stle.h $t4, $a7, $s8
+387ef347 stle.h $a3, $s3, $s5
+387eced4 stle.h $t8, $fp, $t7
+387efcba stle.h $s3, $a1, $s8
+387e84d7 stle.h $s0, $a2, $ra
+387e92ee stle.h $t2, $s0, $a0
+387ef873 stle.h $t7, $sp, $s7
+387efa04 stle.h $a0, $t4, $s7
+387ecca0 stle.h $zero, $a1, $t7
+387e8cb8 stle.h $s1, $a1, $sp
+387f2773 stle.w $t7, $s4, $a5
+387f4f80 stle.w $zero, $s5, $t7
+387f7011 stle.w $t5, $zero, $s5
+387f7b1e stle.w $s7, $s1, $s7
+387f04a5 stle.w $a1, $a1, $ra
+387f3975 stle.w $r21, $a7, $t2
+387f3375 stle.w $r21, $s4, $t0
+387f384e stle.w $t2, $tp, $t2
+387f7d25 stle.w $a1, $a5, $s8
+387f1faa stle.w $a6, $s6, $a3
+387fde33 stle.d $t7, $t5, $s0
+387fa955 stle.d $r21, $a6, $a6
+387fc091 stle.d $t5, $a0, $t4
+387fb2df stle.d $s8, $fp, $t0
+387faffa stle.d $s3, $s8, $a7
+387ff4ef stle.d $t3, $a3, $s6
+387f8717 stle.d $s0, $s1, $ra
+387ff615 stle.d $r21, $t4, $s6
+387ffc63 stle.d $sp, $sp, $s8
+387fe9a3 stle.d $sp, $t1, $s3
+42c38c69 beqz $sp, 2540428
+406a0626 beqz $t5, 1600004
+40f499d3 beqz $t2, -3345256
+411d2dbb beqz $t1, -1237716
+430b156e beqz $a7, 3869460
+41072e41 beqz $t6, 329516
+4219f114 beqz $a4, -3008016
+409afcda beqz $a2, -1533188
+43e280bf beqz $a1, -7552
+4200f6d2 beqz $fp, -3538700
+458441db bnez $t2, -1211328
+446ffafa bnez $s0, -1544200
+4586fa48 bnez $t6, 2197240
+4737ff3d bnez $s2, -575492
+46d5f97f bnez $a7, -76296
+45cf7834 bnez $ra, -3027080
+46f054f1 bnez $a3, -3739564
+44ce3aa3 bnez $r21, 839224
+46330a0b bnez $t4, 3027720
+4605fa4e bnez $t6, 3802616
+4b9fac98 bceqz $fcc4, -1859668
+493658b0 bceqz $fcc5, -4114856
+4997e4f3 bceqz $fcc7, -3303452
+486510d4 bceqz $fcc6, -3119856
+4841c4b8 bceqz $fcc5, -2080316
+4a1438a4 bceqz $fcc5, 1184824
+4a0c14f3 bceqz $fcc7, -3273708
+4b8a3840 bceqz $fcc2, 231992
+4a99e8da bceqz $fcc6, -1402392
+4aaad438 bceqz $fcc1, -1922348
+4a4cc5fa bcnez $fcc7, -1422140
+4a818948 bcnez $fcc2, 2261384
+4aec6571 bcnez $fcc3, -3740572
+4818b5a2 bcnez $fcc5, 530612
+4a419107 bcnez $fcc0, 1982864
+4bddc974 bcnez $fcc3, -2892344
+49d2118d bcnez $fcc4, 3527184
+4acfd52f bcnez $fcc1, 4116436
+4962c5c7 bcnez $fcc6, 1925828
+4ae60d51 bcnez $fcc2, -3742196
+4fd12b4b jirl $a7, $s3, -11992
+4ca23350 jirl $t4, $s3, 41520
+4eff3780 jirl $zero, $s5, -65740
+4ee485e2 jirl $tp, $t3, -72572
+4e4e4745 jirl $a1, $s3, -111036
+4fea255f jirl $s8, $a6, -5596
+4f143c9a jirl $s3, $a0, -60356
+4f41f3e4 jirl $a0, $s8, -48656
+4db9eeeb jirl $a7, $s0, 113132
+4f9dc08c jirl $t0, $a0, -25152
+508ce163 b 93097184
+51196fe5 b -7005844
+52b24f2a b -55922100
+535246a3 b -91270588
+534eff02 b -66367748
+50d52fca b -14101204
+508b4a23 b -125007032
+536f9f40 b -50106468
+51cf5ff8 b -1978532
+5336220b b -131123680
+56df3a32 bl -120922312
+545b408f bl 37509952
+54dcaf23 bl -57877332
+57dedfbd bl -17309988
+5786f2f3 bl -70285584
+5797bf18 bl -60581956
+548b2d5a bl 90737452
+543e268c bl -97501660
+5653be75 bl -103394372
+5756db56 bl -44345640
+58245247 beq $t6, $a3, 9296
+5b5f0667 beq $t7, $a3, -41212
+5b5d86b4 beq $r21, $t8, -41596
+5a384023 beq $ra, $sp, -116672
+5ada30aa beq $a1, $a6, -75216
+5bf22d6e beq $a7, $t2, -3540
+5be399ca beq $t2, $a6, -7272
+58e5c961 beq $a7, $ra, 58824
+5b7c1ef7 beq $s0, $s0, -33764
+599020b2 beq $a1, $t6, 102432
+5efa502f bne $ra, $t3, -66992
+5e8dbc3a bne $ra, $s3, -94788
+5d64c5dc bne $t2, $s5, 91332
+5ec517f8 bne $s8, $s1, -80620
+5dc1fb66 bne $s4, $a2, 115192
+5f960b62 bne $s4, $tp, -27128
+5c330223 bne $t5, $sp, 13056
+5c3b12b1 bne $r21, $t5, 15120
+5daf6131 bne $a5, $t5, 110432
+5c09cc56 bne $tp, $fp, 2508
+616e7a5e blt $t6, $s7, 93816
+60114f31 blt $s2, $t5, 4428
+6210ced9 blt $fp, $s2, -126772
+610e5c26 blt $ra, $a2, 69212
+63ddf679 blt $t7, $s2, -8716
+62ab8392 blt $s5, $t6, -87168
+6351aa48 blt $t6, $a4, -44632
+6013be20 blt $t5, $zero, 5052
+626dd2b5 blt $r21, $r21, -102960
+604a3a25 blt $t5, $a1, 19000
+66d7812c bge $a5, $t0, -75904
+6433d2e3 bge $s0, $sp, 13264
+652e5fb8 bge $s6, $s1, 77404
+64e5e8cd bge $a2, $t1, 58856
+65e1a92e bge $a5, $t2, 123304
+6627f16d bge $a7, $t1, -120848
+66f206cc bge $fp, $t0, -69116
+661d18ee bge $a3, $t2, -123624
+64b8f2a5 bge $r21, $a1, 47344
+65caa75a bge $s3, $s3, 117412
+6a9c2960 bltu $a7, $zero, -91096
+695d2e7f bltu $t7, $s8, 89388
+68454e84 bltu $t8, $a0, 17740
+6864f98c bltu $t0, $t0, 25848
+680ab815 bltu $zero, $r21, 2744
+6828f7f8 bltu $s8, $s1, 10484
+6b8223e2 bltu $s8, $tp, -32224
+6b92f8c5 bltu $a2, $a1, -27912
+6938b2db bltu $fp, $s4, 80048
+6ab25ebc bltu $r21, $s5, -85412
+6c006180 bgeu $t0, $zero, 96
+6f444811 bgeu $zero, $t5, -48056
+6f69eb09 bgeu $s1, $a5, -38424
+6cd172c3 bgeu $fp, $sp, 53616
+6c56e844 bgeu $tp, $a0, 22248
+6f8cc2d1 bgeu $fp, $t5, -29504
+6e07fda9 bgeu $t1, $a5, -129028
+6fd3abd4 bgeu $s7, $t8, -11352
+6c91144d bgeu $tp, $t1, 37140
+6f256bf6 bgeu $s8, $fp, -55960
