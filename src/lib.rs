@@ -53,7 +53,7 @@ fn handle_err_get(
     sample: Value,
 ) -> Value {
     let display_key = if !prefix.is_empty() {
-        format!("{}.{}", prefix, key)
+        format!("{prefix}.{key}")
     } else {
         key.to_string()
     };
@@ -71,7 +71,7 @@ fn handle_err_get(
             sample
         }
     } else {
-        error_stack.push(format!("key '{}' not found in toml", display_key));
+        error_stack.push(format!("key '{display_key}' not found in toml"));
         sample
     }
 }
@@ -84,7 +84,7 @@ fn handle_err_get_multitype(
     samples: &Vec<Value>,
 ) -> Value {
     let display_key = if !prefix.is_empty() {
-        format!("{}.{}", prefix, key)
+        format!("{prefix}.{key}")
     } else {
         key.to_string()
     };
@@ -112,7 +112,7 @@ fn handle_err_get_multitype(
         }
         result_value
     } else {
-        error_stack.push(format!("key '{}' not found in toml", display_key));
+        error_stack.push(format!("key '{display_key}' not found in toml"));
         result_value
     }
 }
@@ -200,7 +200,7 @@ impl InstructionSet {
         .filter_map(|x| {
             let parr = x.as_array().unwrap();
             if parr.len() < 3 || parr.len() > 4 {
-                error_stack.push(format!("expected length of part {:?} to be 3 or 4, in the form of [name: string, bitwidth: integer, type: string, (format: string = \"decimal\")]", parr));
+                error_stack.push(format!("expected length of part {parr:?} to be 3 or 4, in the form of [name: string, bitwidth: integer, type: string, (format: string = \"decimal\")]"));
                 None
             } else {
                 let name = parr[0].as_str().unwrap_or("").to_string();
@@ -239,7 +239,7 @@ impl InstructionSet {
                         .unwrap(),
                         &parts,
                         error_stack,
-                        format!("types.{}", x).as_str(),
+                        format!("types.{x}").as_str(),
                         x.as_str().unwrap(),
                         bit_width,
                     ),
@@ -305,8 +305,7 @@ impl InstructionSet {
                     let begin = repr[idx..].find('%').unwrap() + 1 + idx;
                     if !repr[begin..].contains('%') {
                         error_stack.push(format!(
-                            "no closing % found in format {}.{}: '{}'",
-                            fmt_name, repr_name, repr
+                            "no closing % found in format {fmt_name}.{repr_name}: '{repr}'"
                         ));
                         break;
                     } else {
@@ -322,8 +321,7 @@ impl InstructionSet {
 
                         if nmatches == 0 {
                             error_stack.push(format!(
-                                "format of {}.{} is trying to reference nonexistant slice {}",
-                                fmt_name, repr_name, var_name
+                                "format of {fmt_name}.{repr_name} is trying to reference nonexistant slice {var_name}"
                             ));
                         }
                         idx = end + 1;
@@ -424,35 +422,35 @@ impl FromStr for NumberRadix {
 impl NumberRadix {
     fn format_unsigned(&self, value: u128) -> String {
         match self {
-            NumberRadix::Decimal => format!("{}", value),
-            NumberRadix::Hexadecimal => format!("{:#x}", value),
-            NumberRadix::Octal => format!("{:#o}", value),
-            NumberRadix::Binary => format!("{:#b}", value),
+            NumberRadix::Decimal => format!("{value}"),
+            NumberRadix::Hexadecimal => format!("{value:#x}"),
+            NumberRadix::Octal => format!("{value:#o}"),
+            NumberRadix::Binary => format!("{value:#b}"),
         }
     }
 
     fn format_signed(&self, value: i128) -> String {
         match self {
-            NumberRadix::Decimal => format!("{}", value),
+            NumberRadix::Decimal => format!("{value}"),
             NumberRadix::Hexadecimal => {
                 if value < 0 {
                     format!("-{:#x}", -value)
                 } else {
-                    format!("{:#x}", value)
+                    format!("{value:#x}")
                 }
             }
             NumberRadix::Octal => {
                 if value < 0 {
                     format!("-{:#o}", -value)
                 } else {
-                    format!("{:#o}", value)
+                    format!("{value:#o}")
                 }
             }
             NumberRadix::Binary => {
                 if value < 0 {
                     format!("-{:#b}", -value)
                 } else {
-                    format!("{:#b}", value)
+                    format!("{value:#b}")
                 }
             }
         }
@@ -460,8 +458,8 @@ impl NumberRadix {
 
     fn format_part_type_val(&self, value_type: PartTypeValue) -> String {
         match value_type {
-            PartTypeValue::Boolean(a) => format!("{}", a),
-            PartTypeValue::Char(a) => format!("{}", a),
+            PartTypeValue::Boolean(a) => format!("{a}"),
+            PartTypeValue::Char(a) => format!("{a}"),
             PartTypeValue::I8(a) => self.format_signed(a as i128),
             PartTypeValue::I16(a) => self.format_signed(a as i128),
             PartTypeValue::I32(a) => self.format_signed(a as i128),
@@ -472,8 +470,8 @@ impl NumberRadix {
             PartTypeValue::U64(a) => self.format_unsigned(a as u128),
             PartTypeValue::ISize(a) => self.format_signed(a as i128),
             PartTypeValue::USize(a) => self.format_unsigned(a as u128),
-            PartTypeValue::F32(a) => format!("{}", a),
-            PartTypeValue::F64(a) => format!("{}", a),
+            PartTypeValue::F32(a) => format!("{a}"),
+            PartTypeValue::F64(a) => format!("{a}"),
             PartTypeValue::Mapping(a) => a.to_string(),
             PartTypeValue::VInt(a) => self.format_signed(a),
             PartTypeValue::None => "".to_string(),
@@ -641,8 +639,7 @@ impl Mapping {
             .map(|(k, v)| {
                 if !v.is_str() {
                     error_stack.push(format!(
-                        "mapping value at {}[{}] is not type 'string'",
-                        table_prefix, k
+                        "mapping value at {table_prefix}[{k}] is not type 'string'"
                     ));
                 }
                 (*k, v.as_str().unwrap_or("").to_string())
@@ -689,7 +686,7 @@ impl InstructionFormat {
                 if v.is_str() {
                     Some((k.clone(), v.as_str().unwrap().to_string()))
                 } else {
-                    error_stack.push(format!("value of {}.repr.{} is not type 'string'", name, k));
+                    error_stack.push(format!("value of {name}.repr.{k} is not type 'string'"));
                     None
                 }
             })
@@ -705,7 +702,7 @@ impl InstructionFormat {
                     x,
                     y.as_table().unwrap(),
                     error_stack,
-                    format!("{}.instructions[{}]", name, i).as_str(),
+                    format!("{name}.instructions[{i}]").as_str(),
                 )
             })
             .collect();
@@ -884,7 +881,7 @@ impl InstructionType {
                         parts,
                         &position,
                         error_stack,
-                        format!("{}[{}]", table_prefix, i).as_str(),
+                        format!("{table_prefix}[{i}]").as_str(),
                         type_name,
                         bit_width,
                     );
@@ -892,8 +889,7 @@ impl InstructionType {
                     Some(slice)
                 } else {
                     error_stack.push(format!(
-                        "Instruction Type of {}[{}] is not a table",
-                        table_prefix, i
+                        "Instruction Type of {table_prefix}[{i}] is not a table"
                     ));
                     None
                 }
@@ -973,7 +969,7 @@ impl InstructionSlice {
         .unwrap()
         .to_string();
         if !parts.contains_key(&name) {
-            error_stack.push(format!("instruction slice with name \"{}\" referenced in types.{} not defined in formats.parts", name, type_name));
+            error_stack.push(format!("instruction slice with name \"{name}\" referenced in types.{type_name} not defined in formats.parts"));
         }
         let slice_top =
             1 + handle_err_get(table, error_stack, "top", table_prefix, Value::Integer(0))
@@ -988,8 +984,7 @@ impl InstructionSlice {
             slice_extend_value.as_integer().unwrap() as usize
         } else {
             error_stack.push(format!(
-                "optional field {}.extend_top is not of type 'integer'",
-                table_prefix
+                "optional field {table_prefix}.extend_top is not of type 'integer'"
             ));
             0
         };
