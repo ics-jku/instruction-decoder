@@ -1,7 +1,7 @@
 #[macro_export]
 macro_rules! isa_test {
     ($toml:expr, $test:expr) => {
-        match Decoder::new(&vec![include_str!($toml).to_string()]) {
+        match Decoder::new(&[include_str!($toml).to_string()]) {
             Ok(test_decoder) => {
                 read_to_string($test).unwrap().lines().for_each(|line| {
                     if let Some((instr_hex, expected)) = line.split_once(' ') {
@@ -37,7 +37,7 @@ macro_rules! isa_test {
 #[macro_export]
 macro_rules! error_test {
     ($toml:expr, $error_stack:expr) => {
-        match Decoder::new(&vec![include_str!($toml).to_string()]) {
+        match Decoder::new(&[include_str!($toml).to_string()]) {
             Ok(_) => assert!(
                 $error_stack.is_empty(),
                 "Expected errors {:?} but found none",
