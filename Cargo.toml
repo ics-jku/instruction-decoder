@@ -5,4 +5,4 @@ edition = "2021"
 license = "MIT"
 
 [dependencies]
-toml = "1"
+toml = { version="1", features=["serde", "parse"], default-features=false }

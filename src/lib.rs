@@ -239,7 +239,7 @@ impl InstructionSet {
                         .unwrap(),
                         &parts,
                         error_stack,
-                        format!("types.{x}").as_str(),
+                        format!("types.{}", x.as_str().unwrap()).as_str(),
                         x.as_str().unwrap(),
                         bit_width,
                     ),
