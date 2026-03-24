@@ -8,6 +8,9 @@ use toml::{map::Map, Table, Value};
 #[cfg(test)]
 mod tests;
 
+#[cfg(feature = "specs")]
+pub mod specs;
+
 pub struct Decoder {
     instruction_sets: Vec<InstructionSet>,
 }

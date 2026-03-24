@@ -6,3 +6,6 @@ license = "MIT"
 
 [dependencies]
 toml = { version="1", features=["serde", "parse"], default-features=false }
+
+[features]
+specs = []
