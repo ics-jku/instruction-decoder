@@ -614,6 +614,22 @@ match = 0x100073
 mask = 0xffffffff
 match = 0x73
 
+[format_5-0.instructions.mret]
+mask = 0xffffffff
+match = 0x30200073
+
+[format_5-0.instructions.sret]
+mask = 0xffffffff
+match = 0x10200073
+
+[format_5-0.instructions.dret]
+mask = 0xffffffff
+match = 0x7b200073
+
+[format_5-0.instructions.wfi]
+mask = 0xffffffff
+match = 0x10500073
+
 [format_6-0.instructions.fence]
 mask = 0x707f
 match = 0xf
